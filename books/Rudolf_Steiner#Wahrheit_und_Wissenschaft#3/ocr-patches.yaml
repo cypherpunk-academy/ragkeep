@@ -1,0 +1,57 @@
+- page: 37
+  action: modify
+  lineIndex: 0
+  text: III.
+  footnoteReferenceWordIndices: []
+  isHeader: true
+  headerLevel: 1
+- page: 29
+  action: modify
+  lineIndex: 22
+  text: es zwar mit demselben in Verknüpfung steht»***, woge-
+  isFootnoteReference: true
+  footnoteReferenceWordIndices:
+    - 6
+- page: 29
+  action: modify
+  lineIndex: 13
+  isFootnoteReference: true
+  footnoteReferenceWordIndices:
+    - 4
+- page: 29
+  action: modify
+  lineIndex: 11
+  isFootnoteReference: true
+  footnoteReferenceWordIndices:
+    - 1
+- page: 34
+  action: modify
+  lineIndex: 26
+  text: "** Liebmann, Zur Analysis der Wirklichkeit, S. 211 ff., Holder, Darstellung"
+  footnoteReferenceWordIndices: []
+- page: 34
+  action: modify
+  lineIndex: 24
+  text: bands, Überwegs, Ed. v. Hartmanns** und Kuno
+  isFootnoteReference: true
+  footnoteReferenceWordIndices:
+    - 4
+- page: 34
+  action: modify
+  lineIndex: 19
+  isFootnoteReference: true
+  footnoteReferenceWordIndices:
+    - 3
+- page: 44
+  action: modify
+  lineIndex: 14
+  text: deres.»*
+  isFootnoteReference: true
+  footnoteReferenceWordIndices:
+    - 0
+- page: 16
+  action: modify
+  lineIndex: 24,25,26,27,28
+  isFootnote: false
+  isFootnoteStart: false
+  footnoteReferenceWordIndices: []

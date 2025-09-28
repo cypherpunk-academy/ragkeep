@@ -1,0 +1,24 @@
+author: Rudolf Steiner
+title: Wahrheit und Wissenschaft
+subtitle: Vorspiel zu einer «Philosophie der Freiheit»
+book-index: 3
+book-type: rudolf-steiner-ga-werk
+first-author-page: 25
+last-author-page: 93
+journal:
+  pages: 87
+  chapters: 11
+  paragraphs: 105
+  lines: 2508
+  words: 19727
+  footnotes: 37
+  tesseract:
+    lines: 2836
+    words: 21990
+    deepseek-guessed: 27
+    taken-from-abbyy: 205
+  abbyy:
+    lines: 2912
+    words: 22166
+    deepseek-guessed: 27
+    taken-from-tesseract: 109

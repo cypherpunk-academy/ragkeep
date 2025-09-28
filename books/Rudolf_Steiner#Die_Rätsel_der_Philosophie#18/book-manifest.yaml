@@ -1,0 +1,24 @@
+author: Rudolf Steiner
+title: Die Rätsel der Philosophie
+subtitle: in ihrer Geschichte als Umriss dargestellt
+book-index: 18
+book-type: rudolf-steiner-ga-werk
+first-author-page: 7
+last-author-page: 627
+journal:
+  pages: 621
+  chapters: 23
+  paragraphs: 534
+  lines: 19323
+  words: 161056
+  footnotes: 1
+  tesseract:
+    lines: 22666
+    words: 180231
+    deepseek-guessed: 127
+    taken-from-abbyy: 777
+  abbyy:
+    lines: 23826
+    words: 182829
+    deepseek-guessed: 127
+    taken-from-tesseract: 768

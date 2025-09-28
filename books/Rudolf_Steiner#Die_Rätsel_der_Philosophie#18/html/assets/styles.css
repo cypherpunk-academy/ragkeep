@@ -1,0 +1,74 @@
+/* Default reading styles
+   You can customize fonts, sizes, and spacing here. */
+
+:root {
+  color-scheme: light dark;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-weight: 300;
+  line-height: 1.6;
+  font-size: 24px;
+  background: #fff;
+  color: #111;
+}
+
+@media (prefers-color-scheme: dark) {
+  body { background: #111; color: #eee; }
+}
+
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 2rem 0 1rem;
+}
+
+p { text-align: justify; }
+
+p {
+  margin: 0 0 1rem;
+}
+
+nav.toc {
+  margin: 1rem 0 2rem;
+}
+
+nav.toc ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav.toc li {
+  margin: 0.25rem 0;
+}
+
+/* Footnotes */
+.fn-ref {
+  text-decoration: none;
+  vertical-align: super;
+  font-size: 0.8em;
+  padding-left: 2px;
+}
+
+.fn-marker {
+  font-weight: 600;
+}
+
+.fn-back {
+  text-decoration: none;
+  margin-left: 6px;
+}
+

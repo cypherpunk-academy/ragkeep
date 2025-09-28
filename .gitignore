@@ -1,5 +1,6 @@
 # Books
-books/
+books/**/results
+books/**/input
 
 # Images
 *.png
