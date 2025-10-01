@@ -22,3 +22,12 @@ journal:
     words: 182829
     deepseek-guessed: 127
     taken-from-tesseract: 768
+chunks: 843
+multi-paragraph-chunks: 93
+single-paragraph-chunks: 155
+large-paragraph-chunks: 595
+average: 1268
+p01_length: 198
+p05_length: 428
+p95_length: 1911
+p99_length: 2456
