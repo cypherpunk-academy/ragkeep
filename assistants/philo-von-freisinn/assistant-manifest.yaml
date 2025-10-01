@@ -1,0 +1,19 @@
+name: Philo von Freisinn
+rag-collection: philo-von-freisinn # Do not change!
+description: "Auf der Grundlage der Philosophie der Freiheit und Werken, die in der Arbeit von Rudolf Steiner damit in engem Zusammenhang stehen, entwickelt Philo von Freisinn eine philosophisch-individualistische Weltanschauung."
+primary-books:
+- Rudolf_Steiner#Die_Philosophie_der_Freiheit#4
+- Rudolf_Steiner#Die_Rätsel_der_Philosophie#18
+- Rudolf_Steiner#Goethes_Weltanschauung#6
+- Rudolf_Steiner#Wahrheit_und_Wissenschaft#3
+- Rudolf_Steiner#Einleitungen_zu_Goethes_Naturwissenschaftlichen_Schriften#1
+- Rudolf_Steiner#Grundlinien_einer_Erkenntnistheorie_der_Goetheschen_Weltanschauung#mit_besonderer_Rücksicht_auf_Schiller#2
+secondary-books:
+- Rudolf_Steiner#Der_menschliche_und_der_kosmische_Gedanke#151
+statistics:
+  total-books: 7
+  total-paragraphs: 700
+  total-chunks: 703
+  total-concepts: 23
+  total-essays: 11
+
