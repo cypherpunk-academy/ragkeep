@@ -1,7 +1,7 @@
 ## v0.2.1 (2025-10-01)
 
 ### Added
-- Assistant: philo-von-freisinn (manifest, prompts)
+- Assistant: philo-von-freisinn (manifest)
 
 ### Changed
 - Updated multiple Rudolf Steiner book manifests (metadata corrections, consistency)
