@@ -64,3 +64,13 @@
   isFootnoteReference: true
   footnoteReferenceWordIndices:
     - 0
+- page: 78
+  action: modify
+  lineIndex: 19
+  text: lung — dies ist eine Wahrheit, welche in Beziehung auf jedes
+  footnoteReferenceWordIndices: []
+- page: 267
+  action: modify
+  lineIndex: 14,16,17,18,19
+  isParagraphStart: false
+  footnoteReferenceWordIndices: []

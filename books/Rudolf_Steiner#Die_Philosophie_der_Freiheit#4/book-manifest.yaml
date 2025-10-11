@@ -5,7 +5,7 @@ book-index: 4
 book-type: rudolf-steiner-ga-werk
 book-id: 4b8e4c2a-3f1b-4d2e-9c4a-8e4f4b2c3a1d
 first-author-page: 7
-last-author-page: 288
+last-author-page: 271
 chunks: 325
 multi-paragraph-chunks: 109
 single-paragraph-chunks: 74
@@ -15,3 +15,10 @@ p01_length: 109
 p05_length: 294
 p95_length: 2232
 p99_length: 2671
+journal:
+  pages: 282
+  chapters: 18
+  paragraphs: 451
+  lines: 8337
+  words: 69664
+  footnotes: 12
