@@ -15,6 +15,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "push": "bash ./scripts/publish_to_hf.sh"
+    "push": "bash ./scripts/publish_to_hf.sh",
+    "build:pages": "node ./scripts/build_pages_site.js"
   }
 }
