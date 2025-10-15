@@ -116,7 +116,8 @@ function writeRobots() {
 
 function generateIndexHtml(books) {
   const items = books.map((b) => {
-    const href = `${b.relOutputDir.replace(/\\/g, '/')}/index.html`;
+    // Encode the directory component to support special characters like '#', spaces, or umlauts
+    const href = `books/${encodeURIComponent(b.dirName)}/index.html`;
     const text = `${b.author} — ${b.title}`;
     return `<li><a href="${href}">${escapeHtml(text)}</a></li>`;
   }).join('\n');
