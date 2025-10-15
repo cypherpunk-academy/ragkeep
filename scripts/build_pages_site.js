@@ -48,8 +48,9 @@ function findHtmlDirForBook(bookRootDir) {
   const directIndex = path.join(directHtml, 'index.html');
   const resultsIndex = path.join(resultsHtml, 'index.html');
 
-  if (fileExists(directIndex)) return directHtml;
+  // Prefer results/html (newest) over legacy html/
   if (fileExists(resultsIndex)) return resultsHtml;
+  if (fileExists(directIndex)) return directHtml;
   return null;
 }
 
@@ -77,8 +78,8 @@ function collectBooks() {
     }
   }
 
-  // De-duplicate by dirName in case the same book exists in both sources; prefer the one under ragkeep-deutsche-klassik-books-de.
-  const preferredPrefix = path.join(REPO_ROOT, 'ragkeep-deutsche-klassik-books-de', 'books') + path.sep;
+  // De-duplicate by dirName in case the same book exists in both sources; prefer the one under top-level books/ (newest pipeline output).
+  const preferredPrefix = path.join(REPO_ROOT, 'books') + path.sep;
   const byName = new Map();
   for (const b of books) {
     const existing = byName.get(b.dirName);
