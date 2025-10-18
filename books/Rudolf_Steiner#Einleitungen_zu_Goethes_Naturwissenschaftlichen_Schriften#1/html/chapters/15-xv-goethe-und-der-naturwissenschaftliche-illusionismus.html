@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>XV GOETHE UND DER NATURWISSENSCHAFTLICHE ILLUSIONISMUS</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -18,7 +31,7 @@
         
         <span id="s-15-1-2">Sie ent­stammt einem tie­fen Geis­tes­be­dürf­nis des Her­aus­ge­bers die­ser Aus­ga­be.</span>
         
-        <span id="s-15-1-3">Der­sel­be ist von dem Stu­di­um der Ma­the­ma­tik und Phy­sik aus­ge­gan­gen und wurde durch die vie­len Wi­der­sprü­che, die das Sys­tem un­se­rer mo­der­nen Na­tur­an­schau­ung durch­set­zen, mit in­ne­rer Not­wen­dig­keit zur kri­ti­schen Un­ter­su­chung über die me­tho­do­lo­gi­sche Grund­la­ge der­sel­ben ge­führt.</span>
+        <span id="s-15-1-3">Der­sel­be ist von dem Stu­di­um der <i>Ma­the­ma­tik</i> und <i>Phy­sik</i> aus­ge­gan­gen und wurde durch die vie­len Wi­der­sprü­che, die das Sys­tem un­se­rer mo­der­nen Na­tur­an­schau­ung durch­set­zen, mit in­ne­rer Not­wen­dig­keit zur kri­ti­schen Un­ter­su­chung über die me­tho­do­lo­gi­sche Grund­la­ge der­sel­ben ge­führt.</span>
         
         <span id="s-15-1-4">Auf das Prin­zip des stren­gen Er­fah­rungs­wis­sens wie­sen ihn seine an­fäng­li­chen Stu­di­en, auf eine streng wis­sen­schaft­li­che Er­kennt­nis­theo­rie die Ein­sicht in jene Wi­der­sprü­che.</span>
         
@@ -30,7 +43,7 @@
         
         <span id="s-15-1-8">Diese Be­we­gungs­vor­gän­ge, die das ein­zi­ge im «Rei­che der Natur» Exis­tie­ren­de sein sol­len, kön­nen na­tür­lich nicht mehr wahr­ge­nom­men wer­den.</span>
         
-        <span id="s-15-1-9">Sie sind auf Grund der sub­jek­ti­ven Qua­li­tä­ten er­schlos­sen.</span>
+        <span id="s-15-1-9">Sie sind auf Grund der sub­jek­ti­ven Qua­li­tä­ten <i>er­schlos­sen</i>.</span>
         
       </p>
     </section>
@@ -38,7 +51,7 @@
       <p>
         <span id="s-15-2-1">Nun kann aber diese Er­schlie­ßung kon­se­quen­tem Den­ken ge­gen­über nicht an­ders denn als eine Halb­heit er­schei­nen.</span>
         
-        <span id="s-15-2-2">Be­we­gung ist zu­nächst nur ein Be­griff, den wir aus der Sin­nen­welt ent­lehnt haben, d. h. der uns nur an Din­gen mit jenen sinn­li­chen Qua­li­tä­ten ent­ge­gen­tritt.</span>
+        <span id="s-15-2-2"><i>Be­we­gung</i> ist zu­nächst nur ein Be­griff, den wir aus der Sin­nen­welt ent­lehnt haben, d. h. der uns nur an Din­gen mit jenen sinn­li­chen Qua­li­tä­ten ent­ge­gen­tritt.</span>
         
         <span id="s-15-2-3">Wir ken­nen keine Be­we­gung außer einer sol­chen an Sin­nes­ob­jek­ten.</span>
         
@@ -100,7 +113,7 @@
     </section>
     <section id="p-15-7">
       <p>
-        <span id="s-15-7-1">Eine zwei­te Stüt­ze hat nun diese sub­jek­ti­vis­ti­sche An­sicht an phy­sio­lo­gi­schen Er­wä­gun­gen.</span>
+        <span id="s-15-7-1">Eine zwei­te Stüt­ze hat nun diese sub­jek­ti­vi­sche An­sicht an <i>phy­sio­lo­gi­schen Er­wä­gun­gen</i>.</span>
         
       </p>
     </section>
@@ -120,7 +133,7 @@
     </section>
     <section id="p-15-9">
       <p>
-        <span id="s-15-9-1">Es bleibt also nur die phi­lo­so­phi­sche Er­wä­gung übrig, um über die Sub­jek­ti­vi­tät und Ob­jek­ti­vi­tät der Emp­fin­dung Auf­schluss zu be­kom­men.</span>
+        <span id="s-15-9-1">Es bleibt also nur die <i>phi­lo­so­phi­sche</i> Er­wä­gung übrig, um über die Sub­jek­ti­vi­tät und Ob­jek­ti­vi­tät der Emp­fin­dung Auf­schluss zu be­kom­men.</span>
         
         <span id="s-15-9-2">Und diese lie­fert fol­gen­des:</span>
         
@@ -136,11 +149,11 @@
         
         <span id="s-15-10-4">Alles, was nicht durch das Sub­jekt be­dingt nach­ge­wie­sen wer­den kann, darf nicht als «sub­jek­tiv» be­zeich­net wer­den.</span>
         
-        <span id="s-15-10-5">Nun müs­sen wir uns fra­gen: Was kön­nen wir als dem mensch­li­chen Sub­jekt eigen be­zeich­nen?</span>
+        <span id="s-15-10-5">Nun müs­sen wir uns fra­gen: Was kön­nen wir als dem mensch­li­chen Sub­jekt <i>eigen</i> be­zeich­nen?</span>
         
         <span id="s-15-10-6">Das, was es an sich selbst durch äu­ße­re oder in­ne­re Wahr­neh­mung er­fah­ren kann.</span>
         
-        <span id="s-15-10-7">Durch äu­ße­re Wahr­neh­mung er­fas­sen wir die kör­per­li­che Kon­sti­tu­ti­on, durch in­ne­re Er­fah­rung unser ei­ge­nes Den­ken, Füh­len und Wol­len.</span>
+        <span id="s-15-10-7">Durch <i>äu­ße­re</i> Wahr­neh­mung er­fas­sen wir die kör­per­li­che Kon­sti­tu­ti­on, durch <i>in­ne­re</i> Er­fah­rung unser ei­ge­nes Den­ken, Füh­len und Wol­len.</span>
         
         <span id="s-15-10-8">Was ist nun in ers­te­rer Hin­sicht als sub­jek­tiv zu be­zeich­nen?</span>
         
@@ -148,7 +161,7 @@
         
         <span id="s-15-10-10">Alles aber, was hier auf die­sem Wege nach­ge­wie­sen wer­den kann, ist nur eine be­stimm­te Ge­stal­tung in der An­ord­nung und Funk­ti­on der Sub­stan­zen, wo­durch die Emp­fin­dung ver­mit­telt wird.</span>
         
-        <span id="s-15-10-11">Sub­jek­tiv ist also ei­gent­lich nur der Weg, den die Emp­fin­dung durch­zu­ma­chen hat, bevor sie meine Emp­fin­dung ge­nannt wer­den kann.</span>
+        <span id="s-15-10-11">Sub­jek­tiv ist also ei­gent­lich nur der Weg, den die Emp­fin­dung durch­zu­ma­chen hat, bevor sie <i>meine</i> Emp­fin­dung ge­nannt wer­den kann.</span>
         
         <span id="s-15-10-12">Un­se­re Or­ga­ni­sa­ti­on ver­mit­telt die Emp­fin­dung und diese Ver­mitt­lungs­we­ge sind sub­jek­tiv; die Emp­fin­dung selbst aber ist es nicht.</span>
         
@@ -160,7 +173,7 @@
         
         <span id="s-15-11-2">Was er­fah­re ich in mei­nem In­nern, wenn ich eine Emp­fin­dung als die mei­ni­ge be­zeich­ne?</span>
         
-        <span id="s-15-11-3">Ich er­fah­re, dass ich die Be­zie­hung auf meine In­di­vi­dua­li­tät in mei­nem Den­ken voll­zie­he, dass ich mein Wis­sens­ge­biet auf diese Emp­fin­dung er­stre­cke; aber ich bin mir des­sen nicht be­wusst, dass ich den In­halt der Emp­fin­dung er­zeu­ge.</span>
+        <span id="s-15-11-3">Ich er­fah­re, dass ich die Be­zie­hung auf meine In­di­vi­dua­li­tät in mei­nem Den­ken voll­zie­he, dass ich mein Wis­sens­ge­biet auf diese Emp­fin­dung er­stre­cke; aber ich bin mir des­sen nicht be­wusst, dass ich den <i>In­halt</i> der Emp­fin­dung er­zeu­ge.</span>
         
         <span id="s-15-11-4">Nur den Bezug zu mir stel­le ich fest, die Qua­li­tät der Emp­fin­dung ist eine in sich be­grün­de­te Tat­sa­che.</span>
         
@@ -170,15 +183,15 @@
       <p>
         <span id="s-15-12-1">Wo wir auch an­fan­gen, innen oder außen, wir kom­men nicht bis zur Stel­le, wo wir sagen könn­ten: Hier ist der sub­jek­ti­ve Cha­rak­ter der Emp­fin­dung ge­ge­ben.</span>
         
-        <span id="s-15-12-2">Auf den In­halt der Emp­fin­dung ist der Be­griff «sub­jek­tiv» nicht an­wend­bar.</span>
+        <span id="s-15-12-2">Auf den In­halt der Emp­fin­dung ist der Be­griff «<i>sub­jek­tiv</i>» nicht an­wend­bar.</span>
         
       </p>
     </section>
     <section id="p-15-13">
       <p>
-        <span id="s-15-13-1">Diese Er­wä­gun­gen sind es, die mich dazu zwan­gen, jede Theo­rie der Natur, die prin­zi­pi­ell über das Ge­biet der wahr­ge­nom­me­nen Welt hin­aus­geht, als un­mög­lich ab­zu­leh­nen und le­dig­lich in der Sin­nen­welt das ein­zi­ge Ob­jekt der Na­tur­wis­sen­schaft zu su­chen.</span>
+        <span id="s-15-13-1">Diese Er­wä­gun­gen sind es, die mich dazu zwan­gen, jede Theo­rie der Natur, die prin­zi­pi­ell <i>über</i> das Ge­biet der wahr­ge­nom­me­nen Welt hin­aus­geht, als un­mög­lich ab­zu­leh­nen und le­dig­lich in der Sin­nen­welt das ein­zi­ge Ob­jekt der Na­tur­wis­sen­schaft zu su­chen.</span>
         
-        <span id="s-15-13-2">Dann aber muss­te ich in der ge­gen­sei­ti­gen Ab­hän­gig­keit der Tat­sa­chen eben die­ser Sin­nen­welt das su­chen, was wir mit Na­tur­ge­set­zen aus­spre­chen.</span>
+        <span id="s-15-13-2">Dann aber muss­te ich in der ge­gen­sei­ti­gen Ab­hän­gig­keit der Tat­sa­chen eben die­ser Sin­nen­welt das su­chen, was wir mit <i>Na­tur­ge­set­zen</i> aus­spre­chen.</span>
         
       </p>
     </section>
@@ -192,11 +205,16 @@
         
         <span id="s-15-14-4">Wenn nicht, dann aber muss sich auch das Licht ver­lie­ren, das diese Phy­sik über die Far­ben­leh­re ver­brei­tet.</span>
         
-        <span id="s-15-14-5">Wel­ches un­se­re theo­re­ti­sche Grund­la­ge der Phy­sik ist, mag der Leser aus den fol­gen­den Ka­pi­teln er­fah­ren, um dann von die­ser Grund­la­ge aus Goe­thes Aus­ein­an­der­set­zun­gen im rech­ten Licht zu sehen.\*</span>
+        <span id="s-15-14-5">Wel­ches un­se­re theo­re­ti­sche Grund­la­ge der Phy­sik ist, mag der Leser aus den fol­gen­den Ka­pi­teln er­fah­ren, um dann von die­ser Grund­la­ge aus Goe­thes Aus­ein­an­der­set­zun­gen im rech­ten Licht zu sehen.*</span>
         
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="14-xiv-die-meteorologischen-vorstellungen-goethes.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="16-xvi-goethe-als-denker-und-forscher.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

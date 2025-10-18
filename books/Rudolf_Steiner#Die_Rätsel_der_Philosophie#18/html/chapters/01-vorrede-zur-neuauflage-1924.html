@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VORREDE ZUR NEUAUFLAGE 1924</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -94,7 +107,7 @@
         
         <span id="s-1-5-8">In die­sem Sein und Sich-Wan­deln fühlt er, was ihm Wirk­lich­keit sein kann.</span>
         
-        <span id="s-1-5-9">Er ist nur be­frie­digt, wenn er den gan­zen Men­schen bis her­auf zur Denk­tä­tig­keit in die­ses Sein und Sich-Wan­deln ein­rei­hen kann.</span>
+        <span id="s-1-5-9">Er ist nur be­frie­digt, wenn er den gan­zen Men­schen bis her­auf zur Denk­tä­tig­keit in <i>die­ses</i> Sein und Sich-Wan­deln ein­rei­hen kann.</span>
         
         <span id="s-1-5-10">Mag nun Ha­eckel in Hegel einen Men­schen sehen, der luf­tig-we­sen­lo­se Be­grif­fe ohne Rück­sicht auf die Wirk­lich­keit spinnt; moch­te Hegel, wenn er Ha­eckel er­lebt hätte, in ihm eine Per­sön­lich­keit ge­se­hen haben, die ge­gen­über dem wah­ren Sein mit Blind­heit ge­schla­gen ist: wer sich in bei­der Den­kungs­art ver­tie­fen kann, wird bei Hegel die Mög­lich­keit fin­den, die Kraft des ei­gen­tä­ti­gen Den­kens zu stär­ken, bei Ha­eckel die an­de­re, zwi­schen ent­fern­ten Bil­dun­gen der Natur Be­zie­hun­gen ge­wahr zu wer­den, die be­deu­tungs­vol­le Fra­gen an das mensch­li­che Den­ken stel­len.</span>
         
@@ -183,6 +196,10 @@
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn next" href="02-vorrede-zur-neuauflage-1918.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

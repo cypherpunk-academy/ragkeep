@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>EINLEITUNG</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -14,7 +27,8 @@
     <h1 id="c-3-title" data-slug="einleitung">EINLEITUNG</h1>
     <section id="p-3-1">
       <p>
-        <span id="s-3-1-1">1| Will man Goe­thes Welt­an­schau­ung ver­ste­hen, so darf man sich nicht damit be­gnü­gen, hin­zu­hor­chen, was er selbst in ein­zel­nen Aus­sprü­chen über sie sagt.</span>
+        <a class="p-num" href="#p-3-1">1|</a>
+        <span id="s-3-1-1">Will man Goe­thes Welt­an­schau­ung ver­ste­hen, so darf man sich nicht damit be­gnü­gen, hin­zu­hor­chen, was er selbst in ein­zel­nen Aus­sprü­chen über sie sagt.</span>
         
         <span id="s-3-1-2">In kris­tall­kla­ren, scharf ge­präg­ten Sät­zen den Kern sei­nes We­sens aus­zu­spre­chen, lag nicht in sei­ner Natur.</span>
         
@@ -36,19 +50,15 @@
         
         <span id="s-3-1-11">Er will sich die Un­be­fan­gen­heit nicht da­durch rau­ben, dass er sei­nen Ge­dan­ken eine schar­fe Rich­tung gibt.</span>
         
-        <span id="s-3-1-12">Er be­ru­higt sich bei dem Ge­dan­ken: «Der Mensch ist nicht ge­bo­ren, die Pro­ble­me der Welt zu lösen, wohl aber zu su­chen, wo das Pro­blem an­geht, und sich so­dann in der Gren­ze des Be­greif­li­chen zu hal­ten.» Ein Pro­blem, das der Mensch ge­löst zu haben glaubt, ent­zieht ihm die Mög­lich­keit, tau­send Dinge klar zu sehen, die in den Be­reich die­ses Pro­blems fal­len.</span>
+        <span id="s-3-1-12">Er be­ru­higt sich bei dem Ge­dan­ken: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ma­xi­men und Re­fle­xio­nen" part="1">Der Mensch ist nicht ge­bo­ren, die Pro­ble­me der Welt zu lösen, wohl aber zu su­chen, wo das Pro­blem an­geht, und sich so­dann in der Gren­ze des Be­greif­li­chen zu hal­ten.</q> Ein Pro­blem, das der Mensch ge­löst zu haben glaubt, ent­zieht ihm die Mög­lich­keit, tau­send Dinge klar zu sehen, die in den Be­reich die­ses Pro­blems fal­len.</span>
         
         <span id="s-3-1-13">Er ach­tet auf sie nicht mehr, weil er über das Ge­biet auf­ge­klärt zu sein glaubt, in das sie fal­len.</span>
         
-        <span id="s-3-1-14">Goe­the möch­te lie­ber zwei Mei­nun­gen über eine Sache haben, die ein­an­der ent­ge­gen­ge­setzt sind, als eine be­stimm­te.</span>
+        <span id="s-3-1-14">Goe­the möch­te lie­ber zwei Mei­nun­gen über eine Sache haben, die ein­an­der ent­ge­gen­ge­setzt sind, als <i>eine</i> be­stimm­te.</span>
         
         <span id="s-3-1-15">Denn jedes Ding scheint ihm eine Un­end­lich­keit ein­zu­schlie­ßen, der man sich von ver­schie­de­nen Sei­ten nä­hern muss, um von ihrer gan­zen Fülle etwas wahr­zu­neh­men.</span>
         
-        <span id="s-3-1-16">«Man sagt, zwi­schen zwei ent­ge­gen­ge­setz­ten Mei­nun­gen liegt die Wahr­heit mit­ten inne.</span>
-        
-        <span id="s-3-1-17">Kei­nes­wegs!</span>
-        
-        <span id="s-3-1-18">Das Pro­blem liegt da­zwi­schen, das Un­schau­ba­re, das ewig tä­ti­ge Leben, in Ruhe ge­dacht.» Goe­the will seine Ge­dan­ken le­ben­dig er­hal­ten, damit er in jedem Au­gen­blick sie um­wan­deln könne, wenn die Wirk­lich­keit ihn dazu ver­an­lasst.</span>
+        <span id="s-3-1-16"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Ma­xi­men und Re­fle­xio­nen" part="1">Man sagt, zwi­schen zwei ent­ge­gen­ge­setz­ten Mei­nun­gen liegt die Wahr­heit mit­ten inne. Kei­nes­wegs! Das Pro­blem liegt da­zwi­schen, das Un­schau­ba­re, das ewig tä­ti­ge Leben, in Ruhe ge­dacht.</q> Goe­the will seine Ge­dan­ken le­ben­dig er­hal­ten, damit er in jedem Au­gen­blick sie um­wan­deln könne, wenn die Wirk­lich­keit ihn dazu ver­an­lasst.</span>
         
         <span id="s-3-1-19">Er will nicht recht haben; er will stets nur aufs «Rech­te los­ge­hen».</span>
         
@@ -60,7 +70,8 @@
     </section>
     <section id="p-3-2">
       <p>
-        <span id="s-3-2-1">2| Wenn man den­noch die Ein­heit sei­ner An­schau­un­gen über­schau­en will, so muss man we­ni­ger auf seine Worte hören, als auf seine Le­bens­füh­rung sehen.</span>
+        <a class="p-num" href="#p-3-2">2|</a>
+        <span id="s-3-2-1">Wenn man den­noch die Ein­heit sei­ner An­schau­un­gen über­schau­en will, so muss man we­ni­ger auf seine Worte hören, als auf seine Le­bens­füh­rung sehen.</span>
         
         <span id="s-3-2-2">Man muss sein Ver­hält­nis zu den Din­gen be­lau­schen, wenn er ihrem Wesen nach­forscht und dabei das er­gän­zen, was er selbst nicht sagt.</span>
         
@@ -102,17 +113,22 @@
         
         <span id="s-3-2-21">Man wird beim Lesen die­ses Bu­ches des­halb be­ach­ten müs­sen, dass ich nir­gends die Ab­sicht ge­habt habe, etwa Be­stand­tei­le einer ei­ge­nen Welt­an­schau­ung durch die Dar­stel­lung der Goe­the­schen Vor­stel­lungs­art hin­durch­schim­mern zu las­sen.</span>
         
-        <span id="s-3-2-22">Ich glau­be, dass man bei einem Buch die­ser Art kein Recht hat, die ei­ge­ne Welt­an­schau­ung in­halt­lich zu ver­tre­ten, son­dern dass man die Pflicht hat, das­je­ni­ge, was einem die ei­ge­ne Welt­an­schau­ung gibt, zum Ver­ste­hen der ge­schil­der­ten zu ver­wen­den.</span>
+        <span id="s-3-2-22">Ich glau­be, dass man bei einem Buch die­ser Art kein Recht hat, die ei­ge­ne Welt­an­schau­ung <i>in­halt­lich</i> zu ver­tre­ten, son­dern dass man die Pflicht hat, das­je­ni­ge, was einem die ei­ge­ne Welt­an­schau­ung gibt, zum <i>Ver­ste­hen</i> der ge­schil­der­ten zu ver­wen­den.</span>
         
         <span id="s-3-2-23">Ich habe z. B. Goe­thes Ver­hält­nis zur abend­län­di­schen Ge­dan­ken­ent­wick­lung so schil­dern wol­len, wie sich die­ses Ver­hält­nis vom Ge­sichts­punkt der Goe­the­schen Welt­an­schau­ung aus dar­stellt.</span>
         
-        <span id="s-3-2-24">Für die Be­trach­tung der Welt­an­schau­un­gen ein­zel­ner Per­sön­lich­kei­ten scheint mir diese Art ein­zig die his­to­ri­sche Ob­jek­ti­vi­tät zu ver­bür­gen.</span>
+        <span id="s-3-2-24">Für die Be­trach­tung der Welt­an­schau­un­gen <i>ein­zel­ner</i> Per­sön­lich­kei­ten scheint mir diese Art ein­zig die his­to­ri­sche Ob­jek­ti­vi­tät zu ver­bür­gen.</span>
         
         <span id="s-3-2-25">Eine an­de­re Art hat erst ein­zu­tre­ten, wenn eine sol­che Welt­an­schau­ung im Zu­sam­men­hang mit an­de­ren be­trach­tet wird.</span>
         
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="02-vorrede-zur-ersten-auflage.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="05-goethe-und-schiller.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

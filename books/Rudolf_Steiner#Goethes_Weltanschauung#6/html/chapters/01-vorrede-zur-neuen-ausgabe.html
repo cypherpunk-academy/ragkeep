@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VORREDE ZUR NEUEN AUSGABE</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -14,7 +27,8 @@
     <h1 id="c-1-title" data-slug="vorrede-zur-neuen-ausgabe">VORREDE ZUR NEUEN AUSGABE</h1>
     <section id="p-1-1">
       <p>
-        <span id="s-1-1-1">1| Die in die­ser Schrift ver­such­te Schil­de­rung der Goe­the­schen Welt­an­schau­ung habe ich im Jahr 1897 un­ter­nom­men als zu­sam­men­fas­sen­de Dar­stel­lung des­sen, was mir die Be­trach­tung des Goe­the­schen Geis­tes­le­bens im Laufe vie­ler Jahre ge­ge­ben hatte.</span>
+        <a class="p-num" href="#p-1-1">1|</a>
+        <span id="s-1-1-1">Die in die­ser Schrift ver­such­te Schil­de­rung der Goe­the­schen Welt­an­schau­ung habe ich im Jahr 1897 un­ter­nom­men als zu­sam­men­fas­sen­de Dar­stel­lung des­sen, was mir die Be­trach­tung des Goe­the­schen Geis­tes­le­bens im Laufe vie­ler Jahre ge­ge­ben hatte.</span>
         
         <span id="s-1-1-2">Wie ich da­mals mein Ziel emp­fun­den habe, davon gibt die «Vor­re­de zur ers­ten Auf­la­ge» ein Bild.</span>
         
@@ -38,11 +52,16 @@
     </section>
     <section id="p-1-2">
       <p>
-        <span id="s-1-2-1">2| Dass mich auch zu kei­ner we­sent­li­chen Än­de­rung des In­halts drän­gen kann, was ich seit sech­zehn Jah­ren über Geis­tes­wis­sen­schaft ver­öf­fent­licht habe, dar­über habe ich mich in dem die­ser Neu­aus­ga­be an­ge­füg­ten «Nach­wort» Ru­dolf Stei­ner aus­ge­spro­chen.</span>
+        <a class="p-num" href="#p-1-2">2|</a>
+        <span id="s-1-2-1">Dass mich auch zu kei­ner we­sent­li­chen Än­de­rung des In­halts drän­gen kann, was ich seit sech­zehn Jah­ren über Geis­tes­wis­sen­schaft ver­öf­fent­licht habe, dar­über habe ich mich in dem die­ser Neu­aus­ga­be an­ge­füg­ten «Nach­wort» Ru­dolf Stei­ner aus­ge­spro­chen.</span>
         
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn next" href="02-vorrede-zur-ersten-auflage.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

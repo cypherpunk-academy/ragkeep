@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>I. VORBEMERKUNGEN</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>

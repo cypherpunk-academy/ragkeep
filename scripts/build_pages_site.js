@@ -43,14 +43,14 @@ function fileExists(p) {
 }
 
 function findHtmlDirForBook(bookRootDir) {
-  const directHtml = path.join(bookRootDir, 'html');
+  const rootHtml = path.join(bookRootDir, 'html');
   const resultsHtml = path.join(bookRootDir, 'results', 'html');
-  const directIndex = path.join(directHtml, 'index.html');
+  const rootIndex = path.join(rootHtml, 'index.html');
   const resultsIndex = path.join(resultsHtml, 'index.html');
 
-  // Prefer results/html (newest) over legacy html/
+  // Prefer html/ at book root (new default), but keep fallback to results/html (legacy)
+  if (fileExists(rootIndex)) return rootHtml;
   if (fileExists(resultsIndex)) return resultsHtml;
-  if (fileExists(directIndex)) return directHtml;
   return null;
 }
 

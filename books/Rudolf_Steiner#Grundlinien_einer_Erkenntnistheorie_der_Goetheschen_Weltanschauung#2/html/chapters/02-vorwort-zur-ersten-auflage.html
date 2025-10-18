@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VORWORT ZUR ERSTEN AUFLAGE</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -16,7 +29,7 @@
       <p>
         <span id="s-2-1-1">Als mir durch Herrn Prof.</span>
         
-        <span id="s-2-1-2">Kürsch­ner der eh­ren­vol­le Auf­trag wurde, die Her­aus­ga­be von Goe­thes na­tur­wis­sen­schaft­li­chen Schrif­ten für die Deut­sche Na­tio­nal-Li­te­ra­tur zu be­sor­gen, war ich mir der Schwie­rig­kei­ten sehr wohl be­wusst, die mir bei einem sol­chen Un­ter­neh­men ge­gen­über­ste­hen.</span>
+        <span id="s-2-1-2"><i>Kürsch­ner</i> der eh­ren­vol­le Auf­trag wurde, die Her­aus­ga­be von Goe­thes na­tur­wis­sen­schaft­li­chen Schrif­ten für die Deut­sche Na­tio­nal-Li­te­ra­tur zu be­sor­gen, war ich mir der Schwie­rig­kei­ten sehr wohl be­wusst, die mir bei einem sol­chen Un­ter­neh­men ge­gen­über­ste­hen.</span>
         
         <span id="s-2-1-3">Ich muss­te einer An­sicht, die sich fast all­ge­mein fest­ge­setzt hat, ent­ge­gen­tre­ten.</span>
         
@@ -24,9 +37,9 @@
     </section>
     <section id="p-2-2">
       <p>
-        <span id="s-2-2-1">Wäh­rend die Über­zeu­gung immer mehr an Ver­brei­tung ge­winnt, dass Goe­thes Dich­tun­gen die Grund­la­ge un­se­rer gan­zen Bil­dung sind, sehen selbst jene, die am wei­tes­ten in der An­er­ken­nung sei­ner wis­sen­schaft­li­chen Be­stre­bun­gen gehen, in die­sen nicht mehr als Vor­ah­nun­gen von Wahr­hei­ten, die im spä­te­ren Ver­lauf der Wis­sen­schaft ihre volle Be­stä­ti­gung ge­fun­den haben.</span>
+        <span id="s-2-2-1">Wäh­rend die Über­zeu­gung immer mehr an Ver­brei­tung ge­winnt, dass Goe­thes <i>Dich­tun­gen</i> die Grund­la­ge un­se­rer gan­zen Bil­dung sind, sehen selbst jene, die am wei­tes­ten in der An­er­ken­nung sei­ner <i>wis­sen­schaft­li­chen</i> Be­stre­bun­gen gehen, in die­sen nicht mehr als <i>Vor­ah­nun­gen</i> von Wahr­hei­ten, die im spä­te­ren Ver­lauf der Wis­sen­schaft ihre volle Be­stä­ti­gung ge­fun­den haben.</span>
         
-        <span id="s-2-2-2">Sei­nem ge­nia­li­schen Bli­cke soll es hier ge­lun­gen sein, Na­tur­ge­setz­lich­kei­ten zu ahnen, die dann un­ab­hän­gig von ihm von der stren­gen Wis­sen­schaft wie­der ge­fun­den wur­den.</span>
+        <span id="s-2-2-2">Sei­nem ge­nia­li­schen Bli­cke soll es hier ge­lun­gen sein, Na­tur­ge­setz­lich­kei­ten zu ahnen, die dann <i>un­ab­hän­gig</i> von ihm von der stren­gen Wis­sen­schaft wie­der ge­fun­den wur­den.</span>
         
         <span id="s-2-2-3">Was man der üb­ri­gen Tä­tig­keit Goe­thes im volls­ten Maße zu­ge­steht, dass sich jeder Ge­bil­de­te mit ihr aus­ein­an­der­zu­set­zen hat, das wird bei sei­ner wis­sen­schaft­li­chen An­sicht ab­ge­lehnt.</span>
         
@@ -69,6 +82,11 @@
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="01-vorrede-zur-neuauflage.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="03-a-vorfragen.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VI GOETHES ERKENNTNISART</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -14,11 +27,11 @@
     <h1 id="c-6-title" data-slug="vi-goethes-erkenntnisart">VI GOETHES ERKENNTNISART</h1>
     <section id="p-6-1">
       <p>
-        <span id="s-6-1-1">Jo­hann Gott­lieb Fich­te sand­te im Juni 1794 die ers­ten Bogen sei­ner «Wis­sen­schafts­leh­re» an Goe­the.</span>
+        <span id="s-6-1-1"><i>Jo­hann Gott­lieb Fich­te</i> sand­te im Juni 1794 die ers­ten Bogen sei­ner «Wis­sen­schafts­leh­re» an Goe­the.</span>
         
         <span id="s-6-1-2">Die­ser schrieb hier­auf am 24.</span>
         
-        <span id="s-6-1-3">Juni an den Phi­lo­so­phen: «Was mich be­trifft, werde ich Ihnen den größ­ten Dank schul­dig sein, wenn Sie mich end­lich mit den Phi­lo­so­phen ver­söh­nen, die ich nie ent­beh­ren und mit denen ich mich nie­mals ver­ei­ni­gen konn­te.» Was der Dich­ter hier bei Fich­te, das hatte er frü­her bei Spi­no­za ge­sucht; spä­ter such­te er es bei Schel­ling und Hegel: eine phi­lo­so­phi­sche Welt­an­sicht, die sei­ner Denk­wei­se gemäß wäre.</span>
+        <span id="s-6-1-3">Juni an den Phi­lo­so­phen: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Was mich be­trifft, werde ich Ihnen den größ­ten Dank schul­dig sein, wenn Sie mich end­lich mit den Phi­lo­so­phen ver­söh­nen, die ich nie ent­beh­ren und mit denen ich mich nie­mals ver­ei­ni­gen konn­te.</q> Was der Dich­ter hier bei Fich­te, das hatte er frü­her bei Spi­no­za ge­sucht; spä­ter such­te er es bei Schel­ling und Hegel: eine phi­lo­so­phi­sche Welt­an­sicht, die sei­ner Denk­wei­se gemäß wäre.</span>
         
         <span id="s-6-1-4">Völ­li­ge Be­frie­di­gung aber brach­te dem Dich­ter keine der phi­lo­so­phi­schen Rich­tun­gen, die er ken­nen lern­te.</span>
         
@@ -38,7 +51,7 @@
         
         <span id="s-6-2-6">Wir hal­ten für den rich­ti­gen Weg, diese Auf­ga­be zu lösen, eine auf Grund­la­ge der deut­schen idea­lis­ti­schen Phi­lo­so­phie ge­won­ne­ne Ide­en­rich­tung.</span>
         
-        <span id="s-6-2-7">Diese Phi­lo­so­phie such­te ja in ihrer Weise den­sel­ben höchs­ten mensch­li­chen Be­dürf­nis­sen zu ge­nü­gen, denen Goe­the und Schil­ler ihr Leben wid­me­ten.</span>
+        <span id="s-6-2-7">Diese Phi­lo­so­phie such­te ja in ihrer Weise den­sel­ben <i>höchs­ten</i> mensch­li­chen Be­dürf­nis­sen zu ge­nü­gen, denen Goe­the und Schil­ler ihr Leben wid­me­ten.</span>
         
         <span id="s-6-2-8">Sie ging aus der­sel­ben Zeit­strö­mung her­vor.</span>
         
@@ -56,9 +69,9 @@
       <p>
         <span id="s-6-3-1">Es ist ja rich­tig: Wir haben auf allen Ge­bie­ten der Kul­tur Fort­schrit­te zu ver­zeich­nen.</span>
         
-        <span id="s-6-3-2">Dass das aber Fort­schrit­te in die Tiefe sind, kann kaum be­haup­tet wer­den.</span>
+        <span id="s-6-3-2">Dass das aber Fort­schrit­te <i>in die Tiefe</i> sind, kann kaum be­haup­tet wer­den.</span>
         
-        <span id="s-6-3-3">Für den Ge­halt eines Zeit­al­ters sind aber doch nur die Fort­schrit­te in die Tiefe maß­ge­bend.</span>
+        <span id="s-6-3-3">Für den Ge­halt eines Zeit­al­ters sind aber doch nur die Fort­schrit­te <i>in die Tiefe</i> maß­ge­bend.</span>
         
         <span id="s-6-3-4">Un­se­re Zeit möch­te man aber am bes­ten damit be­zeich­nen, dass man sagt: Sie weist über­haupt Fort­schrit­te in die Tiefe als für den Men­schen un­er­reich­bar zu­rück.</span>
         
@@ -68,55 +81,49 @@
         
         <span id="s-6-3-7">Die deut­sche idea­lis­ti­sche Phi­lo­so­phie aber zeiht man der Un­wis­sen­schaft­lich­keit, weil sie die­sen Mut hatte.</span>
         
-        <span id="s-6-3-8">Man will heute nur sinn­lich schau­en, nicht den­ken.</span>
+        <span id="s-6-3-8">Man will heute nur sinn­lich <i>schau­en</i>, nicht <i>den­ken</i>. Man hat alles Ver­trau­en in das Den­ken ver­lo­ren.</span>
         
-        <span id="s-6-3-9">Man hat alles Ver­trau­en in das Den­ken ver­lo­ren.</span>
+        <span id="s-6-3-9">Man hält es nicht für aus­rei­chend, in die Ge­heim­nis­se der Welt und des Le­bens ein­zu­drin­gen; man ver­zich­tet über­haupt auf jeg­li­che Lö­sung der gro­ßen Rät­sel­fra­gen des Da­seins.</span>
         
-        <span id="s-6-3-10">Man hält es nicht für aus­rei­chend, in die Ge­heim­nis­se der Welt und des Le­bens ein­zu­drin­gen; man ver­zich­tet über­haupt auf jeg­li­che Lö­sung der gro­ßen Rät­sel­fra­gen des Da­seins.</span>
+        <span id="s-6-3-10">Das ein­zi­ge, was man für mög­lich hält, ist: <i>die Aus­sa­gen der Er­fah­rung in ein Sys­tem zu brin­gen</i>. Dabei ver­gisst man nur, dass man sich mit die­ser An­sicht einem Stand­punkt nä­hert, den man längst für über­wun­den hält.</span>
         
-        <span id="s-6-3-11">Das ein­zi­ge, was man für mög­lich hält, ist: die Aus­sa­gen der Er­fah­rung in ein Sys­tem zu brin­gen.</span>
+        <span id="s-6-3-11">Die Ab­wei­sung alles Den­kens und das Po­chen auf die sinn­li­che Er­fah­rung ist, tie­fer er­fasst, doch nichts als der blin­de Of­fen­ba­rungs­glau­be der Re­li­gio­nen.</span>
         
-        <span id="s-6-3-12">Dabei ver­gisst man nur, dass man sich mit die­ser An­sicht einem Stand­punkt nä­hert, den man längst für über­wun­den hält.</span>
+        <span id="s-6-3-12">Der letz­te­re be­ruht doch nur dar­auf, dass die Kir­che fer­ti­ge Wahr­hei­ten über­lie­fert, an die man zu glau­ben hat.</span>
         
-        <span id="s-6-3-13">Die Ab­wei­sung alles Den­kens und das Po­chen auf die sinn­li­che Er­fah­rung ist, tie­fer er­fasst, doch nichts als der blin­de Of­fen­ba­rungs­glau­be der Re­li­gio­nen.</span>
+        <span id="s-6-3-13">Das Den­ken mag sich ab­mü­hen, in ihren tie­fe­ren Sinn ein­zu­drin­gen; be­nom­men aber ist es ihm, die <i>Wahr­heit selbst zu prü­fen</i>, aus ei­ge­ner Kraft in die Tie­fen der Welt zu drin­gen.</span>
         
-        <span id="s-6-3-14">Der letz­te­re be­ruht doch nur dar­auf, dass die Kir­che fer­ti­ge Wahr­hei­ten über­lie­fert, an die man zu glau­ben hat.</span>
+        <span id="s-6-3-14">Und die Er­fah­rungs­wis­sen­schaft: was for­dert <i>sie</i> vom Den­ken?</span>
         
-        <span id="s-6-3-15">Das Den­ken mag sich ab­mü­hen, in ihren tie­fe­ren Sinn ein­zu­drin­gen; be­nom­men aber ist es ihm, die Wahr­heit selbst zu prü­fen, aus ei­ge­ner Kraft in die Tie­fen der Welt zu drin­gen.</span>
+        <span id="s-6-3-15">Dass es lau­sche, was die Tat­sa­chen sagen, und diese Aus­sa­gen aus­le­ge, ordne usw. Selb­stän­dig in den Kern der Welt ein­zu­drin­gen, ver­sagt auch sie dem Den­ken.</span>
         
-        <span id="s-6-3-16">Und die Er­fah­rungs­wis­sen­schaft: was for­dert sie vom Den­ken?</span>
+        <span id="s-6-3-16">Dort for­dert die Theo­lo­gie blin­de Un­ter­wer­fung des Den­kens unter die Aus­sprü­che der Kir­che, hier die Wis­sen­schaft blin­de Un­ter­wer­fung unter die Aus­sprü­che der Sin­nen­be­ob­ach­tung.</span>
         
-        <span id="s-6-3-17">Dass es lau­sche, was die Tat­sa­chen sagen, und diese Aus­sa­gen aus­le­ge, ordne usw. Selb­stän­dig in den Kern der Welt ein­zu­drin­gen, ver­sagt auch sie dem Den­ken.</span>
+        <span id="s-6-3-17">Da wie dort gilt das selb­stän­di­ge, in die Tie­fen drin­gen­de Den­ken nichts.</span>
         
-        <span id="s-6-3-18">Dort for­dert die Theo­lo­gie blin­de Un­ter­wer­fung des Den­kens unter die Aus­sprü­che der Kir­che, hier die Wis­sen­schaft blin­de Un­ter­wer­fung unter die Aus­sprü­che der Sin­nen­be­ob­ach­tung.</span>
+        <span id="s-6-3-18">Die Er­fah­rungs­wis­sen­schaft ver­gisst nur eins.</span>
         
-        <span id="s-6-3-19">Da wie dort gilt das selb­stän­di­ge, in die Tie­fen drin­gen­de Den­ken nichts.</span>
+        <span id="s-6-3-19">Tau­sen­de und aber Tau­sen­de schau­ten eine sin­nen­fäl­li­ge Tat­sa­che und gin­gen an ihr vor­über, ohne etwas Auf­fäl­li­ges an ihr zu mer­ken.</span>
         
-        <span id="s-6-3-20">Die Er­fah­rungs­wis­sen­schaft ver­gisst nur eins.</span>
+        <span id="s-6-3-20">Dann kam einer, der sie an­blick­te und ein wich­ti­ges Ge­setz an ihr ge­wahr wurde.</span>
         
-        <span id="s-6-3-21">Tau­sen­de und aber Tau­sen­de schau­ten eine sin­nen­fäl­li­ge Tat­sa­che und gin­gen an ihr vor­über, ohne etwas Auf­fäl­li­ges an ihr zu mer­ken.</span>
+        <span id="s-6-3-21">Woher kommt das?</span>
         
-        <span id="s-6-3-22">Dann kam einer, der sie an­blick­te und ein wich­ti­ges Ge­setz an ihr ge­wahr wurde.</span>
+        <span id="s-6-3-22">Doch nur davon, weil der Ent­de­cker an­ders zu schau­en ver­stand als seine Vor­gän­ger.</span>
         
-        <span id="s-6-3-23">Woher kommt das?</span>
+        <span id="s-6-3-23">Er sah die Tat­sa­che mit an­dern Augen an als seine Mit­men­schen.</span>
         
-        <span id="s-6-3-24">Doch nur davon, weil der Ent­de­cker an­ders zu schau­en ver­stand als seine Vor­gän­ger.</span>
+        <span id="s-6-3-24">Er hatte bei dem Schau­en einen be­stimm­ten Ge­dan­ken, <i>wie</i> man die Tat­sa­che mit an­dern in Zu­sam­men­hang brin­gen müsse, was für sie be­deut­sam sei, was nicht.</span>
         
-        <span id="s-6-3-25">Er sah die Tat­sa­che mit an­dern Augen an als seine Mit­men­schen.</span>
+        <span id="s-6-3-25">Und so legte er sich <i>den­kend</i> die Sache zu­recht und er sah mehr als die an­dern.</span>
         
-        <span id="s-6-3-26">Er hatte bei dem Schau­en einen be­stimm­ten Ge­dan­ken, wie man die Tat­sa­che mit an­dern in Zu­sam­men­hang brin­gen müsse, was für sie be­deut­sam sei, was nicht.</span>
+        <span id="s-6-3-26"><i>Er sah mit den Augen des Geis­tes</i>. Alle wis­sen­schaft­li­chen Ent­de­ckun­gen be­ru­hen dar­auf, dass der Be­ob­ach­ter in der durch den rich­ti­gen Ge­dan­ken ge­re­gel­ten Weise zu be­ob­ach­ten ver­steht.</span>
         
-        <span id="s-6-3-27">Und so legte er sich den­kend die Sache zu­recht und er sah mehr als die an­dern.</span>
+        <span id="s-6-3-27">Das <i>Den­ken</i> muss die Be­ob­ach­tung na­tur­ge­mäß lei­ten.</span>
         
-        <span id="s-6-3-28">Er sah mit den Augen des Geis­tes.</span>
+        <span id="s-6-3-28">Das kann es nicht, wenn der For­scher den Glau­ben an das Den­ken ver­lo­ren hat, wenn er nicht weiß, was er von des­sen Trag­wei­te zu hal­ten hat.</span>
         
-        <span id="s-6-3-29">Alle wis­sen­schaft­li­chen Ent­de­ckun­gen be­ru­hen dar­auf, dass der Be­ob­ach­ter in der durch den rich­ti­gen Ge­dan­ken ge­re­gel­ten Weise zu be­ob­ach­ten ver­steht.</span>
-        
-        <span id="s-6-3-30">Das Den­ken muss die Be­ob­ach­tung na­tur­ge­mäß lei­ten.</span>
-        
-        <span id="s-6-3-31">Das kann es nicht, wenn der For­scher den Glau­ben an das Den­ken ver­lo­ren hat, wenn er nicht weiß, was er von des­sen Trag­wei­te zu hal­ten hat.</span>
-        
-        <span id="s-6-3-32">Die Er­fah­rungs­wis­sen­schaft irrt rat­los in der Welt der Er­schei­nun­gen umher; die Sin­nen­welt wird ihr eine ver­wir­ren­de Man­nig­fal­tig­keit, weil sie nicht die En­er­gie im Den­ken hat, in das Zen­trum zu drin­gen.</span>
+        <span id="s-6-3-29">Die Er­fah­rungs­wis­sen­schaft irrt rat­los in der Welt der Er­schei­nun­gen umher; die Sin­nen­welt wird ihr eine ver­wir­ren­de Man­nig­fal­tig­keit, weil sie nicht die En­er­gie im Den­ken hat, in das Zen­trum zu drin­gen.</span>
         
       </p>
     </section>
@@ -124,7 +131,7 @@
       <p>
         <span id="s-6-4-1">Man spricht heute von Er­kennt­nis­gren­zen, weil man nicht weiß, wo das Ziel des Den­kens liegt.</span>
         
-        <span id="s-6-4-2">Man hat keine klare An­sicht, was man er­rei­chen will und zwei­felt daran, dass man es er­rei­chen wird.</span>
+        <span id="s-6-4-2">Man hat keine klare An­sicht, <i>was</i> man er­rei­chen will und zwei­felt daran, <i>dass</i> man es er­rei­chen wird.</span>
         
         <span id="s-6-4-3">Wenn heute ir­gend­je­mand käme und uns mit Fin­gern auf die Lö­sung des Welt­rät­sels zeig­te, wir hät­ten nichts davon, weil wir nicht wüss­ten, was wir von der Lö­sung zu hal­ten haben.</span>
         
@@ -180,11 +187,9 @@
       <p>
         <span id="s-6-6-1">Wer dem Den­ken seine über die Sin­nes­auf­fas­sung hin­aus­ge­hen­de Wahr­neh­mungs­fä­hig­keit zu­er­kennt, der muss ihm not­ge­drun­gen auch Ob­jek­te zu­er­ken­nen, die über die bloße sin­nen­fäl­li­ge Wirk­lich­keit hin­aus lie­gen.</span>
         
-        <span id="s-6-6-2">Die Ob­jek­te des Den­kens sind aber die Ideen.</span>
+        <span id="s-6-6-2">Die Ob­jek­te des Den­kens sind aber die <i>Ideen</i>. Indem sich das Den­ken der Idee be­mäch­tigt, ver­schmilzt es mit dem Ur­grun­de des Welt­enda­seins; das, was außen wirkt, tritt in den Geist des Men­schen ein: er wird mit der ob­jek­ti­ven Wirk­lich­keit auf ihrer höchs­ten Po­tenz <i>eins.</i></span>
         
-        <span id="s-6-6-3">Indem sich das Den­ken der Idee be­mäch­tigt, ver­schmilzt es mit dem Ur­grun­de des Welt­enda­seins; das, was außen wirkt, tritt in den Geist des Men­schen ein: er wird mit der ob­jek­ti­ven Wirk­lich­keit auf ihrer höchs­ten Po­tenz eins.</span>
-        
-        <span id="s-6-6-4">Das Ge­wahr­wer­den der Idee in der Wirk­lich­keit ist die wahre Kom­mu­ni­on des Men­schen.</span>
+        <span id="s-6-6-3">Das Ge­wahr­wer­den der Idee in der Wirk­lich­keit ist die wahre Kom­mu­ni­on des Men­schen.</span>
         
       </p>
     </section>
@@ -192,7 +197,7 @@
       <p>
         <span id="s-6-7-1">Das Den­ken hat den Ideen ge­gen­über die­sel­be Be­deu­tung wie das Auge dem Licht, das Ohr dem Ton ge­gen­über.</span>
         
-        <span id="s-6-7-2">Es ist Organ der Auf­fas­sung.</span>
+        <span id="s-6-7-2"><i>Es ist Organ der Auf­fas­sung</i>.</span>
         
       </p>
     </section>
@@ -210,9 +215,9 @@
         
         <span id="s-6-8-6">Und damit wäre die me­cha­ni­sche Welt­an­sicht als die ein­zig wahre Ge­stalt einer sol­chen ge­ge­ben.</span>
         
-        <span id="s-6-8-7">Dabei be­geht man den Feh­ler, dass man die an­dern eben­so ob­jek­ti­ven Be­stand­tei­le der Wirk­lich­keit, die sich auf me­cha­ni­sche Ge­set­ze nicht zu­rück­füh­ren las­sen, ein­fach über­sieht.</span>
+        <span id="s-6-8-7">Dabei be­geht man den Feh­ler, dass man die an­dern eben­so ob­jek­ti­ven Be­stand­tei­le der Wirk­lich­keit, die sich auf me­cha­ni­sche Ge­set­ze <i>nicht</i> zu­rück­füh­ren las­sen, ein­fach über­sieht.</span>
         
-        <span id="s-6-8-8">Das ob­jek­tiv Ge­ge­be­ne deckt sich durch­aus nicht mit dem sinn­lich Ge­ge­be­nen, wie die me­cha­ni­sche Welt­auf­fas­sung glaubt.</span>
+        <span id="s-6-8-8">Das <i>ob­jek­tiv</i> Ge­ge­be­ne deckt sich durch­aus nicht mit dem <i>sinn­lich</i> Ge­ge­be­nen, wie die me­cha­ni­sche Welt­auf­fas­sung glaubt.</span>
         
         <span id="s-6-8-9">Das letz­te­re ist nur die Hälf­te des Ge­ge­be­nen.</span>
         
@@ -226,11 +231,11 @@
       <p>
         <span id="s-6-9-1">Die heu­ti­ge Er­fah­rungs­wis­sen­schaft be­folgt die ganz rich­ti­ge Me­tho­de: am Ge­ge­be­nen fest­zu­hal­ten; aber sie fügt die un­statt­haf­te Be­haup­tung hinzu, dass diese Me­tho­de nur Sin­nen­fäl­lig-Tat­säch­li­ches lie­fern kann.</span>
         
-        <span id="s-6-9-2">Statt bei dem, wie wir zu un­se­ren An­sich­ten kom­men, ste­hen­zu­blei­ben, be­stimmt sie von vorn­her­ein das Was der­sel­ben.</span>
+        <span id="s-6-9-2">Statt bei dem, <i>wie</i> wir zu un­se­ren An­sich­ten kom­men, ste­hen­zu­blei­ben, be­stimmt sie von vorn­her­ein das <i>Was</i> der­sel­ben.</span>
         
         <span id="s-6-9-3">Die ein­zig be­frie­di­gen­de Wirk­lich­keits­auf­fas­sung ist em­pi­ri­sche Me­tho­de mit idea­lis­ti­schem For­schungs­re­sul­tat.</span>
         
-        <span id="s-6-9-4">Das ist Idea­lis­mus, aber kein sol­cher, der einer ne­bel­haf­ten, ge­träum­ten Ein­heit der Dinge nach­geht, son­dern ein sol­cher, der den kon­kre­ten Ide­en­ge­halt der Wirk­lich­keit eben­so er­fah­rungs­ge­mäß sucht wie die heu­ti­ge hy­per­ex­ak­te For­schung den Tat­sa­chen­ge­halt.</span>
+        <span id="s-6-9-4">Das ist Idea­lis­mus, aber kein sol­cher, der einer ne­bel­haf­ten, ge­träum­ten <i>Ein­heit der Dinge</i> nach­geht, son­dern ein sol­cher, der den kon­kre­ten Ide­en­ge­halt der Wirk­lich­keit eben­so er­fah­rungs­ge­mäß sucht wie die heu­ti­ge hy­per­ex­ak­te For­schung den Tat­sa­chen­ge­halt.</span>
         
       </p>
     </section>
@@ -246,7 +251,7 @@
       <p>
         <span id="s-6-11-1">Ein sol­cher liegt auch der Phi­lo­so­phie Edu­ard v. Hart­manns zu­grun­de.</span>
         
-        <span id="s-6-11-2">Edu­ard v. Hart­mann sucht in der Natur die ide­en­ge­mä­ße Ein­heit, wie sie sich po­si­tiv für ein in­halt­vol­les Den­ken er­gibt.</span>
+        <span id="s-6-11-2">Edu­ard v. Hart­mann sucht in der Natur die ide­en­ge­mä­ße Ein­heit, wie sie sich po­si­tiv für ein <i>in­halt­vol­les</i> Den­ken er­gibt.</span>
         
         <span id="s-6-11-3">Er weist die bloß me­cha­ni­sche Na­tur­auf­fas­sung und den am Äu­ßer­li­chen haf­ten­den Hyper-Dar­wi­nis­mus zu­rück.</span>
         
@@ -264,13 +269,13 @@
         
         <span id="s-6-12-2">Was den letz­te­ren Punkt be­trifft, wolle man wei­ter unten nach­se­hen.</span>
         
-        <span id="s-6-12-3">In Bezug auf den Pes­si­mis­mus aber sei fol­gen­des be­merkt: Was Hart­mann als Grün­de für den Pes­si­mis­mus an­führt, d. h. für die An­sicht, dass uns nichts in der Welt voll be­frie­di­gen kann, dass stets die Un­lust die Lust über­wiegt, das möch­te ich ge­ra­de­zu als das Glück der Mensch­heit be­zeich­nen.</span>
+        <span id="s-6-12-3">In Bezug auf den Pes­si­mis­mus aber sei fol­gen­des be­merkt: Was Hart­mann als Grün­de <i>für</i> den Pes­si­mis­mus an­führt, d. h. für die An­sicht, dass uns nichts in der Welt voll be­frie­di­gen kann, dass stets die Un­lust die Lust über­wiegt, das möch­te ich ge­ra­de­zu als das <i>Glück der Mensch­heit</i> be­zeich­nen.</span>
         
         <span id="s-6-12-4">Was er vor­bringt, sind für mich nur Be­wei­se dafür, dass es ver­ge­bens ist, eine Glück­se­lig­keit zu er­stre­ben.</span>
         
         <span id="s-6-12-5">Wir müs­sen eben ein sol­ches Be­stre­ben ganz auf­ge­ben und un­se­re Be­stim­mung rein dar­in­nen su­chen, selbst­los jene idea­len Auf­ga­ben zu er­fül­len, die uns un­se­re Ver­nunft vor­zeich­net.</span>
         
-        <span id="s-6-12-6">Was heißt das an­ders, als dass wir nur im Schaf­fen, in rast­lo­ser Tä­tig­keit unser Glück su­chen sol­len?</span>
+        <span id="s-6-12-6">Was heißt das an­ders, als dass wir nur im <i>Schaf­fen</i>, in rast­lo­ser Tä­tig­keit unser Glück su­chen sol­len?</span>
         
       </p>
     </section>
@@ -284,21 +289,19 @@
         
         <span id="s-6-13-4">Er soll­te zei­gen, was denn unter sol­chen Vor­aus­set­zun­gen die ein­zi­ge Trieb­fe­der aller un­se­rer Hand­lun­gen sein kann.</span>
         
-        <span id="s-6-13-5">Es kann, wenn die Aus­sicht auf ein er­streb­tes Ziel weg­fällt, nur die selbst­lo­se Hin­ga­be an das Ob­jekt sein, dem man seine Tä­tig­keit wid­met, es kann nur die Liebe sein.</span>
+        <span id="s-6-13-5">Es kann, wenn die Aus­sicht auf ein er­streb­tes Ziel weg­fällt, nur die selbst­lo­se Hin­ga­be an das Ob­jekt sein, dem man seine Tä­tig­keit wid­met, <i>es kann nur die Liebe sein</i>. Nur eine Hand­lung aus Liebe kann eine sitt­li­che sein.</span>
         
-        <span id="s-6-13-6">Nur eine Hand­lung aus Liebe kann eine sitt­li­che sein.</span>
+        <span id="s-6-13-6">Die <i>Idee</i> muss in der Wis­sen­schaft, die <i>Liebe</i> im Han­deln unser Leit­stern sein.</span>
         
-        <span id="s-6-13-7">Die Idee muss in der Wis­sen­schaft, die Liebe im Han­deln unser Leit­stern sein.</span>
+        <span id="s-6-13-7">Und damit sind wir wie­der bei Goe­the an­ge­langt.</span>
         
-        <span id="s-6-13-8">Und damit sind wir wie­der bei Goe­the an­ge­langt.</span>
+        <span id="s-6-13-8"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Sprü­che in Prosa" part="1">Dem tä­ti­gen Men­schen kommt es dar­auf an, dass er das Rech­te tue, ob das Rech­te ge­sche­he, soll ihn nicht küm­mern.</q> <q author="Jo­hann Wolf­gang von Goe­the" book-title="Sprü­che in Prosa" part="1">Unser gan­zes Kunst­stück be­steht darin, dass wir un­se­re Exis­tenz auf­ge­ben, um zu exis­tie­ren.</q> («Sprü­che in Prosa»; Natw.</span>
         
-        <span id="s-6-13-9">«Dem tä­ti­gen Men­schen kommt es dar­auf an, dass er das Rech­te tue, ob das Rech­te ge­sche­he, soll ihn nicht küm­mern.» «Unser gan­zes Kunst­stück be­steht darin, dass wir un­se­re Exis­tenz auf­ge­ben, um zu exis­tie­ren.» («Sprü­che in Prosa»; Natw.</span>
+        <span id="s-6-13-9">Schr., 4.</span>
         
-        <span id="s-6-13-10">Schr., 4.</span>
+        <span id="s-6-13-10">Bd., 2.</span>
         
-        <span id="s-6-13-11">Bd., 2.</span>
-        
-        <span id="s-6-13-12">Abt., S.464 u. 441.)</span>
+        <span id="s-6-13-11">Abt., S.464 u. 441.)</span>
         
       </p>
     </section>
@@ -310,17 +313,20 @@
         
         <span id="s-6-14-3">Ich fand, streng nach na­tur­wis­sen­schaft­li­cher Me­tho­de ver­fah­rend, in dem ob­jek­ti­ven Idea­lis­mus die ein­zig be­frie­di­gen­de Welt­an­sicht.</span>
         
-        <span id="s-6-14-4">Die Art, wie ein sich selbst ver­ste­hen­des, wi­der­spruchs­lo­ses Den­ken zu die­ser Welt­an­sicht ge­langt, zeigt meine Er­kennt­nis­theo­rie.</span>
+        <span id="s-6-14-4">Die Art, wie ein sich selbst ver­ste­hen­des, wi­der­spruchs­lo­ses Den­ken zu die­ser Welt­an­sicht ge­langt, zeigt meine <i>Er­kennt­nis­theo­rie</i>. Ich fand dann, dass die­ser ob­jek­ti­ve Idea­lis­mus sei­nem Grund­zug nach die Goe­the­sche Welt­an­sicht durch­tränkt.</span>
         
-        <span id="s-6-14-5">Ich fand dann, dass die­ser ob­jek­ti­ve Idea­lis­mus sei­nem Grund­zug nach die Goe­the­sche Welt­an­sicht durch­tränkt.</span>
+        <span id="s-6-14-5">So geht denn dann frei­lich der Aus­bau mei­ner An­sich­ten seit Jah­ren par­al­lel mit dem Stu­di­um Goe­thes; und ich habe nie einen <i>prin­zi­pi­el­len</i> Ge­gen­satz zwi­schen mei­nen Grund­an­sich­ten und der Goe­the­schen wis­sen­schaft­li­chen Tä­tig­keit ge­fun­den.</span>
         
-        <span id="s-6-14-6">So geht denn dann frei­lich der Aus­bau mei­ner An­sich­ten seit Jah­ren par­al­lel mit dem Stu­di­um Goe­thes; und ich habe nie einen prin­zi­pi­el­len Ge­gen­satz zwi­schen mei­nen Grund­an­sich­ten und der Goe­the­schen wis­sen­schaft­li­chen Tä­tig­keit ge­fun­den.</span>
-        
-        <span id="s-6-14-7">Wenn es mir we­nigs­tens teil­wei­se ge­lun­gen ist: ers­tens mei­nen Stand­punkt so zu ent­wi­ckeln, dass er auch in an­dern le­ben­dig wird, und zwei­tens die Über­zeu­gung her­bei­zu­füh­ren, dass die­ser Stand­punkt wirk­lich der Goe­the­sche ist, dann be­trach­te ich meine Auf­ga­be als er­füllt.</span>
+        <span id="s-6-14-6">Wenn es mir we­nigs­tens teil­wei­se ge­lun­gen ist: ers­tens mei­nen Stand­punkt so zu ent­wi­ckeln, dass er auch in an­dern le­ben­dig wird, und zwei­tens die Über­zeu­gung her­bei­zu­füh­ren, dass die­ser Stand­punkt wirk­lich der Goe­the­sche ist, dann be­trach­te ich meine Auf­ga­be als er­füllt.</span>
         
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="05-v-abschluss-uber-goethes-morphologische-anschauungen.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="07-vii-uber-die-anordnung-der-naturwissenschaftlichen-schriften-goethes.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

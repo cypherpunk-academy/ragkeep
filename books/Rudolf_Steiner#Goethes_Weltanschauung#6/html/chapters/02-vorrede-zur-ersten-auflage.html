@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VORREDE ZUR ERSTEN AUFLAGE</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -14,7 +27,8 @@
     <h1 id="c-2-title" data-slug="vorrede-zur-ersten-auflage">VORREDE ZUR ERSTEN AUFLAGE</h1>
     <section id="p-2-1">
       <p>
-        <span id="s-2-1-1">1| Die Ge­dan­ken, die ich in die­sem Buch aus­spre­che, sol­len die Grund­la­ge fest­hal­ten, die ich in der Welt­an­schau­ung Goe­thes be­ob­ach­tet habe.</span>
+        <a class="p-num" href="#p-2-1">1|</a>
+        <span id="s-2-1-1">Die Ge­dan­ken, die ich in die­sem Buch aus­spre­che, sol­len die Grund­la­ge fest­hal­ten, die ich in der Welt­an­schau­ung Goe­thes be­ob­ach­tet habe.</span>
         
         <span id="s-2-1-2">Im Lauf vie­ler Jahre habe ich immer wie­der und wie­der das Bild die­ser Welt­an­schau­ung be­trach­tet.</span>
         
@@ -22,17 +36,14 @@
         
         <span id="s-2-1-4">Ich lern­te be­grei­fen, warum Goe­the diese Of­fen­ba­run­gen als so hohes Glück emp­fand, dass er sie zu­wei­len höher schätz­te als seine Dich­tungs­ga­be.</span>
         
-        <span id="s-2-1-5">Ich lebte mich in die Emp­fin­dun­gen ein, die durch Goe­thes Seele zogen, wenn er sagte, dass «wir durch nichts so sehr ver­an­lasst wer­den über uns selbst zu den­ken, als wenn wir höchst be­deu­ten­de Ge­gen­stän­de, be­son­ders ent­schie­de­ne cha­rak­te­ris­ti­sche Na­tur­sze­nen, nach lan­gen Zwi­schen­räu­men end­lich wie­der­se­hen und den zu­rück­ge­blie­be­nen Ein­druck mit der ge­gen­wär­ti­gen Ein­wir­kung ver­glei­chen.</span>
-        
-        <span id="s-2-1-6">Da wer­den wir denn im gan­zen be­mer­ken, dass das Ob­jekt immer mehr her­vor­tritt, dass, wenn wir uns frü­her an den Ge­gen­stän­den emp­fan­den, Freud’ und Leid, Hei­ter­keit und Ver­wir­rung auf sie über­tru­gen, wir nun­mehr bei ge­bän­dig­ter Selbstig­keit ihnen das ge­büh­ren­de Recht wi­der­fah­ren las­sen, ihre Ei­gen­hei­ten zu er­ken­nen und ihre Ei­gen­schaf­ten so­fern wir sie durch­drin­gen, in einem hohem Grad zu schät­zen wis­sen.</span>
-        
-        <span id="s-2-1-7">Jene Art des An­schau­ens ge­währt der künst­le­ri­sche Blick, diese eig­net sich dem Na­tur­for­scher, und ich muss­te mich, zwar an­fangs nicht ohne Schmer­zen, zu­letzt doch glück­lich prei­sen, dass, indem jener Sinn mich nach und nach zu ver­las­sen droh­te, die­ser sich in Aug’ und Geist desto kräf­ti­ger ent­wi­ckel­te.»</span>
+        <span id="s-2-1-5">Ich lebte mich in die Emp­fin­dun­gen ein, die durch Goe­thes Seele zogen, wenn er sagte, dass <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">wir durch nichts so sehr ver­an­lasst wer­den über uns selbst zu den­ken, als wenn wir höchst be­deu­ten­de Ge­gen­stän­de, be­son­ders ent­schie­de­ne cha­rak­te­ris­ti­sche Na­tur­sze­nen, nach lan­gen Zwi­schen­räu­men end­lich wie­der­se­hen und den zu­rück­ge­blie­be­nen Ein­druck mit der ge­gen­wär­ti­gen Ein­wir­kung ver­glei­chen. Da wer­den wir denn im gan­zen be­mer­ken, dass das Ob­jekt immer mehr her­vor­tritt, dass, wenn wir uns frü­her an den Ge­gen­stän­den emp­fan­den, Freud’ und Leid, Hei­ter­keit und Ver­wir­rung auf sie über­tru­gen, wir nun­mehr bei ge­bän­dig­ter Selbstig­keit ihnen das ge­büh­ren­de Recht wi­der­fah­ren las­sen, ihre Ei­gen­hei­ten zu er­ken­nen und ihre Ei­gen­schaf­ten so­fern wir sie durch­drin­gen, in einem hohem Grad zu schät­zen wis­sen. Jene Art des An­schau­ens ge­währt der künst­le­ri­sche Blick, diese eig­net sich dem Na­tur­for­scher, und ich muss­te mich, zwar an­fangs nicht ohne Schmer­zen, zu­letzt doch glück­lich prei­sen, dass, indem jener Sinn mich nach und nach zu ver­las­sen droh­te, die­ser sich in Aug’ und Geist desto kräf­ti­ger ent­wi­ckel­te.</q></span>
         
       </p>
     </section>
     <section id="p-2-2">
       <p>
-        <span id="s-2-2-1">2| Die Ein­drü­cke, die Goe­the von den Er­schei­nun­gen der Natur emp­fan­gen hat, muss man ken­nen, wenn man den vol­len Ge­halt sei­ner Dich­tun­gen ver­ste­hen will.</span>
+        <a class="p-num" href="#p-2-2">2|</a>
+        <span id="s-2-2-1">Die Ein­drü­cke, die Goe­the von den Er­schei­nun­gen der Natur emp­fan­gen hat, muss man ken­nen, wenn man den vol­len Ge­halt sei­ner Dich­tun­gen ver­ste­hen will.</span>
         
         <span id="s-2-2-2">Die Ge­heim­nis­se, die er dem Wesen und Wer­den der Schöp­fung ab­ge­lauscht hat, leben in sei­nen künst­le­ri­schen Er­zeug­nis­sen und wer­den nur dem­je­ni­gen of­fen­bar, der hin­horcht auf die Mit­tei­lun­gen, die der Dich­ter über die Natur macht.</span>
         
@@ -42,7 +53,8 @@
     </section>
     <section id="p-2-3">
       <p>
-        <span id="s-2-3-1">3| Sol­che Emp­fin­dun­gen dräng­ten mich zu der Be­schäf­ti­gung mit Goe­thes Na­tur­stu­di­en.</span>
+        <a class="p-num" href="#p-2-3">3|</a>
+        <span id="s-2-3-1">Sol­che Emp­fin­dun­gen dräng­ten mich zu der Be­schäf­ti­gung mit Goe­thes Na­tur­stu­di­en.</span>
         
         <span id="s-2-3-2">Sie lie­ßen zu­nächst die Ideen rei­fen, die ich vor mehr als zehn Jah­ren in Kürsch­ners «Deut­scher Na­tio­nal­li­te­ra­tur» mit­teil­te.</span>
         
@@ -52,7 +64,7 @@
         
         <span id="s-2-3-5">Was ich an Ge­dan­ken zu die­ser Ar­beit mit­ge­bracht und was ich wäh­rend der­sel­ben er­son­nen habe, bil­det den In­halt des vor­lie­gen­den Buchs.</span>
         
-        <span id="s-2-3-6">Ich darf die­sen In­halt als er­lebt im volls­ten Sinne des Wor­tes be­zeich­nen.</span>
+        <span id="s-2-3-6">Ich darf die­sen In­halt als <i>er­lebt im</i> volls­ten Sinne des Wor­tes be­zeich­nen.</span>
         
         <span id="s-2-3-7">Von vie­len Aus­gangs­punk­ten aus habe ich mich den Ideen Goe­thes zu nä­hern ge­sucht.</span>
         
@@ -72,7 +84,8 @@
     </section>
     <section id="p-2-4">
       <p>
-        <span id="s-2-4-1">4| Un­se­re Zeit liebt es, die Ideen da, wo von psy­cho­lo­gi­scher Be­trach­tung einer Per­sön­lich­keit die Rede ist, in einem mys­ti­schen Halb­dun­kel zu las­sen.</span>
+        <a class="p-num" href="#p-2-4">4|</a>
+        <span id="s-2-4-1">Un­se­re Zeit liebt es, die Ideen da, wo von psy­cho­lo­gi­scher Be­trach­tung einer Per­sön­lich­keit die Rede ist, in einem mys­ti­schen Halb­dun­kel zu las­sen.</span>
         
         <span id="s-2-4-2">Die ge­dank­li­che Klar­heit in sol­chen Din­gen wird ge­gen­wär­tig als nüch­ter­ne Ver­stan­des­weis­heit ver­ach­tet.</span>
         
@@ -104,19 +117,20 @@
         
         <span id="s-2-4-16">Nicht auf ne­ben­säch­li­che Ge­dan­ken, zu denen er durch die­ses oder jenes Er­leb­nis von un­ter­ge­ord­ne­ter Be­deu­tung ver­an­lasst wor­den ist, kommt es mir bei Goe­the an, son­dern auf die Grund­rich­tung sei­nes Geis­tes.</span>
         
-        <span id="s-2-4-17">Mag die­ser Geist auch da und dort Sei­ten­we­ge ein­schla­gen: eine Haupt­ten­denz ist immer zu er­ken­nen.</span>
+        <span id="s-2-4-17">Mag die­ser Geist auch da und dort Sei­ten­we­ge ein­schla­gen: <i>eine</i> Haupt­ten­denz ist immer zu er­ken­nen.</span>
         
         <span id="s-2-4-18">Und sie habe ich zu ver­fol­gen ge­sucht.</span>
         
-        <span id="s-2-4-19">Wer da meint, dass die Re­gio­nen, durch die ich ge­gan­gen bin, eisig sind, von dem meine ich, er habe sein Herz zu Hause ge­las­sen.</span>
+        <span id="s-2-4-19">Wer da meint, dass die Re­gio­nen, durch die ich ge­gan­gen bin, eisig sind, von dem meine ich, er habe sein <i>Herz</i> zu Hause ge­las­sen.</span>
         
       </p>
     </section>
     <section id="p-2-5">
       <p>
-        <span id="s-2-5-1">5| Will man mir den Vor­wurf ma­chen, dass ich nur die­je­ni­gen Sei­ten der Goe­the­schen Welt­an­schau­ung schil­de­re, auf die mich mein ei­ge­nes Den­ken und Emp­fin­den weist, so kann ich nichts er­wi­dern, als dass ich eine frem­de Per­sön­lich­keit nur so an­se­hen will, wie sie mir nach mei­ner ei­ge­nen We­sen­heit er­schei­nen muss.</span>
+        <a class="p-num" href="#p-2-5">5|</a>
+        <span id="s-2-5-1">Will man mir den Vor­wurf ma­chen, dass ich nur die­je­ni­gen Sei­ten der Goe­the­schen Welt­an­schau­ung schil­de­re, auf die mich mein ei­ge­nes Den­ken und Emp­fin­den weist, so kann ich nichts er­wi­dern, als dass ich eine frem­de Per­sön­lich­keit nur so an­se­hen will, wie sie mir nach mei­ner ei­ge­nen We­sen­heit er­schei­nen muss.</span>
         
-        <span id="s-2-5-2">Die Ob­jek­ti­vi­tät der­je­ni­gen Dar­stel­ler, die sich selbst ver­leug­nen wol­len, wenn sie frem­de Ideen schil­dern, schät­ze ich nicht hoch.</span>
+        <span id="s-2-5-2">Die <i>Ob­jek­ti­vi­tät</i> der­je­ni­gen Dar­stel­ler, die sich selbst ver­leug­nen wol­len, wenn sie frem­de Ideen schil­dern, schät­ze ich nicht hoch.</span>
         
         <span id="s-2-5-3">Ich glau­be, sie kann nur matte und far­ben­blas­se Bil­der malen.</span>
         
@@ -165,6 +179,11 @@
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="01-vorrede-zur-neuen-ausgabe.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="03-einleitung.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

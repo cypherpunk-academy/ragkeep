@@ -1,6 +1,5 @@
 # Books
 books/**/results
-!books/**/results/html
 books/**/input
 
 # Images

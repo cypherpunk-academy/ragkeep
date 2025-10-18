@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>I EINLEITUNG</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -16,51 +29,49 @@
       <p>
         <span id="s-1-1-1">Am 18.</span>
         
-        <span id="s-1-1-2">Au­gust des Jah­res 1787 schrieb Goe­the von Ita­li­en aus an Kne­bel: «Nach dem, was ich bei Nea­pel, in Si­zi­li­en von Pflan­zen und Fi­schen ge­se­hen habe, würde ich, wenn ich zehn Jahre jün­ger wäre, sehr ver­sucht sein, eine Reise nach In­di­en zu ma­chen, nicht um etwas Neues zu ent­de­cken, son­dern um das Ent­deck­te nach mei­ner Art an­zu­se­hen.» In die­sen Wor­ten liegt der Ge­sichts­punkt, aus dem wir Goe­thes wis­sen­schaft­li­che Ar­bei­ten zu be­trach­ten haben.</span>
+        <span id="s-1-1-2">Au­gust des Jah­res 1787 schrieb Goe­the von Ita­li­en aus an Kne­bel: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Nach dem, was ich bei Nea­pel, in Si­zi­li­en von Pflan­zen und Fi­schen ge­se­hen habe, würde ich, wenn ich zehn Jahre jün­ger wäre, sehr ver­sucht sein, eine Reise nach In­di­en zu ma­chen, <i>nicht um etwas Neues zu ent­de­cken, son­dern um das Ent­deck­te nach mei­ner Art an­zu­se­hen</i>.</q> In die­sen Wor­ten liegt der Ge­sichts­punkt, aus dem wir Goe­thes wis­sen­schaft­li­che Ar­bei­ten zu be­trach­ten haben.</span>
         
-        <span id="s-1-1-3">Es han­delt sich bei ihm nie um die Ent­de­ckung neuer Tat­sa­chen, son­dern um das Er­öff­nen eines neuen Ge­sichts­punk­tes, um eine be­stimm­te Art die Natur an­zu­se­hen.</span>
+        <span id="s-1-1-3">Es han­delt sich bei ihm nie um die Ent­de­ckung neuer Tat­sa­chen, son­dern um das Er­öff­nen eines <i>neuen Ge­sichts­punk­tes</i>, um eine be­stimm­te Art die Natur an­zu­se­hen.</span>
         
         <span id="s-1-1-4">Es ist wahr, dass Goe­the eine Reihe gro­ßer Ein­zel­ent­de­ckun­gen ge­macht hat, wie jene des Zwi­schen­kno­chens und der Wir­bel­theo­rie des Schä­dels in der Os­teo­lo­gie, der Iden­ti­tät aller Pflan­zen­or­ga­ne mit dem Stamm­blatt in der Bo­ta­nik usf.</span>
         
-        <span id="s-1-1-5">Aber als be­le­ben­de Seele aller die­ser Ein­zel­hei­ten haben wir eine groß­ar­ti­ge Na­tur­an­schau­ung zu be­trach­ten, von der sie ge­tra­gen wer­den, haben wir in der Lehre von den Or­ga­nis­men vor allem eine groß­ar­ti­ge, alles üb­ri­ge in den Schat­ten stel­len­de Ent­de­ckung ins Auge zu fas­sen: die des We­sens des Or­ga­nis­mus selbst.</span>
+        <span id="s-1-1-5">Aber als be­le­ben­de Seele aller die­ser Ein­zel­hei­ten haben wir eine groß­ar­ti­ge Na­tur­an­schau­ung zu be­trach­ten, von der sie ge­tra­gen wer­den, haben wir in der Lehre von den Or­ga­nis­men vor allem eine groß­ar­ti­ge, alles üb­ri­ge in den Schat­ten stel­len­de Ent­de­ckung ins Auge zu fas­sen: <i>die des We­sens des Or­ga­nis­mus selbst</i>. Jenes Prin­zip, durch wel­ches ein Or­ga­nis­mus das ist, als das er sich dar­stellt, die Ur­sa­chen, als deren Folge uns die Äu­ße­run­gen des Le­bens er­schei­nen, und zwar alles, was wir in prin­zi­pi­el­ler Hin­sicht dies­be­züg­lich zu fra­gen haben, hat er dar­ge­legt.</span>
         
-        <span id="s-1-1-6">Jenes Prin­zip, durch wel­ches ein Or­ga­nis­mus das ist, als das er sich dar­stellt, die Ur­sa­chen, als deren Folge uns die Äu­ße­run­gen des Le­bens er­schei­nen, und zwar alles, was wir in prin­zi­pi­el­ler Hin­sicht dies­be­züg­lich zu fra­gen haben, hat er dar­ge­legt.</span>
+        <span id="s-1-1-6">Es ist dies vom An­fang an das Ziel alles sei­nes Stre­bens in Bezug auf die or­ga­ni­schen Na­tur­wis­sen­schaf­ten; bei Ver­fol­gung des­sel­ben drän­gen sich ihm jene Ein­zel­hei­ten wie von selbst auf.</span>
         
-        <span id="s-1-1-7">Es ist dies vom An­fang an das Ziel alles sei­nes Stre­bens in Bezug auf die or­ga­ni­schen Na­tur­wis­sen­schaf­ten; bei Ver­fol­gung des­sel­ben drän­gen sich ihm jene Ein­zel­hei­ten wie von selbst auf.</span>
+        <span id="s-1-1-7">Er muss­te sie fin­den, wenn er im wei­te­ren Stre­ben nicht ge­hin­dert sein woll­te.</span>
         
-        <span id="s-1-1-8">Er muss­te sie fin­den, wenn er im wei­te­ren Stre­ben nicht ge­hin­dert sein woll­te.</span>
+        <span id="s-1-1-8">Die Na­tur­wis­sen­schaft vor ihm, die das Wesen der Le­bens­er­schei­nun­gen nicht kann­te und die Or­ga­nis­men ein­fach nach der Zu­sam­men­set­zung aus Tei­len, nach deren äu­ßer­li­chen Merk­ma­len un­ter­such­te, so wie man die­ses bei un­or­ga­ni­schen Din­gen auch macht, muss­te auf ihrem Wege oft den Ein­zel­hei­ten eine fal­sche Deu­tung geben, sie in ein fal­sches Licht set­zen.</span>
         
-        <span id="s-1-1-9">Die Na­tur­wis­sen­schaft vor ihm, die das Wesen der Le­bens­er­schei­nun­gen nicht kann­te und die Or­ga­nis­men ein­fach nach der Zu­sam­men­set­zung aus Tei­len, nach deren äu­ßer­li­chen Merk­ma­len un­ter­such­te, so wie man die­ses bei un­or­ga­ni­schen Din­gen auch macht, muss­te auf ihrem Wege oft den Ein­zel­hei­ten eine fal­sche Deu­tung geben, sie in ein fal­sches Licht set­zen.</span>
+        <span id="s-1-1-9">An den Ein­zel­hei­ten als sol­chen kann man na­tür­lich einen sol­chen Irr­tum nicht be­mer­ken.</span>
         
-        <span id="s-1-1-10">An den Ein­zel­hei­ten als sol­chen kann man na­tür­lich einen sol­chen Irr­tum nicht be­mer­ken.</span>
+        <span id="s-1-1-10">Das er­ken­nen wir eben erst, wenn wir den Or­ga­nis­mus ver­ste­hen, da die Ein­zel­hei­ten für sich, ab­ge­son­dert be­trach­tet, das Prin­zip ihrer Er­klä­rung nicht in sich tra­gen.</span>
         
-        <span id="s-1-1-11">Das er­ken­nen wir eben erst, wenn wir den Or­ga­nis­mus ver­ste­hen, da die Ein­zel­hei­ten für sich, ab­ge­son­dert be­trach­tet, das Prin­zip ihrer Er­klä­rung nicht in sich tra­gen.</span>
+        <span id="s-1-1-11">Sie sind nur durch die Natur des Gan­zen zu er­klä­ren, weil es <i>das Ganze</i> ist, das ihnen Wesen und Be­deu­tung gibt.</span>
         
-        <span id="s-1-1-12">Sie sind nur durch die Natur des Gan­zen zu er­klä­ren, weil es das Ganze ist, das ihnen Wesen und Be­deu­tung gibt.</span>
+        <span id="s-1-1-12">Erst nach­dem Goe­the eben diese Natur des Gan­zen ent­hüllt hatte, wur­den ihm jene irr­tüm­li­chen Aus­le­gun­gen sicht­bar; sie waren mit sei­ner Theo­rie der Le­be­we­sen nicht zu ver­ei­ni­gen, sie wi­der­spra­chen der­sel­ben.</span>
         
-        <span id="s-1-1-13">Erst nach­dem Goe­the eben diese Natur des Gan­zen ent­hüllt hatte, wur­den ihm jene irr­tüm­li­chen Aus­le­gun­gen sicht­bar; sie waren mit sei­ner Theo­rie der Le­be­we­sen nicht zu ver­ei­ni­gen, sie wi­der­spra­chen der­sel­ben.</span>
+        <span id="s-1-1-13">Woll­te er auf sei­nem Wege wei­ter gehen, so muss­te er der­glei­chen Vor­ur­tei­le weg­schaf­fen.</span>
         
-        <span id="s-1-1-14">Woll­te er auf sei­nem Wege wei­ter gehen, so muss­te er der­glei­chen Vor­ur­tei­le weg­schaf­fen.</span>
+        <span id="s-1-1-14">Dies war beim Zwi­schen­kno­chen der Fall.</span>
         
-        <span id="s-1-1-15">Dies war beim Zwi­schen­kno­chen der Fall.</span>
+        <span id="s-1-1-15">Tat­sa­chen, die nur dann von Wert und In­ter­es­se sind, wenn man eben jene Theo­rie be­sitzt, wie die Wir­bel­na­tur der Schä­del­kno­chen, waren jener äl­te­ren Na­tur­leh­re un­be­kannt.</span>
         
-        <span id="s-1-1-16">Tat­sa­chen, die nur dann von Wert und In­ter­es­se sind, wenn man eben jene Theo­rie be­sitzt, wie die Wir­bel­na­tur der Schä­del­kno­chen, waren jener äl­te­ren Na­tur­leh­re un­be­kannt.</span>
+        <span id="s-1-1-16">Alle diese Hin­der­nis­se muss­ten durch Ein­zel­erfah­run­gen aus dem Wege ge­räumt wer­den.</span>
         
-        <span id="s-1-1-17">Alle diese Hin­der­nis­se muss­ten durch Ein­zel­erfah­run­gen aus dem Wege ge­räumt wer­den.</span>
+        <span id="s-1-1-17">So er­schei­nen uns denn die letz­te­ren bei Goe­the nie als Selbst­zweck; sie müs­sen immer ge­macht wer­den, um einen gro­ßen Ge­dan­ken, um jene <i>zen­tra­le Ent­de­ckung</i> zu be­stä­ti­gen.</span>
         
-        <span id="s-1-1-18">So er­schei­nen uns denn die letz­te­ren bei Goe­the nie als Selbst­zweck; sie müs­sen immer ge­macht wer­den, um einen gro­ßen Ge­dan­ken, um jene zen­tra­le Ent­de­ckung zu be­stä­ti­gen.</span>
+        <span id="s-1-1-18">Es ist nicht zu leug­nen, dass Goe­thes Zeit­ge­nos­sen frü­her oder spä­ter zu den­sel­ben Be­ob­ach­tun­gen kamen, und dass heute viel­leicht alle auch ohne Goe­thes Be­stre­bun­gen be­kannt wären; aber noch viel we­ni­ger ist zu leug­nen, dass seine große, die ganze or­ga­ni­sche Natur um­span­nen­de Ent­de­ckung bis heute von kei­nem zwei­ten un­ab­hän­gig von Goe­the in gleich vor­treff­li­cher Weise aus­ge­spro­chen wor­den ist, ja es fehlt uns bis heute an einer auch nur ei­ni­ger­ma­ßen be­frie­di­gen­den Wür­di­gung der­sel­ben.</span>
         
-        <span id="s-1-1-19">Es ist nicht zu leug­nen, dass Goe­thes Zeit­ge­nos­sen frü­her oder spä­ter zu den­sel­ben Be­ob­ach­tun­gen kamen, und dass heute viel­leicht alle auch ohne Goe­thes Be­stre­bun­gen be­kannt wären; aber noch viel we­ni­ger ist zu leug­nen, dass seine große, die ganze or­ga­ni­sche Natur um­span­nen­de Ent­de­ckung bis heute von kei­nem zwei­ten un­ab­hän­gig von Goe­the in gleich vor­treff­li­cher Weise aus­ge­spro­chen wor­den ist, ja es fehlt uns bis heute an einer auch nur ei­ni­ger­ma­ßen be­frie­di­gen­den Wür­di­gung der­sel­ben.</span>
+        <span id="s-1-1-19">Es er­scheint im Grun­de gleich­gül­tig, ob Goe­the eine Tat­sa­che zu­erst oder nur wie­der­ent­deckt hat; sie ge­winnt durch die Art, wie er sie sei­ner Na­tur­an­schau­ung ein­fügt, erst ihre wahre Be­deu­tung.</span>
         
-        <span id="s-1-1-20">Es er­scheint im Grun­de gleich­gül­tig, ob Goe­the eine Tat­sa­che zu­erst oder nur wie­der­ent­deckt hat; sie ge­winnt durch die Art, wie er sie sei­ner Na­tur­an­schau­ung ein­fügt, erst ihre wahre Be­deu­tung.</span>
+        <span id="s-1-1-20">Das ist es, was man bis­her über­se­hen hat.</span>
         
-        <span id="s-1-1-21">Das ist es, was man bis­her über­se­hen hat.</span>
+        <span id="s-1-1-21">Man hob jene be­son­de­ren Tat­sa­chen zu sehr her­vor und for­der­te da­durch zur Po­le­mik auf.</span>
         
-        <span id="s-1-1-22">Man hob jene be­son­de­ren Tat­sa­chen zu sehr her­vor und for­der­te da­durch zur Po­le­mik auf.</span>
+        <span id="s-1-1-22">Wohl wies man oft auf Goe­thes Über­zeu­gung von der Kon­se­quenz der Natur hin, al­lein man be­ach­te­te nicht, dass damit nur ein ganz ne­ben­säch­li­ches, wenig be­deut­sa­mes Cha­rak­te­ris­ti­kon der Goe­the­schen An­schau­un­gen ge­ge­ben ist und dass es bei­spiels­wei­se in Bezug auf die Or­ga­nik die Haupt­sa­che ist, zu zei­gen, wel­cher Natur das ist, wel­ches jene Kon­se­quenz be­wahrt.</span>
         
-        <span id="s-1-1-23">Wohl wies man oft auf Goe­thes Über­zeu­gung von der Kon­se­quenz der Natur hin, al­lein man be­ach­te­te nicht, dass damit nur ein ganz ne­ben­säch­li­ches, wenig be­deut­sa­mes Cha­rak­te­ris­ti­kon der Goe­the­schen An­schau­un­gen ge­ge­ben ist und dass es bei­spiels­wei­se in Bezug auf die Or­ga­nik die Haupt­sa­che ist, zu zei­gen, wel­cher Natur das ist, wel­ches jene Kon­se­quenz be­wahrt.</span>
-        
-        <span id="s-1-1-24">Nennt man da den Typus, so hat man zu sagen, wo­r­in­nen die We­sen­heit des Typus im Sinne Goe­thes be­steht.</span>
+        <span id="s-1-1-23">Nennt man da den Typus, so hat man zu sagen, wo­r­in­nen die We­sen­heit des Typus im Sinne Goe­thes be­steht.</span>
         
       </p>
     </section>
@@ -70,7 +81,7 @@
         
         <span id="s-1-2-2">Die Größe die­ses Ge­dan­kens, den Goe­the dann auch auf die Tier­welt aus­zu­deh­nen such­te, geht einem nur dann auf, wenn man ver­sucht, sich den­sel­ben im Geist le­ben­dig zu ma­chen, wenn man es un­ter­nimmt ihn nach­zu­den­ken.</span>
         
-        <span id="s-1-2-3">Man wird dann ge­wahr, dass er die in die Idee über­setz­te Natur der Pflan­ze selbst ist, die in un­se­rem Geist eben­so lebt wie im Ob­jekt; man be­merkt auch, dass man sich einen Or­ga­nis­mus bis in die kleins­ten Teile hin­ein be­lebt, nicht als toten, ab­ge­schlos­se­nen Ge­gen­stand, son­dern als sich Ent­wi­ckeln­des, Wer­den­des, als die ste­ti­ge Un­ru­he in sich selbst vor­stellt.</span>
+        <span id="s-1-2-3">Man wird dann ge­wahr, dass er die in die <i>Idee</i> über­setz­te Natur der Pflan­ze selbst ist, die in un­se­rem Geist eben­so lebt wie im Ob­jekt; man be­merkt auch, dass man sich einen Or­ga­nis­mus bis in die kleins­ten Teile hin­ein be­lebt, nicht als toten, ab­ge­schlos­se­nen Ge­gen­stand, son­dern als sich Ent­wi­ckeln­des, Wer­den­des, als die ste­ti­ge Un­ru­he in sich selbst vor­stellt.</span>
         
       </p>
     </section>
@@ -81,6 +92,10 @@
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn next" href="02-ii-die-entstehung-der-metamorphosenlehre.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

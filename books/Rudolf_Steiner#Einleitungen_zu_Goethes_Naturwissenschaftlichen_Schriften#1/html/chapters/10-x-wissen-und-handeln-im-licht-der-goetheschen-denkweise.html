@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>X WISSEN UND HANDELN IM LICHT DER GOETHESCHEN DENKWEISE</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -23,7 +36,7 @@
         
         <span id="s-10-1-4">Der Mensch hat tätig das Ende aus dem An­fang her­vor­ge­hen zu las­sen.</span>
         
-        <span id="s-10-1-5">Die Art, wie er das tut, ist die Me­tho­de.</span>
+        <span id="s-10-1-5">Die Art, <i>wie</i> er das tut, ist die Me­tho­de.</span>
         
         <span id="s-10-1-6">Es ist nun selbst­ver­ständ­lich, dass un­se­re Auf­fas­sung jenes Ver­hält­nis­ses von An­fang und Ende der Wis­sen­schaft auch eine ei­gen­tüm­li­che Me­tho­de be­din­gen wird.</span>
         
@@ -57,67 +70,63 @@
         
         <span id="s-10-1-21">Man darf das nicht miss­ver­ste­hen.</span>
         
-        <span id="s-10-1-22">Es kann nicht so ge­meint sein, als wenn jede Er­schei­nung durch die her­ge­brach­ten Be­grif­fe er­klär­bar sein müsse; als ob un­se­re Ide­en­welt ab­ge­schlos­sen wäre und alles neu zu er­fah­ren­de sich mit ir­gend­ei­nem Be­grif­fe, den wir schon be­sit­zen, de­cken müsse.</span>
+        <span id="s-10-1-22">Es kann nicht so ge­meint sein, als wenn jede Er­schei­nung durch die her­ge­brach­ten Be­grif­fe er­klär­bar sein müsse; als ob un­se­re Ide­en­welt ab­ge­schlos­sen wäre und alles neu zu er­fah­ren­de sich mit ir­gend­ei­nem Be­grif­fe, <i>den wir schon be­sit­zen</i>, de­cken müsse.</span>
         
         <span id="s-10-1-23">Jenes Drän­gen der Ge­dan­ken­welt kann auch zu einem Punk­te hin­ge­hen, der bis­her über­haupt noch von kei­nem Men­schen ge­dacht wor­den ist.</span>
         
-        <span id="s-10-1-24">Und das ide­el­le Fort­schrei­ten der Ge­schich­te der Wis­sen­schaft be­ruht ge­ra­de dar­auf, dass das Den­ken neue Ide­en­ge­bil­de an die Ober­flä­che wirft.</span>
+        <span id="s-10-1-24">Und das ide­el­le Fort­schrei­ten der Ge­schich­te der Wis­sen­schaft be­ruht ge­ra­de dar­auf, dass das Den­ken <i>neue</i> Ide­en­ge­bil­de an die Ober­flä­che wirft.</span>
         
         <span id="s-10-1-25">Jedes sol­che Ge­dan­ken­ge­bil­de hängt mit tau­send Fäden mit allen an­dern mög­li­chen Ge­dan­ken zu­sam­men.</span>
         
         <span id="s-10-1-26">Mit die­sem Be­griff in die­ser, mit einem an­dern in einer an­dern Weise.</span>
         
-        <span id="s-10-1-27">Und darin be­steht die wis­sen­schaft­li­che Me­tho­de, dass wir den Be­griff einer ein­zel­nen Er­schei­nung in sei­nem Zu­sam­men­hang mit der üb­ri­gen Ide­en­welt auf­zei­gen.</span>
+        <span id="s-10-1-27"><i>Und darin be­steht die wis­sen­schaft­li­che Me­tho­de, dass wir den Be­griff einer ein­zel­nen Er­schei­nung in sei­nem Zu­sam­men­hang mit der üb­ri­gen Ide­en­welt auf­zei­gen</i>. Wir nen­nen die­sen Vor­gang: Ab­lei­ten (Be­wei­sen) des Be­grif­fes.</span>
         
-        <span id="s-10-1-28">Wir nen­nen die­sen Vor­gang: Ab­lei­ten (Be­wei­sen) des Be­grif­fes.</span>
+        <span id="s-10-1-28">Alles wis­sen­schaft­li­che Den­ken be­steht aber nur darin, dass wir die be­ste­hen­den Über­gän­ge von Be­griff zu Be­griff fin­den, be­steht in dem Her­vor­ge­hen­las­sen eines Be­grif­fes aus dem an­dern.</span>
         
-        <span id="s-10-1-29">Alles wis­sen­schaft­li­che Den­ken be­steht aber nur darin, dass wir die be­ste­hen­den Über­gän­ge von Be­griff zu Be­griff fin­den, be­steht in dem Her­vor­ge­hen­las­sen eines Be­grif­fes aus dem an­dern.</span>
+        <span id="s-10-1-29">Hin- und Her­be­we­gung un­se­res Den­kens von Be­griff zu Be­griff, das ist wis­sen­schaft­li­che Me­tho­de.</span>
         
-        <span id="s-10-1-30">Hin- und Her­be­we­gung un­se­res Den­kens von Be­griff zu Be­griff, das ist wis­sen­schaft­li­che Me­tho­de.</span>
+        <span id="s-10-1-30">Man wird sagen, das sei ja die alte Ge­schich­te von der Kor­re­spon­denz von Be­griffs­welt und Er­fah­rungs­welt.</span>
         
-        <span id="s-10-1-31">Man wird sagen, das sei ja die alte Ge­schich­te von der Kor­re­spon­denz von Be­griffs­welt und Er­fah­rungs­welt.</span>
+        <span id="s-10-1-31">Wir müss­ten vor­aus­set­zen, dass die Welt außer uns (das Trans­sub­jek­ti­ve) un­se­rer Be­griffs­welt kor­re­spon­die­re, wenn wir glau­ben sol­len, dass das Hin- und Her­ge­hen von Be­griff zu Be­griff zu einem Bild der Wirk­lich­keit führe.</span>
         
-        <span id="s-10-1-32">Wir müss­ten vor­aus­set­zen, dass die Welt außer uns (das Trans­sub­jek­ti­ve) un­se­rer Be­griffs­welt kor­re­spon­die­re, wenn wir glau­ben sol­len, dass das Hin- und Her­ge­hen von Be­griff zu Be­griff zu einem Bild der Wirk­lich­keit führe.</span>
+        <span id="s-10-1-32">Das ist aber nur eine ver­fehl­te Auf­fas­sung des Ver­hält­nis­ses von Ein­zel­ge­bil­de und Be­griff.</span>
         
-        <span id="s-10-1-33">Das ist aber nur eine ver­fehl­te Auf­fas­sung des Ver­hält­nis­ses von Ein­zel­ge­bil­de und Be­griff.</span>
+        <span id="s-10-1-33">Wenn ich einem Ge­bil­de der Er­fah­rungs­welt ge­gen­über­tre­te, so weiß ich über­haupt gar nicht, <i>was</i> es ist.</span>
         
-        <span id="s-10-1-34">Wenn ich einem Ge­bil­de der Er­fah­rungs­welt ge­gen­über­tre­te, so weiß ich über­haupt gar nicht, was es ist.</span>
+        <span id="s-10-1-34">Erst, wenn ich es über­wun­den, wenn mir sein Be­griff auf­ge­leuch­tet hat, dann weiß ich, <i>was</i> ich vor mir habe.</span>
         
-        <span id="s-10-1-35">Erst, wenn ich es über­wun­den, wenn mir sein Be­griff auf­ge­leuch­tet hat, dann weiß ich, was ich vor mir habe.</span>
+        <span id="s-10-1-35">Das will doch aber nicht sagen, dass jenes Ein­zel­ge­bil­de und der Be­griff zwei <i>ver­schie­de­ne</i> Dinge sind.</span>
         
-        <span id="s-10-1-36">Das will doch aber nicht sagen, dass jenes Ein­zel­ge­bil­de und der Be­griff zwei ver­schie­de­ne Dinge sind.</span>
+        <span id="s-10-1-36">Nein, sie sind das­sel­be; und was mir im Be­son­de­ren ge­gen­über­tritt, ist nichts als der <i>Be­griff</i>. Der Grund, warum ich jenes Ge­bil­de als ab­ge­son­der­tes, von der an­dern Wirk­lich­keit ge­trenn­tes Stück sehe, ist eben der, dass ich es sei­ner We­sen­heit nach noch nicht er­ken­ne, dass es mir noch nicht als das ent­ge­gen­tritt, <i>was</i> es ist.</span>
         
-        <span id="s-10-1-37">Nein, sie sind das­sel­be; und was mir im Be­son­de­ren ge­gen­über­tritt, ist nichts als der Be­griff.</span>
+        <span id="s-10-1-37">Dar­aus er­gibt sich das Mit­tel, un­se­re wis­sen­schaft­li­che Me­tho­de wei­ter zu cha­rak­te­ri­sie­ren.</span>
         
-        <span id="s-10-1-38">Der Grund, warum ich jenes Ge­bil­de als ab­ge­son­der­tes, von der an­dern Wirk­lich­keit ge­trenn­tes Stück sehe, ist eben der, dass ich es sei­ner We­sen­heit nach noch nicht er­ken­ne, dass es mir noch nicht als das ent­ge­gen­tritt, was es ist.</span>
+        <span id="s-10-1-38">Jedes ein­zel­ne Wirk­lich­keits­ge­bil­de re­prä­sen­tiert in­ner­halb des Ge­dan­ken­sys­tems einen be­stimm­ten In­halt.</span>
         
-        <span id="s-10-1-39">Dar­aus er­gibt sich das Mit­tel, un­se­re wis­sen­schaft­li­che Me­tho­de wei­ter zu cha­rak­te­ri­sie­ren.</span>
+        <span id="s-10-1-39">Es ist in der All­heit der Ide­en­welt be­grün­det und kann nur im Zu­sam­men­hang mit ihr be­grif­fen wer­den.</span>
         
-        <span id="s-10-1-40">Jedes ein­zel­ne Wirk­lich­keits­ge­bil­de re­prä­sen­tiert in­ner­halb des Ge­dan­ken­sys­tems einen be­stimm­ten In­halt.</span>
+        <span id="s-10-1-40">So muss not­wen­dig jedes Ding zu einer dop­pel­ten Denk­ar­beit auf­for­dern.</span>
         
-        <span id="s-10-1-41">Es ist in der All­heit der Ide­en­welt be­grün­det und kann nur im Zu­sam­men­hang mit ihr be­grif­fen wer­den.</span>
+        <span id="s-10-1-41">Zu­erst ist der Ge­dan­ke in schar­fen Kon­tu­ren fest­zu­stel­len, der ihm ent­spricht, und her­nach sind alle Fäden fest­zu­stel­len, die von die­sem Ge­dan­ken zur Ge­samt­ge­dan­ken­welt füh­ren.</span>
         
-        <span id="s-10-1-42">So muss not­wen­dig jedes Ding zu einer dop­pel­ten Denk­ar­beit auf­for­dern.</span>
+        <span id="s-10-1-42">Klar­heit im Ein­zel­nen und Tiefe im Gan­zen sind die zwei be­deu­tends­ten Er­for­der­nis­se der Wirk­lich­keit.</span>
         
-        <span id="s-10-1-43">Zu­erst ist der Ge­dan­ke in schar­fen Kon­tu­ren fest­zu­stel­len, der ihm ent­spricht, und her­nach sind alle Fäden fest­zu­stel­len, die von die­sem Ge­dan­ken zur Ge­samt­ge­dan­ken­welt füh­ren.</span>
+        <span id="s-10-1-43">Jene ist Sache des Ver­stan­des, diese Sache der Ver­nunft.</span>
         
-        <span id="s-10-1-44">Klar­heit im Ein­zel­nen und Tiefe im Gan­zen sind die zwei be­deu­tends­ten Er­for­der­nis­se der Wirk­lich­keit.</span>
+        <span id="s-10-1-44">Der Ver­stand schafft Ge­dan­ken­ge­bil­de für die ein­zel­nen Dinge der Wirk­lich­keit.</span>
         
-        <span id="s-10-1-45">Jene ist Sache des Ver­stan­des, diese Sache der Ver­nunft.</span>
+        <span id="s-10-1-45">Er ent­spricht sei­ner Auf­ga­be umso mehr, je ge­nau­er er die­sel­ben um­grenzt, je schär­fe­re Kon­tu­ren er zieht.</span>
         
-        <span id="s-10-1-46">Der Ver­stand schafft Ge­dan­ken­ge­bil­de für die ein­zel­nen Dinge der Wirk­lich­keit.</span>
+        <span id="s-10-1-46">Die Ver­nunft hat dann diese Ge­bil­de in die Har­mo­nie der ge­sam­ten Ide­en­welt ein­zu­rei­hen.</span>
         
-        <span id="s-10-1-47">Er ent­spricht sei­ner Auf­ga­be umso mehr, je ge­nau­er er die­sel­ben um­grenzt, je schär­fe­re Kon­tu­ren er zieht.</span>
+        <span id="s-10-1-47">Das setzt na­tür­lich fol­gen­des vor­aus: In dem In­halt der Ge­dan­ken­ge­bil­de, die der Ver­stand schafft, ist jene Ein­heit schon, lebt schon ein und das­sel­be Leben; nur hält der Ver­stand alles künst­lich aus­ein­an­der.</span>
         
-        <span id="s-10-1-48">Die Ver­nunft hat dann diese Ge­bil­de in die Har­mo­nie der ge­sam­ten Ide­en­welt ein­zu­rei­hen.</span>
+        <span id="s-10-1-48">Die Ver­nunft hebt, ohne die Klar­heit zu ver­wi­schen, nur die Tren­nung wie­der auf.</span>
         
-        <span id="s-10-1-49">Das setzt na­tür­lich fol­gen­des vor­aus: In dem In­halt der Ge­dan­ken­ge­bil­de, die der Ver­stand schafft, ist jene Ein­heit schon, lebt schon ein und das­sel­be Leben; nur hält der Ver­stand alles künst­lich aus­ein­an­der.</span>
+        <span id="s-10-1-49">Der Ver­stand ent­fernt uns von der Wirk­lich­keit, die Ver­nunft führt uns auf sie wie­der zu­rück.</span>
         
-        <span id="s-10-1-50">Die Ver­nunft hebt, ohne die Klar­heit zu ver­wi­schen, nur die Tren­nung wie­der auf.</span>
-        
-        <span id="s-10-1-51">Der Ver­stand ent­fernt uns von der Wirk­lich­keit, die Ver­nunft führt uns auf sie wie­der zu­rück.</span>
-        
-        <span id="s-10-1-52">Gra­phisch wird sich das so dar­stel­len:</span>
+        <span id="s-10-1-50">Gra­phisch wird sich das so dar­stel­len:</span>
         
       </p>
     </section>
@@ -125,7 +134,7 @@
       <p>
         <span id="s-10-2-1">In dem um­ste­hen­den Ge­bil­de hängt alles zu­sam­men; es lebt in allen Tei­len das­sel­be Prin­zip.</span>
         
-        <span id="s-10-2-2">Der Ver­stand schafft die Tren­nung der ein­zel­nen Ge­bil­de, weil sie uns ja in dem Ge­ge­be­nen als ein­zel­ne ge­gen­über­tre­ten, und die Ver­nunft er­kennt die Ein­heit­lich­keit.</span>
+        <span id="s-10-2-2">Der Ver­stand schafft die Tren­nung der ein­zel­nen Ge­bil­de, weil sie uns ja in dem Ge­ge­be­nen als <i>ein­zel­ne</i> ge­gen­über­tre­ten, und die Ver­nunft er­kennt die Ein­heit­lich­keit.</span>
         
         <span id="s-10-2-3">Wenn wir fol­gen­de</span>
         
@@ -133,41 +142,39 @@
     </section>
     <section id="p-10-3">
       <p>
-        <span id="s-10-3-1">zwei Wahr­neh­mun­gen haben: 1.</span>
+        <span id="s-10-3-1"><i>zwei</i> Wahr­neh­mun­gen haben: 1.</span>
         
         <span id="s-10-3-2">die ein­fal­len­den Son­nen­strah­len und 2.</span>
         
-        <span id="s-10-3-3">einen er­wärm­ten Stein, so hält der Ver­stand die bei­den Dinge aus­ein­an­der, weil sie uns als zwei ge­gen­über­tre­ten; er hält das eine als Ur­sa­che, das an­de­re als Wir­kung fest; dann tritt die Ver­nunft hinzu, reißt die Schei­de­wand nie­der und er­kennt die Ein­heit in der Zwei­heit.</span>
+        <span id="s-10-3-3">einen er­wärm­ten Stein, so hält der Ver­stand die bei­den Dinge aus­ein­an­der, weil sie uns als zwei ge­gen­über­tre­ten; er hält das eine als Ur­sa­che, das an­de­re als Wir­kung fest; dann tritt die Ver­nunft hinzu, reißt die Schei­de­wand nie­der und er­kennt die <i>Ein­heit in der Zwei­heit</i>. Alle Be­grif­fe, die der Ver­stand schafft: Ur­sa­che und Wir­kung, Sub­stanz und Ei­gen­schaft, Leib und Seele, Idee und Wirk­lich­keit, Gott und Welt usw. sind nur da, um die ein­heit­li­che Wirk­lich­keit künst­lich aus­ein­an­der­zu­hal­ten; und die Ver­nunft hat, ohne den damit ge­schaf­fe­nen In­halt zu ver­wi­schen, ohne die Klar­heit des Ver­stan­des mys­tisch zu ver­dun­keln, in der Viel­heit die in­ne­re Ein­heit auf­zu­su­chen.</span>
         
-        <span id="s-10-3-4">Alle Be­grif­fe, die der Ver­stand schafft: Ur­sa­che und Wir­kung, Sub­stanz und Ei­gen­schaft, Leib und Seele, Idee und Wirk­lich­keit, Gott und Welt usw. sind nur da, um die ein­heit­li­che Wirk­lich­keit künst­lich aus­ein­an­der­zu­hal­ten; und die Ver­nunft hat, ohne den damit ge­schaf­fe­nen In­halt zu ver­wi­schen, ohne die Klar­heit des Ver­stan­des mys­tisch zu ver­dun­keln, in der Viel­heit die in­ne­re Ein­heit auf­zu­su­chen.</span>
+        <span id="s-10-3-4">Sie kommt damit auf das zu­rück, wovon sich der Ver­stand ent­fernt hat, auf die ein­heit­li­che Wirk­lich­keit.</span>
         
-        <span id="s-10-3-5">Sie kommt damit auf das zu­rück, wovon sich der Ver­stand ent­fernt hat, auf die ein­heit­li­che Wirk­lich­keit.</span>
+        <span id="s-10-3-5">Will man eine ge­naue No­men­kla­tur haben, so nenne man die Ver­stands­ge­bil­de <i>Be­grif­fe</i>) die Ver­nunftschöp­fun­gen <i>Ideen</i>. Und man sieht, dass der Weg der Wis­sen­schaft ist: sich durch den Be­griff zur Idee zu er­he­ben.</span>
         
-        <span id="s-10-3-6">Will man eine ge­naue No­men­kla­tur haben, so nenne man die Ver­stands­ge­bil­de Be­grif­fe) die Ver­nunftschöp­fun­gen Ideen.</span>
+        <span id="s-10-3-6">Und hier ist der Ort, wo sich uns in der klars­ten Weise das sub­jek­ti­ve und das ob­jek­ti­ve Ele­ment un­se­res Er­ken­nens aus­ein­an­der­le­gen.</span>
         
-        <span id="s-10-3-7">Und man sieht, dass der Weg der Wis­sen­schaft ist: sich durch den Be­griff zur Idee zu er­he­ben.</span>
+        <span id="s-10-3-7">Es ist er­sicht­lich, dass die Tren­nung nur sub­jek­ti­ven Be­stand hat, nur durch un­sern Ver­stand ge­schaf­fen ist.</span>
         
-        <span id="s-10-3-8">Und hier ist der Ort, wo sich uns in der klars­ten Weise das sub­jek­ti­ve und das ob­jek­ti­ve Ele­ment un­se­res Er­ken­nens aus­ein­an­der­le­gen.</span>
+        <span id="s-10-3-8">Es kann mich nicht hin­dern, dass ich ein und die­sel­be ob­jek­ti­ve Ein­heit in Ge­dan­ken­ge­bil­de zer­le­ge, die von denen mei­nes Mit­men­schen ver­schie­den sind; das hin­dert nicht, dass meine Ver­nunft in der Ver­bin­dung wie­der zu der­sel­ben ob­jek­ti­ven Ein­heit ge­langt, von der wir ja beide aus­ge­gan­gen sind.</span>
         
-        <span id="s-10-3-9">Es ist er­sicht­lich, dass die Tren­nung nur sub­jek­ti­ven Be­stand hat, nur durch un­sern Ver­stand ge­schaf­fen ist.</span>
+        <span id="s-10-3-9">Das ein­heit­li­che Wirk­lich­keits­ge­bil­de sei sinn­bild­lich dar­ge­stellt .</span>
         
-        <span id="s-10-3-10">Es kann mich nicht hin­dern, dass ich ein und die­sel­be ob­jek­ti­ve Ein­heit in Ge­dan­ken­ge­bil­de zer­le­ge, die von denen mei­nes Mit­men­schen ver­schie­den sind; das hin­dert nicht, dass meine Ver­nunft in der Ver­bin­dung wie­der zu der­sel­ben ob­jek­ti­ven Ein­heit ge­langt, von der wir ja beide aus­ge­gan­gen sind.</span>
+        <span id="s-10-3-10">Ich tren­ne es ver­stan­des­ge­mäß so, wie Fig.</span>
         
-        <span id="s-10-3-11">Das ein­heit­li­che Wirk­lich­keits­ge­bil­de sei sinn­bild­lich dar­ge­stellt .</span>
+        <span id="s-10-3-11">2; ein an­de­rer an­ders, wie Fig.</span>
         
-        <span id="s-10-3-12">Ich tren­ne es ver­stan­des­ge­mäß so, wie Fig.</span>
+        <span id="s-10-3-12"><ol start="3">
+<li></li>
+</ol></span>
         
-        <span id="s-10-3-13">2; ein an­de­rer an­ders, wie Fig.</span>
+        <span id="s-10-3-13">Wir fas­sen Fig.</span>
         
-        <span id="s-10-3-14">3.</span>
+        <span id="s-10-3-14">1 Fig.</span>
         
-        <span id="s-10-3-15">Wir fas­sen Fig.</span>
+        <span id="s-10-3-15">3 Fig.</span>
         
-        <span id="s-10-3-16">1 Fig.</span>
-        
-        <span id="s-10-3-17">3 Fig.</span>
-        
-        <span id="s-10-3-18">2</span>
+        <span id="s-10-3-16">2</span>
         
       </p>
     </section>
@@ -175,53 +182,45 @@
       <p>
         <span id="s-10-4-1">es ver­nunft­ge­mäß zu­sam­men und er­hal­ten das­sel­be Ge­bil­de.</span>
         
-        <span id="s-10-4-2">Damit wird es uns er­klär­lich, wie die Men­schen so ver­schie­de­ne Be­grif­fe, so ver­schie­de­ne An­schau­un­gen von der Wirk­lich­keit haben kön­nen, trotz­dem diese doch nur eine sein kann.</span>
+        <span id="s-10-4-2">Damit wird es uns er­klär­lich, wie die Men­schen so ver­schie­de­ne Be­grif­fe, so ver­schie­de­ne An­schau­un­gen von der Wirk­lich­keit haben kön­nen, trotz­dem diese doch nur <i>eine</i> sein kann.</span>
         
-        <span id="s-10-4-3">Die Ver­schie­den­heit liegt in der Ver­schie­den­heit un­se­rer Ver­stan­des­wel­ten.</span>
+        <span id="s-10-4-3"><i>Die Ver­schie­den­heit liegt in der Ver­schie­den­heit un­se­rer Ver­stan­des­wel­ten</i>. Damit ver­brei­tet sich für uns ein Licht über die Ent­wick­lung ver­schie­de­ner wis­sen­schaft­li­cher Stand­punk­te.</span>
         
-        <span id="s-10-4-4">Damit ver­brei­tet sich für uns ein Licht über die Ent­wick­lung ver­schie­de­ner wis­sen­schaft­li­cher Stand­punk­te.</span>
+        <span id="s-10-4-4">Wir be­grei­fen, woher die viel­fa­chen phi­lo­so­phi­schen Stand­punk­te kom­men, und haben nicht nötig, aus­schließ­lich einer die Palme der Wahr­heit zu­zu­er­ken­nen.</span>
         
-        <span id="s-10-4-5">Wir be­grei­fen, woher die viel­fa­chen phi­lo­so­phi­schen Stand­punk­te kom­men, und haben nicht nötig, aus­schließ­lich einer die Palme der Wahr­heit zu­zu­er­ken­nen.</span>
+        <span id="s-10-4-5">Wir wis­sen auch, wel­chen Stand­punkt wir selbst ge­gen­über der Viel­heit mensch­li­cher An­schau­un­gen ein­zu­neh­men haben.</span>
         
-        <span id="s-10-4-6">Wir wis­sen auch, wel­chen Stand­punkt wir selbst ge­gen­über der Viel­heit mensch­li­cher An­schau­un­gen ein­zu­neh­men haben.</span>
+        <span id="s-10-4-6">Wir wer­den nicht aus­schließ­lich fra­gen: Was ist wahr, was ist falsch?</span>
         
-        <span id="s-10-4-7">Wir wer­den nicht aus­schließ­lich fra­gen: Was ist wahr, was ist falsch?</span>
+        <span id="s-10-4-7">Wir wer­den immer un­ter­su­chen, in wel­cher Art die Ver­stan­des­welt eines Den­kers aus der Welt­har­mo­nie her­vor­geht; wir wer­den zu be­grei­fen su­chen und nicht ab­ur­tei­len und so­gleich als Irr­tum an­se­hen, was mit der ei­ge­nen Auf­fas­sung nicht über­ein­stimmt.</span>
         
-        <span id="s-10-4-8">Wir wer­den immer un­ter­su­chen, in wel­cher Art die Ver­stan­des­welt eines Den­kers aus der Welt­har­mo­nie her­vor­geht; wir wer­den zu be­grei­fen su­chen und nicht ab­ur­tei­len und so­gleich als Irr­tum an­se­hen, was mit der ei­ge­nen Auf­fas­sung nicht über­ein­stimmt.</span>
+        <span id="s-10-4-8">Zu die­sem Quell der Ver­schie­den­heit un­se­rer wis­sen­schaft­li­chen Stand­punk­te tritt da­durch ein neuer, dass jeder ein­zel­ne Mensch ein an­de­res Er­fah­rungs­feld hat.</span>
         
-        <span id="s-10-4-9">Zu die­sem Quell der Ver­schie­den­heit un­se­rer wis­sen­schaft­li­chen Stand­punk­te tritt da­durch ein neuer, dass jeder ein­zel­ne Mensch ein an­de­res Er­fah­rungs­feld hat.</span>
+        <span id="s-10-4-9">Es tritt ja jedem aus der ge­sam­ten Wirk­lich­keit gleich­sam ein Aus­schnitt ge­gen­über.</span>
         
-        <span id="s-10-4-10">Es tritt ja jedem aus der ge­sam­ten Wirk­lich­keit gleich­sam ein Aus­schnitt ge­gen­über.</span>
+        <span id="s-10-4-10">Die­sen be­ar­bei­tet sein Ver­stand, und der ist ihm der Ver­mitt­ler auf dem Wege zur Idee.</span>
         
-        <span id="s-10-4-11">Die­sen be­ar­bei­tet sein Ver­stand, und der ist ihm der Ver­mitt­ler auf dem Wege zur Idee.</span>
+        <span id="s-10-4-11">Wenn wir also auch alle die­sel­be Idee wahr­neh­men, so ist das doch immer auf an­de­ren Ge­bie­ten der Fall.</span>
         
-        <span id="s-10-4-12">Wenn wir also auch alle die­sel­be Idee wahr­neh­men, so ist das doch immer auf an­de­ren Ge­bie­ten der Fall.</span>
+        <span id="s-10-4-12">Es kann also nur das <i>End­re­sul­tat</i>, zu dem wir kom­men, <i>das­sel­be</i> sein; die <i>Wege</i> hin­ge­gen kön­nen <i>ver­schie­den</i> sein.</span>
         
-        <span id="s-10-4-13">Es kann also nur das End­re­sul­tat, zu dem wir kom­men, das­sel­be sein; die Wege hin­ge­gen kön­nen ver­schie­den sein.</span>
+        <span id="s-10-4-13">Es kommt über­haupt gar nicht dar­auf an, dass die ein­zel­nen Ur­tei­le und Be­grif­fe, aus denen sich unser Wis­sen zu­sam­men­setzt, über­ein­stim­men, son­dern nur dar­auf, dass sie uns zu­letzt dahin füh­ren, <i>dass wir in dem Fahr­was­ser der Idee schwim­men</i>. Und in die­sem Fahr­was­ser müs­sen sich zu­letzt alle Men­schen tref­fen, wenn sie en­er­gi­sches Den­ken über ihren Son­der­stand­punkt hin­aus­führt.</span>
         
-        <span id="s-10-4-14">Es kommt über­haupt gar nicht dar­auf an, dass die ein­zel­nen Ur­tei­le und Be­grif­fe, aus denen sich unser Wis­sen zu­sam­men­setzt, über­ein­stim­men, son­dern nur dar­auf, dass sie uns zu­letzt dahin füh­ren, dass wir in dem Fahr­was­ser der Idee schwim­men.</span>
+        <span id="s-10-4-14">Es kann ja mög­lich sein, dass uns eine be­schränk­te Er­fah­rung oder ein un­pro­duk­ti­ver Geist zu einer <i>ein­sei­ti­gen</i>, un­voll­stän­di­gen An­sicht führt; aber selbst die ge­rings­te Summe des­sen, was wir er­fah­ren, muss uns zu­letzt zur Idee füh­ren; denn zur letz­te­ren er­he­ben wir uns nicht durch eine mehr oder we­ni­ger große Er­fah­rung, son­dern al­lein durch un­se­re Fä­hig­kei­ten als mensch­li­che Per­sön­lich­keit.</span>
         
-        <span id="s-10-4-15">Und in die­sem Fahr­was­ser müs­sen sich zu­letzt alle Men­schen tref­fen, wenn sie en­er­gi­sches Den­ken über ihren Son­der­stand­punkt hin­aus­führt.</span>
+        <span id="s-10-4-15">Eine be­schränk­te Er­fah­rung kann nur zur Folge haben, dass wir die Idee in ein­sei­ti­ger Weise <i>aus­spre­chen</i>, dass wir über ge­rin­ge Mit­tel ver­fü­gen, das Licht, das in uns leuch­tet, zum Aus­druck zu brin­gen; sie kann uns aber nicht über­haupt hin­dern, jenes Licht in uns auf­ge­hen zu las­sen.</span>
         
-        <span id="s-10-4-16">Es kann ja mög­lich sein, dass uns eine be­schränk­te Er­fah­rung oder ein un­pro­duk­ti­ver Geist zu einer ein­sei­ti­gen, un­voll­stän­di­gen An­sicht führt; aber selbst die ge­rings­te Summe des­sen, was wir er­fah­ren, muss uns zu­letzt zur Idee füh­ren; denn zur letz­te­ren er­he­ben wir uns nicht durch eine mehr oder we­ni­ger große Er­fah­rung, son­dern al­lein durch un­se­re Fä­hig­kei­ten als mensch­li­che Per­sön­lich­keit.</span>
+        <span id="s-10-4-16">Ob un­se­re wis­sen­schaft­li­che oder über­haupt <i>Welt­an­sicht</i> auch voll­stän­dig sei, das ist neben der nach ihrer geis­ti­gen Tiefe eine ganz an­de­re Frage.</span>
         
-        <span id="s-10-4-17">Eine be­schränk­te Er­fah­rung kann nur zur Folge haben, dass wir die Idee in ein­sei­ti­ger Weise aus­spre­chen, dass wir über ge­rin­ge Mit­tel ver­fü­gen, das Licht, das in uns leuch­tet, zum Aus­druck zu brin­gen; sie kann uns aber nicht über­haupt hin­dern, jenes Licht in uns auf­ge­hen zu las­sen.</span>
+        <span id="s-10-4-17">Wenn man nun an Goe­the wie­der her­an­tritt, so wird man viele sei­ner Dar­le­gun­gen, mit un­se­ren Aus­füh­run­gen in die­sem Ka­pi­tel zu­sam­men­ge­hal­ten, als ein­fa­che Kon­se­quen­zen der letz­te­ren er­ken­nen.</span>
         
-        <span id="s-10-4-18">Ob un­se­re wis­sen­schaft­li­che oder über­haupt Welt­an­sicht auch voll­stän­dig sei, das ist neben der nach ihrer geis­ti­gen Tiefe eine ganz an­de­re Frage.</span>
+        <span id="s-10-4-18">Die­ses Ver­hält­nis hal­ten wir für das ein­zig rich­ti­ge zwi­schen Autor und Aus­le­ger.</span>
         
-        <span id="s-10-4-19">Wenn man nun an Goe­the wie­der her­an­tritt, so wird man viele sei­ner Dar­le­gun­gen, mit un­se­ren Aus­füh­run­gen in die­sem Ka­pi­tel zu­sam­men­ge­hal­ten, als ein­fa­che Kon­se­quen­zen der letz­te­ren er­ken­nen.</span>
+        <span id="s-10-4-19">Wenn Goe­the sagt: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Sprü­che in Prosa" part="1">Kenne ich mein Ver­hält­nis zu mir selbst und zur Au­ßen­welt, so heiß’ ich’s Wahr­heit. Und so kann jeder seine ei­ge­ne Wahr­heit haben und es ist doch immer die­sel­bi­ge</q> («Sprü­che in Prosa»; Natw.</span>
         
-        <span id="s-10-4-20">Die­ses Ver­hält­nis hal­ten wir für das ein­zig rich­ti­ge zwi­schen Autor und Aus­le­ger.</span>
+        <span id="s-10-4-21">Schr., 4.</span>
         
-        <span id="s-10-4-21">Wenn Goe­the sagt: «Kenne ich mein Ver­hält­nis zu mir selbst und zur Au­ßen­welt, so heiß’ ich’s Wahr­heit.</span>
-        
-        <span id="s-10-4-22">Und so kann jeder seine ei­ge­ne Wahr­heit haben und es ist doch immer die­sel­bi­ge» («Sprü­che in Prosa»; Natw.</span>
-        
-        <span id="s-10-4-23">Schr., 4.</span>
-        
-        <span id="s-10-4-24">Bd., 2.</span>
-        
-        <span id="s-10-4-25">Abt., S. 349), so ist das nur mit Vor­aus­set­zung des­sen, was wir hier ent­wi­ckelt haben, zu ver­ste­hen.</span>
+        <span id="s-10-4-22">Bd., <i>2</i>. Abt., S. 349), so ist das nur mit Vor­aus­set­zung des­sen, was wir hier ent­wi­ckelt haben, zu ver­ste­hen.</span>
         
       </p>
     </section>
@@ -238,49 +237,41 @@
         
         <span id="s-10-5-5">Nun kann es über die­sen Grund zwei ver­schie­de­ne An­sich­ten geben.</span>
         
-        <span id="s-10-5-6">Die eine nimmt an, dass die sach­li­chen (ob­jek­ti­ven) Grün­de, warum das Ur­teil, das wir voll­zie­hen, wahr ist, jen­seits des­sen lie­gen, was uns in den in das Ur­teil ein­ge­hen­den Be­grif­fen oder Wahr­neh­mun­gen ge­ge­ben ist.</span>
+        <span id="s-10-5-6">Die eine nimmt an, dass die <i>sach­li­chen</i> (ob­jek­ti­ven) Grün­de, warum das Ur­teil, das wir voll­zie­hen, <i>wahr</i> ist, jen­seits des­sen lie­gen, was uns in den in das Ur­teil ein­ge­hen­den Be­grif­fen oder Wahr­neh­mun­gen ge­ge­ben ist.</span>
         
-        <span id="s-10-5-7">Der Grund, warum ein Ur­teil wahr ist, fällt nach die­ser An­sicht nicht zu­sam­men mit den sub­jek­ti­ven Grün­den, aus denen wir die­ses Ur­teil fäl­len.</span>
+        <span id="s-10-5-7"><i>Der Grund, warum ein Ur­teil wahr ist, fällt nach die­ser An­sicht nicht zu­sam­men mit den sub­jek­ti­ven Grün­den, aus denen wir die­ses Ur­teil fäl­len</i>. Un­se­re <i>lo­gi­schen</i> Grün­de haben nach die­ser An­sicht mit den <i>ob­jek­ti­ven</i> nichts zu tun.</span>
         
-        <span id="s-10-5-8">Un­se­re lo­gi­schen Grün­de haben nach die­ser An­sicht mit den ob­jek­ti­ven nichts zu tun.</span>
+        <span id="s-10-5-8">Es kann sein, dass diese An­sicht ir­gend­ei­nen Weg vor­schlägt, um zu den ob­jek­ti­ven Grün­den un­se­rer Ein­sicht zu kom­men; die Mit­tel, die unser <i>er­ken­nen­des Den­ken</i> hat, rei­chen dazu nicht aus.</span>
         
-        <span id="s-10-5-9">Es kann sein, dass diese An­sicht ir­gend­ei­nen Weg vor­schlägt, um zu den ob­jek­ti­ven Grün­den un­se­rer Ein­sicht zu kom­men; die Mit­tel, die unser er­ken­nen­des Den­ken hat, rei­chen dazu nicht aus.</span>
+        <span id="s-10-5-9">Für das Er­ken­nen liegt die meine Be­haup­tun­gen be­din­gen­de ob­jek­ti­ve We­sen­heit in einer mir un­be­kann­ten Welt; die Be­haup­tung mit ihren for­mel­len Grün­den (Wi­der­spruchs­lo­sig­keit, Stüt­zung durch ver­schie­de­ne Axio­me usw.) al­lein in der mei­ni­gen.</span>
         
-        <span id="s-10-5-10">Für das Er­ken­nen liegt die meine Be­haup­tun­gen be­din­gen­de ob­jek­ti­ve We­sen­heit in einer mir un­be­kann­ten Welt; die Be­haup­tung mit ihren for­mel­len Grün­den (Wi­der­spruchs­lo­sig­keit, Stüt­zung durch ver­schie­de­ne Axio­me usw.) al­lein in der mei­ni­gen.</span>
+        <span id="s-10-5-10">Eine Wis­sen­schaft, die auf die­ser An­schau­ung be­ruht, ist eine <i>dog­ma­ti­sche</i>. Eine sol­che dog­ma­ti­sche Wis­sen­schaft ist so­wohl die theo­lo­gi­sie­ren­de Phi­lo­so­phie, die sich auf den Of­fen­ba­rungs­glau­ben stützt, als auch die mo­der­ne Er­fah­rungs­wis­sen­schaft; denn es gibt nicht nur ein <i>Dogma der Of­fen­ba­rung</i>, es gibt auch ein <i>Dogma der Er­fah­rung</i>. Das Dogma der Of­fen­ba­rung über­lie­fert dem Men­schen Wahr­hei­ten über Dinge, die sei­nem Ge­sichts­kreis völ­lig ent­zo­gen sind.</span>
         
-        <span id="s-10-5-11">Eine Wis­sen­schaft, die auf die­ser An­schau­ung be­ruht, ist eine dog­ma­ti­sche.</span>
+        <span id="s-10-5-11">Er kennt die Welt nicht, über die ihm die fer­ti­gen Be­haup­tun­gen zu glau­ben vor­ge­schrie­ben wird.</span>
         
-        <span id="s-10-5-12">Eine sol­che dog­ma­ti­sche Wis­sen­schaft ist so­wohl die theo­lo­gi­sie­ren­de Phi­lo­so­phie, die sich auf den Of­fen­ba­rungs­glau­ben stützt, als auch die mo­der­ne Er­fah­rungs­wis­sen­schaft; denn es gibt nicht nur ein Dogma der Of­fen­ba­rung, es gibt auch ein Dogma der Er­fah­rung.</span>
+        <span id="s-10-5-12">Er kann an die Grün­de der letz­te­ren nicht her­an­kom­men.</span>
         
-        <span id="s-10-5-13">Das Dogma der Of­fen­ba­rung über­lie­fert dem Men­schen Wahr­hei­ten über Dinge, die sei­nem Ge­sichts­kreis völ­lig ent­zo­gen sind.</span>
+        <span id="s-10-5-13">Er kann daher nie eine Ein­sicht ge­win­nen, <i>warum</i> sie wahr sind.</span>
         
-        <span id="s-10-5-14">Er kennt die Welt nicht, über die ihm die fer­ti­gen Be­haup­tun­gen zu glau­ben vor­ge­schrie­ben wird.</span>
+        <span id="s-10-5-14">Er kann kein <i>Wis­sen</i>, nur einen <i>Glau­ben</i> ge­win­nen.</span>
         
-        <span id="s-10-5-15">Er kann an die Grün­de der letz­te­ren nicht her­an­kom­men.</span>
+        <span id="s-10-5-15">Da­ge­gen sind aber auch die Be­haup­tun­gen jener Er­fah­rungs­wis­sen­schaft bloße Dog­men, die da glaubt, dass man bei der blo­ßen, rei­nen Er­fah­rung ste­hen blei­ben soll und nur deren Ver­än­de­run­gen be­ob­ach­ten, be­schrei­ben und sys­te­ma­tisch zu­sam­men­stel­len soll, ohne sich zu den in der blo­ßen un­mit­tel­ba­ren Er­fah­rung <i>noch nicht</i> ge­ge­be­nen Be­din­gun­gen zu er­he­ben.</span>
         
-        <span id="s-10-5-16">Er kann daher nie eine Ein­sicht ge­win­nen, warum sie wahr sind.</span>
+        <span id="s-10-5-16">Wir ge­win­nen ja die Wahr­heit auch in die­sem Fall nicht durch die Ein­sicht in die Sache, son­dern sie wird uns von außen auf­ge­drängt.</span>
         
-        <span id="s-10-5-17">Er kann kein Wis­sen, nur einen Glau­ben ge­win­nen.</span>
+        <span id="s-10-5-17">Ich sehe, was vor­geht und da ist, und re­gis­trie­re es; warum das so ist, das liegt im Ob­jekt.</span>
         
-        <span id="s-10-5-18">Da­ge­gen sind aber auch die Be­haup­tun­gen jener Er­fah­rungs­wis­sen­schaft bloße Dog­men, die da glaubt, dass man bei der blo­ßen, rei­nen Er­fah­rung ste­hen blei­ben soll und nur deren Ver­än­de­run­gen be­ob­ach­ten, be­schrei­ben und sys­te­ma­tisch zu­sam­men­stel­len soll, ohne sich zu den in der blo­ßen un­mit­tel­ba­ren Er­fah­rung noch nicht ge­ge­be­nen Be­din­gun­gen zu er­he­ben.</span>
+        <span id="s-10-5-18">Ich sehe nur die Folge, nicht den Grund.</span>
         
-        <span id="s-10-5-19">Wir ge­win­nen ja die Wahr­heit auch in die­sem Fall nicht durch die Ein­sicht in die Sache, son­dern sie wird uns von außen auf­ge­drängt.</span>
+        <span id="s-10-5-19">Das <i>Dogma der Of­fen­ba­rung</i> be­herrsch­te ehe­dem die Wis­sen­schaft, heute tut es das <i>Dogma der Er­fah­rung</i>. Ehe­dem galt es als Ver­mes­sen­heit, über die <i>Grün­de</i> der ge­of­fen­bar­ten Wahr­hei­ten nach­zu­den­ken; heute gilt es als Un­mög­lich­keit, an­de­res zu wis­sen, als was die Tat­sa­chen aus­spre­chen.</span>
         
-        <span id="s-10-5-20">Ich sehe, was vor­geht und da ist, und re­gis­trie­re es; warum das so ist, das liegt im Ob­jekt.</span>
-        
-        <span id="s-10-5-21">Ich sehe nur die Folge, nicht den Grund.</span>
-        
-        <span id="s-10-5-22">Das Dogma der Of­fen­ba­rung be­herrsch­te ehe­dem die Wis­sen­schaft, heute tut es das Dogma der Er­fah­rung.</span>
-        
-        <span id="s-10-5-23">Ehe­dem galt es als Ver­mes­sen­heit, über die Grün­de der ge­of­fen­bar­ten Wahr­hei­ten nach­zu­den­ken; heute gilt es als Un­mög­lich­keit, an­de­res zu wis­sen, als was die Tat­sa­chen aus­spre­chen.</span>
-        
-        <span id="s-10-5-24">Das «Warum sie so und nicht an­ders spre­chen» gilt als un­er­fahr­bar und des­halb un­er­reich­bar.</span>
+        <span id="s-10-5-20">Das «<i>Warum</i> sie so und nicht an­ders spre­chen» gilt als un­er­fahr­bar und des­halb un­er­reich­bar.</span>
         
       </p>
     </section>
     <section id="p-10-6">
       <p>
-        <span id="s-10-6-1">Un­se­re Aus­füh­run­gen haben ge­zeigt, dass die An­nah­me eines Grun­des, warum ein Ur­teil wahr ist, neben dem, warum wir es als wahr an­er­ken­nen, ein Un­ding ist.</span>
+        <span id="s-10-6-1">Un­se­re Aus­füh­run­gen haben ge­zeigt, dass die An­nah­me eines Grun­des, warum ein Ur­teil <i>wahr</i> ist, neben dem, warum wir es als wahr <i>an­er­ken­nen</i>, ein Un­ding ist.</span>
         
         <span id="s-10-6-2">Wenn wir bis zu dem Punkt vor­drin­gen, wo uns die We­sen­heit einer Sache als Idee auf­geht, so er­bli­cken wir in der letz­te­ren etwas völ­lig in sich Ab­ge­schlos­se­nes, etwas sich selbst Stüt­zen­des und Tra­gen­des, das gar keine Er­klä­rung von außen mehr for­dert, so dass wir dabei ste­hen blei­ben kön­nen.</span>
         
@@ -288,7 +279,7 @@
         
         <span id="s-10-6-4">Der ge­sam­te Seins­grund ist in der Idee auf­ge­gan­gen, hat sich in sie er­gos­sen, rück­halt­los, so dass wir ihn nir­gends als in ihr zu su­chen haben.</span>
         
-        <span id="s-10-6-5">In der Idee haben wir nicht ein Bild von dem, was wir zu den Din­gen su­chen; wir haben die­ses Ge­such­te selbst.</span>
+        <span id="s-10-6-5">In der Idee haben wir nicht ein <i>Bild</i> von dem, was wir zu den Din­gen su­chen; wir haben die­ses Ge­such­te selbst.</span>
         
         <span id="s-10-6-6">Indem die Teile un­se­rer Ide­en­welt in den Ur­tei­len zu­sam­men­flie­ßen, ist es der ei­ge­ne In­halt der­sel­ben, der das be­wirkt, nicht Grün­de, die au­ßer­halb lie­gen.</span>
         
@@ -304,17 +295,17 @@
         
         <span id="s-10-7-3">Er ist der uns vor­lie­gen­den Welt nicht ein­ge­bo­ren, er ist au­ßer­halb ihrer vor­han­den; ein Wesen für sich, das neben ihr be­steht.</span>
         
-        <span id="s-10-7-4">Diese An­sicht kann man Rea­lis­mus nen­nen.</span>
+        <span id="s-10-7-4">Diese An­sicht kann man <i>Rea­lis­mus</i> nen­nen.</span>
         
         <span id="s-10-7-5">Sie tritt in zwei For­men auf.</span>
         
-        <span id="s-10-7-6">Sie nimmt ent­we­der eine Viel­zahl von rea­len Wesen an, die der Welt zum Grun­de lie­gen (Leib­niz, Her­b­art), oder ein ein­heit­li­ches Rea­les (Scho­pen­hau­er).</span>
+        <span id="s-10-7-6">Sie nimmt ent­we­der eine Viel­zahl von rea­len Wesen an, die der Welt zum Grun­de lie­gen (Leib­niz, Her­b­art), oder ein <i>ein­heit­li­ches</i> Rea­les (Scho­pen­hau­er).</span>
         
-        <span id="s-10-7-7">Ein sol­ches Sei­en­des kann nie als mit der Idee iden­tisch er­kannt wer­den; es ist schon als we­sens­ver­schie­den von ihr vor­aus­ge­setzt.</span>
+        <span id="s-10-7-7">Ein sol­ches <i>Sei­en­des</i> kann nie als mit der Idee iden­tisch er­kannt wer­den; es ist schon als we­sens­ver­schie­den von ihr vor­aus­ge­setzt.</span>
         
         <span id="s-10-7-8">Wer sich des kla­ren Sin­nes der Frage nach dem Wesen der Er­schei­nun­gen be­wusst wird, kann ein An­hän­ger die­ses Rea­lis­mus nicht sein.</span>
         
-        <span id="s-10-7-9">Was hat es denn für einen Sinn, nach dem Wesen der Welt zu fra­gen?</span>
+        <span id="s-10-7-9">Was hat es denn für einen Sinn, nach dem <i>Wesen</i> der <i>Welt</i> zu fra­gen?</span>
         
         <span id="s-10-7-10">Es hat gar kei­nen an­dern Sinn, als dass, wenn ich einem Dinge ge­gen­über­tre­te, sich in mir eine Stim­me gel­tend macht, die mir sagt, dass das Ding letz­ten Endes noch etwas ganz an­de­res ist, als was ich sinn­fäl­lig wahr­neh­me.</span>
         
@@ -322,41 +313,39 @@
         
         <span id="s-10-7-12">Nur weil die in mir ar­bei­ten­de Ide­en­welt mich drängt, die mich um­ge­ben­de Welt aus ihr zu er­klä­ren, for­de­re ich eine sol­che Er­klä­rung.</span>
         
-        <span id="s-10-7-13">Für ein Wesen, in dem sich keine Ideen em­por­ar­bei­ten, ist der Drang, die Dinge noch wei­ter zu er­klä­ren, nicht da; sie sind an der sinn­fäl­li­gen Er­schei­nung voll­be­frie­digt.</span>
+        <span id="s-10-7-13">Für ein Wesen, in dem sich keine Ideen em­por­ar­bei­ten, ist der Drang, die Dinge noch wei­ter zu <i>er­klä­ren</i>, nicht da; sie sind an der sinn­fäl­li­gen Er­schei­nung voll­be­frie­digt.</span>
         
-        <span id="s-10-7-14">Die For­de­rung nach Er­klä­rung der Welt geht her­vor aus dem Be­dürf­nis des Den­kens, den für letz­te­res er­reich­ba­ren In­halt mit der er­schei­nen­den Wirk­lich­keit in eins zu ver­schmel­zen, alles be­griff­lich zu durch­drin­gen; das was wir sehen, hören usw., zu einem sol­chen zu ma­chen, das wir ver­ste­hen.</span>
+        <span id="s-10-7-14">Die For­de­rung nach Er­klä­rung der Welt geht her­vor aus dem Be­dürf­nis des Den­kens, den für letz­te­res er­reich­ba­ren In­halt mit der er­schei­nen­den Wirk­lich­keit in eins zu ver­schmel­zen, alles be­griff­lich zu durch­drin­gen; das was wir <i>sehen, hören</i> usw., zu einem sol­chen zu ma­chen, das wir <i>ver­ste­hen</i>. Wer diese Sätze ihrer vol­len Trag­wei­te nach in Er­wä­gung zieht, kann un­mög­lich ein An­hän­ger des oben cha­rak­te­ri­sier­ten Rea­lis­mus sein.</span>
         
-        <span id="s-10-7-15">Wer diese Sätze ihrer vol­len Trag­wei­te nach in Er­wä­gung zieht, kann un­mög­lich ein An­hän­ger des oben cha­rak­te­ri­sier­ten Rea­lis­mus sein.</span>
+        <span id="s-10-7-15">Die Welt durch ein Rea­les, das nicht Idee ist, er­klä­ren zu wol­len, ist ein sol­cher Wi­der­spruch, dass man gar nicht be­greift, wie es über­haupt mög­lich ist, dass er An­hän­ger ge­win­nen konn­te.</span>
         
-        <span id="s-10-7-16">Die Welt durch ein Rea­les, das nicht Idee ist, er­klä­ren zu wol­len, ist ein sol­cher Wi­der­spruch, dass man gar nicht be­greift, wie es über­haupt mög­lich ist, dass er An­hän­ger ge­win­nen konn­te.</span>
+        <span id="s-10-7-16">Das uns wahr­nehm­ba­re Wirk­li­che durch ir­gend­et­was zu er­klä­ren, was sich in­ner­halb des Den­kens gar nicht gel­tend macht, ja was grund­sätz­lich ver­schie­den von dem Ge­dank­li­chen sein soll, kön­nen wir weder das Be­dürf­nis haben, noch ist ein sol­ches Be­gin­nen mög­lich.</span>
         
-        <span id="s-10-7-17">Das uns wahr­nehm­ba­re Wirk­li­che durch ir­gend­et­was zu er­klä­ren, was sich in­ner­halb des Den­kens gar nicht gel­tend macht, ja was grund­sätz­lich ver­schie­den von dem Ge­dank­li­chen sein soll, kön­nen wir weder das Be­dürf­nis haben, noch ist ein sol­ches Be­gin­nen mög­lich.</span>
+        <span id="s-10-7-17">Ers­tens: Woher sol­len wir das Be­dürf­nis haben, die Welt durch etwas zu er­klä­ren, das sich uns nir­gends auf­drängt, das sich uns ver­birgt?</span>
         
-        <span id="s-10-7-18">Ers­tens: Woher sol­len wir das Be­dürf­nis haben, die Welt durch etwas zu er­klä­ren, das sich uns nir­gends auf­drängt, das sich uns ver­birgt?</span>
+        <span id="s-10-7-18">Und neh­men wir an, es trete uns ent­ge­gen, dann ent­steht wie­der die Frage: in wel­cher Form und wo?</span>
         
-        <span id="s-10-7-19">Und neh­men wir an, es trete uns ent­ge­gen, dann ent­steht wie­der die Frage: in wel­cher Form und wo?</span>
+        <span id="s-10-7-19">Im Den­ken kann es doch nicht sein.</span>
         
-        <span id="s-10-7-20">Im Den­ken kann es doch nicht sein.</span>
+        <span id="s-10-7-20">Und selbst wie­der in der äu­ße­ren oder in­ne­ren Wahr­neh­mung?</span>
         
-        <span id="s-10-7-21">Und selbst wie­der in der äu­ße­ren oder in­ne­ren Wahr­neh­mung?</span>
+        <span id="s-10-7-21">Was soll es denn dann für einen Sinn haben, die Sin­nes­welt durch qua­li­ta­tiv Gleich­ste­hen­des zu er­klä­ren.</span>
         
-        <span id="s-10-7-22">Was soll es denn dann für einen Sinn haben, die Sin­nes­welt durch qua­li­ta­tiv Gleich­ste­hen­des zu er­klä­ren.</span>
+        <span id="s-10-7-22">Blie­be nur noch ein Drit­tes: die An­nah­me, wir hät­ten ein Ver­mö­gen, das au­ßer­ge­dank­li­che und re­als­te Wesen auf an­de­rem Wege als durch Den­ken und Wahr­neh­mung zu er­rei­chen.</span>
         
-        <span id="s-10-7-23">Blie­be nur noch ein Drit­tes: die An­nah­me, wir hät­ten ein Ver­mö­gen, das au­ßer­ge­dank­li­che und re­als­te Wesen auf an­de­rem Wege als durch Den­ken und Wahr­neh­mung zu er­rei­chen.</span>
+        <span id="s-10-7-23">Wer diese An­nah­me macht, ist in den Mys­ti­zis­mus ver­fal­len.</span>
         
-        <span id="s-10-7-24">Wer diese An­nah­me macht, ist in den Mys­ti­zis­mus ver­fal­len.</span>
+        <span id="s-10-7-24">Wir haben uns mit ihm nicht zu be­fas­sen; denn uns geht nur das Ver­hält­nis von Den­ken und Sein, von <i>Idee</i> und <i>Wirk­lich­keit</i> an.</span>
         
-        <span id="s-10-7-25">Wir haben uns mit ihm nicht zu be­fas­sen; denn uns geht nur das Ver­hält­nis von Den­ken und Sein, von Idee und Wirk­lich­keit an.</span>
+        <span id="s-10-7-25">Für den Mys­ti­zis­mus muss ein Mys­ti­ker eine Er­kennt­nis­theo­rie schrei­ben.</span>
         
-        <span id="s-10-7-26">Für den Mys­ti­zis­mus muss ein Mys­ti­ker eine Er­kennt­nis­theo­rie schrei­ben.</span>
+        <span id="s-10-7-26">Der Stand­punkt des spä­te­ren <i>Schel­ling</i>, wo­nach wir mit Hilfe un­se­rer Ver­nunft nur das <i>Was</i> des Welt­in­hal­tes ent­wi­ckeln, nicht aber das <i>Dass</i> er­rei­chen kön­nen, er­scheint uns als das größ­te Un­ding.</span>
         
-        <span id="s-10-7-27">Der Stand­punkt des spä­te­ren Schel­ling, wo­nach wir mit Hilfe un­se­rer Ver­nunft nur das Was des Welt­in­hal­tes ent­wi­ckeln, nicht aber das Dass er­rei­chen kön­nen, er­scheint uns als das größ­te Un­ding.</span>
+        <span id="s-10-7-27">Denn für uns ist das <i>Dass</i> die Vor­aus­set­zung des <i>Was</i>, und wir wüss­ten nicht, wie wir zu dem <i>Was</i> eines Din­ges kom­men soll­ten, des­sen <i>Dass</i> nicht vor­her schon si­cher­ge­stellt wäre.</span>
         
-        <span id="s-10-7-28">Denn für uns ist das Dass die Vor­aus­set­zung des Was, und wir wüss­ten nicht, wie wir zu dem Was eines Din­ges kom­men soll­ten, des­sen Dass nicht vor­her schon si­cher­ge­stellt wäre.</span>
+        <span id="s-10-7-28">Das <i>Dass</i> wohnt doch dem In­halt mei­ner Ver­nunft schon inne, indem ich sein <i>Was</i> er­grei­fe.</span>
         
-        <span id="s-10-7-29">Das Dass wohnt doch dem In­halt mei­ner Ver­nunft schon inne, indem ich sein Was er­grei­fe.</span>
-        
-        <span id="s-10-7-30">Diese An­nah­me Schel­lings, dass wir einen po­si­ti­ven Welt­in­halt haben kön­nen, ohne die Über­zeu­gung, dass er exis­tie­re, und dass wir die­ses Dass erst durch hö­he­re Er­fah­rung ge­win­nen müs­sen, er­scheint uns vor einem sich selbst ver­ste­hen­den Den­ken so un­be­greif­lich, dass wir an­neh­men müs­sen, Schel­ling habe in sei­ner spä­te­ren Zeit den Stand­punkt sei­ner Ju­gend, der auf Goe­the einen so mäch­ti­gen Ein­druck mach­te, selbst nicht mehr ver­stan­den.\*</span>
+        <span id="s-10-7-29">Diese An­nah­me Schel­lings, dass wir einen po­si­ti­ven Welt­in­halt haben kön­nen, ohne die Über­zeu­gung, <i>dass</i> er exis­tie­re, und dass wir die­ses <i>Dass</i> erst durch <i>hö­he­re Er­fah­rung</i> ge­win­nen müs­sen, er­scheint uns vor einem sich selbst ver­ste­hen­den Den­ken so un­be­greif­lich, dass wir an­neh­men müs­sen, Schel­ling habe in sei­ner spä­te­ren Zeit den Stand­punkt sei­ner Ju­gend, der auf Goe­the einen so mäch­ti­gen Ein­druck mach­te, selbst nicht mehr ver­stan­den.*</span>
         
       </p>
     </section>
@@ -370,33 +359,31 @@
         
         <span id="s-10-8-4">Er kann eben die Idee in ihrer Po­si­ti­vi­tät nicht er­fas­sen, er hat sie nur als Abs­trak­tes; er ahnt ihre Fülle, ihre in­ne­re Voll­endet­heit und Ge­die­gen­heit nicht.</span>
         
-        <span id="s-10-8-5">Wir müs­sen aber an die Bil­dung die An­for­de­rung stel­len, dass sie sich hin­auf­ar­bei­te bis zu jenem hö­he­ren Stand­punkt, wo auch ein Sein, das nicht mit Augen ge­se­hen, nicht mit Hän­den ge­grif­fen, son­dern mit der Ver­nunft er­fasst wer­den muss, als Rea­les an­ge­se­hen wird.</span>
+        <span id="s-10-8-5">Wir müs­sen aber an die Bil­dung die An­for­de­rung stel­len, dass sie sich hin­auf­ar­bei­te bis zu jenem hö­he­ren Stand­punkt, wo auch ein <i>Sein</i>, das nicht mit Augen ge­se­hen, nicht mit Hän­den ge­grif­fen, son­dern mit der Ver­nunft er­fasst wer­den muss, als <i>Rea­les</i> an­ge­se­hen wird.</span>
         
-        <span id="s-10-8-6">Wir haben also ei­gent­lich einen Idea­lis­mus be­grün­det, der Rea­lis­mus zu­gleich ist.</span>
+        <span id="s-10-8-6">Wir haben also ei­gent­lich einen <i>Idea­lis­mus</i> be­grün­det, der <i>Rea­lis­mus</i> zu­gleich ist.</span>
         
         <span id="s-10-8-7">Unser Ge­dan­ken­gang ist: das Den­ken drängt nach Er­klä­rung der Wirk­lich­keit aus der Idee.</span>
         
-        <span id="s-10-8-8">Es ver­birgt die­ses Drän­gen in die Frage: Was ist das Wesen der Wirk­lich­keit?</span>
+        <span id="s-10-8-8">Es ver­birgt die­ses Drän­gen in die Frage: <i>Was ist das Wesen der Wirk­lich­keit</i>? Nach dem In­halt die­ses We­sens selbst fra­gen wir erst am Ende der Wis­sen­schaft, wir ma­chen es nicht wie der Rea­lis­mus, der ein Rea­les vor­aus­setzt, um dar­aus dann die Wirk­lich­keit ab­zu­lei­ten.</span>
         
-        <span id="s-10-8-9">Nach dem In­halt die­ses We­sens selbst fra­gen wir erst am Ende der Wis­sen­schaft, wir ma­chen es nicht wie der Rea­lis­mus, der ein Rea­les vor­aus­setzt, um dar­aus dann die Wirk­lich­keit ab­zu­lei­ten.</span>
+        <span id="s-10-8-9">Wir un­ter­schei­den uns von dem Rea­lis­mus durch das volle Be­wusst­sein davon, dass wir ein Mit­tel, die Welt zu er­klä­ren, nur in der <i>Idee</i> haben.</span>
         
-        <span id="s-10-8-10">Wir un­ter­schei­den uns von dem Rea­lis­mus durch das volle Be­wusst­sein davon, dass wir ein Mit­tel, die Welt zu er­klä­ren, nur in der Idee haben.</span>
+        <span id="s-10-8-10">Auch der Rea­lis­mus hat <i>nur</i> die­ses Mit­tel, aber er weiß es nicht.</span>
         
-        <span id="s-10-8-11">Auch der Rea­lis­mus hat nur die­ses Mit­tel, aber er weiß es nicht.</span>
+        <span id="s-10-8-11">Er lei­tet die Welt aus Ideen ab, aber er glaubt, er leite sie aus einer an­de­ren Rea­li­tät her.</span>
         
-        <span id="s-10-8-12">Er lei­tet die Welt aus Ideen ab, aber er glaubt, er leite sie aus einer an­de­ren Rea­li­tät her.</span>
+        <span id="s-10-8-12">Leib­nizens Mo­na­den­welt ist nichts als eine Ide­en­welt; aber Leib­niz glaubt in ihr eine hö­he­re Rea­li­tät als eine ide­el­le zu be­sit­zen.</span>
         
-        <span id="s-10-8-13">Leib­nizens Mo­na­den­welt ist nichts als eine Ide­en­welt; aber Leib­niz glaubt in ihr eine hö­he­re Rea­li­tät als eine ide­el­le zu be­sit­zen.</span>
+        <span id="s-10-8-13">Alle Rea­lis­ten ma­chen den glei­chen Feh­ler: sie sin­nen Wesen aus und wer­den nicht ge­wahr, dass sie aus der Idee nicht her­aus­kom­men.</span>
         
-        <span id="s-10-8-14">Alle Rea­lis­ten ma­chen den glei­chen Feh­ler: sie sin­nen Wesen aus und wer­den nicht ge­wahr, dass sie aus der Idee nicht her­aus­kom­men.</span>
+        <span id="s-10-8-14">Wir haben die­sen Rea­lis­mus ab­ge­wie­sen, weil er sich über die Ide­en­we­sen­heit sei­nes Welt­grun­des täuscht; wir haben aber auch jenen fal­schen Idea­lis­mus ab­zu­wei­sen, der da glaubt, weil wir über die Idee nicht hin­aus­kom­men, kom­men wir über unser Be­wusst­sein nicht hin­aus, und es seien alle uns ge­ge­be­nen Vor­stel­lun­gen und alle Welt nur sub­jek­ti­ver Schein, nur ein Traum, den unser Be­wusst­sein träumt (Fich­te).</span>
         
-        <span id="s-10-8-15">Wir haben die­sen Rea­lis­mus ab­ge­wie­sen, weil er sich über die Ide­en­we­sen­heit sei­nes Welt­grun­des täuscht; wir haben aber auch jenen fal­schen Idea­lis­mus ab­zu­wei­sen, der da glaubt, weil wir über die Idee nicht hin­aus­kom­men, kom­men wir über unser Be­wusst­sein nicht hin­aus, und es seien alle uns ge­ge­be­nen Vor­stel­lun­gen und alle Welt nur sub­jek­ti­ver Schein, nur ein Traum, den unser Be­wusst­sein träumt (Fich­te).</span>
+        <span id="s-10-8-15">Diese Idea­lis­ten be­grei­fen wie­der nicht, dass, ob­zwar wir über die Idee nicht hin­aus­kom­men, wir doch <i>in</i> der Idee das Ob­jek­ti­ve haben, das in sich selbst und nicht im Sub­jekt Ge­grün­de­te.</span>
         
-        <span id="s-10-8-16">Diese Idea­lis­ten be­grei­fen wie­der nicht, dass, ob­zwar wir über die Idee nicht hin­aus­kom­men, wir doch in der Idee das Ob­jek­ti­ve haben, das in sich selbst und nicht im Sub­jekt Ge­grün­de­te.</span>
+        <span id="s-10-8-16">Sie be­den­ken nicht, dass, wenn wir auch nicht aus der Ein­heit­lich­keit des Den­kens hin­aus­kom­men, wir mit dem ver­nünf­ti­gen Den­ken mit­ten in die volle Ob­jek­ti­vi­tät hin­ein­kom­men.</span>
         
-        <span id="s-10-8-17">Sie be­den­ken nicht, dass, wenn wir auch nicht aus der Ein­heit­lich­keit des Den­kens hin­aus­kom­men, wir mit dem ver­nünf­ti­gen Den­ken mit­ten in die volle Ob­jek­ti­vi­tät hin­ein­kom­men.</span>
-        
-        <span id="s-10-8-18">Die Rea­lis­ten be­grei­fen nicht, dass das Ob­jek­ti­ve Idee ist, die Idea­lis­ten nicht, dass die Idee ob­jek­tiv ist.</span>
+        <span id="s-10-8-17"><i>Die Rea­lis­ten be­grei­fen nicht, dass das Ob­jek­ti­ve Idee ist, die Idea­lis­ten nicht, dass die Idee ob­jek­tiv ist</i>.</span>
         
       </p>
     </section>
@@ -404,19 +391,19 @@
       <p>
         <span id="s-10-9-1">Wir haben uns noch mit den Em­pi­ris­ten des Sin­nen­fäl­li­gen zu be­schäf­ti­gen, die jedes Er­klä­ren des Wirk­li­chen durch die Idee als eine un­statt­haf­te phi­lo­so­phi­sche De­duk­ti­on an­se­hen und das Ste­hen­blei­ben beim Sinn­lich-Fass­ba­ren for­dern.</span>
         
-        <span id="s-10-9-2">Gegen die­sen Stand­punkt kön­nen wir ein­fach das sagen, dass seine For­de­rung doch nur eine me­tho­di­sche, nur eine for­mel­le sein kann.</span>
+        <span id="s-10-9-2">Gegen die­sen Stand­punkt kön­nen wir ein­fach das sagen, dass <i>seine</i> For­de­rung doch nur eine <i>me­tho­di­sche</i>, nur eine <i>for­mel­le</i> sein kann.</span>
         
         <span id="s-10-9-3">Wir sol­len beim Ge­ge­be­nen ste­hen blei­ben, heißt doch nur: wir sol­len uns das an­eig­nen, was uns ge­gen­über­tritt.</span>
         
-        <span id="s-10-9-4">Über das Was des­sel­ben kann die­ser Stand­punkt am al­ler­we­nigs­ten etwas aus­ma­chen; denn die­ses Was muss ihm eben von dem Ge­ge­be­nen selbst kom­men.</span>
+        <span id="s-10-9-4">Über das <i>Was</i> des­sel­ben kann <i>die­ser</i> Stand­punkt am al­ler­we­nigs­ten etwas aus­ma­chen; denn die­ses <i>Was</i> muss ihm eben von dem Ge­ge­be­nen selbst kom­men.</span>
         
         <span id="s-10-9-5">Wie man mit der For­de­rung der rei­nen Er­fah­rung zu­gleich for­dern kann, nicht über die Sin­nen­welt hin­aus­zu­ge­hen, da doch die Idee eben­so die For­de­rung des Ge­ge­benseins er­fül­len kann, ist uns völ­lig un­be­greif­lich.</span>
         
-        <span id="s-10-9-6">Das po­si­ti­vis­ti­sche Er­fah­rungs­prin­zip muss die Frage ganz offen las­sen, was ge­ge­ben ist, und ver­ei­nigt sich somit ganz gut mit einem idea­lis­ti­schen For­schungs­re­sul­tat.</span>
+        <span id="s-10-9-6">Das po­si­ti­vis­ti­sche Er­fah­rungs­prin­zip muss die Frage ganz offen las­sen, <i>was</i> ge­ge­ben ist, und ver­ei­nigt sich somit ganz gut mit einem idea­lis­ti­schen For­schungs­re­sul­tat.</span>
         
         <span id="s-10-9-7">Dann aber ist diese For­de­rung eben­falls mit der un­se­ren zu­sam­men­fal­lend.</span>
         
-        <span id="s-10-9-8">Und wir ver­ei­ni­gen in un­se­rer An­sicht alle Stand­punk­te, in­so­fern sie Be­rech­ti­gung haben.</span>
+        <span id="s-10-9-8">Und wir ver­ei­ni­gen in un­se­rer An­sicht alle Stand­punk­te, <i>in­so­fern sie Be­rech­ti­gung</i> haben.</span>
         
         <span id="s-10-9-9">Unser Stand­punkt ist Idea­lis­mus, weil er in der Idee den Welt­grund sieht; er ist Rea­lis­mus, weil er die Idee als das Reale an­spricht; und er ist Po­si­ti­vis­mus oder Em­pi­ris­mus, weil er zu dem In­halt der Idee nicht durch aprio­ri­sche Kon­struk­ti­on, son­dern zu ihm als einem Ge­ge­be­nen kom­men will.</span>
         
@@ -428,15 +415,15 @@
         
         <span id="s-10-9-13">Das Schlie­ßen ist nur ein Über­ge­hen von ge­ge­be­nen Ele­men­ten zu an­de­ren eben­so ge­ge­be­nen.</span>
         
-        <span id="s-10-9-14">Wir ver­bin­den im Schluss a mit b durch c; aber alles das muss ge­ge­ben sein.</span>
+        <span id="s-10-9-14">Wir ver­bin­den im Schluss a mit b durch c; aber alles das muss <i>ge­ge­ben</i> sein.</span>
         
         <span id="s-10-9-15">Wenn Vol­kelt sagt, unser Den­ken drängt uns dazu, zu dem Ge­ge­be­nen eine Vor­aus­set­zung zu ma­chen und es zu über­schrei­ten, so sagen wir: in un­se­rem Den­ken drängt uns schon das, was wir zu dem un­mit­tel­bar Ge­ge­be­nen hin­zu­fü­gen wol­len.</span>
         
-        <span id="s-10-9-16">Wir müs­sen daher jede Me­ta­phy­sik ab­wei­sen.</span>
+        <span id="s-10-9-16"><i>Wir müs­sen daher jede Me­ta­phy­sik</i> ab­wei­sen.</span>
         
-        <span id="s-10-9-17">Die Me­ta­phy­sik will ja das Ge­ge­be­ne durch ein Nicht-Ge­ge­be­nes, Er­schlos­se­nes er­klä­ren (Wolff, Her­b­art).</span>
+        <span id="s-10-9-17">Die Me­ta­phy­sik will ja das Ge­ge­be­ne durch ein <i>Nicht-Ge­ge­be­nes</i>, Er­schlos­se­nes er­klä­ren (Wolff, Her­b­art).</span>
         
-        <span id="s-10-9-18">Wir sehen in dem Schlie­ßen nur eine for­mel­le Tä­tig­keit, die zu nichts Neuem führt, die nur Über­gän­ge zwi­schen Po­si­tiv-Vor­lie­gen­dem her­bei­führt.\*</span>
+        <span id="s-10-9-18">Wir sehen in dem Schlie­ßen nur eine for­mel­le Tä­tig­keit, die zu nichts Neuem führt, die nur Über­gän­ge zwi­schen Po­si­tiv-Vor­lie­gen­dem her­bei­führt.*</span>
         
       </p>
     </section>
@@ -445,7 +432,7 @@
       <p>
         <span id="s-10-10-1">Wel­che Ge­stalt hat die fer­ti­ge Wis­sen­schaft im Lich­te der Goe­the­schen Denk­wei­se?</span>
         
-        <span id="s-10-10-2">Vor allem müs­sen wir fest­hal­ten, dass der ge­sam­te In­halt der Wis­sen­schaft ein Ge­ge­be­nes ist; teils ge­ge­ben als Sin­nen­welt von außen, teils als Ide­en­welt von innen.</span>
+        <span id="s-10-10-2">Vor allem müs­sen wir fest­hal­ten, dass der ge­sam­te <i>In­halt</i> der Wis­sen­schaft ein Ge­ge­be­nes ist; teils ge­ge­ben als Sin­nen­welt von außen, teils als Ide­en­welt von innen.</span>
         
         <span id="s-10-10-3">Alle un­se­re wis­sen­schaft­li­che Tä­tig­keit wird also darin be­ste­hen, die Form, in der uns die­ser Ge­sam­tin­halt des Ge­ge­be­nen ge­gen­über­tritt, zu über­win­den und zu einer uns be­frie­di­gen­den zu ma­chen.</span>
         
@@ -477,35 +464,31 @@
         
         <span id="s-10-10-17">Wir haben hier die Auf­ga­be, die Reihe der Er­schei­nun­gen so zu­sam­men­zu­stel­len, dass eine aus der an­dern mit Not­wen­dig­keit her­vor­geht, dass sie alle ein Gan­zes, durch und durch Ge­setz­mä­ßi­ges aus­ma­chen.</span>
         
-        <span id="s-10-10-18">Das Ge­biet, das in die­ser Weise zu er­klä­ren ist, ist die un­or­ga­ni­sche Natur.</span>
+        <span id="s-10-10-18">Das Ge­biet, das in die­ser Weise zu er­klä­ren ist, ist die <i>un­or­ga­ni­sche Natur</i>. Nun tre­ten uns in der Er­fah­rung die ein­zel­nen Er­schei­nun­gen kei­nes­wegs so ge­gen­über, dass das Nächs­te im Raum und in der Zeit auch das Nächs­te dem in­nern Wesen nach ist.</span>
         
-        <span id="s-10-10-19">Nun tre­ten uns in der Er­fah­rung die ein­zel­nen Er­schei­nun­gen kei­nes­wegs so ge­gen­über, dass das Nächs­te im Raum und in der Zeit auch das Nächs­te dem in­nern Wesen nach ist.</span>
+        <span id="s-10-10-19">Wir müs­sen erst von dem räum­lich und zeit­lich Nächs­ten zu dem be­griff­lich Nächs­ten über­ge­hen.</span>
         
-        <span id="s-10-10-20">Wir müs­sen erst von dem räum­lich und zeit­lich Nächs­ten zu dem be­griff­lich Nächs­ten über­ge­hen.</span>
+        <span id="s-10-10-20">Wir müs­sen zu einer Er­schei­nung die dem Wesen nach sich un­mit­tel­bar an sie an­schlie­ßen­den su­chen.</span>
         
-        <span id="s-10-10-21">Wir müs­sen zu einer Er­schei­nung die dem Wesen nach sich un­mit­tel­bar an sie an­schlie­ßen­den su­chen.</span>
+        <span id="s-10-10-21">Wir müs­sen trach­ten, eine sich selbst er­gän­zen­de, sich tra­gen­de, sich ge­gen­sei­tig stüt­zen­de Reihe von Tat­sa­chen zu­sam­men­zu­stel­len.</span>
         
-        <span id="s-10-10-22">Wir müs­sen trach­ten, eine sich selbst er­gän­zen­de, sich tra­gen­de, sich ge­gen­sei­tig stüt­zen­de Reihe von Tat­sa­chen zu­sam­men­zu­stel­len.</span>
+        <span id="s-10-10-22">Dar­aus ge­win­nen wir eine Grup­pe von auf­ein­an­der wir­ken­den sin­nen­fäl­li­gen Ele­men­ten der Wirk­lich­keit; und das Phä­no­men, das sich vor uns ab­wi­ckelt, folgt un­mit­tel­bar aus den in Be­tracht kom­men­den Fak­to­ren in durch­sich­ti­ger, kla­rer Weise.</span>
         
-        <span id="s-10-10-23">Dar­aus ge­win­nen wir eine Grup­pe von auf­ein­an­der wir­ken­den sin­nen­fäl­li­gen Ele­men­ten der Wirk­lich­keit; und das Phä­no­men, das sich vor uns ab­wi­ckelt, folgt un­mit­tel­bar aus den in Be­tracht kom­men­den Fak­to­ren in durch­sich­ti­ger, kla­rer Weise.</span>
+        <span id="s-10-10-23">Ein sol­ches Phä­no­men nen­nen wir mit Goe­the Ur­phä­no­men oder Grund­tat­sa­che.</span>
         
-        <span id="s-10-10-24">Ein sol­ches Phä­no­men nen­nen wir mit Goe­the Ur­phä­no­men oder Grund­tat­sa­che.</span>
+        <span id="s-10-10-24"><i>Die­ses Ur­phä­no­men ist iden­tisch mit dem ob­jek­ti­ven Na­tur­ge­setz</i>. Die hier be­spro­che­ne Zu­sam­men­stel­lung kann ent­we­der bloß in Ge­dan­ken ge­sche­hen, wie wenn ich die drei bei einem waag­recht ge­wor­fe­nen Stein in Be­tracht kom­men­den be­din­gen­den Fak­to­ren denke: 1.</span>
         
-        <span id="s-10-10-25">Die­ses Ur­phä­no­men ist iden­tisch mit dem ob­jek­ti­ven Na­tur­ge­setz.</span>
+        <span id="s-10-10-25">die Stoß­kraft, 2.</span>
         
-        <span id="s-10-10-26">Die hier be­spro­che­ne Zu­sam­men­stel­lung kann ent­we­der bloß in Ge­dan­ken ge­sche­hen, wie wenn ich die drei bei einem waag­recht ge­wor­fe­nen Stein in Be­tracht kom­men­den be­din­gen­den Fak­to­ren denke: 1.</span>
+        <span id="s-10-10-26">die An­zie­hungs­kraft der Erde und 3.</span>
         
-        <span id="s-10-10-27">die Stoß­kraft, 2.</span>
+        <span id="s-10-10-27">den Luft­wi­der­stand, und dann die Bahn des flie­gen­den Stei­nes aus die­sen Fak­to­ren ab­lei­te, oder aber: ich kann die ein­zel­nen Fak­to­ren wirk­lich zu­sam­men­brin­gen und dann das aus ihrer Wech­sel­wir­kung fol­gen­de Phä­no­men ab­war­ten.</span>
         
-        <span id="s-10-10-28">die An­zie­hungs­kraft der Erde und 3.</span>
+        <span id="s-10-10-28">Das ist beim <i>Ver­such</i> der Fall.</span>
         
-        <span id="s-10-10-29">den Luft­wi­der­stand, und dann die Bahn des flie­gen­den Stei­nes aus die­sen Fak­to­ren ab­lei­te, oder aber: ich kann die ein­zel­nen Fak­to­ren wirk­lich zu­sam­men­brin­gen und dann das aus ihrer Wech­sel­wir­kung fol­gen­de Phä­no­men ab­war­ten.</span>
+        <span id="s-10-10-29">Wäh­rend uns ein Phä­no­men der Au­ßen­welt un­klar ist, weil wir nur das Be­ding­te (die Er­schei­nung), nicht die Be­din­gung ken­nen, ist uns das Phä­no­men, das der Ver­such lie­fert, klar, denn wir haben die be­din­gen­den Fak­to­ren selbst zu­sam­men­ge­stellt.</span>
         
-        <span id="s-10-10-30">Das ist beim Ver­such der Fall.</span>
-        
-        <span id="s-10-10-31">Wäh­rend uns ein Phä­no­men der Au­ßen­welt un­klar ist, weil wir nur das Be­ding­te (die Er­schei­nung), nicht die Be­din­gung ken­nen, ist uns das Phä­no­men, das der Ver­such lie­fert, klar, denn wir haben die be­din­gen­den Fak­to­ren selbst zu­sam­men­ge­stellt.</span>
-        
-        <span id="s-10-10-32">Das ist der Weg der Na­tur­for­schung, dass sie von der Er­fah­rung aus­ge­he, um zu sehen, was wirk­lich ist; zu der Be­ob­ach­tung fort­schrei­te, um zu sehen, warum die­ses wirk­lich ist, und sich dann zum Ver­such stei­ge­re, um zu sehen, was wirk­lich sein kann.</span>
+        <span id="s-10-10-30"><i>Das ist der Weg der Na­tur­for­schung, dass sie von der Er­fah­rung aus­ge­he, um zu sehen, was wirk­lich ist; zu der Be­ob­ach­tung fort­schrei­te, um zu sehen, warum die­ses wirk­lich ist, und sich dann zum Ver­such stei­ge­re, um zu sehen, was wirk­lich sein kann</i>.</span>
         
       </p>
     </section>
@@ -513,7 +496,7 @@
       <p>
         <span id="s-10-11-1">Lei­der scheint ge­ra­de jener Auf­satz Goe­thes ver­lo­ren ge­gan­gen zu sein, der die­sen An­sich­ten am bes­ten zur Stüt­ze die­nen könn­te.</span>
         
-        <span id="s-10-11-2">Er ist eine Fort­set­zung des Auf­sat­zes: «Der Ver­such als Ver­mitt­ler von Sub­jekt und Ob­jekt» ge­we­sen.</span>
+        <span id="s-10-11-2">Er ist eine Fort­set­zung des Auf­sat­zes: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Der Ver­such als Ver­mitt­ler von Sub­jekt und Ob­jekt" part="1">Der Ver­such als Ver­mitt­ler von Sub­jekt und Ob­jekt</q> ge­we­sen.</span>
         
         <span id="s-10-11-3">Wir wol­len, von dem letz­te­ren aus­ge­hend, den mög­li­chen In­halt des ers­te­ren nach der ein­zi­gen uns zu­gäng­li­chen Quel­le, dem Brief­wech­sel Goe­thes und Schil­lers, zu re­kon­stru­ie­ren su­chen.</span>
         
@@ -537,7 +520,7 @@
         
         <span id="s-10-11-13">Wir kön­nen aber die Ge­dan­ken, die in dem­sel­ben nie­der­ge­legt sind, aus dem aus­führ­li­chen Brie­fe Schil­lers vom 19.</span>
         
-        <span id="s-10-11-14">Ja­nu­ar 1798 (Brief­wech­sel Goe­thes mit Schil­ler) er­ken­nen, wobei in Be­tracht kommt, dass wir zu dem da­selbst An­ge­deu­te­ten viel­fa­che Be­le­ge und Er­gän­zun­gen in Goe­thes «Sprü­chen in Prosa» fin­den.\*</span>
+        <span id="s-10-11-14">Ja­nu­ar 1798 (Brief­wech­sel Goe­thes mit Schil­ler) er­ken­nen, wobei in Be­tracht kommt, dass wir zu dem da­selbst An­ge­deu­te­ten viel­fa­che Be­le­ge und Er­gän­zun­gen in Goe­thes «Sprü­chen in Prosa» fin­den.*</span>
         
       </p>
     </section>
@@ -547,69 +530,63 @@
         
         <span id="s-10-12-2">Die­sel­ben be­ru­hen auf drei ver­schie­de­nen Auf­fas­sun­gen der Phä­no­me­ne.</span>
         
-        <span id="s-10-12-3">Die erste Me­tho­de ist der ge­mei­ne Em­pi­ris­mus, der nicht über das em­pi­ri­sche Phä­no­men, über den un­mit­tel­ba­ren Tat­be­stand hin­aus­geht.</span>
+        <span id="s-10-12-3">Die erste Me­tho­de ist <i>der ge­mei­ne Em­pi­ris­mus</i>, der nicht über das <i>em­pi­ri­sche Phä­no­men</i>, über den un­mit­tel­ba­ren Tat­be­stand hin­aus­geht.</span>
         
-        <span id="s-10-12-4">Er bleibt bei ein­zel­nen Er­schei­nun­gen ste­hen.</span>
+        <span id="s-10-12-4">Er bleibt bei <i>ein­zel­nen</i> Er­schei­nun­gen ste­hen.</span>
         
         <span id="s-10-12-5">Will der ge­mei­ne Em­pi­ris­mus kon­se­quent sein, so muss er seine ganze Tä­tig­keit dar­auf be­schrän­ken, jedes ihm auf­sto­ßen­de Phä­no­men genau nach allen Ein­zel­hei­ten zu be­schrei­ben, d. i. den em­pi­ri­schen Tat­be­stand auf­zu­neh­men.</span>
         
         <span id="s-10-12-6">Wis­sen­schaft wäre ihm nur die Summe aller die­ser Ein­zel­be­schrei­bun­gen auf­ge­nom­me­ner Tat­be­stän­de.</span>
         
-        <span id="s-10-12-7">Ge­gen­über dem ge­mei­nen Em­pi­ris­mus bil­det nun der Ra­tio­na­lis­mus die nächst hö­he­re Stufe.</span>
+        <span id="s-10-12-7">Ge­gen­über dem ge­mei­nen Em­pi­ris­mus bil­det nun der <i>Ra­tio­na­lis­mus</i> die nächst hö­he­re Stufe.</span>
         
-        <span id="s-10-12-8">Die­ser geht auf das wis­sen­schaft­li­che Phä­no­men.</span>
+        <span id="s-10-12-8">Die­ser geht auf das <i>wis­sen­schaft­li­che Phä­no­men</i>. Diese An­schau­ung be­schränkt sich nicht mehr auf die bloße Be­schrei­bung der Phä­no­me­ne, son­dern sie sucht die­sel­ben durch Auf­de­ckung der Ur­sa­chen, durch Auf­stel­lung von Hy­po­the­sen usw. zu <i>er­klä­ren</i>. Es ist die Stufe, wo der Ver­stand aus den Er­schei­nun­gen auf deren Ur­sa­chen und Zu­sam­men­hän­ge <i>schließt</i>. So­wohl die ers­te­re wie die letz­te Me­tho­de er­klärt Goe­the für Ein­sei­tig­kei­ten.</span>
         
-        <span id="s-10-12-9">Diese An­schau­ung be­schränkt sich nicht mehr auf die bloße Be­schrei­bung der Phä­no­me­ne, son­dern sie sucht die­sel­ben durch Auf­de­ckung der Ur­sa­chen, durch Auf­stel­lung von Hy­po­the­sen usw. zu er­klä­ren.</span>
+        <span id="s-10-12-9">Der ge­mei­ne Em­pi­ris­mus ist die rohe Un­wis­sen­schaft, weil er nie aus der blo­ßen Auf­fas­sung der Zu­fäl­lig­kei­ten her­aus­kommt; der Ra­tio­na­lis­mus da­ge­gen in­ter­pre­tiert in die Er­schei­nungs­welt Ur­sa­chen und Zu­sam­men­hän­ge hin­ein, die nicht in der­sel­ben sind.</span>
         
-        <span id="s-10-12-10">Es ist die Stufe, wo der Ver­stand aus den Er­schei­nun­gen auf deren Ur­sa­chen und Zu­sam­men­hän­ge schließt.</span>
+        <span id="s-10-12-10">Jener kann sich aus der Fülle der Er­schei­nun­gen nicht zum frei­en Den­ken er­he­ben, die­ser ver­liert die­sel­be als den si­che­ren Boden unter sei­nen Füßen und ver­fällt der Will­kür der Ein­bil­dungs­kraft und des sub­jek­ti­ven Ein­fal­les.</span>
         
-        <span id="s-10-12-11">So­wohl die ers­te­re wie die letz­te Me­tho­de er­klärt Goe­the für Ein­sei­tig­kei­ten.</span>
+        <span id="s-10-12-11">Goe­the rügt die Sucht, mit Er­schei­nun­gen so­gleich durch sub­jek­ti­ve Wir­kun­gen Fol­ge­run­gen zu ver­bin­den, mit den schärfs­ten Wor­ten, so «Sprü­che in Prosa»; Natw.</span>
         
-        <span id="s-10-12-12">Der ge­mei­ne Em­pi­ris­mus ist die rohe Un­wis­sen­schaft, weil er nie aus der blo­ßen Auf­fas­sung der Zu­fäl­lig­kei­ten her­aus­kommt; der Ra­tio­na­lis­mus da­ge­gen in­ter­pre­tiert in die Er­schei­nungs­welt Ur­sa­chen und Zu­sam­men­hän­ge hin­ein, die nicht in der­sel­ben sind.</span>
+        <span id="s-10-12-12">Schr., 4.</span>
         
-        <span id="s-10-12-13">Jener kann sich aus der Fülle der Er­schei­nun­gen nicht zum frei­en Den­ken er­he­ben, die­ser ver­liert die­sel­be als den si­che­ren Boden unter sei­nen Füßen und ver­fällt der Will­kür der Ein­bil­dungs­kraft und des sub­jek­ti­ven Ein­fal­les.</span>
+        <span id="s-10-12-13">Bd., 2.</span>
         
-        <span id="s-10-12-14">Goe­the rügt die Sucht, mit Er­schei­nun­gen so­gleich durch sub­jek­ti­ve Wir­kun­gen Fol­ge­run­gen zu ver­bin­den, mit den schärfs­ten Wor­ten, so «Sprü­che in Prosa»; Natw.</span>
+        <span id="s-10-12-14">Abt., S. 375: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Sprü­che in Prosa" part="1">Es ist eine schlim­me Sache, die doch man­chem Be­ob­ach­ter be­geg­net, mit einer An­schau­ung so­gleich eine Fol­ge­rung zu ver­knüp­fen und beide für gleich­gel­tend zu ach­ten</q>, und: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Sprü­che in Prosa" part="1">Theo­ri­en sind ge­wöhn­lich Über­ei­lun­gen eines un­ge­dul­di­gen Ver­stan­des, der die Phä­no­me­ne gern los sein möch­te und an ihrer Stel­le des­we­gen Bil­der, Be­grif­fe, ja oft nur Worte ein­schiebt.</q></span>
         
-        <span id="s-10-12-15">Schr., 4.</span>
+        <span id="s-10-12-15">Man ahnet, man sieht wohl auch, dass es nur ein Be­helf ist; liebt nicht aber Lei­den­schaft und Par­tei­geist je­der­zeit Be­hel­fe?</span>
         
-        <span id="s-10-12-16">Bd., 2.</span>
+        <span id="s-10-12-16">Und mit Recht, da sie ihrer so sehr be­dür­fen. (Eben­da S. 376) Be­son­ders ta­delt Goe­the den Miss­brauch, den die Kau­sal­be­stim­mung ver­an­lasst.</span>
         
-        <span id="s-10-12-17">Abt., S. 375: «Es ist eine schlim­me Sache, die doch man­chem Be­ob­ach­ter be­geg­net, mit einer An­schau­ung so­gleich eine Fol­ge­rung zu ver­knüp­fen und beide für gleich­gel­tend zu ach­ten», und: «Theo­ri­en sind ge­wöhn­lich Über­ei­lun­gen eines un­ge­dul­di­gen Ver­stan­des, der die Phä­no­me­ne gern los sein möch­te und an ihrer Stel­le des­we­gen Bil­der, Be­grif­fe, ja oft nur Worte ein­schiebt.</span>
+        <span id="s-10-12-17">Der Ra­tio­na­lis­mus in sei­ner un­ge­zü­gel­ten Phan­tas­tik sucht dort Kau­sa­li­tät, wo sie, durch die Fak­ten zu su­chen, nicht ge­bo­ten ist.</span>
         
-        <span id="s-10-12-18">Man ahnet, man sieht wohl auch, dass es nur ein Be­helf ist; liebt nicht aber Lei­den­schaft und Par­tei­geist je­der­zeit Be­hel­fe?</span>
+        <span id="s-10-12-18">In «Sprü­che in Prosa» (eben­da S. 371) heißt es: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Sprü­che in Prosa" part="1">Der ein­ge­bo­rens­te Be­griff, der not­wen­digs­te, von <i>Ur­sa­che</i> und <i>Wir­kung</i>, wird in der An­wen­dung die Ver­an­las­sung zu un­zäh­li­gen sich immer wie­der­ho­len­den Irr­tü­mern.</q> Na­ment­lich führt ihn seine Sucht nach ein­fa­chen Ver­bin­dun­gen dahin, die Phä­no­me­ne wie die Glie­der einer Kette nach Ur­sa­che und Wir­kung rein der <i>Länge</i> nach an­ein­an­der­ge­reiht zu den­ken; wäh­rend die Wahr­heit doch ist, dass ir­gend­ei­ne Er­schei­nung, die durch eine der Zeit nach frü­he­re <i>kau­sal</i> be­dingt ist, zu­gleich auch noch von vie­len an­dern Ein­wir­kun­gen ab­hängt.</span>
         
-        <span id="s-10-12-19">Und mit Recht, da sie ihrer so sehr be­dür­fen.» (Eben­da S. 376) Be­son­ders ta­delt Goe­the den Miss­brauch, den die Kau­sal­be­stim­mung ver­an­lasst.</span>
+        <span id="s-10-12-19">Es wird in die­sem Fall bloß die <i>Länge</i> und nicht die <i>Brei­te</i> der Natur in An­schlag ge­bracht.</span>
         
-        <span id="s-10-12-20">Der Ra­tio­na­lis­mus in sei­ner un­ge­zü­gel­ten Phan­tas­tik sucht dort Kau­sa­li­tät, wo sie, durch die Fak­ten zu su­chen, nicht ge­bo­ten ist.</span>
+        <span id="s-10-12-20">Beide Wege, der ge­mei­ne Em­pi­ris­mus und der Ra­tio­na­lis­mus, sind nun für Goe­the wohl Durch­gangs­punk­te für die höchs­te wis­sen­schaft­li­che Me­tho­de, aber eben nur <i>Durch­gangs­punk­te</i>, die über­wun­den wer­den müs­sen.</span>
         
-        <span id="s-10-12-21">In «Sprü­che in Prosa» (eben­da S. 371) heißt es: «Der ein­ge­bo­rens­te Be­griff, der not­wen­digs­te, von Ur­sa­che und Wir­kung, wird in der An­wen­dung die Ver­an­las­sung zu un­zäh­li­gen sich immer wie­der­ho­len­den Irr­tü­mern.» Na­ment­lich führt ihn seine Sucht nach ein­fa­chen Ver­bin­dun­gen dahin, die Phä­no­me­ne wie die Glie­der einer Kette nach Ur­sa­che und Wir­kung rein der Länge nach an­ein­an­der­ge­reiht zu den­ken; wäh­rend die Wahr­heit doch ist, dass ir­gend­ei­ne Er­schei­nung, die durch eine der Zeit nach frü­he­re kau­sal be­dingt ist, zu­gleich auch noch von vie­len an­dern Ein­wir­kun­gen ab­hängt.</span>
+        <span id="s-10-12-21">Und dies ge­schieht mit dem <i>ra­tio­nel­len Em­pi­ris­mus</i>, der sich mit dem <i>rei­nen Phä­no­men</i>, das iden­tisch mit dem ob­jek­ti­ven Na­tur­ge­setz ist, be­schäf­tigt.</span>
         
-        <span id="s-10-12-22">Es wird in die­sem Fall bloß die Länge und nicht die Brei­te der Natur in An­schlag ge­bracht.</span>
+        <span id="s-10-12-22"><i>Die ge­mei­ne Em­pi­rie</i>, die un­mit­tel­ba­re Er­fah­rung bie­tet uns nur <i>Ein­zel­nes</i>, Un­zu­sam­men­hän­gen­des, ein Ag­gre­gat von Er­schei­nun­gen.</span>
         
-        <span id="s-10-12-23">Beide Wege, der ge­mei­ne Em­pi­ris­mus und der Ra­tio­na­lis­mus, sind nun für Goe­the wohl Durch­gangs­punk­te für die höchs­te wis­sen­schaft­li­che Me­tho­de, aber eben nur Durch­gangs­punk­te, die über­wun­den wer­den müs­sen.</span>
+        <span id="s-10-12-23">Das heißt, sie bie­tet uns das nicht als letz­ten Ab­schluss der wis­sen­schaft­li­chen Be­trach­tung, wohl aber als <i>erste</i> Er­fah­rung.</span>
         
-        <span id="s-10-12-24">Und dies ge­schieht mit dem ra­tio­nel­len Em­pi­ris­mus, der sich mit dem rei­nen Phä­no­men, das iden­tisch mit dem ob­jek­ti­ven Na­tur­ge­setz ist, be­schäf­tigt.</span>
+        <span id="s-10-12-24">Unser wis­sen­schaft­li­ches Be­dürf­nis sucht aber nur Zu­sam­men­hän­gen­des, be­greift das Ein­zel­ne nur als Glied einer Ver­bin­dung.</span>
         
-        <span id="s-10-12-25">Die ge­mei­ne Em­pi­rie, die un­mit­tel­ba­re Er­fah­rung bie­tet uns nur Ein­zel­nes, Un­zu­sam­men­hän­gen­des, ein Ag­gre­gat von Er­schei­nun­gen.</span>
+        <span id="s-10-12-25">So gehen das Be­dürf­nis des Be­grei­fens und die Tat­sa­chen der Natur schein­bar aus­ein­an­der.</span>
         
-        <span id="s-10-12-26">Das heißt, sie bie­tet uns das nicht als letz­ten Ab­schluss der wis­sen­schaft­li­chen Be­trach­tung, wohl aber als erste Er­fah­rung.</span>
+        <span id="s-10-12-26">Im Geis­te ist nur Zu­sam­men­hang, in der Natur nur Son­de­rung, der Geist er­strebt die <i>Gat­tung</i>, die Natur schafft nur In­di­vi­du­en.</span>
         
-        <span id="s-10-12-27">Unser wis­sen­schaft­li­ches Be­dürf­nis sucht aber nur Zu­sam­men­hän­gen­des, be­greift das Ein­zel­ne nur als Glied einer Ver­bin­dung.</span>
+        <span id="s-10-12-27">Die Lö­sung die­ses Wi­der­spruchs er­gibt sich aus der Er­wä­gung, dass ei­ner­seits die ver­bin­den­de Kraft des Geis­tes in­halts­los ist, somit al­lein, durch sich selbst, <i>nichts</i> Po­si­ti­ves er­ken­nen kann, dass an­de­rer­seits die Son­de­rung der Na­tur­ob­jek­te nicht in deren Wesen selbst be­grün­det ist, son­dern in deren räum­li­cher Er­schei­nung, dass viel­mehr bei Durch­drin­gung des We­sens des In­di­vi­du­el­len, des Be­son­de­ren, die­ses selbst uns auf die Gat­tung hin­weist.</span>
         
-        <span id="s-10-12-28">So gehen das Be­dürf­nis des Be­grei­fens und die Tat­sa­chen der Natur schein­bar aus­ein­an­der.</span>
+        <span id="s-10-12-28">Weil die Ob­jek­te der Natur in der Er­schei­nung ge­son­dert sind, be­darf es der zu­sam­men­fas­sen­den Kraft des Geis­tes, ihre <i>in­ne­re</i> Ein­heit zu zei­gen.</span>
         
-        <span id="s-10-12-29">Im Geis­te ist nur Zu­sam­men­hang, in der Natur nur Son­de­rung, der Geist er­strebt die Gat­tung, die Natur schafft nur In­di­vi­du­en.</span>
+        <span id="s-10-12-29">Weil die Ein­heit des Ver­stan­des für sich leer ist, muss er sie mit den Ob­jek­ten der Natur er­fül­len.</span>
         
-        <span id="s-10-12-30">Die Lö­sung die­ses Wi­der­spruchs er­gibt sich aus der Er­wä­gung, dass ei­ner­seits die ver­bin­den­de Kraft des Geis­tes in­halts­los ist, somit al­lein, durch sich selbst, nichts Po­si­ti­ves er­ken­nen kann, dass an­de­rer­seits die Son­de­rung der Na­tur­ob­jek­te nicht in deren Wesen selbst be­grün­det ist, son­dern in deren räum­li­cher Er­schei­nung, dass viel­mehr bei Durch­drin­gung des We­sens des In­di­vi­du­el­len, des Be­son­de­ren, die­ses selbst uns auf die Gat­tung hin­weist.</span>
+        <span id="s-10-12-30">So kom­men auf die­ser <i>drit­ten Stufe</i> Phä­no­men und Geis­tes­ver­mö­gen ein­an­der ent­ge­gen und gehen in <i>eins</i> auf und der Geist kann jetzt erst voll­be­frie­digt sein.</span>
         
-        <span id="s-10-12-31">Weil die Ob­jek­te der Natur in der Er­schei­nung ge­son­dert sind, be­darf es der zu­sam­men­fas­sen­den Kraft des Geis­tes, ihre in­ne­re Ein­heit zu zei­gen.</span>
-        
-        <span id="s-10-12-32">Weil die Ein­heit des Ver­stan­des für sich leer ist, muss er sie mit den Ob­jek­ten der Natur er­fül­len.</span>
-        
-        <span id="s-10-12-33">So kom­men auf die­ser drit­ten Stufe Phä­no­men und Geis­tes­ver­mö­gen ein­an­der ent­ge­gen und gehen in eins auf und der Geist kann jetzt erst voll­be­frie­digt sein.</span>
-        
-        <span id="s-10-12-34">—</span>
+        <span id="s-10-12-31">—</span>
         
       </p>
     </section>
@@ -629,61 +606,55 @@
         
         <span id="s-10-13-7">Ich muss es von dem zen­tra­len Prin­zip jenes Din­ges ab­lei­ten, auf das der äu­ße­re Ein­fluss statt­ge­fun­den hat.</span>
         
-        <span id="s-10-13-8">Ich kann nicht sagen: die­ser äu­ße­re Ein­fluss hat diese Wir­kung; son­dern nur: auf die­sen be­stimm­ten äu­ße­ren Ein­fluss ant­wor­tet das in­ne­re Wir­kungs­prin­zip in die­ser be­stimm­ten Weise.</span>
+        <span id="s-10-13-8">Ich kann nicht sagen: die­ser äu­ße­re Ein­fluss hat diese Wir­kung; son­dern nur: auf <i>die­sen</i> be­stimm­ten äu­ße­ren Ein­fluss ant­wor­tet das in­ne­re Wir­kungs­prin­zip in <i>die­ser</i> be­stimm­ten Weise.</span>
         
-        <span id="s-10-13-9">Was ge­schieht, ist Folge einer in­ne­ren Ge­setz­lich­keit.</span>
+        <span id="s-10-13-9">Was ge­schieht, ist Folge einer <i>in­ne­ren</i> Ge­setz­lich­keit.</span>
         
         <span id="s-10-13-10">Ich muss also diese in­ne­re Ge­setz­lich­keit ken­nen.</span>
         
         <span id="s-10-13-11">Ich muss er­for­schen, was sich von innen her­aus ge­stal­tet.</span>
         
-        <span id="s-10-13-12">Die­ses sich ge­stal­ten­de Prin­zip, das auf die­sem Ge­biet jedem Phä­no­men zu­grun­de liegt, das ich in allem zu su­chen habe, ist der Typus.</span>
+        <span id="s-10-13-12">Die­ses sich ge­stal­ten­de Prin­zip, das auf die­sem Ge­biet jedem Phä­no­men zu­grun­de liegt, das ich in allem zu su­chen habe, ist der <i>Typus</i>. Wir sind im Ge­biet der or­ga­ni­schen Natur.</span>
         
-        <span id="s-10-13-13">Wir sind im Ge­biet der or­ga­ni­schen Natur.</span>
+        <span id="s-10-13-13">Was in der un­or­ga­ni­schen Natur Ur­phä­no­men, das ist in der Or­ga­nik <i>Typus</i>. Der Typus ist ein <i>all­ge­mei­nes Bild des Or­ga­nis­mus</i>: die Idee des­sel­ben; die Tier­heit im Tiere.</span>
         
-        <span id="s-10-13-14">Was in der un­or­ga­ni­schen Natur Ur­phä­no­men, das ist in der Or­ga­nik Typus.</span>
+        <span id="s-10-13-14">Wir muss­ten hier die Haupt­punk­te des schon in einem frü­he­ren Ab­schnitt über den «Typus» Aus­ge­führ­ten wegen des Zu­sam­men­hangs noch ein­mal an­füh­ren.</span>
         
-        <span id="s-10-13-15">Der Typus ist ein all­ge­mei­nes Bild des Or­ga­nis­mus: die Idee des­sel­ben; die Tier­heit im Tiere.</span>
+        <span id="s-10-13-15">In den ethi­schen und his­to­ri­schen Wis­sen­schaf­ten haben wir es dann mit der Idee im en­ge­ren Sinne zu tun.</span>
         
-        <span id="s-10-13-16">Wir muss­ten hier die Haupt­punk­te des schon in einem frü­he­ren Ab­schnitt über den «Typus» Aus­ge­führ­ten wegen des Zu­sam­men­hangs noch ein­mal an­füh­ren.</span>
+        <span id="s-10-13-16">Die Ethik und die Ge­schich­te sind Ide­al­wis­sen­schaf­ten.</span>
         
-        <span id="s-10-13-17">In den ethi­schen und his­to­ri­schen Wis­sen­schaf­ten haben wir es dann mit der Idee im en­ge­ren Sinne zu tun.</span>
+        <span id="s-10-13-17">Ihre Wirk­lich­keit sind Ideen.</span>
         
-        <span id="s-10-13-18">Die Ethik und die Ge­schich­te sind Ide­al­wis­sen­schaf­ten.</span>
+        <span id="s-10-13-18">— Der Ein­zel­wis­sen­schaft ob­liegt es, das Ge­ge­be­ne so weit zu be­ar­bei­ten, dass sie es bis zu Ur­phä­no­men, Typus und den lei­ten­den Ideen in der Ge­schich­te bringt.</span>
         
-        <span id="s-10-13-19">Ihre Wirk­lich­keit sind Ideen.</span>
+        <span id="s-10-13-19"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Ent­wurf einer Far­ben­leh­re" part="1">Kann... der Phy­si­ker zur Er­kennt­nis des­je­ni­gen ge­lan­gen, was wir ein Ur­phä­no­men ge­nannt haben, so ist er ge­bor­gen und der Phi­lo­soph mit ihm; er, denn er über­zeugt sich, dass er an die Gren­ze sei­ner Wis­sen­schaft ge­langt sei, dass er sich auf der em­pi­ri­schen Höhe be­fin­de, wo er rück­wärts die Er­fah­rung in allen ihren Stu­fen über­schau­en und vor­wärts in das Reich der Theo­rie, wo nicht ein­tre­ten, doch ein­bli­cken könne. Der Phi­lo­soph ist ge­bor­gen, denn er nimmt aus des Phy­si­kers Hand ein Letz­tes, das bei ihm nun ein Ers­tes wird</q> («Ent­wurf einer Far­ben­leh­re» 720 ) – Hier tritt näm­lich der Phi­lo­soph mit sei­ner Ar­beit auf.</span>
         
-        <span id="s-10-13-20">— Der Ein­zel­wis­sen­schaft ob­liegt es, das Ge­ge­be­ne so weit zu be­ar­bei­ten, dass sie es bis zu Ur­phä­no­men, Typus und den lei­ten­den Ideen in der Ge­schich­te bringt.</span>
+        <span id="s-10-13-22">Er er­greift die Ur­phä­no­me­ne und bringt sie in den be­frie­di­gen­den ide­el­len Zu­sam­men­hang.</span>
         
-        <span id="s-10-13-21">«Kann...</span>
+        <span id="s-10-13-23">Wir sehen, durch was im Sinne der Goe­the­schen Welt­an­schau­ung die Me­ta­phy­sik zu er­set­zen ist: durch eine ide­en­ge­mä­ße Be­trach­tung, Zu­sam­men­stel­lung und Ab­lei­tung der Ur­phä­no­me­ne.</span>
         
-        <span id="s-10-13-22">der Phy­si­ker zur Er­kennt­nis des­je­ni­gen ge­lan­gen, was wir ein Ur­phä­no­men ge­nannt haben, so ist er ge­bor­gen und der Phi­lo­soph mit ihm; er, denn er über­zeugt sich, dass er an die Gren­ze sei­ner Wis­sen­schaft ge­langt sei, dass er sich auf der em­pi­ri­schen Höhe be­fin­de, wo er rück­wärts die Er­fah­rung in allen ihren Stu­fen über­schau­en und vor­wärts in das Reich der Theo­rie, wo nicht ein­tre­ten, doch ein­bli­cken könne.</span>
+        <span id="s-10-13-24">In die­sem Sinne spricht sich Goe­the wie­der­holt über das Ver­hält­nis von em­pi­ri­scher Wis­sen­schaft und Phi­lo­so­phie aus; be­son­ders deut­lich in sei­nen Brie­fen an Hegel.</span>
         
-        <span id="s-10-13-23">Der Phi­lo­soph ist ge­bor­gen, denn er nimmt aus des Phy­si­kers Hand ein Letz­tes, das bei ihm nun ein Ers­tes wird» («Ent­wurf einer Far­ben­leh­re» 720 ) – Hier tritt näm­lich der Phi­lo­soph mit sei­ner Ar­beit auf.</span>
+        <span id="s-10-13-25">Goe­the spricht in den An­na­len wie­der­holt von einem Sche­ma der Na­tur­wis­sen­schaft.</span>
         
-        <span id="s-10-13-24">Er er­greift die Ur­phä­no­me­ne und bringt sie in den be­frie­di­gen­den ide­el­len Zu­sam­men­hang.</span>
+        <span id="s-10-13-26">Wenn sich das­sel­be vor­fän­de, wür­den wir dar­aus er­se­hen, wie er sich selbst das Ver­hält­nis der ein­zel­nen Ur­phä­no­me­ne un­ter­ein­an­der dach­te; wie er sie in eine not­wen­di­ge Kette zu­sam­men­stell­te.</span>
         
-        <span id="s-10-13-25">Wir sehen, durch was im Sinne der Goe­the­schen Welt­an­schau­ung die Me­ta­phy­sik zu er­set­zen ist: durch eine ide­en­ge­mä­ße Be­trach­tung, Zu­sam­men­stel­lung und Ab­lei­tung der Ur­phä­no­me­ne.</span>
+        <span id="s-10-13-27">Eine Vor­stel­lung davon ge­win­nen wir auch, wenn wir die Ta­bel­le be­rück­sich­ti­gen, die er im 1.</span>
         
-        <span id="s-10-13-26">In die­sem Sinne spricht sich Goe­the wie­der­holt über das Ver­hält­nis von em­pi­ri­scher Wis­sen­schaft und Phi­lo­so­phie aus; be­son­ders deut­lich in sei­nen Brie­fen an Hegel.</span>
+        <span id="s-10-13-28">Bd.</span>
         
-        <span id="s-10-13-27">Goe­the spricht in den An­na­len wie­der­holt von einem Sche­ma der Na­tur­wis­sen­schaft.</span>
+        <span id="s-10-13-29"><ol start="4">
+<li></li>
+</ol></span>
         
-        <span id="s-10-13-28">Wenn sich das­sel­be vor­fän­de, wür­den wir dar­aus er­se­hen, wie er sich selbst das Ver­hält­nis der ein­zel­nen Ur­phä­no­me­ne un­ter­ein­an­der dach­te; wie er sie in eine not­wen­di­ge Kette zu­sam­men­stell­te.</span>
-        
-        <span id="s-10-13-29">Eine Vor­stel­lung davon ge­win­nen wir auch, wenn wir die Ta­bel­le be­rück­sich­ti­gen, die er im 1.</span>
-        
-        <span id="s-10-13-30">Bd.</span>
-        
-        <span id="s-10-13-31">4.</span>
-        
-        <span id="s-10-13-32">H. «Zur Na­tur­wis­sen­schaft» von allen mög­li­chen Wir­kungs­ar­ten gibt: Zu­fäl­lig Me­cha­nisch Phy­sisch Che­misch Or­ga­nisch Psy­chisch Ethisch Re­li­gi­ös Ge­ni­al.</span>
+        <span id="s-10-13-30">H. «Zur Na­tur­wis­sen­schaft» von allen mög­li­chen Wir­kungs­ar­ten gibt: Zu­fäl­lig Me­cha­nisch Phy­sisch Che­misch Or­ga­nisch Psy­chisch Ethisch Re­li­gi­ös Ge­ni­al.</span>
         
       </p>
     </section>
     <section id="p-10-14">
       <p>
-        <span id="s-10-14-1">Nach die­ser auf­stei­gen­den Reihe hätte man sich bei An­ord­nung der Ur­phä­no­me­ne zu rich­ten.\*</span>
+        <span id="s-10-14-1">Nach die­ser auf­stei­gen­den Reihe hätte man sich bei An­ord­nung der Ur­phä­no­me­ne zu rich­ten.*</span>
         
       </p>
     </section>
@@ -710,7 +681,7 @@
         
         <span id="s-10-15-10">Nun kommt unser Er­klä­rungs­be­dürf­nis aber ge­ra­de daher, dass das, als was wir ein Ge­ge­be­nes an­se­hen wol­len, durch was wir es er­klä­ren wol­len, sich in den Ho­ri­zont des uns ge­dank­lich Ge­ge­be­nen ein­drängt.</span>
         
-        <span id="s-10-15-11">Weit ent­fernt, dass das er­klä­ren­de Wesen eines Din­ges uns un­be­kannt wäre, ist es viel­mehr selbst das, was durch sein Auf­tre­ten im Geis­te die Er­klä­rung not­wen­dig macht.</span>
+        <span id="s-10-15-11">Weit ent­fernt, dass das er­klä­ren­de <i>Wesen</i> eines Din­ges uns un­be­kannt wäre, ist es viel­mehr selbst das, was durch sein Auf­tre­ten im Geis­te die Er­klä­rung not­wen­dig macht.</span>
         
         <span id="s-10-15-12">Was er­klärt wer­den soll und durch was die­ses er­klärt wer­den soll, lie­gen vor.</span>
         
@@ -762,15 +733,13 @@
         
         <span id="s-10-16-8">Die Hy­po­the­se kann nur sol­ches an­neh­men, das ich zwar nicht wahr­neh­me, aber so­fort wahr­neh­men würde, wenn ich die äu­ße­ren Hin­der­nis­se weg­räum­te.</span>
         
-        <span id="s-10-16-9">Die Hy­po­the­se kann zwar nicht Wahr­ge­nom­me­nes, sie muss aber Wahr­nehm­ba­res vor­aus­set­zen.</span>
+        <span id="s-10-16-9"><i>Die Hy­po­the­se kann zwar nicht Wahr­ge­nom­me­nes, sie muss aber Wahr­nehm­ba­res vor­aus­set­zen</i>. So ist jede Hy­po­the­se in dem Fall, dass ihr In­halt durch eine künf­ti­ge Er­fah­rung di­rekt be­stä­tigt wer­den kann.</span>
         
-        <span id="s-10-16-10">So ist jede Hy­po­the­se in dem Fall, dass ihr In­halt durch eine künf­ti­ge Er­fah­rung di­rekt be­stä­tigt wer­den kann.</span>
+        <span id="s-10-16-10"><i>Nur</i> Hy­po­the­sen, die auf­hö­ren <i>kön­nen</i> es zu sein, haben eine Be­rech­ti­gung.</span>
         
-        <span id="s-10-16-11">Nur Hy­po­the­sen, die auf­hö­ren kön­nen es zu sein, haben eine Be­rech­ti­gung.</span>
+        <span id="s-10-16-11">Hy­po­the­sen über <i>zen­tra­le Wis­sen­schafts­prin­zi­pi­en</i> haben kei­nen Wert.</span>
         
-        <span id="s-10-16-12">Hy­po­the­sen über zen­tra­le Wis­sen­schafts­prin­zi­pi­en haben kei­nen Wert.</span>
-        
-        <span id="s-10-16-13">Was nicht durch ein po­si­tiv ge­ge­be­nes Prin­zip, das uns be­kannt ist, er­klärt wird, das ist über­haupt einer Er­klä­rung nicht fähig und auch nicht be­dürf­tig.</span>
+        <span id="s-10-16-12">Was nicht durch ein po­si­tiv ge­ge­be­nes Prin­zip, das uns be­kannt ist, er­klärt wird, das ist über­haupt einer Er­klä­rung nicht fähig und auch nicht be­dürf­tig.</span>
         
       </p>
     </section>
@@ -795,7 +764,7 @@
         
         <span id="s-10-18-4">In bei­den Fäl­len er­scheint uns das vor­lie­gen­de Ob­jekt als Er­geb­nis von in Be­grif­fen aus­drück­ba­ren Ge­set­zen.</span>
         
-        <span id="s-10-18-5">Der Un­ter­schied liegt nur darin, dass wir den Kris­tall als das un­mit­tel­ba­re Pro­dukt der ihn be­stim­men­den Na­tur­ge­setz­lich­kei­ten an­se­hen müs­sen, wäh­rend beim Wa­gen­rad der Mensch in die Mitte zwi­schen Be­griff und Ge­gen­stand tritt.</span>
+        <span id="s-10-18-5">Der Un­ter­schied liegt nur darin, dass wir den Kris­tall als das <i>un­mit­tel­ba­re</i> Pro­dukt der ihn be­stim­men­den Na­tur­ge­setz­lich­kei­ten an­se­hen müs­sen, wäh­rend beim Wa­gen­rad der Mensch in die Mitte zwi­schen Be­griff und Ge­gen­stand tritt.</span>
         
         <span id="s-10-18-6">Was wir im Na­tur­pro­dukt als dem Wirk­li­chen zu­grun­de lie­gend den­ken, das füh­ren wir in un­se­rem Han­deln in die Wirk­lich­keit ein.</span>
         
@@ -817,7 +786,7 @@
         
         <span id="s-10-18-15">Das Na­tur­pro­dukt hat kei­nes­wegs in sich selbst die ide­el­le Ge­setz­mä­ßig­keit, von der es be­herrscht er­scheint.</span>
         
-        <span id="s-10-18-16">Es be­darf bei ihm des Ge­gen­über­tre­tens eines hö­he­ren, des mensch­li­chen Den­kens; dann er­scheint die­sem das, wovon jenes be­herrscht wird.</span>
+        <span id="s-10-18-16">Es be­darf bei ihm des Ge­gen­über­tre­tens eines hö­he­ren, des mensch­li­chen Den­kens; dann er­scheint <i>die­sem</i> das, wovon jenes be­herrscht wird.</span>
         
         <span id="s-10-18-17">Beim mensch­li­chen Tun ist das an­ders.</span>
         
@@ -831,41 +800,35 @@
         
         <span id="s-10-18-22">Wenn wir einen Ein­druck in dem Boden sehen, so su­chen wir nach dem Ge­gen­stand, der ihn ge­macht hat.</span>
         
-        <span id="s-10-18-23">Das führt zu dem Be­griff einer sol­chen Wir­kung, wo die Ur­sa­che einer Er­schei­nung wie­der in Form einer äu­ße­ren Wahr­neh­mung er­scheint, d. i. aber zum Be­griff der Kraft.</span>
+        <span id="s-10-18-23">Das führt zu dem Be­griff einer sol­chen Wir­kung, wo die Ur­sa­che einer Er­schei­nung wie­der in Form einer äu­ße­ren Wahr­neh­mung er­scheint, d. i. aber zum Be­griff der <i>Kraft</i>. Die Kraft kann uns nur da ent­ge­gen­tre­ten, wo die Idee zu­erst an einem Wahr­neh­mungs­ob­jekt er­scheint und erst unter die­ser Form auf ein an­de­res Ob­jekt wirkt.</span>
         
-        <span id="s-10-18-24">Die Kraft kann uns nur da ent­ge­gen­tre­ten, wo die Idee zu­erst an einem Wahr­neh­mungs­ob­jekt er­scheint und erst unter die­ser Form auf ein an­de­res Ob­jekt wirkt.</span>
+        <span id="s-10-18-24">Der Ge­gen­satz hier­zu ist, wenn diese Ver­mitt­lung weg­fällt, wenn die Idee un­mit­tel­bar an die Sin­nen­welt her­an­tritt.</span>
         
-        <span id="s-10-18-25">Der Ge­gen­satz hier­zu ist, wenn diese Ver­mitt­lung weg­fällt, wenn die Idee un­mit­tel­bar an die Sin­nen­welt her­an­tritt.</span>
+        <span id="s-10-18-25">Da er­scheint die Idee selbst ver­ur­sa­chend.</span>
         
-        <span id="s-10-18-26">Da er­scheint die Idee selbst ver­ur­sa­chend.</span>
+        <span id="s-10-18-26">Und hier ist es, wo wir vom <i>Wil­len</i> spre­chen.</span>
         
-        <span id="s-10-18-27">Und hier ist es, wo wir vom Wil­len spre­chen.</span>
+        <span id="s-10-18-27"><i>Wille ist also die Idee selbst als Kraft auf­ge­fasst</i>. Von einem selb­stän­di­gen Wil­len zu spre­chen ist völ­lig un­statt­haft.</span>
         
-        <span id="s-10-18-28">Wille ist also die Idee selbst als Kraft auf­ge­fasst.</span>
+        <span id="s-10-18-28">Wenn der Mensch ir­gend­et­was voll­bringt, so kann man nicht sagen, es komme zu der Vor­stel­lung noch der Wille hinzu.</span>
         
-        <span id="s-10-18-29">Von einem selb­stän­di­gen Wil­len zu spre­chen ist völ­lig un­statt­haft.</span>
+        <span id="s-10-18-29">Spricht man so, so hat man die Be­grif­fe nicht klar er­fasst, denn, was ist die mensch­li­che Per­sön­lich­keit, wenn man von der sie er­fül­len­den Ide­en­welt ab­sieht?</span>
         
-        <span id="s-10-18-30">Wenn der Mensch ir­gend­et­was voll­bringt, so kann man nicht sagen, es komme zu der Vor­stel­lung noch der Wille hinzu.</span>
+        <span id="s-10-18-30">Doch ein tä­ti­ges Da­sein.</span>
         
-        <span id="s-10-18-31">Spricht man so, so hat man die Be­grif­fe nicht klar er­fasst, denn, was ist die mensch­li­che Per­sön­lich­keit, wenn man von der sie er­fül­len­den Ide­en­welt ab­sieht?</span>
+        <span id="s-10-18-31">Wer sie an­ders fass­te: als totes, un­tä­ti­ges Na­tur­pro­dukt, setz­te sie ja dem Stein auf der Stra­ße gleich.</span>
         
-        <span id="s-10-18-32">Doch ein tä­ti­ges Da­sein.</span>
+        <span id="s-10-18-32">Die­ses tä­ti­ge Da­sein ist aber ein Abs­trak­tum, es ist nichts Wirk­li­ches.</span>
         
-        <span id="s-10-18-33">Wer sie an­ders fass­te: als totes, un­tä­ti­ges Na­tur­pro­dukt, setz­te sie ja dem Stein auf der Stra­ße gleich.</span>
+        <span id="s-10-18-33">Man kann es nicht fas­sen, es ist ohne In­halt.</span>
         
-        <span id="s-10-18-34">Die­ses tä­ti­ge Da­sein ist aber ein Abs­trak­tum, es ist nichts Wirk­li­ches.</span>
+        <span id="s-10-18-34">Will man es fas­sen, will man einen In­halt, dann er­hält man eben die im Tun be­grif­fe­ne Ide­en­welt.</span>
         
-        <span id="s-10-18-35">Man kann es nicht fas­sen, es ist ohne In­halt.</span>
+        <span id="s-10-18-35">E. v. Hart­mann macht die­ses Abs­trak­tum zu einem zwei­ten welt­kon­sti­tu­ie­ren­den Prin­zip neben der Idee.</span>
         
-        <span id="s-10-18-36">Will man es fas­sen, will man einen In­halt, dann er­hält man eben die im Tun be­grif­fe­ne Ide­en­welt.</span>
+        <span id="s-10-18-36">Es ist aber nichts an­de­res als die Idee selbst, nur in einer Form des Auf­tre­tens.</span>
         
-        <span id="s-10-18-37">E. v. Hart­mann macht die­ses Abs­trak­tum zu einem zwei­ten welt­kon­sti­tu­ie­ren­den Prin­zip neben der Idee.</span>
-        
-        <span id="s-10-18-38">Es ist aber nichts an­de­res als die Idee selbst, nur in einer Form des Auf­tre­tens.</span>
-        
-        <span id="s-10-18-39">Wille ohne Idee wäre nichts.</span>
-        
-        <span id="s-10-18-40">Das glei­che kann man nicht von der Idee sagen, denn die Tä­tig­keit ist ein Ele­ment von ihr, wäh­rend sie die sich selbst tra­gen­de We­sen­heit ist.\*</span>
+        <span id="s-10-18-37">Wille ohne Idee wäre <i>nichts</i>. Das glei­che kann man nicht von der Idee sagen, denn die Tä­tig­keit ist ein Ele­ment von ihr, wäh­rend sie die sich selbst tra­gen­de We­sen­heit ist.*</span>
         
       </p>
     </section>
@@ -879,7 +842,7 @@
         
         <span id="s-10-19-4">Wenn ich eine Wir­kung wahr­neh­me und dazu die Ur­sa­che suche, so ge­nü­gen diese zwei Wahr­neh­mun­gen kei­nes­wegs mei­nem Er­klä­rungs­be­dürf­nis.</span>
         
-        <span id="s-10-19-5">Ich muss zu den Ge­set­zen zu­rück­ge­hen, nach denen diese Ur­sa­che diese Wir­kung her­vor­bringt.</span>
+        <span id="s-10-19-5">Ich muss zu den Ge­set­zen zu­rück­ge­hen, nach denen <i>diese</i> Ur­sa­che <i>diese</i> Wir­kung her­vor­bringt.</span>
         
         <span id="s-10-19-6">Beim mensch­li­chen Han­deln ist das an­ders.</span>
         
@@ -891,13 +854,9 @@
         
         <span id="s-10-19-10">Das Han­deln eines Staats­man­nes be­grei­fen wir, wenn wir seine In­ten­tio­nen (Ideen) ken­nen; wir brau­chen nicht wei­ter über das, was in die Er­schei­nung tritt, hin­aus­zu­ge­hen.</span>
         
-        <span id="s-10-19-11">Da­durch also un­ter­schei­den sich Pro­zes­se der Natur von Hand­lun­gen des Men­schen, dass bei jenen das Ge­setz als der be­din­gen­de Hin­ter­grund des er­schei­nen­den Da­seins zu be­trach­ten ist, wäh­rend bei die­sen das Da­sein selbst Ge­setz ist und von nichts als von sich selbst be­dingt er­scheint.</span>
+        <span id="s-10-19-11"><i>Da­durch also un­ter­schei­den sich Pro­zes­se der Natur von Hand­lun­gen des Men­schen, dass bei jenen das Ge­setz als der be­din­gen­de Hin­ter­grund des er­schei­nen­den Da­seins zu be­trach­ten ist, wäh­rend bei die­sen das Da­sein selbst Ge­setz ist und von nichts als von sich selbst be­dingt er­scheint</i>. Da­durch legt sich jeder Na­tur­pro­zess in ein Be­din­gen­des und ein Be­ding­tes aus­ein­an­der, und das letz­te­re folgt mit <i>Not­wen­dig­keit</i> aus dem ers­ten, wäh­rend das mensch­li­che Han­deln nur sich selbst be­dingt Das aber ist das Wir­ken mit <i>Frei­heit</i>. Indem die In­ten­tio­nen der Natur, die hin­ter den Er­schei­nun­gen ste­hen und sie be­din­gen, in den Men­schen ein­zie­hen, wer­den sie selbst zur <i>Er­schei­nung</i>; aber sie sind jetzt gleich­sam rü­cken­frei.</span>
         
-        <span id="s-10-19-12">Da­durch legt sich jeder Na­tur­pro­zess in ein Be­din­gen­des und ein Be­ding­tes aus­ein­an­der, und das letz­te­re folgt mit Not­wen­dig­keit aus dem ers­ten, wäh­rend das mensch­li­che Han­deln nur sich selbst be­dingt Das aber ist das Wir­ken mit Frei­heit.</span>
-        
-        <span id="s-10-19-13">Indem die In­ten­tio­nen der Natur, die hin­ter den Er­schei­nun­gen ste­hen und sie be­din­gen, in den Men­schen ein­zie­hen, wer­den sie selbst zur Er­schei­nung; aber sie sind jetzt gleich­sam rü­cken­frei.</span>
-        
-        <span id="s-10-19-14">Wenn alle Na­tur­pro­zes­se nur Ma­ni­fes­ta­tio­nen der Idee sind, so ist das mensch­li­che Tun die agie­ren­de Idee selbst.</span>
+        <span id="s-10-19-12">Wenn alle Na­tur­pro­zes­se nur Ma­ni­fes­ta­tio­nen der Idee sind, so ist das mensch­li­che Tun die agie­ren­de Idee selbst.</span>
         
       </p>
     </section>
@@ -917,25 +876,21 @@
         
         <span id="s-10-20-7">Er hat die Welt durch­drun­gen; er tritt han­delnd auf, jene In­ten­tio­nen fort­zu­set­zen.</span>
         
-        <span id="s-10-20-8">Damit ist die hier vor­ge­tra­ge­ne Phi­lo­so­phie die wahre Frei­heits­phi­lo­so­phie.</span>
+        <span id="s-10-20-8">Damit ist die hier vor­ge­tra­ge­ne Phi­lo­so­phie die wahre <i>Frei­heits­phi­lo­so­phie</i>. Sie lässt für die mensch­li­chen Hand­lun­gen weder die Na­tur­not­wen­dig­keit gel­ten, noch den Ein­fluss eines au­ßer­welt­li­chen Schöp­fers oder Welt­len­kers.</span>
         
-        <span id="s-10-20-9">Sie lässt für die mensch­li­chen Hand­lun­gen weder die Na­tur­not­wen­dig­keit gel­ten, noch den Ein­fluss eines au­ßer­welt­li­chen Schöp­fers oder Welt­len­kers.</span>
+        <span id="s-10-20-9">Der Mensch wäre in dem einen wie in dem an­dern Fall <i>un­frei</i>. Wirk­te in ihm die Na­tur­not­wen­dig­keit wie in den an­de­ren Wesen, dann voll­führ­te er seine Taten aus Zwang, dann wäre auch bei ihm ein Zu­rück­ge­hen auf Be­din­gun­gen not­wen­dig, die dem er­schei­nen­den Da­sein zu­grun­de lie­gen und von Frei­heit keine Rede.</span>
         
-        <span id="s-10-20-10">Der Mensch wäre in dem einen wie in dem an­dern Fall un­frei.</span>
+        <span id="s-10-20-10">Es ist na­tür­lich nicht aus­ge­schlos­sen, dass es un­zäh­li­ge mensch­li­che Ver­rich­tun­gen gibt, die nur unter die­sen Ge­sichts­punkt fal­len; al­lein diese kom­men hier nicht in Be­tracht.</span>
         
-        <span id="s-10-20-11">Wirk­te in ihm die Na­tur­not­wen­dig­keit wie in den an­de­ren Wesen, dann voll­führ­te er seine Taten aus Zwang, dann wäre auch bei ihm ein Zu­rück­ge­hen auf Be­din­gun­gen not­wen­dig, die dem er­schei­nen­den Da­sein zu­grun­de lie­gen und von Frei­heit keine Rede.</span>
+        <span id="s-10-20-11">Der Mensch, in­so­fern er ein Na­tur­we­sen ist, ist auch nach den für das Na­tur­wir­ken gel­ten­den Ge­set­zen zu be­grei­fen.</span>
         
-        <span id="s-10-20-12">Es ist na­tür­lich nicht aus­ge­schlos­sen, dass es un­zäh­li­ge mensch­li­che Ver­rich­tun­gen gibt, die nur unter die­sen Ge­sichts­punkt fal­len; al­lein diese kom­men hier nicht in Be­tracht.</span>
+        <span id="s-10-20-12">Al­lein weder als er­ken­nen­des noch als wahr­haft ethi­sches Wesen ist sein Auf­tre­ten aus blo­ßen Na­tur­ge­set­zen ein­zu­se­hen.</span>
         
-        <span id="s-10-20-13">Der Mensch, in­so­fern er ein Na­tur­we­sen ist, ist auch nach den für das Na­tur­wir­ken gel­ten­den Ge­set­zen zu be­grei­fen.</span>
+        <span id="s-10-20-13">Da tritt er eben aus der Sphä­re der Na­tur­wirk­lich­kei­ten her­aus.</span>
         
-        <span id="s-10-20-14">Al­lein weder als er­ken­nen­des noch als wahr­haft ethi­sches Wesen ist sein Auf­tre­ten aus blo­ßen Na­tur­ge­set­zen ein­zu­se­hen.</span>
+        <span id="s-10-20-14">Und für diese höchs­te Po­tenz sei­nes Da­seins, die mehr Ideal als Wirk­lich­keit ist, gilt das hier Fest­ge­stell­te.</span>
         
-        <span id="s-10-20-15">Da tritt er eben aus der Sphä­re der Na­tur­wirk­lich­kei­ten her­aus.</span>
-        
-        <span id="s-10-20-16">Und für diese höchs­te Po­tenz sei­nes Da­seins, die mehr Ideal als Wirk­lich­keit ist, gilt das hier Fest­ge­stell­te.</span>
-        
-        <span id="s-10-20-17">Des Men­schen Le­bens­weg be­steht darin, dass er sich vom Na­tur­we­sen zu einem sol­chen ent­wi­ckelt, wie wir es hier ken­nen­ge­lernt haben; er soll sich frei ma­chen von allen Na­tur­ge­set­zen und sein ei­ge­ner Ge­setz­ge­ber wer­den.\*</span>
+        <span id="s-10-20-15">Des Men­schen Le­bens­weg be­steht darin, dass er sich vom Na­tur­we­sen zu einem sol­chen ent­wi­ckelt, wie wir es hier ken­nen­ge­lernt haben; er soll sich frei ma­chen von allen Na­tur­ge­set­zen und sein ei­ge­ner Ge­setz­ge­ber wer­den.*</span>
         
       </p>
     </section>
@@ -945,11 +900,9 @@
         
         <span id="s-10-21-2">Auch da, wo ein sol­cher an­ge­nom­men wird, kann von wah­rer Frei­heit nicht die Rede sein.</span>
         
-        <span id="s-10-21-3">Da be­stimmt er die Rich­tung des mensch­li­chen Han­delns und der Mensch hat aus­zu­füh­ren, was ihm jener zu tun vor­ge­setzt.</span>
+        <span id="s-10-21-3">Da be­stimmt <i>er</i> die Rich­tung des mensch­li­chen Han­delns und der Mensch hat aus­zu­füh­ren, was ihm jener zu tun vor­ge­setzt.</span>
         
-        <span id="s-10-21-4">Er emp­fin­det den An­trieb zu sei­nen Hand­lun­gen nicht als Ideal, das er sich selbst vor­setzt, son­dern als Gebot jenes Len­kers; wie­der ist sein Han­deln nicht un­be­dingt, son­dern be­dingt.</span>
-        
-        <span id="s-10-21-5">Der Mensch fühl­te sich dann eben nicht rü­cken­frei, son­dern ab­hän­gig, nur Mit­tel für die In­ten­tio­nen einer hö­he­ren Macht.</span>
+        <span id="s-10-21-4">Er emp­fin­det den An­trieb zu sei­nen Hand­lun­gen nicht als Ideal, das er sich selbst vor­setzt, son­dern als <i>Gebot</i> jenes Len­kers; wie­der ist sein Han­deln nicht <i>un­be­dingt</i>, son­dern <i>be­dingt</i>. Der Mensch fühl­te sich dann eben nicht rü­cken­frei, son­dern ab­hän­gig, nur Mit­tel für die In­ten­tio­nen einer hö­he­ren Macht.</span>
         
       </p>
     </section>
@@ -957,61 +910,51 @@
       <p>
         <span id="s-10-22-1">Wir haben ge­se­hen, dass der Dog­ma­tis­mus darin be­steht, dass der Grund, warum ir­gend­et­was wahr ist, in einem un­se­rem Be­wusst­sein Jen­sei­ti­gen, Un­zu­gäng­li­chen (Trans­sub­jek­ti­ven) ge­sucht wird, im Ge­gen­satz zu un­se­rer An­sicht, die ein Ur­teil nur des­halb wahr sein lässt, weil der Grund dazu in den im Be­wusst­sein lie­gen­den, in das Ur­teil ein­flie­ßen­den Be­grif­fen liegt.</span>
         
-        <span id="s-10-22-2">Wer sich einen Wel­t­en­grund außer un­se­rer Ide­en­welt denkt, der denkt sich, dass der idea­le Grund, warum von uns etwas als wahr er­kannt wird, ein an­de­rer ist, als warum es ob­jek­tiv wahr ist.</span>
+        <span id="s-10-22-2">Wer sich einen Wel­t­en­grund außer un­se­rer Ide­en­welt denkt, der denkt sich, dass der idea­le Grund, warum von uns etwas als <i>wahr er­kannt</i> wird, ein an­de­rer ist, als warum es ob­jek­tiv wahr <i>ist</i>. So ist die Wahr­heit als Dogma auf­ge­fasst.</span>
         
-        <span id="s-10-22-3">So ist die Wahr­heit als Dogma auf­ge­fasst.</span>
+        <span id="s-10-22-3">Und auf dem Ge­biet der Ethik ist das <i>Gebot</i> das, was in der Wis­sen­schaft das <i>Dogma</i> ist.</span>
         
-        <span id="s-10-22-4">Und auf dem Ge­biet der Ethik ist das Gebot das, was in der Wis­sen­schaft das Dogma ist.</span>
+        <span id="s-10-22-4">Der Mensch han­delt, wenn er die An­trie­be zu sei­nem Han­deln in Ge­bo­ten sucht, nach Ge­set­zen, deren Be­grün­dung nicht von ihm ab­hängt; er denkt sich eine Norm, die von außen sei­nem Han­deln vor­ge­schrie­ben ist.</span>
         
-        <span id="s-10-22-5">Der Mensch han­delt, wenn er die An­trie­be zu sei­nem Han­deln in Ge­bo­ten sucht, nach Ge­set­zen, deren Be­grün­dung nicht von ihm ab­hängt; er denkt sich eine Norm, die von außen sei­nem Han­deln vor­ge­schrie­ben ist.</span>
+        <span id="s-10-22-5">Er han­delt aus <i>Pflicht</i>. Von Pflicht zu reden, hat nur bei die­ser Auf­fas­sung Sinn.</span>
         
-        <span id="s-10-22-6">Er han­delt aus Pflicht.</span>
+        <span id="s-10-22-6">Wir müs­sen den An­trieb von außen emp­fin­den und die <i>Not­wen­dig­keit</i> an­er­ken­nen, ihm zu fol­gen, dann han­deln wir aus <i>Pflicht</i>. Un­se­re Er­kennt­nis­theo­rie kann ein sol­ches Han­deln, da wo der Mensch in sei­ner sitt­li­chen Voll­endung auf­tritt, nicht gel­ten las­sen.</span>
         
-        <span id="s-10-22-7">Von Pflicht zu reden, hat nur bei die­ser Auf­fas­sung Sinn.</span>
+        <span id="s-10-22-7">Wir wis­sen, dass die Ide­en­welt die un­end­li­che Voll­kom­men­heit selbst ist; wir wis­sen, dass mit ihr die An­trie­be un­se­res Han­delns <i>in</i> uns lie­gen; und wir müs­sen dem­zu­fol­ge nur ein sol­ches Han­deln als ethisch gel­ten las­sen, bei dem die Tat nur aus der in uns lie­gen­den Idee der­sel­ben fließt.</span>
         
-        <span id="s-10-22-8">Wir müs­sen den An­trieb von außen emp­fin­den und die Not­wen­dig­keit an­er­ken­nen, ihm zu fol­gen, dann han­deln wir aus Pflicht.</span>
+        <span id="s-10-22-8">Der Mensch voll­bringt von die­sem Ge­sichts­punkt aus nur des­halb eine Hand­lung, weil deren Wirk­lich­keit für ihn Be­dürf­nis ist.</span>
         
-        <span id="s-10-22-9">Un­se­re Er­kennt­nis­theo­rie kann ein sol­ches Han­deln, da wo der Mensch in sei­ner sitt­li­chen Voll­endung auf­tritt, nicht gel­ten las­sen.</span>
+        <span id="s-10-22-9">Er han­delt, weil ein in­ne­rer (ei­ge­ner) Drang, nicht eine äu­ße­re Macht, ihn treibt.</span>
         
-        <span id="s-10-22-10">Wir wis­sen, dass die Ide­en­welt die un­end­li­che Voll­kom­men­heit selbst ist; wir wis­sen, dass mit ihr die An­trie­be un­se­res Han­delns in uns lie­gen; und wir müs­sen dem­zu­fol­ge nur ein sol­ches Han­deln als ethisch gel­ten las­sen, bei dem die Tat nur aus der in uns lie­gen­den Idee der­sel­ben fließt.</span>
+        <span id="s-10-22-10">Das Ob­jekt sei­nes Han­delns, so­bald er sich einen Be­griff davon macht, er­füllt ihn so, dass er es zu ver­wirk­li­chen strebt.</span>
         
-        <span id="s-10-22-11">Der Mensch voll­bringt von die­sem Ge­sichts­punkt aus nur des­halb eine Hand­lung, weil deren Wirk­lich­keit für ihn Be­dürf­nis ist.</span>
+        <span id="s-10-22-11">In dem Be­dürf­nis nach Ver­wirk­li­chung einer Idee, in dem Drang nach der Aus­ge­stal­tung einer Ab­sicht soll auch der ein­zi­ge An­trieb un­se­res Han­delns sein.</span>
         
-        <span id="s-10-22-12">Er han­delt, weil ein in­ne­rer (ei­ge­ner) Drang, nicht eine äu­ße­re Macht, ihn treibt.</span>
+        <span id="s-10-22-12">In der Idee soll sich alles aus­le­ben, was uns zum Tun drängt.</span>
         
-        <span id="s-10-22-13">Das Ob­jekt sei­nes Han­delns, so­bald er sich einen Be­griff davon macht, er­füllt ihn so, dass er es zu ver­wirk­li­chen strebt.</span>
+        <span id="s-10-22-13">Wir han­deln dann nicht aus Pflicht, wir han­deln nicht einem Trie­be fol­gend, wir han­deln aus <i>Liebe zu dem Ob­jekt</i>, auf das un­se­re Hand­lung sich er­stre­cken soll.</span>
         
-        <span id="s-10-22-14">In dem Be­dürf­nis nach Ver­wirk­li­chung einer Idee, in dem Drang nach der Aus­ge­stal­tung einer Ab­sicht soll auch der ein­zi­ge An­trieb un­se­res Han­delns sein.</span>
+        <span id="s-10-22-14">Das Ob­jekt, indem wir es vor­stel­len, ruft in uns den Drang nach einer ihm an­ge­mes­se­nen Hand­lung her­vor.</span>
         
-        <span id="s-10-22-15">In der Idee soll sich alles aus­le­ben, was uns zum Tun drängt.</span>
+        <span id="s-10-22-15">Ein sol­ches Han­deln ist al­lein ein frei­es.</span>
         
-        <span id="s-10-22-16">Wir han­deln dann nicht aus Pflicht, wir han­deln nicht einem Trie­be fol­gend, wir han­deln aus Liebe zu dem Ob­jekt, auf das un­se­re Hand­lung sich er­stre­cken soll.</span>
+        <span id="s-10-22-16">Denn müss­te zu dem In­ter­es­se, das wir an dem Ob­jekt neh­men, noch ein zwei­ter an­der­wei­ti­ger An­lass kom­men, dann woll­ten wir nicht die­ses Ob­jekt um sei­ner selbst wil­len, wir woll­ten ein <i>an­de­res</i> und voll­bräch­ten <i>die­ses</i>, was wir <i>nicht</i> wol­len; wir voll­führ­ten eine Hand­lung <i>gegen</i> un­se­ren Wil­len.</span>
         
-        <span id="s-10-22-17">Das Ob­jekt, indem wir es vor­stel­len, ruft in uns den Drang nach einer ihm an­ge­mes­se­nen Hand­lung her­vor.</span>
+        <span id="s-10-22-17">Das wäre etwa beim Han­deln aus <i>Ego­is­mus</i> der Fall.</span>
         
-        <span id="s-10-22-18">Ein sol­ches Han­deln ist al­lein ein frei­es.</span>
+        <span id="s-10-22-18">Da neh­men wir an der Hand­lung selbst kein In­ter­es­se; sie ist uns nicht Be­dürf­nis, wohl aber der Nut­zen, den sie uns bringt.</span>
         
-        <span id="s-10-22-19">Denn müss­te zu dem In­ter­es­se, das wir an dem Ob­jekt neh­men, noch ein zwei­ter an­der­wei­ti­ger An­lass kom­men, dann woll­ten wir nicht die­ses Ob­jekt um sei­ner selbst wil­len, wir woll­ten ein an­de­res und voll­bräch­ten die­ses, was wir nicht wol­len; wir voll­führ­ten eine Hand­lung gegen un­se­ren Wil­len.</span>
+        <span id="s-10-22-19">Dann aber emp­fin­den wir es auch zu­gleich als Zwang, dass wir jene Hand­lung, nur die­ses Zwe­ckes wil­len, voll­brin­gen müs­sen.</span>
         
-        <span id="s-10-22-20">Das wäre etwa beim Han­deln aus Ego­is­mus der Fall.</span>
+        <span id="s-10-22-20">Sie selbst ist uns nicht Be­dürf­nis; denn wir un­ter­lie­ßen sie, wenn sie den Nut­zen nicht im Ge­fol­ge hätte.</span>
         
-        <span id="s-10-22-21">Da neh­men wir an der Hand­lung selbst kein In­ter­es­se; sie ist uns nicht Be­dürf­nis, wohl aber der Nut­zen, den sie uns bringt.</span>
+        <span id="s-10-22-21">Eine Hand­lung aber, die wir nicht um ihrer selbst wil­len voll­brin­gen, ist eine un­freie.</span>
         
-        <span id="s-10-22-22">Dann aber emp­fin­den wir es auch zu­gleich als Zwang, dass wir jene Hand­lung, nur die­ses Zwe­ckes wil­len, voll­brin­gen müs­sen.</span>
+        <span id="s-10-22-22"><i>Der Ego­is­mus han­delt un­frei</i>. Un­frei han­delt über­haupt jeder Mensch, der eine Hand­lung aus einem An­lass voll­bringt, der nicht aus dem ob­jek­ti­ven In­halt der Hand­lung selbst folgt.</span>
         
-        <span id="s-10-22-23">Sie selbst ist uns nicht Be­dürf­nis; denn wir un­ter­lie­ßen sie, wenn sie den Nut­zen nicht im Ge­fol­ge hätte.</span>
+        <span id="s-10-22-23">Eine Hand­lung um ihrer selbst wil­len aus­füh­ren, heißt aus <i>Liebe</i> han­deln.</span>
         
-        <span id="s-10-22-24">Eine Hand­lung aber, die wir nicht um ihrer selbst wil­len voll­brin­gen, ist eine un­freie.</span>
-        
-        <span id="s-10-22-25">Der Ego­is­mus han­delt un­frei.</span>
-        
-        <span id="s-10-22-26">Un­frei han­delt über­haupt jeder Mensch, der eine Hand­lung aus einem An­lass voll­bringt, der nicht aus dem ob­jek­ti­ven In­halt der Hand­lung selbst folgt.</span>
-        
-        <span id="s-10-22-27">Eine Hand­lung um ihrer selbst wil­len aus­füh­ren, heißt aus Liebe han­deln.</span>
-        
-        <span id="s-10-22-28">Nur der­je­ni­ge, den die Liebe zum Tun, die Hin­ga­be an die Ob­jek­ti­vi­tät lei­tet, han­delt wahr­haft frei.</span>
-        
-        <span id="s-10-22-29">Wer die­ser selbst­lo­sen Hin­ga­be nicht fähig ist, wird seine Tä­tig­keit nie als eine freie an­se­hen kön­nen.</span>
+        <span id="s-10-22-24"><i>Nur der­je­ni­ge, den die Liebe zum Tun, die Hin­ga­be an die Ob­jek­ti­vi­tät lei­tet, han­delt wahr­haft frei</i>. Wer die­ser selbst­lo­sen Hin­ga­be nicht fähig ist, wird seine Tä­tig­keit nie als eine <i>freie</i> an­se­hen kön­nen.</span>
         
       </p>
     </section>
@@ -1041,15 +984,13 @@
         
         <span id="s-10-23-12">Nein, nicht sol­che vage, all­ge­mei­ne ethi­sche Nor­men, son­dern die in­di­vi­du­ells­ten Idea­le sol­len unser Han­deln lei­ten.</span>
         
-        <span id="s-10-23-13">Nicht alles ist für alle gleich wür­dig zu voll­brin­gen, son­dern dies für den, für jenen das, je nach­dem einer den Beruf zu einer Sache fühlt.</span>
+        <span id="s-10-23-13">Nicht alles ist für alle gleich wür­dig zu voll­brin­gen, son­dern dies für <i>den</i>, für jenen das, je nach­dem einer den Beruf zu einer Sache fühlt.</span>
         
         <span id="s-10-23-14">J. Krey­en­bühl hat hier­über treff­li­che Worte in sei­nem Auf­satz «Die ethi­sche Frei­heit bei Kant» (Phi­lo­so­phi­sche Mo­nats­hef­te, Bd.</span>
         
         <span id="s-10-23-15">XVIII, 3.</span>
         
-        <span id="s-10-23-16">H. ) ge­sagt: «Soll ja die Frei­heit meine Frei­heit, die sitt­li­che Tat meine Tat, soll das Gute und Rech­te durch mich, durch die Hand­lung die­ser be­son­de­ren in­di­vi­du­el­len Per­sön­lich­keit ver­wirk­licht wer­den, so kann mir un­mög­lich ein all­ge­mei­nes Ge­setz ge­nü­gen, das von aller In­di­vi­dua­li­tät und Be­son­der­heit der beim Han­deln kon­kur­rie­ren­den Um­stän­de ab­sieht und mir be­fiehlt vor jeder Hand­lung zu prü­fen, ob das ihr zu­grun­de lie­gen­de Motiv der abs­trak­ten Norm der all­ge­mei­nen Men­schen­na­tur ent­spre­che, ob es so, wie es in mir lebt und wirkt, all­ge­mein gül­ti­ge Ma­xi­me wer­den könne.»...</span>
-        
-        <span id="s-10-23-17">«Eine der­ar­ti­ge An­pas­sung an das all­ge­mein Üb­li­che und Ge­bräuch­li­che würde jede in­di­vi­du­el­le Frei­heit, jeden Fort­schritt über das Or­di­nä­re und Haus­ba­cke­ne, jede be­deu­ten­de, her­vor­ra­gen­de und bahn­bre­chen­de ethi­sche Leis­tung un­mög­lich ma­chen.»</span>
+        <span id="s-10-23-16">H. ) ge­sagt: <q author="J. Krey­en­bühl" part="1">Soll ja die Frei­heit <i>meine</i> Frei­heit, die sitt­li­che Tat <i>meine</i> Tat, soll das Gute und Rech­te durch <i>mich</i>, durch die Hand­lung die­ser be­son­de­ren in­di­vi­du­el­len Per­sön­lich­keit ver­wirk­licht wer­den, so kann mir un­mög­lich ein all­ge­mei­nes Ge­setz ge­nü­gen, das von aller In­di­vi­dua­li­tät und Be­son­der­heit der beim Han­deln kon­kur­rie­ren­den Um­stän­de ab­sieht und mir be­fiehlt vor jeder Hand­lung zu prü­fen, ob das ihr zu­grun­de lie­gen­de Motiv der abs­trak­ten Norm der all­ge­mei­nen Men­schen­na­tur ent­spre­che, ob es so, wie es in mir lebt und wirkt, all­ge­mein gül­ti­ge Ma­xi­me wer­den könne.</q>... <q author="J. Krey­en­bühl" part="1">Eine der­ar­ti­ge An­pas­sung an das all­ge­mein Üb­li­che und Ge­bräuch­li­che würde jede in­di­vi­du­el­le Frei­heit, jeden Fort­schritt über das Or­di­nä­re und Haus­ba­cke­ne, jede be­deu­ten­de, her­vor­ra­gen­de und bahn­bre­chen­de ethi­sche Leis­tung un­mög­lich ma­chen.</q></span>
         
       </p>
     </section>
@@ -1061,51 +1002,47 @@
         
         <span id="s-10-24-3">Man stellt von die­sem Ge­sichts­punkt aus die Ethik der Na­tur­wis­sen­schaft und über­haupt der Wis­sen­schaft vom Sei­en­den ge­gen­über.</span>
         
-        <span id="s-10-24-4">Wäh­rend näm­lich die letz­te­re uns die Ge­set­ze von dem, was be­steht, was ist, ver­mit­teln soll, hätte uns die Ethik jene vom Sein­sol­len­den zu leh­ren.</span>
+        <span id="s-10-24-4">Wäh­rend näm­lich die letz­te­re uns die Ge­set­ze von dem, was be­steht, was <i>ist</i>, ver­mit­teln soll, hätte uns die Ethik jene vom Sein­sol­len­den zu leh­ren.</span>
         
-        <span id="s-10-24-5">Die Ethik soll ein Kodex von allen Idea­len des Men­schen sein, eine aus­führ­li­che Ant­wort auf die Frage: Was ist gut?</span>
+        <span id="s-10-24-5">Die Ethik soll ein Kodex von allen Idea­len des Men­schen sein, eine aus­führ­li­che Ant­wort auf die Frage: <i>Was ist gut</i>? Eine sol­che Wis­sen­schaft ist aber un­mög­lich.</span>
         
-        <span id="s-10-24-6">Eine sol­che Wis­sen­schaft ist aber un­mög­lich.</span>
+        <span id="s-10-24-6">Es kann keine all­ge­mei­ne Ant­wort auf diese Frage geben.</span>
         
-        <span id="s-10-24-7">Es kann keine all­ge­mei­ne Ant­wort auf diese Frage geben.</span>
+        <span id="s-10-24-7">Das ethi­sche Han­deln ist ja ein Pro­dukt des­sen, was sich im In­di­vi­du­um gel­tend macht; es ist immer im Ein­zel­fall ge­ge­ben, nie im All­ge­mei­nen.</span>
         
-        <span id="s-10-24-8">Das ethi­sche Han­deln ist ja ein Pro­dukt des­sen, was sich im In­di­vi­du­um gel­tend macht; es ist immer im Ein­zel­fall ge­ge­ben, nie im All­ge­mei­nen.</span>
+        <span id="s-10-24-8">Es gibt keine all­ge­mei­nen Ge­set­ze dar­über, was man tun soll und was nicht.</span>
         
-        <span id="s-10-24-9">Es gibt keine all­ge­mei­nen Ge­set­ze dar­über, was man tun soll und was nicht.</span>
+        <span id="s-10-24-9">Man sehe nur ja nicht die ein­zel­nen Rechts­sat­zun­gen ver­schie­de­ner Völ­ker als sol­che an.</span>
         
-        <span id="s-10-24-10">Man sehe nur ja nicht die ein­zel­nen Rechts­sat­zun­gen ver­schie­de­ner Völ­ker als sol­che an.</span>
+        <span id="s-10-24-10">Sie sind auch nichts wei­ter als der Aus­fluss in­di­vi­du­el­ler In­ten­tio­nen.</span>
         
-        <span id="s-10-24-11">Sie sind auch nichts wei­ter als der Aus­fluss in­di­vi­du­el­ler In­ten­tio­nen.</span>
+        <span id="s-10-24-11">Was diese oder jene Per­sön­lich­keit als sitt­li­ches Motiv emp­fun­den hat, hat sich einem gan­zen Volk mit­ge­teilt, ist zum _ <i>Recht die­ses Vol­kes</i>» ge­wor­den.</span>
         
-        <span id="s-10-24-12">Was diese oder jene Per­sön­lich­keit als sitt­li­ches Motiv emp­fun­den hat, hat sich einem gan­zen Volk mit­ge­teilt, ist zum _ Recht die­ses Vol­kes» ge­wor­den.</span>
+        <span id="s-10-24-12">Ein all­ge­mei­nes Na­tur­recht, das für alle Men­schen und alle Zei­ten gelte, ist ein Un­ding.</span>
         
-        <span id="s-10-24-13">Ein all­ge­mei­nes Na­tur­recht, das für alle Men­schen und alle Zei­ten gelte, ist ein Un­ding.</span>
+        <span id="s-10-24-13">Rechts­an­schau­un­gen und Sitt­lich­keits­be­grif­fe kom­men und gehen mit den Völ­kern, ja sogar mit den In­di­vi­du­en.</span>
         
-        <span id="s-10-24-14">Rechts­an­schau­un­gen und Sitt­lich­keits­be­grif­fe kom­men und gehen mit den Völ­kern, ja sogar mit den In­di­vi­du­en.</span>
+        <span id="s-10-24-14">Immer ist die In­di­vi­dua­li­tät maß­ge­bend.</span>
         
-        <span id="s-10-24-15">Immer ist die In­di­vi­dua­li­tät maß­ge­bend.</span>
+        <span id="s-10-24-15">Im obi­gen Sinne von einer Ethik zu spre­chen, ist also un­statt­haft.</span>
         
-        <span id="s-10-24-16">Im obi­gen Sinne von einer Ethik zu spre­chen, ist also un­statt­haft.</span>
+        <span id="s-10-24-16">Aber es gibt an­de­re Fra­gen, die in die­ser Wis­sen­schaft zu be­ant­wor­ten sind, Fra­gen, die z. T. in die­sen Er­ör­te­run­gen kurz be­leuch­tet wor­den sind.</span>
         
-        <span id="s-10-24-17">Aber es gibt an­de­re Fra­gen, die in die­ser Wis­sen­schaft zu be­ant­wor­ten sind, Fra­gen, die z. T. in die­sen Er­ör­te­run­gen kurz be­leuch­tet wor­den sind.</span>
+        <span id="s-10-24-17">Ich er­wäh­ne nur: die Fest­stel­lung des Un­ter­schie­des von mensch­li­chem Han­deln und Na­tur­wir­ken, die Frage nach dem Wesen des Wil­lens und der Frei­heit usw. Alle diese Ein­zel­auf­ga­ben las­sen sich unter die eine sub­su­mie­ren: In­wie­fern ist der Mensch ein ethi­sches Wesen?</span>
         
-        <span id="s-10-24-18">Ich er­wäh­ne nur: die Fest­stel­lung des Un­ter­schie­des von mensch­li­chem Han­deln und Na­tur­wir­ken, die Frage nach dem Wesen des Wil­lens und der Frei­heit usw. Alle diese Ein­zel­auf­ga­ben las­sen sich unter die eine sub­su­mie­ren: In­wie­fern ist der Mensch ein ethi­sches Wesen?</span>
+        <span id="s-10-24-18">Das be­zweckt aber nichts an­de­res als die Er­kennt­nis der sitt­li­chen Natur des Men­schen.</span>
         
-        <span id="s-10-24-19">Das be­zweckt aber nichts an­de­res als die Er­kennt­nis der sitt­li­chen Natur des Men­schen.</span>
+        <span id="s-10-24-19">Es wird nicht ge­fragt: Was soll der Mensch tun?</span>
         
-        <span id="s-10-24-20">Es wird nicht ge­fragt: Was soll der Mensch tun?</span>
+        <span id="s-10-24-20">son­dern: Was <i>ist</i> das, was er tut, sei­nem in­ne­ren Wesen nach?</span>
         
-        <span id="s-10-24-21">son­dern: Was ist das, was er tut, sei­nem in­ne­ren Wesen nach?</span>
+        <span id="s-10-24-21">Und damit fällt jene Schei­de­wand, wel­che alle Wis­sen­schaft in zwei Sphä­ren trennt: in eine Lehre vom Sei­en­den und eine vom Sein­sol­len­den.</span>
         
-        <span id="s-10-24-22">Und damit fällt jene Schei­de­wand, wel­che alle Wis­sen­schaft in zwei Sphä­ren trennt: in eine Lehre vom Sei­en­den und eine vom Sein­sol­len­den.</span>
+        <span id="s-10-24-22"><i>Die Ethik ist eben­so wie alle an­de­ren Wis­sen­schaf­ten eine Lehre vom Sei­en­den</i>. In die­ser Hin­sicht geht der ein­heit­li­che Zug durch alle Wis­sen­schaf­ten, dass sie von einem Ge­ge­be­nen aus­ge­hen und zu des­sen Be­din­gun­gen fort­schrei­ten.</span>
         
-        <span id="s-10-24-23">Die Ethik ist eben­so wie alle an­de­ren Wis­sen­schaf­ten eine Lehre vom Sei­en­den.</span>
+        <span id="s-10-24-23">Vom mensch­li­chen Han­deln selbst aber kann es keine Wis­sen­schaft geben; denn das ist un­be­dingt, pro­duk­tiv, schöp­fe­risch.</span>
         
-        <span id="s-10-24-24">In die­ser Hin­sicht geht der ein­heit­li­che Zug durch alle Wis­sen­schaf­ten, dass sie von einem Ge­ge­be­nen aus­ge­hen und zu des­sen Be­din­gun­gen fort­schrei­ten.</span>
-        
-        <span id="s-10-24-25">Vom mensch­li­chen Han­deln selbst aber kann es keine Wis­sen­schaft geben; denn das ist un­be­dingt, pro­duk­tiv, schöp­fe­risch.</span>
-        
-        <span id="s-10-24-26">Die Ju­ris­pru­denz ist keine Wis­sen­schaft, son­dern nur eine No­ti­zen­samm­lung jener Rechts­ge­wohn­hei­ten, die einer Volks­in­di­vi­dua­li­tät eigen sind._</span>
+        <span id="s-10-24-24">Die Ju­ris­pru­denz ist keine Wis­sen­schaft, son­dern nur eine <i>No­ti­zen­samm­lung</i> jener Rechts­ge­wohn­hei­ten, die einer Volks­in­di­vi­dua­li­tät eigen sind._</span>
         
       </p>
     </section>
@@ -1119,11 +1056,11 @@
         
         <span id="s-10-25-4">Durch diese dop­pel­te Zu­ge­hö­rig­keit zu einem Gan­zen scheint sein frei­es Han­deln be­ein­träch­tigt.</span>
         
-        <span id="s-10-25-5">Was er tut, scheint nicht al­lein ein Aus­fluss sei­nes ei­ge­nen in­di­vi­du­el­len Ichs zu sein; er er­scheint be­dingt durch die Ge­mein­sam­kei­ten, die er mit sei­nem Volke hat, seine In­di­vi­dua­li­tät scheint durch den Volks­cha­rak­ter ver­nich­tet.</span>
+        <span id="s-10-25-5">Was er tut, scheint nicht al­lein ein Aus­fluss sei­nes ei­ge­nen in­di­vi­du­el­len Ichs zu sein; er er­scheint <i>be­dingt</i> durch die Ge­mein­sam­kei­ten, die er mit sei­nem Volke hat, seine In­di­vi­dua­li­tät scheint durch den Volks­cha­rak­ter ver­nich­tet.</span>
         
         <span id="s-10-25-6">Bin ich denn dann noch frei, wenn man meine Hand­lun­gen nicht al­lein aus mei­ner, son­dern we­sent­lich auch aus der Natur mei­nes Vol­kes er­klär­lich fin­det?</span>
         
-        <span id="s-10-25-7">Hand­le ich da nicht des­halb so, weil mich die Natur ge­ra­de zum Glie­de die­ser Volks­ge­nos­sen­schaft ge­macht hat?</span>
+        <span id="s-10-25-7">Hand­le ich da nicht des­halb so, weil mich die Natur ge­ra­de zum Glie­de <i>die­ser</i> Volks­ge­nos­sen­schaft ge­macht hat?</span>
         
         <span id="s-10-25-8">Und mit der zwei­ten Zu­ge­hö­rig­keit ist es nicht an­ders.</span>
         
@@ -1131,11 +1068,11 @@
         
         <span id="s-10-25-10">Ich bin von der Kul­tur­epo­che ab­hän­gig, in der ich ge­bo­ren bin; ich bin ein Kind mei­ner Zeit.</span>
         
-        <span id="s-10-25-11">Wenn man aber den Men­schen zu­gleich als er­ken­nen­des und han­deln­des Wesen auf­fasst, dann löst sich die­ser Wi­der­spruch.</span>
+        <span id="s-10-25-11">Wenn man aber den Men­schen zu­gleich als er­ken­nen­des <i>und</i> han­deln­des Wesen auf­fasst, dann löst sich die­ser Wi­der­spruch.</span>
         
         <span id="s-10-25-12">Durch sein Er­kennt­nis­ver­mö­gen dringt der Mensch in den Cha­rak­ter sei­ner Volks­in­di­vi­dua­li­tät ein; es wird ihm klar, wohin seine Mit­bür­ger steu­ern.</span>
         
-        <span id="s-10-25-13">Wovon er so be­dingt er­scheint, das über­win­det er und nimmt es als voller­kann­te Vor­stel­lung in sich auf; es wird in ihm in­di­vi­du­ell und er­hält ganz den per­sön­li­chen Cha­rak­ter, den das Wir­ken aus Frei­heit hat.</span>
+        <span id="s-10-25-13">Wovon er so be­dingt er­scheint, das über­win­det er und nimmt es als voller­kann­te Vor­stel­lung in sich auf; es wird in ihm in­di­vi­du­ell und er­hält ganz den per­sön­li­chen Cha­rak­ter, den das Wir­ken aus <i>Frei­heit</i> hat.</span>
         
         <span id="s-10-25-14">Eben­so stellt sich die Sache mit der his­to­ri­schen Ent­wick­lung, in­ner­halb wel­cher der Mensch auf­tritt.</span>
         
@@ -1143,7 +1080,7 @@
         
         <span id="s-10-25-16">Der Mensch muss sich eben hin­auf­ar­bei­ten, damit er nicht ge­lei­tet werde, son­dern sich selbst leite.</span>
         
-        <span id="s-10-25-17">Er muss sich nicht blind­lings von sei­nem Volks­cha­rak­ter füh­ren las­sen, son­dern sich zur Er­kennt­nis des­sel­ben er­he­ben, damit er be­wusst im Sinne sei­nes Vol­kes hand­le.</span>
+        <span id="s-10-25-17">Er muss sich nicht blind­lings von sei­nem Volks­cha­rak­ter füh­ren las­sen, son­dern sich zur Er­kennt­nis des­sel­ben er­he­ben, damit er <i>be­wusst</i> im Sinne sei­nes Vol­kes hand­le.</span>
         
         <span id="s-10-25-18">Er darf sich nicht von dem Kul­tur­fort­schritt tra­gen las­sen, son­dern er muss die Ideen sei­ner Zeit zu sei­nen ei­ge­nen ma­chen.</span>
         
@@ -1155,11 +1092,11 @@
         
         <span id="s-10-25-22">In den Geis­tes­wis­sen­schaf­ten hat es der Mensch mit sei­nen ei­ge­nen Leis­tun­gen zu tun, mit den Schöp­fun­gen der Kul­tur, der Li­te­ra­tur, mit der Kunst usw. Geis­ti­ges wird durch den Geist er­fasst.</span>
         
-        <span id="s-10-25-23">Und der Zweck der Geis­tes­wis­sen­schaf­ten soll kein an­de­rer sein, als dass der Mensch er­ken­ne, wohin er von dem Zu­fall ge­stellt ist; er soll er­ken­nen, was schon ge­leis­tet ist, was ihm zu tun ob­liegt.</span>
+        <span id="s-10-25-23">Und der Zweck der Geis­tes­wis­sen­schaf­ten soll kein an­de­rer sein, als dass der Mensch er­ken­ne, wohin er von dem Zu­fall ge­stellt ist; er soll er­ken­nen, was schon ge­leis­tet ist, was <i>ihm</i> zu tun ob­liegt.</span>
         
         <span id="s-10-25-24">Er muss durch die Geis­tes­wis­sen­schaf­ten den rech­ten Punkt fin­den, um mit sei­ner Per­sön­lich­keit an dem Ge­trie­be der Welt teil­zu­neh­men.</span>
         
-        <span id="s-10-25-25">Der Mensch muss die Geis­tes­welt ken­nen und nach die­ser Er­kennt­nis sei­nen An­teil an ihr be­stim­men.\*</span>
+        <span id="s-10-25-25">Der Mensch muss die Geis­tes­welt ken­nen und nach die­ser Er­kennt­nis sei­nen An­teil an ihr be­stim­men.*</span>
         
       </p>
     </section>
@@ -1167,11 +1104,11 @@
       <p>
         <span id="s-10-26-1">Gus­tav Frey­tag sagt in der Vor­re­de zum ers­ten Band sei­ner «Bil­der aus der deut­schen Ver­gan­gen­heit» : «Alle gro­ßen Schöp­fun­gen der Volks­kraft, an­ge­stamm­te Re­li­gi­on, Sitte, Recht, Staats­bil­dung sind für uns nicht mehr die Re­sul­ta­te ein­zel­ner Män­ner, sie sind or­ga­ni­sche Schöp­fun­gen eines hohen Le­bens, wel­ches zu jeder Zeit nur durch das In­di­vi­du­um zur Er­schei­nung kommt, und zu jeder Zeit den geis­ti­gen Ge­halt der In­di­vi­du­en in sich zu einem mäch­ti­gen Gan­zen zu­sam­men­fasst...</span>
         
-        <span id="s-10-26-2">So darf man wohl, ohne etwas Mys­ti­sches zu sagen, von einer Volks­see­le spre­chen....</span>
+        <span id="s-10-26-2">So darf man wohl, ohne etwas Mys­ti­sches zu sagen, von einer <i>Volks­see­le</i> spre­chen....</span>
         
         <span id="s-10-26-3">Aber nicht mehr be­wusst, wie die Wil­lens­kraft eines Man­nes, ar­bei­tet das Leben eines Vol­kes.</span>
         
-        <span id="s-10-26-4">Das Freie, Ver­stän­di­ge in der Ge­schich­te ver­tritt der Mann, die Volks­kraft wirkt un­ab­läs­sig mit dem dunk­len "Zwang einer Ur­ge­walt." Hätte Frey­tag die­ses Leben des Vol­kes un­ter­sucht, so hätte er wohl ge­fun­den, dass es sich in das Wir­ken einer Summe von Ein­zel­in­di­vi­du­en auf­löst, die jenen dunk­len Zwang über­win­den, das Un­be­wuss­te in ihr Be­wusst­sein her­auf­he­ben, und er hätte ge­se­hen, wie das aus den in­di­vi­du­el­len Wil­lens­im­pul­sen, aus dem frei­en Han­deln des Men­schen her­vor­geht, was er als Volks­see­le, als dunk­len Zwang an­spricht.</span>
+        <span id="s-10-26-4">Das Freie, Ver­stän­di­ge in der Ge­schich­te ver­tritt der Mann, die Volks­kraft wirkt un­ab­läs­sig mit dem dunk­len "<i>Zwang</i> einer <i>Ur­ge­walt</i>." Hätte Frey­tag die­ses Leben des Vol­kes un­ter­sucht, so hätte er wohl ge­fun­den, dass es sich in das Wir­ken einer Summe von Ein­zel­in­di­vi­du­en auf­löst, die jenen dunk­len Zwang über­win­den, das Un­be­wuss­te in ihr Be­wusst­sein her­auf­he­ben, und er hätte ge­se­hen, wie <i>das</i> aus den in­di­vi­du­el­len Wil­lens­im­pul­sen, aus dem frei­en Han­deln des Men­schen her­vor­geht, was er als <i>Volks­see­le</i>, als <i>dunk­len Zwang</i> an­spricht.</span>
         
       </p>
     </section>
@@ -1205,7 +1142,7 @@
         
         <span id="s-10-28-6">Es kann vor­kom­men, dass die Mehr­heit des Vol­kes in Bah­nen ein­len­ken will, die gegen seine ei­ge­ne Natur gehen.</span>
         
-        <span id="s-10-28-7">Goe­the meint, in die­sem Fall habe sich der Staats­mann von der letz­te­ren und nicht von den zu­fäl­li­gen For­de­run­gen der Mehr­heit lei­ten zu las­sen; er habe die Volk­heit gegen das Volk in die­sem Fall zu ver­tre­ten («Sprü­che in Prosa», Natw.</span>
+        <span id="s-10-28-7">Goe­the meint, in die­sem Fall habe sich der Staats­mann von der letz­te­ren und nicht von den zu­fäl­li­gen For­de­run­gen der Mehr­heit lei­ten zu las­sen; er habe die <i>Volk­heit</i> gegen das Volk in die­sem Fall zu ver­tre­ten («Sprü­che in Prosa», Natw.</span>
         
         <span id="s-10-28-8">Schr., 4.</span>
         
@@ -1217,7 +1154,7 @@
     </section>
     <section id="p-10-29">
       <p>
-        <span id="s-10-29-1">Hier­an müs­sen wir noch ein Wort über die Me­tho­de der Ge­schich­te an­schlie­ßen.</span>
+        <span id="s-10-29-1">Hier­an müs­sen wir noch ein Wort über die <i>Me­tho­de der Ge­schich­te</i> an­schlie­ßen.</span>
         
         <span id="s-10-29-2">Die Ge­schich­te muss stets im Auge haben, dass die Ur­sa­chen zu den his­to­ri­schen Er­eig­nis­sen in den in­di­vi­du­el­len Ab­sich­ten, Plä­nen usw. der Men­schen zu su­chen sind.</span>
         
@@ -1227,7 +1164,7 @@
         
         <span id="s-10-29-5">Die Ge­schich­te ist durch­aus auf die Men­schen­na­tur zu grün­den.</span>
         
-        <span id="s-10-29-6">Ihr Wol­len, ihre Ten­den­zen sind zu er­grün­den.</span>
+        <span id="s-10-29-6"><i>Ihr</i> Wol­len, ihre Ten­den­zen sind zu er­grün­den.</span>
         
       </p>
     </section>
@@ -1237,7 +1174,7 @@
         
         <span id="s-10-30-2">Wenn er sagt: «Die ver­nünf­ti­ge Welt ist als ein gro­ßes un­sterb­li­ches In­di­vi­du­um zu be­trach­ten, das un­auf­halt­sam das Not­wen­di­ge be­wirkt und da­durch sich sogar über das Zu­fäl­li­ge zum Herrn macht», so ist das nur aus dem Ver­hält­nis, in dem wir den Men­schen mit der Ge­schichts­ent­wick­lung er­bli­cken, zu er­klä­ren.</span>
         
-        <span id="s-10-30-3">– Der Hin­weis auf ein po­si­ti­ves in­di­vi­du­el­les Sub­strat des Wir­kens liegt in den Wor­ten: «Un­be­ding­te Tä­tig­keit, von wel­cher Art sie sei, macht zu­letzt ban­k­erott» (Eben­da S. 463). Das­sel­be in: «Der ge­rings­te Mensch kann kom­plett sein, wenn er sich in­ner­halb der Gren­zen sei­ner Fä­hig­kei­ten und Fer­tig­kei­ten be­wegt.» (Eben­da S. 443) -Die Not­wen­dig­keit, dass der Mensch sich zu den lei­ten­den Ideen sei­nes Vol­kes und sei­ner Zeit er­he­be, ist aus­ge­spro­chen in (eben­da S. 487): «Frage sich doch jeder, mit wel­chem Organ er al­len­falls in seine Zeit ein­wir­ken kann und wird», und (eben­da S. 455): «Man muss wis­sen, wo man steht und wohin die an­dern wol­len.» Un­se­re An­sicht von der Pflicht ist wie­der­zu­er­ken­nen in (eben­da S. 460): «Pflicht, wo man liebt, was man sich selbst be­fiehlt.»</span>
+        <span id="s-10-30-3">– Der Hin­weis auf ein po­si­ti­ves in­di­vi­du­el­les Sub­strat des Wir­kens liegt in den Wor­ten: «Un­be­ding­te Tä­tig­keit, von wel­cher Art sie sei, macht zu­letzt ban­k­erott» (Eben­da S. 463). Das­sel­be in: «Der ge­rings­te Mensch kann kom­plett sein, wenn er sich in­ner­halb der Gren­zen sei­ner Fä­hig­kei­ten und Fer­tig­kei­ten be­wegt.» (Eben­da S. 443) -Die Not­wen­dig­keit, dass der Mensch sich zu den lei­ten­den Ideen sei­nes Vol­kes und sei­ner Zeit er­he­be, ist aus­ge­spro­chen in (eben­da S. 487): «Frage sich doch jeder, mit wel­chem Organ er al­len­falls in seine Zeit ein­wir­ken kann und wird», und (eben­da S. 455): «Man muss wis­sen, wo man steht und wohin die an­dern wol­len.» Un­se­re An­sicht von der Pflicht ist wie­der­zu­er­ken­nen in (eben­da S. 460): «<i>Pflicht</i>, wo man liebt, was man sich selbst be­fiehlt.»</span>
         
       </p>
     </section>
@@ -1267,7 +1204,7 @@
         
         <span id="s-10-31-12">Lust und Un­lust sind für den Men­schen nur da, wenn er selbst zu­erst den Ge­gen­stän­den das Ver­mö­gen bei­legt, diese Ge­füh­le in ihm wach­zu­ru­fen.</span>
         
-        <span id="s-10-31-13">Ein Schöp­fer, der von außen be­stimm­te, was uns Lust, was Un­lust ma­chen soll, führ­te uns am Gän­gel­ban­de.\*</span>
+        <span id="s-10-31-13">Ein Schöp­fer, der von außen be­stimm­te, was uns Lust, was Un­lust ma­chen soll, führ­te uns am Gän­gel­ban­de.*</span>
         
       </p>
     </section>
@@ -1277,7 +1214,7 @@
         
         <span id="s-10-32-2">Der Op­ti­mis­mus nimmt an, dass die Welt voll­kom­men sei, dass sie für den Men­schen der Quell höchs­ter Zu­frie­den­heit sein müsse.</span>
         
-        <span id="s-10-32-3">Soll­te das aber der Fall sein, so müss­te der Mensch erst in sich jene Be­dürf­nis­se ent­wi­ckeln, wo­durch ihm diese Zu­frie­den­heit wird.</span>
+        <span id="s-10-32-3">Soll­te das aber der Fall sein, so müss­te der Mensch erst <i>in sich</i> jene Be­dürf­nis­se ent­wi­ckeln, wo­durch ihm diese Zu­frie­den­heit wird.</span>
         
         <span id="s-10-32-4">Er müss­te den Ge­gen­stän­den das ab­ge­win­nen, wo­nach er ver­langt.</span>
         
@@ -1294,6 +1231,11 @@
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="09-ix-goethes-erkenntnistheorie.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="11-xi-verhaltnis-der-goetheschen-denkweise-zu-anderen-ansichten.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

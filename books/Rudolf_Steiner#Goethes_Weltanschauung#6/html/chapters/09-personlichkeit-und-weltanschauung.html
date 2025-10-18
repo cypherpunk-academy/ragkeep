@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PERSÖNLICHKEIT UND WELTANSCHAUUNG</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -14,7 +27,8 @@
     <h1 id="c-9-title" data-slug="personlichkeit-und-weltanschauung">PERSÖNLICHKEIT UND WELTANSCHAUUNG</h1>
     <section id="p-9-1">
       <p>
-        <span id="s-9-1-1">1| Die Au­ßen­sei­te der Natur lernt der Mensch durch die An­schau­ung ken­nen; ihre tie­fer lie­gen­den Trieb­kräf­te ent­hül­len sich in sei­nem ei­ge­nen In­nern als sub­jek­ti­ve Er­leb­nis­se.</span>
+        <a class="p-num" href="#p-9-1">1|</a>
+        <span id="s-9-1-1">Die Au­ßen­sei­te der Natur lernt der Mensch durch die An­schau­ung ken­nen; ihre tie­fer lie­gen­den Trieb­kräf­te ent­hül­len sich in sei­nem ei­ge­nen In­nern als sub­jek­ti­ve Er­leb­nis­se.</span>
         
         <span id="s-9-1-2">In der phi­lo­so­phi­schen Welt­be­trach­tung und im künst­le­ri­schen Emp­fin­den und Her­vor­brin­gen durch­drin­gen die sub­jek­ti­ven Er­leb­nis­se die ob­jek­ti­ven An­schau­un­gen.</span>
         
@@ -42,7 +56,7 @@
         
         <span id="s-9-1-14">Die­ses Er­leb­nis über­tra­ge ich auf die Er­schei­nung und sage: der eine Kör­per stößt den an­de­ren.</span>
         
-        <span id="s-9-1-15">«Der Mensch be­greift nie­mals, wie an­thro­po­mor­phisch er ist» (Goe­the, Sprü­che in Prosa.</span>
+        <span id="s-9-1-15"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Sprü­che in Prosa" part="1">Der Mensch be­greift nie­mals, wie an­thro­po­mor­phisch er ist</q> (Goe­the, Sprü­che in Prosa.</span>
         
         <span id="s-9-1-16">Kürsch­ner, Band 36,2, S. 353). Es gibt Men­schen, die aus dem Vor­han­den­sein die­ses sub­jek­ti­ven Be­stand­teils in jedem Ur­teil über die Au­ßen­welt die Fol­ge­rung zie­hen, dass der ob­jek­ti­ve We­sens­kern der Wirk­lich­keit dem Men­schen un­zu­gäng­lich sei.</span>
         
@@ -56,7 +70,7 @@
         
         <span id="s-9-1-21">Ihm ist klar, dass in dem Sub­jek­ti­ven das ei­gent­lichs­te und tiefs­te Ob­jek­ti­ve lebt.</span>
         
-        <span id="s-9-1-22">«Wenn die ge­sun­de Natur des Men­schen als ein Gan­zes wirkt, wenn er sich in der Welt als in einem gro­ßen, schö­nen wür­di­gen und wer­ten Gan­zen fühlt, wenn das har­mo­ni­sche Be­ha­gen ihm ein rei­nes, frei­es Ent­zü­cken ge­währt, dann würde das Welt­all, wenn es sich selbst emp­fin­den könn­te, als an sein Ziel ge­langt, auf­jauch­zen und den Gip­fel des ei­ge­nen Wer­dens und We­sens be­wun­dern.» (Kürsch­ner, Band 27, S. 42.) Die der blo­ßen An­schau­ung zu­gäng­li­che Wirk­lich­keit ist nur die eine Hälf­te der gan­zen Wirk­lich­keit; der In­halt des mensch­li­chen Geis­tes ist die an­de­re Hälf­te.</span>
+        <span id="s-9-1-22"><q author="Jo­hann Wolf­gang von Goe­the" part="1">Wenn die ge­sun­de Natur des Men­schen als ein Gan­zes wirkt, wenn er sich in der Welt als in einem gro­ßen, schö­nen wür­di­gen und wer­ten Gan­zen fühlt, wenn das har­mo­ni­sche Be­ha­gen ihm ein rei­nes, frei­es Ent­zü­cken ge­währt, <i>dann würde das Welt­all, wenn es sich selbst emp­fin­den könn­te, als an sein Ziel ge­langt, auf­jauch­zen und den Gip­fel des ei­ge­nen Wer­dens und We­sens be­wun­dern</i>.</q> (Kürsch­ner, Band 27, S. 42.) Die der blo­ßen An­schau­ung zu­gäng­li­che Wirk­lich­keit ist nur die eine Hälf­te der gan­zen Wirk­lich­keit; der In­halt des mensch­li­chen Geis­tes ist die an­de­re Hälf­te.</span>
         
         <span id="s-9-1-23">Träte nie ein Mensch der Welt ge­gen­über, so käme diese zwei­te Hälf­te nie zur le­ben­di­gen Er­schei­nung, zum vol­len Da­sein.</span>
         
@@ -74,7 +88,8 @@
     </section>
     <section id="p-9-2">
       <p>
-        <span id="s-9-2-1">2| Ver­schie­den ge­stal­ten sich die sub­jek­ti­ven Er­leb­nis­se bei ver­schie­de­nen Men­schen.</span>
+        <a class="p-num" href="#p-9-2">2|</a>
+        <span id="s-9-2-1">Ver­schie­den ge­stal­ten sich die sub­jek­ti­ven Er­leb­nis­se bei ver­schie­de­nen Men­schen.</span>
         
         <span id="s-9-2-2">Für die­je­ni­gen, wel­che nicht an die ob­jek­ti­ve Natur der In­nen­welt glau­ben, ist das ein Grund mehr, dem Men­schen das Ver­mö­gen ab­zu­spre­chen, in das Wesen der Dinge zu drin­gen.</span>
         
@@ -106,67 +121,64 @@
         
         <span id="s-9-2-16">Nicht dar­auf kommt es an, dass in dem einen Men­schen die Wahr­heit an­ders er­scheint als in dem an­de­ren, son­dern dar­auf, dass alle zum Vor­schein kom­men­den in­di­vi­du­el­len Ge­stal­ten einem ein­zi­gen Gan­zen an­ge­hö­ren, der ein­heit­li­chen ide­el­len Welt.</span>
         
-        <span id="s-9-2-17">Die Wahr­heit spricht im In­nern der ein­zel­nen Men­schen ver­schie­de­ne Spra­chen und Dia­lek­te; in jedem gro­ßen Men­schen spricht sie eine ei­ge­ne Spra­che, die nur die­ser einen Per­sön­lich­keit zu­kommt.</span>
+        <span id="s-9-2-17">Die Wahr­heit spricht im In­nern der ein­zel­nen Men­schen ver­schie­de­ne Spra­chen und Dia­lek­te; in jedem gro­ßen Men­schen spricht sie eine ei­ge­ne Spra­che, die nur die­ser <i>einen</i> Per­sön­lich­keit zu­kommt.</span>
         
         <span id="s-9-2-18">Aber es ist immer die eine Wahr­heit, die da spricht.</span>
         
-        <span id="s-9-2-19">«Kenne ich mein Ver­hält­nis zu mir selbst und zur Au­ßen­welt, so heiß’ ich’s Wahr­heit.</span>
-        
-        <span id="s-9-2-20">Und so kann jeder seine ei­ge­ne Wahr­heit haben, und es ist doch immer die­sel­bi­ge.» Dies ist Goe­thes Mei­nung.</span>
+        <span id="s-9-2-19"><q author="Jo­hann Wolf­gang von Goe­the" part="1">Kenne ich mein Ver­hält­nis zu mir selbst und zur Au­ßen­welt, so heiß’ ich’s Wahr­heit. Und so kann jeder seine ei­ge­ne Wahr­heit haben, und es ist doch immer die­sel­bi­ge.</q> Dies ist Goe­thes Mei­nung.</span>
         
         <span id="s-9-2-21">Nicht ein star­res, totes Be­griffs­sys­tem ist die Wahr­heit, das nur einer ein­zi­gen Ge­stalt fähig ist; sie ist ein le­ben­di­ges Meer, in wel­chem der Geist des Men­schen lebt, und das Wel­len der ver­schie­dens­ten Ge­stalt an sei­ner Ober­flä­che zei­gen kann.</span>
         
-        <span id="s-9-2-22">«Die Theo­rie an und für sich ist nichts nütze, als in­so­fern sie uns an den Zu­sam­men­hang der Er­schei­nun­gen glau­ben macht», sagt Goe­the.</span>
+        <span id="s-9-2-22"><q author="Jo­hann Wolf­gang von Goe­the" part="1">Die Theo­rie an und für sich ist nichts nütze, als in­so­fern sie uns an den Zu­sam­men­hang der Er­schei­nun­gen glau­ben macht</q>, sagt Goe­the.</span>
         
         <span id="s-9-2-23">Er schätzt keine Theo­rie, die ein für al­le­mal ab­ge­schlos­sen sein will, und in die­ser Ge­stalt eine ewige Wahr­heit dar­stel­len soll.</span>
         
         <span id="s-9-2-24">Er will le­ben­di­ge Be­grif­fe, durch die der Geist des ein­zel­nen nach sei­ner in­di­vi­du­el­len Ei­gen­art die An­schau­un­gen zu­sam­men­fasst.</span>
         
-        <span id="s-9-2-25">Die Wahr­heit er­ken­nen heißt ihm in der Wahr­heit leben.</span>
+        <span id="s-9-2-25">Die Wahr­heit <i>er­ken­nen</i> heißt ihm <i>in der Wahr­heit leben</i>. Und in der Wahr­heit leben ist nichts an­de­res, als bei der Be­trach­tung jedes ein­zel­nen Din­ges hin­zu­se­hen, wel­ches in­ne­re Er­leb­nis sich ein­stellt, wenn man die­sem Dinge ge­gen­über­steht.</span>
         
-        <span id="s-9-2-26">Und in der Wahr­heit leben ist nichts an­de­res, als bei der Be­trach­tung jedes ein­zel­nen Din­ges hin­zu­se­hen, wel­ches in­ne­re Er­leb­nis sich ein­stellt, wenn man die­sem Dinge ge­gen­über­steht.</span>
+        <span id="s-9-2-26">Eine sol­che An­sicht von dem mensch­li­chen Er­ken­nen kann nicht von Gren­zen des Wis­sens, nicht von einer Ein­ge­schränkt­heit des­sel­ben durch die Natur des Men­schen spre­chen.</span>
         
-        <span id="s-9-2-27">Eine sol­che An­sicht von dem mensch­li­chen Er­ken­nen kann nicht von Gren­zen des Wis­sens, nicht von einer Ein­ge­schränkt­heit des­sel­ben durch die Natur des Men­schen spre­chen.</span>
+        <span id="s-9-2-27">Denn die Fra­gen, die sich nach die­ser An­sicht das Er­ken­nen vor­legt, ent­sprin­gen nicht aus den Din­gen; sie sind dem Men­schen auch nicht von ir­gend einer an­de­ren au­ßer­halb sei­ner Per­sön­lich­keit ge­le­ge­nen Macht auf­er­legt.</span>
         
-        <span id="s-9-2-28">Denn die Fra­gen, die sich nach die­ser An­sicht das Er­ken­nen vor­legt, ent­sprin­gen nicht aus den Din­gen; sie sind dem Men­schen auch nicht von ir­gend einer an­de­ren au­ßer­halb sei­ner Per­sön­lich­keit ge­le­ge­nen Macht auf­er­legt.</span>
+        <span id="s-9-2-28">Sie ent­sprin­gen aus der Natur der Per­sön­lich­keit selbst.</span>
         
-        <span id="s-9-2-29">Sie ent­sprin­gen aus der Natur der Per­sön­lich­keit selbst.</span>
+        <span id="s-9-2-29">Wenn der Mensch den Blick auf ein Ding rich­tet, dann ent­steht in ihm der Drang, mehr zu sehen, als ihm in der Wahr­neh­mung ent­ge­gen­tritt.</span>
         
-        <span id="s-9-2-30">Wenn der Mensch den Blick auf ein Ding rich­tet, dann ent­steht in ihm der Drang, mehr zu sehen, als ihm in der Wahr­neh­mung ent­ge­gen­tritt.</span>
+        <span id="s-9-2-30">Und so weit die­ser Drang reicht, so weit reicht sein Er­kennt­nis­be­dürf­nis.</span>
         
-        <span id="s-9-2-31">Und so weit die­ser Drang reicht, so weit reicht sein Er­kennt­nis­be­dürf­nis.</span>
+        <span id="s-9-2-31">Woher stammt die­ser Drang?</span>
         
-        <span id="s-9-2-32">Woher stammt die­ser Drang?</span>
+        <span id="s-9-2-32">Doch nur davon, dass ein in­ne­res Er­leb­nis sich in der Seele an­ge­regt fühlt, mit der Wahr­neh­mung eine Ver­bin­dung ein­zu­ge­hen.</span>
         
-        <span id="s-9-2-33">Doch nur davon, dass ein in­ne­res Er­leb­nis sich in der Seele an­ge­regt fühlt, mit der Wahr­neh­mung eine Ver­bin­dung ein­zu­ge­hen.</span>
+        <span id="s-9-2-33">So­bald die Ver­bin­dung voll­zo­gen ist, ist auch das Er­kennt­nis­be­dürf­nis be­frie­digt.</span>
         
-        <span id="s-9-2-34">So­bald die Ver­bin­dung voll­zo­gen ist, ist auch das Er­kennt­nis­be­dürf­nis be­frie­digt.</span>
+        <span id="s-9-2-34">Er­ken­nen wol­len ist eine For­de­rung der mensch­li­chen Natur und nicht der Dinge.</span>
         
-        <span id="s-9-2-35">Er­ken­nen wol­len ist eine For­de­rung der mensch­li­chen Natur und nicht der Dinge.</span>
+        <span id="s-9-2-35">Diese kön­nen dem Men­schen nicht mehr über ihr Wesen sagen, als er ihnen ab­for­dert.</span>
         
-        <span id="s-9-2-36">Diese kön­nen dem Men­schen nicht mehr über ihr Wesen sagen, als er ihnen ab­for­dert.</span>
+        <span id="s-9-2-36">Wer von einer Be­schränkt­heit des Er­kennt­nis­ver­mö­gens spricht, der weiß nicht, woher das Er­kennt­nis­be­dürf­nis stammt.</span>
         
-        <span id="s-9-2-37">Wer von einer Be­schränkt­heit des Er­kennt­nis­ver­mö­gens spricht, der weiß nicht, woher das Er­kennt­nis­be­dürf­nis stammt.</span>
+        <span id="s-9-2-37">Er glaubt, der In­halt der Wahr­heit liege ir­gend­wo auf­be­wahrt, und in dem Men­schen lebe nur der un­be­stimm­te Wunsch, den Zu­gang zu dem Auf­be­wah­rungs­ort zu fin­den.</span>
         
-        <span id="s-9-2-38">Er glaubt, der In­halt der Wahr­heit liege ir­gend­wo auf­be­wahrt, und in dem Men­schen lebe nur der un­be­stimm­te Wunsch, den Zu­gang zu dem Auf­be­wah­rungs­ort zu fin­den.</span>
+        <span id="s-9-2-38">Aber es ist das Wesen der Dinge selbst, das sich aus dem In­nern des Men­schen her­aus­ar­bei­tet und dahin strebt, wohin es ge­hört: zu der Wahr­neh­mung.</span>
         
-        <span id="s-9-2-39">Aber es ist das Wesen der Dinge selbst, das sich aus dem In­nern des Men­schen her­aus­ar­bei­tet und dahin strebt, wohin es ge­hört: zu der Wahr­neh­mung.</span>
+        <span id="s-9-2-39">Nicht nach einem Ver­bor­ge­nen strebt der Mensch im Er­kennt­nis­pro­zess, son­dern nach der Aus­glei­chung zwei­er Kräf­te, die von zwei Sei­ten auf ihn wir­ken.</span>
         
-        <span id="s-9-2-40">Nicht nach einem Ver­bor­ge­nen strebt der Mensch im Er­kennt­nis­pro­zess, son­dern nach der Aus­glei­chung zwei­er Kräf­te, die von zwei Sei­ten auf ihn wir­ken.</span>
+        <span id="s-9-2-40">Man kann wohl sagen, ohne den Men­schen gäbe es keine Er­kennt­nis des In­nern der Dinge, denn ohne ihn wäre nichts da, wo­durch die­ses In­ne­re sich aus­spre­chen könn­te.</span>
         
-        <span id="s-9-2-41">Man kann wohl sagen, ohne den Men­schen gäbe es keine Er­kennt­nis des In­nern der Dinge, denn ohne ihn wäre nichts da, wo­durch die­ses In­ne­re sich aus­spre­chen könn­te.</span>
+        <span id="s-9-2-41">Aber man kann nicht sagen, es gibt im In­nern der Dinge etwas, das dem Men­schen un­zu­gäng­lich ist.</span>
         
-        <span id="s-9-2-42">Aber man kann nicht sagen, es gibt im In­nern der Dinge etwas, das dem Men­schen un­zu­gäng­lich ist.</span>
+        <span id="s-9-2-42">Dass an den Din­gen noch etwas an­de­res vor­han­den ist, als was die Wahr­neh­mung lie­fert, weiß der Mensch nur, weil die­ses an­de­re in sei­nem ei­ge­nen In­nern lebt.</span>
         
-        <span id="s-9-2-43">Dass an den Din­gen noch etwas an­de­res vor­han­den ist, als was die Wahr­neh­mung lie­fert, weiß der Mensch nur, weil die­ses an­de­re in sei­nem ei­ge­nen In­nern lebt.</span>
-        
-        <span id="s-9-2-44">Von einem wei­te­ren un­be­kann­ten Etwas der Dinge spre­chen, heißt Worte über etwas ma­chen, was nicht vor­han­den ist.</span>
+        <span id="s-9-2-43">Von einem wei­te­ren un­be­kann­ten Etwas der Dinge spre­chen, heißt Worte über etwas ma­chen, was nicht vor­han­den ist.</span>
         
       </p>
     </section>
     <section id="p-9-3">
       <p>
-        <span id="s-9-3-1">3| Die Na­tu­ren, die nicht zu er­ken­nen ver­mö­gen, dass es die Spra­che der Dinge ist, die im In­nern des Men­schen ge­spro­chen wird, sind der An­sicht, alle Wahr­heit müsse von außen in den Men­schen ein­drin­gen.</span>
+        <a class="p-num" href="#p-9-3">3|</a>
+        <span id="s-9-3-1">Die Na­tu­ren, die nicht zu er­ken­nen ver­mö­gen, dass es die Spra­che der Dinge ist, die im In­nern des Men­schen ge­spro­chen wird, sind der An­sicht, alle Wahr­heit müsse von außen in den Men­schen ein­drin­gen.</span>
         
         <span id="s-9-3-2">Sol­che Na­tu­ren hal­ten sich ent­we­der an die bloße Wahr­neh­mung und glau­ben, al­lein durch Sehen, Hören, Tas­ten, durch Auf­le­sung der ge­schicht­li­chen Vor­komm­nis­se und durch Ver­glei­chen, Zäh­len, Rech­nen, Wägen des aus der Tat­sa­chen­welt Auf­ge­nom­me­nen die Wahr­heit er­ken­nen zu kön­nen; oder sie sind der An­sicht, dass die Wahr­heit nur zu dem Men­schen kom­men könne, wenn sie ihm auf eine au­ßer­halb des Er­ken­nens ge­le­ge­ne Art of­fen­bart werde, oder end­lich, sie wol­len durch Kräf­te be­son­de­rer Natur, durch Ek­sta­se oder mys­ti­sches Schau­en in den Be­sitz der höchs­ten Ein­sich­ten kom­men, die ihnen, nach ihrer An­sicht, die dem Den­ken zu­gäng­li­che Ide­en­welt nicht dar­bie­ten kann.</span>
         
@@ -182,7 +194,7 @@
         
         <span id="s-9-3-8">Ihnen kommt es zu­wei­len zum Be­wusst­sein, dass in dem Zäh­len und Rech­nen be­reits eine Ver­ar­bei­tung des An­schau­ungs­in­hal­tes mit Hilfe des Den­kens statt­fin­det.</span>
         
-        <span id="s-9-3-9">Dann aber sagen sie, die Ge­dan­ken­ar­beit sei bloß das Mit­tel, durch das der Mensch den Zu­sam­men­hang der Tat­sa­chen zu er­ken­nen be­strebt ist.</span>
+        <span id="s-9-3-9">Dann aber sagen sie, die Ge­dan­ken­ar­beit sei bloß das <i>Mit­tel</i>, durch das der Mensch den Zu­sam­men­hang der Tat­sa­chen zu er­ken­nen be­strebt ist.</span>
         
         <span id="s-9-3-10">Was aus dem Den­ken bei Be­ar­bei­tung der Au­ßen­welt fließt, gilt ihnen als bloß sub­jek­tiv; als ob­jek­ti­ven Wahr­heits­ge­halt, als wert­vol­len Er­kennt­nis­in­halt sehen sie nur das an, was mit Hilfe des Den­kens von außen an sie her­an­kommt.</span>
         
@@ -218,13 +230,9 @@
         
         <span id="s-9-3-26">Nichts Sub­jek­ti­ves soll in die Be­ob­ach­tung ein­flie­ßen.</span>
         
-        <span id="s-9-3-27">Goe­the ver­ur­teilt die­ses Ver­fah­ren mit den Wor­ten: «Der Mensch an sich selbst, in­so­fern er sich sei­ner ge­sun­den Sinne be­dient, ist der größ­te und ge­nau­es­te phy­si­ka­li­sche Ap­pa­rat, den es geben kann, und das ist eben das größ­te Un­heil der neue­ren Phy­sik, dass man die Ex­pe­ri­men­te gleich­sam vom Men­schen ab­ge­son­dert hat, und bloß in dem, was künst­li­che In­stru­men­te zei­gen, die Natur er­ken­nen, ja, was sie leis­ten kann, da­durch be­schrän­ken und be­wei­sen will.» Es ist die Angst vor dem Sub­jek­ti­ven, die zu sol­cher Ver­fah­rungs­wei­se führt, und die aus einer Ver­ken­nung der wahr­haf­ten Natur des­sel­ben her­rührt.</span>
+        <span id="s-9-3-27">Goe­the ver­ur­teilt die­ses Ver­fah­ren mit den Wor­ten: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Der Mensch an sich selbst, in­so­fern er sich sei­ner ge­sun­den Sinne be­dient, ist der größ­te und ge­nau­es­te phy­si­ka­li­sche Ap­pa­rat, den es geben kann, und das ist eben das größ­te Un­heil der neue­ren Phy­sik, dass man die Ex­pe­ri­men­te gleich­sam vom Men­schen ab­ge­son­dert hat, und bloß in dem, was künst­li­che In­stru­men­te zei­gen, die Natur er­ken­nen, ja, was sie leis­ten kann, da­durch be­schrän­ken und be­wei­sen will.</q> Es ist die Angst vor dem Sub­jek­ti­ven, die zu sol­cher Ver­fah­rungs­wei­se führt, und die aus einer Ver­ken­nung der wahr­haf­ten Natur des­sel­ben her­rührt.</span>
         
-        <span id="s-9-3-28">«Dafür steht ja aber der Mensch so hoch, dass sich das sonst Un­dar­stell­ba­re in ihm dar­stellt.</span>
-        
-        <span id="s-9-3-29">Was ist denn eine Saite und alle me­cha­ni­sche Tei­lung der­sel­ben gegen das Ohr des Mu­si­kers?</span>
-        
-        <span id="s-9-3-30">Ja man kann sagen, was sind die ele­men­ta­ri­schen Er­schei­nun­gen der Natur selbst gegen den Men­schen, der sie alle erst bän­di­gen und mo­di­fi­zie­ren muss, um sie sich ei­ni­ger­ma­ßen as­si­mi­lie­ren zu kön­nen?» (Sprü­che in Prosa, Kürsch­ner, Bd.</span>
+        <span id="s-9-3-28"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Sprü­che in Prosa" part="1">Dafür steht ja aber der Mensch so hoch, dass sich das sonst Un­dar­stell­ba­re in ihm dar­stellt. Was ist denn eine Saite und alle me­cha­ni­sche Tei­lung der­sel­ben gegen das Ohr des Mu­si­kers? Ja man kann sagen, was sind die ele­men­ta­ri­schen Er­schei­nun­gen der Natur selbst gegen den Men­schen, der sie alle erst bän­di­gen und mo­di­fi­zie­ren muss, um sie sich ei­ni­ger­ma­ßen as­si­mi­lie­ren zu kön­nen?</q> (Sprü­che in Prosa, Kürsch­ner, Bd.</span>
         
         <span id="s-9-3-31">36, 2, S. 351.) Nach Goe­thes An­sicht soll der Na­tur­for­scher nicht al­lein dar­auf auf­merk­sam sein, wie die Dinge er­schei­nen, son­dern wie sie er­schei­nen wür­den, wenn alles, was in ihnen als ide­el­le Trieb­kräf­te wirkt, auch wirk­lich zur äu­ße­ren Er­schei­nung käme.</span>
         
@@ -234,7 +242,8 @@
     </section>
     <section id="p-9-4">
       <p>
-        <span id="s-9-4-1">4| Wer mit frei­em, of­fe­nem Be­ob­ach­tungs­geist und mit einem ent­wi­ckel­ten In­nen­le­ben, in dem die Ideen der Dinge sich of­fen­ba­ren, an die Er­schei­nun­gen her­an­tritt, dem ent­hül­len diese, nach Goe­thes Mei­nung, alles, was an ihnen ist.</span>
+        <a class="p-num" href="#p-9-4">4|</a>
+        <span id="s-9-4-1">Wer mit frei­em, of­fe­nem Be­ob­ach­tungs­geist und mit einem ent­wi­ckel­ten In­nen­le­ben, in dem die Ideen der Dinge sich of­fen­ba­ren, an die Er­schei­nun­gen her­an­tritt, dem ent­hül­len diese, nach Goe­thes Mei­nung, alles, was an ihnen ist.</span>
         
         <span id="s-9-4-2">Goe­thes Welt­an­schau­ung ent­ge­gen­ge­setzt ist daher die­je­ni­ge, wel­che das Wesen der Dinge nicht in­ner­halb der Er­fah­rungs­wirk­lich­keit, son­dern in einer hin­ter der­sel­ben lie­gen­den zwei­ten Wirk­lich­keit sucht.</span>
         
@@ -242,37 +251,24 @@
         
         <span id="s-9-4-4">H. Ja­co­bi ent­ge­gen.</span>
         
-        <span id="s-9-4-5">Goe­the macht sei­nem Un­wil­len in einer Be­mer­kung der Tag- und Jah­res­hef­te (zum Jahr 1811) Luft: «Ja­co­bi «Von den gött­li­chen Din­gen» mach­te mir nicht wohl; wie konn­te mir das Buch eines so herz­lich ge­lieb­ten Freun­des will­kom­men sein, worin ich die These durch­ge­führt sehen soll­te: die Natur ver­ber­ge Gott.</span>
+        <span id="s-9-4-5">Goe­the macht sei­nem Un­wil­len in einer Be­mer­kung der Tag- und Jah­res­hef­te (zum Jahr 1811) Luft: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Tag- und Jah­res­hef­te" part="1">Ja­co­bi «Von den gött­li­chen Din­gen» mach­te mir nicht wohl; wie konn­te mir das Buch eines so herz­lich ge­lieb­ten Freun­des will­kom­men sein, worin ich die These durch­ge­führt sehen soll­te: die Natur ver­ber­ge Gott. Muss­te, bei mei­ner rei­nen, tie­fen, an­ge­bo­re­nen und ge­üb­ten An­schau­ungs­wei­se, die mich Gott in der Natur, die Natur in Gott zu sehen un­ver­brüch­lich ge­lehrt hatte, so dass diese Vor­stel­lungs­art den Grund mei­ner gan­zen Exis­tenz mach­te, muss­te nicht ein so selt­sa­mer, ein­sei­tig-be­schränk­ter Aus­spruch mich dem Geist nach von dem edels­ten Mann, des­sen Herz ich ver­eh­rend lieb­te, für ewig ent­fer­nen?</q> Goe­thes An­schau­ungs­wei­se gibt ihm die Si­cher­heit, dass er in der ide­el­len Durch­drin­gung der Natur ein ewig Ge­setz­mä­ßi­ges er­le­be, und das ewig Ge­setz­mä­ßi­ge ist ihm mit dem Gött­li­chen iden­tisch.</span>
         
-        <span id="s-9-4-6">Muss­te, bei mei­ner rei­nen, tie­fen, an­ge­bo­re­nen und ge­üb­ten An­schau­ungs­wei­se, die mich Gott in der Natur, die Natur in Gott zu sehen un­ver­brüch­lich ge­lehrt hatte, so dass diese Vor­stel­lungs­art den Grund mei­ner gan­zen Exis­tenz mach­te, muss­te nicht ein so selt­sa­mer, ein­sei­tig-be­schränk­ter Aus­spruch mich dem Geist nach von dem edels­ten Mann, des­sen Herz ich ver­eh­rend lieb­te, für ewig ent­fer­nen?» Goe­thes An­schau­ungs­wei­se gibt ihm die Si­cher­heit, dass er in der ide­el­len Durch­drin­gung der Natur ein ewig Ge­setz­mä­ßi­ges er­le­be, und das ewig Ge­setz­mä­ßi­ge ist ihm mit dem Gött­li­chen iden­tisch.</span>
+        <span id="s-9-4-7">Wenn das Gött­li­che hin­ter den Na­tur­din­gen sich ver­ber­gen würde und doch das schöp­fe­ri­sche Ele­ment in ihnen bil­de­te, könn­te es nicht <i>an­ge­schaut</i> wer­den; der Mensch müss­te an das­sel­be <i>glau­ben</i>. In einem Brief an Ja­co­bi nimmt Goe­the sein <i>Schau­en</i> ge­gen­über dem <i>Glau­ben</i> in Schutz: <q author="Jo­hann Wolf­gang von Goe­the" part="1"><i>Gott hat Dich mit der Me­ta­phy­sik ge­straft</i> und dir einen Pfahl ins Fleisch ge­setzt, <i>mich</i> mit der <i>Phy­sik</i> ge­seg­net. Ich halte mich an die Got­tes­ver­eh­rung des Athe­is­ten (Spi­no­za) und <i>über­las­se Euch</i> alles, was ihr Re­li­gi­on heißt und hei­ßen mögt. Du hältst aufs <i>Glau­ben</i> an Gott; ich aufs <i>Schau­en</i>.</q> Wo die­ses Schau­en auf­hört, da hat der mensch­li­che Geist nichts zu su­chen.</span>
         
-        <span id="s-9-4-7">Wenn das Gött­li­che hin­ter den Na­tur­din­gen sich ver­ber­gen würde und doch das schöp­fe­ri­sche Ele­ment in ihnen bil­de­te, könn­te es nicht an­ge­schaut wer­den; der Mensch müss­te an das­sel­be glau­ben.</span>
+        <span id="s-9-4-10">In den Sprü­chen in Prosa lesen wir: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Sprü­che in Prosa" part="1">Der Mensch ist als wirk­lich in die Mitte einer wirk­li­chen Welt ge­setzt und mit sol­chen Or­ga­nen be­gabt, dass er das Wirk­li­che und ne­ben­bei das Mög­li­che er­ken­nen und her­vor­brin­gen kann. Alle ge­sun­den Men­schen haben die Über­zeu­gung ihres Da­seins und eines Dasei­en­den um sich her. In­des­sen gibt es auch einen <i>hoh­len Fleck im Ge­hirn</i>, d. h. eine Stel­le, wo sich kein Ge­gen­stand ab­spie­gelt, wie denn auch im Auge selbst ein Fleck­chen ist, das nicht sieht. Wird der Mensch auf diese Stel­le be­son­ders auf­merk­sam, ver­tieft er sich darin, so ver­fällt er in eine <i>Geis­tes­krank­heit</i>, ahnet hier <i>Dinge aus einer an­de­ren Welt</i>, die aber <i>ei­gent­lich Un­din­ge sind</i> und weder Ge­stalt noch Be­gren­zung haben, son­dern als <i>leere Nacht-Räum­lich­keit</i> ängs­ti­gen und den, der sich nicht los­reißt, mehr als ge­spens­ter­haft ver­fol­gen.</q> (Kürsch­ner, Band 36,2, S.458.) Aus der­sel­ben Ge­sin­nung her­aus ist der Aus­spruch: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Das Höchs­te wäre, zu be­grei­fen, dass alles Fak­ti­sche schon Theo­rie ist.</q></span>
         
-        <span id="s-9-4-8">In einem Brief an Ja­co­bi nimmt Goe­the sein Schau­en ge­gen­über dem Glau­ben in Schutz: «Gott hat Dich mit der Me­ta­phy­sik ge­straft und dir einen Pfahl ins Fleisch ge­setzt, mich mit der Phy­sik ge­seg­net.</span>
+        <span id="s-9-4-14">Die Bläue des Him­mels of­fen­bart uns das Grund­ge­setz der Chro­ma­tik.</span>
         
-        <span id="s-9-4-9">Ich halte mich an die Got­tes­ver­eh­rung des Athe­is­ten (Spi­no­za) und über­las­se Euch alles, was ihr Re­li­gi­on heißt und hei­ßen mögt.</span>
-        
-        <span id="s-9-4-10">Du hältst aufs Glau­ben an Gott; ich aufs Schau­en.» Wo die­ses Schau­en auf­hört, da hat der mensch­li­che Geist nichts zu su­chen.</span>
-        
-        <span id="s-9-4-11">In den Sprü­chen in Prosa lesen wir: «Der Mensch ist als wirk­lich in die Mitte einer wirk­li­chen Welt ge­setzt und mit sol­chen Or­ga­nen be­gabt, dass er das Wirk­li­che und ne­ben­bei das Mög­li­che er­ken­nen und her­vor­brin­gen kann.</span>
-        
-        <span id="s-9-4-12">Alle ge­sun­den Men­schen haben die Über­zeu­gung ihres Da­seins und eines Dasei­en­den um sich her.</span>
-        
-        <span id="s-9-4-13">In­des­sen gibt es auch einen hoh­len Fleck im Ge­hirn, d. h. eine Stel­le, wo sich kein Ge­gen­stand ab­spie­gelt, wie denn auch im Auge selbst ein Fleck­chen ist, das nicht sieht.</span>
-        
-        <span id="s-9-4-14">Wird der Mensch auf diese Stel­le be­son­ders auf­merk­sam, ver­tieft er sich darin, so ver­fällt er in eine Geis­tes­krank­heit, ahnet hier Dinge aus einer an­de­ren Welt, die aber ei­gent­lich Un­din­ge sind und weder Ge­stalt noch Be­gren­zung haben, son­dern als leere Nacht-Räum­lich­keit ängs­ti­gen und den, der sich nicht los­reißt, mehr als ge­spens­ter­haft ver­fol­gen.» (Kürsch­ner, Band 36,2, S.458.) Aus der­sel­ben Ge­sin­nung her­aus ist der Aus­spruch: «Das Höchs­te wäre, zu be­grei­fen, dass alles Fak­ti­sche schon Theo­rie ist.</span>
-        
-        <span id="s-9-4-15">Die Bläue des Him­mels of­fen­bart uns das Grund­ge­setz der Chro­ma­tik.</span>
-        
-        <span id="s-9-4-16">Man suche nur nichts hin­ter den Phä­no­me­nen; sie selbst sind die Lehre.»</span>
+        <span id="s-9-4-15"><i>Man suche nur nichts hin­ter den Phä­no­me­nen; sie selbst sind die Lehre</i>.</span>
         
       </p>
     </section>
     <section id="p-9-5">
       <p>
-        <span id="s-9-5-1">5| Kant spricht dem Men­schen die Fä­hig­keit ab, in das Ge­biet der Natur ein­zu­drin­gen, in dem ihre schöp­fe­ri­schen Kräf­te un­mit­tel­bar an­schau­lich wer­den.</span>
+        <a class="p-num" href="#p-9-5">5|</a>
+        <span id="s-9-5-1">Kant spricht dem Men­schen die Fä­hig­keit ab, in das Ge­biet der Natur ein­zu­drin­gen, in dem ihre schöp­fe­ri­schen Kräf­te un­mit­tel­bar <i>an­schau­lich</i> wer­den.</span>
         
-        <span id="s-9-5-2">Nach sei­ner Mei­nung sind die Be­grif­fe abs­trak­te Ein­hei­ten, in die der mensch­li­che Ver­stand die man­nig­fal­ti­gen Ein­zel­hei­ten der Natur zu­sam­men­fasst, die aber nichts zu tun haben mit der le­ben­di­gen Ein­heit, mit dem schaf­fen­den Gan­zen der Natur, aus der diese Ein­zel­hei­ten wirk­lich her­vor­ge­hen.</span>
+        <span id="s-9-5-2">Nach sei­ner Mei­nung sind die Be­grif­fe abs­trak­te Ein­hei­ten, in die der mensch­li­che Ver­stand die man­nig­fal­ti­gen Ein­zel­hei­ten der Natur zu­sam­men­fasst, die aber nichts zu tun haben mit der <i>le­ben­di­gen</i> Ein­heit, mit dem schaf­fen­den Gan­zen der Natur, aus der diese Ein­zel­hei­ten wirk­lich her­vor­ge­hen.</span>
         
         <span id="s-9-5-3">Der Mensch er­lebt in dem Zu­sam­men­fas­sen nur eine sub­jek­ti­ve Ope­ra­ti­on.</span>
         
@@ -280,23 +276,22 @@
         
         <span id="s-9-5-5">Eine tote, bloß im Men­schen vor­han­de­ne Ein­heit sind für Kant die Be­grif­fe.</span>
         
-        <span id="s-9-5-6">«Unser Ver­stand ist ein Ver­mö­gen der Be­grif­fe, d. i. ein dis­kur­si­ver Ver­stand, für den es frei­lich zu­fäl­lig sein muss, wel­cher­lei und wie sehr ver­schie­den das Be­son­de­re sein mag, das ihm in der Natur ge­ge­ben wer­den, und das unter seine Be­grif­fe ge­bracht wer­den kann.» Dies ist Kants Cha­rak­te­ris­tik des Ver­stan­des (§ 77 der «Kri­tik der Ur­teils­kraft»).</span>
+        <span id="s-9-5-6"><q author="Im­ma­nu­el Kant" book-title="Kri­tik der Ur­teils­kraft" part="1">Unser Ver­stand ist ein Ver­mö­gen der Be­grif­fe, d. i. ein dis­kur­si­ver Ver­stand, für den es frei­lich zu­fäl­lig sein muss, wel­cher­lei und wie sehr ver­schie­den das Be­son­de­re sein mag, das ihm in der Natur ge­ge­ben wer­den, und das unter seine Be­grif­fe ge­bracht wer­den kann.</q> Dies ist Kants Cha­rak­te­ris­tik des Ver­stan­des (§ 77 der «Kri­tik der Ur­teils­kraft»).</span>
         
-        <span id="s-9-5-7">Aus ihr er­gibt sich fol­gen­des mit Not­wen­dig­keit: «Es liegt der Ver­nunft un­end­lich viel daran, den Me­cha­nis­mus der Natur in ihren Er­zeu­gun­gen nicht fal­len zu las­sen und in der Er­klä­rung der­sel­ben nicht vor­bei­zu­ge­hen; weil ohne die­sen keine Ein­sicht in die Natur der Dinge er­langt wer­den kann.</span>
-        
-        <span id="s-9-5-8">Wenn man uns gleich ein­räumt: dass ein höchs­ter Ar­chi­tekt die For­men der Natur, so wie sie von jeher da sind, un­mit­tel­bar ge­schaf­fen, oder die, so sich in ihrem Laufe kon­ti­nu­ier­lich nach eben dem­sel­ben Mus­ter bil­den, prä­de­ter­mi­niert habe, so ist doch da­durch un­se­re Er­kennt­nis der Natur nicht im min­des­ten ge­för­dert; weil wir jenes We­sens Hand­lungs­art und die Ideen des­sel­ben, wel­che die Prin­zi­pi­en der Mög­lich­keit der Na­tur­we­sen ent­hal­ten sol­len, gar nicht ken­nen, und von dem­sel­ben als von oben herab (a prio­ri) die Natur nicht er­klä­ren kön­nen» (§ 78 der «Kri­tik der Ur­teils­kraft»).</span>
+        <span id="s-9-5-7">Aus ihr er­gibt sich fol­gen­des mit Not­wen­dig­keit: <q author="Im­ma­nu­el Kant" book-title="Kri­tik der Ur­teils­kraft" part="1">Es liegt der Ver­nunft un­end­lich viel daran, den Me­cha­nis­mus der Natur in ihren Er­zeu­gun­gen nicht fal­len zu las­sen und in der Er­klä­rung der­sel­ben nicht vor­bei­zu­ge­hen; weil ohne die­sen keine Ein­sicht in die Natur der Dinge er­langt wer­den kann. Wenn man uns gleich ein­räumt: dass ein höchs­ter Ar­chi­tekt die For­men der Natur, so wie sie von jeher da sind, un­mit­tel­bar ge­schaf­fen, oder die, so sich in ihrem Laufe kon­ti­nu­ier­lich nach eben dem­sel­ben Mus­ter bil­den, prä­de­ter­mi­niert habe, so ist doch da­durch un­se­re Er­kennt­nis der Natur nicht im min­des­ten ge­för­dert; <i>weil wir jenes We­sens Hand­lungs­art und die Ideen des­sel­ben</i>, wel­che die Prin­zi­pi­en der Mög­lich­keit der Na­tur­we­sen ent­hal­ten sol­len, gar <i>nicht ken­nen</i>, und von dem­sel­ben als von oben herab (a prio­ri) die Natur nicht er­klä­ren kön­nen</q> (§ 78 der «Kri­tik der Ur­teils­kraft»).</span>
         
         <span id="s-9-5-9">Goe­the ist der Über­zeu­gung, dass der Mensch in sei­ner Ide­en­welt die Hand­lungs­art des schöp­fe­ri­schen Na­tur­we­sens un­mit­tel­bar er­lebt.</span>
         
-        <span id="s-9-5-10">«Wenn wir ja im Sitt­li­chen, durch Glau­ben an Gott, Tu­gend und Un­sterb­lich­keit uns in eine obere Re­gi­on er­he­ben und an das erste Wesen an­nä­hern sol­len: so dürf­te es wohl im In­tel­lek­tu­el­len der­sel­be Fall sein, dass wir uns durch das An­schau­en einer immer schaf­fen­den Natur zur geis­ti­gen Teil­nah­me an ihren Pro­duk­tio­nen wür­dig mach­ten.» Ein wirk­li­ches Hin­ein­le­ben in das Schaf­fen und Wal­ten der Natur ist für Goe­the die Er­kennt­nis des Men­schen.</span>
+        <span id="s-9-5-10"><q author="Jo­hann Wolf­gang von Goe­the" part="1">Wenn wir ja im Sitt­li­chen, durch Glau­ben an Gott, Tu­gend und Un­sterb­lich­keit uns in eine obere Re­gi­on er­he­ben und an das erste Wesen an­nä­hern sol­len: <i>so dürf­te es wohl im In­tel­lek­tu­el­len der­sel­be Fall sein, dass wir uns durch das An­schau­en einer immer schaf­fen­den Natur zur geis­ti­gen Teil­nah­me an ihren Pro­duk­tio­nen wür­dig mach­ten</i>.</q> Ein wirk­li­ches Hin­ein­le­ben in das Schaf­fen und Wal­ten der Natur ist für Goe­the die Er­kennt­nis des Men­schen.</span>
         
-        <span id="s-9-5-11">Ihr ist es ge­ge­ben: «zu er­for­schen, zu er­fah­ren, wie Natur im Schaf­fen lebt.»</span>
+        <span id="s-9-5-11">Ihr ist es ge­ge­ben: <q author="Jo­hann Wolf­gang von Goe­the" part="1">zu er­for­schen, zu er­fah­ren, <i>wie Natur im Schaf­fen lebt</i>.</q></span>
         
       </p>
     </section>
     <section id="p-9-6">
       <p>
-        <span id="s-9-6-1">6| Es wi­der­spricht dem Geist der Goe­the­schen Welt­an­schau­ung, von We­sen­hei­ten zu spre­chen, die au­ßer­halb der dem mensch­li­chen Geist zu­gäng­li­chen Er­fah­rungs- und Ide­en­welt lie­gen und die doch die Grün­de die­ser Welt ent­hal­ten sol­len.</span>
+        <a class="p-num" href="#p-9-6">6|</a>
+        <span id="s-9-6-1">Es wi­der­spricht dem Geist der Goe­the­schen Welt­an­schau­ung, von We­sen­hei­ten zu spre­chen, die au­ßer­halb der dem mensch­li­chen Geist zu­gäng­li­chen Er­fah­rungs- und Ide­en­welt lie­gen und die doch die Grün­de die­ser Welt ent­hal­ten sol­len.</span>
         
         <span id="s-9-6-2">Alle Me­ta­phy­sik wird von die­ser Welt­an­schau­ung ab­ge­lehnt.</span>
         
@@ -312,7 +307,7 @@
         
         <span id="s-9-6-8">Die An­nah­me eines «Din­ges an sich», das die Wahr­neh­mun­gen in dem Men­schen be­wirkt, aber nie selbst wahr­ge­nom­men wer­den kann, ist eine un­statt­haf­te Hy­po­the­se.</span>
         
-        <span id="s-9-6-9">«Hy­po­the­sen sind Ge­rüs­te, die man vor dem Ge­bäu­de auf­führt, und die man ab­trägt, wenn das Ge­bäu­de fer­tig ist; sie sind dem Ar­bei­ter un­ent­behr­lich; nur muss er das Ge­rüst nicht für das Ge­bäu­de an­se­hen.» Einem Er­schei­nungs­ge­biet ge­gen­über, für das alle Wahr­neh­mun­gen vor­lie­gen und das ide­ell durch­drun­gen ist, er­klärt sich der mensch­li­che Geist be­frie­digt.</span>
+        <span id="s-9-6-9"><q author="Jo­hann Wolf­gang von Goe­the" part="1">Hy­po­the­sen sind Ge­rüs­te, die man vor dem Ge­bäu­de auf­führt, und die man ab­trägt, wenn das Ge­bäu­de fer­tig ist; sie sind dem Ar­bei­ter un­ent­behr­lich; nur muss er das Ge­rüst nicht für das Ge­bäu­de an­se­hen.</q> Einem Er­schei­nungs­ge­biet ge­gen­über, für das alle Wahr­neh­mun­gen vor­lie­gen und das ide­ell durch­drun­gen ist, er­klärt sich der mensch­li­che Geist be­frie­digt.</span>
         
         <span id="s-9-6-10">Er fühlt, dass sich in ihm ein le­ben­di­ges Zu­sam­men­klin­gen von Idee und Wahr­neh­mung ab­spielt.</span>
         
@@ -342,7 +337,7 @@
         
         <span id="s-9-6-23">Sie flüch­tet nicht zu ab­nor­men Zu­stän­den des mensch­li­chen Geis­tes­le­bens, son­dern sie ist der An­sicht, dass die ge­wöhn­li­chen nai­ven Ver­fah­rungs­ar­ten des Geis­tes einer sol­chen Ver­voll­komm­nung fähig sind, dass der Mensch das Schaf­fen der Natur in sich er­le­ben kann.</span>
         
-        <span id="s-9-6-24">«Es sind am Ende doch nur, wie mich dünkt, die prak­ti­schen und sich selbst rek­ti­fi­zie­ren­den Ope­ra­tio­nen des ge­mei­nen Men­schen­ver­stan­des, der sich in einer hö­he­ren Sphä­re zu üben wagt.» (Vgl. Goe­thes Werke in der Wei­ma­rer Aus­ga­be, L. Abt., Bd.</span>
+        <span id="s-9-6-24"><q author="Jo­hann Wolf­gang von Goe­the" part="1">Es sind am Ende doch nur, wie mich dünkt, die prak­ti­schen und sich selbst rek­ti­fi­zie­ren­den Ope­ra­tio­nen des ge­mei­nen Men­schen­ver­stan­des, der sich in einer hö­he­ren Sphä­re zu üben wagt.</q> (Vgl. Goe­thes Werke in der Wei­ma­rer Aus­ga­be, L. Abt., Bd.</span>
         
         <span id="s-9-6-25">11, S. 41.)In eine Welt un­kla­rer Emp­fin­dun­gen und Ge­füh­le ver­senkt sich man­cher Mys­ti­ker; in die klare Ide­en­welt ver­senkt sich Goe­the.</span>
         
@@ -360,23 +355,22 @@
         
         <span id="s-9-6-32">Er be­steht nur in sub­jek­ti­ven Er­re­gun­gen, in ver­wor­re­nen Vor­stel­lun­gen.</span>
         
-        <span id="s-9-6-33">Wer von der Kälte der Ide­en­welt spricht, der kann Ideen nur den­ken, nicht er­le­ben.</span>
+        <span id="s-9-6-33">Wer von der Kälte der Ide­en­welt spricht, der kann Ideen nur <i>den­ken</i>, nicht <i>er­le­ben</i>. Wer das wahr­haf­te Leben in der Ide­en­welt lebt, der fühlt in sich das Wesen der Welt in einer Wärme wir­ken, die mit nichts zu ver­glei­chen ist.</span>
         
-        <span id="s-9-6-34">Wer das wahr­haf­te Leben in der Ide­en­welt lebt, der fühlt in sich das Wesen der Welt in einer Wärme wir­ken, die mit nichts zu ver­glei­chen ist.</span>
+        <span id="s-9-6-34">Er fühlt das Feuer des Welt­ge­heim­nis­ses in sich auf­lo­dern.</span>
         
-        <span id="s-9-6-35">Er fühlt das Feuer des Welt­ge­heim­nis­ses in sich auf­lo­dern.</span>
+        <span id="s-9-6-35">So hat Goe­the emp­fun­den, als ihm die An­schau­ung der wir­ken­den Natur in Ita­li­en auf­ging.</span>
         
-        <span id="s-9-6-36">So hat Goe­the emp­fun­den, als ihm die An­schau­ung der wir­ken­den Natur in Ita­li­en auf­ging.</span>
-        
-        <span id="s-9-6-37">Da­mals wuss­te er, wie jene Sehn­sucht zu stil­len ist, die er in Frank­furt sei­nen Faust mit den Wor­ten aus­spre­chen lässt: «Wo fass’ ich dich, un­end­li­che Natur?</span>
-        
-        <span id="s-9-6-38">Euch Brüs­te, wo?</span>
-        
-        <span id="s-9-6-39">Ihr Quel­len alles Le­bens, An denen Him­mel und Erde hängt, Dahin die welke Brust sich drängt -».</span>
+        <span id="s-9-6-36">Da­mals wuss­te er, wie jene Sehn­sucht zu stil­len ist, die er in Frank­furt sei­nen Faust mit den Wor­ten aus­spre­chen lässt: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Faust. Eine Tra­gö­die" part="1">Wo fass’ ich dich, un­end­li­che Natur? Euch Brüs­te, wo? Ihr Quel­len alles Le­bens, An denen Him­mel und Erde hängt, Dahin die welke Brust sich drängt -</q>.</span>
         
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="08-goethe-und-die-platonische-weltansicht.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="10-die-metamorphose-der-welterscheinungen.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

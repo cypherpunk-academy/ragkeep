@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VORREDE ZUR NEUAUFLAGE</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -74,7 +87,7 @@
     </section>
     <section id="p-1-5">
       <p>
-        <span id="s-1-5-1">Vor die­ser Er­kennt­nis kann die Mei­nung nicht be­ste­hen, dass es sol­che Er­kennt­nis­gren­zen gäbe, wie die ge­kenn­zeich­ne­te Ge­dan­ken­rich­tung sie glaub­te fest­set­zen zu müs­sen.</span>
+        <span id="s-1-5-1">Vor die­ser Er­kennt­nis kann die Mei­nung nicht be­ste­hen, dass es <i>sol­che</i> Er­kennt­nis­gren­zen gäbe, wie die ge­kenn­zeich­ne­te Ge­dan­ken­rich­tung sie glaub­te fest­set­zen zu müs­sen.</span>
         
       </p>
     </section>
@@ -190,7 +203,7 @@
         
         <span id="s-1-16-4">Aber ich würde als Wesen der Er­kennt­nis nichts an­de­res an­ge­ben kön­nen.</span>
         
-        <span id="s-1-16-5">Aber, was ich heute schrie­be, würde nicht so treu­lich die Keime der von mir ver­tre­te­nen geist­ge­mä­ßen Welt­an­schau­ung in sich tra­gen kön­nen.</span>
+        <span id="s-1-16-5">Aber, was ich heute schrie­be, würde nicht so treu­lich die <i>Keime</i> der von mir ver­tre­te­nen geist­ge­mä­ßen Welt­an­schau­ung in sich tra­gen kön­nen.</span>
         
         <span id="s-1-16-6">So keim­haft kann man nur schrei­ben im An­fang eines Er­kennt­nis­le­bens.</span>
         
@@ -207,6 +220,10 @@
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn next" href="02-vorwort-zur-ersten-auflage.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

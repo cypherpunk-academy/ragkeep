@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>XVIII GOETHES WELTANSCHAUUNG IN SEINEN «SPRÜCHEN IN PROSA»</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -30,7 +43,7 @@
         
         <span id="s-18-1-8">Was der mensch­li­che Geist an Na­tur­ge­set­zen er­denkt: es ist nicht zur Natur hinzu er­fun­den; es ist die ei­ge­ne We­sen­heit der Natur, und der Geist ist nur der Schau­platz, auf dem die Natur die Ge­heim­nis­se ihres Wir­kens sicht­bar wer­den lässt.</span>
         
-        <span id="s-18-1-9">Was wir an den Din­gen be­ob­ach­ten, das ist nur ein Teil der Dinge.</span>
+        <span id="s-18-1-9">Was wir an den Din­gen <i>be­ob­ach­ten</i>, das ist nur ein Teil der Dinge.</span>
         
         <span id="s-18-1-10">Was in un­se­rem Geist em­por­quillt, wenn er sich den Din­gen ge­gen­über­stellt, das ist der an­de­re Teil.</span>
         
@@ -70,11 +83,11 @@
         
         <span id="s-18-3-3">Aber es ste­hen ihnen ver­schie­de­ne Mit­tel zu Ge­bo­te, um dies Ziel zu er­rei­chen.</span>
         
-        <span id="s-18-3-4">Im Phi­lo­so­phen leuch­tet ein Ge­dan­ke, eine Idee auf, wenn er einem Na­tur­pro­zess ge­gen­über­steht.</span>
+        <span id="s-18-3-4">Im Phi­lo­so­phen leuch­tet ein <i>Ge­dan­ke</i>, eine <i>Idee</i> auf, wenn er einem Na­tur­pro­zess ge­gen­über­steht.</span>
         
         <span id="s-18-3-5">Diese spricht er aus.</span>
         
-        <span id="s-18-3-6">Im Künst­ler ent­steht ein Bild die­ses Pro­zes­ses, das die­sen voll­kom­me­ner zeigt, als er sich in der Au­ßen­welt be­ob­ach­ten lässt.</span>
+        <span id="s-18-3-6">Im Künst­ler ent­steht ein <i>Bild</i> die­ses Pro­zes­ses, das die­sen voll­kom­me­ner zeigt, als er sich in der Au­ßen­welt be­ob­ach­ten lässt.</span>
         
         <span id="s-18-3-7">Phi­lo­soph und Künst­ler bil­den die Be­ob­ach­tung auf ver­schie­de­nen Wegen wei­ter.</span>
         
@@ -86,7 +99,7 @@
         
         <span id="s-18-3-11">Er­kennt­nis und Kunst sind aber doch in­ner­lich ver­wandt.</span>
         
-        <span id="s-18-3-12">Sie zei­gen die An­la­gen der Natur, die in der blo­ßen äu­ße­ren Natur nicht zur vol­len Ent­wick­lung kom­men.</span>
+        <span id="s-18-3-12">Sie zei­gen die <i>An­la­gen</i> der Natur, die in der blo­ßen äu­ße­ren Natur nicht zur vol­len Ent­wick­lung kom­men.</span>
         
       </p>
     </section>
@@ -106,7 +119,7 @@
         
         <span id="s-18-4-7">Die Kraft eines sol­chen Ge­dan­kens wird ver­stärkt durch die­ses Ge­fühl.</span>
         
-        <span id="s-18-4-8">Was aus den höchs­ten Be­dürf­nis­sen einer Per­sön­lich­keit stammt, muss in­ner­lich zu­sam­men­ge­hö­ren.</span>
+        <span id="s-18-4-8">Was aus den höchs­ten Be­dürf­nis­sen <i>einer</i> Per­sön­lich­keit stammt, muss in­ner­lich zu­sam­men­ge­hö­ren.</span>
         
         <span id="s-18-4-9">Goe­thes Weis­heits­leh­ren ant­wor­ten auf die Frage: Was für eine Phi­lo­so­phie ist der ech­ten Kunst gemäß?</span>
         
@@ -170,23 +183,21 @@
         
         <span id="s-18-7-2">In der sub­jek­ti­ven Per­sön­lich­keit er­scheint der tiefs­te Ge­halt der Welt.</span>
         
-        <span id="s-18-7-3">«Wenn die ge­sun­de Natur des Men­schen als ein Gan­zes wirkt, wenn er sich in der Welt als in einem gro­ßen, schö­nen, wür­di­gen und wer­ten Gan­zen fühlt, wenn das har­mo­ni­sche Be­ha­gen ihm ein rei­nes, frei­es Ent­zü­cken ge­währt, dann würde das Welt­all, wenn es sich selbst emp­fin­den könn­te, als an sein Ziel ge­langt, auf­jauch­zen und den Gip­fel des ei­ge­nen Wer­dens und We­sens be­wun­dern» (Goe­the, «Winckel­mann», Kürsch­ners Na­tio­nal-Li­te­ra­tur, Bd.</span>
+        <span id="s-18-7-3"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Winckel­mann" part="1">Wenn die ge­sun­de Natur des Men­schen als ein Gan­zes wirkt, wenn er sich in der Welt als in einem gro­ßen, schö­nen, wür­di­gen und wer­ten Gan­zen fühlt, wenn das har­mo­ni­sche Be­ha­gen ihm ein rei­nes, frei­es Ent­zü­cken ge­währt, dann würde das Welt­all, wenn es sich selbst emp­fin­den könn­te, als an sein Ziel ge­langt, auf­jauch­zen und den Gip­fel des ei­ge­nen Wer­dens und We­sens be­wun­dern</q> (Goe­the, «Winckel­mann», Kürsch­ners Na­tio­nal-Li­te­ra­tur, Bd.</span>
         
         <span id="s-18-7-4">27, S. 42). Nicht in dem, was die Au­ßen­welt lie­fert, liegt das Ziel des Welt­alls und des We­sens des Da­seins, son­dern in dem, was im mensch­li­chen Geis­te lebt und aus ihm her­vor­geht.</span>
         
-        <span id="s-18-7-5">Goe­the be­trach­tet es daher als einen Irr­tum, wenn der Na­tur­for­scher durch In­stru­men­te und ob­jek­ti­ve Ver­su­che in das In­ne­re der Natur drin­gen will, denn «der Mensch an sich selbst, in­so­fern er sich sei­ner ge­sun­den Sinne be­dient, ist der größ­te und ge­nau­es­te phy­si­ka­li­sche Ap­pa­rat, den es geben kann, und das ist eben das größ­te Un­heil der neue­ren Phy­sik, dass man die Ex­pe­ri­men­te gleich­sam vom Men­schen ab­ge­son­dert hat, und bloß in dem, was künst­li­che In­stru­men­te zei­gen, die Natur er­ken­nen, ja was sie leis­ten kann, da­durch be­schrän­ken und be­wei­sen will».</span>
+        <span id="s-18-7-5">Goe­the be­trach­tet es daher als einen Irr­tum, wenn der Na­tur­for­scher durch In­stru­men­te und ob­jek­ti­ve Ver­su­che in das In­ne­re der Natur drin­gen will, denn <q author="Jo­hann Wolf­gang von Goe­the" part="1">der Mensch an sich selbst, in­so­fern er sich sei­ner ge­sun­den Sinne be­dient, ist der größ­te und ge­nau­es­te phy­si­ka­li­sche Ap­pa­rat, den es geben kann, und das ist eben das größ­te Un­heil der neue­ren Phy­sik, dass man die Ex­pe­ri­men­te gleich­sam vom Men­schen ab­ge­son­dert hat, und bloß in dem, was künst­li­che In­stru­men­te zei­gen, die Natur er­ken­nen, ja was sie leis­ten kann, da­durch be­schrän­ken und be­wei­sen will</q>. <q author="Jo­hann Wolf­gang von Goe­the" part="1">Dafür steht ja aber der Mensch so hoch, dass sich das sonst Un­dar­stell­ba­re in ihm dar­stellt.</q></span>
         
-        <span id="s-18-7-6">«Dafür steht ja aber der Mensch so hoch, dass sich das sonst Un­dar­stell­ba­re in ihm dar­stellt.</span>
+        <span id="s-18-7-6">Was ist denn eine Saite und alle me­cha­ni­sche Tei­lung der­sel­ben gegen das Ohr des Mu­si­kers?</span>
         
-        <span id="s-18-7-7">Was ist denn eine Saite und alle me­cha­ni­sche Tei­lung der­sel­ben gegen das Ohr des Mu­si­kers?</span>
+        <span id="s-18-7-7">Ja, man kann sagen, was sind die ele­men­ta­ri­schen Er­schei­nun­gen der Natur selbst gegen den Men­schen, der sie alle erst bän­di­gen und mo­di­fi­zie­ren muss, um sie sich ei­ni­ger­ma­ßen as­si­mi­lie­ren zu kön­nen? (Vgl. Natw.</span>
         
-        <span id="s-18-7-8">Ja, man kann sagen, was sind die ele­men­ta­ri­schen Er­schei­nun­gen der Natur selbst gegen den Men­schen, der sie alle erst bän­di­gen und mo­di­fi­zie­ren muss, um sie sich ei­ni­ger­ma­ßen as­si­mi­lie­ren zu kön­nen?» (Vgl. Natw.</span>
+        <span id="s-18-7-8">Schr., 4.</span>
         
-        <span id="s-18-7-9">Schr., 4.</span>
+        <span id="s-18-7-9">Bd., 2.</span>
         
-        <span id="s-18-7-10">Bd., 2.</span>
-        
-        <span id="s-18-7-11">Abt., S. 351)</span>
+        <span id="s-18-7-10">Abt., S. 351)</span>
         
       </p>
     </section>
@@ -232,7 +243,7 @@
         
         <span id="s-18-8-20">Man kann des­halb die Ge­dan­ken eines an­dern nicht als sol­che be­trach­ten und sie an­neh­men oder ab­leh­nen, son­dern man soll sie als die Ver­kün­der sei­ner In­di­vi­dua­li­tät an­se­hen.</span>
         
-        <span id="s-18-8-21">«Die­je­ni­gen, wel­che wi­der­spre­chen und strei­ten, soll­ten mit­un­ter be­den­ken, dass nicht jede Spra­che jedem ver­ständ­lich sei» (Natw.</span>
+        <span id="s-18-8-21"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Sprü­che in Prosa" part="1">Die­je­ni­gen, wel­che wi­der­spre­chen und strei­ten, soll­ten mit­un­ter be­den­ken, dass nicht jede Spra­che jedem ver­ständ­lich sei</q> (Natw.</span>
         
         <span id="s-18-8-22">Schr., 4.</span>
         
@@ -252,7 +263,7 @@
         
         <span id="s-18-9-4">Die ob­jek­ti­ven Dinge sind nur ein Teil der Wirk­lich­keit.</span>
         
-        <span id="s-18-9-5">Wer aus­schließ­lich die sinn­li­che Er­fah­rung an­preist, dem muss man mit Goe­the er­wi­dern, «dass die Er­fah­rung nur die Hälf­te der Er­fah­rung ist» (Natw.</span>
+        <span id="s-18-9-5">Wer aus­schließ­lich die sinn­li­che Er­fah­rung an­preist, dem muss man mit Goe­the er­wi­dern, <q author="Jo­hann Wolf­gang von Goe­the" book-title="Sprü­che in Prosa" part="1">dass die Er­fah­rung nur die Hälf­te der Er­fah­rung ist</q> (Natw.</span>
         
         <span id="s-18-9-6">Schr., 4.</span>
         
@@ -260,53 +271,43 @@
         
         <span id="s-18-9-8">Abt., S. 503). «Alles Fak­ti­sche ist schon Theo­rie», d. h. es of­fen­bart sich im mensch­li­chen Geis­te ein Ide­el­les, wenn er ein Fak­ti­sches be­trach­tet.</span>
         
-        <span id="s-18-9-9">Diese Welt­auf­fas­sung, die in den Ideen die We­sen­heit der Dinge er­kennt und die Er­kennt­nis auf­fasst als ein Ein­le­ben in das Wesen der Dinge, ist nicht Mys­tik.</span>
+        <span id="s-18-9-9">Diese Welt­auf­fas­sung, die in den Ideen die We­sen­heit der Dinge er­kennt und die Er­kennt­nis auf­fasst als ein Ein­le­ben in das Wesen der Dinge, ist nicht <i>Mys­tik</i>. Sie hat aber mit der Mys­tik das ge­mein, dass sie die ob­jek­ti­ve Wahr­heit nicht als etwas in der Au­ßen­welt Vor­han­de­nes be­trach­tet, son­dern als etwas, das sich im In­nern des Men­schen wirk­lich er­grei­fen lässt.</span>
         
-        <span id="s-18-9-10">Sie hat aber mit der Mys­tik das ge­mein, dass sie die ob­jek­ti­ve Wahr­heit nicht als etwas in der Au­ßen­welt Vor­han­de­nes be­trach­tet, son­dern als etwas, das sich im In­nern des Men­schen wirk­lich er­grei­fen lässt.</span>
+        <span id="s-18-9-10">Die ent­ge­gen­ge­setz­te Welt­an­schau­ung ver­setzt die Grün­de der Dinge hin­ter die Er­schei­nun­gen, in ein der mensch­li­chen Er­fah­rung jen­sei­ti­ges Ge­biet.</span>
         
-        <span id="s-18-9-11">Die ent­ge­gen­ge­setz­te Welt­an­schau­ung ver­setzt die Grün­de der Dinge hin­ter die Er­schei­nun­gen, in ein der mensch­li­chen Er­fah­rung jen­sei­ti­ges Ge­biet.</span>
+        <span id="s-18-9-11">Sie kann nun ent­we­der sich einem blin­den <i>Glau­ben</i> an diese Grün­de hin­ge­ben, der von einer po­si­ti­ven Of­fen­ba­rungs­re­li­gi­on sei­nen In­halt er­hält, oder Ver­stan­des­hy­po­the­sen und Theo­ri­en dar­über auf­stel­len, wie die­ses jen­sei­ti­ge Ge­biet der Wirk­lich­keit be­schaf­fen ist.</span>
         
-        <span id="s-18-9-12">Sie kann nun ent­we­der sich einem blin­den Glau­ben an diese Grün­de hin­ge­ben, der von einer po­si­ti­ven Of­fen­ba­rungs­re­li­gi­on sei­nen In­halt er­hält, oder Ver­stan­des­hy­po­the­sen und Theo­ri­en dar­über auf­stel­len, wie die­ses jen­sei­ti­ge Ge­biet der Wirk­lich­keit be­schaf­fen ist.</span>
+        <span id="s-18-9-12">Der Mys­ti­ker so­wohl wie der Be­ken­ner der Goe­the­schen Welt­an­schau­ung leh­nen so­wohl den Glau­ben an ein Jen­sei­ti­ges, wie auch die Hy­po­the­sen über ein sol­ches ab, und hal­ten sich an das wirk­li­che Geis­ti­ge, das sich in dem Men­schen selbst aus­spricht.</span>
         
-        <span id="s-18-9-13">Der Mys­ti­ker so­wohl wie der Be­ken­ner der Goe­the­schen Welt­an­schau­ung leh­nen so­wohl den Glau­ben an ein Jen­sei­ti­ges, wie auch die Hy­po­the­sen über ein sol­ches ab, und hal­ten sich an das wirk­li­che Geis­ti­ge, das sich in dem Men­schen selbst aus­spricht.</span>
+        <span id="s-18-9-13">Goe­the schreibt an Ja­co­bi: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Gott hat <i>dich</i> mit der <i>Me­ta­phy­sik</i> ge­straft und dir einen Pfahl ins Fleisch ge­setzt, <i>mich</i> da­ge­gen mit der <i>Phy­sik</i> ge­seg­net... Ich halte mich fest und fes­ter an die Got­tes­ver­eh­rung des Athe­is­ten (Spi­no­za)... und über­las­se euch alles, was ihr Re­li­gi­on heißt und hei­ßen müsst... Wenn du sagst, man könne an Gott nur <i>glau­ben</i>..., so sage ich dir, ich halte viel aufs <i>Schau­en</i>.</q> Was Goe­the <i>schau­en</i> will, ist die in sei­ner Ide­en­welt sich aus­drü­cken­de We­sen­heit der Dinge.</span>
         
-        <span id="s-18-9-14">Goe­the schreibt an Ja­co­bi: «Gott hat dich mit der Me­ta­phy­sik ge­straft und dir einen Pfahl ins Fleisch ge­setzt, mich da­ge­gen mit der Phy­sik ge­seg­net...</span>
+        <span id="s-18-9-17">Auch der Mys­ti­ker will durch Ver­sen­kung in das ei­ge­ne In­ne­re die We­sen­heit der Dinge er­ken­nen; aber er lehnt ge­ra­de die in sich klare und durch­sich­ti­ge Ide­en­welt ab als un­taug­lich zur Er­lan­gung einer hö­he­ren Er­kennt­nis.</span>
         
-        <span id="s-18-9-15">Ich halte mich fest und fes­ter an die Got­tes­ver­eh­rung des Athe­is­ten (Spi­no­za)...</span>
+        <span id="s-18-9-18">Er glaubt nicht, sein Ide­en­ver­mö­gen, son­dern an­de­re Kräf­te sei­nes In­nern ent­wi­ckeln zu müs­sen, um die Ur­grün­de der Dinge zu <i>schau­en</i>. Ge­wöhn­lich sind es un­kla­re Emp­fin­dun­gen und Ge­füh­le, in denen der Mys­ti­ker das Wesen der Dinge zu er­grei­fen glaubt.</span>
         
-        <span id="s-18-9-16">und über­las­se euch alles, was ihr Re­li­gi­on heißt und hei­ßen müsst...</span>
+        <span id="s-18-9-19">Aber Ge­füh­le und Emp­fin­dun­gen ge­hö­ren nur zum sub­jek­ti­ven Wesen des Men­schen.</span>
         
-        <span id="s-18-9-17">Wenn du sagst, man könne an Gott nur glau­ben..., so sage ich dir, ich halte viel aufs Schau­en.» Was Goe­the schau­en will, ist die in sei­ner Ide­en­welt sich aus­drü­cken­de We­sen­heit der Dinge.</span>
+        <span id="s-18-9-20">In ihnen spricht sich nichts über die Dinge aus.</span>
         
-        <span id="s-18-9-18">Auch der Mys­ti­ker will durch Ver­sen­kung in das ei­ge­ne In­ne­re die We­sen­heit der Dinge er­ken­nen; aber er lehnt ge­ra­de die in sich klare und durch­sich­ti­ge Ide­en­welt ab als un­taug­lich zur Er­lan­gung einer hö­he­ren Er­kennt­nis.</span>
+        <span id="s-18-9-21">Al­lein in den Ideen spre­chen die Dinge selbst.</span>
         
-        <span id="s-18-9-19">Er glaubt nicht, sein Ide­en­ver­mö­gen, son­dern an­de­re Kräf­te sei­nes In­nern ent­wi­ckeln zu müs­sen, um die Ur­grün­de der Dinge zu schau­en.</span>
+        <span id="s-18-9-22">Die Mys­tik ist eine ober­fläch­li­che Welt­an­schau­ung, trotz­dem die Mys­ti­ker den Ver­nunft­men­schen ge­gen­über sich viel auf ihre «Tiefe» zu­gu­te tun.</span>
         
-        <span id="s-18-9-20">Ge­wöhn­lich sind es un­kla­re Emp­fin­dun­gen und Ge­füh­le, in denen der Mys­ti­ker das Wesen der Dinge zu er­grei­fen glaubt.</span>
+        <span id="s-18-9-23">Sie wis­sen nichts über die Natur der Ge­füh­le, sonst wür­den sie sie nicht für Aus­sprü­che des We­sens der Welt hal­ten; und sie wis­sen nichts von der Natur der Ideen, sonst wür­den sie diese nicht für flach und ra­tio­na­lis­tisch hal­ten.</span>
         
-        <span id="s-18-9-21">Aber Ge­füh­le und Emp­fin­dun­gen ge­hö­ren nur zum sub­jek­ti­ven Wesen des Men­schen.</span>
+        <span id="s-18-9-24">Sie ahnen nicht, was Men­schen, die wirk­lich Ideen haben, in die­sen er­le­ben.</span>
         
-        <span id="s-18-9-22">In ihnen spricht sich nichts über die Dinge aus.</span>
+        <span id="s-18-9-25">Aber für viele sind Ideen eben bloße Worte.</span>
         
-        <span id="s-18-9-23">Al­lein in den Ideen spre­chen die Dinge selbst.</span>
+        <span id="s-18-9-26">Sie kön­nen die un­end­li­che Fülle ihres In­hal­tes sich nicht an­eig­nen.</span>
         
-        <span id="s-18-9-24">Die Mys­tik ist eine ober­fläch­li­che Welt­an­schau­ung, trotz­dem die Mys­ti­ker den Ver­nunft­men­schen ge­gen­über sich viel auf ihre «Tiefe» zu­gu­te tun.</span>
-        
-        <span id="s-18-9-25">Sie wis­sen nichts über die Natur der Ge­füh­le, sonst wür­den sie sie nicht für Aus­sprü­che des We­sens der Welt hal­ten; und sie wis­sen nichts von der Natur der Ideen, sonst wür­den sie diese nicht für flach und ra­tio­na­lis­tisch hal­ten.</span>
-        
-        <span id="s-18-9-26">Sie ahnen nicht, was Men­schen, die wirk­lich Ideen haben, in die­sen er­le­ben.</span>
-        
-        <span id="s-18-9-27">Aber für viele sind Ideen eben bloße Worte.</span>
-        
-        <span id="s-18-9-28">Sie kön­nen die un­end­li­che Fülle ihres In­hal­tes sich nicht an­eig­nen.</span>
-        
-        <span id="s-18-9-29">Kein Wun­der, dass sie ihre ei­ge­nen ide­en­lo­sen Wort­hül­sen als leer emp­fin­den.\*</span>
+        <span id="s-18-9-27">Kein Wun­der, dass sie ihre ei­ge­nen ide­en­lo­sen Wort­hül­sen als <i>leer</i> emp­fin­den.*</span>
         
       </p>
     </section>
     <section id="p-18-10">
       <p>
-        <span id="s-18-10-1">Wer den we­sent­li­chen In­halt der ob­jek­ti­ven Welt in dem ei­ge­nen In­nern sucht, der kann auch das We­sent­li­che der sitt­li­chen Welt­ord­nung nur in die mensch­li­che Natur selbst ver­le­gen.</span>
+        <span id="s-18-10-1">Wer den we­sent­li­chen In­halt der ob­jek­ti­ven Welt in dem ei­ge­nen In­nern sucht, der kann auch das We­sent­li­che der <i>sitt­li­chen Welt­ord­nung</i> nur in die mensch­li­che Natur selbst ver­le­gen.</span>
         
         <span id="s-18-10-2">Wer eine jen­sei­ti­ge Wirk­lich­keit hin­ter der mensch­li­chen vor­han­den glaubt, der muss in ihr auch den Quell des Sitt­li­chen su­chen.</span>
         
@@ -342,9 +343,9 @@
         
         <span id="s-18-11-7">Er will ihre Ver­wirk­li­chung und setzt sich für sie ein, weil sie ein Teil sei­nes ei­ge­nen We­sens sind.</span>
         
-        <span id="s-18-11-8">Die Idee ist die Richt­schnur und die Liebe ist die trei­ben­de Kraft in der Goe­the­schen Ethik.</span>
+        <span id="s-18-11-8">Die <i>Idee</i> ist die Richt­schnur und die <i>Liebe</i> ist die trei­ben­de Kraft in der Goe­the­schen Ethik.</span>
         
-        <span id="s-18-11-9">Ihm ist Pflicht, «wo man liebt, was man sich selbst be­fiehlt» (Natw.</span>
+        <span id="s-18-11-9">Ihm ist Pflicht, <q author="Jo­hann Wolf­gang von Goe­the" book-title="Sprü­che in Prosa" part="1">wo man liebt, was man sich selbst be­fiehlt</q> (Natw.</span>
         
         <span id="s-18-11-10">Schr., 4.</span>
         
@@ -358,7 +359,7 @@
     </section>
     <section id="p-18-12">
       <p>
-        <span id="s-18-12-1">Ein Han­deln im Sinne der Goe­the­schen Ethik ist ein frei­es Han­deln.</span>
+        <span id="s-18-12-1">Ein Han­deln im Sinne der Goe­the­schen Ethik ist ein <i>frei­es</i> Han­deln.</span>
         
         <span id="s-18-12-2">Denn der Mensch ist von nichts ab­hän­gig als von sei­nen ei­ge­nen Ideen.</span>
         
@@ -368,17 +369,15 @@
         
         <span id="s-18-12-5">Wer die­sen Ein­wand macht, der über­sieht, dass die Men­schen gleich­ar­ti­ge Wesen sind und dass sie des­halb nie­mals sitt­li­che Ideen pro­du­zie­ren wer­den, die durch ihre we­sent­li­che Ver­schie­den­heit einen un­har­mo­ni­schen Zu­sam­men­klang be­wir­ken wer­den.</span>
         
-        <span id="s-18-12-6">'s\* Wenn der Mensch nicht die Fä­hig­keit hätte, Schöp­fun­gen her­vor­zu­brin­gen, die ganz in dem Sinne ge­stal­tet sind, wie die Werke der Natur, und nur die­sen Sinn in voll­kom­me­ne­rer Weise zur An­schau­ung brin­gen, als die Natur es ver­mag, so gäbe es keine Kunst im Sinne Goe­thes.</span>
+        <span id="s-18-12-6">'s* Wenn der Mensch nicht die Fä­hig­keit hätte, Schöp­fun­gen her­vor­zu­brin­gen, die ganz in dem Sinne ge­stal­tet sind, wie die Werke der Natur, und nur die­sen Sinn in voll­kom­me­ne­rer Weise zur An­schau­ung brin­gen, als die Natur es ver­mag, so gäbe es keine Kunst im Sinne Goe­thes.</span>
         
         <span id="s-18-12-7">Was der Künst­ler schafft, sind Na­tur­ob­jek­te auf einer hö­he­ren Stufe der Voll­kom­men­heit.</span>
         
-        <span id="s-18-12-8">Kunst ist Fort­set­zung der Natur, «denn indem der Mensch auf den Gip­fel der Natur ge­stellt ist, so sieht er sich wie­der als eine ganze Natur an, die in sich aber­mals einen Gip­fel her­vor­zu­brin­gen hat.</span>
-        
-        <span id="s-18-12-9">Dazu stei­gert er sich, indem er sich mit allen Voll­kom­men­hei­ten und Tu­gen­den durch­dringt, Wahl, Ord­nung, Har­mo­nie und Be­deu­tung auf­ruft und sich end­lich bis zur Pro­duk­ti­on des Kunst­wer­kes er­hebt» (Goe­the, «Winckel­mann»; Nat.-Lit.</span>
+        <span id="s-18-12-8">Kunst ist Fort­set­zung der Natur, <q author="Jo­hann Wolf­gang von Goe­the" book-title="Winckel­mann und sein Jahr­hun­dert" part="1">denn indem der Mensch auf den Gip­fel der Natur ge­stellt ist, so sieht er sich wie­der als eine ganze Natur an, die in sich aber­mals einen Gip­fel her­vor­zu­brin­gen hat. Dazu stei­gert er sich, indem er sich mit allen Voll­kom­men­hei­ten und Tu­gen­den durch­dringt, Wahl, Ord­nung, Har­mo­nie und Be­deu­tung auf­ruft und sich end­lich <i>bis zur Pro­duk­ti­on des Kunst­wer­kes er­hebt</i></q> (Goe­the, «Winckel­mann»; Nat.-Lit.</span>
         
         <span id="s-18-12-10">Bd.</span>
         
-        <span id="s-18-12-11">27, S. 47). Nach dem An­blick der grie­chi­schen Kunst­wer­ke in Ita­li­en schreibt Goe­the: «Diese hohen Kunst­wer­ke sind zu­gleich als die höchs­ten Na­tur­wer­ke von Men­schen nach wah­ren und na­tür­li­chen Ge­set­zen her­vor­ge­bracht wor­den.» Der blo­ßen sin­nen­fäl­li­gen Er­fah­rungs­wirk­lich­keit ge­gen­über sind die Kunst­wer­ke ein schö­ner Schein; für den, der tie­fer zu schau­en ver­mag, sind sie «eine Ma­ni­fes­ta­ti­on ge­hei­mer Na­tur­ge­set­ze, die ohne sie nie­mals of­fen­bar wür­den» ( vgl. Natw.</span>
+        <span id="s-18-12-11">27, S. 47). Nach dem An­blick der grie­chi­schen Kunst­wer­ke in Ita­li­en schreibt Goe­the: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">Diese hohen Kunst­wer­ke sind zu­gleich als die höchs­ten Na­tur­wer­ke von Men­schen nach <i>wah­ren</i> und <i>na­tür­li­chen</i> Ge­set­zen her­vor­ge­bracht wor­den.</q> Der blo­ßen sin­nen­fäl­li­gen Er­fah­rungs­wirk­lich­keit ge­gen­über sind die Kunst­wer­ke ein schö­ner Schein; für den, der tie­fer zu schau­en ver­mag, sind sie <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ma­xi­men und Re­fle­xio­nen" part="1">eine Ma­ni­fes­ta­ti­on ge­hei­mer Na­tur­ge­set­ze, die ohne sie nie­mals of­fen­bar wür­den</q> ( vgl. Natw.</span>
         
         <span id="s-18-12-12">Schr., 4.</span>
         
@@ -396,11 +395,15 @@
         
         <span id="s-18-13-3">Der Künst­ler ge­stal­tet na­tür­lich; aber er ge­stal­tet nicht wie die Natur selbst.</span>
         
-        <span id="s-18-13-4">In die­sen Sät­zen schei­nen mir die Haupt­ge­dan­ken aus­ge­spro­chen zu sein, die Goe­the in sei­nen Apho­ris­men über Kunst nie­der­ge­legt hat.</span>
+        <span id="s-18-13-4">In die­sen Sät­zen schei­nen mir die Haupt­ge­dan­ken aus­ge­spro­chen zu sein, die Goe­the in sei­nen Apho­ris­men über <i>Kunst</i> nie­der­ge­legt hat.</span>
         
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="17-xvii-goethe-gegen-den-atomismus.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+  </nav>
 </main>
+
 </body>
 </html>

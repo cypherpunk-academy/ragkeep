@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VORREDE 1914</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -36,7 +49,7 @@
         
         <span id="s-3-1-11">Man wird gegen die Kom­po­si­ti­on des Buchs man­ches ein­wen­den kön­nen, weil der Um­fang der frü­he­ren Aus­füh­run­gen nicht ver­kürzt wor­den, da­ge­gen die Cha­rak­te­ris­tik der Phi­lo­so­phi­en vom sechs­ten vor­christ­li­chen bis zum neun­zehn­ten nach­christ­li­chen Jahr­hun­dert nur im kür­zes­ten Um­riss dar­ge­stellt wor­den ist.</span>
         
-        <span id="s-3-1-12">Da je­doch mein Ziel nicht nur das ist, einen kur­zen Ab­riss der Ge­schich­te der phi­lo­so­phi­schen Fra­gen zu geben, son­dern über diese Fra­gen und ihre Lö­sungs­ver­su­che selbst durch ihre ge­schicht­li­che Be­trach­tung zu spre­chen, so hielt ich es für rich­tig, die grö­ße­re Aus­führ­lich­keit für das letz­te Zeit­al­ter bei­zu­be­hal­ten.</span>
+        <span id="s-3-1-12">Da je­doch mein Ziel <i>nicht nur</i> das ist, einen kur­zen Ab­riss der Ge­schich­te der phi­lo­so­phi­schen Fra­gen zu geben, son­dern über diese Fra­gen und ihre Lö­sungs­ver­su­che selbst durch ihre ge­schicht­li­che Be­trach­tung zu spre­chen, so hielt ich es für rich­tig, die grö­ße­re Aus­führ­lich­keit für das letz­te Zeit­al­ter bei­zu­be­hal­ten.</span>
         
         <span id="s-3-1-13">So wie diese Fra­gen von den Phi­lo­so­phen des neun­zehn­ten Jahr­hun­derts an­ge­se­hen und dar­ge­stellt wor­den sind, liegt den ge­wohn­ten Denk­rich­tun­gen und den phi­lo­so­phi­schen Be­dürf­nis­sen der Ge­gen­wart noch nahe.</span>
         
@@ -58,11 +71,11 @@
     </section>
     <section id="p-3-3">
       <p>
-        <span id="s-3-3-1">Wer auch in die­sem Buch einen neuen Be­weis wird er­ken­nen wol­len, dass ich meine ei­ge­nen An­schau­un­gen im Laufe der Jahre «ge­än­dert» habe, den werde ich wohl von einer sol­chen «Mei­nung» auch nicht durch den Hin­weis ab­brin­gen kön­nen, dass die Dar­stel­lung der phi­lo­so­phi­schen An­sich­ten, wel­che ich in der ers­ten Auf­la­ge der «Welt- und Le­bens­an­schau­un­gen» ge­ge­ben habe, zwar im Ein­zel­nen viel er­wei­tert und er­gänzt, dass aber der In­halt des alten Bu­ches in das neue im We­sent­li­chen wört­lich un­ver­än­dert über­ge­gan­gen ist.</span>
+        <span id="s-3-3-1">Wer auch in die­sem Buch einen neuen Be­weis wird er­ken­nen wol­len, dass ich meine ei­ge­nen An­schau­un­gen im Laufe der Jahre «ge­än­dert» habe, den werde ich wohl von einer sol­chen «Mei­nung» auch nicht durch den Hin­weis ab­brin­gen kön­nen, dass die Dar­stel­lung der phi­lo­so­phi­schen An­sich­ten, wel­che ich in der ers­ten Auf­la­ge der «Welt- und Le­bens­an­schau­un­gen» ge­ge­ben habe, zwar im Ein­zel­nen viel <i>er­wei­tert</i> und <i>er­gänzt</i>, dass aber der In­halt des alten Bu­ches in das neue im We­sent­li­chen wört­lich <i>un­ver­än­dert</i> über­ge­gan­gen ist.</span>
         
         <span id="s-3-3-2">Die ge­ring­fü­gi­gen Än­de­run­gen, die an ein­zel­nen Stel­len vor­kom­men, schie­nen mir not­wen­dig, nicht weil ich das Be­dürf­nis hatte, das eine oder das an­de­re nach fünf­zehn Jah­ren an­ders dar­zu­stel­len als frü­her, son­dern weil ich fand, dass eine ge­än­der­te Aus­drucks­wei­se durch den grö­ße­ren Zu­sam­men­hang ge­for­dert wird, in dem die­ser oder jener Ge­dan­ke in dem neuen Buch er­scheint, wäh­rend im alten Buch von einem sol­chen Zu­sam­men­hang nicht die Rede war.</span>
         
-        <span id="s-3-3-3">– Es wird aber si­cher­lich immer Men­schen geben, die in den auf­ein­an­der­fol­gen­den Schrif­ten einer Per­sön­lich­keit gerne Wi­der­sprü­che kon­stru­ie­ren möch­ten, weil sie die ge­wiss nicht un­zu­läs­si­ge Er­wei­te­rung des Er­kennt­nis­stre­bens einer sol­chen Per­sön­lich­keit nicht rich­tig ins Auge fas­sen kön­nen oder wol­len.</span>
+        <span id="s-3-3-3">– Es wird aber si­cher­lich immer Men­schen geben, die in den auf­ein­an­der­fol­gen­den Schrif­ten einer Per­sön­lich­keit gerne Wi­der­sprü­che kon­stru­ie­ren möch­ten, weil sie die ge­wiss nicht un­zu­läs­si­ge <i>Er­wei­te­rung</i> des Er­kennt­nis­stre­bens einer sol­chen Per­sön­lich­keit nicht rich­tig ins Auge fas­sen kön­nen oder wol­len.</span>
         
         <span id="s-3-3-4">Dass man bei sol­cher Er­wei­te­rung in spä­te­ren Jah­ren man­ches an­ders als in frü­he­ren sagt, be­deu­tet si­cher kei­nen Wi­der­spruch, wenn man die Über­ein­stim­mung des einen mit dem an­de­ren nicht im Sinne des Ab­schrei­bens des Spä­te­ren vom Frü­he­ren, son­dern im Sinne der le­ben­di­gen Ent­wick­lung einer Per­sön­lich­keit meint.</span>
         
@@ -73,6 +86,11 @@
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="02-vorrede-zur-neuauflage-1918.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="05-zur-orientierung-uber-die-leitlinien-der-darstellung.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

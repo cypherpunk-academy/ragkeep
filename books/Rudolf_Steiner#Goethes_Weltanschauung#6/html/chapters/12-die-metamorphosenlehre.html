@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DIE METAMORPHOSENLEHRE</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -14,15 +27,16 @@
     <h1 id="c-12-title" data-slug="die-metamorphosenlehre">DIE METAMORPHOSENLEHRE</h1>
     <section id="p-12-1">
       <p>
-        <span id="s-12-1-1">1| Man kann Goe­thes Ver­hält­nis zu den Na­tur­wis­sen­schaf­ten nicht ver­ste­hen, wenn man sich bloß an die Ein­zel­ent­de­ckun­gen hält, die er ge­macht hat.</span>
+        <a class="p-num" href="#p-12-1">1|</a>
+        <span id="s-12-1-1">Man kann Goe­thes Ver­hält­nis zu den Na­tur­wis­sen­schaf­ten nicht ver­ste­hen, wenn man sich bloß an die Ein­zel­ent­de­ckun­gen hält, die er ge­macht hat.</span>
         
         <span id="s-12-1-2">Ich sehe als lei­ten­den Ge­sichts­punkt für die Be­trach­tung die­ses Ver­hält­nis­ses die Worte an, die Goe­the am 18.</span>
         
-        <span id="s-12-1-3">Au­gust 1787 von Ita­li­en aus an Kne­bel ge­rich­tet hat: «Nach dem, was ich bei Nea­pel, in Si­zi­li­en von Pflan­zen und Fi­schen ge­se­hen habe, würde ich, wenn ich zehn Jahre jün­ger wäre, sehr ver­sucht sein, eine Reise nach In­di­en zu ma­chen, nicht um etwas Neues zu ent­de­cken, son­dern um das Ent­deck­te nach mei­ner Art an­zu­se­hen.» Auf die Art, wie Goe­the die ihm be­kann­ten Na­tur­er­schei­nun­gen in einer sei­ner Den­kungs­art ge­mä­ßen Na­tur­an­sicht zu­sam­men­ge­fasst hat, scheint es mir an­zu­kom­men.</span>
+        <span id="s-12-1-3">Au­gust 1787 von Ita­li­en aus an Kne­bel ge­rich­tet hat: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Nach dem, was ich bei Nea­pel, in Si­zi­li­en von Pflan­zen und Fi­schen ge­se­hen habe, würde ich, wenn ich zehn Jahre jün­ger wäre, sehr ver­sucht sein, eine Reise nach In­di­en zu ma­chen, <i>nicht um etwas Neues zu ent­de­cken, son­dern um das Ent­deck­te nach mei­ner Art an­zu­se­hen</i>.</q> Auf die Art, wie Goe­the die ihm be­kann­ten Na­tur­er­schei­nun­gen in einer sei­ner Den­kungs­art ge­mä­ßen Na­tur­an­sicht zu­sam­men­ge­fasst hat, scheint es mir an­zu­kom­men.</span>
         
-        <span id="s-12-1-4">Wenn alle die Ein­zel­ent­de­ckun­gen, die ihm ge­lun­gen sind, schon vor ihm ge­macht ge­we­sen wären, und er uns nichts als seine Na­tur­an­sicht ge­ge­ben hätte, so schmä­ler­te dies die Be­deu­tung sei­ner Na­tur­stu­di­en nicht im ge­rings­ten.</span>
+        <span id="s-12-1-4">Wenn alle die Ein­zel­ent­de­ckun­gen, die ihm ge­lun­gen sind, schon vor ihm ge­macht ge­we­sen wären, und er uns nichts als seine <i>Na­tur­an­sicht</i> ge­ge­ben hätte, so schmä­ler­te dies die Be­deu­tung sei­ner Na­tur­stu­di­en nicht im ge­rings­ten.</span>
         
-        <span id="s-12-1-5">Ich bin mit Du Bois-Rey­mond einer Mei­nung dar­über, dass «auch ohne Goe­the die Wis­sen­schaft über­haupt so weit wäre, wie sie ist», dass die ihm ge­lun­ge­nen Schrit­te frü­her oder spä­ter an­de­re getan hät­ten.</span>
+        <span id="s-12-1-5">Ich bin mit Du Bois-Rey­mond einer Mei­nung dar­über, dass <q author="Emil Du Bois-Rey­mond" book-title="Goe­the und kein Ende" part="1">auch ohne Goe­the die Wis­sen­schaft über­haupt so weit wäre, wie sie ist</q>, dass die ihm ge­lun­ge­nen Schrit­te frü­her oder spä­ter an­de­re getan hät­ten.</span>
         
         <span id="s-12-1-6">(Goe­the und kein Ende, S. 31.) Ich kann diese Worte nur nicht, wie es Du Bois-Rey­mond tut, auf den gan­zen Um­fang von Goe­thes na­tur­wis­sen­schaft­li­chen Ar­bei­ten be­zie­hen.</span>
         
@@ -70,17 +84,18 @@
     </section>
     <section id="p-12-2">
       <p>
-        <span id="s-12-2-1">2| Im Ge­biet der or­ga­ni­schen Na­tur­er­schei­nun­gen ist das Be­deut­sa­me in Goe­thes An­sicht die Vor­stel­lung, die er vom Wesen des Le­bens aus­bil­de­te.</span>
+        <a class="p-num" href="#p-12-2">2|</a>
+        <span id="s-12-2-1">Im Ge­biet der or­ga­ni­schen Na­tur­er­schei­nun­gen ist das Be­deut­sa­me in Goe­thes An­sicht die Vor­stel­lung, die er vom <i>Wesen des Le­bens</i> aus­bil­de­te.</span>
         
         <span id="s-12-2-2">Nicht auf die Be­to­nung der Tat­sa­che, dass Blatt, Kelch, Krone usw. Or­ga­ne an der Pflan­ze sind, die mit­ein­an­der iden­tisch sind, und sich aus einem ge­mein­schaft­li­chen Grund­ge­bil­de ent­wi­ckeln, kommt es an.</span>
         
         <span id="s-12-2-3">Son­dern dar­auf, wel­che Vor­stel­lung Goe­the von dem Gan­zen der Pflan­zen­na­tur als einem Le­ben­di­gen hatte und wie er sich das Ein­zel­ne aus die­sem Gan­zen her­vor­ge­hend dach­te.</span>
         
-        <span id="s-12-2-4">Seine Idee von dem Wesen des Or­ga­nis­mus ist seine ur­ei­gens­te zen­tra­le Ent­de­ckung im Ge­biet der Bio­lo­gie zu nen­nen.</span>
+        <span id="s-12-2-4">Seine Idee von dem <i>Wesen des Or­ga­nis­mus</i> ist seine ur­ei­gens­te zen­tra­le Ent­de­ckung im Ge­biet der Bio­lo­gie zu nen­nen.</span>
         
         <span id="s-12-2-5">Dass sich in der Pflan­ze, in dem Tier etwas an­schau­en lasse, was der blo­ßen Sin­nen­be­ob­ach­tung nicht zu­gäng­lich ist, war Goe­thes Grund­über­zeu­gung.</span>
         
-        <span id="s-12-2-6">Was das leib­li­che Auge an dem Or­ga­nis­mus be­ob­ach­ten kann, scheint Goe­the nur die Folge zu sein des le­ben­di­gen Gan­zen durch­ein­an­der wir­ken­der Bil­dungs­ge­set­ze, die dem geis­ti­gen Auge al­lein zu­gäng­lich sind.</span>
+        <span id="s-12-2-6">Was das leib­li­che Auge an dem Or­ga­nis­mus be­ob­ach­ten kann, scheint Goe­the nur die Folge zu sein des le­ben­di­gen Gan­zen durch­ein­an­der wir­ken­der Bil­dungs­ge­set­ze, die dem <i>geis­ti­gen Auge</i> al­lein zu­gäng­lich sind.</span>
         
         <span id="s-12-2-7">Was er mit dem geis­ti­gen Auge an der Pflan­ze, an dem Tier er­schaut, das hat er be­schrie­ben.</span>
         
@@ -96,33 +111,33 @@
     </section>
     <section id="p-12-3">
       <p>
-        <span id="s-12-3-1">3| Als Goe­the an­fing, selb­stän­dig über die Er­schei­nun­gen der Natur nach­zu­sin­nen, nahm vor allem an­de­ren der Be­griff des Le­bens seine Auf­merk­sam­keit in An­spruch.</span>
+        <a class="p-num" href="#p-12-3">3|</a>
+        <span id="s-12-3-1">Als Goe­the an­fing, selb­stän­dig über die Er­schei­nun­gen der Natur nach­zu­sin­nen, nahm vor allem an­de­ren der <i>Be­griff des Le­bens</i> seine Auf­merk­sam­keit in An­spruch.</span>
         
         <span id="s-12-3-2">In einem Brief aus der Straß­bur­ger Zeit vom 14.</span>
         
-        <span id="s-12-3-3">Juli 1770 schreibt er von einem Schmet­ter­ling: «Das arme Tier zit­tert im Netz, streift sich die schöns­ten Far­ben ab; und wenn man es ja un­ver­sehrt er­wischt, so steckt es doch end­lich steif und leb­los da; der Leich­nam ist nicht das ganze Tier, es ge­hört noch etwas dazu, noch ein Haupt­stück, und bei der Ge­le­gen­heit, wie bei jeder an­de­ren, ein sehr haupt­säch­li­ches Haupt­stück: das Leben.</span>
+        <span id="s-12-3-3">Juli 1770 schreibt er von einem Schmet­ter­ling: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Das arme Tier zit­tert im Netz, streift sich die schöns­ten Far­ben ab; und wenn man es ja un­ver­sehrt er­wischt, so steckt es doch end­lich steif und leb­los da; der Leich­nam ist nicht das <i>ganze</i> Tier, es ge­hört noch etwas dazu, noch ein Haupt­stück, und bei <i>der</i> Ge­le­gen­heit, wie bei jeder an­de­ren, ein sehr haupt­säch­li­ches Haupt­stück: <i>das Leben</i>. -</q> Dass ein Or­ga­nis­mus nicht wie ein totes Na­tur­pro­dukt be­trach­tet wer­den kann, dass noch mehr darin steckt als die Kräf­te, die auch in der un­or­ga­ni­schen Natur leben, war Goe­the von vorn­her­ein klar.</span>
         
-        <span id="s-12-3-4">-» Dass ein Or­ga­nis­mus nicht wie ein totes Na­tur­pro­dukt be­trach­tet wer­den kann, dass noch mehr darin steckt als die Kräf­te, die auch in der un­or­ga­ni­schen Natur leben, war Goe­the von vorn­her­ein klar.</span>
+        <span id="s-12-3-4">Wenn Du Bois-Rey­mond meint, dass <q author="Émil du Bois-Rey­mond" part="1">die rein me­cha­ni­sche Welt­kon­struk­ti­on, wel­che heute die Wis­sen­schaft aus­macht, dem Wei­mar­schen Dich­ter­fürs­ten nicht min­der ver­hasst ge­we­sen wäre, als einst Frie­de­ri­kens Freund das ‘Sys­te­me de la na­tu­re’</q>, so hat er un­zwei­fel­haft Recht; und nicht min­der hat er Recht mit den an­de­ren Wor­ten: von die­ser Welt­kon­struk­ti­on, die <q author="Émil du Bois-Rey­mond" book-title="Goe­the und kein Ende" part="1">durch die Ur­zeu­gung an die Kant-La­pla­ce­sche Theo­rie grenzt, von der Ent­ste­hung des Men­schen aus dem Chaos <i>durch das von Ewig­keit zu Ewig­keit ma­the­ma­tisch be­stimm­te Spiel der Atome</i>, von dem ei­si­gen Welt­ende – von die­sen Bil­dern, wel­che unser Ge­schlecht so un­füh­lend ins Auge fasst, wie es an die Schreck­nis­se des Ei­sen­bahn­fah­rens sich ge­wöhn­te – hätte <i>Goe­the</i> sich schau­dernd ab­ge­wandt</q> (Goe­the und kein Ende, S. 35 f.). Ge­wiss hätte er sich schau­dernd ab­ge­wandt, weil er einen hö­he­ren Be­griff des Le­ben­di­gen such­te und ihn auch fand als den eines kom­pli­zier­ten, ma­the­ma­tisch be­stimm­ten Me­cha­nis­mus.</span>
         
-        <span id="s-12-3-5">Wenn Du Bois-Rey­mond meint, dass «die rein me­cha­ni­sche Welt­kon­struk­ti­on, wel­che heute die Wis­sen­schaft aus­macht, dem Wei­mar­schen Dich­ter­fürs­ten nicht min­der ver­hasst ge­we­sen wäre, als einst Frie­de­ri­kens Freund das «Sys­te­me de la na­tu­re», so hat er un­zwei­fel­haft Recht; und nicht min­der hat er Recht mit den an­de­ren Wor­ten: von die­ser Welt­kon­struk­ti­on, die «durch die Ur­zeu­gung an die Kant-La­pla­ce­sche Theo­rie grenzt, von der Ent­ste­hung des Men­schen aus dem Chaos durch das von Ewig­keit zu Ewig­keit ma­the­ma­tisch be­stimm­te Spiel der Atome, von dem ei­si­gen Welt­ende – von die­sen Bil­dern, wel­che unser Ge­schlecht so un­füh­lend ins Auge fasst, wie es an die Schreck­nis­se des Ei­sen­bahn­fah­rens sich ge­wöhn­te – hätte Goe­the sich schau­dernd ab­ge­wandt» (Goe­the und kein Ende, S. 35 f.). Ge­wiss hätte er sich schau­dernd ab­ge­wandt, weil er einen hö­he­ren Be­griff des Le­ben­di­gen such­te und ihn auch fand als den eines kom­pli­zier­ten, ma­the­ma­tisch be­stimm­ten Me­cha­nis­mus.</span>
+        <span id="s-12-3-5">Nur wer un­fä­hig ist, einen sol­chen hö­he­ren Be­griff zu fas­sen und das Le­ben­di­ge mit dem Me­cha­ni­schen iden­ti­fi­ziert, weil er am Or­ga­nis­mus nur das Me­cha­ni­sche zu sehen ver­mag, der wird sich für die me­cha­ni­sche Welt­kon­struk­ti­on und ihr Spiel der Atome er­wär­men und un­füh­lend die Bil­der ins Auge fas­sen, die Du Bois-Rey­mond ent­wirft.</span>
         
-        <span id="s-12-3-6">Nur wer un­fä­hig ist, einen sol­chen hö­he­ren Be­griff zu fas­sen und das Le­ben­di­ge mit dem Me­cha­ni­schen iden­ti­fi­ziert, weil er am Or­ga­nis­mus nur das Me­cha­ni­sche zu sehen ver­mag, der wird sich für die me­cha­ni­sche Welt­kon­struk­ti­on und ihr Spiel der Atome er­wär­men und un­füh­lend die Bil­der ins Auge fas­sen, die Du Bois-Rey­mond ent­wirft.</span>
+        <span id="s-12-3-6">Wer aber den Be­griff des Or­ga­ni­schen im Sinne Goe­thes in sich auf­neh­men kann, der wird über seine Be­rech­ti­gung eben­so wenig strei­ten wie über das Vor­han­den­sein des Me­cha­ni­schen.</span>
         
-        <span id="s-12-3-7">Wer aber den Be­griff des Or­ga­ni­schen im Sinne Goe­thes in sich auf­neh­men kann, der wird über seine Be­rech­ti­gung eben­so wenig strei­ten wie über das Vor­han­den­sein des Me­cha­ni­schen.</span>
+        <span id="s-12-3-7">Man strei­tet ja auch nicht mit dem Far­ben­blin­den über die Far­ben­welt.</span>
         
-        <span id="s-12-3-8">Man strei­tet ja auch nicht mit dem Far­ben­blin­den über die Far­ben­welt.</span>
+        <span id="s-12-3-8">Alle An­schau­un­gen, wel­che das Or­ga­ni­sche sich me­cha­nisch vor­stel­len, ver­fal­len dem Rich­ter­spruch, den Goe­the sei­nen Me­phis­to­phe­les sagen lässt: Wer will was Le­ben­dig’s er­ken­nen und be­schrei­ben, Sucht erst den Geist her­aus­zu­trei­ben, Dann hat er die Teile in der Hand.</span>
         
-        <span id="s-12-3-9">Alle An­schau­un­gen, wel­che das Or­ga­ni­sche sich me­cha­nisch vor­stel­len, ver­fal­len dem Rich­ter­spruch, den Goe­the sei­nen Me­phis­to­phe­les sagen lässt: Wer will was Le­ben­dig’s er­ken­nen und be­schrei­ben, Sucht erst den Geist her­aus­zu­trei­ben, Dann hat er die Teile in der Hand.</span>
+        <span id="s-12-3-9">Fehlt, lei­der!</span>
         
-        <span id="s-12-3-10">Fehlt, lei­der!</span>
-        
-        <span id="s-12-3-11">nur das geis­ti­ge Band.</span>
+        <span id="s-12-3-10">nur das geis­ti­ge Band.</span>
         
       </p>
     </section>
     <section id="p-12-4">
       <p>
-        <span id="s-12-4-1">4| Die Mög­lich­keit, sich in­ti­mer mit dem Leben der Pflan­zen zu be­schäf­ti­gen, fand sich für Goe­the, als ihm der Her­zog Karl Au­gust am 21.</span>
+        <a class="p-num" href="#p-12-4">4|</a>
+        <span id="s-12-4-1">Die Mög­lich­keit, sich in­ti­mer mit dem Leben der Pflan­zen zu be­schäf­ti­gen, fand sich für Goe­the, als ihm der Her­zog Karl Au­gust am 21.</span>
         
         <span id="s-12-4-2">April 1776 einen Gar­ten schenk­te.</span>
         
@@ -142,7 +157,7 @@
         
         <span id="s-12-4-10">Er woll­te die Idee der Natur da auf­su­chen, wo sie sich am klars­ten of­fen­bart und dann von dem Voll­kom­me­nen zum Un­voll­kom­me­nen her­ab­stei­gen, um die­ses aus jenem zu be­grei­fen.</span>
         
-        <span id="s-12-4-11">Nicht das Zu­sam­men­ge­setz­te woll­te er durch das Ein­fa­che er­klä­ren; son­dern jenes mit einem Blick als wir­ken­des Gan­zes über­schau­en und dann das Ein­fa­che und Un­voll­kom­me­ne als ein­sei­ti­ge Aus­bil­dung des Zu­sam­men­ge­setz­ten und Voll­kom­me­nen er­klä­ren.</span>
+        <span id="s-12-4-11">Nicht das Zu­sam­men­ge­setz­te woll­te er durch das Ein­fa­che er­klä­ren; son­dern jenes mit <i>einem</i> Blick als wir­ken­des Gan­zes über­schau­en und dann das Ein­fa­che und Un­voll­kom­me­ne als ein­sei­ti­ge Aus­bil­dung des Zu­sam­men­ge­setz­ten und Voll­kom­me­nen er­klä­ren.</span>
         
         <span id="s-12-4-12">Wenn die Natur fähig ist, nach un­zäh­li­gen Pflan­zen­for­men noch eine zu ma­chen, die sie alle ent­hält, so muss auch dem Geist beim An­schau­en die­ser voll­kom­me­nen Form das Ge­heim­nis der Pflan­zen­bil­dung in un­mit­tel­ba­rer An­schau­ung auf­ge­hen, und er wird dann leicht das an dem Voll­kom­me­nen Be­ob­ach­te­te auf das Un­voll­kom­me­ne an­wen­den kön­nen.</span>
         
@@ -154,59 +169,54 @@
     </section>
     <section id="p-12-5">
       <p>
-        <span id="s-12-5-1">5| Als sich Goe­the nach einem wis­sen­schaft­li­chen Füh­rer für seine bo­ta­ni­schen Stu­di­en umsah, konn­te er kei­nen an­de­ren fin­den als Linné.</span>
+        <a class="p-num" href="#p-12-5">5|</a>
+        <span id="s-12-5-1">Als sich Goe­the nach einem wis­sen­schaft­li­chen Füh­rer für seine bo­ta­ni­schen Stu­di­en umsah, konn­te er kei­nen an­de­ren fin­den als <i>Linné</i>. Wir er­fah­ren von sei­ner Be­schäf­ti­gung mit Linné zu­erst aus den Brie­fen an Frau von Stein vom Jahr 1782.</span>
         
-        <span id="s-12-5-2">Wir er­fah­ren von sei­ner Be­schäf­ti­gung mit Linné zu­erst aus den Brie­fen an Frau von Stein vom Jahr 1782.</span>
+        <span id="s-12-5-2">Wie ernst es Goe­the mit sei­nen na­tur­wis­sen­schaft­li­chen Be­stre­bun­gen war, geht aus dem In­ter­es­se her­vor, das er an Lin­nes Schrif­ten ge­nom­men hat.</span>
         
-        <span id="s-12-5-3">Wie ernst es Goe­the mit sei­nen na­tur­wis­sen­schaft­li­chen Be­stre­bun­gen war, geht aus dem In­ter­es­se her­vor, das er an Lin­nes Schrif­ten ge­nom­men hat.</span>
+        <span id="s-12-5-3">Er ge­steht, dass nach Shake­speare und Spi­no­za auf ihn die größ­te Wir­kung von Linné aus­ge­gan­gen ist.</span>
         
-        <span id="s-12-5-4">Er ge­steht, dass nach Shake­speare und Spi­no­za auf ihn die größ­te Wir­kung von Linné aus­ge­gan­gen ist.</span>
+        <span id="s-12-5-4">Aber wie wenig konn­te ihn Linné be­frie­di­gen.</span>
         
-        <span id="s-12-5-5">Aber wie wenig konn­te ihn Linné be­frie­di­gen.</span>
+        <span id="s-12-5-5">Goe­the woll­te die ver­schie­de­nen Pflan­zen­for­men be­ob­ach­ten, um das Ge­mein­sa­me, das in ihnen lebt, zu er­ken­nen.</span>
         
-        <span id="s-12-5-6">Goe­the woll­te die ver­schie­de­nen Pflan­zen­for­men be­ob­ach­ten, um das Ge­mein­sa­me, das in ihnen lebt, zu er­ken­nen.</span>
+        <span id="s-12-5-6">Er woll­te wis­sen, was alle diese Ge­bil­de zu Pflan­zen macht.</span>
         
-        <span id="s-12-5-7">Er woll­te wis­sen, was alle diese Ge­bil­de zu Pflan­zen macht.</span>
+        <span id="s-12-5-7">Und Linné hatte sich damit be­gnügt, die man­nig­fal­tigs­ten Pflan­zen­for­men in einer be­stimm­ten Ord­nung ne­ben­ein­an­der zu stel­len und zu be­schrei­ben.</span>
         
-        <span id="s-12-5-8">Und Linné hatte sich damit be­gnügt, die man­nig­fal­tigs­ten Pflan­zen­for­men in einer be­stimm­ten Ord­nung ne­ben­ein­an­der zu stel­len und zu be­schrei­ben.</span>
+        <span id="s-12-5-8">Hier stieß Goe­thes naive, un­be­fan­ge­ne Na­tur­be­ob­ach­tung in einem ein­zel­nen Fall auf die durch ein­sei­tig auf­ge­fass­ten Pla­to­nis­mus be­ein­fluss­te Denk­wei­se der Wis­sen­schaft.</span>
         
-        <span id="s-12-5-9">Hier stieß Goe­thes naive, un­be­fan­ge­ne Na­tur­be­ob­ach­tung in einem ein­zel­nen Fall auf die durch ein­sei­tig auf­ge­fass­ten Pla­to­nis­mus be­ein­fluss­te Denk­wei­se der Wis­sen­schaft.</span>
+        <span id="s-12-5-9">Diese Denk­wei­se sieht in den ein­zel­nen For­men Ver­wirk­li­chun­gen ur­sprüng­li­cher, ne­ben­ein­an­der be­ste­hen­der, pla­to­ni­scher Ideen oder Schöp­fungs­ge­dan­ken.</span>
         
-        <span id="s-12-5-10">Diese Denk­wei­se sieht in den ein­zel­nen For­men Ver­wirk­li­chun­gen ur­sprüng­li­cher, ne­ben­ein­an­der be­ste­hen­der, pla­to­ni­scher Ideen oder Schöp­fungs­ge­dan­ken.</span>
+        <span id="s-12-5-10">Goe­the sieht in dem ein­zel­nen Ge­bil­de nur eine be­son­de­re Aus­ge­stal­tung eines ide­el­len Ur­we­sens, das in allen For­men lebt.</span>
         
-        <span id="s-12-5-11">Goe­the sieht in dem ein­zel­nen Ge­bil­de nur eine be­son­de­re Aus­ge­stal­tung eines ide­el­len Ur­we­sens, das in allen For­men lebt.</span>
+        <span id="s-12-5-11">Jene Denk­wei­se will mög­lichst genau die ein­zel­nen For­men un­ter­schei­den, um die Viel­glied­rig­keit der Ide­en­for­men oder des Schöp­fungs­pla­nes zu er­ken­nen; Goe­the will die Viel­glied­rig­keit des Be­son­de­ren aus der ur­sprüng­li­chen Ein­heit er­klä­ren.</span>
         
-        <span id="s-12-5-12">Jene Denk­wei­se will mög­lichst genau die ein­zel­nen For­men un­ter­schei­den, um die Viel­glied­rig­keit der Ide­en­for­men oder des Schöp­fungs­pla­nes zu er­ken­nen; Goe­the will die Viel­glied­rig­keit des Be­son­de­ren aus der ur­sprüng­li­chen Ein­heit er­klä­ren.</span>
+        <span id="s-12-5-12">Dass vie­les in man­nig­fal­ti­gen For­men da ist, ist für jene Den­kungs­art ohne Wei­te­res klar, denn schon die idea­len Ur­bil­der sind für sie das Man­nig­fal­ti­ge.</span>
         
-        <span id="s-12-5-13">Dass vie­les in man­nig­fal­ti­gen For­men da ist, ist für jene Den­kungs­art ohne Wei­te­res klar, denn schon die idea­len Ur­bil­der sind für sie das Man­nig­fal­ti­ge.</span>
+        <span id="s-12-5-13">Für Goe­the ist das nicht klar, denn das Viele ge­hört nach sei­ner An­sicht nur zu­sam­men, wenn sich <i>eines</i> darin of­fen­bart.</span>
         
-        <span id="s-12-5-14">Für Goe­the ist das nicht klar, denn das Viele ge­hört nach sei­ner An­sicht nur zu­sam­men, wenn sich eines darin of­fen­bart.</span>
+        <span id="s-12-5-14">Goe­the sagt des­halb, was Linné <q author="Jo­hann Wolf­gang von Goe­the" part="1">mit Ge­walt aus­ein­an­der zu hal­ten such­te, muss­te nach dem in­ners­ten Be­dürf­nis mei­nes We­sens zur Ver­ei­ni­gung an­stre­ben</q>. Linné nimmt die vor­han­de­nen For­men ein­fach hin, ohne da­nach zu fra­gen, wie sie aus einer Grund­form ge­wor­den sind: <q author="Carl von Linné" part="1">Spe­zi­es zäh­len wir so viele, als ver­schie­de­ne For­men im Prin­zip ge­schaf­fen wor­den sind</q>: dies ist sein Grund­satz.</span>
         
-        <span id="s-12-5-15">Goe­the sagt des­halb, was Linné «mit Ge­walt aus­ein­an­der zu hal­ten such­te, muss­te nach dem in­ners­ten Be­dürf­nis mei­nes We­sens zur Ver­ei­ni­gung an­stre­ben».</span>
-        
-        <span id="s-12-5-16">Linné nimmt die vor­han­de­nen For­men ein­fach hin, ohne da­nach zu fra­gen, wie sie aus einer Grund­form ge­wor­den sind: «Spe­zi­es zäh­len wir so viele, als ver­schie­de­ne For­men im Prin­zip ge­schaf­fen wor­den sind»: dies ist sein Grund­satz.</span>
-        
-        <span id="s-12-5-17">Goe­the sucht im Pflan­zen­reich das Wirk­sa­me, das durch Spe­zi­fi­zie­rung der Grund­form das Ein­zel­ne schafft.</span>
+        <span id="s-12-5-15">Goe­the sucht im Pflan­zen­reich das Wirk­sa­me, das durch Spe­zi­fi­zie­rung der Grund­form das Ein­zel­ne schafft.</span>
         
       </p>
     </section>
     <section id="p-12-6">
       <p>
-        <span id="s-12-6-1">6| Ein nai­ve­res Ver­hält­nis zur Pflan­zen­welt als bei Linné fand Goe­the bei Rous­seau.</span>
+        <a class="p-num" href="#p-12-6">6|</a>
+        <span id="s-12-6-1">Ein nai­ve­res Ver­hält­nis zur Pflan­zen­welt als bei Linné fand Goe­the bei Rous­seau.</span>
         
         <span id="s-12-6-2">Am 16.</span>
         
-        <span id="s-12-6-3">Juni 1782 schreibt er an Karl Au­gust: «In Rous­se­aus Wer­ken fin­den sich ganz al­ler­liebs­te Brie­fe über die Bo­ta­nik, worin er diese Wis­sen­schaft auf das faß­lichs­te und zier­lichs­te einer Dame vor­trägt.</span>
-        
-        <span id="s-12-6-4">Es ist recht ein Mus­ter, wie man un­ter­rich­ten soll und eine Bei­la­ge zum Emil.</span>
-        
-        <span id="s-12-6-5">Ich nehme daher An­lass, das schö­ne Reich der Blu­men mei­nen schö­nen Freun­din­nen aufs neue zu emp­feh­len.» In sei­ner «Ge­schich­te mei­nes bo­ta­ni­schen Stu­di­ums» legt Goe­the dar, was ihn zu Rous­se­aus bo­ta­ni­schen Ideen hin­ge­zo­gen hat: «Sein Ver­hält­nis zu Pflan­zen­freun­den und -ken­nern, be­son­ders zu der Her­zo­gin von Port­land, mag sei­nen Scharf­blick mehr in die Brei­te ge­wie­sen haben, und ein Geist wie der sei­ni­ge, der den Na­tio­nen Ge­setz und Ord­nung vor­zu­schrei­ben sich be­ru­fen fühlt, muss­te doch zur Ver­mu­tung ge­lan­gen, dass in dem un­er­mess­li­chen Pflan­zen­reich keine so große Man­nig­fal­tig­keit der For­men er­schei­nen könn­te, ohne dass ein Grund­ge­setz, es sei auch noch so ver­bor­gen, sie wie­der sämt­lich zur Ein­heit zu­rück­bräch­te.» Ein sol­ches Grund­ge­setz, das die Man­nig­fal­tig­keit zur Ein­heit zu­rück­bringt, von der sie ur­sprüng­lich aus­ge­gan­gen ist, sucht auch Goe­the.</span>
+        <span id="s-12-6-3">Juni 1782 schreibt er an Karl Au­gust: <q author="Jo­hann Wolf­gang von Goe­the" part="1">In Rous­se­aus Wer­ken fin­den sich ganz al­ler­liebs­te Brie­fe über die Bo­ta­nik, worin er diese Wis­sen­schaft auf das faß­lichs­te und zier­lichs­te einer Dame vor­trägt. Es ist recht ein Mus­ter, wie man un­ter­rich­ten soll und eine Bei­la­ge zum Emil. Ich nehme daher An­lass, das schö­ne Reich der Blu­men mei­nen schö­nen Freun­din­nen aufs neue zu emp­feh­len.</q> In sei­ner «Ge­schich­te mei­nes bo­ta­ni­schen Stu­di­ums» legt Goe­the dar, was ihn zu Rous­se­aus bo­ta­ni­schen Ideen hin­ge­zo­gen hat: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ge­schich­te mei­nes bo­ta­ni­schen Stu­di­ums" part="1">Sein Ver­hält­nis zu Pflan­zen­freun­den und -ken­nern, be­son­ders zu der Her­zo­gin von Port­land, mag sei­nen Scharf­blick mehr in die Brei­te ge­wie­sen haben, und ein Geist wie der sei­ni­ge, der den Na­tio­nen Ge­setz und Ord­nung vor­zu­schrei­ben sich be­ru­fen fühlt, muss­te doch <i>zur Ver­mu­tung ge­lan­gen, dass in dem un­er­mess­li­chen Pflan­zen­reich keine so große Man­nig­fal­tig­keit der For­men er­schei­nen könn­te, ohne dass ein Grund­ge­setz, es sei auch noch so ver­bor­gen, sie wie­der sämt­lich zur Ein­heit zu­rück­bräch­te</i>.</q> Ein sol­ches Grund­ge­setz, das die Man­nig­fal­tig­keit zur Ein­heit zu­rück­bringt, von der sie ur­sprüng­lich aus­ge­gan­gen ist, sucht auch Goe­the.</span>
         
       </p>
     </section>
     <section id="p-12-7">
       <p>
-        <span id="s-12-7-1">7| Zwei Schrif­ten vom Frei­herrn von Glei­chen, ge­nannt Ruß­wurm, fie­len da­mals in Goe­thes geis­ti­gen Ho­ri­zont.</span>
+        <a class="p-num" href="#p-12-7">7|</a>
+        <span id="s-12-7-1">Zwei Schrif­ten vom Frei­herrn von Glei­chen, ge­nannt Ruß­wurm, fie­len da­mals in Goe­thes geis­ti­gen Ho­ri­zont.</span>
         
         <span id="s-12-7-2">Sie be­han­deln beide das Leben der Pflan­ze in einer Weise, die für ihn frucht­bar wer­den konn­te: «Das Neu­es­te aus dem Rei­che der Pflan­zen» (Nürn­berg 1764) und «Aus­er­le­se­ne mi­kro­sko­pi­sche Ent­de­ckun­gen bei den Pflan­zen» (Nürn­berg 1777-1781).</span>
         
@@ -218,19 +228,20 @@
         
         <span id="s-12-7-6">Er schreibt am 12.</span>
         
-        <span id="s-12-7-7">Ja­nu­ar 1785 an Ja­co­bi: «Ein Mi­kro­skop ist auf­ge­stellt, um die Ver­su­che des v. Glei­chen, ge­nannt Ruß­wurm, mit Früh­lings­ein­tritt nach­zu­be­ob­ach­ten und zu kon­trol­lie­ren.» Zur sel­ben Zeit stu­diert er die We­sen­heit des Sa­mens, wie aus einem Be­richt an Kne­bel vom 2.</span>
+        <span id="s-12-7-7">Ja­nu­ar 1785 an Ja­co­bi: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Ein Mi­kro­skop ist auf­ge­stellt, um die Ver­su­che des v. Glei­chen, ge­nannt Ruß­wurm, mit Früh­lings­ein­tritt nach­zu­be­ob­ach­ten und zu kon­trol­lie­ren.</q> Zur sel­ben Zeit stu­diert er die We­sen­heit des Sa­mens, wie aus einem Be­richt an Kne­bel vom 2.</span>
         
-        <span id="s-12-7-8">April 1785 her­vor­geht: «Die Ma­te­rie vom Samen habe ich durch­ge­dacht, so weit meine Er­fah­run­gen rei­chen.» Diese Be­ob­ach­tun­gen Goe­thes er­schei­nen erst im rech­ten Lich­te, wenn man be­rück­sich­tigt, dass er schon da­zu­mal nicht bei ihnen ste­hen ge­blie­ben ist, son­dern eine Ge­samt­an­schau­ung der Na­tur­vor­gän­ge zu ge­win­nen such­te, der sie zur Stüt­ze und Be­kräf­ti­gung die­nen soll­ten.</span>
+        <span id="s-12-7-8">April 1785 her­vor­geht: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Die Ma­te­rie vom Samen habe ich durch­ge­dacht, so weit meine Er­fah­run­gen rei­chen.</q> Diese Be­ob­ach­tun­gen Goe­thes er­schei­nen erst im rech­ten Lich­te, wenn man be­rück­sich­tigt, dass er schon da­zu­mal nicht bei ihnen ste­hen ge­blie­ben ist, son­dern eine Ge­samt­an­schau­ung der Na­tur­vor­gän­ge zu ge­win­nen such­te, der sie zur Stüt­ze und Be­kräf­ti­gung die­nen soll­ten.</span>
         
         <span id="s-12-7-9">Am 8.</span>
         
-        <span id="s-12-7-10">April des­sel­ben Jah­res mel­det er Merck, dass er nicht nur Tat­sa­chen be­ob­ach­tet, son­dern auch «hüb­sche Ent­de­ckun­gen und Kom­bi­na­tio­nen» über diese Tat­sa­chen ge­macht habe.</span>
+        <span id="s-12-7-10">April des­sel­ben Jah­res mel­det er Merck, dass er nicht nur Tat­sa­chen be­ob­ach­tet, son­dern auch «<i>hüb­sche Ent­de­ckun­gen und Kom­bi­na­tio­nen</i>» über diese Tat­sa­chen ge­macht habe.</span>
         
       </p>
     </section>
     <section id="p-12-8">
       <p>
-        <span id="s-12-8-1">8| Von we­sent­li­chem Ein­fluss auf die Aus­bil­dung der Ideen Goe­thes über or­ga­ni­sche Na­tur­wir­kun­gen war der An­teil, den er an La­va­ters gro­ßem Werk: «Phy­sio­gno­mi­sche Frag­men­te zur Be­för­de­rung der Men­schen­kennt­nis und Men­schen­lie­be» nahm, das in den Jah­ren 1775-1778 er­schie­nen ist.</span>
+        <a class="p-num" href="#p-12-8">8|</a>
+        <span id="s-12-8-1">Von we­sent­li­chem Ein­fluss auf die Aus­bil­dung der Ideen Goe­thes über or­ga­ni­sche Na­tur­wir­kun­gen war der An­teil, den er an La­va­ters gro­ßem Werk: <q author="Jo­hann Cas­par La­va­ter" book-title="Phy­sio­gno­mi­sche Frag­men­te zur Be­för­de­rung der Men­schen­kennt­nis und Men­schen­lie­be" part="1">Phy­sio­gno­mi­sche Frag­men­te zur Be­för­de­rung der Men­schen­kennt­nis und Men­schen­lie­be</q> nahm, das in den Jah­ren 1775-1778 er­schie­nen ist.</span>
         
         <span id="s-12-8-2">Er hat selbst Bei­trä­ge zu die­sem Werk ge­lie­fert.</span>
         
@@ -256,11 +267,12 @@
     </section>
     <section id="p-12-9">
       <p>
-        <span id="s-12-9-1">9| Aus sol­chen Be­trach­tun­gen her­aus er­wächst Goe­thes Spe­zi­al­stu­di­um der Ana­to­mie.</span>
+        <a class="p-num" href="#p-12-9">9|</a>
+        <span id="s-12-9-1">Aus sol­chen Be­trach­tun­gen her­aus er­wächst Goe­thes Spe­zi­al­stu­di­um der Ana­to­mie.</span>
         
         <span id="s-12-9-2">Am 22.</span>
         
-        <span id="s-12-9-3">Ja­nu­ar 1776 be­rich­tet er an La­va­ter: «Der Her­zog hat mir sechs Schä­del kom­men las­sen, habe herr­li­che Be­mer­kun­gen ge­macht, die Euer Hoch­wür­den zu Diens­ten stehn, wenn die­sel­ben Sie nicht ohne mich fan­den.» Im Ta­ge­buch Goe­thes lesen wir unter dem 15.Ok­to­ber 1781, dass er in Jena mit dem alten Ein­sie­del Ana­to­mie trieb und in dem­sel­ben Jahr fing er an, sich von Loder in diese Wis­sen­schaft ge­nau­er ein­füh­ren zu las­sen.</span>
+        <span id="s-12-9-3">Ja­nu­ar 1776 be­rich­tet er an La­va­ter: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Der Her­zog hat mir sechs Schä­del kom­men las­sen, habe herr­li­che Be­mer­kun­gen ge­macht, die Euer Hoch­wür­den zu Diens­ten stehn, wenn die­sel­ben Sie nicht ohne mich fan­den.</q> Im Ta­ge­buch Goe­thes lesen wir unter dem 15.Ok­to­ber 1781, dass er in Jena mit dem alten Ein­sie­del Ana­to­mie trieb und in dem­sel­ben Jahr fing er an, sich von Loder in diese Wis­sen­schaft ge­nau­er ein­füh­ren zu las­sen.</span>
         
         <span id="s-12-9-4">Er er­zählt davon in Brie­fen an Frau von Stein vom 29.</span>
         
@@ -270,13 +282,13 @@
         
         <span id="s-12-9-7">Er hat auch die Ab­sicht, den jun­gen Leu­ten an der Zei­chen­aka­de­mie «das Ske­lett zu er­klä­ren und sie zur Kennt­nis des mensch­li­chen Kör­pers an­zu­füh­ren».</span>
         
-        <span id="s-12-9-8">– «Ich tue es», sagt er, «um mei­net- und ih­ret­wil­len; die Me­tho­de, die ich ge­wählt habe, wird sie die­sen Win­ter über völ­lig mit den Grund­säu­len des Kör­pers be­kannt ma­chen.» Er hat, wie aus dem Ta­ge­buch zu er­se­hen, diese Vor­le­sun­gen auch ge­hal­ten.</span>
+        <span id="s-12-9-8">– «Ich tue es», sagt er, <q author="Jo­hann Wolf­gang von Goe­the" part="1">um mei­net- und ih­ret­wil­len; die Me­tho­de, die ich ge­wählt habe, wird sie die­sen Win­ter über völ­lig mit den Grund­säu­len des Kör­pers be­kannt ma­chen.</q> Er hat, wie aus dem Ta­ge­buch zu er­se­hen, diese Vor­le­sun­gen auch ge­hal­ten.</span>
         
         <span id="s-12-9-9">Auch mit Loder hat er in die­ser Zeit über den Bau des mensch­li­chen Kör­pers man­ches Ge­spräch ge­führt.</span>
         
         <span id="s-12-9-10">Und wie­der ist es seine all­ge­mei­ne Na­tur­an­sicht, die als trei­ben­de Kraft und als ei­gent­li­ches Ziel die­ser Stu­di­en er­scheint.</span>
         
-        <span id="s-12-9-11">Er be­han­delt die «Kno­chen als einen Text, woran sich alles Leben und alles Mensch­li­che an­hän­gen lässt» (Brie­fe an La­va­ter und Merck vom 14.</span>
+        <span id="s-12-9-11">Er be­han­delt die <q author="Jo­hann Wolf­gang von Goe­the" part="1">Kno­chen als einen Text, woran sich alles Leben und alles Mensch­li­che an­hän­gen lässt</q> (Brie­fe an La­va­ter und Merck vom 14.</span>
         
         <span id="s-12-9-12">No­vem­ber 1781).</span>
         
@@ -286,21 +298,23 @@
         
         <span id="s-12-9-15">Edel sei der Mensch, Hilf­reich und gut!</span>
         
-        <span id="s-12-9-16">Denn das al­lein Un­ter­schei­det ihn Von allen Wesen, Die wir ken­nen.</span>
+        <span id="s-12-9-16">Denn das <i>al­lein</i> Un­ter­schei­det ihn Von allen Wesen, Die wir ken­nen.</span>
         
-        <span id="s-12-9-17">Nach ewi­gen, ehr­nen, Gro­ßen Ge­set­zen Müs­sen wir alle Un­sers Da­seins Krei­se voll­enden.</span>
+        <span id="s-12-9-17">Nach ewi­gen, ehr­nen, <i>Gro­ßen Ge­set­zen</i> Müs­sen wir alle Un­sers Da­seins Krei­se voll­enden.</span>
         
       </p>
     </section>
     <section id="p-12-10">
       <p>
-        <span id="s-12-10-1">10| Die «ewi­gen, ehr­nen Ge­set­ze» wir­ken im Men­schen ge­ra­de so wie in der üb­ri­gen Or­ga­nis­men­welt; sie er­rei­chen in ihm nur eine Voll­kom­men­heit, durch die es ihm mög­lich ist, «edel, hilf­reich und gut» zu sein.</span>
+        <a class="p-num" href="#p-12-10">10|</a>
+        <span id="s-12-10-1">Die «ewi­gen, ehr­nen Ge­set­ze» wir­ken im Men­schen ge­ra­de so wie in der üb­ri­gen Or­ga­nis­men­welt; sie er­rei­chen in ihm nur eine Voll­kom­men­heit, durch die es ihm mög­lich ist, «edel, hilf­reich und gut» zu sein.</span>
         
       </p>
     </section>
     <section id="p-12-11">
       <p>
-        <span id="s-12-11-1">11| Wäh­rend in Goe­the sich sol­che Ideen immer mehr fest­setz­ten, ar­bei­te­te Her­der an sei­nen «Ideen zu einer Phi­lo­so­phie der Ge­schich­te der Mensch­heit».</span>
+        <a class="p-num" href="#p-12-11">11|</a>
+        <span id="s-12-11-1">Wäh­rend in Goe­the sich sol­che Ideen immer mehr fest­setz­ten, ar­bei­te­te Her­der an sei­nen «Ideen zu einer Phi­lo­so­phie der Ge­schich­te der Mensch­heit».</span>
         
         <span id="s-12-11-2">Alle Ge­dan­ken die­ses Buchs wur­den von den bei­den durch­ge­spro­chen.</span>
         
@@ -308,9 +322,7 @@
         
         <span id="s-12-11-4">Sie fiel mit sei­nen ei­ge­nen Vor­stel­lun­gen zu­sam­men.</span>
         
-        <span id="s-12-11-5">«Her­ders Schrift macht wahr­schein­lich, dass wir erst Pflan­zen und Tiere waren...</span>
-        
-        <span id="s-12-11-6">Goe­the grü­belt jetzt gar den­k­reich in die­sen Din­gen und alles, was erst durch seine Vor­stel­lung ge­gan­gen ist, wird äu­ßerst in­ter­es­sant», schreibt am 1.</span>
+        <span id="s-12-11-5"><q author="Jo­hann Gott­fried Her­der" book-title="Ideen zur Phi­lo­so­phie der Ge­schich­te der Mensch­heit" part="1">Her­ders Schrift macht wahr­schein­lich, dass wir erst Pflan­zen und Tiere waren... Goe­the grü­belt jetzt gar den­k­reich in die­sen Din­gen und alles, was erst durch seine Vor­stel­lung ge­gan­gen ist, wird äu­ßerst in­ter­es­sant</q>, schreibt am 1.</span>
         
         <span id="s-12-11-7">Mai 1784 Frau von Stein an Kne­bel.</span>
         
@@ -318,23 +330,20 @@
         
         <span id="s-12-11-9">Dez.</span>
         
-        <span id="s-12-11-10">1783 an Kne­bel rich­tet: «Her­der schreibt eine Phi­lo­so­phie der Ge­schich­te, wie Du Dir den­ken kannst, von Grund aus neu.</span>
+        <span id="s-12-11-10">1783 an Kne­bel rich­tet: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Her­der schreibt eine Phi­lo­so­phie der Ge­schich­te, wie Du Dir den­ken kannst, von Grund aus neu. Die ers­ten Ka­pi­tel haben wir vor­ges­tern zu­sam­men ge­le­sen, sie sind köst­lich.</q> Sätze wie die fol­gen­den lie­gen ganz in Goe­thes Denk­rich­tung.</span>
         
-        <span id="s-12-11-11">Die ers­ten Ka­pi­tel haben wir vor­ges­tern zu­sam­men ge­le­sen, sie sind köst­lich.» Sätze wie die fol­gen­den lie­gen ganz in Goe­thes Denk­rich­tung.</span>
-        
-        <span id="s-12-11-12">«Das Men­schen­ge­schlecht» ist «der große Zu­sam­men­fluss nie­de­rer or­ga­ni­scher Kräf­te.» «Und so kön­nen wir den vier­ten Satz an­neh­men: dass der Mensch ein Mit­tel­ge­schöpf unter den Tie­ren, d.i. die aus­ge­ar­bei­te­te Form sei, in der sich die Züge aller Gat­tun­gen um ihn her im feins­ten In­be­griff sam­meln.»</span>
+        <span id="s-12-11-12">«Das Men­schen­ge­schlecht» ist «der große Zu­sam­men­fluss nie­de­rer or­ga­ni­scher Kräf­te.» <q author="Jo­hann Gott­fried Her­der" book-title="Ideen zur Phi­lo­so­phie der Ge­schich­te der Mensch­heit" part="1">Und so kön­nen wir den vier­ten Satz an­neh­men: <i>dass der Mensch ein Mit­tel­ge­schöpf unter den Tie­ren, d.i. die aus­ge­ar­bei­te­te Form sei, in der sich die Züge aller Gat­tun­gen um ihn her im feins­ten In­be­griff sam­meln</i>.</q></span>
         
       </p>
     </section>
     <section id="p-12-12">
       <p>
-        <span id="s-12-12-1">12| Mit sol­chen Vor­stel­lun­gen war al­ler­dings die An­sicht der da­ma­li­gen Ana­to­men nicht zu ver­ei­ni­gen, dass der klei­ne Kno­chen, den die Tiere in der obe­ren Kinn­la­de haben, der Zwi­schen­kie­fer, der die obe­ren Schnei­de­zäh­ne ent­hält, dem Men­schen fehle.</span>
+        <a class="p-num" href="#p-12-12">12|</a>
+        <span id="s-12-12-1">Mit sol­chen Vor­stel­lun­gen war al­ler­dings die An­sicht der da­ma­li­gen Ana­to­men nicht zu ver­ei­ni­gen, dass der klei­ne Kno­chen, den die Tiere in der obe­ren Kinn­la­de haben, der Zwi­schen­kie­fer, der die obe­ren Schnei­de­zäh­ne ent­hält, dem Men­schen fehle.</span>
         
         <span id="s-12-12-2">Söm­me­ring, einer der be­deu­tends­ten Ana­to­men der da­ma­li­gen Zeit, schrieb am 8.</span>
         
-        <span id="s-12-12-3">Ok­to­ber 1782 an Merck: «Ich wünsch­te, dass Sie Blu­men­bach nach­sä­hen, wegen des ossis in­ter­ma­xil­la­ris, der ce­te­ris pa­ri­bus der ein­zi­ge Kno­chen ist, den alle Tiere vom Affen an, selbst der Orang-Utang ein­ge­schlos­sen, haben, der sich hin­ge­gen nie beim Men­schen fin­det; wenn Sie die­sen Kno­chen ab­rech­nen, so fehlt Ihnen nichts, um nicht alles vom Men­schen auf die Tiere trans­fe­rie­ren zu kön­nen.</span>
-        
-        <span id="s-12-12-4">Ich lege des­halb einen Kopf von einer Hirsch­kuh bei, um Sie zu über­zeu­gen, dass die­ses os in­ter­ma­xil­la­re (wie es Blu­men­bach) oder os in­cisi­vum (wie es Cam­per nennt) selbst bei Tie­ren vor­han­den ist, die keine Schnei­de­zäh­ne in der obe­ren Kinn­la­de haben.» Das war die all­ge­mei­ne Mei­nung der Zeit.</span>
+        <span id="s-12-12-3">Ok­to­ber 1782 an Merck: <q author="Sa­mu­el Tho­mas Söm­me­ring" part="1">Ich wünsch­te, dass Sie Blu­men­bach nach­sä­hen, wegen des ossis in­ter­ma­xil­la­ris, der ce­te­ris pa­ri­bus der ein­zi­ge Kno­chen ist, den alle Tiere vom Affen an, selbst der Orang-Utang ein­ge­schlos­sen, haben, der sich hin­ge­gen <i>nie</i> beim Men­schen fin­det; wenn Sie die­sen Kno­chen ab­rech­nen, so fehlt Ihnen nichts, um nicht alles vom Men­schen auf die Tiere trans­fe­rie­ren zu kön­nen. Ich lege des­halb einen Kopf von einer <i>Hirsch­kuh</i> bei, um Sie zu über­zeu­gen, dass die­ses os in­ter­ma­xil­la­re (wie es Blu­men­bach) oder os in­cisi­vum (wie es Cam­per nennt) selbst bei Tie­ren vor­han­den ist, die keine Schnei­de­zäh­ne in der obe­ren Kinn­la­de haben.</q> Das war die all­ge­mei­ne Mei­nung der Zeit.</span>
         
         <span id="s-12-12-5">Auch der be­rühm­te Cam­per, für den Merck und Goe­the die in­nigs­te Ver­eh­rung hat­ten, be­kann­te sich zu ihr.</span>
         
@@ -348,7 +357,7 @@
         
         <span id="s-12-12-10">Es ge­lang ihm im Früh­ling 1784 in Ge­mein­schaft mit Loder.</span>
         
-        <span id="s-12-12-11">Nach sei­nem all­ge­mei­nen Grund­satz, «dass die Natur kein Ge­heim­nis habe, was sie nicht ir­gend­wo dem auf­merk­sa­men Be­ob­ach­ter nackt vor die Augen stellt», ging Goe­the vor.</span>
+        <span id="s-12-12-11">Nach sei­nem all­ge­mei­nen Grund­satz, <q author="Jo­hann Wolf­gang von Goe­the" part="1">dass die Natur kein Ge­heim­nis habe, was sie nicht ir­gend­wo dem auf­merk­sa­men Be­ob­ach­ter nackt vor die Augen stellt</q>, ging Goe­the vor.</span>
         
         <span id="s-12-12-12">Er fand bei ein­zel­nen ab­norm ge­bil­de­ten Schä­deln die Gren­ze zwi­schen Ober- und Zwi­schen­kie­fer wirk­lich vor­han­den.</span>
         
@@ -356,23 +365,18 @@
         
         <span id="s-12-12-14">März an Her­der und Frau von Stein.</span>
         
-        <span id="s-12-12-15">An Her­der schreibt er: «Es soll Dich auch herz­lich freu­en, denn es ist wie der Schluss­stein zum Men­schen, fehlt nicht, ist auch da!</span>
+        <span id="s-12-12-15">An Her­der schreibt er: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Es soll Dich auch herz­lich freu­en, <i>denn es ist wie der Schluss­stein zum Men­schen</i>, fehlt nicht, ist auch da! Aber wie! <i>Ich habe mirs auch in Ver­bin­dung mit Dei­nem Gan­zen ge­dacht</i>, wie schön es da wird.</q> Und als Goe­the die Ab­hand­lung, die er über die Sache ge­schrie­ben hat, im No­vem­ber 1784 an Kne­bel schickt, deu­tet er die Be­deu­tung, die er der Ent­de­ckung für seine ganze Vor­stel­lungs­welt bei­legt, mit den Wor­ten an: <q author="Jo­hann Gott­fried Her­der" book-title="Ideen zur Phi­lo­so­phie der Ge­schich­te der Mensch­heit" part="1">Ich habe mich ent­hal­ten, das Re­sul­tat, wor­auf schon Her­der in sei­nen Ideen deu­tet, schon jetzt mer­ken zu las­sen, <i>dass man näm­lich den Un­ter­schied des Men­schen vom Tier in nichts ein­zel­nem fin­den könne</i>.</q> Goe­the konn­te erst Ver­trau­en zu sei­ner Na­tur­an­sicht ge­win­nen, als die irr­tüm­li­che An­sicht über das fa­ta­le Knö­chel­chen be­sei­tigt war.</span>
         
-        <span id="s-12-12-16">Aber wie!</span>
-        
-        <span id="s-12-12-17">Ich habe mirs auch in Ver­bin­dung mit Dei­nem Gan­zen ge­dacht, wie schön es da wird.» Und als Goe­the die Ab­hand­lung, die er über die Sache ge­schrie­ben hat, im No­vem­ber 1784 an Kne­bel schickt, deu­tet er die Be­deu­tung, die er der Ent­de­ckung für seine ganze Vor­stel­lungs­welt bei­legt, mit den Wor­ten an: «Ich habe mich ent­hal­ten, das Re­sul­tat, wor­auf schon Her­der in sei­nen Ideen deu­tet, schon jetzt mer­ken zu las­sen, dass man näm­lich den Un­ter­schied des Men­schen vom Tier in nichts ein­zel­nem fin­den könne.» Goe­the konn­te erst Ver­trau­en zu sei­ner Na­tur­an­sicht ge­win­nen, als die irr­tüm­li­che An­sicht über das fa­ta­le Knö­chel­chen be­sei­tigt war.</span>
-        
-        <span id="s-12-12-18">Er ge­wann all­mäh­lich den Mut, seine Ideen über die Art, wie die Natur, mit einer Haupt­form gleich­sam spie­lend, das man­nig­fal­ti­ge Leben her­vor­bringt, «auf alle Rei­che der Natur, auf ihr gan­zes Reich aus­zu­deh­nen».</span>
-        
-        <span id="s-12-12-19">In die­sem Sinne schreibt er im Jahr 1786 an Frau von Stein.</span>
+        <span id="s-12-12-18">Er ge­wann all­mäh­lich den Mut, seine Ideen über die Art, wie die Natur, mit <i>einer</i> Haupt­form gleich­sam spie­lend, das man­nig­fal­ti­ge Leben her­vor­bringt, <q author="Jo­hann Wolf­gang von Goe­the" part="1">auf alle Rei­che der Natur, auf ihr gan­zes Reich aus­zu­deh­nen</q>. In die­sem Sinne schreibt er im Jahr 1786 an Frau von Stein.</span>
         
       </p>
     </section>
     <section id="p-12-13">
       <p>
-        <span id="s-12-13-1">13| Immer les­ba­rer wird Goe­the das Buch der Natur, nach­dem er den einen Buch­sta­ben rich­tig ent­zif­fert hat.</span>
+        <a class="p-num" href="#p-12-13">13|</a>
+        <span id="s-12-13-1">Immer les­ba­rer wird Goe­the das Buch der Natur, nach­dem er den einen Buch­sta­ben rich­tig ent­zif­fert hat.</span>
         
-        <span id="s-12-13-2">«Mein lan­ges Buch­sta­bie­ren hat mir ge­hol­fen, jetzt ruckts auf ein­mal, und meine stil­le Freu­de ist un­aus­sprech­lich», schreibt er der Frau von Stein am 15.</span>
+        <span id="s-12-13-2"><q author="Jo­hann Wolf­gang von Goe­the" part="1">Mein lan­ges Buch­sta­bie­ren hat mir ge­hol­fen, jetzt ruckts auf ein­mal, und meine stil­le Freu­de ist un­aus­sprech­lich</q>, schreibt er der Frau von Stein am 15.</span>
         
         <span id="s-12-13-3">Juni 1786.</span>
         
@@ -384,25 +388,22 @@
         
         <span id="s-12-13-7">Er teilt am 9.</span>
         
-        <span id="s-12-13-8">No­vem­ber der Frau von Stein mit: «Ich lese im Linné fort, denn ich muss wohl, ich habe kein an­de­res Buch.</span>
-        
-        <span id="s-12-13-9">Es ist das die beste Art, ein Buch ge­wiss zu lesen, die ich öf­ters prak­ti­zie­ren muss, be­son­ders da ich nicht leicht ein Buch aus­le­se.</span>
-        
-        <span id="s-12-13-10">Die­ses ist aber vor­züg­lich nicht zum Lesen, son­dern zum Re­ka­pi­tu­lie­ren ge­macht und tut mir nun treff­li­che Diens­te, da ich über die meis­ten Punk­te selbst ge­dacht habe.» Wäh­rend die­ser Stu­di­en be­kommt auch die Grund­form, aus wel­cher die Natur alle man­nig­fal­ti­gen Pflan­zen­ge­bil­de her­aus­ar­bei­tet, ein­zel­ne, wenn auch noch nicht deut­li­che Um­ris­se in sei­nem Geist.</span>
+        <span id="s-12-13-8">No­vem­ber der Frau von Stein mit: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Ich lese im Linné fort, denn ich muss wohl, ich habe kein an­de­res Buch. Es ist das die beste Art, ein Buch ge­wiss zu lesen, die ich öf­ters prak­ti­zie­ren muss, be­son­ders da ich nicht leicht ein Buch aus­le­se. Die­ses ist aber vor­züg­lich nicht zum Lesen, son­dern zum Re­ka­pi­tu­lie­ren ge­macht und tut mir nun treff­li­che Diens­te, da ich über die meis­ten Punk­te selbst ge­dacht habe.</q> Wäh­rend die­ser Stu­di­en be­kommt auch die Grund­form, aus wel­cher die Natur alle man­nig­fal­ti­gen Pflan­zen­ge­bil­de her­aus­ar­bei­tet, ein­zel­ne, wenn auch noch nicht deut­li­che Um­ris­se in sei­nem Geist.</span>
         
         <span id="s-12-13-11">In einem Brief an die Frau von Stein vom 9.</span>
         
-        <span id="s-12-13-12">Juli 1786 sind die Worte ent­hal­ten: «Es ist ein Ge­wahr­wer­den der we­sent­li­chen Form, mit der die Natur gleich­sam nur immer spielt und spie­lend das man­nig­fal­ti­ge Leben her­vor­bringt.»</span>
+        <span id="s-12-13-12">Juli 1786 sind die Worte ent­hal­ten: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Es ist ein Ge­wahr­wer­den der we­sent­li­chen Form, mit der die Natur gleich­sam nur immer spielt und spie­lend das man­nig­fal­ti­ge Leben her­vor­bringt.</q></span>
         
       </p>
     </section>
     <section id="p-12-14">
       <p>
-        <span id="s-12-14-1">14| Im April und Mai 1786 be­ob­ach­te­te Goe­the durch das Mi­kro­skop die nie­de­ren Or­ga­nis­men, die sich in Auf­güs­sen ver­schie­de­ner Sub­stan­zen (Pi­s­ang­mark, Kak­tus, Trüf­feln, Pfef­fer­kör­nern, Tee, Bier usw.) ent­wi­ckeln.</span>
+        <a class="p-num" href="#p-12-14">14|</a>
+        <span id="s-12-14-1">Im April und Mai 1786 be­ob­ach­te­te Goe­the durch das Mi­kro­skop die nie­de­ren Or­ga­nis­men, die sich in Auf­güs­sen ver­schie­de­ner Sub­stan­zen (Pi­s­ang­mark, Kak­tus, Trüf­feln, Pfef­fer­kör­nern, Tee, Bier usw.) ent­wi­ckeln.</span>
         
         <span id="s-12-14-2">Er no­tiert sorg­fäl­tig die Vor­gän­ge, die er an die­sen Le­be­we­sen be­ob­ach­tet und ver­fer­tigt Zeich­nun­gen die­ser or­ga­ni­schen For­men (vgl. Goe­thes na­tur­wis­sen­schaft­li­che Schrif­ten in der Wei­ma­rer Aus­ga­be, 2.</span>
         
-        <span id="s-12-14-3">Ab­tei­lung, Band 7, S. 289-509). Man kann auch aus die­sen No­ti­zen er­se­hen, dass Goe­the der Er­kennt­nis des Le­bens nicht durch sol­che Be­ob­ach­tung nie­de­rer und ein­fa­cher Or­ga­nis­men näher zu kom­men sucht.</span>
+        <span id="s-12-14-3">Ab­tei­lung, Band 7, S. 289-509). Man kann auch aus die­sen No­ti­zen er­se­hen, dass Goe­the der Er­kennt­nis des Le­bens <i>nicht</i> durch sol­che Be­ob­ach­tung nie­de­rer und ein­fa­cher Or­ga­nis­men näher zu kom­men sucht.</span>
         
         <span id="s-12-14-4">Es ist ganz of­fen­bar, dass er die we­sent­li­chen Züge der Le­bens­vor­gän­ge an den hö­he­ren Or­ga­nis­men eben­so zu er­fas­sen glaubt, wie an den nie­de­ren.</span>
         
@@ -412,7 +413,7 @@
         
         <span id="s-12-14-7">Sie bie­tet eine Be­rei­che­rung der sinn­li­chen Er­fah­rung.</span>
         
-        <span id="s-12-14-8">Einer hö­he­ren Art des An­schau­ens, nicht einer Ver­fol­gung der den Sin­nen zu­gäng­li­chen Vor­gän­ge bis in ihre kleins­ten Be­stand­tei­le, of­fen­bart sich das Wesen des Le­bens.</span>
+        <span id="s-12-14-8">Einer <i>hö­he­ren Art des An­schau­ens</i>, nicht einer Ver­fol­gung der den Sin­nen zu­gäng­li­chen Vor­gän­ge bis in ihre kleins­ten Be­stand­tei­le, of­fen­bart sich das Wesen des Le­bens.</span>
         
         <span id="s-12-14-9">Goe­the sucht die­ses Wesen durch die Be­trach­tung der hö­he­ren Pflan­zen und Tiere zu er­ken­nen.</span>
         
@@ -426,137 +427,109 @@
     </section>
     <section id="p-12-15">
       <p>
-        <span id="s-12-15-1">15| Den lö­sen­den Ge­dan­ken des Rät­sels, das ihm die or­ga­ni­sche Bil­dung und Um­bil­dung auf­ge­ge­ben hat, fin­det Goe­the erst in Ita­li­en.</span>
+        <a class="p-num" href="#p-12-15">15|</a>
+        <span id="s-12-15-1">Den lö­sen­den Ge­dan­ken des Rät­sels, das ihm die or­ga­ni­sche Bil­dung und Um­bil­dung auf­ge­ge­ben hat, fin­det Goe­the erst in Ita­li­en.</span>
         
         <span id="s-12-15-2">Am 3.</span>
         
         <span id="s-12-15-3">Sep­tem­ber 1786 ver­lässt er Karls­bad, um nach dem Süden zu gehen.</span>
         
-        <span id="s-12-15-4">In we­ni­gen, aber be­deut­sa­men Sät­zen schil­dert er in sei­ner «Ge­schich­te mei­nes bo­ta­ni­schen Stu­di­ums» (Kürsch­ner, Band 33, S. 61 ff.) die Ge­dan­ken, wel­che die Be­ob­ach­tung der Pflan­zen­welt in ihm auf­regt bis zu dem Au­gen­blick, da ihm in Si­zi­li­en eine klare Vor­stel­lung dar­über sich of­fen­bart, wie es mög­lich ist, dass den Pflan­zen­for­men «bei einer ei­gen­sin­ni­gen, ge­ne­ri­schen und spe­zi­fi­schen Hart­nä­ckig­keit eine glück­li­che Mo­bi­li­tät und Bieg­sam­keit ver­lie­hen ist, um in so viele Be­din­gun­gen, die über dem Erd­kreis auf sie ein­wir­ken, sich zu fügen und dar­nach bil­den und um­bil­den zu kön­nen».</span>
+        <span id="s-12-15-4">In we­ni­gen, aber be­deut­sa­men Sät­zen schil­dert er in sei­ner «Ge­schich­te mei­nes bo­ta­ni­schen Stu­di­ums» (Kürsch­ner, Band 33, S. 61 ff.) die Ge­dan­ken, wel­che die Be­ob­ach­tung der Pflan­zen­welt in ihm auf­regt bis zu dem Au­gen­blick, da ihm in Si­zi­li­en eine klare Vor­stel­lung dar­über sich of­fen­bart, wie es mög­lich ist, dass den Pflan­zen­for­men <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ge­schich­te mei­nes bo­ta­ni­schen Stu­di­ums" part="1">bei einer ei­gen­sin­ni­gen, ge­ne­ri­schen und spe­zi­fi­schen Hart­nä­ckig­keit eine glück­li­che Mo­bi­li­tät und Bieg­sam­keit ver­lie­hen ist, um in so viele Be­din­gun­gen, die über dem Erd­kreis auf sie ein­wir­ken, sich zu fügen und dar­nach bil­den und um­bil­den zu kön­nen</q>. Beim Über­gang über die Alpen, im bo­ta­ni­schen Gar­ten von Padua und an an­de­ren Orten zeig­te sich ihm das «Wech­sel­haf­te der Pflan­zen­ge­stal­ten».</span>
         
-        <span id="s-12-15-5">Beim Über­gang über die Alpen, im bo­ta­ni­schen Gar­ten von Padua und an an­de­ren Orten zeig­te sich ihm das «Wech­sel­haf­te der Pflan­zen­ge­stal­ten».</span>
+        <span id="s-12-15-5"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">Wenn in der tie­fern Ge­gend Zwei­ge und Stän­gel stär­ker und mas­ti­ger waren, die Augen näher an­ein­an­der stan­den und die Blät­ter breit waren, so wur­den höher ins Ge­birg hin­auf Zwei­ge und Stän­gel zar­ter, die Augen rück­ten aus­ein­an­der, so dass von Kno­ten zu Kno­ten ein grö­ße­rer Zwi­schen­raum statt­fand und die Blät­ter sich lan­zen­för­mi­ger bil­de­ten. Ich be­merk­te dies bei einer Weide und einer Gen­tia­na und über­zeug­te mich, dass es nicht etwa ver­schie­de­ne Arten wären. Auch am Wal­chen­see be­merk­te ich län­ge­re und schlan­ke­re Bin­sen, als im Un­ter­land</q> (Ita­lie­ni­sche Reise, 8.</span>
         
-        <span id="s-12-15-6">«Wenn in der tie­fern Ge­gend Zwei­ge und Stän­gel stär­ker und mas­ti­ger waren, die Augen näher an­ein­an­der stan­den und die Blät­ter breit waren, so wur­den höher ins Ge­birg hin­auf Zwei­ge und Stän­gel zar­ter, die Augen rück­ten aus­ein­an­der, so dass von Kno­ten zu Kno­ten ein grö­ße­rer Zwi­schen­raum statt­fand und die Blät­ter sich lan­zen­för­mi­ger bil­de­ten.</span>
+        <span id="s-12-15-8">Sept.).</span>
         
-        <span id="s-12-15-7">Ich be­merk­te dies bei einer Weide und einer Gen­tia­na und über­zeug­te mich, dass es nicht etwa ver­schie­de­ne Arten wären.</span>
+        <span id="s-12-15-9">Am 8.</span>
         
-        <span id="s-12-15-8">Auch am Wal­chen­see be­merk­te ich län­ge­re und schlan­ke­re Bin­sen, als im Un­ter­land» (Ita­lie­ni­sche Reise, 8.</span>
+        <span id="s-12-15-10">Ok­to­ber fin­det er in Ve­ne­dig am Meer ver­schie­de­ne Pflan­zen, an denen ihm die Wech­sel­be­zie­hung des Or­ga­ni­schen zu sei­ner Um­ge­bung be­son­ders an­schau­lich wird.</span>
         
-        <span id="s-12-15-9">Sept.).</span>
+        <span id="s-12-15-11"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">Sie sind alle zu­gleich mas­tig und streng, saf­tig und zäh, und es ist of­fen­bar, dass das alte Salz des Sand­bo­dens, mehr aber die sal­zi­ge Luft ihnen diese Ei­gen­schaf­ten gibt; sie strot­zen von Säf­ten wie Was­ser­pflan­zen, sie sind fest und zäh wie Berg­pflan­zen; wenn ihre Blät­te­r­en­den eine Nei­gung zu Sta­cheln haben, wie Dis­teln tun, sind sie ge­wal­tig spitz und stark. Ich fand einen sol­chen Busch Blät­ter; es schien mir unser un­schul­di­ger Huf­lat­tich, hier aber mit schar­fen Waf­fen be­waff­net, und das Blatt wie Leder, so auch die Sa­men­kap­seln, die Stie­le, alles mas­tig und fest</q> (Ita­lie­ni­sche Reise).</span>
         
-        <span id="s-12-15-10">Am 8.</span>
+        <span id="s-12-15-13">Im bo­ta­ni­schen Gar­ten zu Padua be­kommt der Ge­dan­ke in Goe­thes Geist eine be­stimm­te­re Ge­stalt, wie man sich alle Pflan­zen­ge­stal­ten viel­leicht aus <i>einer</i> ent­wi­ckeln könne (Ita­lie­ni­sche Reise, 27.</span>
         
-        <span id="s-12-15-11">Ok­to­ber fin­det er in Ve­ne­dig am Meer ver­schie­de­ne Pflan­zen, an denen ihm die Wech­sel­be­zie­hung des Or­ga­ni­schen zu sei­ner Um­ge­bung be­son­ders an­schau­lich wird.</span>
+        <span id="s-12-15-14">Sept.); im No­vem­ber teilt er Kne­bel mit: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">So freut mich doch mein biss­chen Bo­ta­nik erst recht in die­sen Lan­den, wo eine fro­he­re, we­ni­ger un­ter­bro­che­ne Ve­ge­ta­ti­on zu Hause ist. Ich habe schon recht ar­ti­ge, ins all­ge­mei­ne ge­hen­de Be­mer­kun­gen ge­macht, die auch Dir in der Folge an­ge­nehm sein wer­den.</q> Am 25.</span>
         
-        <span id="s-12-15-12">«Sie sind alle zu­gleich mas­tig und streng, saf­tig und zäh, und es ist of­fen­bar, dass das alte Salz des Sand­bo­dens, mehr aber die sal­zi­ge Luft ihnen diese Ei­gen­schaf­ten gibt; sie strot­zen von Säf­ten wie Was­ser­pflan­zen, sie sind fest und zäh wie Berg­pflan­zen; wenn ihre Blät­te­r­en­den eine Nei­gung zu Sta­cheln haben, wie Dis­teln tun, sind sie ge­wal­tig spitz und stark.</span>
+        <span id="s-12-15-16">März 1787 kommt ihm eine «gute Er­leuch­tung über bo­ta­ni­sche Ge­gen­stän­de».</span>
         
-        <span id="s-12-15-13">Ich fand einen sol­chen Busch Blät­ter; es schien mir unser un­schul­di­ger Huf­lat­tich, hier aber mit schar­fen Waf­fen be­waff­net, und das Blatt wie Leder, so auch die Sa­men­kap­seln, die Stie­le, alles mas­tig und fest» (Ita­lie­ni­sche Reise).</span>
+        <span id="s-12-15-17">Er bit­tet, Her­dern zu sagen, dass er mit der Ur­pflan­ze bald zu­stan­de sei.</span>
         
-        <span id="s-12-15-14">Im bo­ta­ni­schen Gar­ten zu Padua be­kommt der Ge­dan­ke in Goe­thes Geist eine be­stimm­te­re Ge­stalt, wie man sich alle Pflan­zen­ge­stal­ten viel­leicht aus einer ent­wi­ckeln könne (Ita­lie­ni­sche Reise, 27.</span>
+        <span id="s-12-15-18">Nur fürch­tet er, <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">dass nie­mand die üb­ri­ge Pflan­zen­welt darin wird er­ken­nen wol­len</q> (Ita­lie­ni­sche Reise).</span>
         
-        <span id="s-12-15-15">Sept.); im No­vem­ber teilt er Kne­bel mit: «So freut mich doch mein biss­chen Bo­ta­nik erst recht in die­sen Lan­den, wo eine fro­he­re, we­ni­ger un­ter­bro­che­ne Ve­ge­ta­ti­on zu Hause ist.</span>
+        <span id="s-12-15-19">Am 17.</span>
         
-        <span id="s-12-15-16">Ich habe schon recht ar­ti­ge, ins all­ge­mei­ne ge­hen­de Be­mer­kun­gen ge­macht, die auch Dir in der Folge an­ge­nehm sein wer­den.» Am 25.</span>
+        <span id="s-12-15-20">April geht er mit dem <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">fes­ten, ru­hi­gen Vor­satz, seine dich­te­ri­schen Träu­me fort­zu­set­zen, nach dem öf­fent­li­chen Gar­ten</q>. Al­lein ehe er sichs ver­sieht, er­hascht ihn das Pflan­zen­we­sen wie ein Ge­spenst.</span>
         
-        <span id="s-12-15-17">März 1787 kommt ihm eine «gute Er­leuch­tung über bo­ta­ni­sche Ge­gen­stän­de».</span>
+        <span id="s-12-15-21"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">Die vie­len Pflan­zen, die ich sonst nur in Kü­beln und Töp­fen, ja die größ­te Zeit des Jah­res nur hin­ter Glas­fens­tern zu sehen ge­wohnt war, ste­hen hier froh und frisch unter frei­em Him­mel, und indem sie ihre Be­stim­mung voll­kom­men er­fül­len, wer­den sie uns deut­li­cher. Im An­ge­sicht so vie­ler­lei neuen und er­neu­ten Ge­bil­des, fiel mir die alte Gril­le wie­der ein: <i>ob ich nicht unter die­ser Schar die Ur­pflan­ze ent­de­cken könn­te? Eine sol­che muss es denn doch geben! woran würde ich sonst er­ken­nen, dass die­ses oder jenes Ge­bil­de eine Pflan­ze sei, wenn sie nicht alle nach einem Mus­ter ge­bil­det wären</i>.</q> Er be­müht sich, die ab­wei­chen­den Ge­stal­ten zu un­ter­schei­den, aber immer wie­der wer­den seine Ge­dan­ken zu dem <i>einen</i> Ur­bild, das ihnen allen zu­grun­de liegt, hin­ge­lenkt (Ita­lie­ni­sche Reise, 17.</span>
         
-        <span id="s-12-15-18">Er bit­tet, Her­dern zu sagen, dass er mit der Ur­pflan­ze bald zu­stan­de sei.</span>
+        <span id="s-12-15-25">April 1787).</span>
         
-        <span id="s-12-15-19">Nur fürch­tet er, «dass nie­mand die üb­ri­ge Pflan­zen­welt darin wird er­ken­nen wol­len» (Ita­lie­ni­sche Reise).</span>
+        <span id="s-12-15-26">Goe­the legt sich ein bo­ta­ni­sches Ta­ge­buch an, in dem er alle wäh­rend der Reise über das Pflan­zen­reich ge­mach­ten Er­fah­run­gen und Re­fle­xio­nen ein­zeich­net (vgl. Wei­ma­rer Aus­ga­be, 2.</span>
         
-        <span id="s-12-15-20">Am 17.</span>
+        <span id="s-12-15-27">Abt., Band 7, S. 273 ff.). Diese Ta­ge­buch­blät­ter zei­gen, wie un­er­müd­lich er damit be­schäf­tigt ist, Pflan­zen­ex­em­pla­re aus­fin­dig zu ma­chen, die ge­eig­net sind, auf die Ge­set­ze des Wachs­tums und der Fort­pflan­zung hin­zu­lei­ten.</span>
         
-        <span id="s-12-15-21">April geht er mit dem «fes­ten, ru­hi­gen Vor­satz, seine dich­te­ri­schen Träu­me fort­zu­set­zen, nach dem öf­fent­li­chen Gar­ten».</span>
+        <span id="s-12-15-28">Glaubt er ir­gend­ei­nem Ge­setz auf der Spur zu sein, so stellt er es zu­nächst in hy­po­the­ti­scher Form auf, um es sich dann im Ver­lauf sei­ner wei­te­ren Er­fah­run­gen be­stä­ti­gen zu las­sen.</span>
         
-        <span id="s-12-15-22">Al­lein ehe er sichs ver­sieht, er­hascht ihn das Pflan­zen­we­sen wie ein Ge­spenst.</span>
+        <span id="s-12-15-29">Die Vor­gän­ge der Kei­mung, der Be­fruch­tung, des Wachs­tums no­tiert er sorg­fäl­tig.</span>
         
-        <span id="s-12-15-23">«Die vie­len Pflan­zen, die ich sonst nur in Kü­beln und Töp­fen, ja die größ­te Zeit des Jah­res nur hin­ter Glas­fens­tern zu sehen ge­wohnt war, ste­hen hier froh und frisch unter frei­em Him­mel, und indem sie ihre Be­stim­mung voll­kom­men er­fül­len, wer­den sie uns deut­li­cher.</span>
+        <span id="s-12-15-30">Dass das Blatt das Grund­or­gan der Pflan­ze ist, und dass die For­men aller üb­ri­gen Pflan­zen­or­ga­ne am bes­ten zu ver­ste­hen sind, wenn man sie als um­ge­wan­del­te Blät­ter be­trach­tet, leuch­tet ihm immer mehr ein.</span>
         
-        <span id="s-12-15-24">Im An­ge­sicht so vie­ler­lei neuen und er­neu­ten Ge­bil­des, fiel mir die alte Gril­le wie­der ein: ob ich nicht unter die­ser Schar die Ur­pflan­ze ent­de­cken könn­te?</span>
+        <span id="s-12-15-31">Er schreibt in das Ta­ge­buch: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">Hy­po­the­se: Alles ist Blatt und durch diese Ein­fach­heit wird die größ­te Man­nig­fal­tig­keit mög­lich.</q> Und am 17.</span>
         
-        <span id="s-12-15-25">Eine sol­che muss es denn doch geben!</span>
+        <span id="s-12-15-32">Mai 1787 teilt er Her­der mit: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">Fer­ner muss ich Dir ver­trau­en, dass ich dem Ge­heim­nis der Pflan­zen­zeu­gung und Or­ga­ni­sa­ti­on ganz nahe bin, und dass es das Ein­fachs­te ist, was nur ge­dacht wer­den kann. Unter die­sem Him­mel kann man die schöns­ten Be­ob­ach­tun­gen ma­chen. Den Haupt­punkt, wo der Keim steckt, habe ich ganz klar und zwei­fel­los ge­fun­den; alles üb­ri­ge sehe ich auch schon im Gan­zen und nur noch ei­ni­ge Punk­te müs­sen be­stimm­ter wer­den. Die Ur­pflan­ze wird das wun­der­lichs­te Ge­schöpf von der Welt, um wel­ches mich die Natur selbst be­nei­den soll. Mit die­sem Mo­dell und dem Schlüs­sel dazu kann man als­dann noch Pflan­zen ins Un­end­li­che er­fin­den, die kon­se­quent sein müs­sen, das heißt: die, wenn sie auch nicht exis­tie­ren, doch exis­tie­ren könn­ten, und nicht etwa ma­le­ri­sche oder dich­te­ri­sche Schat­ten und Schei­ne sind, son­dern eine in­ner­li­che Wahr­heit und Not­wen­dig­keit haben. Das­sel­be Ge­setz wird sich auf alles üb­ri­ge Le­ben­di­ge an­wen­den las­sen.</q>... <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">Vor­wärts und rück­wärts ist die Pflan­ze immer nur Blatt, mit dem künf­ti­gen Keim so un­zer­trenn­lich ver­eint, dass man eins ohne das an­de­re nicht den­ken darf.</q></span>
         
-        <span id="s-12-15-26">woran würde ich sonst er­ken­nen, dass die­ses oder jenes Ge­bil­de eine Pflan­ze sei, wenn sie nicht alle nach einem Mus­ter ge­bil­det wären.» Er be­müht sich, die ab­wei­chen­den Ge­stal­ten zu un­ter­schei­den, aber immer wie­der wer­den seine Ge­dan­ken zu dem einen Ur­bild, das ihnen allen zu­grun­de liegt, hin­ge­lenkt (Ita­lie­ni­sche Reise, 17.</span>
+        <span id="s-12-15-38">Einen sol­chen Be­griff zu fas­sen, zu er­tra­gen, ihn in der Natur auf­zu­fin­den, ist eine Auf­ga­be, die uns in einen pein­lich süßen Zu­stand ver­setzt (Ita­lie­ni­sche Reise).</span>
         
-        <span id="s-12-15-27">April 1787).</span>
+        <span id="s-12-15-39">Goe­the nimmt zur Er­klä­rung der Le­bens­er­schei­nun­gen einen Weg, der gänz­lich ver­schie­den ist von denen, wel­che die Na­tur­for­scher ge­wöhn­lich gehen.</span>
         
-        <span id="s-12-15-28">Goe­the legt sich ein bo­ta­ni­sches Ta­ge­buch an, in dem er alle wäh­rend der Reise über das Pflan­zen­reich ge­mach­ten Er­fah­run­gen und Re­fle­xio­nen ein­zeich­net (vgl. Wei­ma­rer Aus­ga­be, 2.</span>
+        <span id="s-12-15-40">Diese schei­den sich in zwei Par­tei­en.</span>
         
-        <span id="s-12-15-29">Abt., Band 7, S. 273 ff.). Diese Ta­ge­buch­blät­ter zei­gen, wie un­er­müd­lich er damit be­schäf­tigt ist, Pflan­zen­ex­em­pla­re aus­fin­dig zu ma­chen, die ge­eig­net sind, auf die Ge­set­ze des Wachs­tums und der Fort­pflan­zung hin­zu­lei­ten.</span>
+        <span id="s-12-15-41">Es gibt Ver­tei­di­ger einer in den or­ga­ni­schen Wesen wir­ken­den Le­bens­kraft, die ge­gen­über an­de­ren Na­tur­ur­sa­chen eine be­son­de­re, hö­he­re Kräf­te­form dar­stellt.</span>
         
-        <span id="s-12-15-30">Glaubt er ir­gend­ei­nem Ge­setz auf der Spur zu sein, so stellt er es zu­nächst in hy­po­the­ti­scher Form auf, um es sich dann im Ver­lauf sei­ner wei­te­ren Er­fah­run­gen be­stä­ti­gen zu las­sen.</span>
+        <span id="s-12-15-42">Wie es Schwer­kraft, che­mi­sche An­zie­hung und Ab­sto­ßung, Ma­gne­tis­mus usw. gibt, so soll es auch eine Le­bens­kraft geben, wel­che die Stof­fe des Or­ga­nis­mus in eine sol­che Wech­sel­wir­kung bringt, dass die­ser sich er­hal­ten, wach­sen, näh­ren und fort­pflan­zen kann.</span>
         
-        <span id="s-12-15-31">Die Vor­gän­ge der Kei­mung, der Be­fruch­tung, des Wachs­tums no­tiert er sorg­fäl­tig.</span>
+        <span id="s-12-15-43">Die Na­tur­for­scher, wel­che die­ser Mei­nung sind, sagen: in dem Or­ga­nis­mus wir­ken die­sel­ben Kräf­te wie in der üb­ri­gen Natur; aber sie wir­ken nicht wie in einer leb­lo­sen Ma­schi­ne.</span>
         
-        <span id="s-12-15-32">Dass das Blatt das Grund­or­gan der Pflan­ze ist, und dass die For­men aller üb­ri­gen Pflan­zen­or­ga­ne am bes­ten zu ver­ste­hen sind, wenn man sie als um­ge­wan­del­te Blät­ter be­trach­tet, leuch­tet ihm immer mehr ein.</span>
+        <span id="s-12-15-44">Sie wer­den von der Le­bens­kraft gleich­sam ein­ge­fan­gen und auf eine hö­he­re Stufe des Wir­kens ge­ho­ben.</span>
         
-        <span id="s-12-15-33">Er schreibt in das Ta­ge­buch: «Hy­po­the­se: Alles ist Blatt und durch diese Ein­fach­heit wird die größ­te Man­nig­fal­tig­keit mög­lich.» Und am 17.</span>
+        <span id="s-12-15-45">Den Be­ken­nern die­ser Mei­nung ste­hen an­de­re Na­tur­for­scher ge­gen­über, wel­che glau­ben, dass in den Or­ga­nis­men keine be­son­de­re Le­bens­kraft wirke.</span>
         
-        <span id="s-12-15-34">Mai 1787 teilt er Her­der mit: «Fer­ner muss ich Dir ver­trau­en, dass ich dem Ge­heim­nis der Pflan­zen­zeu­gung und Or­ga­ni­sa­ti­on ganz nahe bin, und dass es das Ein­fachs­te ist, was nur ge­dacht wer­den kann.</span>
+        <span id="s-12-15-46">Sie hal­ten die Le­bens­er­schei­nun­gen für kom­pli­zier­te che­mi­sche und phy­si­ka­li­sche Vor­gän­ge und geben sich der Hoff­nung hin, dass es einst viel­leicht ge­lin­gen werde, einen Or­ga­nis­mus eben­so durch Zu­rück­füh­rung auf un­or­ga­ni­sche Kraft­wir­kun­gen zu er­klä­ren wie eine Ma­schi­ne.</span>
         
-        <span id="s-12-15-35">Unter die­sem Him­mel kann man die schöns­ten Be­ob­ach­tun­gen ma­chen.</span>
+        <span id="s-12-15-47">Die ers­te­re An­sicht wird als Vi­ta­lis­mus, die an­de­re als Me­cha­nis­mus be­zeich­net.</span>
         
-        <span id="s-12-15-36">Den Haupt­punkt, wo der Keim steckt, habe ich ganz klar und zwei­fel­los ge­fun­den; alles üb­ri­ge sehe ich auch schon im Gan­zen und nur noch ei­ni­ge Punk­te müs­sen be­stimm­ter wer­den.</span>
+        <span id="s-12-15-48">Von bei­den ist die Goe­the­sche Auf­fas­sungs­wei­se durch­aus ver­schie­den.</span>
         
-        <span id="s-12-15-37">Die Ur­pflan­ze wird das wun­der­lichs­te Ge­schöpf von der Welt, um wel­ches mich die Natur selbst be­nei­den soll.</span>
+        <span id="s-12-15-49">Dass in dem Or­ga­nis­mus noch etwas an­de­res wirk­sam ist, als die Kräf­te der un­or­ga­ni­schen Natur, er­scheint ihm selbst­ver­ständ­lich.</span>
         
-        <span id="s-12-15-38">Mit die­sem Mo­dell und dem Schlüs­sel dazu kann man als­dann noch Pflan­zen ins Un­end­li­che er­fin­den, die kon­se­quent sein müs­sen, das heißt: die, wenn sie auch nicht exis­tie­ren, doch exis­tie­ren könn­ten, und nicht etwa ma­le­ri­sche oder dich­te­ri­sche Schat­ten und Schei­ne sind, son­dern eine in­ner­li­che Wahr­heit und Not­wen­dig­keit haben.</span>
+        <span id="s-12-15-50">Zur me­cha­ni­schen Auf­fas­sung der Le­bens­er­schei­nun­gen kann er sich nicht be­ken­nen.</span>
         
-        <span id="s-12-15-39">Das­sel­be Ge­setz wird sich auf alles üb­ri­ge Le­ben­di­ge an­wen­den las­sen.»...</span>
+        <span id="s-12-15-51">Eben­so wenig sucht er, um die Wir­kun­gen im Or­ga­nis­mus zu er­klä­ren, nach einer be­son­de­ren Le­bens­kraft.</span>
         
-        <span id="s-12-15-40">«Vor­wärts und rück­wärts ist die Pflan­ze immer nur Blatt, mit dem künf­ti­gen Keim so un­zer­trenn­lich ver­eint, dass man eins ohne das an­de­re nicht den­ken darf.</span>
+        <span id="s-12-15-52">Er ist über­zeugt, dass zur Er­fas­sung der Le­bens­vor­gän­ge eine An­schau­ung ge­hört, die an­de­rer Art ist als die­je­ni­ge, durch wel­che die Er­schei­nun­gen der un­or­ga­ni­schen Natur wahr­ge­nom­men wer­den.</span>
         
-        <span id="s-12-15-41">Einen sol­chen Be­griff zu fas­sen, zu er­tra­gen, ihn in der Natur auf­zu­fin­den, ist eine Auf­ga­be, die uns in einen pein­lich süßen Zu­stand ver­setzt» (Ita­lie­ni­sche Reise).</span>
+        <span id="s-12-15-53">Wer zur An­nah­me einer Le­bens­kraft sich ent­schließt, der sieht zwar ein, dass die or­ga­ni­schen Wir­kun­gen nicht me­cha­nisch sind, aber es fehlt ihm zu­gleich die Fä­hig­keit, jene an­de­re Art der An­schau­ung in sich aus­zu­bil­den, durch die ihm das Or­ga­ni­sche er­kenn­bar wer­den könn­te.</span>
         
-        <span id="s-12-15-42">Goe­the nimmt zur Er­klä­rung der Le­bens­er­schei­nun­gen einen Weg, der gänz­lich ver­schie­den ist von denen, wel­che die Na­tur­for­scher ge­wöhn­lich gehen.</span>
+        <span id="s-12-15-54">Die Vor­stel­lung der Le­bens­kraft bleibt dun­kel und un­be­stimmt.</span>
         
-        <span id="s-12-15-43">Diese schei­den sich in zwei Par­tei­en.</span>
+        <span id="s-12-15-55">Ein neue­rer An­hän­ger des Vi­ta­lis­mus, Gus­tav Bunge, meint: <q author="Gus­tav Bunge" book-title="Vi­ta­lis­mus und Me­cha­nis­mus" part="1">In der kleins­ten Zelle da ste­cken schon alle Rät­sel des Le­bens drin, und bei der Er­for­schung der kleins­ten Zelle – da sind wir mit den bis­he­ri­gen Hilfs­mit­teln be­reits an der Gren­ze an­ge­langt</q> («Vi­ta­lis­mus und Me­cha­nis­mus», Leip­zig 1886, S. 17). Es ist durch­aus im Sinne der Goe­the­schen Denk­wei­se, dar­auf zu ant­wor­ten: Das­je­ni­ge An­schau­ungs­ver­mö­gen, wel­ches nur das Wesen der un­or­ga­ni­schen Er­schei­nun­gen er­kennt, ist mit sei­nen Hilfs­mit­teln an der Gren­ze an­ge­langt, die über­schrit­ten wer­den muss, um das Le­ben­di­ge zu er­fas­sen.</span>
         
-        <span id="s-12-15-44">Es gibt Ver­tei­di­ger einer in den or­ga­ni­schen Wesen wir­ken­den Le­bens­kraft, die ge­gen­über an­de­ren Na­tur­ur­sa­chen eine be­son­de­re, hö­he­re Kräf­te­form dar­stellt.</span>
+        <span id="s-12-15-56">Die­ses An­schau­ungs­ver­mö­gen wird aber nie in­ner­halb sei­nes Be­rei­ches Mit­tel fin­den, die zur Er­klä­rung des Le­bens auch nur der kleins­ten Zelle ge­eig­net sein kön­nen.</span>
         
-        <span id="s-12-15-45">Wie es Schwer­kraft, che­mi­sche An­zie­hung und Ab­sto­ßung, Ma­gne­tis­mus usw. gibt, so soll es auch eine Le­bens­kraft geben, wel­che die Stof­fe des Or­ga­nis­mus in eine sol­che Wech­sel­wir­kung bringt, dass die­ser sich er­hal­ten, wach­sen, näh­ren und fort­pflan­zen kann.</span>
+        <span id="s-12-15-57">Wie zur Wahr­neh­mung der Far­ben­er­schei­nun­gen das Auge ge­hört, so ge­hört zur Auf­fas­sung des Le­bens die Fä­hig­keit, in dem Sinn­li­chen ein Über­sinn­li­ches un­mit­tel­bar an­zu­schau­en.</span>
         
-        <span id="s-12-15-46">Die Na­tur­for­scher, wel­che die­ser Mei­nung sind, sagen: in dem Or­ga­nis­mus wir­ken die­sel­ben Kräf­te wie in der üb­ri­gen Natur; aber sie wir­ken nicht wie in einer leb­lo­sen Ma­schi­ne.</span>
+        <span id="s-12-15-58">Die­ses Über­sinn­li­che wird dem­je­ni­gen immer ent­schlüp­fen, der nur die Sinne auf die or­ga­ni­schen For­men rich­tet.</span>
         
-        <span id="s-12-15-47">Sie wer­den von der Le­bens­kraft gleich­sam ein­ge­fan­gen und auf eine hö­he­re Stufe des Wir­kens ge­ho­ben.</span>
+        <span id="s-12-15-59">Goe­the sucht die sinn­li­che An­schau­ung der Pflan­zen­ge­stal­ten auf eine hö­he­re Art zu be­le­ben und sich die sinn­li­che Form einer über­sinn­li­chen Ur­pflan­ze vor­zu­stel­len (vgl. «Ge­schich­te mei­nes bo­ta­ni­schen Stu­di­ums» in Kürsch­ner, Band 33, S. 80). Der Vi­ta­list nimmt seine Zu­flucht zu dem in­halt­lee­ren Be­griff der Le­bens­kraft, weil er das, was seine <i>Sinne</i> im Or­ga­nis­mus nicht wahr­neh­men kön­nen, über­haupt nicht sieht.</span>
         
-        <span id="s-12-15-48">Den Be­ken­nern die­ser Mei­nung ste­hen an­de­re Na­tur­for­scher ge­gen­über, wel­che glau­ben, dass in den Or­ga­nis­men keine be­son­de­re Le­bens­kraft wirke.</span>
-        
-        <span id="s-12-15-49">Sie hal­ten die Le­bens­er­schei­nun­gen für kom­pli­zier­te che­mi­sche und phy­si­ka­li­sche Vor­gän­ge und geben sich der Hoff­nung hin, dass es einst viel­leicht ge­lin­gen werde, einen Or­ga­nis­mus eben­so durch Zu­rück­füh­rung auf un­or­ga­ni­sche Kraft­wir­kun­gen zu er­klä­ren wie eine Ma­schi­ne.</span>
-        
-        <span id="s-12-15-50">Die ers­te­re An­sicht wird als Vi­ta­lis­mus, die an­de­re als Me­cha­nis­mus be­zeich­net.</span>
-        
-        <span id="s-12-15-51">Von bei­den ist die Goe­the­sche Auf­fas­sungs­wei­se durch­aus ver­schie­den.</span>
-        
-        <span id="s-12-15-52">Dass in dem Or­ga­nis­mus noch etwas an­de­res wirk­sam ist, als die Kräf­te der un­or­ga­ni­schen Natur, er­scheint ihm selbst­ver­ständ­lich.</span>
-        
-        <span id="s-12-15-53">Zur me­cha­ni­schen Auf­fas­sung der Le­bens­er­schei­nun­gen kann er sich nicht be­ken­nen.</span>
-        
-        <span id="s-12-15-54">Eben­so wenig sucht er, um die Wir­kun­gen im Or­ga­nis­mus zu er­klä­ren, nach einer be­son­de­ren Le­bens­kraft.</span>
-        
-        <span id="s-12-15-55">Er ist über­zeugt, dass zur Er­fas­sung der Le­bens­vor­gän­ge eine An­schau­ung ge­hört, die an­de­rer Art ist als die­je­ni­ge, durch wel­che die Er­schei­nun­gen der un­or­ga­ni­schen Natur wahr­ge­nom­men wer­den.</span>
-        
-        <span id="s-12-15-56">Wer zur An­nah­me einer Le­bens­kraft sich ent­schließt, der sieht zwar ein, dass die or­ga­ni­schen Wir­kun­gen nicht me­cha­nisch sind, aber es fehlt ihm zu­gleich die Fä­hig­keit, jene an­de­re Art der An­schau­ung in sich aus­zu­bil­den, durch die ihm das Or­ga­ni­sche er­kenn­bar wer­den könn­te.</span>
-        
-        <span id="s-12-15-57">Die Vor­stel­lung der Le­bens­kraft bleibt dun­kel und un­be­stimmt.</span>
-        
-        <span id="s-12-15-58">Ein neue­rer An­hän­ger des Vi­ta­lis­mus, Gus­tav Bunge, meint: «In der kleins­ten Zelle da ste­cken schon alle Rät­sel des Le­bens drin, und bei der Er­for­schung der kleins­ten Zelle – da sind wir mit den bis­he­ri­gen Hilfs­mit­teln be­reits an der Gren­ze an­ge­langt» («Vi­ta­lis­mus und Me­cha­nis­mus», Leip­zig 1886, S. 17). Es ist durch­aus im Sinne der Goe­the­schen Denk­wei­se, dar­auf zu ant­wor­ten: Das­je­ni­ge An­schau­ungs­ver­mö­gen, wel­ches nur das Wesen der un­or­ga­ni­schen Er­schei­nun­gen er­kennt, ist mit sei­nen Hilfs­mit­teln an der Gren­ze an­ge­langt, die über­schrit­ten wer­den muss, um das Le­ben­di­ge zu er­fas­sen.</span>
-        
-        <span id="s-12-15-59">Die­ses An­schau­ungs­ver­mö­gen wird aber nie in­ner­halb sei­nes Be­rei­ches Mit­tel fin­den, die zur Er­klä­rung des Le­bens auch nur der kleins­ten Zelle ge­eig­net sein kön­nen.</span>
-        
-        <span id="s-12-15-60">Wie zur Wahr­neh­mung der Far­ben­er­schei­nun­gen das Auge ge­hört, so ge­hört zur Auf­fas­sung des Le­bens die Fä­hig­keit, in dem Sinn­li­chen ein Über­sinn­li­ches un­mit­tel­bar an­zu­schau­en.</span>
-        
-        <span id="s-12-15-61">Die­ses Über­sinn­li­che wird dem­je­ni­gen immer ent­schlüp­fen, der nur die Sinne auf die or­ga­ni­schen For­men rich­tet.</span>
-        
-        <span id="s-12-15-62">Goe­the sucht die sinn­li­che An­schau­ung der Pflan­zen­ge­stal­ten auf eine hö­he­re Art zu be­le­ben und sich die sinn­li­che Form einer über­sinn­li­chen Ur­pflan­ze vor­zu­stel­len (vgl. «Ge­schich­te mei­nes bo­ta­ni­schen Stu­di­ums» in Kürsch­ner, Band 33, S. 80). Der Vi­ta­list nimmt seine Zu­flucht zu dem in­halt­lee­ren Be­griff der Le­bens­kraft, weil er das, was seine Sinne im Or­ga­nis­mus nicht wahr­neh­men kön­nen, über­haupt nicht sieht.</span>
-        
-        <span id="s-12-15-63">Goe­the sieht das Sinn­li­che von einem Über­sinn­li­chen so durch­drun­gen, wie eine ge­färb­te Flä­che von der Farbe.</span>
+        <span id="s-12-15-60">Goe­the sieht das Sinn­li­che von einem Über­sinn­li­chen so durch­drun­gen, wie eine ge­färb­te Flä­che von der Farbe.</span>
         
       </p>
     </section>
     <section id="p-12-16">
       <p>
-        <span id="s-12-16-1">16| Die An­hän­ger des Me­cha­nis­mus sind der An­sicht, dass es ein­mal ge­lin­gen könne, le­ben­de Sub­stan­zen auf künst­li­chem Weg aus un­or­ga­ni­schen Stof­fen her­zu­stel­len.</span>
+        <a class="p-num" href="#p-12-16">16|</a>
+        <span id="s-12-16-1">Die An­hän­ger des Me­cha­nis­mus sind der An­sicht, dass es ein­mal ge­lin­gen könne, le­ben­de Sub­stan­zen auf künst­li­chem Weg aus un­or­ga­ni­schen Stof­fen her­zu­stel­len.</span>
         
         <span id="s-12-16-2">Sie sagen, vor noch nicht vie­len Jah­ren wurde be­haup­tet, dass es im Or­ga­nis­mus Sub­stan­zen gebe, die nicht auf künst­li­chem Weg, son­dern nur durch die Wir­kung der Le­bens­kraft ent­ste­hen kön­nen.</span>
         
@@ -570,7 +543,8 @@
     </section>
     <section id="p-12-17">
       <p>
-        <span id="s-12-17-1">17| Vom Stand­punkt der Goe­the­schen Welt­an­schau­ung ist dar­auf zu er­wi­dern: die Me­cha­nis­ten spre­chen in einer Weise von Stof­fen und Kräf­ten, die durch keine Er­fah­rung ge­recht­fer­tigt ist.</span>
+        <a class="p-num" href="#p-12-17">17|</a>
+        <span id="s-12-17-1">Vom Stand­punkt der Goe­the­schen Welt­an­schau­ung ist dar­auf zu er­wi­dern: die Me­cha­nis­ten spre­chen in einer Weise von Stof­fen und Kräf­ten, die durch keine Er­fah­rung ge­recht­fer­tigt ist.</span>
         
         <span id="s-12-17-2">Und man hat sich an diese Weise zu spre­chen so ge­wöhnt, dass es sehr schwer wird, die­sen Be­grif­fen ge­gen­über die rei­nen Aus­sprü­che der Er­fah­rung gel­tend zu ma­chen.</span>
         
@@ -610,7 +584,7 @@
         
         <span id="s-12-17-20">Und wenn man wei­ter­geht und be­haup­tet, Sau­er­stoff und Was­ser­stoff seien Stof­fe, was man schon durch die Namen tut, die man ihnen bei­legt, so hat man eben­falls zu dem Wahr­ge­nom­me­nen einen Be­griff hin­zu­ge­fügt.</span>
         
-        <span id="s-12-17-21">Denn tat­säch­lich ist in dem Raum, der vom Sau­er­stoff ein­ge­nom­men wird, nur eine Summe von Zu­stän­den wahr­zu­neh­men.</span>
+        <span id="s-12-17-21">Denn <i>tat­säch­lich</i> ist in dem Raum, der vom Sau­er­stoff ein­ge­nom­men wird, nur eine Summe von Zu­stän­den wahr­zu­neh­men.</span>
         
         <span id="s-12-17-22">Zu die­sen Zu­stän­den denkt man den Stoff hinzu, an dem sie haf­ten sol­len.</span>
         
@@ -638,13 +612,14 @@
         
         <span id="s-12-17-34">Nicht Stof­fe und Kräf­te nimmt man wahr, son­dern Zu­stän­de und deren Über­gän­ge in­ein­an­der.</span>
         
-        <span id="s-12-17-35">Man er­klärt sich diese Zu­stands­än­de­run­gen durch Hin­zu­fü­gung von Be­grif­fen zu den Wahr­neh­mun­gen.</span>
+        <span id="s-12-17-35">Man <i>er­klärt</i> sich diese Zu­stands­än­de­run­gen durch Hin­zu­fü­gung von Be­grif­fen zu den Wahr­neh­mun­gen.</span>
         
       </p>
     </section>
     <section id="p-12-18">
       <p>
-        <span id="s-12-18-1">18| Man nehme ein­mal an, es gebe ein Wesen, das Sau­er­stoff und Was­ser­stoff wahr­neh­men könn­te, nicht aber Was­ser.</span>
+        <a class="p-num" href="#p-12-18">18|</a>
+        <span id="s-12-18-1">Man nehme ein­mal an, es gebe ein Wesen, das Sau­er­stoff und Was­ser­stoff wahr­neh­men könn­te, nicht aber Was­ser.</span>
         
         <span id="s-12-18-2">Wenn wir vor den Augen eines sol­chen We­sens den Sau­er­stoff und Was­ser­stoff zu Was­ser ver­ei­nig­ten, so ver­schwän­den vor ihm die Zu­stän­de, die es an den bei­den Stof­fen wahr­ge­nom­men hat, in nichts.</span>
         
@@ -658,9 +633,10 @@
     </section>
     <section id="p-12-19">
       <p>
-        <span id="s-12-19-1">19| Was wäre also er­reicht, wenn es ge­län­ge, Koh­len­säu­re, Am­mo­ni­ak, Was­ser und Salze künst­lich zu einer le­ben­den Ei­weiß­sub­stanz im La­bo­ra­to­ri­um zu ver­ei­ni­gen?</span>
+        <a class="p-num" href="#p-12-19">19|</a>
+        <span id="s-12-19-1">Was wäre also er­reicht, wenn es ge­län­ge, Koh­len­säu­re, Am­mo­ni­ak, Was­ser und Salze künst­lich zu einer le­ben­den Ei­weiß­sub­stanz im La­bo­ra­to­ri­um zu ver­ei­ni­gen?</span>
         
-        <span id="s-12-19-2">Man wüss­te, dass die Wahr­neh­mungs­in­hal­te der vie­ler­lei Stof­fe sich zu einem Wahr­neh­mungs­in­halt ver­ei­ni­gen kön­nen.</span>
+        <span id="s-12-19-2">Man wüss­te, dass die Wahr­neh­mungs­in­hal­te der vie­ler­lei Stof­fe sich zu <i>einem</i> Wahr­neh­mungs­in­halt ver­ei­ni­gen kön­nen.</span>
         
         <span id="s-12-19-3">Aber die­ser Wahr­neh­mungs­in­halt ist aus jenen durch­aus nicht ab­zu­lei­ten.</span>
         
@@ -676,9 +652,10 @@
     </section>
     <section id="p-12-20">
       <p>
-        <span id="s-12-20-1">20| Die Kei­mung, das Wachs­tum, die Um­wand­lung der Or­ga­ne, die Er­näh­rung und Fort­pflan­zung des Or­ga­nis­mus sich als sinn­lich-über­sinn­li­chen Vor­gang vor­zu­stel­len, war Goe­thes Be­stre­ben bei sei­nen Stu­di­en über die Pflan­zen- und die Tier­welt.</span>
+        <a class="p-num" href="#p-12-20">20|</a>
+        <span id="s-12-20-1">Die Kei­mung, das Wachs­tum, die Um­wand­lung der Or­ga­ne, die Er­näh­rung und Fort­pflan­zung des Or­ga­nis­mus sich als sinn­lich-über­sinn­li­chen Vor­gang vor­zu­stel­len, war Goe­thes Be­stre­ben bei sei­nen Stu­di­en über die Pflan­zen- und die Tier­welt.</span>
         
-        <span id="s-12-20-2">Er be­merk­te, dass die­ser sinn­lich-über­sinn­li­che Vor­gang in der Idee bei allen Pflan­zen der­sel­be ist, und dass er nur in der äu­ße­ren Er­schei­nung ver­schie­de­ne For­men an­nimmt.</span>
+        <span id="s-12-20-2">Er be­merk­te, dass die­ser sinn­lich-über­sinn­li­che Vor­gang in <i>der Idee</i> bei allen Pflan­zen der­sel­be ist, und dass er nur in der äu­ße­ren <i>Er­schei­nung</i> ver­schie­de­ne For­men an­nimmt.</span>
         
         <span id="s-12-20-3">Das­sel­be konn­te Goe­the für die Tier­welt fest­stel­len.</span>
         
@@ -690,25 +667,27 @@
         
         <span id="s-12-20-7">Das Grund­or­gan der Pflan­ze ist das Blatt mit dem Kno­ten, an dem es sich ent­wi­ckelt.</span>
         
-        <span id="s-12-20-8">Die­ses Organ nimmt in der äu­ße­ren Er­schei­nung ver­schie­de­ne Ge­stal­ten an: Keim­blatt, Laub­blatt, Kelch­blatt, Kro­nen­blatt usw. «Es mag nun die Pflan­ze spros­sen, blü­hen oder Früch­te brin­gen, so sind es doch nur immer die­sel­bi­gen Or­ga­ne, wel­che in viel­fäl­ti­gen Be­stim­mun­gen und unter oft ver­än­der­ten Ge­stal­ten die Vor­schrift der Natur er­fül­len.»</span>
+        <span id="s-12-20-8">Die­ses Organ nimmt in der äu­ße­ren Er­schei­nung ver­schie­de­ne Ge­stal­ten an: Keim­blatt, Laub­blatt, Kelch­blatt, Kro­nen­blatt usw. <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ver­such die Me­ta­mor­pho­se der Pflan­zen zu er­klä­ren" part="1">Es mag nun die Pflan­ze spros­sen, blü­hen oder Früch­te brin­gen, so sind es doch nur immer <i>die­sel­bi­gen Or­ga­ne</i>, wel­che in viel­fäl­ti­gen Be­stim­mun­gen und unter oft ver­än­der­ten Ge­stal­ten die Vor­schrift der Natur er­fül­len.</q></span>
         
       </p>
     </section>
     <section id="p-12-21">
       <p>
-        <span id="s-12-21-1">21| Um ein voll­stän­di­ges Bild der Ur­pflan­ze zu er­hal­ten, muss­te Goe­the die For­men im All­ge­mei­nen ver­fol­gen, wel­che das Grund­or­gan im Fort­gang des Wachs­tums einer Pflan­ze von der Kei­mung bis zur Sa­men­rei­fe durch­macht.</span>
+        <a class="p-num" href="#p-12-21">21|</a>
+        <span id="s-12-21-1">Um ein voll­stän­di­ges Bild der Ur­pflan­ze zu er­hal­ten, muss­te Goe­the die For­men im All­ge­mei­nen ver­fol­gen, wel­che das Grund­or­gan im Fort­gang des Wachs­tums einer Pflan­ze von der Kei­mung bis zur Sa­men­rei­fe durch­macht.</span>
         
         <span id="s-12-21-2">Im An­fang ihrer Ent­wick­lung ruht die ganze Pflan­zen­ge­stalt in dem Samen.</span>
         
         <span id="s-12-21-3">In die­sem hat die Ur­pflan­ze eine Ge­stalt an­ge­nom­men, durch die sie ihren ide­el­len In­halt gleich­sam in der äu­ße­ren Er­schei­nung ver­birgt.</span>
         
-        <span id="s-12-21-4">«Ein­fach schlief in dem Samen die Kraft; ein be­gin­nen­des Vor­bild Lag, ver­schlos­sen in sich, unter die Hülle ge­beugt, Blatt und Wur­zel und Keim, nur halb ge­for­met und farb­los Tro­cken er­hält so der Kern ru­hi­ges Leben be­wahrt, Quil­let stre­bend empor, sich mil­der Feuch­te ver­trau­end, Und er­hebt sich so­gleich aus der um­ge­ben­den Nacht.» «Die Me­ta­mor­pho­se der Pflan­zen», Kürsch­ner, Band 33, S. 97</span>
+        <span id="s-12-21-4"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Die Me­ta­mor­pho­se der Pflan­zen" part="1">Ein­fach schlief in dem Samen die Kraft; ein be­gin­nen­des Vor­bild Lag, ver­schlos­sen in sich, unter die Hülle ge­beugt, Blatt und Wur­zel und Keim, nur halb ge­for­met und farb­los Tro­cken er­hält so der Kern ru­hi­ges Leben be­wahrt, Quil­let stre­bend empor, sich mil­der Feuch­te ver­trau­end, Und er­hebt sich so­gleich aus der um­ge­ben­den Nacht.</q> «Die Me­ta­mor­pho­se der Pflan­zen», Kürsch­ner, Band 33, S. 97</span>
         
       </p>
     </section>
     <section id="p-12-22">
       <p>
-        <span id="s-12-22-1">22| Aus dem Samen ent­wi­ckelt die Pflan­ze die ers­ten Or­ga­ne, die Ko­ty­le­do­nen, nach­dem sie «ihre Hül­len mehr oder we­ni­ger in der Erde» zu­rück­ge­las­sen und «die Wur­zel in den Boden» be­fes­tigt hat.</span>
+        <a class="p-num" href="#p-12-22">22|</a>
+        <span id="s-12-22-1">Aus dem Samen ent­wi­ckelt die Pflan­ze die ers­ten Or­ga­ne, die Ko­ty­le­do­nen, nach­dem sie <q author="Jo­hann Wolf­gang von Goe­the" book-title="Die Me­ta­mor­pho­se der Pflan­zen" part="1">ihre Hül­len mehr oder we­ni­ger in der Erde</q> zu­rück­ge­las­sen und «die Wur­zel in den Boden» be­fes­tigt hat.</span>
         
         <span id="s-12-22-2">Und nun folgt im wei­te­ren Ver­lauf des Wachs­tums Trieb auf Trieb; Kno­ten auf Kno­ten türmt sich über­ein­an­der, und an jedem Kno­ten fin­det sich ein Blatt.</span>
         
@@ -720,23 +699,16 @@
         
         <span id="s-12-22-6">Goe­the stellt sich vor, dass die Blät­ter ihre fort­schrei­ten­de Aus­bil­dung und Ver­fei­ne­rung dem Licht und der Luft schul­dig sind.</span>
         
-        <span id="s-12-22-7">«Wenn wir jene in der ver­schlos­se­nen Sa­men­hül­le er­zeug­ten Ko­ty­le­do­nen, mit einem rohen Saft nur gleich­sam aus­ge­stopft, fast gar nicht oder nur grob or­ga­ni­siert und un­ge­bil­det fin­den, so zei­gen sich uns die Blät­ter der Pflan­zen, wel­che unter dem Was­ser wach­sen, grö­ber or­ga­ni­siert als an­de­re, der frei­en Luft aus­ge­setz­te; ja, sogar ent­wi­ckelt die­sel­be Pflan­zen­art glat­te­re und we­ni­ger ver­fei­ner­te Blät­ter, wenn sie in tie­fen, feuch­ten Orten wächst, da sie hin­ge­gen, in hö­he­re Ge­gen­den ver­setzt, raue, mit Haa­ren ver­se­he­ne, fei­ner aus­ge­bil­de­te Blät­ter her­vor­bringt.» (Kürsch­ner, Band 33, S. 25 f.) In der zwei­ten Epo­che des Wachs­tums zieht die Pflan­ze wie­der in einen en­ge­ren Raum zu­sam­men, was sie vor­her aus­ge­brei­tet hat.</span>
+        <span id="s-12-22-7"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Die Me­ta­mor­pho­se der Pflan­zen" part="1">Wenn wir jene in der ver­schlos­se­nen Sa­men­hül­le er­zeug­ten Ko­ty­le­do­nen, mit einem rohen Saft nur gleich­sam aus­ge­stopft, fast gar nicht oder nur grob or­ga­ni­siert und un­ge­bil­det fin­den, so zei­gen sich uns die Blät­ter der Pflan­zen, wel­che unter dem Was­ser wach­sen, grö­ber or­ga­ni­siert als an­de­re, der frei­en Luft aus­ge­setz­te; ja, sogar ent­wi­ckelt die­sel­be Pflan­zen­art glat­te­re und we­ni­ger ver­fei­ner­te Blät­ter, wenn sie in tie­fen, feuch­ten Orten wächst, da sie hin­ge­gen, in hö­he­re Ge­gen­den ver­setzt, raue, mit Haa­ren ver­se­he­ne, fei­ner aus­ge­bil­de­te Blät­ter her­vor­bringt.</q> (Kürsch­ner, Band 33, S. 25 f.) In der zwei­ten Epo­che des Wachs­tums zieht die Pflan­ze wie­der in einen en­ge­ren Raum zu­sam­men, was sie vor­her aus­ge­brei­tet hat.</span>
         
-        <span id="s-12-22-8">«Mä­ßi­ger lei­tet sie nun den Saft, ver­engt die Ge­fä­ße, Und gleich zeigt die Ge­stalt zar­te­re Wir­kun­gen an.</span>
-        
-        <span id="s-12-22-9">Stil­le zieht sich der Trieb der stre­ben­den Rän­der zu­rück, Und die Rippe des Stiels bil­det sich völ­li­ger aus.</span>
-        
-        <span id="s-12-22-10">Blatt­los aber und schnell er­hebt sich der zär­te­re Stän­gel, Und ein Wun­der­ge­bild zieht den Be­trach­ten­den an.</span>
-        
-        <span id="s-12-22-11">Rings im Krei­se stel­let sich nun, ge­zäh­let und ohne Zahl, das klei­ne­re Blatt neben dem ähn­li­chen hin.</span>
-        
-        <span id="s-12-22-12">Um die Achse ge­drängt, ent­schei­det der ber­gen­de Kelch sich, Der zur höchs­ten Ge­stalt far­bi­ge Kro­nen ent­lässt.»</span>
+        <span id="s-12-22-8"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Die Me­ta­mor­pho­se der Pflan­zen" part="1">Mä­ßi­ger lei­tet sie nun den Saft, ver­engt die Ge­fä­ße, Und gleich zeigt die Ge­stalt zar­te­re Wir­kun­gen an. Stil­le zieht sich der Trieb der stre­ben­den Rän­der zu­rück, Und die Rippe des Stiels bil­det sich völ­li­ger aus. Blatt­los aber und schnell er­hebt sich der zär­te­re Stän­gel, Und ein Wun­der­ge­bild zieht den Be­trach­ten­den an. Rings im Krei­se stel­let sich nun, ge­zäh­let und ohne Zahl, das klei­ne­re Blatt neben dem ähn­li­chen hin. Um die Achse ge­drängt, ent­schei­det der ber­gen­de Kelch sich, Der zur höchs­ten Ge­stalt far­bi­ge Kro­nen ent­lässt.</q></span>
         
       </p>
     </section>
     <section id="p-12-23">
       <p>
-        <span id="s-12-23-1">23| Im Kelch zieht sich die Pflan­zen­ge­stalt zu­sam­men; in der Blu­men­kro­ne brei­tet sie sich wie­der aus.</span>
+        <a class="p-num" href="#p-12-23">23|</a>
+        <span id="s-12-23-1">Im Kelch zieht sich die Pflan­zen­ge­stalt zu­sam­men; in der Blu­men­kro­ne brei­tet sie sich wie­der aus.</span>
         
         <span id="s-12-23-2">Nun folgt die nächs­te Zu­sam­men­zie­hung in den Staub­ge­fä­ßen und dem Stem­pel, den Or­ga­nen der Fort­pflan­zung.</span>
         
@@ -752,9 +724,7 @@
         
         <span id="s-12-23-8">Goe­the nennt die Be­fruch­tung eine geis­ti­ge Ana­st­o­mo­se und sieht in ihr nur eine an­de­re Form des Vor­gangs, der in der Ent­wick­lung von einem Kno­ten zum an­de­ren statt­fin­det.</span>
         
-        <span id="s-12-23-9">«An allen Kör­pern, die wir le­ben­dig nen­nen, be­mer­ken wir die Kraft, ih­res­glei­chen her­vor­zu­brin­gen.</span>
-        
-        <span id="s-12-23-10">Wenn wir diese Kraft ge­teilt ge­wahr wer­den, be­zeich­nen wir sie unter dem Namen der bei­den Ge­schlech­ter.» (Wei­ma­rer Aus­ga­be, 2.</span>
+        <span id="s-12-23-9"><q author="Jo­hann Wolf­gang von Goe­the" part="1">An allen Kör­pern, die wir le­ben­dig nen­nen, be­mer­ken wir die Kraft, ih­res­glei­chen her­vor­zu­brin­gen. Wenn wir diese Kraft ge­teilt ge­wahr wer­den, be­zeich­nen wir sie unter dem Namen der bei­den Ge­schlech­ter.</q> (Wei­ma­rer Aus­ga­be, 2.</span>
         
         <span id="s-12-23-11">Abt., Band 6, S. 361.) Von Kno­ten zu Kno­ten bringt die Pflan­ze ih­res­glei­chen her­vor.</span>
         
@@ -780,7 +750,7 @@
         
         <span id="s-12-23-22">Bei den ge­füll­ten Moh­nen z. B. tre­ten an der Stel­le, wo die Staub­ge­fä­ße ent­ste­hen soll­ten, Blu­men­blät­ter auf.</span>
         
-        <span id="s-12-23-23">Das Organ, das der Idee nach zum Staub­ge­fäß be­stimmt war, ist ein Blu­men­blatt ge­wor­den.</span>
+        <span id="s-12-23-23">Das Organ, das <i>der Idee nach</i> zum Staub­ge­fäß be­stimmt war, ist ein Blu­men­blatt ge­wor­den.</span>
         
         <span id="s-12-23-24">In dem Organ, das im re­gel­mä­ßi­gen Fort­gang der Pflan­zen­ent­wick­lung eine be­stimm­te Form hat, ist die Mög­lich­keit ent­hal­ten, auch eine an­de­re an­zu­neh­men.</span>
         
@@ -788,11 +758,12 @@
     </section>
     <section id="p-12-24">
       <p>
-        <span id="s-12-24-1">24| Als Il­lus­tra­ti­on sei­ner Idee von der Ur­pflan­ze be­trach­tet Goe­the das Bryo­phyl­lum ca­ly­ci­num, die ge­mei­ne Keim-Zumpe, eine Pflan­zen­art, die von den Mo­luk­ken­in­seln nach Kal­kut­ta und von da nach Eu­ro­pa ge­kom­men ist.</span>
+        <a class="p-num" href="#p-12-24">24|</a>
+        <span id="s-12-24-1">Als Il­lus­tra­ti­on sei­ner Idee von der Ur­pflan­ze be­trach­tet Goe­the das Bryo­phyl­lum ca­ly­ci­num, die ge­mei­ne Keim-Zumpe, eine Pflan­zen­art, die von den Mo­luk­ken­in­seln nach Kal­kut­ta und von da nach Eu­ro­pa ge­kom­men ist.</span>
         
         <span id="s-12-24-2">Aus den Ker­ben der fet­ten Blät­ter die­ser Pflan­zen ent­wi­ckeln sich fri­sche Pflänz­chen, die, nach ihrer Ab­lö­sung, zu voll­stän­di­gen Pflan­zen aus­wach­sen.</span>
         
-        <span id="s-12-24-3">Goe­the sieht in die­sem Vor­gang sinn­lich-an­schau­lich dar­ge­stellt, dass in dem Blatt eine ganze Pflan­ze der Idee nach ruht (vgl. Goe­thes Be­mer­kun­gen über das Bryo­phyl­lum ca­ly­ci­num in der Wei­ma­rer Aus­ga­be, 2.</span>
+        <span id="s-12-24-3">Goe­the sieht in die­sem Vor­gang <i>sinn­lich-an­schau­lich</i> dar­ge­stellt, dass in dem Blatt eine ganze Pflan­ze der Idee nach ruht (vgl. Goe­thes Be­mer­kun­gen über das Bryo­phyl­lum ca­ly­ci­num in der Wei­ma­rer Aus­ga­be, 2.</span>
         
         <span id="s-12-24-4">Abt., Band VI, S. 336ff.).</span>
         
@@ -800,7 +771,8 @@
     </section>
     <section id="p-12-25">
       <p>
-        <span id="s-12-25-1">25| Wer die Vor­stel­lung der Ur­pflan­ze in sich aus­bil­det und so be­weg­lich er­hält, dass er sie in allen mög­li­chen For­men den­ken kann, die ihr In­halt zu­lässt, der kann mit ihrer Hilfe sich alle Ge­stal­tun­gen im Pflan­zen­reich er­klä­ren.</span>
+        <a class="p-num" href="#p-12-25">25|</a>
+        <span id="s-12-25-1">Wer die Vor­stel­lung der Ur­pflan­ze in sich aus­bil­det und so be­weg­lich er­hält, dass er sie in allen mög­li­chen For­men den­ken kann, die ihr In­halt zu­lässt, der kann mit ihrer Hilfe sich alle Ge­stal­tun­gen im Pflan­zen­reich er­klä­ren.</span>
         
         <span id="s-12-25-2">Er wird die Ent­wick­lung der ein­zel­nen Pflan­ze be­grei­fen; aber er wird auch fin­den, dass alle Ge­schlech­ter, Arten und Va­rie­tä­ten nach die­sem Ur­bil­de ge­formt sind.</span>
         
@@ -810,23 +782,12 @@
     </section>
     <section id="p-12-26">
       <p>
-        <span id="s-12-26-1">26| Auch in der Ent­wick­lung sei­ner Ideen über den mensch­li­chen Or­ga­nis­mus schrei­tet Goe­the in Ita­li­en vor.</span>
+        <a class="p-num" href="#p-12-26">26|</a>
+        <span id="s-12-26-1">Auch in der Ent­wick­lung sei­ner Ideen über den mensch­li­chen Or­ga­nis­mus schrei­tet Goe­the in Ita­li­en vor.</span>
         
         <span id="s-12-26-2">Am 20.</span>
         
-        <span id="s-12-26-3">Ja­nu­ar 1787 schreibt er an Kne­bel: «Auf Ana­to­mie bin ich so ziem­lich vor­be­rei­tet, und ich habe mir die Kennt­nis des mensch­li­chen Kör­pers, bis auf einen ge­wis­sen Grad, nicht ohne Mühe er­wor­ben.</span>
-        
-        <span id="s-12-26-4">Hier wird man durch die ewige Be­trach­tung der Sta­tu­en im­mer­fort, aber auf eine hö­he­re Weise, dar­auf hin­ge­wie­sen.</span>
-        
-        <span id="s-12-26-5">Bei un­se­rer me­di­zi­nisch-chir­ur­gi­schen Ana­to­mie kommt es bloß dar­auf an, den Teil zu ken­nen, und hier­zu dient auch wohl ein küm­mer­li­cher Mus­kel.</span>
-        
-        <span id="s-12-26-6">In Rom aber wol­len die Teile nichts hei­ßen, wenn sie nicht zu­gleich eine edle schö­ne Form dar­bie­ten.</span>
-        
-        <span id="s-12-26-7">– In dem gro­ßen La­za­rett San Spi­ri­to hat man den Künst­lern zu­lieb einen sehr schö­nen Mus­kel­kör­per der­ge­stalt be­rei­tet, dass die Schön­heit des­sel­ben in Ver­wun­de­rung setzt.</span>
-        
-        <span id="s-12-26-8">Er könn­te wirk­lich für einen ge­schun­de­nen Halb­gott, für einen Mar­syas gel­ten.</span>
-        
-        <span id="s-12-26-9">– So pflegt man auch, nach An­lei­tung der Alten, das Ske­lett nicht als eine künst­lich zu­sam­men­ge­reih­te Kno­chen­mas­se zu stu­die­ren, viel­mehr zu­gleich mit den Bän­dern, wo­durch es schon Leben und Be­we­gung er­hält.» Auch nach sei­ner Rück­kehr aus Ita­li­en treibt Goe­the flei­ßig ana­to­mi­sche Stu­di­en.</span>
+        <span id="s-12-26-3">Ja­nu­ar 1787 schreibt er an Kne­bel: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Auf Ana­to­mie bin ich so ziem­lich vor­be­rei­tet, und ich habe mir die Kennt­nis des mensch­li­chen Kör­pers, bis auf einen ge­wis­sen Grad, nicht ohne Mühe er­wor­ben. Hier wird man durch die ewige Be­trach­tung der Sta­tu­en im­mer­fort, aber auf eine hö­he­re Weise, dar­auf hin­ge­wie­sen. Bei un­se­rer me­di­zi­nisch-chir­ur­gi­schen Ana­to­mie kommt es bloß dar­auf an, den Teil zu ken­nen, und hier­zu dient auch wohl ein küm­mer­li­cher Mus­kel. In Rom aber wol­len die Teile nichts hei­ßen, wenn sie nicht zu­gleich eine edle schö­ne Form dar­bie­ten. – In dem gro­ßen La­za­rett San Spi­ri­to hat man den Künst­lern zu­lieb einen sehr schö­nen Mus­kel­kör­per der­ge­stalt be­rei­tet, dass die Schön­heit des­sel­ben in Ver­wun­de­rung setzt. Er könn­te wirk­lich für einen ge­schun­de­nen Halb­gott, für einen Mar­syas gel­ten. – So pflegt man auch, nach An­lei­tung der Alten, das Ske­lett nicht als eine künst­lich zu­sam­men­ge­reih­te Kno­chen­mas­se zu stu­die­ren, viel­mehr zu­gleich mit den Bän­dern, wo­durch es schon Leben und Be­we­gung er­hält.</q> Auch nach sei­ner Rück­kehr aus Ita­li­en treibt Goe­the flei­ßig ana­to­mi­sche Stu­di­en.</span>
         
         <span id="s-12-26-10">Es drängt ihn, die Bil­dungs­ge­set­ze der tie­ri­schen Ge­stalt eben­so zu er­ken­nen, wie ihm dies für die­je­ni­gen der Pflan­ze ge­lun­gen war.</span>
         
@@ -856,7 +817,8 @@
     </section>
     <section id="p-12-27">
       <p>
-        <span id="s-12-27-1">27| Die Ana­to­mie der Tiere war zu Goe­thes Zeit noch nicht so weit vor­ge­schrit­ten, dass er ein Le­be­we­sen hätte an­füh­ren kön­nen, wel­ches wirk­lich an Stel­le von ent­wi­ckel­ten Schä­del­kno­chen Wir­bel hat und das also im sinn­li­chen Bild das zeigt, was bei den voll­kom­me­nen Tie­ren nur der Idee nach vor­han­den ist.</span>
+        <a class="p-num" href="#p-12-27">27|</a>
+        <span id="s-12-27-1">Die Ana­to­mie der Tiere war zu Goe­thes Zeit noch nicht so weit vor­ge­schrit­ten, dass er ein Le­be­we­sen hätte an­füh­ren kön­nen, wel­ches wirk­lich an Stel­le von ent­wi­ckel­ten Schä­del­kno­chen Wir­bel hat und das also im sinn­li­chen Bild das zeigt, was bei den voll­kom­me­nen Tie­ren nur der Idee nach vor­han­den ist.</span>
         
         <span id="s-12-27-2">Durch die Un­ter­su­chun­gen Carl Ge­gen­baurs, die im Jahr 1872 ver­öf­fent­licht wor­den sind, ist es ge­lun­gen, eine sol­che Tier­form an­zu­ge­ben.</span>
         
@@ -882,7 +844,7 @@
         
         <span id="s-12-27-13">Ein Wi­der­spruch zwi­schen die­ser Auf­fas­sung und der Goe­the­schen kann nur vom Stand­punkt des Tat­sa­chen­fa­na­tis­mus aus ge­fun­den wer­den.</span>
         
-        <span id="s-12-27-14">Was in der Knor­pel­kap­sel des Schä­dels nicht mehr sinn­lich wahr­nehm­bar ist, die Wir­bel­struk­tur, ist in ihr gleich­wohl der Idee nach vor­han­den und tritt wie­der in die Er­schei­nung, so­bald die Be­din­gun­gen dazu vor­han­den sind.</span>
+        <span id="s-12-27-14">Was in der Knor­pel­kap­sel des Schä­dels nicht mehr sinn­lich wahr­nehm­bar ist, die Wir­bel­struk­tur, ist in ihr gleich­wohl <i>der Idee nach</i> vor­han­den und tritt wie­der in die Er­schei­nung, so­bald die Be­din­gun­gen dazu vor­han­den sind.</span>
         
         <span id="s-12-27-15">In der knor­pe­li­gen Schä­del­kap­sel ver­birgt sich die Idee des wir­bel­för­mi­gen Grund­or­gans in­ner­halb der sinn­li­chen Ma­te­rie; in den aus­ge­bil­de­ten Schä­del­kno­chen tritt sie wie­der in die äu­ße­re Er­schei­nung.</span>
         
@@ -890,11 +852,12 @@
     </section>
     <section id="p-12-28">
       <p>
-        <span id="s-12-28-1">28| Goe­the hofft, dass sich ihm die Bil­dungs­ge­set­ze der üb­ri­gen Teile des tie­ri­schen Or­ga­nis­mus in der­sel­ben Weise of­fen­ba­ren wer­den, wie es die­je­ni­gen des Ge­hirns, Rü­cken­marks und ihrer Um­hül­lungs­or­ga­ne getan haben.</span>
+        <a class="p-num" href="#p-12-28">28|</a>
+        <span id="s-12-28-1">Goe­the hofft, dass sich ihm die Bil­dungs­ge­set­ze der üb­ri­gen Teile des tie­ri­schen Or­ga­nis­mus in der­sel­ben Weise of­fen­ba­ren wer­den, wie es die­je­ni­gen des Ge­hirns, Rü­cken­marks und ihrer Um­hül­lungs­or­ga­ne getan haben.</span>
         
         <span id="s-12-28-2">Über die am Lido ge­mach­te Ent­de­ckung lässt er am 30.</span>
         
-        <span id="s-12-28-3">April 1790 Her­dern durch Frau von Kalb sagen, dass er «der Tier­ge­stalt und ihren man­cher­lei Um­bil­dun­gen um eine ganze For­mel näher ge­rückt ist, und zwar durch den son­der­bars­ten Zu­fall» (Goe­the an Frau von Kalb).</span>
+        <span id="s-12-28-3">April 1790 Her­dern durch Frau von Kalb sagen, dass er <q author="Jo­hann Wolf­gang von Goe­the" part="1"><i>der Tier­ge­stalt und ihren man­cher­lei Um­bil­dun­gen</i> um eine ganze For­mel näher ge­rückt ist, und zwar durch den son­der­bars­ten Zu­fall</q> (Goe­the an Frau von Kalb).</span>
         
         <span id="s-12-28-4">Er glaubt, sei­nem Ziel so nahe zu sein, dass er noch in dem­sel­ben Jahr, das ihm den Fund ge­bracht hat, eine Schrift über die tie­ri­sche Bil­dung voll­enden will, die sich der «Me­ta­mor­pho­se der Pflan­zen» an die Seite stel­len lässt.</span>
         
@@ -906,7 +869,7 @@
         
         <span id="s-12-28-8">So viel An­sät­ze er auch dazu macht, den Typus der tie­ri­schen Ge­stalt zu fin­den: etwas der Idee der Ur­pflan­ze Ana­lo­ges ist nicht zu­stan­de ge­kom­men.</span>
         
-        <span id="s-12-28-9">Er ver­gleicht die Tiere un­ter­ein­an­der und mit dem Men­schen und sucht ein all­ge­mei­nes Bild des tie­ri­schen Baues zu ge­win­nen, nach wel­chem, als einem Mus­ter, die Natur die ein­zel­nen Ge­stal­ten formt.</span>
+        <span id="s-12-28-9">Er ver­gleicht die Tiere un­ter­ein­an­der und mit dem Men­schen und sucht ein <i>all­ge­mei­nes Bild</i> des tie­ri­schen Baues zu ge­win­nen, nach wel­chem, als einem Mus­ter, die Natur die ein­zel­nen Ge­stal­ten formt.</span>
         
         <span id="s-12-28-10">Eine le­ben­di­ge Vor­stel­lung, die sich nach den Grund­ge­set­zen der tie­ri­schen Bil­dung mit einem Ge­halt er­füllt und so das Ur­tier der Natur gleich­sam nach­schafft, ist die­ses all­ge­mei­ne Bild des tie­ri­schen Typus nicht.</span>
         
@@ -914,13 +877,14 @@
         
         <span id="s-12-28-12">Er stellt das Ge­mein­sa­me in den man­nig­fal­ti­gen Tier­for­men fest; aber er ent­hält nicht die Ge­setz­mä­ßig­keit der Tier­heit.</span>
         
-        <span id="s-12-28-13">«Alle Glie­der bil­den sich aus nach ew’gen Ge­set­zen, Und die sel­tens­te Form be­wahrt im Ge­hei­men das Ur­bild.» Ge­dicht «Die Me­ta­mor­pho­se der Tiere»</span>
+        <span id="s-12-28-13"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Die Me­ta­mor­pho­se der Tiere" part="1">Alle Glie­der bil­den sich aus nach ew’gen Ge­set­zen, Und die sel­tens­te Form be­wahrt im Ge­hei­men das Ur­bild.</q> Ge­dicht «Die Me­ta­mor­pho­se der Tiere»</span>
         
       </p>
     </section>
     <section id="p-12-29">
       <p>
-        <span id="s-12-29-1">29| Wie die­ses Ur­bild durch ge­setz­mä­ßi­ge Um­for­mung eines Grund­glie­des sich als viel­glied­ri­ge Ur­form des tie­ri­schen Or­ga­nis­mus ent­wi­ckelt, davon konn­te Goe­the eine ein­heit­li­che Vor­stel­lung nicht ent­wi­ckeln.</span>
+        <a class="p-num" href="#p-12-29">29|</a>
+        <span id="s-12-29-1">Wie die­ses Ur­bild durch ge­setz­mä­ßi­ge Um­for­mung eines Grund­glie­des sich als viel­glied­ri­ge Ur­form des tie­ri­schen Or­ga­nis­mus ent­wi­ckelt, davon konn­te Goe­the eine ein­heit­li­che Vor­stel­lung nicht ent­wi­ckeln.</span>
         
         <span id="s-12-29-2">So­wohl der Ver­such über «die Ge­stalt der Tiere» als auch der 1795 in Jena ent­stan­de­ne «Ent­wurf einer ver­glei­chen­den Ana­to­mie, aus­ge­hend von der Os­teo­lo­gie und seine spä­te­re aus­führ­li­che­re Ge­stalt «Vor­trä­ge über die drei ers­ten Ka­pi­tel des Ent­wurfs einer all­ge­mei­nen Ein­lei­tung in die ver­glei­chen­de Ana­to­mie» (1796) ent­hal­ten nur An­lei­tun­gen dar­über, wie die Tiere zweck­mä­ßig zu ver­glei­chen sind, um ein all­ge­mei­nes Sche­ma zu ge­win­nen, nach dem die schaf­fen­de Ge­walt die «or­ga­ni­schen Na­tu­ren er­zeugt und ent­wi­ckelt», eine Norm, nach wel­cher die «Be­schrei­bun­gen aus­zu­ar­bei­ten» und auf wel­che, «indem sol­che von der Ge­stalt der ver­schie­de­nen Tiere ab­ge­zo­gen wäre, die ver­schie­dens­ten Ge­stal­ten wie­der zu­rück­zu­füh­ren» sind (vgl. die ge­nann­ten «Vor­trä­ge»).</span>
         
@@ -930,7 +894,8 @@
     </section>
     <section id="p-12-30">
       <p>
-        <span id="s-12-30-1">30| Wenn er auch nicht die schaf­fen­de Na­tur­ge­walt in ihrer Bil­dungs- und Um­bil­dungs­kraft durch die ver­schie­de­nen Glie­der des tie­ri­schen Or­ga­nis­mus hin­durch ver­fol­gen konn­te, so ist es Goe­the doch ge­lun­gen, ein­zel­ne Ge­set­ze zu fin­den, an die sich die Natur bei der Bil­dung der tie­ri­schen For­men hält, wel­che die all­ge­mei­ne Norm zwar fest­hal­ten, doch aber in der Er­schei­nung ver­schie­den sind.</span>
+        <a class="p-num" href="#p-12-30">30|</a>
+        <span id="s-12-30-1">Wenn er auch nicht die schaf­fen­de Na­tur­ge­walt in ihrer Bil­dungs- und Um­bil­dungs­kraft durch die ver­schie­de­nen Glie­der des tie­ri­schen Or­ga­nis­mus hin­durch ver­fol­gen konn­te, so ist es Goe­the doch ge­lun­gen, ein­zel­ne Ge­set­ze zu fin­den, an die sich die Natur bei der Bil­dung der tie­ri­schen For­men hält, wel­che die all­ge­mei­ne Norm zwar fest­hal­ten, doch aber in der Er­schei­nung ver­schie­den sind.</span>
         
         <span id="s-12-30-2">Er stellt sich vor, dass die Natur nicht die Fä­hig­keit habe, das all­ge­mei­ne Bild be­lie­big zu ver­än­dern.</span>
         
@@ -940,7 +905,7 @@
         
         <span id="s-12-30-5">Bei der ein­zel­nen Tier­form ist das eine aus­ge­bil­det, das an­de­re nur an­ge­deu­tet; das eine be­son­ders voll­kom­men ent­wi­ckelt, das an­de­re viel­leicht für die sinn­li­che Be­ob­ach­tung gar nicht wahr­zu­neh­men.</span>
         
-        <span id="s-12-30-6">Für den letz­te­ren Fall ist Goe­the über­zeugt, dass in jedem Tiere das, was von dem all­ge­mei­nen Typus an ihm nicht sicht­bar, doch in der Idee vor­han­den ist.</span>
+        <span id="s-12-30-6">Für den letz­te­ren Fall ist Goe­the über­zeugt, dass in jedem Tiere das, was von dem all­ge­mei­nen Typus an ihm nicht <i>sicht­bar</i>, doch <i>in der Idee</i> vor­han­den ist.</span>
         
         <span id="s-12-30-7">«Siehst du also dem einen Ge­schöpf be­son­de­ren Vor­zug Ir­gend ge­gönnt, so frage nur gleich, wo lei­det es etwa Man­gel an­ders­wo, und suche mit for­schen­dem Geist.</span>
         
@@ -950,7 +915,8 @@
     </section>
     <section id="p-12-31">
       <p>
-        <span id="s-12-31-1">31| Im Ur­or­ga­nis­mus sind alle Glie­der aus­ge­bil­det und hal­ten sich das Gleich­ge­wicht; die Man­nig­fal­tig­keit des Ein­zel­nen ent­steht da­durch, dass die Kraft der Bil­dung sich auf das eine Glied wirft und dafür ein an­de­res in der äu­ße­ren Er­schei­nung gar nicht oder nur an­deu­tungs­wei­se ent­wi­ckelt.</span>
+        <a class="p-num" href="#p-12-31">31|</a>
+        <span id="s-12-31-1">Im Ur­or­ga­nis­mus sind alle Glie­der aus­ge­bil­det und hal­ten sich das Gleich­ge­wicht; die Man­nig­fal­tig­keit des Ein­zel­nen ent­steht da­durch, dass die Kraft der Bil­dung sich auf das eine Glied wirft und dafür ein an­de­res in der äu­ße­ren Er­schei­nung gar nicht oder nur an­deu­tungs­wei­se ent­wi­ckelt.</span>
         
         <span id="s-12-31-2">Die­ses Ge­setz des tie­ri­schen Or­ga­nis­mus nennt man heute das von der Kor­re­la­ti­on oder Kom­pen­sa­ti­on der Or­ga­ne.*</span>
         
@@ -958,7 +924,8 @@
     </section>
     <section id="p-12-32">
       <p>
-        <span id="s-12-32-1">32| Goe­the denkt sich in der Ur­pflan­ze die ganze Pflan­zen­welt, in dem Ur­tier die ganze Tier­welt der Idee nach ent­hal­ten.</span>
+        <a class="p-num" href="#p-12-32">32|</a>
+        <span id="s-12-32-1">Goe­the denkt sich in der Ur­pflan­ze die ganze Pflan­zen­welt, in dem Ur­tier die ganze Tier­welt der Idee nach ent­hal­ten.</span>
         
         <span id="s-12-32-2">Aus die­sem Ge­dan­ken ent­steht die Frage: wie kommt es, dass in dem einen Fall diese be­stimm­ten Pflan­zen- oder Tier­for­men, in dem an­de­ren Fall an­de­re ent­ste­hen?</span>
         
@@ -978,7 +945,7 @@
         
         <span id="s-12-32-10">Man fragt nicht: wozu dient die Be­we­gung der Kugel, son­dern: woher ent­springt sie?</span>
         
-        <span id="s-12-32-11">Eben­so soll man, nach Goe­thes Mei­nung, nicht fra­gen: wozu hat der Stier Hör­ner, son­dern: wie kann er Hör­ner haben.</span>
+        <span id="s-12-32-11">Eben­so soll man, nach Goe­thes Mei­nung, nicht fra­gen: wozu hat der Stier Hör­ner, son­dern: <i>wie</i> kann er Hör­ner haben.</span>
         
         <span id="s-12-32-12">Durch wel­che Ge­set­ze tritt in dem Stier das Ur­tier als hörn­er­tra­gen­de Form auf?</span>
         
@@ -990,45 +957,44 @@
         
         <span id="s-12-32-16">Die Vor­stel­lung, ein or­ga­ni­sches Wesen ver­dan­ke seine Ge­stalt nicht den in ihm wir­ken­den und bil­den­den Kräf­ten, son­dern sie sei ihm zu ge­wis­sen Zwe­cken von außen auf­ge­drängt, wirkt auf Goe­the ge­ra­de­zu ab­sto­ßend.</span>
         
-        <span id="s-12-32-17">Er schreibt: «Neu­lich fand ich in einer lei­dig apos­to­lisch-ka­pu­zi­ner­mä­ßi­gen De­kla­ma­ti­on des Zü­ri­cher Pro­phe­ten die un­sin­ni­gen Worte: Alles, was Leben hat, lebt durch etwas außer sich.</span>
+        <span id="s-12-32-17">Er schreibt: «Neu­lich fand ich in einer lei­dig apos­to­lisch-ka­pu­zi­ner­mä­ßi­gen De­kla­ma­ti­on des Zü­ri­cher Pro­phe­ten die un­sin­ni­gen Worte: <i>Alles, was Leben hat, lebt durch etwas außer sich</i>. Oder so un­ge­fähr klang’s. Das kann nun so ein Hei­den­be­keh­rer hin­schrei­ben, und bei der Re­vi­si­on zupft ihn der Ge­ni­us nicht beim Ärmel.» (Ita­lie­ni­sche Reise, 5.</span>
         
-        <span id="s-12-32-18">Oder so un­ge­fähr klang’s. Das kann nun so ein Hei­den­be­keh­rer hin­schrei­ben, und bei der Re­vi­si­on zupft ihn der Ge­ni­us nicht beim Ärmel.» (Ita­lie­ni­sche Reise, 5.</span>
+        <span id="s-12-32-18">Ok­to­ber 1787.) Goe­the denkt sich das or­ga­ni­sche Wesen als eine klei­ne Welt, die durch sich selbst da ist und sich nach ihren Ge­set­zen ge­stal­tet.</span>
         
-        <span id="s-12-32-19">Ok­to­ber 1787.) Goe­the denkt sich das or­ga­ni­sche Wesen als eine klei­ne Welt, die durch sich selbst da ist und sich nach ihren Ge­set­zen ge­stal­tet.</span>
+        <span id="s-12-32-19">«Die Vor­stel­lungs­art, dass ein le­ben­di­ges Wesen zu ge­wis­sen Zwe­cken nach außen her­vor­ge­bracht und seine Ge­stalt durch eine ab­sicht­li­che Ur­kraft dazu de­ter­mi­niert werde, hat uns in der phi­lo­so­phi­schen Be­trach­tung der na­tür­li­chen Dinge schon meh­re­re Jahr­hun­der­te auf­ge­hal­ten, und hält uns noch auf, ob­gleich ein­zel­ne Män­ner diese Vor­stel­lungs­art eif­rig be­strit­ten, die Hin­der­nis­se, wel­che sie in den Weg legt, ge­zeigt haben...</span>
         
-        <span id="s-12-32-20">«Die Vor­stel­lungs­art, dass ein le­ben­di­ges Wesen zu ge­wis­sen Zwe­cken nach außen her­vor­ge­bracht und seine Ge­stalt durch eine ab­sicht­li­che Ur­kraft dazu de­ter­mi­niert werde, hat uns in der phi­lo­so­phi­schen Be­trach­tung der na­tür­li­chen Dinge schon meh­re­re Jahr­hun­der­te auf­ge­hal­ten, und hält uns noch auf, ob­gleich ein­zel­ne Män­ner diese Vor­stel­lungs­art eif­rig be­strit­ten, die Hin­der­nis­se, wel­che sie in den Weg legt, ge­zeigt haben...</span>
+        <span id="s-12-32-20">Es ist, wenn man sich so aus­drü­cken darf, eine tri­via­le Vor­stel­lungs­art, die eben des­we­gen, wie alle tri­via­len Dinge, tri­vi­al ist, weil sie der mensch­li­chen Natur im gan­zen be­quem und zu­rei­chend ist.» (Wei­ma­rer Aus­ga­be, 2.</span>
         
-        <span id="s-12-32-21">Es ist, wenn man sich so aus­drü­cken darf, eine tri­via­le Vor­stel­lungs­art, die eben des­we­gen, wie alle tri­via­len Dinge, tri­vi­al ist, weil sie der mensch­li­chen Natur im gan­zen be­quem und zu­rei­chend ist.» (Wei­ma­rer Aus­ga­be, 2.</span>
+        <span id="s-12-32-21">Abt., Band 7, S. 217f.) Es ist al­ler­dings be­quem zu sagen: ein Schöp­fer hat bei Er­schaf­fung einer or­ga­ni­schen Art einen ge­wis­sen Zweck­ge­dan­ken zu­grun­de ge­legt, und ihr des­we­gen eine be­stimm­te Ge­stalt ge­ge­ben.</span>
         
-        <span id="s-12-32-22">Abt., Band 7, S. 217f.) Es ist al­ler­dings be­quem zu sagen: ein Schöp­fer hat bei Er­schaf­fung einer or­ga­ni­schen Art einen ge­wis­sen Zweck­ge­dan­ken zu­grun­de ge­legt, und ihr des­we­gen eine be­stimm­te Ge­stalt ge­ge­ben.</span>
+        <span id="s-12-32-22">Goe­the will aber die Natur nicht aus den Ab­sich­ten ir­gend­ei­nes außer der Natur be­find­li­chen We­sens, son­dern aus den in ihr selbst lie­gen­den Bil­dungs­ge­set­zen er­klä­ren.</span>
         
-        <span id="s-12-32-23">Goe­the will aber die Natur nicht aus den Ab­sich­ten ir­gend­ei­nes außer der Natur be­find­li­chen We­sens, son­dern aus den in ihr selbst lie­gen­den Bil­dungs­ge­set­zen er­klä­ren.</span>
+        <span id="s-12-32-23">Eine ein­zel­ne or­ga­ni­sche Form ent­steht da­durch, dass Ur­pflan­ze oder Ur­tier in einem be­son­de­ren Fall sich eine be­stimm­te Ge­stalt geben.</span>
         
-        <span id="s-12-32-24">Eine ein­zel­ne or­ga­ni­sche Form ent­steht da­durch, dass Ur­pflan­ze oder Ur­tier in einem be­son­de­ren Fall sich eine be­stimm­te Ge­stalt geben.</span>
+        <span id="s-12-32-24">Diese Ge­stalt muss eine sol­che sein, dass die Form in­ner­halb der Be­din­gun­gen, in denen sie lebt, auch leben kann.</span>
         
-        <span id="s-12-32-25">Diese Ge­stalt muss eine sol­che sein, dass die Form in­ner­halb der Be­din­gun­gen, in denen sie lebt, auch leben kann.</span>
+        <span id="s-12-32-25">«...</span>
         
-        <span id="s-12-32-26">«...</span>
+        <span id="s-12-32-26">die Exis­tenz eines Ge­schöp­fes, das wir Fisch nen­nen, sei nur unter der Be­din­gung eines Ele­men­tes, das wir Was­ser nen­nen, mög­lich...» (Wei­ma­rer Aus­ga­be, 2.</span>
         
-        <span id="s-12-32-27">die Exis­tenz eines Ge­schöp­fes, das wir Fisch nen­nen, sei nur unter der Be­din­gung eines Ele­men­tes, das wir Was­ser nen­nen, mög­lich...» (Wei­ma­rer Aus­ga­be, 2.</span>
+        <span id="s-12-32-27">Abt., Band 7, S. 221.) Will Goe­the be­grei­fen, wel­che Bil­dungs­ge­set­ze eine be­stimm­te or­ga­ni­sche Form her­vor­brin­gen, so hält er sich an sei­nen Ur­or­ga­nis­mus.</span>
         
-        <span id="s-12-32-28">Abt., Band 7, S. 221.) Will Goe­the be­grei­fen, wel­che Bil­dungs­ge­set­ze eine be­stimm­te or­ga­ni­sche Form her­vor­brin­gen, so hält er sich an sei­nen Ur­or­ga­nis­mus.</span>
+        <span id="s-12-32-28">In ihm liegt die Kraft, sich in den man­nig­fal­tigs­ten äu­ße­ren Ge­stal­ten zu ver­wirk­li­chen.</span>
         
-        <span id="s-12-32-29">In ihm liegt die Kraft, sich in den man­nig­fal­tigs­ten äu­ße­ren Ge­stal­ten zu ver­wirk­li­chen.</span>
+        <span id="s-12-32-29">Um einen Fisch zu er­klä­ren, würde Goe­the un­ter­su­chen, wel­che Bil­dungs­kräf­te das Ur­tier an­wen­det, um von allen Ge­stal­ten, die der Idee nach in ihm lie­gen, ge­ra­de die Fisch­ge­stalt her­vor­zu­brin­gen.</span>
         
-        <span id="s-12-32-30">Um einen Fisch zu er­klä­ren, würde Goe­the un­ter­su­chen, wel­che Bil­dungs­kräf­te das Ur­tier an­wen­det, um von allen Ge­stal­ten, die der Idee nach in ihm lie­gen, ge­ra­de die Fisch­ge­stalt her­vor­zu­brin­gen.</span>
+        <span id="s-12-32-30">Würde das Ur­tier in­ner­halb ge­wis­ser Ver­hält­nis­se sich in einer Ge­stalt ver­wirk­li­chen, in der es nicht leben kann, so ginge es zu­grun­de.</span>
         
-        <span id="s-12-32-31">Würde das Ur­tier in­ner­halb ge­wis­ser Ver­hält­nis­se sich in einer Ge­stalt ver­wirk­li­chen, in der es nicht leben kann, so ginge es zu­grun­de.</span>
+        <span id="s-12-32-31"><i>Er­hal­ten</i> kann sich eine or­ga­ni­sche Form in­ner­halb ge­wis­ser Le­bens­be­din­gun­gen nur, wenn es den­sel­ben an­ge­passt ist.</span>
         
-        <span id="s-12-32-32">Er­hal­ten kann sich eine or­ga­ni­sche Form in­ner­halb ge­wis­ser Le­bens­be­din­gun­gen nur, wenn es den­sel­ben an­ge­passt ist.</span>
-        
-        <span id="s-12-32-33">«Also be­stimmt die Ge­stalt die Le­bens­wei­se des Tie­res, Und die Weise zu leben, sie wirkt auf alle Ge­stal­ten Mäch­tig zu­rück.» So zeigt sich fest die ge­ord­ne­te Bil­dung, Wel­che zum Wech­sel sich neigt durch äu­ßer­lich wir­ken­de Wesen.» «Die Me­ta­mor­pho­se der Tiere»</span>
+        <span id="s-12-32-32">«Also be­stimmt die Ge­stalt die Le­bens­wei­se des Tie­res, Und die Weise zu leben, sie wirkt auf alle Ge­stal­ten Mäch­tig zu­rück.» So zeigt sich fest die ge­ord­ne­te Bil­dung, Wel­che zum Wech­sel sich neigt durch äu­ßer­lich wir­ken­de Wesen.» «Die Me­ta­mor­pho­se der Tiere»</span>
         
       </p>
     </section>
     <section id="p-12-33">
       <p>
-        <span id="s-12-33-1">33| Die in einem ge­wis­sen Le­bens­ele­ment dau­ern­den or­ga­ni­schen For­men sind durch die Natur die­ses Ele­men­tes be­dingt.</span>
+        <a class="p-num" href="#p-12-33">33|</a>
+        <span id="s-12-33-1">Die in einem ge­wis­sen Le­bens­ele­ment <i>dau­ern­den</i> or­ga­ni­schen For­men sind durch die Natur die­ses Ele­men­tes be­dingt.</span>
         
         <span id="s-12-33-2">Wenn eine or­ga­ni­sche Form aus einem Le­bens­ele­ment in ein an­de­res käme, so müss­te sie sich ent­spre­chend ver­än­dern.</span>
         
@@ -1036,7 +1002,7 @@
         
         <span id="s-12-33-4">Die Um­wand­lung der einen Form in die an­de­re ist aber, nach Goe­thes An­sicht, nicht so zu den­ken, dass die äu­ße­ren Ver­hält­nis­se die Form un­mit­tel­bar nach sich um­bil­den, son­dern so, dass sie die Ver­an­las­sung wer­den, durch die sich die in­ne­re We­sen­heit ver­wan­delt.</span>
         
-        <span id="s-12-33-5">Ver­än­der­te Le­bens­be­din­gun­gen rei­fen die or­ga­ni­sche Form, sich nach in­ne­ren Ge­set­zen in einer ge­wis­sen Weise um­zu­bil­den.</span>
+        <span id="s-12-33-5">Ver­än­der­te Le­bens­be­din­gun­gen <i>rei­fen</i> die or­ga­ni­sche Form, sich nach in­ne­ren Ge­set­zen in einer ge­wis­sen Weise um­zu­bil­den.</span>
         
         <span id="s-12-33-6">Die äu­ße­ren Ein­flüs­se wir­ken mit­tel­bar, nicht un­mit­tel­bar auf die Le­be­we­sen.</span>
         
@@ -1046,7 +1012,8 @@
     </section>
     <section id="p-12-34">
       <p>
-        <span id="s-12-34-1">34| Die Vor­stel­lung, dass eine Pflan­zen- oder Tier­art sich im Laufe der Zei­ten durch ge­wis­se Be­din­gun­gen in eine an­de­re ver­wand­le, hat in­ner­halb der Goe­the­schen Na­tur­an­schau­ung ihre volle Be­rech­ti­gung.</span>
+        <a class="p-num" href="#p-12-34">34|</a>
+        <span id="s-12-34-1">Die Vor­stel­lung, dass eine Pflan­zen- oder Tier­art sich im Laufe der Zei­ten durch ge­wis­se Be­din­gun­gen in eine an­de­re ver­wand­le, hat in­ner­halb der Goe­the­schen Na­tur­an­schau­ung ihre volle Be­rech­ti­gung.</span>
         
         <span id="s-12-34-2">Goe­the stellt sich vor, dass die Kraft, wel­che im Fort­pflan­zungs­vor­gang ein neues In­di­vi­du­um her­vor­bringt, nur eine Um­wand­lung der­je­ni­gen Kraft­form ist, die auch die fort­schrei­ten­de Um­bil­dung der Or­ga­ne im Ver­lauf des Wachs­tums be­wirkt.</span>
         
@@ -1066,7 +1033,7 @@
         
         <span id="s-12-34-10">So wird man auf eben die­sen Wegen fort­schrei­ten und, wie man nur erst die un­or­ga­ni­sier­ten, un­de­ter­mi­nier­ten Ele­men­te als Ve­hi­kel der un­or­ga­ni­sier­ten Wesen an­ge­se­hen, so wird man sich nun­mehr in der Be­trach­tung er­he­ben und wird die or­ga­ni­sier­te Welt wie­der als einen Zu­sam­men­hang von vie­len Ele­men­ten an­se­hen.</span>
         
-        <span id="s-12-34-11">Das ganze Pflan­zen­reich zum Ex­em­pel wird uns wie­der als ein un­ge­heu­res Meer er­schei­nen, wel­ches eben­so­gut zur be­ding­ten Exis­tenz der In­sek­ten nötig ist als das Welt­meer und die Flüs­se zur be­ding­ten Exis­tenz der Fi­sche, und wir wer­den sehen, dass eine un­ge­heu­re An­zahl le­ben­der Ge­schöp­fe in die­sem Pflan­ze­no­ze­an ge­bo­ren und er­nährt werde, ja wir wer­den zu­letzt die ganze tie­ri­sche Welt wie­der nur als ein gro­ßes Ele­ment an­se­hen, wo ein Ge­schlecht auf dem an­de­ren und durch das an­de­re, wo nicht ent­steht, doch sich er­hält.» Rück­halt­lo­ser ist fol­gen­der Satz der «Vor­trä­ge über die drei ers­ten Ka­pi­tel des Ent­wurfs einer all­ge­mei­nen Ein­lei­tung in die ver­glei­chen­de Ana­to­mie» (1796): «Dies also hät­ten wir ge­won­nen, un­ge­scheut be­haup­ten zu dür­fen: dass alle voll­kom­me­nern or­ga­ni­schen Na­tu­ren, wor­un­ter wir Fi­sche, Am­phi­bi­en, Vögel, Säu­ge­tie­re und an der Spit­ze der letz­ten den Men­schen sehen, alle nach einem Ur­bil­de ge­formt seien, das nur in sei­nen sehr be­stän­di­gen Tei­len mehr oder we­ni­ger hin- und her­weicht und sich noch täg­lich durch Fort­pflan­zung aus- und um­bil­det.» Goe­thes Vor­sicht dem Um­wand­lungs­ge­dan­ken ge­gen­über ist be­greif­lich.</span>
+        <span id="s-12-34-11">Das ganze Pflan­zen­reich zum Ex­em­pel wird uns wie­der als ein un­ge­heu­res Meer er­schei­nen, wel­ches eben­so­gut zur be­ding­ten Exis­tenz der In­sek­ten nötig ist als das Welt­meer und die Flüs­se zur be­ding­ten Exis­tenz der Fi­sche, und wir wer­den sehen, dass eine un­ge­heu­re An­zahl le­ben­der Ge­schöp­fe in die­sem Pflan­ze­no­ze­an ge­bo­ren und er­nährt werde, ja wir wer­den zu­letzt die ganze tie­ri­sche Welt wie­der nur als ein gro­ßes Ele­ment an­se­hen, wo ein Ge­schlecht auf dem an­de­ren und durch das an­de­re, <i>wo nicht ent­steht</i>, doch sich er­hält.» Rück­halt­lo­ser ist fol­gen­der Satz der «Vor­trä­ge über die drei ers­ten Ka­pi­tel des Ent­wurfs einer all­ge­mei­nen Ein­lei­tung in die ver­glei­chen­de Ana­to­mie» (1796): «Dies also hät­ten wir ge­won­nen, un­ge­scheut be­haup­ten zu dür­fen: dass alle voll­kom­me­nern or­ga­ni­schen Na­tu­ren, wor­un­ter wir Fi­sche, Am­phi­bi­en, Vögel, Säu­ge­tie­re und an der Spit­ze der letz­ten den Men­schen sehen, alle nach einem Ur­bil­de ge­formt seien, das nur in sei­nen sehr be­stän­di­gen Tei­len mehr oder we­ni­ger hin- und her­weicht <i>und sich noch täg­lich durch Fort­pflan­zung aus- und um­bil­det</i>.» Goe­thes Vor­sicht dem Um­wand­lungs­ge­dan­ken ge­gen­über ist be­greif­lich.</span>
         
         <span id="s-12-34-12">Der Zeit, in der er seine Ideen aus­bil­de­te, war die­ser Ge­dan­ke nicht fremd.</span>
         
@@ -1092,7 +1059,7 @@
         
         <span id="s-12-34-23">Die­ser glaubt die im Or­ga­ni­schen ge­le­ge­nen in­ne­ren Trieb­kräf­te, die sich Goe­the unter dem sinn­lich-über­sinn­li­chen Bild vor­stellt, ent­beh­ren zu kön­nen.</span>
         
-        <span id="s-12-34-24">Ja, er spricht Goe­the sogar die Be­rech­ti­gung ab, von sei­nen Vor­aus­set­zun­gen aus von einer wirk­li­chen Um­wand­lung der Or­ga­ne und Or­ga­nis­men zu spre­chen.</span>
+        <span id="s-12-34-24">Ja, er spricht Goe­the sogar die Be­rech­ti­gung ab, von sei­nen Vor­aus­set­zun­gen aus von einer <i>wirk­li­chen</i> Um­wand­lung der Or­ga­ne und Or­ga­nis­men zu spre­chen.</span>
         
         <span id="s-12-34-25">Jul.</span>
         
@@ -1124,13 +1091,14 @@
         
         <span id="s-12-34-39">In ihr lie­gen die Ge­set­ze der or­ga­ni­schen Ent­wick­lung.</span>
         
-        <span id="s-12-34-40">Wie durch Kep­lers drei Grund­ge­set­ze die Vor­gän­ge im Son­nen­sys­tem be­greif­lich sind, so durch Goe­thes ide­el­le Ur­bil­der die Ge­stal­ten der or­ga­ni­schen Natur.</span>
+        <span id="s-12-34-40">Wie durch <i>Kep­lers</i> drei Grund­ge­set­ze die Vor­gän­ge im Son­nen­sys­tem be­greif­lich sind, so durch Goe­thes ide­el­le Ur­bil­der die Ge­stal­ten der or­ga­ni­schen Natur.</span>
         
       </p>
     </section>
     <section id="p-12-35">
       <p>
-        <span id="s-12-35-1">35| Kant, der dem mensch­li­chen Geist die Fä­hig­keit ab­spricht, ein Gan­zes ide­ell zu durch­drin­gen, durch wel­ches ein Man­nig­fal­ti­ges in der Er­schei­nung be­stimmt wird, nennt es ein «ge­wag­tes Aben­teu­er der Ver­nunft», wenn je­mand die ein­zel­nen For­men der or­ga­ni­schen Welt aus einem Ur­or­ga­nis­mus er­klä­ren wolle.</span>
+        <a class="p-num" href="#p-12-35">35|</a>
+        <span id="s-12-35-1">Kant, der dem mensch­li­chen Geist die Fä­hig­keit ab­spricht, ein Gan­zes ide­ell zu durch­drin­gen, durch wel­ches ein Man­nig­fal­ti­ges in der Er­schei­nung be­stimmt wird, nennt es ein «ge­wag­tes Aben­teu­er der Ver­nunft», wenn je­mand die ein­zel­nen For­men der or­ga­ni­schen Welt aus einem Ur­or­ga­nis­mus er­klä­ren wolle.</span>
         
         <span id="s-12-35-2">Für ihn ist der Mensch nur im­stan­de, die man­nig­fal­ti­gen Ein­zel­er­schei­nun­gen in einen all­ge­mei­nen Be­griff zu­sam­men­zu­fas­sen, durch den sich der Ver­stand ein Bild macht von der Ein­heit.</span>
         
@@ -1166,7 +1134,8 @@
     </section>
     <section id="p-12-36">
       <p>
-        <span id="s-12-36-1">36| Die­ser Plan Goe­thes ist eben­so wenig zur Aus­füh­rung ge­kom­men, wie ein an­de­rer, zu dem das Frag­ment «Vor­ar­bei­ten zu einer Phy­sio­lo­gie der Pflan­zen» ein An­lauf ist (vgl. Wei­ma­rer Aus­ga­be, 2.</span>
+        <a class="p-num" href="#p-12-36">36|</a>
+        <span id="s-12-36-1">Die­ser Plan Goe­thes ist eben­so wenig zur Aus­füh­rung ge­kom­men, wie ein an­de­rer, zu dem das Frag­ment «Vor­ar­bei­ten zu einer Phy­sio­lo­gie der Pflan­zen» ein An­lauf ist (vgl. Wei­ma­rer Aus­ga­be, 2.</span>
         
         <span id="s-12-36-2">Abt., Band 6, S. 286 ff.). Goe­the woll­te zei­gen, wie alle ein­zel­nen Zwei­ge des Na­tur­er­ken­nens: Na­tur­ge­schich­te, Na­tur­leh­re, Ana­to­mie, Che­mie, Zoo­no­mie und Phy­sio­lo­gie zu­sam­men­wir­ken müs­sen, um von einer hö­he­ren An­schau­ungs­wei­se dazu ver­wen­det zu wer­den, Ge­stal­ten und Vor­gän­ge der Le­be­we­sen zu er­klä­ren.</span>
         
@@ -1178,7 +1147,8 @@
     </section>
     <section id="p-12-37">
       <p>
-        <span id="s-12-37-1">37| Goe­the ist zu den Ideen, die ihm durch das La­by­rinth der le­ben­di­gen Ge­stal­ten durch­hal­fen, auf ei­ge­nen Wegen ge­langt.</span>
+        <a class="p-num" href="#p-12-37">37|</a>
+        <span id="s-12-37-1">Goe­the ist zu den Ideen, die ihm durch das La­by­rinth der le­ben­di­gen Ge­stal­ten durch­hal­fen, auf ei­ge­nen Wegen ge­langt.</span>
         
         <span id="s-12-37-2">Die herr­schen­den An­schau­un­gen über wich­ti­ge Ge­bie­te des Na­tur­wir­kens wi­der­spra­chen sei­ner all­ge­mei­nen Welt­an­schau­ung.</span>
         
@@ -1188,11 +1158,11 @@
         
         <span id="s-12-37-5">Er teilt ge­lehr­ten Freun­den aus die­sem Grund seine Schrift über die «Me­ta­mor­pho­se der Pflan­zen» mit und bit­tet sie, ihm dar­über Aus­kunft zu geben, ob über den be­han­del­ten Ge­gen­stand schon etwas ge­schrie­ben oder über­lie­fert ist.</span>
         
-        <span id="s-12-37-6">Er hat die Freu­de, dass ihn Fried­rich Au­gust Wolf auf einen «treff­li­chen Vor­ar­bei­ter», Kas­par Fried­rich Wolff, auf­merk­sam macht.</span>
+        <span id="s-12-37-6">Er hat die Freu­de, dass ihn Fried­rich Au­gust <i>Wolf</i> auf einen «treff­li­chen Vor­ar­bei­ter», Kas­par Fried­rich <i>Wolff</i>, auf­merk­sam macht.</span>
         
         <span id="s-12-37-7">Goe­the macht sich mit des­sen 1759 er­schie­ne­ner «Theo­ria ge­ne­ra­tio­nis» be­kannt.</span>
         
-        <span id="s-12-37-8">Ge­ra­de an die­sem Vor­ar­bei­ter aber ist zu be­ob­ach­ten, wie je­mand eine rich­ti­ge An­sicht über die Tat­sa­chen haben und doch nicht zur voll­ende­ten Idee der or­ga­ni­schen Bil­dung kom­men kann, wenn er nicht fähig ist, sich durch ein hö­he­res als das sinn­li­che An­schau­ungs­ver­mö­gen in den Be­sitz der sinn­lich-über­sinn­li­chen Form des Le­bens zu set­zen.</span>
+        <span id="s-12-37-8">Ge­ra­de an die­sem Vor­ar­bei­ter aber ist zu be­ob­ach­ten, wie je­mand eine rich­ti­ge An­sicht über die Tat­sa­chen haben und doch nicht zur voll­ende­ten Idee der or­ga­ni­schen Bil­dung kom­men kann, wenn er nicht fähig ist, sich durch ein hö­he­res als das sinn­li­che An­schau­ungs­ver­mö­gen in den Be­sitz der <i>sinn­lich-über­sinn­li­chen Form</i> des Le­bens zu set­zen.</span>
         
         <span id="s-12-37-9">Wolff ist ein aus­ge­zeich­ne­ter Be­ob­ach­ter.</span>
         
@@ -1220,27 +1190,26 @@
         
         <span id="s-12-37-21">Auch er lehnt die Ein­schach­te­lungs­leh­re Hal­lers ab.</span>
         
-        <span id="s-12-37-22">Für Goe­the ist der Or­ga­nis­mus im Keim zwar vor­ge­bil­det, aber nicht der äu­ße­ren Er­schei­nung, son­dern der Idee nach.</span>
+        <span id="s-12-37-22">Für Goe­the ist der Or­ga­nis­mus im Keim zwar vor­ge­bil­det, aber nicht der äu­ße­ren Er­schei­nung, <i>son­dern der Idee nach</i>. Die äu­ße­re Er­schei­nung be­trach­tet auch er als eine Neu­bil­dung.</span>
         
-        <span id="s-12-37-23">Die äu­ße­re Er­schei­nung be­trach­tet auch er als eine Neu­bil­dung.</span>
+        <span id="s-12-37-23">Aber er wirft Wolff vor, dass die­ser da, wo er nichts mit den Augen des Lei­bes sieht, auch mit Geis­te­s­au­gen nichts wahr­nimmt.</span>
         
-        <span id="s-12-37-24">Aber er wirft Wolff vor, dass die­ser da, wo er nichts mit den Augen des Lei­bes sieht, auch mit Geis­te­s­au­gen nichts wahr­nimmt.</span>
+        <span id="s-12-37-24">Wolff hatte keine Vor­stel­lung davon, dass etwas der Idee nach doch vor­han­den sein kann, auch wenn es nicht in die äu­ße­re Er­schei­nung tritt.</span>
         
-        <span id="s-12-37-25">Wolff hatte keine Vor­stel­lung davon, dass etwas der Idee nach doch vor­han­den sein kann, auch wenn es nicht in die äu­ße­re Er­schei­nung tritt.</span>
+        <span id="s-12-37-25">«Des­halb ist er immer be­müht, auf die An­fän­ge der Le­bens­bil­dung durch mi­kro­sko­pi­sche Un­ter­su­chun­gen zu drin­gen, und so die or­ga­ni­schen Em­bryo­nen von ihrer frü­hes­ten Er­schei­nung bis zur Aus­bil­dung zu ver­fol­gen.</span>
         
-        <span id="s-12-37-26">«Des­halb ist er immer be­müht, auf die An­fän­ge der Le­bens­bil­dung durch mi­kro­sko­pi­sche Un­ter­su­chun­gen zu drin­gen, und so die or­ga­ni­schen Em­bryo­nen von ihrer frü­hes­ten Er­schei­nung bis zur Aus­bil­dung zu ver­fol­gen.</span>
+        <span id="s-12-37-26">Wie vor­treff­lich diese Me­tho­de auch sei, durch die er so viel ge­leis­tet hat, so dach­te der treff­li­che Mann doch nicht, dass es ein Un­ter­schied sei zwi­schen Sehen und Sehen, dass die Geis­te­s­au­gen mit den Augen des Lei­bes in ste­tem le­ben­di­gen Bund zu wir­ken haben, weil man sonst in Ge­fahr gerät zu sehen und doch vor­bei­zu­se­hen.</span>
         
-        <span id="s-12-37-27">Wie vor­treff­lich diese Me­tho­de auch sei, durch die er so viel ge­leis­tet hat, so dach­te der treff­li­che Mann doch nicht, dass es ein Un­ter­schied sei zwi­schen Sehen und Sehen, dass die Geis­te­s­au­gen mit den Augen des Lei­bes in ste­tem le­ben­di­gen Bund zu wir­ken haben, weil man sonst in Ge­fahr gerät zu sehen und doch vor­bei­zu­se­hen.</span>
+        <span id="s-12-37-27">— Bei der Pflan­zen­ver­wand­lung sah er das­sel­be Organ sich im­mer­fort zu­sam­men­zie­hen, sich ver­klei­nern; dass aber die­ses Zu­sam­men­zie­hen mit einer Aus­deh­nung ab­wechs­le, sah er nicht.</span>
         
-        <span id="s-12-37-28">— Bei der Pflan­zen­ver­wand­lung sah er das­sel­be Organ sich im­mer­fort zu­sam­men­zie­hen, sich ver­klei­nern; dass aber die­ses Zu­sam­men­zie­hen mit einer Aus­deh­nung ab­wechs­le, sah er nicht.</span>
-        
-        <span id="s-12-37-29">Er sah, dass es sich an Vo­lu­men ver­rin­ge­re, und be­merk­te nicht, dass es sich zu­gleich ver­ed­le, und schrieb daher den Weg zur Voll­endung, wi­der­sin­nig, einer Ver­küm­me­rung zu» (Kürsch­ner, Band 33, S. 107f.).</span>
+        <span id="s-12-37-28">Er sah, dass es sich an Vo­lu­men ver­rin­ge­re, und be­merk­te nicht, dass es sich zu­gleich ver­ed­le, und schrieb daher den Weg zur Voll­endung, wi­der­sin­nig, einer Ver­küm­me­rung zu» (Kürsch­ner, Band 33, S. 107f.).</span>
         
       </p>
     </section>
     <section id="p-12-38">
       <p>
-        <span id="s-12-38-1">38| Bis zu sei­nem Le­bens­en­de stand Goe­the mit zahl­rei­chen Na­tur­for­schern in per­sön­li­chem und schrift­li­chem Ver­kehr.</span>
+        <a class="p-num" href="#p-12-38">38|</a>
+        <span id="s-12-38-1">Bis zu sei­nem Le­bens­en­de stand Goe­the mit zahl­rei­chen Na­tur­for­schern in per­sön­li­chem und schrift­li­chem Ver­kehr.</span>
         
         <span id="s-12-38-2">Er be­ob­ach­te­te die Fort­schrit­te der Wis­sen­schaft von den Le­be­we­sen mit dem regs­ten In­ter­es­se; er sah mit Freu­den, wie in die­sem Er­kennt­nis­ge­biet Vor­stel­lungs­ar­ten Ein­gang fan­den, die sich der sei­ni­gen nä­her­ten und wie auch seine Me­ta­mor­pho­sen­leh­re von ein­zel­nen For­schern an­er­kannt und frucht­bar ge­macht wurde.</span>
         
@@ -1260,7 +1229,8 @@
     </section>
     <section id="p-12-39">
       <p>
-        <span id="s-12-39-1">39| Mar­ti­us dach­te sich das Wachs­tum der Pflan­ze von zwei Ten­den­zen be­herrscht, von einem Stre­ben in der senk­rech­ten Rich­tung, wovon Wur­zel und Stän­gel be­herrscht wer­den; und von einem an­de­ren, wo­durch Blät­ter-, Blü­ten­or­ga­ne usw. ver­an­lasst wer­den, sich gemäß der Form einer Spi­ral­li­nie an die senk­rech­ten Or­ga­ne an­zu­glie­dern.</span>
+        <a class="p-num" href="#p-12-39">39|</a>
+        <span id="s-12-39-1">Mar­ti­us dach­te sich das Wachs­tum der Pflan­ze von zwei Ten­den­zen be­herrscht, von einem Stre­ben in der senk­rech­ten Rich­tung, wovon Wur­zel und Stän­gel be­herrscht wer­den; und von einem an­de­ren, wo­durch Blät­ter-, Blü­ten­or­ga­ne usw. ver­an­lasst wer­den, sich gemäß der Form einer Spi­ral­li­nie an die senk­rech­ten Or­ga­ne an­zu­glie­dern.</span>
         
         <span id="s-12-39-2">Goe­the griff diese Ideen auf und brach­te sie mit sei­ner Vor­stel­lung von der Me­ta­mor­pho­se in Ver­bin­dung.</span>
         
@@ -1282,7 +1252,7 @@
         
         <span id="s-12-39-11">Je mehr sie sich aber der obe­ren Spit­ze nä­her­te, desto schnel­ler muss­te die Schrau­ben­li­nie sich dre­hen, um end­lich (bei der Blüte) in einem Kreis auf einen Dis­kus sich zu ver­sam­meln, dem Tanze ähn­lich, wo man sich in der Ju­gend gar oft Brust an Brust, Herz an Herz mit den lie­bens­wür­digs­ten Kin­dern selbst wider Wil­len ge­drückt sah.</span>
         
-        <span id="s-12-39-12">Ver­zeih diese An­thro­po­mor­phis­men.» Fer­di­nand Cohn be­merkt zu die­ser Stel­le: «Hätte Goe­the nur noch Dar­win er­lebt!...</span>
+        <span id="s-12-39-12">Ver­zeih diese An­thro­po­mor­phis­men.» <i>Fer­di­nand Cohn</i> be­merkt zu die­ser Stel­le: «Hätte Goe­the nur noch Dar­win er­lebt!...</span>
         
         <span id="s-12-39-13">wie würde er sich des Man­nes er­freut haben, der durch streng in­duk­ti­ve Me­tho­de klare und über­zeu­gen­de Be­wei­se für seine Ideen zu fin­den wuss­te...» Dar­win meint, von fast allen Pflan­zen­or­ga­nen zei­gen zu kön­nen, dass sie in der Zeit ihres Wachs­tums die Ten­denz zu schrau­ben­för­mi­gen Be­we­gun­gen haben, die er Cir­cum­nuta­ti­on nennt.</span>
         
@@ -1290,7 +1260,8 @@
     </section>
     <section id="p-12-40">
       <p>
-        <span id="s-12-40-1">40| Im Sep­tem­ber 1830 spricht sich Goe­the in einem Auf­satz über den Streit der bei­den Na­tur­for­scher Cu­vier und Ge­off­roy Saint-Hil­ai­re aus; im März 1832 setzt er die­sen Auf­satz fort.</span>
+        <a class="p-num" href="#p-12-40">40|</a>
+        <span id="s-12-40-1">Im Sep­tem­ber 1830 spricht sich Goe­the in einem Auf­satz über den Streit der bei­den Na­tur­for­scher Cu­vier und Ge­off­roy Saint-Hil­ai­re aus; im März 1832 setzt er die­sen Auf­satz fort.</span>
         
         <span id="s-12-40-2">Der Tat­sa­chen­fa­na­ti­ker Cu­vier trat im Fe­bru­ar und März 1830 in der fran­zö­si­schen Aka­de­mie gegen die Aus­füh­run­gen Ge­off­roy Saint-Hil­ai­res auf, der, nach Goe­thes Mei­nung, zu «einer hohen, der Idee ge­mä­ßen Denk­wei­se ge­langt» war.</span>
         
@@ -1323,6 +1294,11 @@
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="10-die-metamorphose-der-welterscheinungen.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="14-die-erscheinungen-der-farbenwelt.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

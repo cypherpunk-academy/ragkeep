@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VIII VON DER KUNST ZUR WISSENSCHAFT</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -16,9 +29,9 @@
       <p>
         <span id="s-8-1-1">Wer sich die Auf­ga­be stellt, die Geist­es­ent­wick­lung eines Den­kers dar­zu­stel­len, hat uns die be­son­de­re Rich­tung des­sel­ben auf psy­cho­lo­gi­schem Wege aus den in sei­ner Bio­gra­phie ge­ge­be­nen Tat­sa­chen zu er­klä­ren.</span>
         
-        <span id="s-8-1-2">Bei einer Dar­stel­lung von Goe­the, dem Den­ker, ist die Auf­ga­be damit noch nicht er­schöpft.</span>
+        <span id="s-8-1-2">Bei einer Dar­stel­lung von Goe­the, <i>dem Den­ker</i>, ist die Auf­ga­be damit noch nicht er­schöpft.</span>
         
-        <span id="s-8-1-3">Hier wird nicht nur nach einer Recht­fer­ti­gung und Er­klä­rung sei­ner spe­zi­el­len wis­sen­schaft­li­chen Rich­tung, son­dern und vor­züg­lich auch dar­nach ge­fragt, wie die­ser Ge­ni­us über­haupt dazu kam, auf wis­sen­schaft­li­chem Ge­bie­te tätig zu sein.</span>
+        <span id="s-8-1-3">Hier wird nicht nur nach einer Recht­fer­ti­gung und Er­klä­rung sei­ner spe­zi­el­len wis­sen­schaft­li­chen Rich­tung, son­dern und vor­züg­lich auch dar­nach ge­fragt, wie die­ser Ge­ni­us <i>über­haupt</i> dazu kam, auf wis­sen­schaft­li­chem Ge­bie­te tätig zu sein.</span>
         
         <span id="s-8-1-4">Goe­the hatte durch die fal­sche An­sicht sei­ner Zeit­ge­nos­sen viel zu lei­den, die sich nicht den­ken konn­ten, dass dich­te­ri­sches Schaf­fen und wis­sen­schaft­li­che For­schung sich in einem Geist ver­ei­ni­gen lasse.</span>
         
@@ -26,19 +39,19 @@
         
         <span id="s-8-1-6">Liegt der Über­gang von Kunst zur Wis­sen­schaft rein in sei­ner sub­jek­ti­ven Nei­gung, in per­sön­li­cher Will­kür?</span>
         
-        <span id="s-8-1-7">Oder war Goe­thes künst­le­ri­sche Rich­tung eine sol­che, dass sie ihn mit Not­wen­dig­keit zur Wis­sen­schaft trei­ben muss­te?</span>
+        <span id="s-8-1-7">Oder war Goe­thes künst­le­ri­sche Rich­tung eine sol­che, dass <i>sie</i> ihn mit <i>Not­wen­dig­keit</i> zur Wis­sen­schaft trei­ben muss­te?</span>
         
       </p>
     </section>
     <section id="p-8-2">
       <p>
-        <span id="s-8-2-1">Wäre das ers­te­re der Fall, dann hätte die gleich­zei­ti­ge Hin­ga­be an Kunst und Wis­sen­schaft bloß die Be­deu­tung einer zu­fäl­li­gen per­sön­li­chen Be­geis­te­rung für beide Rich­tun­gen des mensch­li­chen Stre­bens; wir hät­ten es mit einem Dich­ter zu tun, der zu­fäl­lig auch ein Den­ker ist, und es hätte wohl sein kön­nen, dass bei einem etwas an­de­ren Le­bens­gang Goe­the die­sel­ben Wege in der Dich­tung ein­ge­schla­gen, ohne dass er sich um die Wis­sen­schaft auch nur be­küm­mert hätte.</span>
+        <span id="s-8-2-1">Wäre das ers­te­re der Fall, dann hätte die gleich­zei­ti­ge Hin­ga­be an Kunst und Wis­sen­schaft bloß die Be­deu­tung einer <i>zu­fäl­li­gen</i> per­sön­li­chen Be­geis­te­rung für beide Rich­tun­gen des mensch­li­chen Stre­bens; wir hät­ten es mit einem Dich­ter zu tun, der zu­fäl­lig auch ein Den­ker ist, und es hätte wohl sein kön­nen, dass bei einem etwas an­de­ren Le­bens­gang Goe­the die­sel­ben Wege in der Dich­tung ein­ge­schla­gen, ohne dass er sich um die Wis­sen­schaft auch nur be­küm­mert hätte.</span>
         
         <span id="s-8-2-2">Beide Sei­ten die­ses Man­nes in­ter­es­sier­ten uns dann ab­ge­son­dert als sol­che, beide hät­ten viel­leicht für sich ein gut Teil den Fort­schritt der Mensch­heit ge­för­dert.</span>
         
         <span id="s-8-2-3">Alles das wäre aber auch der Fall, wenn die bei­den Geis­tes­rich­tun­gen auf zwei Per­sön­lich­kei­ten ver­teilt ge­we­sen wären.</span>
         
-        <span id="s-8-2-4">Der Dich­ter Goe­the hätte mit dem Den­ker Goe­the nichts zu tun.</span>
+        <span id="s-8-2-4">Der <i>Dich­ter</i> Goe­the hätte mit dem <i>Den­ker</i> Goe­the nichts zu tun.</span>
         
       </p>
     </section>
@@ -48,9 +61,9 @@
         
         <span id="s-8-3-2">Dann ist es schlech­ter­dings un­denk­bar, dass die bei­den Rich­tun­gen auf zwei Per­sön­lich­kei­ten ver­teilt ge­we­sen wären.</span>
         
-        <span id="s-8-3-3">Dann in­ter­es­siert uns jede der bei­den Rich­tun­gen nicht nur um ihrer selbst wil­len, son­dern auch wegen ihrer Be­zie­hung auf die an­de­re.</span>
+        <span id="s-8-3-3">Dann in­ter­es­siert uns jede der bei­den Rich­tun­gen <i>nicht nur</i> um ihrer selbst wil­len, son­dern auch wegen ihrer Be­zie­hung auf die an­de­re.</span>
         
-        <span id="s-8-3-4">Dann gibt es einen ob­jek­ti­ven Über­gang von Kunst zur Wis­sen­schaft, einen Punkt, wo sich die bei­den so be­rüh­ren, dass Voll­endung in dem einen Ge­biet Voll­endung in dem an­dern for­dert.</span>
+        <span id="s-8-3-4">Dann gibt es einen <i>ob­jek­ti­ven</i> Über­gang von Kunst zur Wis­sen­schaft, einen Punkt, wo sich die bei­den so be­rüh­ren, dass Voll­endung in dem einen Ge­biet Voll­endung in dem an­dern for­dert.</span>
         
         <span id="s-8-3-5">Goe­the folg­te dann nicht einer per­sön­li­chen Nei­gung, son­dern die Kunst­rich­tung, der er sich ergab, weck­te in ihm Be­dürf­nis­se, denen nur in wis­sen­schaft­li­cher Be­tä­ti­gung Be­frie­di­gung wer­den konn­te.</span>
         
@@ -92,7 +105,7 @@
         
         <span id="s-8-6-2">Da­durch wird aber bei­des miss­ver­stan­den.</span>
         
-        <span id="s-8-6-3">Die welt­his­to­ri­sche Be­deu­tung Goe­thes liegt ja ge­ra­de darin, dass seine Kunst un­mit­tel­bar aus dem Ur­quell des Seins fließt, dass sie nichts Il­lu­so­ri­sches, nichts Sub­jek­ti­ves an sich trägt, son­dern als die Kün­de­rin jener Ge­setz­lich­keit er­scheint, die der Dich­ter in den Tie­fen des Na­tur­wir­kens dem Welt­geist ab­ge­lauscht hat.</span>
+        <span id="s-8-6-3">Die welt­his­to­ri­sche Be­deu­tung Goe­thes liegt ja ge­ra­de darin, dass seine Kunst un­mit­tel­bar aus dem <i>Ur­quell des Seins</i> fließt, dass sie nichts Il­lu­so­ri­sches, nichts Sub­jek­ti­ves an sich trägt, son­dern als die Kün­de­rin jener Ge­setz­lich­keit er­scheint, die der Dich­ter in den Tie­fen des Na­tur­wir­kens dem Welt­geist ab­ge­lauscht hat.</span>
         
         <span id="s-8-6-4">Auf die­ser Stufe wird die Kunst die In­ter­pre­tin der Welt­ge­heim­nis­se, wie es die Wis­sen­schaft in an­de­rem Sinne ist.</span>
         
@@ -102,29 +115,25 @@
       <p>
         <span id="s-8-7-1">So hat Goe­the auch stets die Kunst auf­ge­fasst.</span>
         
-        <span id="s-8-7-2">Sie war ihm die eine Of­fen­ba­rung des Ur­ge­set­zes der Welt, die Wis­sen­schaft war ihm die an­de­re.</span>
+        <span id="s-8-7-2">Sie war ihm die <i>eine</i> Of­fen­ba­rung des Ur­ge­set­zes der Welt, die Wis­sen­schaft war ihm die <i>an­de­re</i>. Für ihn ent­spran­gen Kunst und Wis­sen­schaft aus <i>einer</i> Quel­le.</span>
         
-        <span id="s-8-7-3">Für ihn ent­spran­gen Kunst und Wis­sen­schaft aus einer Quel­le.</span>
+        <span id="s-8-7-3">Wäh­rend der For­scher un­ter­taucht in die Tie­fen der Wirk­lich­keit, um die trei­ben­den Kräf­te der­sel­ben in Form von Ge­dan­ken aus­zu­spre­chen, sucht der Künst­ler die­sel­ben trei­ben­den Ge­wal­ten sei­nem Stoff ein­zu­bil­den.</span>
         
-        <span id="s-8-7-4">Wäh­rend der For­scher un­ter­taucht in die Tie­fen der Wirk­lich­keit, um die trei­ben­den Kräf­te der­sel­ben in Form von Ge­dan­ken aus­zu­spre­chen, sucht der Künst­ler die­sel­ben trei­ben­den Ge­wal­ten sei­nem Stoff ein­zu­bil­den.</span>
+        <span id="s-8-7-4"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Ma­xi­men und Re­fle­xio­nen" part="1">Ich denke, Wis­sen­schaft könn­te man die Kennt­nis des All­ge­mei­nen nen­nen, das ab­ge­zo­ge­ne Wis­sen; Kunst da­ge­gen wäre Wis­sen­schaft zur Tat ver­wen­det; Wis­sen­schaft wäre Ver­nunft, und Kunst ihr Me­cha­nis­mus, des­halb man sie auch prak­ti­sche Wis­sen­schaft nen­nen könn­te. Und so wäre denn end­lich Wis­sen­schaft das Theo­rem, Kunst das Pro­blem.</q> Was die Wis­sen­schaft als Idee (Theo­rem) aus­spricht, das soll die Kunst dem Stoff ein­prä­gen, das soll ihr Pro­blem wer­den.</span>
         
-        <span id="s-8-7-5">«Ich denke, Wis­sen­schaft könn­te man die Kennt­nis des All­ge­mei­nen nen­nen, das ab­ge­zo­ge­ne Wis­sen; Kunst da­ge­gen wäre Wis­sen­schaft zur Tat ver­wen­det; Wis­sen­schaft wäre Ver­nunft, und Kunst ihr Me­cha­nis­mus, des­halb man sie auch prak­ti­sche Wis­sen­schaft nen­nen könn­te.</span>
+        <span id="s-8-7-6"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Ma­xi­men und Re­fle­xio­nen" part="1">In den Wer­ken des Men­schen wie in denen der Natur sind die Ab­sich­ten vor­züg­lich der Auf­merk­sam­keit wert</q>, sagt Goe­the.</span>
         
-        <span id="s-8-7-6">Und so wäre denn end­lich Wis­sen­schaft das Theo­rem, Kunst das Pro­blem.» Was die Wis­sen­schaft als Idee (Theo­rem) aus­spricht, das soll die Kunst dem Stoff ein­prä­gen, das soll ihr Pro­blem wer­den.</span>
+        <span id="s-8-7-7">Über­all sucht er nicht nur das, was den Sin­nen in der Au­ßen­welt ge­ge­ben ist, son­dern die Ten­denz, durch die es ge­wor­den.</span>
         
-        <span id="s-8-7-7">«In den Wer­ken des Men­schen wie in denen der Natur sind die Ab­sich­ten vor­züg­lich der Auf­merk­sam­keit wert», sagt Goe­the.</span>
+        <span id="s-8-7-8"><i>Diese</i> wis­sen­schaft­lich auf­zu­fas­sen, künst­le­risch zu ge­stal­ten, das ist seine Sen­dung.</span>
         
-        <span id="s-8-7-8">Über­all sucht er nicht nur das, was den Sin­nen in der Au­ßen­welt ge­ge­ben ist, son­dern die Ten­denz, durch die es ge­wor­den.</span>
+        <span id="s-8-7-9">Bei ihren ei­ge­nen Bil­dun­gen gerät die Natur «auf Spe­zi­fi­ka­tio­nen wie in eine Sack­gas­se»; man muss auf das zu­rück­ge­hen, was hätte wer­den sol­len, wenn die Ten­denz sich hätte un­ge­hin­dert ent­fal­ten kön­nen, so wie der Ma­the­ma­ti­ker nie die­ses oder jenes Drei­eck, son­dern immer jene Ge­setz­mä­ßig­keit im Auge hat, die jedem mög­li­chen Drei­eck zu­grun­de liegt.</span>
         
-        <span id="s-8-7-9">Diese wis­sen­schaft­lich auf­zu­fas­sen, künst­le­risch zu ge­stal­ten, das ist seine Sen­dung.</span>
+        <span id="s-8-7-10">Nicht <i>was</i> die Natur ge­schaf­fen, son­dern nach wel­chem Prin­zip sie es ge­schaf­fen, dar­auf kommt es an.</span>
         
-        <span id="s-8-7-10">Bei ihren ei­ge­nen Bil­dun­gen gerät die Natur «auf Spe­zi­fi­ka­tio­nen wie in eine Sack­gas­se»; man muss auf das zu­rück­ge­hen, was hätte wer­den sol­len, wenn die Ten­denz sich hätte un­ge­hin­dert ent­fal­ten kön­nen, so wie der Ma­the­ma­ti­ker nie die­ses oder jenes Drei­eck, son­dern immer jene Ge­setz­mä­ßig­keit im Auge hat, die jedem mög­li­chen Drei­eck zu­grun­de liegt.</span>
+        <span id="s-8-7-11">Dann ist die­ses Prin­zip so aus­zu­ge­stal­ten, wie es sei­ner ei­ge­nen Natur gemäß ist, nicht wie es in dem von tau­send Zu­fäl­lig­kei­ten ab­hän­gi­gen ein­zel­nen Ge­bil­de der Natur ge­sche­hen ist.</span>
         
-        <span id="s-8-7-11">Nicht was die Natur ge­schaf­fen, son­dern nach wel­chem Prin­zip sie es ge­schaf­fen, dar­auf kommt es an.</span>
-        
-        <span id="s-8-7-12">Dann ist die­ses Prin­zip so aus­zu­ge­stal­ten, wie es sei­ner ei­ge­nen Natur gemäß ist, nicht wie es in dem von tau­send Zu­fäl­lig­kei­ten ab­hän­gi­gen ein­zel­nen Ge­bil­de der Natur ge­sche­hen ist.</span>
-        
-        <span id="s-8-7-13">Der Künst­ler hat «aus dem Ge­mei­nen das Edle, aus der Un­form das Schö­ne zu ent­wi­ckeln».</span>
+        <span id="s-8-7-12">Der Künst­ler hat <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">aus dem Ge­mei­nen das Edle, aus der Un­form das Schö­ne zu ent­wi­ckeln</q>.</span>
         
       </p>
     </section>
@@ -132,21 +141,17 @@
       <p>
         <span id="s-8-8-1">Goe­the und Schil­ler neh­men die Kunst in ihrer vol­len Tiefe.</span>
         
-        <span id="s-8-8-2">Das Schö­ne ist «eine Ma­ni­fes­ta­ti­on ge­hei­mer Na­tur­ge­set­ze, die uns ohne des­sen Er­schei­nung ewig wären ver­bor­gen ge­blie­ben».</span>
+        <span id="s-8-8-2">Das Schö­ne ist <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">eine Ma­ni­fes­ta­ti­on ge­hei­mer Na­tur­ge­set­ze, die uns ohne des­sen Er­schei­nung ewig wären ver­bor­gen ge­blie­ben</q>. Ein Blick in des Dich­ters «Ita­lie­ni­sche Reise» ge­nügt, um zu er­ken­nen, dass das nicht etwa eine Phra­se, son­dern tie­fin­ner­li­che Über­zeu­gung ist.</span>
         
-        <span id="s-8-8-3">Ein Blick in des Dich­ters «Ita­lie­ni­sche Reise» ge­nügt, um zu er­ken­nen, dass das nicht etwa eine Phra­se, son­dern tie­fin­ner­li­che Über­zeu­gung ist.</span>
+        <span id="s-8-8-3">Wenn er sagt: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">Die hohen Kunst­wer­ke sind zu­gleich als die höchs­ten Na­tur­wer­ke von Men­schen nach <i>wah­ren</i> und <i>na­tür­li­chen</i> Ge­set­zen her­vor­ge­bracht wor­den. Alles Will­kür­li­che, Ein­ge­bil­de­te fällt zu­sam­men; da ist Not­wen­dig­keit, da ist Gott</q>, so geht dar­aus her­vor, dass ihm Natur und Kunst glei­chen Ur­sprungs sind.</span>
         
-        <span id="s-8-8-4">Wenn er sagt: «Die hohen Kunst­wer­ke sind zu­gleich als die höchs­ten Na­tur­wer­ke von Men­schen nach wah­ren und na­tür­li­chen Ge­set­zen her­vor­ge­bracht wor­den.</span>
-        
-        <span id="s-8-8-5">Alles Will­kür­li­che, Ein­ge­bil­de­te fällt zu­sam­men; da ist Not­wen­dig­keit, da ist Gott», so geht dar­aus her­vor, dass ihm Natur und Kunst glei­chen Ur­sprungs sind.</span>
-        
-        <span id="s-8-8-6">Be­züg­lich der Kunst der Grie­chen sagt er in die­ser Rich­tung fol­gen­des: «Ich habe die Ver­mu­tung, dass sie nach den Ge­set­zen ver­fuh­ren, nach wel­chen die Natur selbst ver­fährt und denen ich auf der Spur bin.» Und von Shake­speare: «Shake­speare ge­sellt sich zum Welt­geist; er durch­dringt die Welt wie jener, bei­den ist nichts ver­bor­gen; aber wenn des Welt­geis­tes Ge­schäft ist, Ge­heim­nis­se vor, ja oft nach der Tat zu be­wah­ren, so ist der Sinn des Dich­ters, das Ge­heim­nis zu ver­schwät­zen.»</span>
+        <span id="s-8-8-5">Be­züg­lich der Kunst der Grie­chen sagt er in die­ser Rich­tung fol­gen­des: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">Ich habe die Ver­mu­tung, dass sie nach den Ge­set­zen ver­fuh­ren, nach wel­chen die Natur selbst ver­fährt und denen ich auf der Spur bin.</q> Und von Shake­speare: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Shake­speare ge­sellt sich zum Welt­geist; er durch­dringt die Welt wie jener, bei­den ist nichts ver­bor­gen; aber wenn des Welt­geis­tes Ge­schäft ist, Ge­heim­nis­se vor, ja oft nach der Tat zu be­wah­ren, so ist der Sinn des Dich­ters, das Ge­heim­nis zu ver­schwät­zen.</q></span>
         
       </p>
     </section>
     <section id="p-8-9">
       <p>
-        <span id="s-8-9-1">Hier ist auch an den Aus­spruch von der «fro­hen Le­bens­epo­che» zu er­in­nern, die der Dich­ter Kants «Kri­tik der Ur­teils­kraft» schul­dig ge­wor­den ist, und die er ja doch ei­gent­lich nur dem Um­stand dank­te, dass er hier «Kunst- und Na­tur­er­zeug­nis­se eins be­han­delt sah wie das an­de­re, dass sich äs­the­ti­sche und te­leo­lo­gi­sche Ur­teils­kraft wech­sel­wei­se er­leuch­te­ten.» «Mich freu­te», sagt der Dich­ter, «dass Dicht­kunst und ver­glei­chen­de Na­tur­kun­de so nah mit­ein­an­der ver­wandt seien, indem beide sich der­sel­ben Ur­teils­kraft un­ter­wer­fen.» In dem Auf­satz: «Be­deu­ten­de För­der­nis durch ein ein­zi­ges geist­rei­ches Wort» stellt Goe­the ganz in der­sel­ben Ab­sicht sei­nem ge­gen­ständ­li­chen Den­ken sein ge­gen­ständ­li­ches Dich­ten ge­gen­über.</span>
+        <span id="s-8-9-1">Hier ist auch an den Aus­spruch von der «fro­hen Le­bens­epo­che» zu er­in­nern, die der Dich­ter Kants «Kri­tik der Ur­teils­kraft» schul­dig ge­wor­den ist, und die er ja doch ei­gent­lich nur dem Um­stand dank­te, dass er hier <q author="Jo­hann Wolf­gang von Goe­the" part="1">Kunst- und Na­tur­er­zeug­nis­se eins be­han­delt sah wie das an­de­re, dass sich äs­the­ti­sche und te­leo­lo­gi­sche Ur­teils­kraft wech­sel­wei­se er­leuch­te­ten.</q> «Mich freu­te», sagt der Dich­ter, <q author="Jo­hann Wolf­gang von Goe­the" part="1">dass Dicht­kunst und ver­glei­chen­de Na­tur­kun­de so nah mit­ein­an­der ver­wandt seien, indem beide sich der­sel­ben Ur­teils­kraft un­ter­wer­fen.</q> In dem Auf­satz: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Be­deu­ten­de För­der­nis durch ein ein­zi­ges geist­rei­ches Wort" part="1">Be­deu­ten­de För­der­nis durch ein ein­zi­ges geist­rei­ches Wort</q> stellt Goe­the ganz in der­sel­ben Ab­sicht sei­nem ge­gen­ständ­li­chen <i>Den­ken</i> sein ge­gen­ständ­li­ches <i>Dich­ten</i> ge­gen­über.</span>
         
       </p>
     </section>
@@ -156,29 +161,25 @@
         
         <span id="s-8-10-2">Nur die Form bei­der ist ver­schie­den.</span>
         
-        <span id="s-8-10-3">Beide er­schei­nen als der Aus­fluss eines We­sens, als not­wen­di­ge Stu­fen einer Ent­wick­lung.</span>
+        <span id="s-8-10-3">Beide er­schei­nen als der Aus­fluss <i>eines</i> We­sens, als not­wen­di­ge Stu­fen <i>einer</i> Ent­wick­lung.</span>
         
-        <span id="s-8-10-4">Jede An­sicht, die der Kunst oder dem Schö­nen eine iso­lier­te Stel­lung au­ßer­halb des Ge­samt­bil­des mensch­li­cher Ent­wick­lung an­weist, wi­der­strebt ihm.</span>
+        <span id="s-8-10-4">Jede An­sicht, die der Kunst oder dem Schö­nen eine iso­lier­te Stel­lung <i>au­ßer­halb</i> des Ge­samt­bil­des mensch­li­cher Ent­wick­lung an­weist, wi­der­strebt ihm.</span>
         
-        <span id="s-8-10-5">So sagt er: «Im Äs­the­ti­schen tut man nicht wohl, zu sagen: die Idee des Schö­nen; da­durch ver­ein­zelt man das Schö­ne, das doch ein­zeln nicht ge­dacht wer­den kann» oder: «Der Stil ruht auf den tiefs­ten Grund­fes­ten der Er­kennt­nis, auf dem Wesen der Dinge, in­so­fern uns er­laubt ist, es in sicht­ba­ren und greif­li­chen Ge­stal­ten zu er­ken­nen.» Die Kunst be­ruht also auf dem Er­ken­nen.</span>
+        <span id="s-8-10-5">So sagt er: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Im Äs­the­ti­schen tut man nicht wohl, zu sagen: die Idee des Schö­nen; da­durch ver­ein­zelt man das Schö­ne, das doch ein­zeln nicht ge­dacht wer­den kann</q> oder: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Der Stil ruht auf den tiefs­ten Grund­fes­ten der <i>Er­kennt­nis</i>, auf dem Wesen der Dinge, in­so­fern uns er­laubt ist, es in sicht­ba­ren und greif­li­chen Ge­stal­ten zu <i>er­ken­nen</i>.</q> <i>Die Kunst be­ruht also auf dem Er­ken­nen</i>. Das letz­te­re hat die Auf­ga­be, die Ord­nung, nach der die Welt ge­fügt ist, im Ge­dan­ken nach­zu­schaf­fen; die Kunst die, im Ein­zel­nen die Idee die­ser Ord­nung des Welt­gan­zen aus­zu­bil­den.</span>
         
-        <span id="s-8-10-6">Das letz­te­re hat die Auf­ga­be, die Ord­nung, nach der die Welt ge­fügt ist, im Ge­dan­ken nach­zu­schaf­fen; die Kunst die, im Ein­zel­nen die Idee die­ser Ord­nung des Welt­gan­zen aus­zu­bil­den.</span>
+        <span id="s-8-10-6">Alles, was dem Künst­ler an Welt­ge­setz­lich­keit er­reich­bar ist, das legt er in sein Werk.</span>
         
-        <span id="s-8-10-7">Alles, was dem Künst­ler an Welt­ge­setz­lich­keit er­reich­bar ist, das legt er in sein Werk.</span>
+        <span id="s-8-10-7">Dies er­scheint somit als eine Welt im Klei­nen.</span>
         
-        <span id="s-8-10-8">Dies er­scheint somit als eine Welt im Klei­nen.</span>
+        <span id="s-8-10-8">Hier­in liegt der Grund dafür, warum sich die Goe­the­sche Kunst­rich­tung durch Wis­sen­schaft er­gän­zen muss.</span>
         
-        <span id="s-8-10-9">Hier­in liegt der Grund dafür, warum sich die Goe­the­sche Kunst­rich­tung durch Wis­sen­schaft er­gän­zen muss.</span>
+        <span id="s-8-10-9">Sie ist schon als Kunst ein Er­ken­nen.</span>
         
-        <span id="s-8-10-10">Sie ist schon als Kunst ein Er­ken­nen.</span>
+        <span id="s-8-10-10">Goe­the woll­te eben weder Wis­sen­schaft noch Kunst; <i>er woll­te die Idee</i>. Und diese spricht er aus oder stellt er dar, nach der Seite, nach der sie sich ihm ge­ra­de dar­bie­tet.</span>
         
-        <span id="s-8-10-11">Goe­the woll­te eben weder Wis­sen­schaft noch Kunst; er woll­te die Idee.</span>
+        <span id="s-8-10-11">Goe­the such­te sich mit dem Welt­geist zu ver­bün­den und uns des­sen Wal­ten zu of­fen­ba­ren; er tat es durch das Me­di­um der Kunst oder der Wis­sen­schaft, je nach Er­for­der­nis.</span>
         
-        <span id="s-8-10-12">Und diese spricht er aus oder stellt er dar, nach der Seite, nach der sie sich ihm ge­ra­de dar­bie­tet.</span>
-        
-        <span id="s-8-10-13">Goe­the such­te sich mit dem Welt­geist zu ver­bün­den und uns des­sen Wal­ten zu of­fen­ba­ren; er tat es durch das Me­di­um der Kunst oder der Wis­sen­schaft, je nach Er­for­der­nis.</span>
-        
-        <span id="s-8-10-14">Nicht ein­sei­ti­ges Kunst- oder wis­sen­schaft­li­ches Stre­ben lag in Goe­the, son­dern der rast­lo­se Drang, «alle Wir­kenskraft und Samen» zu schau­en.</span>
+        <span id="s-8-10-12">Nicht ein­sei­ti­ges Kunst- oder wis­sen­schaft­li­ches Stre­ben lag in Goe­the, son­dern der rast­lo­se Drang, «alle Wir­kenskraft und Samen» zu schau­en.</span>
         
       </p>
     </section>
@@ -203,6 +204,11 @@
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="07-vii-uber-die-anordnung-der-naturwissenschaftlichen-schriften-goethes.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="09-ix-goethes-erkenntnistheorie.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WELTANSCHAUUNGEN DER WISSENSCHAFTLICHEN TATSÄCHLICHKEIT</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -250,11 +263,9 @@
       <p>
         <span id="s-20-9-1">Mit den derbs­ten Aus­drü­cken be­legt Düh­ring alle Welt­an­schau­un­gen, die von an­de­ren als streng wis­sen­schaft­li­chen Ge­sichts­punk­ten aus­ge­hen.</span>
         
-        <span id="s-20-9-2">Alle sol­che un­wis­sen­schaft­li­chen Den­kungs­ar­ten «be­grei­fen sich im Sta­di­um der kin­di­schen Un­rei­fe oder in fie­ber­haf­ten An­wand­lun­gen, oder in den Rück­bil­dun­gen der Grei­sen­haf­tig­keit, sie mögen unter die­sen Vor­aus­set­zun­gen ganze Epo­chen und Teile der Mensch­heit oder ge­le­gent­lich ein­zel­ne Ele­men­te oder ver­kom­me­ne Schich­ten der Ge­sell­schaft heim­su­chen, aber sie ge­hö­ren stets in die Ge­bie­te des Un­rei­fen, des Pa­tho­lo­gi­schen oder der be­reits von der Fäul­nis zer­setz­ten Über­rei­fe» (Kur­sus der Phi­lo­so­phie S. 44). Was Kant, was Fich­te, Schel­ling, Hegel ge­leis­tet haben, ver­ur­teilt er als Aus­fluss char­la­tan­haf­ter Pro­fes­so­ren­weis­heit; der Idea­lis­mus als Welt­an­schau­ung ist ihm eine Theo­rie des Wahn­sinns.</span>
+        <span id="s-20-9-2">Alle sol­che un­wis­sen­schaft­li­chen Den­kungs­ar­ten <q author="Eugen Düh­ring" book-title="Kur­sus der Phi­lo­so­phie als streng wis­sen­schaft­li­cher Welt­an­schau­ung und Le­bens­ge­stal­tung" part="1">be­grei­fen sich im Sta­di­um der kin­di­schen Un­rei­fe oder in fie­ber­haf­ten An­wand­lun­gen, oder in den Rück­bil­dun­gen der Grei­sen­haf­tig­keit, sie mögen unter die­sen Vor­aus­set­zun­gen ganze Epo­chen und Teile der Mensch­heit oder ge­le­gent­lich ein­zel­ne Ele­men­te oder ver­kom­me­ne Schich­ten der Ge­sell­schaft heim­su­chen, aber sie ge­hö­ren stets in die Ge­bie­te des Un­rei­fen, des Pa­tho­lo­gi­schen oder der be­reits von der Fäul­nis zer­setz­ten Über­rei­fe</q> (Kur­sus der Phi­lo­so­phie S. 44). Was Kant, was Fich­te, Schel­ling, Hegel ge­leis­tet haben, ver­ur­teilt er als Aus­fluss char­la­tan­haf­ter Pro­fes­so­ren­weis­heit; der Idea­lis­mus als Welt­an­schau­ung ist ihm eine Theo­rie des Wahn­sinns.</span>
         
-        <span id="s-20-9-3">Er will eine Wirk­lich­keits­phi­lo­so­phie schaf­fen, die al­lein na­tur­ge­mäß ist, weil sie «die künst­li­chen und na­tur­wid­ri­gen Er­dich­tun­gen be­sei­tigt und zum ers­ten Mal den Be­griff der Wirk­lich­keit zum Maß aller ide­el­len Kon­zep­tio­nen macht»; die Wirk­lich­keit wird von ihr «in einer Weise ge­dacht, die jede An­wand­lung zu einer traum­haf­ten und sub­jek­ti­vis­tisch be­schränk­ten Welt­vor­stel­lung aus­schließt».</span>
-        
-        <span id="s-20-9-4">(Kur­sus der Phi­lo­so­phie S. 13.)</span>
+        <span id="s-20-9-3">Er will eine Wirk­lich­keits­phi­lo­so­phie schaf­fen, die al­lein na­tur­ge­mäß ist, weil sie <q author="Eugen Düh­ring" book-title="Kur­sus der Phi­lo­so­phie" part="1">die künst­li­chen und na­tur­wid­ri­gen Er­dich­tun­gen be­sei­tigt und zum ers­ten Mal den Be­griff der Wirk­lich­keit zum Maß aller ide­el­len Kon­zep­tio­nen macht</q>; die Wirk­lich­keit wird von ihr <q author="Eugen Düh­ring" book-title="Kur­sus der Phi­lo­so­phie" part="1">in einer Weise ge­dacht, die jede An­wand­lung zu einer traum­haf­ten und sub­jek­ti­vis­tisch be­schränk­ten Welt­vor­stel­lung aus­schließt</q>. (Kur­sus der Phi­lo­so­phie S. 13.)</span>
         
       </p>
     </section>
@@ -276,13 +287,7 @@
         
         <span id="s-20-10-8">Was wir wis­sen kön­nen, ist eine wirk­li­che un­ge­trüb­te Dar­stel­lung des Wirk­li­chen.</span>
         
-        <span id="s-20-10-9">«Das Ganze der Dinge hat eine sys­te­ma­ti­sche Glie­de­rung und in­ne­re lo­gi­sche Kon­se­quenz.</span>
-        
-        <span id="s-20-10-10">Natur und Ge­schich­te haben eine Ver­fas­sung und Ent­wick­lung, deren Wesen zu einem gro­ßen Teil den all­ge­mei­nen lo­gi­schen Be­zie­hun­gen aller Be­grif­fe ent­spricht.</span>
-        
-        <span id="s-20-10-11">Die all­ge­mei­nen Ei­gen­schaf­ten und Ver­hält­nis­se der Denk­be­grif­fe, mit denen sich die Logik be­schäf­tigt, müs­sen auch für den be­son­ders aus­zu­zeich­nen­den Fall gel­ten, dass ihr Ge­gen­stand die Ge­samt­heit des Seins nebst des­sen Haupt­ge­stal­ten ist.</span>
-        
-        <span id="s-20-10-12">Da das all­ge­meins­te Den­ken in einem wei­ten Um­fang über das ent­schei­det, was sein und wie es sein kann, so müs­sen die obers­ten Grund­sät­ze und Haupt­for­men der Logik auch für alle Wirk­lich­keit und deren For­men die maß­ge­ben­de Be­deu­tung er­hal­ten» (Kur­sus der Phi­lo­so­phie S. 11). Die Wirk­lich­keit hat sich in dem mensch­li­chen Den­ken ein Organ ge­schaf­fen, durch das sie sich ge­dan­ken­mä­ßig in einem ide­el­len Bild wie­der­er­zeu­gen, geis­tig nach­schaf­fen kann.</span>
+        <span id="s-20-10-9"><q author="Eugen Düh­ring" book-title="Kur­sus der Phi­lo­so­phie" part="1">Das Ganze der Dinge hat eine sys­te­ma­ti­sche Glie­de­rung und in­ne­re lo­gi­sche Kon­se­quenz. Natur und Ge­schich­te haben eine Ver­fas­sung und Ent­wick­lung, deren Wesen zu einem gro­ßen Teil den all­ge­mei­nen lo­gi­schen Be­zie­hun­gen aller Be­grif­fe ent­spricht. Die all­ge­mei­nen Ei­gen­schaf­ten und Ver­hält­nis­se der Denk­be­grif­fe, mit denen sich die Logik be­schäf­tigt, müs­sen auch für den be­son­ders aus­zu­zeich­nen­den Fall gel­ten, dass ihr Ge­gen­stand die Ge­samt­heit des Seins nebst des­sen Haupt­ge­stal­ten ist. Da das all­ge­meins­te Den­ken in einem wei­ten Um­fang über das ent­schei­det, was sein und wie es sein kann, so müs­sen die obers­ten Grund­sät­ze und Haupt­for­men der Logik auch für alle Wirk­lich­keit und deren For­men die maß­ge­ben­de Be­deu­tung er­hal­ten</q> (Kur­sus der Phi­lo­so­phie S. 11). Die Wirk­lich­keit hat sich in dem mensch­li­chen Den­ken ein Organ ge­schaf­fen, durch das sie sich ge­dan­ken­mä­ßig in einem ide­el­len Bild wie­der­er­zeu­gen, geis­tig nach­schaf­fen kann.</span>
         
         <span id="s-20-10-13">Die Natur ist über­all von einer durch­gän­gi­gen Ge­setz­mä­ßig­keit be­herrscht, die durch sich selbst im Recht ist, an der keine Kri­tik geübt wer­den kann.</span>
         
@@ -328,15 +333,13 @@
         
         <span id="s-20-11-2">Düh­ring schreckt, von sol­chen Ge­sichts­punk­ten aus­ge­hend, nicht ein­mal davor zu­rück, der Natur eben­so bei ihrem Schaf­fen Phan­ta­sie zu­zu­er­ken­nen wie dem Men­schen bei dem sei­ni­gen.</span>
         
-        <span id="s-20-11-3">«Die Phan­ta­sie» reicht in die Natur selbst hinab, sie «wur­zelt, wie über­haupt alles Den­ken, in Re­gun­gen, die dem fer­ti­gen Be­wusst­sein vor­aus­ge­hen und selbst gar keine Ele­men­te des sub­jek­tiv Emp­fun­de­nen bil­den» (Kur­sus der Phi­lo­so­phie S. 50). Der von Comte ver­tei­dig­te Ge­dan­ke, dass alle Welt­an­schau­ung nichts wei­ter sein dürfe, als eine Zu­recht­le­gung des rein Tat­säch­li­chen, be­herrscht Düh­ring so voll­stän­dig, dass er die Phan­ta­sie in die Tat­sa­chen­welt ver­legt, weil er glaubt, sie ein­fach ab­leh­nen zu müs­sen, wenn sie nur im Ge­biet des mensch­li­chen Geis­tes auf­tre­te.</span>
+        <span id="s-20-11-3">«Die Phan­ta­sie» reicht in die Natur selbst hinab, sie <q author="Eugen Düh­ring" book-title="Kur­sus der Phi­lo­so­phie" part="1">wur­zelt, wie über­haupt alles Den­ken, in Re­gun­gen, die dem fer­ti­gen Be­wusst­sein vor­aus­ge­hen und selbst gar keine Ele­men­te des sub­jek­tiv Emp­fun­de­nen bil­den</q> (Kur­sus der Phi­lo­so­phie S. 50). Der von Comte ver­tei­dig­te Ge­dan­ke, dass alle Welt­an­schau­ung nichts wei­ter sein dürfe, als eine Zu­recht­le­gung des rein Tat­säch­li­chen, be­herrscht Düh­ring so voll­stän­dig, dass er die Phan­ta­sie in die Tat­sa­chen­welt ver­legt, weil er glaubt, sie ein­fach ab­leh­nen zu müs­sen, wenn sie nur im Ge­biet des mensch­li­chen Geis­tes auf­tre­te.</span>
         
         <span id="s-20-11-4">Von die­sen Vor­stel­lun­gen aus­ge­hend, ge­langt er auch noch zu an­de­ren Über­tra­gun­gen sol­cher Be­grif­fe, die dem mensch­li­chen Wir­ken ent­nom­men sind, auf die Natur.</span>
         
         <span id="s-20-11-5">Er denkt zum Bei­spiel nicht nur, der Mensch könne bei sei­nem Tun er­folg­lo­se Ver­su­che ma­chen, von denen er ab­läßt, weil sie nicht zum Ziel füh­ren, son­dern auch in den Ver­rich­tun­gen der Natur sähe man Ver­su­che nach die­ser oder jener Rich­tung.</span>
         
-        <span id="s-20-11-6">«Der Cha­rak­ter des Ver­suchs­ar­ti­gen in den Ge­stal­tun­gen ist der Wirk­lich­keit nichts we­ni­ger als fremd, und man sieht nicht ein, warum man aus Ge­fäl­lig­keit für eine ober­fläch­li­che Phi­lo­so­phie die Par­al­le­le der Natur außer dem Men­schen und der Natur im Men­schen nur zur Hälf­te gel­ten las­sen soll....Wenn der sub­jek­ti­ve Irr­tum des Den­kens und Ima­gi­nie­rens aus der re­la­ti­ven Ge­trennt­heit und Selb­stän­dig­keit die­ser Sphä­re her­vor­geht, warum soll nicht auch ein prak­ti­scher Irr­tum oder Fehl­griff der ob­jek­ti­ven und nicht den­ken­den Natur die Folge einer ver­hält­nis­mä­ßi­gen Ab­son­de­rung und ge­gen­sei­ti­gen Ent­frem­dung ihrer ver­schie­de­nen Teile und Trieb­kräf­te sein kön­nen?</span>
-        
-        <span id="s-20-11-7">Eine wahre und nicht vor den ge­mei­nen Vor­ur­tei­len zu­rück­schre­cken­de Phi­lo­so­phie wird schließ­lich den voll­stän­di­gen Par­al­le­lis­mus und die durch­gän­gi­ge Ein­heit der Kon­sti­tu­ti­on nach bei­den Sei­ten hin an­er­ken­nen» (Kur­sus der Phi­lo­so­phie S. 51).</span>
+        <span id="s-20-11-6"><q author="Eugen Düh­ring" book-title="Kur­sus der Phi­lo­so­phie" part="1">Der Cha­rak­ter des Ver­suchs­ar­ti­gen in den Ge­stal­tun­gen ist der Wirk­lich­keit nichts we­ni­ger als fremd, und man sieht nicht ein, warum man aus Ge­fäl­lig­keit für eine ober­fläch­li­che Phi­lo­so­phie die Par­al­le­le der Natur außer dem Men­schen und der Natur im Men­schen nur zur Hälf­te gel­ten las­sen soll....Wenn der sub­jek­ti­ve Irr­tum des Den­kens und Ima­gi­nie­rens aus der re­la­ti­ven Ge­trennt­heit und Selb­stän­dig­keit die­ser Sphä­re her­vor­geht, warum soll nicht auch ein prak­ti­scher Irr­tum oder Fehl­griff der ob­jek­ti­ven und nicht den­ken­den Natur die Folge einer ver­hält­nis­mä­ßi­gen Ab­son­de­rung und ge­gen­sei­ti­gen Ent­frem­dung ihrer ver­schie­de­nen Teile und Trieb­kräf­te sein kön­nen? Eine wahre und nicht vor den ge­mei­nen Vor­ur­tei­len zu­rück­schre­cken­de Phi­lo­so­phie wird schließ­lich den voll­stän­di­gen Par­al­le­lis­mus und die durch­gän­gi­ge Ein­heit der Kon­sti­tu­ti­on nach bei­den Sei­ten hin an­er­ken­nen</q> (Kur­sus der Phi­lo­so­phie S. 51).</span>
         
       </p>
     </section>
@@ -372,11 +375,7 @@
         
         <span id="s-20-12-15">Wenn in der Natur der Kampf aller gegen alle die Be­din­gung der Ver­voll­komm­nung wäre, so müss­te er es auch im Men­schen­le­ben sein.</span>
         
-        <span id="s-20-12-16">«Eine sol­che Vor­stel­lung, die sich oben­drein den An­strich der Wis­sen­schaft­lich­keit gibt, ist das er­denk­lich Mo­ral­wid­rigs­te von allem.</span>
-        
-        <span id="s-20-12-17">Der Cha­rak­ter der Natur wird auf diese Weise im an­ti­mo­ra­li­schen Sinne ge­fasst.</span>
-        
-        <span id="s-20-12-18">Er gilt nicht bloß als gleich­gül­tig gegen die bes­se­re Men­schen­mo­ral, son­dern ge­ra­de­zu als über­ein­stim­mend und im Bunde mit der­je­ni­gen schlech­ten Moral, der auch die Gau­ner hul­di­gen.» – Was der Mensch als mo­ra­li­sche An­trie­be emp­fin­det, muss, im Sinne der Düh­ring­s­chen Le­bens­an­schau­ung, schon in der Natur ver­an­lagt sein.</span>
+        <span id="s-20-12-16"><q author="Eugen Düh­ring" part="1">Eine sol­che Vor­stel­lung, die sich oben­drein den An­strich der Wis­sen­schaft­lich­keit gibt, ist das er­denk­lich Mo­ral­wid­rigs­te von allem. Der Cha­rak­ter der Natur wird auf diese Weise im an­ti­mo­ra­li­schen Sinne ge­fasst. Er gilt nicht bloß als gleich­gül­tig gegen die bes­se­re Men­schen­mo­ral, son­dern ge­ra­de­zu als über­ein­stim­mend und im Bunde mit der­je­ni­gen schlech­ten Moral, der auch die Gau­ner hul­di­gen.</q> – Was der Mensch als mo­ra­li­sche An­trie­be emp­fin­det, muss, im Sinne der Düh­ring­s­chen Le­bens­an­schau­ung, schon in der Natur ver­an­lagt sein.</span>
         
         <span id="s-20-12-19">In der Natur muss ein Hin­zie­len auf das Mo­ra­li­sche be­ob­ach­tet wer­den.</span>
         
@@ -390,9 +389,9 @@
         
         <span id="s-20-12-24">«Die me­cha­ni­sche Kau­sa­li­tät der Na­tur­kräf­te wird in der Fun­da­men­tal­emp­fin­dung so­zu­sa­gen sub­jek­ti­viert.</span>
         
-        <span id="s-20-12-25">Die Tat­sa­che die­ses ele­men­ta­ren Sub­jek­ti­vie­rungs­vor­gangs kann of­fen­bar nicht wei­ter er­klärt wer­den; denn ir­gend­wo und unter ir­gend­wel­chen Be­din­gun­gen muss die be­wußt­lo­se Me­cha­nik der Welt zum Ge­fühl ihrer selbst ge­lan­gen» (Kur­sus der Phi­lo­so­phie S. 147). Wenn sie aber dazu ge­langt, dann be­ginnt nicht eine neue Ge­setz­mä­ßig­keit, ein Reich des Geis­tes, son­dern es setzt sich nur fort, was schon in der be­wußt­lo­sen Me­cha­nik vor­han­den war.</span>
+        <span id="s-20-12-25">Die Tat­sa­che die­ses ele­men­ta­ren Sub­jek­ti­vie­rungs­vor­gangs kann of­fen­bar nicht wei­ter er­klärt wer­den; denn ir­gend­wo und unter ir­gend­wel­chen Be­din­gun­gen muss die be­wusst­lo­se Me­cha­nik der Welt zum Ge­fühl ihrer selbst ge­lan­gen» (Kur­sus der Phi­lo­so­phie S. 147). Wenn sie aber dazu ge­langt, dann be­ginnt nicht eine neue Ge­setz­mä­ßig­keit, ein Reich des Geis­tes, son­dern es setzt sich nur fort, was schon in der be­wusst­lo­sen Me­cha­nik vor­han­den war.</span>
         
-        <span id="s-20-12-26">Diese Me­cha­nik ist somit zwar be­wusst­los, aber doch weise, denn «die Erde mit allem, was sie her­vor­bringt, nebst den au­ßer­halb, na­ment­lich in der Sonne lie­gen­den Ur­sa­chen der Le­bens­er­hal­tung, sowie über­haupt ein­schließ­lich aller Ein­flüs­se, die aus der um­ge­ben­den Ge­samt­welt stam­men, diese ganze An­la­ge und Ein­rich­tung muss als we­sent­lich für den Men­schen her­ge­stellt, das heißt, als mit sei­nem Wohl in Über­ein­stim­mung ge­dacht wer­den».</span>
+        <span id="s-20-12-26">Diese Me­cha­nik ist somit zwar be­wusst­los, aber doch weise, denn <q author="Eugen Düh­ring" part="1">die Erde mit allem, was sie her­vor­bringt, nebst den au­ßer­halb, na­ment­lich in der Sonne lie­gen­den Ur­sa­chen der Le­bens­er­hal­tung, sowie über­haupt ein­schließ­lich aller Ein­flüs­se, die aus der um­ge­ben­den Ge­samt­welt stam­men, diese ganze An­la­ge und Ein­rich­tung muss als we­sent­lich für den Men­schen her­ge­stellt, das heißt, als mit sei­nem Wohl in Über­ein­stim­mung ge­dacht wer­den</q>.</span>
         
       </p>
     </section>
@@ -422,17 +421,7 @@
         
         <span id="s-20-14-2">Das Wis­sen setzt er in Ge­gen­satz zu die­sen sei­en­den Zu­stän­den der Seele.</span>
         
-        <span id="s-20-14-3">«Das Wis­sen bil­det zu den zwei an­dern Zu­stän­den, zu dem Füh­len und Be­geh­ren, einen Ge­gen­satz...</span>
-        
-        <span id="s-20-14-4">Es mag dem Wis­sen ir­gend­ein geis­ti­ger Vor­gang, ja viel­leicht ein Ähn­li­ches, wie Druck, Span­nung, zu­grun­de lie­gen; aber so auf­ge­fasst ist das Wis­sen nicht in sei­nem Wesen ge­fasst.</span>
-        
-        <span id="s-20-14-5">Als Wis­sen, und nur als sol­ches ist es hier zu un­ter­su­chen, ver­birgt es sein ei­ge­nes Sein und macht sich nur zu dem Spie­gel eines frem­den Seins.</span>
-        
-        <span id="s-20-14-6">Es gibt kein bes­se­res Gleich­nis dafür, als den Spie­gel.</span>
-        
-        <span id="s-20-14-7">So wie die­ser um so voll­kom­me­ner ist, je mehr er nicht sich selbst sehen lässt, son­dern nur frem­des Sein ab­spie­gelt, so auch das Wis­sen.</span>
-        
-        <span id="s-20-14-8">Sein Wesen ist die­ses reine Spie­geln eines frem­den Seins, ohne Bei­mi­schung des ei­ge­nen sei­en­den Zu­stan­des.» Man kann sich al­ler­dings kei­nen stär­ke­ren Ge­gen­satz gegen die Vor­stel­lungs­wei­se He­gels den­ken, als diese An­schau­ung vom Wis­sen.</span>
+        <span id="s-20-14-3"><q author="Ju­li­us Her­mann von Kirch­mann" part="1">Das Wis­sen bil­det zu den zwei an­dern Zu­stän­den, zu dem Füh­len und Be­geh­ren, einen Ge­gen­satz... Es mag dem Wis­sen ir­gend­ein geis­ti­ger Vor­gang, ja viel­leicht ein Ähn­li­ches, wie Druck, Span­nung, zu­grun­de lie­gen; aber so auf­ge­fasst ist das Wis­sen nicht in sei­nem Wesen ge­fasst. Als Wis­sen, und nur als sol­ches ist es hier zu un­ter­su­chen, ver­birgt es sein ei­ge­nes Sein und macht sich nur zu dem Spie­gel eines frem­den Seins. Es gibt kein bes­se­res Gleich­nis dafür, als den Spie­gel. So wie die­ser um so voll­kom­me­ner ist, je mehr er nicht sich selbst sehen lässt, son­dern nur frem­des Sein ab­spie­gelt, so auch das Wis­sen. Sein Wesen ist die­ses reine Spie­geln eines frem­den Seins, ohne Bei­mi­schung des ei­ge­nen sei­en­den Zu­stan­des.</q> Man kann sich al­ler­dings kei­nen stär­ke­ren Ge­gen­satz gegen die Vor­stel­lungs­wei­se He­gels den­ken, als diese An­schau­ung vom Wis­sen.</span>
         
         <span id="s-20-14-9">Wäh­rend bei Hegel in dem Ge­dan­ken, also in dem, was die Seele durch ihre ei­ge­ne Tä­tig­keit zu der Wahr­neh­mung hin­zu­bringt, das Wesen einer Sache zum Vor­schein kommt, stellt Kirch­mann ein Ideal vom Wis­sen hin, in dem die­ses ein von allen ei­ge­nen Zu­ta­ten der Seele be­frei­tes Spie­gel­bild der Wahr­neh­mun­gen ist.</span>
         
@@ -457,6 +446,11 @@
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="19-nachklange-der-kantschen-vorstellungsart.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="21-moderne-idealistische-weltanschauungen.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>XVI GOETHE ALS DENKER UND FORSCHER</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -31,7 +44,7 @@
         
         <span id="s-16-1-8">Wir haben ja vor nicht zu lan­ger Zeit einen merk­wür­di­gen Fall er­lebt.</span>
         
-        <span id="s-16-1-9">Edu­ard von Hart­mann trat mit sei­ner «Phi­lo­so­phie des Un­be­wuss­ten» auf.</span>
+        <span id="s-16-1-9">Edu­ard <i>von Hart­mann</i> trat mit sei­ner «Phi­lo­so­phie des Un­be­wuss­ten» auf.</span>
         
         <span id="s-16-1-10">Es wird heute am we­nigs­ten dem geist­vol­len Ver­fas­ser die­ses Bu­ches selbst bei­fal­len, des­sen Un­voll­kom­men­hei­ten zu leug­nen.</span>
         
@@ -43,7 +56,7 @@
         
         <span id="s-16-1-14">Diese lehn­ten sich all­ge­mein da­ge­gen auf.</span>
         
-        <span id="s-16-1-15">Nach­dem ver­schie­de­ne An­grif­fe von ihrer Seite ziem­lich wir­kungs­los blie­ben, er­schien eine Schrift von einem an­ony­men Ver­fas­ser: «Das Un­be­wuss­te vom Stand­punkt des Dar­wi­nis­mus und der Des­zen­denz­theo­rie» , die mit aller nur denk­ba­ren kri­ti­schen Schär­fe alles gegen die neu­be­grün­de­te Phi­lo­so­phie vor­brach­te, was sich vom Stand­punkt mo­der­ner Na­tur­wis­sen­schaft gegen die­sel­be sagen lässt.</span>
+        <span id="s-16-1-15">Nach­dem ver­schie­de­ne An­grif­fe von ihrer Seite ziem­lich wir­kungs­los blie­ben, er­schien eine Schrift von einem an­ony­men Ver­fas­ser: <q author="Edu­ard von Hart­mann" book-title="Das Un­be­wuss­te vom Stand­punkt des Dar­wi­nis­mus und der Des­zen­denz­theo­rie" part="1">Das Un­be­wuss­te vom Stand­punkt des Dar­wi­nis­mus und der Des­zen­denz­theo­rie</q> , die mit aller nur denk­ba­ren kri­ti­schen Schär­fe alles gegen die neu­be­grün­de­te Phi­lo­so­phie vor­brach­te, was sich vom Stand­punkt mo­der­ner Na­tur­wis­sen­schaft gegen die­sel­be sagen lässt.</span>
         
         <span id="s-16-1-16">Diese Schrift mach­te Auf­se­hen.</span>
         
@@ -57,7 +70,7 @@
         
         <span id="s-16-1-21">v. Hart­mann.</span>
         
-        <span id="s-16-1-22">Damit ist aber eines mit über­zeu­gen­der Kraft dar­ge­tan: es ist nicht Un­be­kannt­schaft mit den Er­geb­nis­sen der Na­tur­for­schung, nicht Di­let­tan­tis­mus der Grund, der es ge­wis­sen, nach tie­fe­rer Ein­sicht stre­ben­den Geis­tern un­mög­lich macht, sich der Rich­tung an­zu­schlie­ßen, wel­che heute sich zur herr­schen­den auf­wer­fen will.</span>
+        <span id="s-16-1-22">Damit ist aber <i>eines</i> mit über­zeu­gen­der Kraft dar­ge­tan: es ist nicht Un­be­kannt­schaft mit den Er­geb­nis­sen der Na­tur­for­schung, nicht Di­let­tan­tis­mus der Grund, der es ge­wis­sen, nach tie­fe­rer Ein­sicht stre­ben­den Geis­tern un­mög­lich macht, sich der Rich­tung an­zu­schlie­ßen, wel­che heute sich zur herr­schen­den auf­wer­fen will.</span>
         
         <span id="s-16-1-23">Es ist aber die Er­kennt­nis, dass die Wege die­ser Rich­tung nicht die rech­ten sind.</span>
         
@@ -79,7 +92,7 @@
         
         <span id="s-16-2-3">Be­greif­lich wird diese An­sicht frei­lich, wenn man sieht, in wel­cher hilf­lo­sen Un­kennt­nis sich diese po­si­ti­vis­ti­schen Den­ker be­fin­den, wenn sie sich über das «Wesen der Ma­te­rie», über «die Gren­zen des Er­ken­nens», über «die Natur der Atome» oder der­glei­chen Dinge ver­neh­men las­sen.</span>
         
-        <span id="s-16-2-4">An die­sen Bei­spie­len kann man wahre Stu­di­en über di­let­tan­ti­sches Be­han­deln von ein­schnei­den­den Fra­gen der Wis­sen­schaft ma­chen.\*</span>
+        <span id="s-16-2-4">An die­sen Bei­spie­len kann man wahre Stu­di­en über di­let­tan­ti­sches Be­han­deln von ein­schnei­den­den Fra­gen der Wis­sen­schaft ma­chen.*</span>
         
       </p>
     </section>
@@ -89,77 +102,75 @@
         
         <span id="s-16-3-2">Denn diese Er­run­gen­schaf­ten haben mit dem wahr­haf­ten Be­dürf­nis nach Na­tur­er­kennt­nis nichts zu tun.</span>
         
-        <span id="s-16-3-3">Wir haben es ja ge­ra­de an Zeit­ge­nos­sen er­lebt, denen wir Er­fin­dun­gen ver­dan­ken, deren Be­deu­tung für die Zu­kunft sich noch lange gar nicht ein­mal ahnen lässt, dass ihnen ein tie­fe­res wis­sen­schaft­li­ches Be­dürf­nis ab­geht.</span>
+        <span id="s-16-3-3">Wir haben es ja ge­ra­de an Zeit­ge­nos­sen er­lebt, denen wir Er­fin­dun­gen ver­dan­ken, deren Be­deu­tung für die Zu­kunft sich noch lange gar nicht ein­mal ahnen lässt, dass ihnen ein tie­fe­res <i>wis­sen­schaft­li­ches</i> Be­dürf­nis ab­geht.</span>
         
         <span id="s-16-3-4">Es ist etwas ganz an­de­res, die Vor­gän­ge der Natur zu be­ob­ach­ten, um ihre Kräf­te in den Dienst der Tech­nik zu stel­len, als mit Hilfe die­ser Vor­gän­ge tie­fer in das Wesen der Na­tur­wis­sen­schaft hin­ein­zu­bli­cken su­chen.</span>
         
-        <span id="s-16-3-5">Wahre Wis­sen­schaft ist nur da vor­han­den, wo der Geist Be­frie­di­gung sei­ner Be­dürf­nis­se sucht, ohne äu­ße­ren Zweck.</span>
+        <span id="s-16-3-5">Wahre Wis­sen­schaft ist nur da vor­han­den, wo der Geist Be­frie­di­gung <i>sei­ner</i> Be­dürf­nis­se sucht, <i>ohne äu­ße­ren Zweck</i>.</span>
         
       </p>
     </section>
     <section id="p-16-4">
       <p>
-        <span id="s-16-4-1">Wahre Wis­sen­schaft im hö­he­ren Sinne des Wor­tes hat es nur mit ide­el­len Ob­jek­ten zu tun; sie kann nur Idea­lis­mus sein.</span>
+        <span id="s-16-4-1">Wahre Wis­sen­schaft im hö­he­ren Sinne des Wor­tes hat es nur mit ide­el­len Ob­jek­ten zu tun; <i>sie kann nur Idea­lis­mus sein</i>. Denn sie hat ihren letz­ten Grund in Be­dürf­nis­sen, die aus dem Geist stam­men.</span>
         
-        <span id="s-16-4-2">Denn sie hat ihren letz­ten Grund in Be­dürf­nis­sen, die aus dem Geist stam­men.</span>
+        <span id="s-16-4-2">Die Natur er­weckt in uns Fra­gen, Pro­ble­me, die der Lö­sung zu­stre­ben.</span>
         
-        <span id="s-16-4-3">Die Natur er­weckt in uns Fra­gen, Pro­ble­me, die der Lö­sung zu­stre­ben.</span>
+        <span id="s-16-4-3">Aber sie kann diese Lö­sung nicht selbst lie­fern.</span>
         
-        <span id="s-16-4-4">Aber sie kann diese Lö­sung nicht selbst lie­fern.</span>
+        <span id="s-16-4-4">Nur der Um­stand, dass mit un­se­rem Er­kennt­nis­ver­mö­gen eine hö­he­re Welt der Natur ge­gen­über­tritt, das schafft auch hö­he­re For­de­run­gen.</span>
         
-        <span id="s-16-4-5">Nur der Um­stand, dass mit un­se­rem Er­kennt­nis­ver­mö­gen eine hö­he­re Welt der Natur ge­gen­über­tritt, das schafft auch hö­he­re For­de­run­gen.</span>
+        <span id="s-16-4-5">Einem Wesen, dem diese hö­he­re Natur nicht eigen wäre, gin­gen diese Pro­ble­me ein­fach nicht auf.</span>
         
-        <span id="s-16-4-6">Einem Wesen, dem diese hö­he­re Natur nicht eigen wäre, gin­gen diese Pro­ble­me ein­fach nicht auf.</span>
+        <span id="s-16-4-6">Sie kön­nen daher ihre Ant­wort auch von kei­ner an­de­ren In­stanz als nur wie­der von die­ser hö­he­ren Natur er­hal­ten.</span>
         
-        <span id="s-16-4-7">Sie kön­nen daher ihre Ant­wort auch von kei­ner an­de­ren In­stanz als nur wie­der von die­ser hö­he­ren Natur er­hal­ten.</span>
+        <span id="s-16-4-7">Wis­sen­schaft­li­che Fra­gen sind daher we­sent­lich eine An­ge­le­gen­heit, die der Geist mit sich selbst aus­zu­ma­chen hat.</span>
         
-        <span id="s-16-4-8">Wis­sen­schaft­li­che Fra­gen sind daher we­sent­lich eine An­ge­le­gen­heit, die der Geist mit sich selbst aus­zu­ma­chen hat.</span>
+        <span id="s-16-4-8">Sie füh­ren ihn nicht aus sei­nem Ele­ment her­aus.</span>
         
-        <span id="s-16-4-9">Sie füh­ren ihn nicht aus sei­nem Ele­ment her­aus.</span>
+        <span id="s-16-4-9">Das Ge­biet aber, in wel­chem, als in sei­nem ur­ei­ge­nen, der Geist lebt und webt, ist die Idee, ist die Ge­dan­ken­welt.</span>
         
-        <span id="s-16-4-10">Das Ge­biet aber, in wel­chem, als in sei­nem ur­ei­ge­nen, der Geist lebt und webt, ist die Idee, ist die Ge­dan­ken­welt.</span>
+        <span id="s-16-4-10">Ge­dank­li­che Fra­gen durch ge­dank­li­che Ant­wor­ten er­le­di­gen, das ist wis­sen­schaft­li­che Tä­tig­keit im höchs­ten Sinne des Wor­tes.</span>
         
-        <span id="s-16-4-11">Ge­dank­li­che Fra­gen durch ge­dank­li­che Ant­wor­ten er­le­di­gen, das ist wis­sen­schaft­li­che Tä­tig­keit im höchs­ten Sinne des Wor­tes.</span>
+        <span id="s-16-4-11">Und alle üb­ri­gen wis­sen­schaft­li­chen Ver­rich­tun­gen sind zu­letzt nur dazu da, die­sem höchs­ten Zweck zu die­nen.</span>
         
-        <span id="s-16-4-12">Und alle üb­ri­gen wis­sen­schaft­li­chen Ver­rich­tun­gen sind zu­letzt nur dazu da, die­sem höchs­ten Zweck zu die­nen.</span>
+        <span id="s-16-4-12">Man nehme die wis­sen­schaft­li­che Be­ob­ach­tung.</span>
         
-        <span id="s-16-4-13">Man nehme die wis­sen­schaft­li­che Be­ob­ach­tung.</span>
+        <span id="s-16-4-13">Sie soll uns zur Er­kennt­nis eines Na­tur­ge­set­zes füh­ren.</span>
         
-        <span id="s-16-4-14">Sie soll uns zur Er­kennt­nis eines Na­tur­ge­set­zes füh­ren.</span>
+        <span id="s-16-4-14">Das Ge­setz selbst ist rein ide­ell.</span>
         
-        <span id="s-16-4-15">Das Ge­setz selbst ist rein ide­ell.</span>
+        <span id="s-16-4-15">Schon das Be­dürf­nis nach einer hin­ter den Er­schei­nun­gen wal­ten­den Ge­setz­lich­keit ent­stammt dem Geist.</span>
         
-        <span id="s-16-4-16">Schon das Be­dürf­nis nach einer hin­ter den Er­schei­nun­gen wal­ten­den Ge­setz­lich­keit ent­stammt dem Geist.</span>
+        <span id="s-16-4-16">Ein un­geis­ti­ges Wesen hätte die­ses Be­dürf­nis nicht.</span>
         
-        <span id="s-16-4-17">Ein un­geis­ti­ges Wesen hätte die­ses Be­dürf­nis nicht.</span>
+        <span id="s-16-4-17">Nun tre­ten wir an die Be­ob­ach­tung heran!</span>
         
-        <span id="s-16-4-18">Nun tre­ten wir an die Be­ob­ach­tung heran!</span>
+        <span id="s-16-4-18">Was wol­len wir durch sie denn ei­gent­lich er­rei­chen?</span>
         
-        <span id="s-16-4-19">Was wol­len wir durch sie denn ei­gent­lich er­rei­chen?</span>
+        <span id="s-16-4-19">Soll uns auf die in un­se­rem Geis­te er­zeug­te Frage von außen, durch die Sin­nen­be­ob­ach­tung, etwas ge­lie­fert wer­den, das Ant­wort auf die­sel­be sein könn­te?</span>
         
-        <span id="s-16-4-20">Soll uns auf die in un­se­rem Geis­te er­zeug­te Frage von außen, durch die Sin­nen­be­ob­ach­tung, etwas ge­lie­fert wer­den, das Ant­wort auf die­sel­be sein könn­te?</span>
+        <span id="s-16-4-20">Nim­mer­mehr.</span>
         
-        <span id="s-16-4-21">Nim­mer­mehr.</span>
+        <span id="s-16-4-21">Denn warum soll­ten wir bei einer zwei­ten Be­ob­ach­tung uns be­frie­dig­ter füh­len als bei der ers­ten?</span>
         
-        <span id="s-16-4-22">Denn warum soll­ten wir bei einer zwei­ten Be­ob­ach­tung uns be­frie­dig­ter füh­len als bei der ers­ten?</span>
+        <span id="s-16-4-22">Wäre der Geist über­haupt mit dem be­ob­ach­te­ten Ob­jekt zu­frie­den, so müss­te er es gleich mit dem ers­ten sein.</span>
         
-        <span id="s-16-4-23">Wäre der Geist über­haupt mit dem be­ob­ach­te­ten Ob­jekt zu­frie­den, so müss­te er es gleich mit dem ers­ten sein.</span>
+        <span id="s-16-4-23">Aber die ei­gent­li­che Frage ist gar nicht die nach einer zwei­ten Be­ob­ach­tung, son­dern nach der ide­el­len Grund­la­ge der Be­ob­ach­tun­gen.</span>
         
-        <span id="s-16-4-24">Aber die ei­gent­li­che Frage ist gar nicht die nach einer zwei­ten Be­ob­ach­tung, son­dern nach der ide­el­len Grund­la­ge der Be­ob­ach­tun­gen.</span>
+        <span id="s-16-4-24">Was lässt diese Be­ob­ach­tung für eine ide­el­le Er­klä­rung zu, wie muss ich sie <i>den­ken</i>, damit sie mir mög­lich er­scheint?</span>
         
-        <span id="s-16-4-25">Was lässt diese Be­ob­ach­tung für eine ide­el­le Er­klä­rung zu, wie muss ich sie den­ken, damit sie mir mög­lich er­scheint?</span>
+        <span id="s-16-4-25">Das sind die Fra­gen, die uns der Sin­nen­welt ge­gen­über kom­men.</span>
         
-        <span id="s-16-4-26">Das sind die Fra­gen, die uns der Sin­nen­welt ge­gen­über kom­men.</span>
+        <span id="s-16-4-26">Ich muss aus den Tie­fen mei­nes Geis­tes selbst das her­aus­su­chen, was mir der Sin­nen­welt ge­gen­über fehlt.</span>
         
-        <span id="s-16-4-27">Ich muss aus den Tie­fen mei­nes Geis­tes selbst das her­aus­su­chen, was mir der Sin­nen­welt ge­gen­über fehlt.</span>
+        <span id="s-16-4-27">Wenn ich mir die hö­he­re Natur, nach der mein Geist der sinn­li­chen ge­gen­über strebt, nicht schaf­fen kann, dann schafft sie mir keine Macht der äu­ße­ren Welt.</span>
         
-        <span id="s-16-4-28">Wenn ich mir die hö­he­re Natur, nach der mein Geist der sinn­li­chen ge­gen­über strebt, nicht schaf­fen kann, dann schafft sie mir keine Macht der äu­ße­ren Welt.</span>
+        <span id="s-16-4-28">Die Re­sul­ta­te der Wis­sen­schaft kön­nen also nur aus dem Geist kom­men; sie kön­nen somit nur <i>Ideen</i> sein.</span>
         
-        <span id="s-16-4-29">Die Re­sul­ta­te der Wis­sen­schaft kön­nen also nur aus dem Geist kom­men; sie kön­nen somit nur Ideen sein.</span>
+        <span id="s-16-4-29">Gegen diese not­wen­di­ge Über­le­gung kann man nichts ein­wen­den.</span>
         
-        <span id="s-16-4-30">Gegen diese not­wen­di­ge Über­le­gung kann man nichts ein­wen­den.</span>
-        
-        <span id="s-16-4-31">Mit ihr ist aber der idea­lis­ti­sche Cha­rak­ter aller Wis­sen­schaft ge­si­chert.</span>
+        <span id="s-16-4-30">Mit ihr ist aber der idea­lis­ti­sche Cha­rak­ter aller Wis­sen­schaft ge­si­chert.</span>
         
       </p>
     </section>
@@ -167,7 +178,7 @@
       <p>
         <span id="s-16-5-1">Die mo­der­ne Na­tur­wis­sen­schaft kann ihrem gan­zen Wesen nach nicht an die Idea­li­tät der Er­kennt­nis glau­ben.</span>
         
-        <span id="s-16-5-2">Denn ihr gilt die Idee nicht als das Erste, Ur­sprüng­lichs­te, Schöp­fe­ri­sche, son­dern als das letz­te Pro­dukt der ma­te­ri­el­len Pro­zes­se.</span>
+        <span id="s-16-5-2">Denn ihr gilt die Idee nicht als das Erste, Ur­sprüng­lichs­te, Schöp­fe­ri­sche, son­dern als das letz­te <i>Pro­dukt</i> der ma­te­ri­el­len Pro­zes­se.</span>
         
         <span id="s-16-5-3">Sie ist sich dabei aber des Um­stan­des gar nicht be­wusst, dass diese ihre ma­te­ri­el­len Pro­zes­se nur der sin­nen­fäl­lig be­ob­acht­ba­ren Welt an­ge­hö­ren, die sich aber, tie­fer er­fasst, ganz in Idee auf­löst.</span>
         
@@ -177,7 +188,7 @@
         
         <span id="s-16-5-6">Das­sel­be scheint das obers­te Pro­dukt eines durch eine lange Reihe phy­si­ka­li­scher, che­mi­scher und or­ga­ni­scher Vor­gän­ge ver­mit­tel­ten kom­pli­zier­ten Pro­zes­ses zu sein.</span>
         
-        <span id="s-16-5-7">Un­ter­su­chen wir aber die ide­el­le Welt, die den In­halt jenes «Ich» aus­macht, so fin­den wir in ihr we­sent­lich mehr als bloß das End­pro­dukt jenes Pro­zes­ses.</span>
+        <span id="s-16-5-7">Un­ter­su­chen wir aber die ide­el­le Welt, die den In­halt jenes «Ich» aus­macht, so fin­den wir in ihr we­sent­lich <i>mehr</i> als bloß das End­pro­dukt jenes Pro­zes­ses.</span>
         
         <span id="s-16-5-8">Wir fin­den, dass die ein­zel­nen Teile der­sel­ben in einer ganz an­de­ren Weise mit­ein­an­der ver­knüpft sind, als die Teile jenes bloß be­ob­ach­te­ten Pro­zes­ses.</span>
         
@@ -185,15 +196,11 @@
         
         <span id="s-16-5-10">Es ist ja ganz selbst­ver­ständ­lich, dass die auf­ein­an­der­fol­gen­den Sta­di­en des Ge­hirn­pro­zes­ses im or­ga­ni­schen Stoff­wech­sel ihre Quel­le haben, wenn­gleich der Ge­hirn­pro­zess selbst der Trä­ger jener Ge­dan­ken­ge­bil­de ist.</span>
         
-        <span id="s-16-5-11">Aber warum der zwei­te Ge­dan­ke aus dem ers­ten folgt, dazu finde ich in die­sem Stoff­wech­sel nicht, wohl aber in dem lo­gi­schen Ge­dan­ken­zu­sam­men­hang den Grund.</span>
+        <span id="s-16-5-11">Aber warum der zwei­te Ge­dan­ke aus dem ers­ten <i>folgt</i>, dazu finde ich in die­sem Stoff­wech­sel <i>nicht</i>, wohl aber in dem lo­gi­schen Ge­dan­ken­zu­sam­men­hang den Grund.</span>
         
-        <span id="s-16-5-12">In der Welt der Ge­dan­ken herrscht somit außer der or­ga­ni­schen Not­wen­dig­keit eine hö­he­re ide­el­le.</span>
+        <span id="s-16-5-12">In der Welt der Ge­dan­ken herrscht somit außer der <i>or­ga­ni­schen Not­wen­dig­keit</i> eine <i>hö­he­re ide­el­le</i>. Diese Not­wen­dig­keit nun aber, die der Geist in­ner­halb sei­ner Ide­en­welt fin­det, diese sucht er auch in dem üb­ri­gen Uni­ver­sum.</span>
         
-        <span id="s-16-5-13">Diese Not­wen­dig­keit nun aber, die der Geist in­ner­halb sei­ner Ide­en­welt fin­det, diese sucht er auch in dem üb­ri­gen Uni­ver­sum.</span>
-        
-        <span id="s-16-5-14">Denn diese Not­wen­dig­keit er­steht uns ja nur da­durch, dass wir nicht nur be­ob­ach­ten, son­dern auch den­ken.</span>
-        
-        <span id="s-16-5-15">Oder, mit an­de­ren Wor­ten: Die Dinge er­schei­nen nicht mehr in einem bloß tat­säch­li­chen Zu­sam­men­hang, son­dern durch eine in­ne­re, ide­el­le Not­wen­dig­keit ver­knüpft, wenn wir sie nicht bloß durch die Be­ob­ach­tung, son­dern durch den Ge­dan­ken er­fas­sen.</span>
+        <span id="s-16-5-13">Denn diese Not­wen­dig­keit er­steht uns ja nur da­durch, dass wir nicht nur <i>be­ob­ach­ten</i>, son­dern auch <i>den­ken</i>. Oder, mit an­de­ren Wor­ten: Die Dinge er­schei­nen nicht mehr in einem bloß tat­säch­li­chen Zu­sam­men­hang, son­dern durch eine in­ne­re, ide­el­le Not­wen­dig­keit ver­knüpft, wenn wir sie nicht bloß durch die Be­ob­ach­tung, son­dern durch den Ge­dan­ken er­fas­sen.</span>
         
       </p>
     </section>
@@ -215,15 +222,15 @@
     </section>
     <section id="p-16-7">
       <p>
-        <span id="s-16-7-1">Hier ist es, wo sich uns eine be­deu­tungs­vol­le Frage be­ant­wor­tet, die z. B. Fried­rich Theo­dor Vi­scher wie­der­holt auf­ge­wor­fen und für den An­gel­punkt alles phi­lo­so­phi­schen Nach­den­kens er­klärt hat: jene nach dem Zu­sam­men­hang von Geist und Natur.</span>
+        <span id="s-16-7-1">Hier ist es, wo sich uns eine be­deu­tungs­vol­le Frage be­ant­wor­tet, die z. B. Fried­rich Theo­dor <i>Vi­scher</i> wie­der­holt auf­ge­wor­fen und für den An­gel­punkt alles phi­lo­so­phi­schen Nach­den­kens er­klärt hat: jene nach dem Zu­sam­men­hang von Geist und Natur.</span>
         
         <span id="s-16-7-2">Was be­steht für ein Ver­hält­nis zwi­schen die­sen bei­den, uns stets von­ein­an­der ge­schie­den er­schei­nen­den We­sen­hei­ten?</span>
         
-        <span id="s-16-7-3">Wenn man diese Frage recht auf­wirft, dann ist ihre Be­ant­wor­tung nicht so schwie­rig, wie es scheint.</span>
+        <span id="s-16-7-3">Wenn man diese Frage <i>recht</i> auf­wirft, dann ist ihre Be­ant­wor­tung nicht so schwie­rig, wie es scheint.</span>
         
         <span id="s-16-7-4">Was kann die Frage denn nur für einen Sinn haben?</span>
         
-        <span id="s-16-7-5">Die­sel­be wird ja nicht von einem Wesen ge­stellt, das über Natur und Geist als drit­ter stün­de und von die­sem sei­nem Stand­punkt aus jenen Zu­sam­men­hang un­ter­such­te, son­dern von der einen der bei­den We­sen­hei­ten, von dem Geist, selbst.</span>
+        <span id="s-16-7-5">Die­sel­be wird ja nicht von einem Wesen ge­stellt, das <i>über</i> Natur und Geist als drit­ter stün­de und von die­sem sei­nem Stand­punkt aus jenen Zu­sam­men­hang un­ter­such­te, son­dern von der einen der bei­den We­sen­hei­ten, <i>von dem Geist</i>, selbst.</span>
         
         <span id="s-16-7-6">Der letz­te­re fragt: Wel­cher Zu­sam­men­hang be­steht zwi­schen mir und der Natur?</span>
         
@@ -231,17 +238,17 @@
         
         <span id="s-16-7-8">Wie kann ich nach den in mir le­ben­den Be­dürf­nis­sen diese Be­zie­hung aus­drü­cken?</span>
         
-        <span id="s-16-7-9">Ich lebe in Ideen; was für eine Idee ent­spricht der Natur, wie kann ich das, was ich als Natur an­schaue, als Idee aus­drü­cken?</span>
+        <span id="s-16-7-9">Ich lebe in <i>Ideen</i>; was für eine Idee ent­spricht der Natur, wie kann ich das, was ich als Natur <i>an­schaue</i>, als <i>Idee</i> aus­drü­cken?</span>
         
         <span id="s-16-7-10">Es ist, als ob wir uns oft­mals durch eine ver­fehl­te Fra­ge­stel­lung selbst den Weg zu einer be­frie­di­gen­den Ant­wort ver­leg­ten.</span>
         
-        <span id="s-16-7-11">Eine rich­ti­ge Frage ist aber schon eine halbe Ant­wort.\*</span>
+        <span id="s-16-7-11">Eine rich­ti­ge Frage ist aber schon eine halbe Ant­wort.*</span>
         
       </p>
     </section>
     <section id="p-16-8">
       <p>
-        <span id="s-16-8-1">Der Geist sucht über­all über die Folge der Tat­sa­chen, wie sie ihm die bloße Be­ob­ach­tung lie­fert, hin­aus­zu­kom­men und bis zu den Ideen der Dinge zu drin­gen.</span>
+        <span id="s-16-8-1">Der Geist sucht über­all über die Folge der Tat­sa­chen, wie sie ihm die bloße Be­ob­ach­tung lie­fert, hin­aus­zu­kom­men und bis zu den <i>Ideen der Dinge</i> zu drin­gen.</span>
         
         <span id="s-16-8-2">Die Wis­sen­schaft fängt eben da an, wo das Den­ken an­fängt.</span>
         
@@ -257,7 +264,7 @@
     </section>
     <section id="p-16-9">
       <p>
-        <span id="s-16-9-1">Wir mögen von wo immer aus­ge­hen; wenn wir geis­ti­ge Kraft genug haben, tref­fen wir zu­letzt auf die Idee.</span>
+        <span id="s-16-9-1">Wir mögen von wo immer aus­ge­hen; wenn wir geis­ti­ge Kraft genug haben, tref­fen wir zu­letzt auf die <i>Idee</i>.</span>
         
       </p>
     </section>
@@ -271,34 +278,32 @@
     </section>
     <section id="p-16-11">
       <p>
-        <span id="s-16-11-1">Neh­men wir die De­fi­ni­ti­on des in der Phy­sik ge­wöhn­lich unter den «all­ge­mei­nen Ei­gen­schaf­ten der Kör­per» an­ge­führ­ten Be­har­rungs­ver­mö­gens.</span>
+        <span id="s-16-11-1">Neh­men wir die De­fi­ni­ti­on des in der Phy­sik ge­wöhn­lich unter den «all­ge­mei­nen Ei­gen­schaf­ten der Kör­per» an­ge­führ­ten <i>Be­har­rungs­ver­mö­gens</i>. Dies wird ge­wöhn­lich fol­gen­der­ma­ßen de­fi­niert: Kein Kör­per kann ohne äu­ße­re Ur­sa­che den Zu­stand der Be­we­gung, in dem er sich be­fin­det, ver­än­dern.</span>
         
-        <span id="s-16-11-2">Dies wird ge­wöhn­lich fol­gen­der­ma­ßen de­fi­niert: Kein Kör­per kann ohne äu­ße­re Ur­sa­che den Zu­stand der Be­we­gung, in dem er sich be­fin­det, ver­än­dern.</span>
+        <span id="s-16-11-2">Diese De­fi­ni­ti­on er­weckt die Vor­stel­lung, als ob der Be­griff des an sich trä­gen Kör­pers aus der Er­schei­nungs­welt ab­stra­hiert wäre.</span>
         
-        <span id="s-16-11-3">Diese De­fi­ni­ti­on er­weckt die Vor­stel­lung, als ob der Be­griff des an sich trä­gen Kör­pers aus der Er­schei­nungs­welt ab­stra­hiert wäre.</span>
+        <span id="s-16-11-3">Und <i>Mill</i>, der nir­gends auf die Sache selbst ein­geht, son­dern zum Behuf einer er­zwun­ge­nen Theo­rie alles auf den Kopf stellt, würde kei­nen Au­gen­blick an­ste­hen, die Sache auch so zu er­klä­ren.</span>
         
-        <span id="s-16-11-4">Und Mill, der nir­gends auf die Sache selbst ein­geht, son­dern zum Behuf einer er­zwun­ge­nen Theo­rie alles auf den Kopf stellt, würde kei­nen Au­gen­blick an­ste­hen, die Sache auch so zu er­klä­ren.</span>
+        <span id="s-16-11-4">Dies ist aber doch ganz un­rich­tig.</span>
         
-        <span id="s-16-11-5">Dies ist aber doch ganz un­rich­tig.</span>
+        <span id="s-16-11-5">Der Be­griff des trä­gen Kör­pers ent­steht rein durch eine be­griff­li­che Kon­struk­ti­on.</span>
         
-        <span id="s-16-11-6">Der Be­griff des trä­gen Kör­pers ent­steht rein durch eine be­griff­li­che Kon­struk­ti­on.</span>
+        <span id="s-16-11-6">Indem ich das im Raum Aus­ge­dehn­te «Kör­per» nenne, kann ich mir sol­che Kör­per vor­stel­len, deren Ver­än­de­run­gen von äu­ße­ren Ein­flüs­sen her­rüh­ren und sol­che, bei denen sie aus ei­ge­nem An­trieb ge­sche­hen.</span>
         
-        <span id="s-16-11-7">Indem ich das im Raum Aus­ge­dehn­te «Kör­per» nenne, kann ich mir sol­che Kör­per vor­stel­len, deren Ver­än­de­run­gen von äu­ße­ren Ein­flüs­sen her­rüh­ren und sol­che, bei denen sie aus ei­ge­nem An­trieb ge­sche­hen.</span>
+        <span id="s-16-11-7">Finde ich nun in der Au­ßen­welt etwas, was mei­nem ge­bil­de­ten Be­griff: «Kör­per, der sich nicht ohne äu­ße­ren An­trieb ver­än­dern kann» ent­spricht, so nenne ich die­sen <i>träge</i> oder dem Ge­setz des Be­har­rungs­ver­mö­gens un­ter­wor­fen.</span>
         
-        <span id="s-16-11-8">Finde ich nun in der Au­ßen­welt etwas, was mei­nem ge­bil­de­ten Be­griff: «Kör­per, der sich nicht ohne äu­ße­ren An­trieb ver­än­dern kann» ent­spricht, so nenne ich die­sen träge oder dem Ge­setz des Be­har­rungs­ver­mö­gens un­ter­wor­fen.</span>
+        <span id="s-16-11-8">Meine Be­grif­fe sind nicht aus der Sin­nen­welt ab­stra­hiert, son­dern frei aus der Idee kon­stru­iert, und mit ihrer Hilfe finde ich mich erst in der Sin­nen­welt zu­recht.</span>
         
-        <span id="s-16-11-9">Meine Be­grif­fe sind nicht aus der Sin­nen­welt ab­stra­hiert, son­dern frei aus der Idee kon­stru­iert, und mit ihrer Hilfe finde ich mich erst in der Sin­nen­welt zu­recht.</span>
+        <span id="s-16-11-9">Die obige De­fi­ni­ti­on könn­te nur lau­ten: Ein Kör­per, der nicht aus sich selbst her­aus sei­nen Be­we­gungs­zu­stand än­dern kann, heißt ein trä­ger.</span>
         
-        <span id="s-16-11-10">Die obige De­fi­ni­ti­on könn­te nur lau­ten: Ein Kör­per, der nicht aus sich selbst her­aus sei­nen Be­we­gungs­zu­stand än­dern kann, heißt ein trä­ger.</span>
-        
-        <span id="s-16-11-11">Und wenn ich ihn als sol­chen er­kannt habe, dann kann ich alles, was mit einem trä­gen Kör­per zu­sam­men­hängt, auch auf den in Rede ste­hen­den an­wen­den.</span>
+        <span id="s-16-11-10">Und wenn ich ihn als sol­chen er­kannt habe, dann kann ich alles, was mit einem trä­gen Kör­per zu­sam­men­hängt, auch auf den in Rede ste­hen­den an­wen­den.</span>
         
       </p>
     </section>
-    <h2 id="h2-16-2" data-slug="2-das-urphanomen">2. Das «Urphänomen»</h2>
+    <h2 id="h2-16-2" data-slug="i-2-i-das-urphanomen">&lt;i&gt;2&lt;/i&gt;. Das «Urphänomen»</h2>
     <section id="p-16-12">
       <p>
-        <span id="s-16-12-1">Könn­ten wir die ganze Reihe von Vor­gän­gen ver­fol­gen, wel­che sich bei ir­gend­ei­ner Sin­nes­wahr­neh­mung voll­zie­hen, von der pe­ri­phe­ri­schen En­dung des Ner­ven im Sin­nes­or­gan bis in das Ge­hirn, so wür­den wir doch nir­gends bis zu jenem Punk­te ge­lan­gen, an dem die me­cha­ni­schen, che­mi­schen und or­ga­ni­schen, kurz die raum­zeit­li­chen Pro­zes­se auf­hö­ren, und das auf­tritt, was wir ei­gent­lich Sin­nes­wahr­neh­mung nen­nen, z. B. die Emp­fin­dung der Wärme, des Lich­tes, des Tones usw. Es ist die Stel­le nicht zu fin­den, wo die ver­ur­sa­chen­de Be­we­gung in ihre Wir­kung, die Wahr­neh­mung, über­gin­ge.</span>
+        <span id="s-16-12-1">Könn­ten wir die ganze Reihe von Vor­gän­gen ver­fol­gen, wel­che sich bei ir­gend­ei­ner Sin­nes­wahr­neh­mung voll­zie­hen, von der pe­ri­phe­ri­schen En­dung des Ner­ven im Sin­nes­or­gan bis in das Ge­hirn, so wür­den wir doch nir­gends bis zu jenem Punk­te ge­lan­gen, an dem die me­cha­ni­schen, che­mi­schen und or­ga­ni­schen, kurz die raum­zeit­li­chen Pro­zes­se auf­hö­ren, und <i>das</i> auf­tritt, was wir ei­gent­lich Sin­nes­wahr­neh­mung nen­nen, z. B. die Emp­fin­dung der Wärme, des Lich­tes, des Tones usw. Es ist die Stel­le nicht zu fin­den, wo die ver­ur­sa­chen­de Be­we­gung in ihre Wir­kung, die Wahr­neh­mung, über­gin­ge.</span>
         
         <span id="s-16-12-2">Kön­nen wir dann aber über­haupt davon spre­chen, dass die bei­den Dinge in dem Ver­hält­nis von Ur­sa­che und Wir­kung ste­hen?</span>
         
@@ -310,7 +315,7 @@
         
         <span id="s-16-13-2">Neh­men wir an, es trete eine be­stimm­te Emp­fin­dung in un­se­rem Be­wusst­sein auf.</span>
         
-        <span id="s-16-13-3">Sie tritt dann zu­gleich so auf, dass sie uns auf ir­gend­ei­nen Ge­gen­stand ver­weist, von dem sie her­stammt.</span>
+        <span id="s-16-13-3">Sie tritt dann zu­gleich <i>so</i> auf, dass sie uns auf ir­gend­ei­nen Ge­gen­stand ver­weist, von dem sie her­stammt.</span>
         
         <span id="s-16-13-4">Wenn ich die Emp­fin­dung des Rot habe, so ver­bin­de ich, kraft des In­hal­tes die­ser Vor­stel­lung, in der Regel damit zu­gleich ein be­stimm­tes Orts­da­tum, d. i. eine Stel­le im Raum, oder die Ober­flä­che eines Din­ges, der ich das, was diese Emp­fin­dung aus­drückt, zu­schrei­be.</span>
         
@@ -332,9 +337,9 @@
         
         <span id="s-16-13-13">Das glei­che Re­sul­tat müss­te sich mir er­ge­ben, wenn ich die wei­te­re Ver­mitt­lung vom Sin­nes­or­gan bis zur Zen­tral­stel­le im Ge­hirn un­ter­su­chen könn­te.</span>
         
-        <span id="s-16-13-14">Was auf die­sem gan­zen Wege ver­mit­telt wird, das ist die in Rede ste­hen­de Wahr­neh­mung des Rot.</span>
+        <span id="s-16-13-14"><i>Was</i> auf die­sem gan­zen Wege ver­mit­telt wird, das ist die in Rede ste­hen­de Wahr­neh­mung des Rot.</span>
         
-        <span id="s-16-13-15">Wie sich diese Wahr­neh­mung in einem be­stimm­ten Dinge, das auf dem Wege von der Er­re­gung bis zur Wahr­neh­mung liegt, dar­stellt, das hängt le­dig­lich von der Natur die­ses Din­ges ab.</span>
+        <span id="s-16-13-15"><i>Wie</i> sich diese Wahr­neh­mung in einem be­stimm­ten Dinge, das auf dem Wege von der Er­re­gung bis zur Wahr­neh­mung liegt, dar­stellt, das hängt le­dig­lich von der Natur die­ses Din­ges ab.</span>
         
         <span id="s-16-13-16">Die Emp­fin­dung ist an jedem Ort vor­han­den, vom Er­re­ger bis zum Ge­hirn, aber nicht als sol­che, nicht ex­pli­ziert, son­dern so, wie es der Natur des Ge­gen­stan­des ent­spricht, der an jenem Ort sich be­fin­det.</span>
         
@@ -346,13 +351,11 @@
         
         <span id="s-16-14-2">Was er­fah­re ich aus der Un­ter­su­chung eines Din­ges, das von einem Pro­zes­se, der in mei­nem Be­wusst­sein als Emp­fin­dung auf­tritt, er­grif­fen wird?</span>
         
-        <span id="s-16-14-3">Ich er­fah­re nicht mehr als die Art und Weise, wie jenes Ding auf die Ak­ti­on, die von der Emp­fin­dung aus­geht, ant­wor­tet, oder mit an­de­ren Wor­ten: wie sich eine Emp­fin­dung in ir­gend­ei­nem Ge­gen­stän­de der räum­lich-zeit­li­chen Welt aus­lebt.</span>
+        <span id="s-16-14-3">Ich er­fah­re nicht mehr als die Art und Weise, wie jenes Ding auf die Ak­ti­on, die von der Emp­fin­dung aus­geht, ant­wor­tet, oder mit an­de­ren Wor­ten: wie sich eine Emp­fin­dung in ir­gend­ei­nem Ge­gen­stän­de der räum­lich-zeit­li­chen Welt <i>aus­lebt</i>. Weit ent­fernt, dass ein sol­cher räum­lich-zeit­li­cher Vor­gang die <i>Ur­sa­che</i> ist, der <i>in</i> mir die Emp­fin­dung aus­löst, ist viel­mehr das ganz an­de­re rich­tig: der räum­lich-zeit­li­che Vor­gang ist die <i>Wir­kung</i> der Emp­fin­dung in einem räum­lich-zeit­lich aus­ge­dehn­ten Dinge.</span>
         
-        <span id="s-16-14-4">Weit ent­fernt, dass ein sol­cher räum­lich-zeit­li­cher Vor­gang die Ur­sa­che ist, der in mir die Emp­fin­dung aus­löst, ist viel­mehr das ganz an­de­re rich­tig: der räum­lich-zeit­li­che Vor­gang ist die Wir­kung der Emp­fin­dung in einem räum­lich-zeit­lich aus­ge­dehn­ten Dinge.</span>
+        <span id="s-16-14-4">Ich könn­te noch be­lie­big viele Dinge ein­schal­ten auf dem Wege von dem Er­re­ger bis zu dem Wahr­neh­mungs­or­gan: in jedem wird hier­bei nur das­je­ni­ge vor­ge­hen, was in ihm ver­mö­ge sei­ner Natur vor­ge­hen kann.</span>
         
-        <span id="s-16-14-5">Ich könn­te noch be­lie­big viele Dinge ein­schal­ten auf dem Wege von dem Er­re­ger bis zu dem Wahr­neh­mungs­or­gan: in jedem wird hier­bei nur das­je­ni­ge vor­ge­hen, was in ihm ver­mö­ge sei­ner Natur vor­ge­hen kann.</span>
-        
-        <span id="s-16-14-6">Des­halb bleibt aber doch die Emp­fin­dung das­je­ni­ge, was sich in allen die­sen Vor­gän­gen aus­lebt.</span>
+        <span id="s-16-14-5">Des­halb bleibt aber doch die <i>Emp­fin­dung</i> das­je­ni­ge, was sich in allen die­sen Vor­gän­gen aus­lebt.</span>
         
       </p>
     </section>
@@ -360,9 +363,7 @@
       <p>
         <span id="s-16-15-1">Man hat also in den lon­gi­tu­di­na­len Schwin­gun­gen der Luft bei der Schall­ver­mitt­lung oder in den hy­po­the­ti­schen Os­zil­la­tio­nen des Äthers bei der Ver­mitt­lung des Lich­tes nichts an­de­res zu sehen als die Art und Weise, wie die be­tref­fen­den Emp­fin­dun­gen in einem Me­di­um auf­tre­ten kön­nen, das sei­ner Natur nach nur der Ver­dün­nung und Ver­dich­tung be­zie­hungs­wei­se der schwin­gen­den Be­we­gung fähig ist.</span>
         
-        <span id="s-16-15-2">Die Emp­fin­dung als sol­che kann ich in die­ser Welt nicht fin­den, weil sie ein­fach nicht da sein kann.</span>
-        
-        <span id="s-16-15-3">In jenen Vor­gän­gen habe ich aber durch­aus nicht das Ob­jek­ti­ve der Emp­fin­dungs­vor­gän­ge ge­ge­ben, son­dern eine Form ihres Auf­tre­tens.</span>
+        <span id="s-16-15-2">Die Emp­fin­dung als sol­che kann ich in die­ser Welt nicht fin­den, <i>weil sie ein­fach nicht da sein kann</i>. In jenen Vor­gän­gen habe ich aber durch­aus nicht das Ob­jek­ti­ve der Emp­fin­dungs­vor­gän­ge ge­ge­ben, son­dern eine Form ihres Auf­tre­tens.</span>
         
       </p>
     </section>
@@ -398,7 +399,7 @@
     </section>
     <section id="p-16-17">
       <p>
-        <span id="s-16-17-1">Die wahr­ge­nom­me­ne Welt ist also nichts an­de­res als eine Summe von me­ta­mor­pho­sier­ten Wahr­neh­mun­gen.</span>
+        <span id="s-16-17-1"><i>Die wahr­ge­nom­me­ne Welt ist also nichts an­de­res als eine Summe von me­ta­mor­pho­sier­ten Wahr­neh­mun­gen</i>.</span>
         
       </p>
     </section>
@@ -406,7 +407,7 @@
       <p>
         <span id="s-16-18-1">Wir muss­ten der Be­quem­lich­keit hal­ber uns einer Aus­drucks­wei­se be­die­nen, die mit dem ge­gen­wär­ti­gen Re­sul­tat nicht voll­stän­dig in Ein­klang zu brin­gen ist.</span>
         
-        <span id="s-16-18-2">Wir sag­ten, jedes in den Zwi­schen­raum zwi­schen Er­re­ger und Wahr­neh­mungs­or­gan ein­ge­schal­te­te Ding brin­ge eine Emp­fin­dung in der Weise zum Aus­druck, wie es sei­ner Natur gemäß ist.</span>
+        <span id="s-16-18-2">Wir sag­ten, jedes in den Zwi­schen­raum zwi­schen Er­re­ger und Wahr­neh­mungs­or­gan ein­ge­schal­te­te <i>Ding</i> brin­ge eine Emp­fin­dung in der Weise zum Aus­druck, wie es sei­ner Natur gemäß ist.</span>
         
         <span id="s-16-18-3">Streng ge­nom­men ist ja das Ding nichts wei­ter als die Summe jener Vor­gän­ge, als wel­che es auf­tritt.</span>
         
@@ -444,7 +445,7 @@
         
         <span id="s-16-20-10">Das, was den In­halt der Emp­fin­dung, d. i. das­je­ni­ge, was al­lein ob­jek­tiv in Be­tracht kommt, aus­macht, ist davon ganz un­ab­hän­gig.</span>
         
-        <span id="s-16-20-11">Nun kann aber das doch nicht für eine we­sent­li­che Be­din­gung des Be­stan­des einer Sache an­ge­se­hen wer­den, was für deren In­halt ganz gleich­gül­tig ist.</span>
+        <span id="s-16-20-11">Nun kann aber <i>das</i> doch nicht für eine we­sent­li­che Be­din­gung des Be­stan­des einer Sache an­ge­se­hen wer­den, was für deren In­halt ganz gleich­gül­tig ist.</span>
         
       </p>
     </section>
@@ -452,13 +453,13 @@
       <p>
         <span id="s-16-21-1">Aber auch für einen ob­jek­ti­ven Pro­zess, der An­fang und Ende hat, ist un­se­re An­wen­dung des Zeit­be­griffs nicht rich­tig.</span>
         
-        <span id="s-16-21-2">Wenn an einem be­stimm­ten Ding eine neue Ei­gen­schaft auf­taucht, sich wäh­rend ei­ni­ger Zeit in ver­schie­de­nen Ent­wick­lungs­zu­stän­den er­hält und dann wie­der ver­schwin­det, so müs­sen wir auch hier den In­halt die­ser Ei­gen­schaft als das We­sent­li­che an­se­hen.</span>
+        <span id="s-16-21-2">Wenn an einem be­stimm­ten Ding eine neue Ei­gen­schaft auf­taucht, sich wäh­rend ei­ni­ger Zeit in ver­schie­de­nen Ent­wick­lungs­zu­stän­den er­hält und dann wie­der ver­schwin­det, so müs­sen wir auch hier den <i>In­halt</i> die­ser Ei­gen­schaft als das We­sent­li­che an­se­hen.</span>
         
         <span id="s-16-21-3">Und die­ses hat als sol­ches ab­so­lut nichts zu tun mit den Be­grif­fen An­fang, Dauer und Ende.</span>
         
         <span id="s-16-21-4">Unter dem We­sent­li­chen ver­ste­hen wir hier das, wo­durch ein Ding ei­gent­lich ge­ra­de das ist, als was es sich dar­stellt.</span>
         
-        <span id="s-16-21-5">Nicht dass etwas in einem be­stimm­ten Zeit­mo­ment auf­taucht, son­dern was auf­taucht, dar­auf kommt es an.</span>
+        <span id="s-16-21-5">Nicht <i>dass</i> etwas in einem be­stimm­ten Zeit­mo­ment auf­taucht, son­dern <i>was</i> auf­taucht, dar­auf kommt es an.</span>
         
         <span id="s-16-21-6">Die Summe aller die­ser mit dem «Was» aus­ge­drück­ten Be­stim­mun­gen macht den In­halt der Welt aus.</span>
         
@@ -466,61 +467,57 @@
         
         <span id="s-16-21-8">Alle diese Ge­stal­ten sind in Be­zie­hung zu­ein­an­der, sie be­din­gen sich ge­gen­sei­tig.</span>
         
-        <span id="s-16-21-9">Da­durch tre­ten sie in das Ver­hält­nis des Aus­ein­an­der nach Raum und Zeit.</span>
+        <span id="s-16-21-9">Da­durch tre­ten sie in das Ver­hält­nis des Aus­ein­an­der nach <i>Raum</i> und <i>Zeit</i>. Aber nur einer ganz ver­fehl­ten Auf­fas­sung des Zeit­be­griffs ver­dankt der Be­griff der <i>Ma­te­rie</i> seine Ent­ste­hung.</span>
         
-        <span id="s-16-21-10">Aber nur einer ganz ver­fehl­ten Auf­fas­sung des Zeit­be­griffs ver­dankt der Be­griff der Ma­te­rie seine Ent­ste­hung.</span>
+        <span id="s-16-21-10">Man glaubt die Welt zum we­sen­lo­sen Schein zu ver­flüch­ti­gen, wenn man der ver­än­der­li­chen Summe der Ge­scheh­nis­se nicht ein in der Zeit Be­har­ren­des, ein Un­ver­än­der­li­ches un­ter­ge­legt däch­te, das bleibt, wäh­rend seine Be­stim­mun­gen wech­seln.</span>
         
-        <span id="s-16-21-11">Man glaubt die Welt zum we­sen­lo­sen Schein zu ver­flüch­ti­gen, wenn man der ver­än­der­li­chen Summe der Ge­scheh­nis­se nicht ein in der Zeit Be­har­ren­des, ein Un­ver­än­der­li­ches un­ter­ge­legt däch­te, das bleibt, wäh­rend seine Be­stim­mun­gen wech­seln.</span>
+        <span id="s-16-21-11">Aber die Zeit ist ja nicht ein Gefäß, in dem die Ver­än­de­run­gen sich ab­spie­len; sie ist nicht <i>vor</i> den Din­gen und <i>au­ßer­halb</i> der­sel­ben da.</span>
         
-        <span id="s-16-21-12">Aber die Zeit ist ja nicht ein Gefäß, in dem die Ver­än­de­run­gen sich ab­spie­len; sie ist nicht vor den Din­gen und au­ßer­halb der­sel­ben da.</span>
+        <span id="s-16-21-12">Die <i>Zeit</i> ist der sin­nen­fäl­li­ge Aus­druck für den Um­stand, dass die Tat­sa­chen ihrem In­halt nach von­ein­an­der in einer Folge ab­hän­gig sind.</span>
         
-        <span id="s-16-21-13">Die Zeit ist der sin­nen­fäl­li­ge Aus­druck für den Um­stand, dass die Tat­sa­chen ihrem In­halt nach von­ein­an­der in einer Folge ab­hän­gig sind.</span>
+        <span id="s-16-21-13">Neh­men wir an, wir hat­ten es mit dem wahr­zu­neh­men­den Tat­sa­chen­kom­plex a, b, c, d, e, zu tun.</span>
         
-        <span id="s-16-21-14">Neh­men wir an, wir hat­ten es mit dem wahr­zu­neh­men­den Tat­sa­chen­kom­plex a, b, c, d, e, zu tun.</span>
+        <span id="s-16-21-14">Von die­sem hängt mit in­ne­rer Not­wen­dig­keit der an­de­re Kom­plex a, b, c, d, e, ab; ich sehe den In­halt die­ses letz­te­ren ein, wenn ich ihn ide­ell aus dem ers­te­ren her­vor­ge­hen lasse.</span>
         
-        <span id="s-16-21-15">Von die­sem hängt mit in­ne­rer Not­wen­dig­keit der an­de­re Kom­plex a, b, c, d, e, ab; ich sehe den In­halt die­ses letz­te­ren ein, wenn ich ihn ide­ell aus dem ers­te­ren her­vor­ge­hen lasse.</span>
+        <span id="s-16-21-15">Nun neh­men wir an, beide Kom­ple­xe tre­ten in die Er­schei­nung.</span>
         
-        <span id="s-16-21-16">Nun neh­men wir an, beide Kom­ple­xe tre­ten in die Er­schei­nung.</span>
+        <span id="s-16-21-16">Denn was wir frü­her be­spro­chen haben, ist das ganz un­zeit­li­che und un­räum­li­che Wesen die­ser Kom­ple­xe.</span>
         
-        <span id="s-16-21-17">Denn was wir frü­her be­spro­chen haben, ist das ganz un­zeit­li­che und un­räum­li­che Wesen die­ser Kom­ple­xe.</span>
+        <span id="s-16-21-17">Wenn a, b, c, d, e, in der Er­schei­nung auf­tre­ten soll, dann muss a, b, c, d, e, eben­falls Er­schei­nung sein, und zwar so, dass nun a, b, c, d, e, auch in sei­ner Ab­hän­gig­keit davon er­scheint.</span>
         
-        <span id="s-16-21-18">Wenn a, b, c, d, e, in der Er­schei­nung auf­tre­ten soll, dann muss a, b, c, d, e, eben­falls Er­schei­nung sein, und zwar so, dass nun a, b, c, d, e, auch in sei­ner Ab­hän­gig­keit davon er­scheint.</span>
+        <span id="s-16-21-18">D. h. die Er­schei­nung a, b, c, d, e, muss da sein, der Er­schei­nung a, b, c, d, e, Platz ma­chen, wor­auf diese letz­te­re auf­tritt.</span>
         
-        <span id="s-16-21-19">D. h. die Er­schei­nung a, b, c, d, e, muss da sein, der Er­schei­nung a, b, c, d, e, Platz ma­chen, wor­auf diese letz­te­re auf­tritt.</span>
+        <span id="s-16-21-19">Hier sehen wir, dass die Zeit erst da auf­tritt, wo das <i>Wesen</i> einer Sache in die <i>Er­schei­nung</i> tritt.</span>
         
-        <span id="s-16-21-20">Hier sehen wir, dass die Zeit erst da auf­tritt, wo das Wesen einer Sache in die Er­schei­nung tritt.</span>
+        <span id="s-16-21-20">Die Zeit ge­hört der Er­schei­nungs­welt an.</span>
         
-        <span id="s-16-21-21">Die Zeit ge­hört der Er­schei­nungs­welt an.</span>
+        <span id="s-16-21-21">Sie hat mit dem Wesen selbst noch nichts zu tun.</span>
         
-        <span id="s-16-21-22">Sie hat mit dem Wesen selbst noch nichts zu tun.</span>
+        <span id="s-16-21-22">Die­ses Wesen ist nur ide­ell zu er­fas­sen.</span>
         
-        <span id="s-16-21-23">Die­ses Wesen ist nur ide­ell zu er­fas­sen.</span>
+        <span id="s-16-21-23">Nur wer die­sen Rück­gang von der Er­schei­nung zum Wesen in sei­nen Ge­dan­ken­gän­gen nicht voll­zie­hen kann, der hy­post­asiert die Zeit als ein den Tat­sa­chen Vor­her­ge­hen­des.</span>
         
-        <span id="s-16-21-24">Nur wer die­sen Rück­gang von der Er­schei­nung zum Wesen in sei­nen Ge­dan­ken­gän­gen nicht voll­zie­hen kann, der hy­post­asiert die Zeit als ein den Tat­sa­chen Vor­her­ge­hen­des.</span>
+        <span id="s-16-21-24">Dann braucht er aber ein Da­sein, wel­ches die Ver­än­de­run­gen über­dau­ert.</span>
         
-        <span id="s-16-21-25">Dann braucht er aber ein Da­sein, wel­ches die Ver­än­de­run­gen über­dau­ert.</span>
+        <span id="s-16-21-25">Als sol­ches fasst er die un­zer­stör­ba­re Ma­te­rie auf.</span>
         
-        <span id="s-16-21-26">Als sol­ches fasst er die un­zer­stör­ba­re Ma­te­rie auf.</span>
+        <span id="s-16-21-26">Damit hat er sich ein Ding ge­schaf­fen, dem die Zeit nichts an­ha­ben soll, ein in allem Wech­sel Be­har­ren­des.</span>
         
-        <span id="s-16-21-27">Damit hat er sich ein Ding ge­schaf­fen, dem die Zeit nichts an­ha­ben soll, ein in allem Wech­sel Be­har­ren­des.</span>
+        <span id="s-16-21-27">Ei­gent­lich aber hat er nur sein Un­ver­mö­gen ge­zeigt, von der zeit­li­chen Er­schei­nung der Tat­sa­chen zu ihrem Wesen vor­zu­drin­gen, das mit der Zeit nichts zu tun hat.</span>
         
-        <span id="s-16-21-28">Ei­gent­lich aber hat er nur sein Un­ver­mö­gen ge­zeigt, von der zeit­li­chen Er­schei­nung der Tat­sa­chen zu ihrem Wesen vor­zu­drin­gen, das mit der Zeit nichts zu tun hat.</span>
+        <span id="s-16-21-28">Kann ich denn von dem Wesen einer Tat­sa­che sagen: es ent­steht oder ver­geht?</span>
         
-        <span id="s-16-21-29">Kann ich denn von dem Wesen einer Tat­sa­che sagen: es ent­steht oder ver­geht?</span>
+        <span id="s-16-21-29">Ich kann nur sagen, dass ihr In­halt einen an­dern be­dingt, und dass dann diese Be­din­gung als Zei­ten­fol­ge er­scheint.</span>
         
-        <span id="s-16-21-30">Ich kann nur sagen, dass ihr In­halt einen an­dern be­dingt, und dass dann diese Be­din­gung als Zei­ten­fol­ge er­scheint.</span>
+        <span id="s-16-21-30">Das Wesen einer Sache kann nicht zer­stört wer­den; denn es ist außer aller Zeit und be­dingt selbst die letz­te­re.</span>
         
-        <span id="s-16-21-31">Das Wesen einer Sache kann nicht zer­stört wer­den; denn es ist außer aller Zeit und be­dingt selbst die letz­te­re.</span>
-        
-        <span id="s-16-21-32">Damit haben wir zu­gleich eine Be­leuch­tung auf zwei Be­grif­fe ge­wor­fen, für die noch wenig Ver­ständ­nis zu fin­den ist, auf Wesen und Er­schei­nung.</span>
-        
-        <span id="s-16-21-33">Wer die Sache in un­se­rer Weise rich­tig auf­fasst, der kann nach einem Be­weis von der Un­zer­stör­bar­keit des We­sens einer Sache nicht su­chen, weil die Zer­stö­rung den Zeit­be­griff in sich schließt, der mit dem Wesen nichts zu tun hat.</span>
+        <span id="s-16-21-31">Damit haben wir zu­gleich eine Be­leuch­tung auf zwei Be­grif­fe ge­wor­fen, für die noch wenig Ver­ständ­nis zu fin­den ist, auf <i>Wesen</i> und <i>Er­schei­nung</i>. Wer die Sache in un­se­rer Weise rich­tig auf­fasst, der kann nach einem Be­weis von der Un­zer­stör­bar­keit des We­sens einer Sache nicht su­chen, weil die Zer­stö­rung den Zeit­be­griff in sich schließt, der mit dem Wesen nichts zu tun hat.</span>
         
       </p>
     </section>
     <section id="p-16-22">
       <p>
-        <span id="s-16-22-1">Nach die­sen Aus­füh­run­gen kön­nen wir sagen: Das sin­nen­fäl­li­ge Welt­bild ist die Summe sich me­ta­mor­pho­sie­ren­der Wahr­neh­mungs­in­hal­te ohne eine zu­grun­de lie­gen­de Ma­te­rie.</span>
+        <span id="s-16-22-1">Nach die­sen Aus­füh­run­gen kön­nen wir sagen: <i>Das sin­nen­fäl­li­ge Welt­bild ist die Summe sich me­ta­mor­pho­sie­ren­der Wahr­neh­mungs­in­hal­te ohne eine zu­grun­de lie­gen­de Ma­te­rie</i>.</span>
         
       </p>
     </section>
@@ -606,7 +603,7 @@
         
         <span id="s-16-28-7">Dar­aus er­se­hen wir, dass wir zwi­schen not­wen­di­gen und zu­fäl­li­gen Be­din­gun­gen einer Er­schei­nung un­ter­schei­den müs­sen.</span>
         
-        <span id="s-16-28-8">Phä­no­me­ne nun, die so ent­ste­hen, dass dabei nur die not­wen­di­gen Be­din­gun­gen mit­wir­ken, kön­nen wir ur­sprüng­li­che, die an­de­ren ab­ge­lei­te­te nen­nen.</span>
+        <span id="s-16-28-8">Phä­no­me­ne nun, die so ent­ste­hen, dass dabei nur die not­wen­di­gen Be­din­gun­gen mit­wir­ken, kön­nen wir <i>ur­sprüng­li­che</i>, die an­de­ren <i>ab­ge­lei­te­te</i> nen­nen.</span>
         
         <span id="s-16-28-9">Wenn wir die ur­sprüng­li­chen Phä­no­me­ne aus ihren Be­din­gun­gen ver­ste­hen, dann kön­nen wir durch Hin­zu­set­zung von neuen Be­din­gun­gen die ab­ge­lei­te­ten eben­falls ver­ste­hen.</span>
         
@@ -616,9 +613,9 @@
       <p>
         <span id="s-16-29-1">Hier wird uns die Auf­ga­be der Wis­sen­schaft klar.</span>
         
-        <span id="s-16-29-2">Sie hat durch die phä­no­me­na­le Welt so weit durch­zu­drin­gen, dass sie Er­schei­nun­gen auf­sucht, die nur von not­wen­di­gen Be­din­gun­gen ab­hän­gig sind.</span>
+        <span id="s-16-29-2">Sie hat durch die phä­no­me­na­le Welt so weit durch­zu­drin­gen, dass sie Er­schei­nun­gen auf­sucht, die nur von <i>not­wen­di­gen</i> Be­din­gun­gen ab­hän­gig sind.</span>
         
-        <span id="s-16-29-3">Und der sprach­lich-be­griff­li­che Aus­druck für sol­che not­wen­di­gen Zu­sam­men­hän­ge sind die Na­tur­ge­set­ze.</span>
+        <span id="s-16-29-3">Und der sprach­lich-be­griff­li­che Aus­druck für sol­che not­wen­di­gen Zu­sam­men­hän­ge sind die <i>Na­tur­ge­set­ze</i>.</span>
         
       </p>
     </section>
@@ -654,31 +651,27 @@
         
         <span id="s-16-32-4">Ihm war das Licht als Emp­fin­dung ge­ge­ben.</span>
         
-        <span id="s-16-32-5">Wenn er nun den Zu­sam­men­hang zwi­schen Licht und Farbe er­klä­ren woll­te, so konn­te das nicht durch eine Spe­ku­la­ti­on ge­sche­hen, son­dern nur durch ein Ur­phä­no­men, indem er die not­wen­di­ge Be­din­gung auf­such­te, die zum Lich­te hin­zu­tre­ten muss, um die Farbe ent­ste­hen zu las­sen.</span>
+        <span id="s-16-32-5">Wenn er nun den Zu­sam­men­hang zwi­schen Licht und Farbe er­klä­ren woll­te, so konn­te das nicht durch eine Spe­ku­la­ti­on ge­sche­hen, son­dern nur durch ein <i>Ur­phä­no­men</i>, indem er die not­wen­di­ge Be­din­gung auf­such­te, die zum Lich­te hin­zu­tre­ten muss, um die Farbe ent­ste­hen zu las­sen.</span>
         
         <span id="s-16-32-6">New­ton sah auch die Farbe in Ver­bin­dung mit dem Lich­te auf­tre­ten, aber er dach­te nun spe­ku­la­tiv nach: Wie ent­steht die Farbe aus dem Lich­te.</span>
         
         <span id="s-16-32-7">Das lag in sei­ner spe­ku­la­ti­ven Denk­wei­se; in Goe­thes ge­gen­ständ­li­cher und rich­tig sich selbst ver­ste­hen­der Denk­wei­se lag das nicht.</span>
         
-        <span id="s-16-32-8">Des­halb muss­te ihm New­tons An­nah­me: «Das Licht ist aus far­bi­gen Lich­tern zu­sam­men­ge­setzt» als Er­geb­nis un­rich­ti­ger Spe­ku­la­ti­on er­schei­nen.</span>
+        <span id="s-16-32-8">Des­halb muss­te ihm New­tons An­nah­me: <q author="Isaac New­ton" book-title="Op­ticks" part="1">Das Licht ist aus far­bi­gen Lich­tern zu­sam­men­ge­setzt</q> als Er­geb­nis un­rich­ti­ger Spe­ku­la­ti­on er­schei­nen.</span>
         
-        <span id="s-16-32-9">Er hielt sich nur be­rech­tigt, über den Zu­sam­men­hang von Licht und Farbe unter Hin­zu­tritt einer Be­din­gung etwas aus­zu­sa­gen, nicht aber über das Licht selbst durch Hin­zu­zie­hung eines spe­ku­la­ti­ven Be­grif­fes.</span>
+        <span id="s-16-32-9">Er hielt sich nur be­rech­tigt, über den <i>Zu­sam­men­hang</i> von Licht und Farbe unter Hin­zu­tritt einer Be­din­gung etwas aus­zu­sa­gen, nicht aber über das Licht selbst durch Hin­zu­zie­hung eines spe­ku­la­ti­ven Be­grif­fes.</span>
         
-        <span id="s-16-32-10">Daher sein Satz: «Das Licht ist das ein­fachs­te, un­zer­leg­tes­te, ho­mo­gens­te Wesen, das wir ken­nen.</span>
+        <span id="s-16-32-10">Daher sein Satz: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Zur Far­ben­leh­re" part="1">Das Licht ist das ein­fachs­te, un­zer­leg­tes­te, ho­mo­gens­te Wesen, das wir ken­nen. Es ist nicht zu­sam­men­ge­setzt.</q> Alle Aus­sa­gen über Zu­sam­men­set­zung des Lich­tes sind ja nur Aus­sa­gen des Ver­stan­des über ein Phä­no­men.</span>
         
-        <span id="s-16-32-11">Es ist nicht zu­sam­men­ge­setzt.» Alle Aus­sa­gen über Zu­sam­men­set­zung des Lich­tes sind ja nur Aus­sa­gen des Ver­stan­des über ein Phä­no­men.</span>
-        
-        <span id="s-16-32-12">Die Be­fug­nis des Ver­stan­des er­streckt sich aber nur auf Aus­sa­gen über den Zu­sam­men­hang von Phä­no­me­nen.</span>
+        <span id="s-16-32-12">Die Be­fug­nis des Ver­stan­des er­streckt sich aber nur auf Aus­sa­gen über den <i>Zu­sam­men­hang</i> von Phä­no­me­nen.</span>
         
       </p>
     </section>
     <section id="p-16-33">
       <p>
-        <span id="s-16-33-1">Hier­mit ist der tie­fe­re Grund bloß­ge­legt, warum Goe­the, als er durchs Pris­ma sah, nicht zu der Theo­rie New­tons sich be­ken­nen konn­te.</span>
+        <span id="s-16-33-1">Hier­mit ist der tie­fe­re Grund bloß­ge­legt, warum Goe­the, als er durchs Pris­ma sah, nicht zu der Theo­rie New­tons sich be­ken­nen <i>konn­te</i>. Das Pris­ma hatte die <i>erste Be­din­gung</i> sein müs­sen für das Zu­stan­de­kom­men der Farbe.</span>
         
-        <span id="s-16-33-2">Das Pris­ma hatte die erste Be­din­gung sein müs­sen für das Zu­stan­de­kom­men der Farbe.</span>
-        
-        <span id="s-16-33-3">Es er­wies sich aber eine an­de­re Be­din­gung, die An­we­sen­heit eines Dun­keln, als ur­sprüng­li­cher zur Ent­ste­hung der­sel­ben; das Pris­ma erst als zwei­te Be­din­gung.</span>
+        <span id="s-16-33-2">Es er­wies sich aber eine an­de­re Be­din­gung, die An­we­sen­heit eines Dun­keln, als ur­sprüng­li­cher zur Ent­ste­hung der­sel­ben; das Pris­ma erst als zwei­te Be­din­gung.</span>
         
       </p>
     </section>
@@ -694,7 +687,7 @@
         
         <span id="s-16-35-2">Nur wer ganz er­füllt ist von so grund­fal­schen Vor­stel­lun­gen, wie diese ist, dass man von den Wahr­neh­mun­gen durch ver­stän­di­ges Nach­den­ken zu­rück­ge­hen müsse auf die Ur­sa­che der Wahr­neh­mun­gen, der kann die Frage noch in der Weise auf­wer­fen, wie es die heu­ti­ge Phy­sik tut.</span>
         
-        <span id="s-16-35-3">Wer sich aber wirk­lich klar dar­über ge­wor­den ist, dass Er­klä­ren der Er­schei­nun­gen nichts an­de­res heißt, als die­sel­ben in einem von dem Ver­stand her­ge­stell­ten Zu­sam­men­hang be­ob­ach­ten, der muss die Goe­the­sche Far­ben­leh­re im Prin­zip ak­zep­tie­ren.</span>
+        <span id="s-16-35-3">Wer sich aber wirk­lich klar dar­über ge­wor­den ist, dass Er­klä­ren der Er­schei­nun­gen nichts an­de­res heißt, als die­sel­ben in einem von dem Ver­stand her­ge­stell­ten Zu­sam­men­hang <i>be­ob­ach­ten</i>, der muss die Goe­the­sche Far­ben­leh­re <i>im Prin­zip</i> ak­zep­tie­ren.</span>
         
         <span id="s-16-35-4">Denn sie ist die Folge einer rich­ti­gen An­schau­ungs­wei­se über das Ver­hält­nis un­se­res Den­kens zur Natur.</span>
         
@@ -702,17 +695,15 @@
         
         <span id="s-16-35-6">Es fällt mir na­tür­lich nicht ein, alle Ein­zel­hei­ten der Goe­the­schen Far­ben­leh­re ver­tei­di­gen zu wol­len.</span>
         
-        <span id="s-16-35-7">Was ich auf­recht er­hal­ten wis­sen will, ist nur das Prin­zip.</span>
+        <span id="s-16-35-7">Was ich auf­recht er­hal­ten wis­sen will, ist nur das <i>Prin­zip</i>. Aber es kann auch hier nicht meine Auf­ga­be sein, die zu Goe­thes Zeit noch un­be­kann­ten Er­schei­nun­gen der Far­ben­leh­re aus sei­nem Prin­zip ab­zu­lei­ten.</span>
         
-        <span id="s-16-35-8">Aber es kann auch hier nicht meine Auf­ga­be sein, die zu Goe­thes Zeit noch un­be­kann­ten Er­schei­nun­gen der Far­ben­leh­re aus sei­nem Prin­zip ab­zu­lei­ten.</span>
+        <span id="s-16-35-8">Soll­te ich der­einst das Glück haben, Muße und Mit­tel zu be­sit­zen, um eine Far­ben­leh­re im Goe­the­schen Sinne ganz auf der Höhe der mo­der­nen Er­run­gen­schaf­ten der Na­tur­wis­sen­schaft zu schrei­ben, so wäre in einer sol­chen al­lein die an­ge­deu­te­te Auf­ga­be zu lösen.</span>
         
-        <span id="s-16-35-9">Soll­te ich der­einst das Glück haben, Muße und Mit­tel zu be­sit­zen, um eine Far­ben­leh­re im Goe­the­schen Sinne ganz auf der Höhe der mo­der­nen Er­run­gen­schaf­ten der Na­tur­wis­sen­schaft zu schrei­ben, so wäre in einer sol­chen al­lein die an­ge­deu­te­te Auf­ga­be zu lösen.</span>
+        <span id="s-16-35-9">Ich würde das als zu mei­nen schöns­ten Le­bens­auf­ga­ben ge­hö­rig be­trach­ten.</span>
         
-        <span id="s-16-35-10">Ich würde das als zu mei­nen schöns­ten Le­bens­auf­ga­ben ge­hö­rig be­trach­ten.</span>
+        <span id="s-16-35-10">Diese Ein­lei­tung konn­te sich al­lein auf die wis­sen­schaft­lich stren­ge Recht­fer­ti­gung von Goe­thes <i>Denk­wei­se</i> in der Far­ben­leh­re er­stre­cken.</span>
         
-        <span id="s-16-35-11">Diese Ein­lei­tung konn­te sich al­lein auf die wis­sen­schaft­lich stren­ge Recht­fer­ti­gung von Goe­thes Denk­wei­se in der Far­ben­leh­re er­stre­cken.</span>
-        
-        <span id="s-16-35-12">In dem Fol­gen­den soll nun auch noch ein Licht auf den in­ne­ren Bau der­sel­ben ge­wor­fen wer­den.</span>
+        <span id="s-16-35-11">In dem Fol­gen­den soll nun auch noch ein Licht auf den in­ne­ren Bau der­sel­ben ge­wor­fen wer­den.</span>
         
       </p>
     </section>
@@ -745,11 +736,9 @@
         
         <span id="s-16-39-4">Ich kann nie einem Rot­blin­den eine Vor­stel­lung der Qua­li­tät «Rot» ver­schaf­fen, auch wenn ich ihm die­sel­be mit allen nur er­denk­li­chen Mit­teln be­griff­lich um­schrei­be.</span>
         
-        <span id="s-16-39-5">Die Sin­nes­wahr­neh­mung hat somit ein Etwas, das nie in den Be­griff ein­geht; das wahr­ge­nom­men wer­den muss, wenn es über­haupt Ge­gen­stand un­se­rer Er­kennt­nis wer­den soll.</span>
+        <span id="s-16-39-5"><i>Die Sin­nes­wahr­neh­mung hat somit ein Etwas, das nie in den Be­griff ein­geht; das wahr­ge­nom­men wer­den muss, wenn es über­haupt Ge­gen­stand un­se­rer Er­kennt­nis wer­den soll</i>. Was für eine Rolle spielt also der Be­griff, den wir mit ir­gend­ei­ner Sin­nes­wahr­neh­mung ver­knüp­fen?</span>
         
-        <span id="s-16-39-6">Was für eine Rolle spielt also der Be­griff, den wir mit ir­gend­ei­ner Sin­nes­wahr­neh­mung ver­knüp­fen?</span>
-        
-        <span id="s-16-39-7">Er muss of­fen­bar ein ganz selb­stän­di­ges Ele­ment, etwas Neues hin­zu­brin­gen, das wohl zur Sin­nes­wahr­neh­mung ge­hört, das aber in der Sin­nes­wahr­neh­mung nicht zum Vor­schein kommt.</span>
+        <span id="s-16-39-6">Er muss of­fen­bar ein ganz selb­stän­di­ges Ele­ment, etwas Neues hin­zu­brin­gen, das wohl zur Sin­nes­wahr­neh­mung ge­hört, das aber in der Sin­nes­wahr­neh­mung nicht zum Vor­schein kommt.</span>
         
       </p>
     </section>
@@ -775,17 +764,17 @@
         
         <span id="s-16-41-4">Und zwar jene, die bloß an­ge­schaut wer­den kann.</span>
         
-        <span id="s-16-41-5">Durch den Be­griff erst wird uns das klar, was wir an­schau­en.</span>
+        <span id="s-16-41-5">Durch den Be­griff erst wird uns das klar, <i>was</i> wir an­schau­en.</span>
         
       </p>
     </section>
     <section id="p-16-42">
       <p>
-        <span id="s-16-42-1">Jetzt kön­nen wir die in­halt­li­che Be­deu­tung des­sen, was wir im vo­ri­gen Ka­pi­tel me­tho­disch ent­wi­ckelt haben, aus­spre­chen: Durch die be­griff­li­che Er­fas­sung eines in der Sin­nen­welt Ge­ge­be­nen ge­langt erst das Was des im An­schau­en Ge­ge­be­nen zur Er­schei­nung.</span>
+        <span id="s-16-42-1">Jetzt kön­nen wir die <i>in­halt­li­che</i> Be­deu­tung des­sen, was wir im vo­ri­gen Ka­pi­tel <i>me­tho­disch</i> ent­wi­ckelt haben, aus­spre­chen: Durch die be­griff­li­che Er­fas­sung eines in der Sin­nen­welt Ge­ge­be­nen ge­langt erst das <i>Was</i> des im An­schau­en Ge­ge­be­nen zur Er­schei­nung.</span>
         
-        <span id="s-16-42-2">Wir kön­nen den In­halt des An­ge­schau­ten nicht aus­spre­chen, weil die­ser In­halt sich in dem Wie des An­ge­schau­ten, d. h. in der Form des Auf­tre­tens er­schöpft.</span>
+        <span id="s-16-42-2">Wir kön­nen den In­halt des An­ge­schau­ten nicht aus­spre­chen, weil die­ser In­halt sich in dem <i>Wie</i> des An­ge­schau­ten, d. h. in der <i>Form</i> des Auf­tre­tens er­schöpft.</span>
         
-        <span id="s-16-42-3">Somit fin­den wir im Be­griff das Was, den an­dern In­halt des in der Sin­nen­welt in Form der An­schau­ung Ge­ge­be­nen.</span>
+        <span id="s-16-42-3">Somit fin­den wir im <i>Be­griff</i> das Was, den an­dern In­halt des in der Sin­nen­welt in Form der An­schau­ung Ge­ge­be­nen.</span>
         
       </p>
     </section>
@@ -795,9 +784,9 @@
         
         <span id="s-16-43-2">Nun haben wir aber ge­fun­den, dass uns der Be­griff über die ein­zel­ne Er­schei­nung hin­aus auf den Zu­sam­men­hang der Dinge ver­weist.</span>
         
-        <span id="s-16-43-3">Somit stellt sich das, was in der Sin­nen­welt ge­trennt, ver­ein­zelt auf­tritt, für den Be­griff als ein­heit­li­ches Gan­zess dar.</span>
+        <span id="s-16-43-3">Somit stellt sich das, was in der Sin­nen­welt ge­trennt, ver­ein­zelt auf­tritt, für den Be­griff als <i>ein­heit­li­ches</i> Gan­zes dar.</span>
         
-        <span id="s-16-43-4">So ent­steht durch un­se­re na­tur­wis­sen­schaft­li­che Me­tho­dik als End­ziel die mo­nis­ti­sche Na­tur­wis­sen­schaft; aber sie ist nicht abs­trak­ter Mo­nis­mus, der die Ein­heit schon vor­aus­nimmt, und dann die ein­zel­nen Tat­sa­chen des kon­kre­ten Da­seins in ge­zwun­ge­ner Weise dar­un­ter sub­sum­miert, son­dern der kon­kre­te Mo­nis­mus, der Stück für Stück zeigt, dass die schein­ba­re Man­nig­fal­tig­keit des Sin­nen­da­seins sich zu­letzt nur als eine ide­el­le Ein­heit er­weist.</span>
+        <span id="s-16-43-4">So ent­steht durch un­se­re na­tur­wis­sen­schaft­li­che Me­tho­dik als End­ziel die <i>mo­nis­ti­sche Na­tur­wis­sen­schaft</i>; aber sie ist nicht abs­trak­ter Mo­nis­mus, der die Ein­heit schon vor­aus­nimmt, und dann die ein­zel­nen Tat­sa­chen des <i>kon­kre­ten</i> Da­seins in ge­zwun­ge­ner Weise dar­un­ter sub­sum­miert, son­dern der kon­kre­te Mo­nis­mus, der Stück für Stück zeigt, dass die schein­ba­re Man­nig­fal­tig­keit des Sin­nen­da­seins sich zu­letzt nur als eine ide­el­le Ein­heit er­weist.</span>
         
         <span id="s-16-43-5">Die Viel­heit ist nur eine Form, in der sich der ein­heit­li­che Welt­in­halt aus­spricht.</span>
         
@@ -809,15 +798,13 @@
     </section>
     <section id="p-16-44">
       <p>
-        <span id="s-16-44-1">Die Art nun, wie der Be­griff (die Idee) in der Sin­nen­welt sich aus­lebt, macht den Un­ter­schied der Na­tur­rei­che.</span>
+        <span id="s-16-44-1">Die Art nun, <i>wie</i> der Be­griff (die Idee) in der Sin­nen­welt sich aus­lebt, macht den Un­ter­schied der Na­tur­rei­che.</span>
         
-        <span id="s-16-44-2">Ge­langt das sin­nen­fäl­lig wirk­li­che Wesen nur zu einem sol­chen Da­sein, dass es völ­lig au­ßer­halb des Be­grif­fes steht, nur von ihm als einem Ge­setz in sei­nen Ver­än­de­run­gen be­herrscht wird, dann nen­nen wir die­ses Wesen un­or­ga­nisch.</span>
+        <span id="s-16-44-2">Ge­langt das sin­nen­fäl­lig wirk­li­che Wesen nur zu einem sol­chen Da­sein, dass es völ­lig au­ßer­halb des Be­grif­fes steht, nur von ihm als einem <i>Ge­setz</i> in sei­nen Ver­än­de­run­gen be­herrscht wird, dann nen­nen wir die­ses Wesen <i>un­or­ga­nisch</i>. Alles, was mit einem sol­chen vor­geht, ist auf die Ein­flüs­se eines an­de­ren We­sens zu­rück­zu­füh­ren; und wie die bei­den auf­ein­an­der wir­ken, das lässt sich durch ein außer ihnen ste­hen­des Ge­setz er­klä­ren.</span>
         
-        <span id="s-16-44-3">Alles, was mit einem sol­chen vor­geht, ist auf die Ein­flüs­se eines an­de­ren We­sens zu­rück­zu­füh­ren; und wie die bei­den auf­ein­an­der wir­ken, das lässt sich durch ein außer ihnen ste­hen­des Ge­setz er­klä­ren.</span>
+        <span id="s-16-44-3">In die­ser Sphä­re haben wir es mit Phä­no­me­nen und Ge­set­zen zu tun, die, wenn sie ur­sprüng­lich sind, <i>Ur­phä­no­me­ne</i> hei­ßen kön­nen.</span>
         
-        <span id="s-16-44-4">In die­ser Sphä­re haben wir es mit Phä­no­me­nen und Ge­set­zen zu tun, die, wenn sie ur­sprüng­lich sind, Ur­phä­no­me­ne hei­ßen kön­nen.</span>
-        
-        <span id="s-16-44-5">In die­sem Fall steht also das wahr­zu­neh­men­de Be­griff­li­che au­ßer­halb einer wahr­ge­nom­me­nen Man­nig­fal­tig­keit.</span>
+        <span id="s-16-44-4">In die­sem Fall steht also das wahr­zu­neh­men­de Be­griff­li­che au­ßer­halb einer wahr­ge­nom­me­nen Man­nig­fal­tig­keit.</span>
         
       </p>
     </section>
@@ -827,17 +814,17 @@
         
         <span id="s-16-45-2">Dann er­scheint das be­griff­lich Er­fass­ba­re als sin­nen­fäl­li­ge Ein­heit.</span>
         
-        <span id="s-16-45-3">Die bei­den, Be­griff und Wahr­neh­mung, sind zwar nicht iden­tisch, aber der Be­griff er­scheint nicht außer der sinn­li­chen Man­nig­fal­tig­keit als Ge­setz, son­dern in der­sel­ben als Prin­zip.</span>
+        <span id="s-16-45-3">Die bei­den, Be­griff und Wahr­neh­mung, sind zwar nicht iden­tisch, aber der Be­griff er­scheint nicht <i>außer</i> der sinn­li­chen Man­nig­fal­tig­keit als Ge­setz, son­dern <i>in</i> der­sel­ben als Prin­zip.</span>
         
-        <span id="s-16-45-4">Er liegt ihr als das sie Durch­set­zen­de, nicht mehr sinn­lich Wahr­nehm­ba­re zu­grun­de, das wir Typus nen­nen.</span>
+        <span id="s-16-45-4">Er liegt ihr als das sie Durch­set­zen­de, nicht mehr sinn­lich Wahr­nehm­ba­re zu­grun­de, das wir <i>Typus</i> nen­nen.</span>
         
-        <span id="s-16-45-5">Damit hat es die or­ga­ni­sche Na­tur­wis­sen­schaft zu tun.</span>
+        <span id="s-16-45-5">Damit hat es die <i>or­ga­ni­sche</i> Na­tur­wis­sen­schaft zu tun.</span>
         
       </p>
     </section>
     <section id="p-16-46">
       <p>
-        <span id="s-16-46-1">Aber auch hier er­scheint der Be­griff noch nicht in sei­ner ihm ei­ge­nen Form als Be­griff, son­dern erst als Typus, Wo nun der­sel­be nicht mehr bloß als sol­cher, als durch­set­zen­des Prin­zip, son­dern in sei­ner Be­griffs­form selbst auf­tritt, da er­scheint er als Be­wusst­sein, da kommt end­lich das zur Er­schei­nung, was auf den un­te­ren Stu­fen nur dem Wesen nach vor­han­den ist.</span>
+        <span id="s-16-46-1">Aber auch hier er­scheint der Be­griff noch nicht in sei­ner ihm ei­ge­nen Form als Be­griff, son­dern erst als <i>Typus, Wo</i> nun der­sel­be nicht mehr bloß als sol­cher, als durch­set­zen­des Prin­zip, son­dern in sei­ner Be­griffs­form selbst auf­tritt, da er­scheint er als <i>Be­wusst­sein</i>, da kommt end­lich das zur Er­schei­nung, was auf den un­te­ren Stu­fen nur dem Wesen nach vor­han­den ist.</span>
         
         <span id="s-16-46-2">Der Be­griff wird hier selbst zur Wahr­neh­mung.</span>
         
@@ -847,7 +834,7 @@
     </section>
     <section id="p-16-47">
       <p>
-        <span id="s-16-47-1">Na­tur­ge­setz, Typus, Be­griff sind die drei For­men, in denen sich das Ide­el­le aus­lebt.</span>
+        <span id="s-16-47-1"><i>Na­tur­ge­setz, Typus, Be­griff</i> sind die drei For­men, in denen sich das Ide­el­le aus­lebt.</span>
         
         <span id="s-16-47-2">Das Na­tur­ge­setz ist abs­trakt, über der sin­nen­fäl­li­gen Man­nig­fal­tig­keit ste­hend, es be­herrscht die un­or­ga­ni­sche Na­tur­wis­sen­schaft.</span>
         
@@ -855,7 +842,7 @@
         
         <span id="s-16-47-4">Der Typus ver­ei­nigt schon beide in einem Wesen.</span>
         
-        <span id="s-16-47-5">Das Geis­ti­ge wird wir­ken­des Wesen, aber es wirkt noch nicht als sol­ches, es ist nicht als sol­ches da, son­dern muss, wenn es sei­nem Da­sein nach be­trach­tet wer­den will, als sin­nen­fäl­li­ges an­ge­schaut wer­den.</span>
+        <span id="s-16-47-5">Das Geis­ti­ge wird wir­ken­des Wesen, aber es wirkt noch nicht als sol­ches, es ist nicht als sol­ches da, son­dern muss, wenn es sei­nem Da­sein nach be­trach­tet wer­den will, als sin­nen­fäl­li­ges <i>an­ge­schaut</i> wer­den.</span>
         
         <span id="s-16-47-6">So ist es im Reich der or­ga­ni­schen Natur.</span>
         
@@ -869,7 +856,7 @@
         
         <span id="s-16-47-11">Des­halb kön­nen auf die­ser Stufe auch die ide­el­len Da­seins­ker­ne der un­te­ren Na­tur­stu­fen zur Er­schei­nung kom­men.</span>
         
-        <span id="s-16-47-12">Mit dem mensch­li­chen Be­wusst­sein ist die Mög­lich­keit ge­ge­ben, dass das, was auf den un­te­ren Stu­fen des Da­seins bloß ist, aber nicht er­scheint, nun auch er­schei­nen­de Wirk­lich­keit wird?\*</span>
+        <span id="s-16-47-12">Mit dem mensch­li­chen Be­wusst­sein ist die Mög­lich­keit ge­ge­ben, dass das, was auf den un­te­ren Stu­fen des Da­seins bloß ist, aber nicht er­scheint, nun auch er­schei­nen­de Wirk­lich­keit wird?*</span>
         
       </p>
     </section>
@@ -936,21 +923,19 @@
         
         <span id="s-16-52-2">Sie muss das Auge un­ter­su­chen, des­sen Natur bloß­le­gen.</span>
         
-        <span id="s-16-52-3">Des­halb stellt Goe­the die phy­sio­lo­gi­sche Far­ben­leh­re an den An­fang.</span>
+        <span id="s-16-52-3">Des­halb stellt Goe­the die <i>phy­sio­lo­gi­sche</i> Far­ben­leh­re an den An­fang.</span>
         
         <span id="s-16-52-4">Aber seine Auf­fas­sung ist auch da von dem, was man ge­wöhn­lich unter die­sem Teil der Optik ver­steht, we­sent­lich ver­schie­den.</span>
         
         <span id="s-16-52-5">Er will nicht aus dem Baue des Auges des­sen Funk­tio­nen er­klä­ren, son­dern er will das Auge unter ver­schie­de­nen Be­din­gun­gen be­trach­ten, um zur Er­kennt­nis sei­ner Fä­hig­kei­ten und Ver­mö­gen zu kom­men.</span>
         
-        <span id="s-16-52-6">Sein Vor­gang ist auch hier ein we­sent­lich be­ob­ach­ten­der.</span>
+        <span id="s-16-52-6">Sein Vor­gang ist auch hier ein we­sent­lich <i>be­ob­ach­ten­der</i>. Was stellt sich ein, wenn Licht und Fins­ter­nis auf das Auge wir­ken; was, wenn be­grenz­te Bil­der in Be­zie­hung zu dem­sel­ben tre­ten usw.? Er fragt zu­nächst nicht, wel­che Pro­zes­se spie­len sich im Auge ab, wenn diese oder jene Wahr­neh­mung zu­stan­de kommt, son­dern er sucht zu er­grün­den, was durch das Auge im <i>le­ben­di­gen</i> Seh­akt zu­stan­de kom­men kann.</span>
         
-        <span id="s-16-52-7">Was stellt sich ein, wenn Licht und Fins­ter­nis auf das Auge wir­ken; was, wenn be­grenz­te Bil­der in Be­zie­hung zu dem­sel­ben tre­ten usw.? Er fragt zu­nächst nicht, wel­che Pro­zes­se spie­len sich im Auge ab, wenn diese oder jene Wahr­neh­mung zu­stan­de kommt, son­dern er sucht zu er­grün­den, was durch das Auge im le­ben­di­gen Seh­akt zu­stan­de kom­men kann.</span>
+        <span id="s-16-52-7">Für sei­nen Zweck ist das zu­nächst die al­lein wich­ti­ge Frage.</span>
         
-        <span id="s-16-52-8">Für sei­nen Zweck ist das zu­nächst die al­lein wich­ti­ge Frage.</span>
+        <span id="s-16-52-8">Die an­de­re ge­hört streng ge­nom­men nicht in das Ge­biet der phy­sio­lo­gi­schen Far­ben­leh­re, son­dern in die Lehre von dem mensch­li­chen Or­ga­nis­mus, d. h. in die all­ge­mei­ne Phy­sio­lo­gie.</span>
         
-        <span id="s-16-52-9">Die an­de­re ge­hört streng ge­nom­men nicht in das Ge­biet der phy­sio­lo­gi­schen Far­ben­leh­re, son­dern in die Lehre von dem mensch­li­chen Or­ga­nis­mus, d. h. in die all­ge­mei­ne Phy­sio­lo­gie.</span>
-        
-        <span id="s-16-52-10">Goe­the hat es nur zu tun mit dem Auge, so­fern es sieht und nicht mit der Er­klä­rung des Se­hens aus jenen Wahr­neh­mun­gen, die wir an dem toten Auge ma­chen kön­nen.</span>
+        <span id="s-16-52-9">Goe­the hat es nur zu tun mit dem Auge, so­fern es sieht und nicht mit der Er­klä­rung des Se­hens aus jenen Wahr­neh­mun­gen, die wir an dem toten Auge ma­chen kön­nen.</span>
         
       </p>
     </section>
@@ -960,7 +945,7 @@
         
         <span id="s-16-53-2">Und hier ist wich­tig fest­zu­hal­ten, dass Goe­the unter die­sen ob­jek­ti­ven Vor­gän­gen kei­nes­wegs die nicht mehr wahr­nehm­ba­ren hy­po­the­ti­schen stoff­li­chen oder Be­we­gungs­vor­gän­ge im Sinne hat, son­dern dass er durch­aus in­ner­halb der wahr­nehm­ba­ren Welt ste­hen bleibt.</span>
         
-        <span id="s-16-53-3">Seine phy­si­sche Far­ben­leh­re, wel­che den zwei­ten Teil bil­det, sucht die Be­din­gun­gen, die vom Auge un­ab­hän­gig sind und mit der Ent­ste­hung der Far­ben zu­sam­men­hän­gen.</span>
+        <span id="s-16-53-3">Seine <i>phy­si­sche Far­ben­leh­re</i>, wel­che den zwei­ten Teil bil­det, sucht die Be­din­gun­gen, die vom Auge un­ab­hän­gig sind und mit der Ent­ste­hung der Far­ben zu­sam­men­hän­gen.</span>
         
         <span id="s-16-53-4">Dabei sind aber diese Be­din­gun­gen doch immer noch Wahr­neh­mun­gen.</span>
         
@@ -972,9 +957,9 @@
     </section>
     <section id="p-16-54">
       <p>
-        <span id="s-16-54-1">(54) Erst in einem ei­ge­nen Ka­pi­tel, der che­mi­schen Far­ben­leh­re, geht er über zu den fi­xier­ten, an den Kör­pern haf­ten­den Far­ben.</span>
+        <span id="s-16-54-1">(54) Erst in einem ei­ge­nen Ka­pi­tel, der <i>che­mi­schen Far­ben­leh­re</i>, geht er über zu den fi­xier­ten, an den Kör­pern haf­ten­den Far­ben.</span>
         
-        <span id="s-16-54-2">Ist in der phy­sio­lo­gi­schen Far­ben­leh­re die Frage be­ant­wor­tet, wie kön­nen Far­ben über­haupt zur Er­schei­nung kom­men, in der phy­si­schen jene, wie kom­men die Far­ben unter äu­ße­ren Be­din­gun­gen zu­stan­de, so be­ant­wor­tet er hier das Pro­blem, wie er­scheint die Kör­per­welt als far­bi­ge?</span>
+        <span id="s-16-54-2">Ist in der <i>phy­sio­lo­gi­schen</i> Far­ben­leh­re die Frage be­ant­wor­tet, wie kön­nen Far­ben über­haupt zur Er­schei­nung kom­men, in der <i>phy­si­schen</i> jene, wie kom­men die Far­ben unter äu­ße­ren Be­din­gun­gen zu­stan­de, so be­ant­wor­tet er hier das Pro­blem, wie er­scheint die Kör­per­welt als <i>far­bi­ge</i>?</span>
         
       </p>
     </section>
@@ -982,7 +967,7 @@
       <p>
         <span id="s-16-55-1">(55) So schrei­tet Goe­the von der Be­trach­tung der Farbe, als eines At­tri­bu­tes der Er­schei­nungs­welt, zu die­ser selbst als in jenem At­tri­bu­te er­schei­nend vor­wärts.</span>
         
-        <span id="s-16-55-2">Hier bleibt er nicht ste­hen, son­dern er be­trach­tet zu­letzt die hö­he­re Be­zie­hung der far­bi­gen Kör­per­welt auf die Seele in dem Ka­pi­tel: «Sinn­lich-sitt­li­che Wir­kung der Farbe.»</span>
+        <span id="s-16-55-2">Hier bleibt er nicht ste­hen, son­dern er be­trach­tet zu­letzt die hö­he­re Be­zie­hung der far­bi­gen Kör­per­welt auf die Seele in dem Ka­pi­tel: «<i>Sinn­lich-sitt­li­che Wir­kung der Farbe</i>.»</span>
         
       </p>
     </section>
@@ -1011,7 +996,7 @@
     <h2 id="h2-16-5" data-slug="5-der-goethesche-raumbegriff">5. Der Goethesche Raumbegriff</h2>
     <section id="p-16-59">
       <p>
-        <span id="s-16-59-1">(59) Da nur bei einer mit der Goe­the­schen ganz zu­sam­men­fal­len­den An­schau­ung vom Raum ein vol­les Ver­ständ­nis sei­ner phy­si­ka­li­schen Ar­bei­ten mög­lich ist, so wol­len wir hier die­sel­be ent­wi­ckeln.</span>
+        <span id="s-16-59-1">(59) Da nur bei einer mit der Goe­the­schen ganz zu­sam­men­fal­len­den An­schau­ung vom <i>Raum</i> ein vol­les Ver­ständ­nis sei­ner phy­si­ka­li­schen Ar­bei­ten mög­lich ist, so wol­len wir hier die­sel­be ent­wi­ckeln.</span>
         
         <span id="s-16-59-2">Wer zu die­ser An­schau­ung kom­men will, der muss aus un­se­ren bis­he­ri­gen Aus­füh­run­gen fol­gen­de Über­zeu­gung ge­won­nen haben: 1.</span>
         
@@ -1019,9 +1004,11 @@
         
         <span id="s-16-59-4">Sie sind in Wahr­heit durch ein ein­heit­li­ches Wel­ten­band zu­sam­men­ge­hal­ten.</span>
         
-        <span id="s-16-59-5">Es lebt in ihnen allen ein ge­mein­sa­mes Prin­zip.</span>
+        <span id="s-16-59-5">Es lebt in ihnen allen <i>ein</i> ge­mein­sa­mes Prin­zip.</span>
         
-        <span id="s-16-59-6">2.</span>
+        <span id="s-16-59-6"><ol start="2">
+<li></li>
+</ol></span>
         
         <span id="s-16-59-7">Wenn unser Geist an die Dinge her­an­tritt und das Ge­trenn­te durch ein geis­ti­ges Band zu um­fas­sen strebt, so ist die be­griff­li­che Ein­heit, die er her­stellt, den Ob­jek­ten nicht äu­ßer­lich, son­dern sie ist her­aus­ge­holt aus der in­ne­ren We­sen­heit der Natur selbst.</span>
         
@@ -1045,9 +1032,9 @@
         
         <span id="s-16-60-7">Zwei Fak­to­ren, die jeder für sich ge­eig­net sind, auf un­se­re Sinne einen Ein­druck zu ma­chen: das ist alles, was wir vor­aus­set­zen.</span>
         
-        <span id="s-16-60-8">Wir wol­len fer­ner an­neh­men, dass das Da­sein des einen die­ser Fak­to­ren jenes des an­de­ren nicht aus­schließt.</span>
+        <span id="s-16-60-8">Wir wol­len fer­ner an­neh­men, dass das <i>Da­sein</i> des einen die­ser Fak­to­ren jenes des an­de­ren nicht aus­schließt.</span>
         
-        <span id="s-16-60-9">Ein Wahr­neh­mungs­or­gan kann beide wahr­neh­men.</span>
+        <span id="s-16-60-9"><i>Ein</i> Wahr­neh­mungs­or­gan kann beide wahr­neh­men.</span>
         
       </p>
     </section>
@@ -1055,7 +1042,7 @@
       <p>
         <span id="s-16-61-1">(61) Wenn wir näm­lich an­neh­men, dass das Da­sein des einen Ele­men­tes in ir­gend­ei­ner Weise ab­hän­gig von dem des an­de­ren ist, so ste­hen wir vor einem von un­se­rem jet­zi­gen ver­schie­de­nen Pro­blem.</span>
         
-        <span id="s-16-61-2">Ist das Da­sein von B ein sol­ches, dass es das Da­sein von A aus­schließt und doch von ihm sei­nem Wesen nach ab­hän­gig ist, dann müs­sen A und B in einem Zeit­ver­hält­nis ste­hen.</span>
+        <span id="s-16-61-2">Ist das Da­sein von B ein sol­ches, dass es das Da­sein von A aus­schließt und doch von ihm sei­nem Wesen nach ab­hän­gig ist, dann müs­sen A und B in einem <i>Zeit­ver­hält­nis</i> ste­hen.</span>
         
         <span id="s-16-61-3">Denn die Ab­hän­gig­keit des B von A be­dingt, wenn man sich gleich­zei­tig vor­stellt, dass das Da­sein von B jenes von A aus­schließt, dass dies letz­te­re dem ers­te­ren vor­an­geht.</span>
         
@@ -1065,7 +1052,7 @@
     </section>
     <section id="p-16-62">
       <p>
-        <span id="s-16-62-1">(62) Für un­se­ren jet­zi­gen Zweck wol­len wir ein sol­ches Ver­hält­nis nicht an­neh­men.</span>
+        <span id="s-16-62-1">(62) Für un­se­ren jet­zi­gen Zweck wol­len wir ein <i>sol­ches</i> Ver­hält­nis nicht an­neh­men.</span>
         
         <span id="s-16-62-2">Wir set­zen vor­aus, dass die Dinge, mit denen wir es zu tun haben, sich hin­sicht­lich ihres Da­seins nicht aus­schlie­ßen, son­dern viel­mehr mit­ein­an­der be­ste­hen­de We­sen­hei­ten sind.</span>
         
@@ -1075,15 +1062,13 @@
         
         <span id="s-16-62-5">Für nie­man­den kann ein Zwei­fel dar­über be­ste­hen, was das für ein Ver­hält­nis sein kann, das ich zwi­schen Din­gen her­stel­le, ohne auf ihre Be­schaf­fen­heit, auf ihr Wesen selbst ein­zu­ge­hen.</span>
         
-        <span id="s-16-62-6">Wer sich fragt, wel­cher Über­gang von einem Ding zum an­de­ren ge­fun­den wer­den kann, wenn dabei das Ding selbst gleich­gül­tig bleibt, der muss sich dar­auf un­be­dingt die Ant­wort geben: der Raum.</span>
+        <span id="s-16-62-6">Wer sich fragt, wel­cher Über­gang von einem Ding zum an­de­ren ge­fun­den wer­den kann, wenn dabei das Ding selbst gleich­gül­tig bleibt, der muss sich dar­auf un­be­dingt die Ant­wort geben: <i>der Raum</i>. Jedes an­de­re Ver­hält­nis muss sich auf die qua­li­ta­ti­ve Be­schaf­fen­heit des­sen grün­den, was ge­son­dert im Welt­enda­sein auf­tritt.</span>
         
-        <span id="s-16-62-7">Jedes an­de­re Ver­hält­nis muss sich auf die qua­li­ta­ti­ve Be­schaf­fen­heit des­sen grün­den, was ge­son­dert im Welt­enda­sein auf­tritt.</span>
+        <span id="s-16-62-7">Nur der Raum nimmt auf gar nichts an­de­res Rück­sicht als dar­auf, dass die Dinge eben <i>ge­son­der­te</i> sind.</span>
         
-        <span id="s-16-62-8">Nur der Raum nimmt auf gar nichts an­de­res Rück­sicht als dar­auf, dass die Dinge eben ge­son­der­te sind.</span>
+        <span id="s-16-62-8">Wenn ich über­le­ge: A ist oben, B unten, so bleibt mir völ­lig gleich­gül­tig, was A und B sind.</span>
         
-        <span id="s-16-62-9">Wenn ich über­le­ge: A ist oben, B unten, so bleibt mir völ­lig gleich­gül­tig, was A und B sind.</span>
-        
-        <span id="s-16-62-10">Ich ver­bin­de mit ihnen gar keine an­de­re Vor­stel­lung, als dass sie eben ge­trenn­te Fak­to­ren der von mir mit den Sin­nen auf­ge­fass­ten Welt sind.</span>
+        <span id="s-16-62-9">Ich ver­bin­de mit ihnen gar keine an­de­re Vor­stel­lung, als dass sie eben ge­trenn­te Fak­to­ren der von mir mit den Sin­nen auf­ge­fass­ten Welt sind.</span>
         
       </p>
     </section>
@@ -1093,15 +1078,11 @@
         
         <span id="s-16-63-2">Bei der räum­li­chen An­schau­ung will er sonst gar nichts über­win­den, als die Be­son­der­heit als sol­che.</span>
         
-        <span id="s-16-63-3">Er will die al­ler­all­ge­meins­te Be­zie­hung her­stel­len.</span>
+        <span id="s-16-63-3">Er will die <i>al­ler­all­ge­meins­te Be­zie­hung</i> her­stel­len.</span>
         
         <span id="s-16-63-4">Dass A und B jedes nicht eine Welt für sich sind, son­dern einer Ge­mein­sam­keit an­ge­hö­ren, das sagt die räum­li­che Be­trach­tung.</span>
         
-        <span id="s-16-63-5">Dies ist der Sinn des Ne­ben­ein­an­der.</span>
-        
-        <span id="s-16-63-6">Wäre ein jedes Ding ein Wesen für sich, dann gebe es kein Ne­ben­ein­an­der.</span>
-        
-        <span id="s-16-63-7">Ich könn­te über­haupt einen Bezug der Wesen auf­ein­an­der nicht her­stel­len.</span>
+        <span id="s-16-63-5">Dies ist der Sinn des <i>Ne­ben­ein­an­der</i>. Wäre ein jedes Ding ein Wesen für sich, dann gebe es kein <i>Ne­ben­ein­an­der</i>. Ich könn­te über­haupt einen Bezug der Wesen auf­ein­an­der nicht her­stel­len.</span>
         
       </p>
     </section>
@@ -1109,9 +1090,9 @@
       <p>
         <span id="s-16-64-1">(64) Wir wol­len nun un­ter­su­chen, was wei­te­res aus die­ser Her­stel­lung einer äu­ße­ren Be­zie­hung zwei­er Be­son­der­hei­ten folgt.</span>
         
-        <span id="s-16-64-2">Zwei Ele­men­te kann ich nur auf eine Art in sol­cher Be­zie­hung den­ken.</span>
+        <span id="s-16-64-2">Zwei Ele­men­te kann ich nur auf <i>eine</i> Art in sol­cher Be­zie­hung den­ken.</span>
         
-        <span id="s-16-64-3">Ich denke A neben B. Das­sel­be kann ich nun mit zwei an­de­ren Ele­men­ten der Sin­nen­welt C und D ma­chen.</span>
+        <span id="s-16-64-3">Ich denke A <i>neben</i> B. Das­sel­be kann ich nun mit zwei an­de­ren Ele­men­ten der Sin­nen­welt C und D ma­chen.</span>
         
         <span id="s-16-64-4">Ich habe da­durch einen kon­kre­ten Bezug zwi­schen A und B und einen sol­chen zwi­schen C und D fest­ge­setzt.</span>
         
@@ -1137,27 +1118,25 @@
         
         <span id="s-16-64-15">Wei­ter kann ich nicht mehr gehen.</span>
         
-        <span id="s-16-64-16">Ich habe das er­reicht, was ich vor­her an­ge­strebt habe: der Raum selbst steht vor mei­ner Seele.</span>
+        <span id="s-16-64-16">Ich habe das er­reicht, was ich vor­her an­ge­strebt habe: der <i>Raum</i> selbst steht vor mei­ner Seele.</span>
         
       </p>
     </section>
     <section id="p-16-65">
       <p>
-        <span id="s-16-65-1">(65) Hier­in liegt das Ge­heim­nis der drei Di­men­sio­nen.</span>
+        <span id="s-16-65-1">(65) <i>Hier­in liegt das Ge­heim­nis der drei Di­men­sio­nen</i>. In der ers­ten Di­men­si­on be­zie­he ich zwei kon­kre­te Er­schei­nungs­ele­men­te der Sin­nen­welt auf­ein­an­der; in der zwei­ten Di­men­si­on be­zie­he ich diese räum­li­chen Be­zü­ge selbst auf­ein­an­der.</span>
         
-        <span id="s-16-65-2">In der ers­ten Di­men­si­on be­zie­he ich zwei kon­kre­te Er­schei­nungs­ele­men­te der Sin­nen­welt auf­ein­an­der; in der zwei­ten Di­men­si­on be­zie­he ich diese räum­li­chen Be­zü­ge selbst auf­ein­an­der.</span>
+        <span id="s-16-65-2">Ich habe eine Be­zie­hung zwi­schen Be­zie­hun­gen her­ge­stellt.</span>
         
-        <span id="s-16-65-3">Ich habe eine Be­zie­hung zwi­schen Be­zie­hun­gen her­ge­stellt.</span>
+        <span id="s-16-65-3">Die kon­kre­ten Er­schei­nun­gen habe ich ab­ge­streift, die kon­kre­ten Be­zie­hun­gen sind mir ge­blie­ben.</span>
         
-        <span id="s-16-65-4">Die kon­kre­ten Er­schei­nun­gen habe ich ab­ge­streift, die kon­kre­ten Be­zie­hun­gen sind mir ge­blie­ben.</span>
+        <span id="s-16-65-4">Nun be­zie­he ich diese selbst räum­lich auf­ein­an­der.</span>
         
-        <span id="s-16-65-5">Nun be­zie­he ich diese selbst räum­lich auf­ein­an­der.</span>
+        <span id="s-16-65-5">Das heißt: ich sehe ganz davon ab, dass es kon­kre­te Be­zie­hun­gen sind; dann aber muss ich <i>ganz das­sel­be</i>, was ich in der einen finde, in der zwei­ten wie­der­fin­den.</span>
         
-        <span id="s-16-65-6">Das heißt: ich sehe ganz davon ab, dass es kon­kre­te Be­zie­hun­gen sind; dann aber muss ich ganz das­sel­be, was ich in der einen finde, in der zwei­ten wie­der­fin­den.</span>
+        <span id="s-16-65-6">Ich stel­le Be­zie­hun­gen zwi­schen Glei­chem her.</span>
         
-        <span id="s-16-65-7">Ich stel­le Be­zie­hun­gen zwi­schen Glei­chem her.</span>
-        
-        <span id="s-16-65-8">Jetzt hört die Mög­lich­keit des Be­zie­hens auf, weil der Un­ter­schied auf­hört.</span>
+        <span id="s-16-65-7">Jetzt hört die Mög­lich­keit des Be­zie­hens auf, weil der Un­ter­schied auf­hört.</span>
         
       </p>
     </section>
@@ -1169,59 +1148,53 @@
     </section>
     <section id="p-16-67">
       <p>
-        <span id="s-16-67-1">(67) Daher kann der Raum nur drei Di­men­sio­nen haben.</span>
+        <span id="s-16-67-1">(67) <i>Daher kann der Raum nur drei Di­men­sio­nen haben</i>. Was wir hier mit der Raum­vor­stel­lung un­ter­nom­men haben, ist ei­gent­lich nur ein spe­zi­el­ler Fall der von uns immer an­ge­wen­de­ten Me­tho­de, wenn wir an die Dinge be­trach­tend her­an­tre­ten.</span>
         
-        <span id="s-16-67-2">Was wir hier mit der Raum­vor­stel­lung un­ter­nom­men haben, ist ei­gent­lich nur ein spe­zi­el­ler Fall der von uns immer an­ge­wen­de­ten Me­tho­de, wenn wir an die Dinge be­trach­tend her­an­tre­ten.</span>
+        <span id="s-16-67-2">Wir stel­len kon­kre­te Ob­jek­te unter einen all­ge­mei­nen Ge­sichts­punkt.</span>
         
-        <span id="s-16-67-3">Wir stel­len kon­kre­te Ob­jek­te unter einen all­ge­mei­nen Ge­sichts­punkt.</span>
+        <span id="s-16-67-3">Da­durch ge­win­nen wir Be­grif­fe von den Ein­zel­hei­ten; diese Be­grif­fe be­trach­ten wir dann selbst wie­der unter den glei­chen Ge­sichts­punk­ten, so dass wir dann nur mehr die Be­grif­fe der Be­grif­fe vor uns haben; ver­bin­den wir auch diese noch, dann ver­schmel­zen sie in jene ide­el­le Ein­heit, die mit nichts an­de­rem mehr als mit sich selbst unter einen Ge­sichts­punkt ge­bracht wer­den könn­te.</span>
         
-        <span id="s-16-67-4">Da­durch ge­win­nen wir Be­grif­fe von den Ein­zel­hei­ten; diese Be­grif­fe be­trach­ten wir dann selbst wie­der unter den glei­chen Ge­sichts­punk­ten, so dass wir dann nur mehr die Be­grif­fe der Be­grif­fe vor uns haben; ver­bin­den wir auch diese noch, dann ver­schmel­zen sie in jene ide­el­le Ein­heit, die mit nichts an­de­rem mehr als mit sich selbst unter einen Ge­sichts­punkt ge­bracht wer­den könn­te.</span>
+        <span id="s-16-67-4">Neh­men wir ein be­son­de­res Bei­spiel.</span>
         
-        <span id="s-16-67-5">Neh­men wir ein be­son­de­res Bei­spiel.</span>
+        <span id="s-16-67-5">Ich lerne zwei Men­schen ken­nen: A und B. Ich be­trach­te sie unter dem Ge­sichts­punkt der Freund­schaft.</span>
         
-        <span id="s-16-67-6">Ich lerne zwei Men­schen ken­nen: A und B. Ich be­trach­te sie unter dem Ge­sichts­punkt der Freund­schaft.</span>
+        <span id="s-16-67-6">In die­sem Fall werde ich einen ganz be­stimm­ten Be­griff a von der Freund­schaft der bei­den Leute be­kom­men.</span>
         
-        <span id="s-16-67-7">In die­sem Fall werde ich einen ganz be­stimm­ten Be­griff a von der Freund­schaft der bei­den Leute be­kom­men.</span>
+        <span id="s-16-67-7">Ich be­trach­te nun zwei an­de­re Men­schen, C und D, unter dem glei­chen Ge­sichts­punkt.</span>
         
-        <span id="s-16-67-8">Ich be­trach­te nun zwei an­de­re Men­schen, C und D, unter dem glei­chen Ge­sichts­punkt.</span>
+        <span id="s-16-67-8">Ich be­kom­me einen an­de­ren Be­griff b von die­ser Freund­schaft.</span>
         
-        <span id="s-16-67-9">Ich be­kom­me einen an­de­ren Be­griff b von die­ser Freund­schaft.</span>
+        <span id="s-16-67-9">Nun kann ich wei­ter gehen und diese bei­den Freund­schafts­be­grif­fe auf­ein­an­der be­zie­hen.</span>
         
-        <span id="s-16-67-10">Nun kann ich wei­ter gehen und diese bei­den Freund­schafts­be­grif­fe auf­ein­an­der be­zie­hen.</span>
+        <span id="s-16-67-10">Was mir da übrig bleibt, wenn ich von dem Kon­kre­ten, das ich ge­won­nen habe, ab­se­he, ist der <i>Be­griff der Freund­schaft über­haupt</i>. Die­sen kann ich aber rea­li­ter auch er­hal­ten, wenn ich die Men­schen E und F unter dem glei­chen Ge­sichts­punkt und eben­so G und H be­trach­te.</span>
         
-        <span id="s-16-67-11">Was mir da übrig bleibt, wenn ich von dem Kon­kre­ten, das ich ge­won­nen habe, ab­se­he, ist der Be­griff der Freund­schaft über­haupt.</span>
+        <span id="s-16-67-11">In die­sem wie in un­zäh­li­gen an­de­ren Fäl­len kann ich den Be­griff der <i>Freund­schaft über­haupt</i> er­hal­ten.</span>
         
-        <span id="s-16-67-12">Die­sen kann ich aber rea­li­ter auch er­hal­ten, wenn ich die Men­schen E und F unter dem glei­chen Ge­sichts­punkt und eben­so G und H be­trach­te.</span>
+        <span id="s-16-67-12">Alle diese Be­grif­fe sind aber dem Wesen nach mit­ein­an­der iden­tisch; und wenn ich sie unter dem glei­chen Ge­sichts­punkt be­trach­te, dann stellt sich her­aus, dass ich eine Ein­heit ge­fun­den habe.</span>
         
-        <span id="s-16-67-13">In die­sem wie in un­zäh­li­gen an­de­ren Fäl­len kann ich den Be­griff der Freund­schaft über­haupt er­hal­ten.</span>
-        
-        <span id="s-16-67-14">Alle diese Be­grif­fe sind aber dem Wesen nach mit­ein­an­der iden­tisch; und wenn ich sie unter dem glei­chen Ge­sichts­punkt be­trach­te, dann stellt sich her­aus, dass ich eine Ein­heit ge­fun­den habe.</span>
-        
-        <span id="s-16-67-15">Ich bin wie­der zu dem zu­rück­ge­kehrt, wovon ich aus­ge­gan­gen bin.</span>
+        <span id="s-16-67-13">Ich bin wie­der zu dem zu­rück­ge­kehrt, wovon ich aus­ge­gan­gen bin.</span>
         
       </p>
     </section>
     <section id="p-16-68">
       <p>
-        <span id="s-16-68-1">(68) Der Raum ist also die An­sicht von Din­gen, eine Art, wie unser Geist sie in eine Ein­heit zu­sam­men­fasst.</span>
+        <span id="s-16-68-1">(68) Der <i>Raum</i> ist also die An­sicht von Din­gen, eine Art, wie unser Geist sie in eine Ein­heit zu­sam­men­fasst.</span>
         
         <span id="s-16-68-2">Die drei Di­men­sio­nen ver­hal­ten sich dabei in fol­gen­der Weise.</span>
         
         <span id="s-16-68-3">Die erste Di­men­si­on stellt einen Bezug zwi­schen zwei Sin­nes­wahr­neh­mun­gen her.</span>
         
-        <span id="s-16-68-4">Sie ist also eine kon­kre­te Vor­stel­lung.</span>
+        <span id="s-16-68-4">Sie ist also eine <i>kon­kre­te Vor­stel­lung</i>. Die zwei­te Di­men­si­on be­zieht zwei kon­kre­te Vor­stel­lun­gen auf­ein­an­der und geht da­durch in das Ge­biet der <i>Abs­trak­ti­on</i> über.</span>
         
-        <span id="s-16-68-5">Die zwei­te Di­men­si­on be­zieht zwei kon­kre­te Vor­stel­lun­gen auf­ein­an­der und geht da­durch in das Ge­biet der Abs­trak­ti­on über.</span>
+        <span id="s-16-68-5">Die drit­te Di­men­si­on end­lich stellt nur noch die ide­el­le <i>Ein­heit</i> zwi­schen den Abs­trak­tio­nen her.</span>
         
-        <span id="s-16-68-6">Die drit­te Di­men­si­on end­lich stellt nur noch die ide­el­le Ein­heit zwi­schen den Abs­trak­tio­nen her.</span>
+        <span id="s-16-68-6">Es ist also ganz un­rich­tig, die drei Di­men­sio­nen des Rau­mes als völ­lig gleich­be­deu­tend zu neh­men.</span>
         
-        <span id="s-16-68-7">Es ist also ganz un­rich­tig, die drei Di­men­sio­nen des Rau­mes als völ­lig gleich­be­deu­tend zu neh­men.</span>
+        <span id="s-16-68-7">Wel­che die erste ist, hängt na­tür­lich von den wahr­ge­nom­me­nen Ele­men­ten ab.</span>
         
-        <span id="s-16-68-8">Wel­che die erste ist, hängt na­tür­lich von den wahr­ge­nom­me­nen Ele­men­ten ab.</span>
+        <span id="s-16-68-8">Dann aber haben die an­de­ren eine ganz be­stimm­te und <i>an­de­re</i> Be­deu­tung als diese erste.</span>
         
-        <span id="s-16-68-9">Dann aber haben die an­de­ren eine ganz be­stimm­te und an­de­re Be­deu­tung als diese erste.</span>
-        
-        <span id="s-16-68-10">Es war von Kant ganz irr­tüm­lich an­ge­nom­men, dass er den Raum als totum auf­fass­te, statt als eine be­griff­lich in sich be­stimm­ba­re We­sen­heit.</span>
+        <span id="s-16-68-9">Es war von Kant ganz irr­tüm­lich an­ge­nom­men, dass er den Raum als totum auf­fass­te, statt als eine be­griff­lich in sich be­stimm­ba­re We­sen­heit.</span>
         
       </p>
     </section>
@@ -1243,7 +1216,7 @@
         
         <span id="s-16-69-8">«Da» heißt in Nach­bar­schaft von einem durch mich be­zeich­ne­ten Ob­jekt.</span>
         
-        <span id="s-16-69-9">Damit ist aber die ab­so­lu­te Orts­an­ga­be auf ein Raum­ver­hält­nis zu­rück­ge­führt.</span>
+        <span id="s-16-69-9">Damit ist aber die ab­so­lu­te Orts­an­ga­be auf ein <i>Raum­ver­hält­nis</i> zu­rück­ge­führt.</span>
         
         <span id="s-16-69-10">Die an­ge­deu­te­te Un­ter­su­chung ent­fällt somit.</span>
         
@@ -1257,9 +1230,7 @@
         
         <span id="s-16-70-3">Der Raum ist also eine Art, die Welt als eine Ein­heit zu er­fas­sen.</span>
         
-        <span id="s-16-70-4">Der Raum ist eine Idee.</span>
-        
-        <span id="s-16-70-5">Nicht, wie Kant glaub­te, eine An­schau­ung.</span>
+        <span id="s-16-70-4"><i>Der Raum ist eine Idee</i>. Nicht, wie Kant glaub­te, eine An­schau­ung.</span>
         
       </p>
     </section>
@@ -1310,7 +1281,7 @@
         
         <span id="s-16-74-7">Sie war mit den Augen des Lei­bes nicht, wohl aber mit dem Auge des Geis­tes zu er­fas­sen.</span>
         
-        <span id="s-16-74-8">Wer sie sehen kann, sieht sie in jeder Pflan­ze.</span>
+        <span id="s-16-74-8">Wer sie sehen kann, sieht sie in <i>jeder</i> Pflan­ze.</span>
         
       </p>
     </section>
@@ -1326,17 +1297,17 @@
         
         <span id="s-16-76-2">Die Idee ver­mag der in­tui­ti­ve Geist zu er­ken­nen.</span>
         
-        <span id="s-16-76-3">Die ein­zel­nen Ge­stal­tun­gen sind ihm nur zu­gäng­lich, wenn er die Sinne nach außen rich­tet, wenn er be­ob­ach­tet, an­schaut.</span>
+        <span id="s-16-76-3">Die <i>ein­zel­nen</i> Ge­stal­tun­gen sind ihm nur zu­gäng­lich, wenn er die Sinne nach außen rich­tet, wenn er be­ob­ach­tet, an­schaut.</span>
         
-        <span id="s-16-76-4">Warum eine Mo­di­fi­ka­ti­on der Idee ge­ra­de so und nicht an­ders als sin­nen­fäl­li­ge Wirk­lich­keit auf­tritt, dazu muss der Grund nicht aus­ge­klü­gelt, son­dern im Reich der Wirk­lich­keit ge­sucht wer­den.</span>
+        <span id="s-16-76-4">Warum eine Mo­di­fi­ka­ti­on der Idee ge­ra­de so und nicht an­ders als sin­nen­fäl­li­ge Wirk­lich­keit auf­tritt, dazu muss der Grund nicht aus­ge­klü­gelt, son­dern im Reich der Wirk­lich­keit <i>ge­sucht</i> wer­den.</span>
         
       </p>
     </section>
     <section id="p-16-77">
       <p>
-        <span id="s-16-77-1">(77) Dies ist Goe­thes ei­gen­ar­ti­ge An­schau­ungs­wei­se, die sich wohl am bes­ten als em­pi­ri­scher Idea­lis­mus kenn­zeich­nen lässt.</span>
+        <span id="s-16-77-1">(77) Dies ist Goe­thes ei­gen­ar­ti­ge An­schau­ungs­wei­se, die sich wohl am bes­ten als <i>em­pi­ri­scher Idea­lis­mus</i> kenn­zeich­nen lässt.</span>
         
-        <span id="s-16-77-2">Sie kann mit den Wor­ten zu­sam­men­ge­fasst wer­den: Den Din­gen einer sinn­li­chen Man­nig­fal­tig­keit, so­weit sie gleich­ar­tig sind, liegt eine geis­ti­ge Ein­heit zu­grun­de, die jene Gleich­ar­tig­keit und Zu­sam­men­ge­hö­rig­keit be­wirkt.</span>
+        <span id="s-16-77-2">Sie kann mit den Wor­ten zu­sam­men­ge­fasst wer­den: Den Din­gen einer <i>sinn­li­chen Man­nig­fal­tig­keit</i>, so­weit sie gleich­ar­tig sind, liegt eine <i>geis­ti­ge Ein­heit</i> zu­grun­de, die jene Gleich­ar­tig­keit und Zu­sam­men­ge­hö­rig­keit be­wirkt.</span>
         
       </p>
     </section>
@@ -1344,9 +1315,9 @@
       <p>
         <span id="s-16-78-1">(78) Von die­sem Punk­te aus­ge­hend, ent­stand für Goe­the die Frage: Wel­che geis­ti­ge Ein­heit liegt der Man­nig­fal­tig­keit der Far­ben­wahr­neh­mun­gen zu­grun­de?</span>
         
-        <span id="s-16-78-2">Was nehme ich in jeder Far­ben­mo­di­fi­ka­ti­on wahr?</span>
+        <span id="s-16-78-2">Was nehme ich in <i>jeder</i> Far­ben­mo­di­fi­ka­ti­on wahr?</span>
         
-        <span id="s-16-78-3">Und da ward ihm bald klar, dass das Licht die not­wen­di­ge Grund­la­ge jeder Farbe sei.</span>
+        <span id="s-16-78-3">Und da ward ihm bald klar, dass das <i>Licht</i> die not­wen­di­ge Grund­la­ge jeder Farbe sei.</span>
         
         <span id="s-16-78-4">Keine Farbe ohne Licht.</span>
         
@@ -1368,7 +1339,7 @@
         
         <span id="s-16-78-13">Wenn er mit dem Son­nen­licht ex­pe­ri­men­tiert, um seine Theo­rie durch­zu­füh­ren, so ist der Grund davon nur der, dass das Son­nen­licht, trotz­dem es das Re­sul­tat so kom­pli­zier­ter Vor­gän­ge ist, wie sie eben im Son­nen­kör­per auf­tre­ten, doch für uns sich als Ein­heit dar­stellt, die ihre Teile nur als auf­ge­ho­be­ne in sich ent­hält.</span>
         
-        <span id="s-16-78-14">Das, was wir mit Hilfe des Son­nen­lich­tes für die Far­ben­leh­re ge­win­nen, ist aber doch nur eine An­nä­he­rung an die Wirk­lich­keit.</span>
+        <span id="s-16-78-14">Das, was wir mit Hilfe des Son­nen­lich­tes für die Far­ben­leh­re ge­win­nen, ist aber doch nur eine <i>An­nä­he­rung</i> an die Wirk­lich­keit.</span>
         
         <span id="s-16-78-15">Man darf Goe­thes Theo­rie nicht so auf­fas­sen, als wenn nach ihr in jeder Farbe Licht und Fins­ter­nis real ent­hal­ten wären.</span>
         
@@ -1386,7 +1357,7 @@
         
         <span id="s-16-79-3">Dass ein Schwin­gungs­vor­gang im Äther vor­geht, wäh­rend vor mir «Rot» auf­tritt, das soll nicht be­strit­ten wer­den.</span>
         
-        <span id="s-16-79-4">Aber was real eine Wahr­neh­mung zu­stan­de bringt, das hat, wie wir schon ge­zeigt haben, mit dem Wesen des In­halts gar nichts zu tun.</span>
+        <span id="s-16-79-4">Aber was <i>real</i> eine Wahr­neh­mung zu­stan­de bringt, das hat, wie wir schon ge­zeigt haben, mit dem <i>Wesen des In­halts</i> gar nichts zu tun.</span>
         
       </p>
     </section>
@@ -1394,13 +1365,13 @@
       <p>
         <span id="s-16-80-1">(80) Man wird mir ein­wen­den: Es lässt sich aber nach­wei­sen, dass alles an der Emp­fin­dung sub­jek­tiv ist und nur der Be­we­gungs­vor­gang, der ihr zu­grun­de liegt, das außer un­se­rem Ge­hirn real Exis­tie­ren­de.</span>
         
-        <span id="s-16-80-2">Dann könn­te man von einer phy­si­ka­li­schen Theo­rie der Wahr­neh­mun­gen über­haupt nicht spre­chen, son­dern nur von einer sol­chen der zu­grun­de lie­gen­den Be­we­gungs­vor­gän­ge.</span>
+        <span id="s-16-80-2">Dann könn­te man von einer <i>phy­si­ka­li­schen Theo­rie</i> der Wahr­neh­mun­gen über­haupt nicht spre­chen, son­dern nur von einer sol­chen der zu­grun­de lie­gen­den Be­we­gungs­vor­gän­ge.</span>
         
         <span id="s-16-80-3">Mit die­sem Be­wei­se ver­hält es sich un­ge­fähr so: Wenn je­mand an einem Ort A. ein Te­le­gramm an mich, der ich mich in B. be­fin­de, auf­gibt, dann ist das, was ich von dem Te­le­gramm in die Hände be­kom­me, rest­los in B. ent­stan­den.</span>
         
         <span id="s-16-80-4">Es ist der Te­le­gra­phist in B.; er schreibt auf Pa­pier, das nie in A. war, mit Tinte, die nie in A. war; er selbst kennt A. gar nicht usw.; kurz es lässt sich be­wei­sen, dass in das, was mir vor­liegt, gar nichts von A. ein­ge­flos­sen ist.</span>
         
-        <span id="s-16-80-5">Den­noch ist alles, was von B. her­rührt, für den In­halt, das Wesen des Te­le­gramms ganz gleich­gül­tig; was für mich in Be­tracht kommt, ist nur durch B. ver­mit­telt.</span>
+        <span id="s-16-80-5">Den­noch ist alles, was von B. her­rührt, für den <i>In­halt</i>, das Wesen des Te­le­gramms ganz gleich­gül­tig; was für mich in Be­tracht kommt, ist nur durch B. ver­mit­telt.</span>
         
         <span id="s-16-80-6">Will ich das Wesen des In­hal­tes des Te­le­gramms er­klä­ren, dann muss ich ganz von dem ab­se­hen, was von B. her­rührt.</span>
         
@@ -1410,9 +1381,7 @@
       <p>
         <span id="s-16-81-1">(81) Eben­so ver­hält es sich mit der Welt des Auges.</span>
         
-        <span id="s-16-81-2">Die Theo­rie muss sich auf das dem Auge Wahr­nehm­ba­re er­stre­cken und in­ner­halb des­sel­ben die Zu­sam­men­hän­ge su­chen.</span>
-        
-        <span id="s-16-81-3">Die ma­te­ri­el­len raum-zeit­li­chen Vor­gän­ge mögen recht wich­tig sein für das Zu­stan­de­kom­men der Wahr­neh­mun­gen; mit dem Wesen der­sel­ben haben sie nichts zu tun.</span>
+        <span id="s-16-81-2">Die Theo­rie muss sich auf das dem Auge Wahr­nehm­ba­re er­stre­cken und <i><i>in­ner­halb</i> des­sel­ben die Zu­sam­men­hän­ge su­chen</i>. Die ma­te­ri­el­len raum-zeit­li­chen Vor­gän­ge mögen recht wich­tig sein für das <i>Zu­stan­de­kom­men</i> der Wahr­neh­mun­gen; mit dem <i>Wesen</i> der­sel­ben haben sie nichts zu tun.</span>
         
       </p>
     </section>
@@ -1420,11 +1389,11 @@
       <p>
         <span id="s-16-82-1">(82) Eben­so ver­hält es sich mit der heute viel­fach be­spro­che­nen Frage: ob den ver­schie­de­nen Na­tur­er­schei­nun­gen: Licht, Wärme, Elek­tri­zi­tät usw. nicht ein und die­sel­be Be­we­gungs­form im Äther zu­grun­de liege?</span>
         
-        <span id="s-16-82-2">Hertz hat näm­lich kürz­lich ge­zeigt, dass die Ver­brei­tung der elek­tri­schen Wir­kun­gen im Raum den­sel­ben Ge­set­zen un­ter­liegt wie die Ver­brei­tung der Licht­wir­kun­gen.</span>
+        <span id="s-16-82-2"><i>Hertz</i> hat näm­lich kürz­lich ge­zeigt, dass die Ver­brei­tung der elek­tri­schen Wir­kun­gen im Raum den­sel­ben Ge­set­zen un­ter­liegt wie die Ver­brei­tung der Licht­wir­kun­gen.</span>
         
         <span id="s-16-82-3">Dar­aus kann man schlie­ßen, dass Wel­len, wie sie der Trä­ger des Lich­tes sind, auch der Elek­tri­zi­tät zu­grun­de lie­gen.</span>
         
-        <span id="s-16-82-4">Man hat ja auch bis­her schon an­ge­nom­men, dass im Son­nen­spek­trum nur eine Art von Wel­len­be­we­gung tätig ist, die sich, je nach­dem sie auf wärme-, licht- oder che­misch-emp­fin­den­de Re­agen­ti­en fällt, Wärme-, Licht- oder che­mi­sche Wir­kun­gen er­zeugt.</span>
+        <span id="s-16-82-4">Man hat ja auch bis­her schon an­ge­nom­men, dass im Son­nen­spek­trum nur <i>eine</i> Art von Wel­len­be­we­gung tätig ist, die sich, je nach­dem sie auf wärme-, licht- oder che­misch-emp­fin­den­de Re­agen­ti­en fällt, Wärme-, Licht- oder che­mi­sche Wir­kun­gen er­zeugt.</span>
         
       </p>
     </section>
@@ -1432,13 +1401,13 @@
       <p>
         <span id="s-16-83-1">(83) Dies ist ja aber von vorn­her­ein klar.</span>
         
-        <span id="s-16-83-2">Wenn man un­ter­sucht, was in dem Räum­lich-Aus­ge­dehn­ten vor­geht, wäh­rend die in Rede ste­hen­den En­ti­tä­ten ver­mit­telt wer­den, dann muss man auf eine ein­heit­li­che Be­we­gung kom­men.</span>
+        <span id="s-16-83-2">Wenn man un­ter­sucht, was in dem Räum­lich-Aus­ge­dehn­ten vor­geht, wäh­rend die in Rede ste­hen­den En­ti­tä­ten ver­mit­telt wer­den, dann muss man auf eine <i>ein­heit­li­che</i> Be­we­gung kom­men.</span>
         
-        <span id="s-16-83-3">Denn ein Me­di­um, in dem nur Be­we­gung mög­lich ist, muss auf alles durch Be­we­gung re­agie­ren.</span>
+        <span id="s-16-83-3">Denn ein Me­di­um, in dem <i>nur</i> Be­we­gung mög­lich ist, muss auf alles durch Be­we­gung re­agie­ren.</span>
         
         <span id="s-16-83-4">Es wird auch alle Ver­mitt­lun­gen, die es über­neh­men muss, durch Be­we­gung voll­brin­gen.</span>
         
-        <span id="s-16-83-5">Wenn ich dann die For­men die­ser Be­we­gung un­ter­su­che, dann er­fah­re ich nicht: was das Ver­mit­tel­te ist, son­dern auf wel­che Weise es an mich ge­bracht wird.</span>
+        <span id="s-16-83-5">Wenn ich dann die For­men die­ser Be­we­gung un­ter­su­che, dann er­fah­re ich nicht: was das Ver­mit­tel­te <i>ist</i>, son­dern auf wel­che Weise es an mich ge­bracht wird.</span>
         
         <span id="s-16-83-6">Es ist ein­fach ein Un­ding, zu sagen: Wärme oder Licht seien Be­we­gung.</span>
         
@@ -1454,7 +1423,7 @@
     </section>
     <section id="p-16-85">
       <p>
-        <span id="s-16-85-1">(85) Man muss sich nur von der Vor­stel­lung los­ma­chen, dass Licht und Fins­ter­nis bei Goe­the reale We­sen­hei­ten sind, son­dern sie als bloße Prin­zi­pi­en, geis­ti­ge En­ti­tä­ten an­se­hen; dann wird man eine ganz an­de­re An­sicht über seine Far­ben­leh­re ge­win­nen, als man sie ge­wöhn­lich sich bil­det.</span>
+        <span id="s-16-85-1">(85) Man muss sich nur von der Vor­stel­lung los­ma­chen, dass Licht und Fins­ter­nis bei Goe­the reale We­sen­hei­ten sind, son­dern sie als <i>bloße</i> Prin­zi­pi­en, geis­ti­ge En­ti­tä­ten an­se­hen; dann wird man eine ganz an­de­re An­sicht über seine Far­ben­leh­re ge­win­nen, als man sie ge­wöhn­lich sich bil­det.</span>
         
         <span id="s-16-85-2">Wenn man wie New­ton unter dem Lich­te nur eine Mi­schung aus allen Far­ben ver­steht, dann ver­schwin­det jeg­li­cher Be­griff von dem kon­kre­ten Wesen «Licht».</span>
         
@@ -1462,7 +1431,7 @@
         
         <span id="s-16-85-4">Sol­che Abs­trak­tio­nen waren der Goe­the­schen Welt­an­schau­ung fremd.</span>
         
-        <span id="s-16-85-5">Für ihn muss­te eine jeg­li­che Vor­stel­lung kon­kre­ten In­halt haben.</span>
+        <span id="s-16-85-5">Für ihn muss­te eine jeg­li­che Vor­stel­lung <i>kon­kre­ten</i> In­halt haben.</span>
         
         <span id="s-16-85-6">Nur hörte für ihn das «Kon­kre­te» nicht beim «Phy­si­schen» auf.</span>
         
@@ -1476,17 +1445,15 @@
         
         <span id="s-16-86-3">Aber auch die­ses „Weiß“ darf nicht mit dem Licht an sich iden­ti­fi­ziert wer­den.</span>
         
-        <span id="s-16-86-4">Weiß ist ei­gent­lich auch nichts wei­ter als eine Misch­far­be.</span>
+        <span id="s-16-86-4">Weiß ist ei­gent­lich auch nichts wei­ter als eine <i>Misch­far­be</i>. Das „Licht“ im Goe­the­schen Sinne kennt die mo­der­ne Phy­sik nicht; eben­so wenig die „Fins­ter­nis“.</span>
         
-        <span id="s-16-86-5">Das „Licht“ im Goe­the­schen Sinne kennt die mo­der­ne Phy­sik nicht; eben­so wenig die „Fins­ter­nis“.</span>
+        <span id="s-16-86-5">Die Far­ben­leh­re Goe­thes be­wegt sich somit in einem Ge­biet, wel­ches die Be­griffs­be­stim­mun­gen der Phy­si­ker gar nicht be­rührt.</span>
         
-        <span id="s-16-86-6">Die Far­ben­leh­re Goe­thes be­wegt sich somit in einem Ge­biet, wel­ches die Be­griffs­be­stim­mun­gen der Phy­si­ker gar nicht be­rührt.</span>
+        <span id="s-16-86-6">Die Phy­sik <i>kennt</i> ein­fach alle die Grund­be­grif­fe der Goe­the­schen Far­ben­leh­re nicht.</span>
         
-        <span id="s-16-86-7">Die Phy­sik kennt ein­fach alle die Grund­be­grif­fe der Goe­the­schen Far­ben­leh­re nicht.</span>
+        <span id="s-16-86-7">Sie kann somit von ihrem Stand­punkt aus diese Theo­rie gar nicht be­ur­tei­len.</span>
         
-        <span id="s-16-86-8">Sie kann somit von ihrem Stand­punkt aus diese Theo­rie gar nicht be­ur­tei­len.</span>
-        
-        <span id="s-16-86-9">Goe­the be­ginnt eben da, wo die Phy­sik auf­hört.</span>
+        <span id="s-16-86-8">Goe­the be­ginnt eben da, wo die Phy­sik auf­hört.</span>
         
       </p>
     </section>
@@ -1500,11 +1467,16 @@
       <p>
         <span id="s-16-88-1">(88) Wir sind der Über­zeu­gung, dass der­je­ni­ge, wel­cher un­se­re Er­ör­te­run­gen über die Natur der Sin­nes­emp­fin­dun­gen im rich­ti­gen Sinne er­fasst hat, gar kei­nen an­de­ren Ein­druck von der Goe­the­schen Far­ben­leh­re ge­win­nen kann, als den ge­schil­der­ten.</span>
         
-        <span id="s-16-88-2">Wer frei­lich diese un­se­re grund­le­gen­den Theo­ri­en nicht zu­gibt, der bleibt auf dem Stand­punkt der phy­si­ka­li­schen Optik ste­hen und damit lehnt er auch Goe­thes Far­ben­leh­re ab.\*</span>
+        <span id="s-16-88-2">Wer frei­lich diese un­se­re grund­le­gen­den Theo­ri­en <i>nicht</i> zu­gibt, der bleibt auf dem Stand­punkt der phy­si­ka­li­schen Optik ste­hen und damit lehnt er auch Goe­thes Far­ben­leh­re ab.*</span>
         
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="15-xv-goethe-und-der-naturwissenschaftliche-illusionismus.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="17-xvii-goethe-gegen-den-atomismus.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

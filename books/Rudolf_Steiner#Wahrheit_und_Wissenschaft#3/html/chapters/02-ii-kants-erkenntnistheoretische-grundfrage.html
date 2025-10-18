@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>II. KANTS ERKENNTNISTHEORETISCHE GRUNDFRAGE</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -16,15 +29,15 @@
       <p>
         <span id="s-2-1-1">Als der Be­grün­der der Er­kennt­nis­theo­rie im mo­der­nen Sinne des Wor­tes wird ge­wöhn­lich Kant ge­nannt.</span>
         
-        <span id="s-2-1-2">Gegen diese Auf­fas­sung könn­te man wohl mes Recht ein­wen­den, dass die Ge­schich­te der Phi­lo­so­phie vor Kant zahl­rei­che Un­ter­su­chun­gen auf­weist, die denn doch als mehr denn als bloße Keime zu einer sol­chen Wis­sen­schaft an­zu­se­hen sind.</span>
+        <span id="s-2-1-2">Gegen diese Auf­fas­sung könn­te man wohl mit Recht ein­wen­den, dass die Ge­schich­te der Phi­lo­so­phie <i>vor</i> Kant zahl­rei­che Un­ter­su­chun­gen auf­weist, die denn doch als mehr denn als bloße <i>Keime</i> zu einer sol­chen Wis­sen­schaft an­zu­se­hen sind.</span>
         
-        <span id="s-2-1-3">So be­merkt auch Vol­kelt in sei­nem grund­le­gen­den Werk über Er­kennt­nis­theo­rie, dass schon mes Locke die kre­si­sche Be­hand­lung die­ser Wis­sen­schaft ihren An­fang ge­nom­men habe.</span>
+        <span id="s-2-1-3">So be­merkt auch Vol­kelt in sei­nem grund­le­gen­den Werk über Er­kennt­nis­theo­rie, dass schon mit Locke die kri­ti­sche Be­hand­lung die­ser Wis­sen­schaft ihren An­fang ge­nom­men habe.</span>
         
         <span id="s-2-1-4">Aber auch bei noch frü­he­ren Phi­lo­so­phen, ja schon in der Phi­lo­so­phie der Grie­chen, fin­det man Er­ör­te­run­gen, die ge­gen­wär­tig in der Er­kennt­nis­theo­rie an­ge­stellt zu wer­den pfle­gen.</span>
         
-        <span id="s-2-1-5">In­des­sen sind durch Kant alle hier in Be­tracht kom­men­den Pro­ble­me in ihren Tie­fen auf­ge­wühlt wor­den, und an ihn an­knüp­fend haben zahl­rei­che Den­ker die­sel­ben so all­see­sig durch­ge­ar­bee­set, dass man die be­reess frü­her vor­kom­men­den Lö­sungs­ver­su­che ent­we­der bei Kant selbst oder bei sei­nen Epi­go­nen wie­der­fin­det.</span>
+        <span id="s-2-1-5">In­des­sen sind durch Kant alle hier in Be­tracht kom­men­den Pro­ble­me in ihren Tie­fen auf­ge­wühlt wor­den, und an ihn an­knüp­fend haben zahl­rei­che Den­ker die­sel­ben so all­sei­tig durch­ge­ar­bei­tet, dass man die be­reits frü­her vor­kom­men­den Lö­sungs­ver­su­che ent­we­der bei Kant selbst oder bei sei­nen Epi­go­nen wie­der­fin­det.</span>
         
-        <span id="s-2-1-6">Wenn es sich also um ein rein sach­li­ches und nicht um ein his­to­ri­sches Stu­di­um der Er­kennt­nis­theo­rie han­delt, so wird man kaum an einer wich­ti­gen Er­schei­nung vor­über­ge­hen, wenn man bloß die Zees sees Kants Auf­tre­ten mes der Kre­sik der rei­nen Ver­nunft in Rech­nung bringt.</span>
+        <span id="s-2-1-6">Wenn es sich also um ein rein <i>sach­li­ches</i> und nicht um ein <i>his­to­ri­sches</i> Stu­di­um der Er­kennt­nis­theo­rie han­delt, so wird man kaum an einer wich­ti­gen Er­schei­nung vor­über­ge­hen, wenn man bloß die Zeit seit Kants Auf­tre­ten mit der Kri­tik der rei­nen Ver­nunft in Rech­nung bringt.</span>
         
         <span id="s-2-1-7">Was vor­her auf die­sem Feld ge­leis­tet wor­den ist, wie­der­holt sich in die­ser Epo­che wie­der.</span>
         
@@ -32,13 +45,11 @@
     </section>
     <section id="p-2-2">
       <p>
-        <span id="s-2-2-1">Kants er­kennt­nis­theo­re­ti­sche Grund­fra­ge ist: Wie sind syn­the­ti­sche Ur­tei­le a prio­ri mög­lich?</span>
+        <span id="s-2-2-1">Kants er­kennt­nis­theo­re­ti­sche Grund­fra­ge ist: <i>Wie sind syn­the­ti­sche Ur­tei­le a prio­ri mög­lich</i>? Sehen wir diese Frage ein­mal auf ihre Vor­aus­set­zungs­lo­sig­keit hin an!</span>
         
-        <span id="s-2-2-2">Sehen wir diese Frage ein­mal auf ihre Vor­aus­set­zungs­lo­sig­kees hin an!</span>
+        <span id="s-2-2-2">Kant wirft die­sel­be des­we­gen auf, weil er der Mei­nung ist, dass wir ein un­be­dingt ge­wis­ses Wis­sen nur dann er­lan­gen kön­nen, wenn wir in der Lage sind, die Be­rech­ti­gung syn­the­ti­scher Ur­tei­le a prio­ri nach­zu­wei­sen.</span>
         
-        <span id="s-2-2-3">Kant wirft die­sel­be des­we­gen auf, weil er der Mei­nung ist, dass wir ein un­be­dingt ge­wis­ses Wis­sen nur dann er­lan­gen kön­nen, wenn wir in der Lage sind, die Be­rech­ti­gung syn­the­ti­scher Ur­tei­le a prio­ri nach­zu­wei­sen.</span>
-        
-        <span id="s-2-2-4">Er sagt: «In der Auf­lö­sung obi­ger Auf­ga­be ist zu­gleich die Mög­lich­kees des rei­nen Ver­nunft­ge­brau­ches in Grün­dung und Aus­füh­rung aller Wis­sen­schaf­ten, die eine theo­re­ti­sche Er­kennt­nis a prio­ri von Ge­gen­stän­den ent­hal­ten, mes be­grif­fen» und «Auf die Auf­lö­sung die­ser Auf­ga­be nun kommt das Ste­hen und Fal­len der Me­ta­phy­sik, und also ihre Exis­tenz gänz­lich an».</span>
+        <span id="s-2-2-3">Er sagt: <q author="Im­ma­nu­el Kant" book-title="Kri­tik der rei­nen Ver­nunft" part="1">In der Auf­lö­sung obi­ger Auf­ga­be ist zu­gleich die Mög­lich­keit des rei­nen Ver­nunft­ge­brau­ches in Grün­dung und Aus­füh­rung aller Wis­sen­schaf­ten, die eine theo­re­ti­sche Er­kennt­nis a prio­ri von Ge­gen­stän­den ent­hal­ten, mit be­grif­fen</q> und <q author="Im­ma­nu­el Kant" book-title="Kri­tik der rei­nen Ver­nunft" part="1">Auf die Auf­lö­sung die­ser Auf­ga­be nun kommt das Ste­hen und Fal­len der Me­ta­phy­sik, und also ihre Exis­tenz gänz­lich an</q>.</span>
         
       </p>
     </section>
@@ -46,53 +57,51 @@
       <p>
         <span id="s-2-3-1">Ist diese Frage nun, so wie Kant sie stellt, vor­aus­set­zungs­los?</span>
         
-        <span id="s-2-3-2">Kei­nes­wegs, denn sie macht die Mög­lich­kees eines un­be­dingt ge­wis­sen Sys­tems vom Wis­sen davon ab­hän­gig, dass es sich nur aus syn­the­ti­schen und aus sol­chen Ur­tei­len auf­baut, die un­ab­hän­gig von aller Er­fah­rung ge­won­nen wer­den.</span>
+        <span id="s-2-3-2">Kei­nes­wegs, denn sie macht die Mög­lich­keit eines un­be­dingt ge­wis­sen Sys­tems vom Wis­sen davon ab­hän­gig, dass es sich nur aus syn­the­ti­schen und aus sol­chen Ur­tei­len auf­baut, die un­ab­hän­gig von aller Er­fah­rung ge­won­nen wer­den.</span>
         
-        <span id="s-2-3-3">Syn­the­ti­sche Ur­tei­le nennt Kant sol­che, bei wel­chen der Prä­di­kat­be­griff etwas zum Sub­jekt­be­griff hin­zu­bringt, was ganz außer dem­sel­ben liegt, «ob es zwar mes dem­sel­ben in Ver­knüp­fung steht», wo­ge­gen bei den ana­ly­ti­schen Ur­tei­len das Prä­di­kat nur etwas aus­sagt, was (ver­steck­ter­wei­se) schon im Sub­jekt ent­hal­ten ist.</span>
+        <span id="s-2-3-3">Syn­the­ti­sche Ur­tei­le nennt Kant sol­che, bei wel­chen der Prä­di­kat­be­griff etwas zum Sub­jekt­be­griff hin­zu­bringt, was ganz außer dem­sel­ben liegt, <q author="Im­ma­nu­el Kant" book-title="Kri­tik der rei­nen Ver­nunft" part="1">ob es zwar mit dem­sel­ben in Ver­knüp­fung steht</q>, wo­ge­gen bei den ana­ly­ti­schen Ur­tei­len das Prä­di­kat nur etwas aus­sagt, was (ver­steck­ter­wei­se) schon im Sub­jekt ent­hal­ten ist.</span>
         
-        <span id="s-2-3-4">Es kann hier wohl nicht der Ort sein, auf die scharf­sin­ni­gen Ein­wän­de Jo­han­nes Rehm­kes gegen diese Glie­de­rung der Ur­tei­le ein­zu­ge­hen.</span>
+        <span id="s-2-3-4">Es kann hier wohl nicht der Ort sein, auf die scharf­sin­ni­gen Ein­wän­de <i>Jo­han­nes Rehm­kes</i> gegen diese Glie­de­rung der Ur­tei­le ein­zu­ge­hen.</span>
         
-        <span id="s-2-3-5">Für un­se­ren ge­gen­wär­ti­gen Zweck ge­nügt es, ein­zu­se­hen, dass wir ein wahr­haf­tes Wis­sen nur durch sol­che Ur­tei­le er­lan­gen kön­nen, die zu einem Be­griff einen zweesen hin­zu­fü­gen, des­sen In­halt we­nigs­tens für uns in jenem ers­ten noch nicht ge­le­gen war.</span>
+        <span id="s-2-3-5">Für un­se­ren ge­gen­wär­ti­gen Zweck ge­nügt es, ein­zu­se­hen, dass wir ein wahr­haf­tes Wis­sen nur durch sol­che Ur­tei­le er­lan­gen kön­nen, die zu einem Be­griff einen zwei­ten hin­zu­fü­gen, des­sen In­halt we­nigs­tens <i>für uns</i> in jenem ers­ten noch nicht ge­le­gen war.</span>
         
-        <span id="s-2-3-6">Wol­len wir diese Klas­se von Ur­tei­len mes Kant syn­the­ti­sche nen­nen, so kön­nen wir im­mer­hin zu­ge­ste­hen, dass Er­kennt­nis­se in Ur­teils­form nur dann ge­won­nen wer­den kön­nen, wenn die Ver­bin­dung des Prä­di­kats mes dem Sub­jekt eine sol­che syn­the­ti­sche ist.</span>
+        <span id="s-2-3-6">Wol­len wir diese Klas­se von Ur­tei­len mit Kant <i>syn­the­ti­sche</i> nen­nen, so kön­nen wir im­mer­hin zu­ge­ste­hen, dass Er­kennt­nis­se in Ur­teils­form nur dann ge­won­nen wer­den kön­nen, wenn die Ver­bin­dung des Prä­di­kats mit dem Sub­jekt eine sol­che syn­the­ti­sche ist.</span>
         
-        <span id="s-2-3-7">An­ders aber steht die Sache mes dem zweesen Teil der Frage, der ver­langt, dass diese Ur­tei­le a prio­ri, d. i. un­ab­hän­gig von aller Er­fah­rung, ge­won­nen sein müs­sen.</span>
+        <span id="s-2-3-7">An­ders aber steht die Sache mit dem zwei­ten Teil der Frage, der ver­langt, dass diese Ur­tei­le a prio­ri, d. i. un­ab­hän­gig von aller Er­fah­rung, ge­won­nen sein müs­sen.</span>
         
         <span id="s-2-3-8">Es ist ja durch­aus mög­lich, dass es sol­che Ur­tei­le über­haupt gar nicht gibt.</span>
         
         <span id="s-2-3-9">Für den An­fang der Er­kennt­nis­theo­rie muss es als gänz­lich un­aus­ge­macht gel­ten, ob wir an­ders als durch Er­fah­rung, oder nur durch diese zu Ur­tei­len kom­men kön­nen.</span>
         
-        <span id="s-2-3-10">Ja, einer un­be­fan­ge­nen Über­le­gung ge­gen­über scheint eine sol­che Un­ab­hän­gig­kees von vorn­her­ein un­mög­lich.</span>
+        <span id="s-2-3-10">Ja, einer un­be­fan­ge­nen Über­le­gung ge­gen­über scheint eine sol­che Un­ab­hän­gig­keit von vorn­her­ein un­mög­lich.</span>
         
-        <span id="s-2-3-11">Denn was auch immer Ge­gen­stand un­se­res Wis­sens wer­den mag: es muss doch ein­mal als un­me­stel­ba­res, in­di­vi­du­el­les Er­leb­nis an uns her­an­tre­ten, das heißt zur Er­fah­rung wer­den.</span>
+        <span id="s-2-3-11">Denn was auch immer Ge­gen­stand un­se­res Wis­sens wer­den mag: es muss doch ein­mal als un­mit­tel­ba­res, in­di­vi­du­el­les Er­leb­nis an uns her­an­tre­ten, das heißt zur Er­fah­rung wer­den.</span>
         
-        <span id="s-2-3-12">Auch die ma­the­ma­ti­schen Ur­tei­le ge­win­nen wir auf kei­nem an­de­ren Wege, als indem wir sie in be­stimm­ten ein­zel­nen Fäl­len er­fah­ren.</span>
+        <span id="s-2-3-12">Auch die ma­the­ma­ti­schen Ur­tei­le ge­win­nen wir auf kei­nem an­de­ren Wege, als indem wir sie in be­stimm­ten ein­zel­nen Fäl­len <i>er­fah­ren</i>. Selbst wenn man, wie z.B. Otto Lieb­mann, die­sel­ben in einer ge­wis­sen Or­ga­ni­sa­ti­on un­se­res Be­wusst­seins be­grün­det sein lässt, so stellt sich die Sache nicht an­ders dar.</span>
         
-        <span id="s-2-3-13">Selbst wenn man, wie z.B. Otto Lieb­mann, die­sel­ben in einer ge­wis­sen Or­ga­ni­sa­ti­on un­se­res Be­wusst­seins be­grün­det sein lässt, so stellt sich die Sache nicht an­ders dar.</span>
+        <span id="s-2-3-13">Man kann dann wohl sagen: die­ser oder jener Satz sei not­wen­dig gül­tig, denn würde seine Wahr­heit auf­ge­ho­ben, so würde das Be­wusst­sein <i>mit</i> auf­ge­ho­ben: aber den In­halt des­sel­ben als Er­kennt­nis kön­nen wir doch nur ge­win­nen, wenn er ein­mal Er­leb­nis für uns wird, ganz in der­sel­ben Weise wie ein Vor­gang in der äu­ße­ren Natur.</span>
         
-        <span id="s-2-3-14">Man kann dann wohl sagen: die­ser oder jener Satz sei not­wen­dig gül­tig, denn würde seine Wahr­hees auf­ge­ho­ben, so würde das Be­wusst­sein mes auf­ge­ho­ben: aber den In­halt des­sel­ben als Er­kennt­nis kön­nen wir doch nur ge­win­nen, wenn er ein­mal Er­leb­nis für uns wird, ganz in der­sel­ben Weise wie ein Vor­gang in der äu­ße­ren Natur.</span>
+        <span id="s-2-3-14">Mag immer der In­halt eines sol­chen Sat­zes Ele­men­te ent­hal­ten, die seine ab­so­lu­te Gül­tig­keit ver­bür­gen, oder mag die­sel­be aus an­de­ren Grün­den ge­si­chert sein: ich kann sei­ner nicht an­ders hab­haft wer­den, als wenn er mir ein­mal als Er­fah­rung ge­gen­über­tritt.</span>
         
-        <span id="s-2-3-15">Mag immer der In­halt eines sol­chen Sat­zes Ele­men­te ent­hal­ten, die seine ab­so­lu­te Gül­tig­kees ver­bür­gen, oder mag die­sel­be aus an­de­ren Grün­den ge­si­chert sein: ich kann sei­ner nicht an­ders hab­haft wer­den, als wenn er mir ein­mal als Er­fah­rung ge­gen­über­t­rest.</span>
-        
-        <span id="s-2-3-16">Dies ist das eine.</span>
+        <span id="s-2-3-15">Dies ist das eine.</span>
         
       </p>
     </section>
     <section id="p-2-4">
       <p>
-        <span id="s-2-4-1">Das zweese Be­den­ken be­steht darin, dass man am Be­ginn der er­kennt­nis­theo­re­ti­schen Un­ter­su­chun­gen durch­aus nicht be­haup­ten darf, aus der Er­fah­rung kön­nen keine un­be­dingt gül­ti­gen Er­kennt­nis­se stam­men.</span>
+        <span id="s-2-4-1">Das zwei­te Be­den­ken be­steht darin, dass man am Be­ginn der er­kennt­nis­theo­re­ti­schen Un­ter­su­chun­gen durch­aus nicht be­haup­ten darf, aus der Er­fah­rung kön­nen keine un­be­dingt gül­ti­gen Er­kennt­nis­se stam­men.</span>
         
-        <span id="s-2-4-2">Es ist zwei­fel­los ganz gut denk­bar, dass die Er­fah­rung selbst ein Kenn­zei­chen auf­wie­se, durch wel­ches die Ge­wiss­hees der aus ihr ge­won­ne­nen Ein­sich­ten ver­bürgt würde.</span>
+        <span id="s-2-4-2">Es ist zwei­fel­los ganz gut denk­bar, dass die Er­fah­rung selbst ein Kenn­zei­chen auf­wie­se, durch wel­ches die Ge­wiss­heit der aus ihr ge­won­ne­nen Ein­sich­ten ver­bürgt würde.</span>
         
       </p>
     </section>
     <section id="p-2-5">
       <p>
-        <span id="s-2-5-1">So lie­gen in der Kant­schen Fra­ge­stel­lung zwei Vor­aus­set­zun­gen: ers­tens, dass wir außer der Er­fah­rung noch einen Weg haben müs­sen, um zu Er­kennt­nis­sen zu ge­lan­gen, und zweesens, dass alles Er­fah­rungs­wis­sen nur be­ding­te Gül­tig­kees haben könne.</span>
+        <span id="s-2-5-1">So lie­gen in der Kant­schen Fra­ge­stel­lung zwei Vor­aus­set­zun­gen: ers­tens, dass wir außer der Er­fah­rung noch einen Weg haben müs­sen, um zu Er­kennt­nis­sen zu ge­lan­gen, und zwei­tens, dass alles Er­fah­rungs­wis­sen nur be­ding­te Gül­tig­keit haben könne.</span>
         
         <span id="s-2-5-2">Dass diese Sätze einer Prü­fung be­dürf­tig sind, dass sie be­zwei­felt wer­den kön­nen, dies kommt Kant gar nicht zum Be­wusst­sein.</span>
         
-        <span id="s-2-5-3">Er nimmt sie ein­fach als Vor­ur­tei­le aus der dog­ma­ti­schen Phi­lo­so­phie her­über und legt sie sei­nen kre­si­schen Un­ter­su­chun­gen zu­grun­de.</span>
+        <span id="s-2-5-3">Er nimmt sie ein­fach als Vor­ur­tei­le aus der dog­ma­ti­schen Phi­lo­so­phie her­über und legt sie sei­nen kri­ti­schen Un­ter­su­chun­gen zu­grun­de.</span>
         
         <span id="s-2-5-4">Die dog­ma­ti­sche Phi­lo­so­phie setzt sie als gül­tig vor­aus und wen­det sie ein­fach an, um zu einem ihnen ent­spre­chen­den Wis­sen zu ge­lan­gen; Kant setzt sie als gül­tig vor­aus und fragt sich nur: unter wel­chen Be­din­gun­gen kön­nen sie gül­tig sein?</span>
         
@@ -108,81 +117,82 @@
         
         <span id="s-2-6-2">Aber ge­ra­de die von uns an­ge­führ­ten zwei Vor­aus­set­zun­gen blei­ben als wis­sen­schaft­li­che Vor­ur­tei­le ste­hen.</span>
         
-        <span id="s-2-6-3">In Ein­lee­sung II der Kre­sik der rei­nen Ver­nunft heißt es (S. 47 f): «Er­fah­rung lehrt uns zwar, dass etwas so oder so be­schaf­fen sei, aber nicht, dass es nicht an­ders sein könne» und: «Er­fah­rung gibt nie­mals ihren Ur­tei­len wahre oder stren­ge, son­dern nur an­ge­nom­me­ne und kom­pa­ra­ti­ve All­ge­mein­hees (durch In­duk­ti­on).» In Pro­le­go­me­na Pa­ra­graph 1 fin­den wir: «Zu­erst, was die Quel­len einer me­ta­phy­si­schen Er­kennt­nis be­trifft, so liegt es schon in ihrem Be­griff, dass sie nicht em­pi­ri­sche sein kön­nen.</span>
+        <span id="s-2-6-3">In Ein­lei­tung II der Kri­tik der rei­nen Ver­nunft heißt es (S. 47 f): <q author="Im­ma­nu­el Kant" book-title="Kri­tik der rei­nen Ver­nunft" part="1">Er­fah­rung lehrt uns zwar, dass etwas so oder so be­schaf­fen sei, aber nicht, dass es nicht an­ders sein könne</q> und: <q author="Im­ma­nu­el Kant" book-title="Kri­tik der rei­nen Ver­nunft" part="1">Er­fah­rung gibt nie­mals ihren Ur­tei­len wahre oder stren­ge, son­dern nur an­ge­nom­me­ne und kom­pa­ra­ti­ve All­ge­mein­heit (durch In­duk­ti­on).</q> In Pro­le­go­me­na Pa­ra­graph 1 fin­den wir: <q author="Im­ma­nu­el Kant" book-title="Pro­le­go­me­na zu einer jeden künf­ti­gen Me­ta­phy­sik, die als Wis­sen­schaft wird auf­tre­ten kön­nen" part="1">Zu­erst, was die <i>Quel­len</i> einer me­ta­phy­si­schen Er­kennt­nis be­trifft, so liegt es schon in ihrem Be­griff, dass sie nicht em­pi­risch sein kön­nen.</q></span>
         
-        <span id="s-2-6-4">Die Prin­zi­pi­en der­sel­ben (wozu nicht bloß ihre Grund­sät­ze, son­dern auch Grund­be­grif­fe ge­hö­ren) müs­sen also nie­mals aus der Er­fah­rung ge­nom­men sein; denn sie soll nicht phy­si­sche, son­dern me­ta­phy­si­sche, d. i. jen­seess der Er­fah­rung lie­gen­de Er­kennt­nis sein.» End­lich sagt Kant in der Kre­sik der rei­nen Ver­nunft (S. 58): «Zu­vör­derst muss be­merkt wer­den: dass ei­gent­li­che ma­the­ma­ti­sche Sätze je­der­ze­es Ur­tei­le a prio­ri und nicht em­pi­ri­sche sind, weil sie Not­wen­dig­kees bei sich füh­ren, wel­che aus Er­fah­rung nicht ab­ge­nom­men wer­den kann.</span>
+        <span id="s-2-6-4">Die Prin­zi­pi­en der­sel­ben (wozu nicht bloß ihre Grund­sät­ze, son­dern auch Grund­be­grif­fe ge­hö­ren) müs­sen also nie­mals aus der Er­fah­rung ge­nom­men sein; denn sie soll nicht phy­si­sche, son­dern me­ta­phy­si­sche, d. i. jen­seits der Er­fah­rung lie­gen­de Er­kennt­nis sein. End­lich sagt Kant in der Kri­tik der rei­nen Ver­nunft (S. 58): <q author="Im­ma­nu­el Kant" book-title="Kri­tik der rei­nen Ver­nunft" part="1">Zu­vör­derst muss be­merkt wer­den: dass ei­gent­li­che ma­the­ma­ti­sche Sätze je­der­zeit Ur­tei­le a prio­ri und nicht em­pi­risch sind, weil sie Not­wen­dig­keit bei sich füh­ren, wel­che aus Er­fah­rung nicht ab­ge­nom­men wer­den kann.</q></span>
         
-        <span id="s-2-6-5">Will man aber die­ses nicht ein­räu­men, wohl­an, so schrän­ke ich mei­nen Satz auf die reine Ma­the­ma­tik ein, deren Be­griff es schon mes sich bringt, dass sie nicht em­pi­ri­schee, son­dern bloß reine Er­kennt­nis a prio­ri ent­hal­te.» Wir mögen die Kre­sik der rei­nen Ver­nunft auf­schla­gen, wo wir wol­len, so wer­den wir fin­den, dass alle Un­ter­su­chun­gen in­ner­halb der­sel­ben unter Vor­aus­set­zung die­ser dog­ma­ti­schen Sätze ge­führt wer­den.</span>
+        <span id="s-2-6-5">Will man aber die­ses nicht ein­räu­men, wohl­an, so schrän­ke ich mei­nen Satz auf die reine Ma­the­ma­tik ein, deren Be­griff es schon mit sich bringt, dass sie nicht em­pi­ri­sche, son­dern bloß reine Er­kennt­nis a prio­ri ent­hal­te. Wir mögen die Kri­tik der rei­nen Ver­nunft auf­schla­gen, wo wir wol­len, so wer­den wir fin­den, dass alle Un­ter­su­chun­gen in­ner­halb der­sel­ben unter Vor­aus­set­zung die­ser dog­ma­ti­schen Sätze ge­führt wer­den.</span>
         
-        <span id="s-2-6-6">Cohen und Stad­ler ver­su­chen zu be­wei­sen, Kant habe die aprio­ri­sche Natur der ma­the­ma­ti­schen und rein-na­tur­wis­sen­schaft­li­chen Sätze dar­ge­tan.</span>
+        <span id="s-2-6-6"><i>Cohen</i> und <i>Stad­ler</i> ver­su­chen zu be­wei­sen, Kant habe die aprio­ri­sche Natur der ma­the­ma­ti­schen und rein-na­tur­wis­sen­schaft­li­chen Sätze dar­ge­tan.</span>
         
-        <span id="s-2-6-7">Nun lässt sich aber alles, was in der Kre­sik ver­sucht wird, im Fol­gen­den zu­sam­men­fas­sen: Weil Ma­the­ma­tik und reine Na­tur­wis­sen­schaft aprio­ri­sche Wis­sen­schaf­ten sind, des­halb muss die Form aller Er­fah­rung im Sub­jekt be­grün­det sein.</span>
+        <span id="s-2-6-7">Nun lässt sich aber alles, was in der Kri­tik ver­sucht wird, im Fol­gen­den zu­sam­men­fas­sen: Weil Ma­the­ma­tik und reine Na­tur­wis­sen­schaft aprio­ri­sche Wis­sen­schaf­ten sind, des­halb muss die Form aller Er­fah­rung im Sub­jekt be­grün­det sein.</span>
         
-        <span id="s-2-6-8">Es bleibt also nur das Ma­te­ri­al der Emp­fin­dun­gen, das em­pi­ri­sche ge­ge­ben ist.</span>
+        <span id="s-2-6-8">Es bleibt also nur das Ma­te­ri­al der Emp­fin­dun­gen, das em­pi­risch ge­ge­ben ist.</span>
         
         <span id="s-2-6-9">Die­ses wird durch die im Gemüt lie­gen­den For­men zum Sys­tem der Er­fah­rung auf­ge­baut.</span>
         
-        <span id="s-2-6-10">Nur als ord­nen­de Prin­zi­pi­en für das Emp­fin­dungs­ma­te­ri­al haben die for­ma­len Wahr­heesen der aprio­ri­schen Theo­ri­en Sinn und Be­deu­tung, sie ma­chen die Er­fah­rung mög­lich, rei­chen aber nicht über die­sel­be hin­aus.</span>
+        <span id="s-2-6-10">Nur als ord­nen­de Prin­zi­pi­en für das Emp­fin­dungs­ma­te­ri­al haben die for­ma­len Wahr­hei­ten der aprio­ri­schen Theo­ri­en Sinn und Be­deu­tung, sie ma­chen die Er­fah­rung mög­lich, rei­chen aber nicht über die­sel­be hin­aus.</span>
         
-        <span id="s-2-6-11">Diese for­ma­len Wahr­heesen sind aber die syn­the­ti­schen Ur­tei­le a prio­ri, wel­che somes als Be­din­gun­gen aller mög­li­chen Er­fah­rung so wees rei­chen müs­sen als diese selbst.</span>
+        <span id="s-2-6-11">Diese for­ma­len Wahr­hei­ten sind aber die syn­the­ti­schen Ur­tei­le a prio­ri, wel­che somit als Be­din­gun­gen aller mög­li­chen Er­fah­rung so weit rei­chen müs­sen als diese selbst.</span>
         
-        <span id="s-2-6-12">Die Kre­sik der rei­nen Ver­nunft be­weist also durch­aus nicht die Aprio­re­sät der Ma­the­ma­tik und rei­nen Na­tur­wis­sen­schaft, son­dern be­stimmt nur deren Gel­tungs­ge­biet unter der Vor­aus­set­zung, dass ihre Wahr­heesen von der Er­fah­rung un­ab­hän­gig ge­won­nen wer­den sol­len.</span>
+        <span id="s-2-6-12">Die Kri­tik der rei­nen Ver­nunft be­weist also durch­aus nicht die Aprio­ri­tät der Ma­the­ma­tik und rei­nen Na­tur­wis­sen­schaft, son­dern be­stimmt nur deren Gel­tungs­ge­biet unter der <i>Vor­aus­set­zung</i>, dass ihre Wahr­hei­ten von der Er­fah­rung un­ab­hän­gig ge­won­nen wer­den sol­len.</span>
         
-        <span id="s-2-6-13">Ja, Kant lässt sich so wenig auf einen Be­weis für diese Aprio­re­sät ein, dass er ein­fach den­je­ni­gen Teil der Ma­the­ma­tik aus­schließt (siehe oben S. 32 Z. 28 f.), bei dem die­sel­be etwa, auch nach sei­ner An­sicht, be­zwei­felt wer­den könn­te, und sich nur auf den be­schränkt, bei dem er sie aus dem blo­ßen Be­griff fol­gern zu kön­nen glaubt.</span>
+        <span id="s-2-6-13">Ja, Kant lässt sich so wenig auf einen Be­weis für diese Aprio­ri­tät ein, dass er ein­fach den­je­ni­gen Teil der Ma­the­ma­tik aus­schließt (siehe oben S. 32 Z. 28 f.), bei dem die­sel­be etwa, auch nach sei­ner An­sicht, be­zwei­felt wer­den könn­te, und sich nur auf den be­schränkt, bei dem er sie aus dem blo­ßen Be­griff fol­gern zu kön­nen glaubt.</span>
         
-        <span id="s-2-6-14">Auch Jo­han­nes Vol­kelt fin­det, dass «Kant von der aus­drück­li­chen Vor­aus­set­zung» aus­ge­he, «dass es tat­säch­lich ein all­ge­mei­nes und not­wen­di­ges Wis­sen gebe».</span>
-        
-        <span id="s-2-6-15">Er sagt dar­über noch weeser: «Diese von Kant nie aus­drück­lich in Prü­fung ge­zo­ge­ne Vor­aus­set­zung steht mes dem Cha­rak­ter der kre­si­schen Er­kennt­nis­theo­rie der­art in Wi­der­spruch, dass man sich ernst­lich die Frage vor­le­gen muss, ob die «Kre­sik der rei­nen Ver­nunft» als kre­si­sche Er­kennt­nis­theo­rie gel­ten dürfe.» Vol­kelt fin­det zwar, dass man diese Frage aus guten Grün­den be­ja­hen dürfe, aber es ist «doch durch jene dog­ma­ti­sche Vor­aus­set­zung die kre­si­sche Hal­tung der Kan­ti­schen Er­kennt­nis­theo­rie in durch­grei­fen­der Weise ge­stört» .</span>
-        
-        <span id="s-2-6-16">Genug, auch Vol­kelt fin­det, dass die Kre­sik der rei­nen Ver­nunft keine vor­aus­set­zungs­lo­se Er­kennt­nis­theo­rie ist.</span>
+        <span id="s-2-6-14">Auch Jo­han­nes Vol­kelt fin­det, dass «Kant von der aus­drück­li­chen Vor­aus­set­zung» aus­ge­he, <q author="Jo­han­nes Vol­kelt" part="1">dass es tat­säch­lich ein all­ge­mei­nes und not­wen­di­ges Wis­sen gebe</q>. Er sagt dar­über noch wei­ter: <q author="Jo­han­nes Vol­kelt" part="1">Diese von Kant nie aus­drück­lich in Prü­fung ge­zo­ge­ne Vor­aus­set­zung steht mit dem Cha­rak­ter der kri­ti­schen Er­kennt­nis­theo­rie der­art in Wi­der­spruch, dass man sich ernst­lich die Frage vor­le­gen muss, ob die «Kri­tik der rei­nen Ver­nunft» als kri­ti­sche Er­kennt­nis­theo­rie gel­ten dürfe.</q> Vol­kelt fin­det zwar, dass man diese Frage aus guten Grün­den be­ja­hen dürfe, aber es ist <q author="Jo­han­nes Vol­kelt" part="1">doch durch jene dog­ma­ti­sche Vor­aus­set­zung die kri­ti­sche Hal­tung der Kan­ti­schen Er­kennt­nis­theo­rie in durch­grei­fen­der Weise ge­stört</q> . Genug, auch Vol­kelt fin­det, dass die Kri­tik der rei­nen Ver­nunft keine vor­aus­set­zungs­lo­se Er­kennt­nis­theo­rie ist.</span>
         
       </p>
     </section>
     <section id="p-2-7">
       <p>
-        <span id="s-2-7-1">Im We­sent­li­chen mes der un­se­ren über­ein­stim­men auch die Auf­fas­sun­gen O. Lieb­manns, Höl­ders, Win­del­bands, Über­wegs, Ed.</span>
+        <span id="s-2-7-1">Im We­sent­li­chen mit der un­se­ren über­ein­stim­men auch die Auf­fas­sun­gen O. Lieb­manns, Höl­ders, Win­del­bands, Über­wegs, Ed.</span>
         
-        <span id="s-2-7-2">v. Hart­manns und Kuno Fi­schers in Bezug auf den Um­stand, dass Kant die aprio­ri­sche Gül­tig­kees der rei­nen Ma­the­ma­tik und Na­tur­leh­re als Vor­aus­set­zung an die Spes­ze sei­ner Er­ör­te­run­gen stellt.</span>
+        <span id="s-2-7-2">v. Hart­manns und Kuno Fi­schers in Bezug auf den Um­stand, dass Kant die aprio­ri­sche Gül­tig­keit der rei­nen Ma­the­ma­tik und Na­tur­leh­re als <i>Vor­aus­set­zung</i> an die Spit­ze sei­ner Er­ör­te­run­gen stellt.</span>
         
       </p>
     </section>
     <section id="p-2-8">
       <p>
-        <span id="s-2-8-1">Dass wir wirk­lich Er­kennt­nis­se haben, die von aller Er­fah­rung un­ab­hän­gig sind, und dass die letz­te­ren nur Ein­sich­ten von kom­pa­ra­ti­ver All­ge­mein­hees lie­fern, könn­ten wir nur als Fol­ge­sät­ze von an­de­ren Ur­tei­len gel­ten las­sen.</span>
+        <span id="s-2-8-1">Dass wir wirk­lich Er­kennt­nis­se haben, die von aller Er­fah­rung un­ab­hän­gig sind, und dass die letz­te­ren nur Ein­sich­ten von kom­pa­ra­ti­ver All­ge­mein­heit lie­fern, könn­ten wir nur als Fol­ge­sät­ze von an­de­ren Ur­tei­len gel­ten las­sen.</span>
         
         <span id="s-2-8-2">Es müss­te die­sen Be­haup­tun­gen un­be­dingt eine Un­ter­su­chung über das Wesen der Er­fah­rung und eine sol­che über das Wesen un­se­res Er­ken­nens vor­an­ge­hen.</span>
         
-        <span id="s-2-8-3">Aus jener könn­te der erste, aus die­ser der zweese der obi­gen Sätze fol­gen.</span>
+        <span id="s-2-8-3">Aus jener könn­te der erste, aus die­ser der zwei­te der obi­gen Sätze fol­gen.</span>
         
       </p>
     </section>
     <section id="p-2-9">
       <p>
-        <span id="s-2-9-1">Nun könn­te man auf un­se­re der Ver­nunft­kre­sik ge­gen­über gel­tend ge­mach­ten Ein­wän­de noch fol­gen­des er­wi­dern.</span>
+        <span id="s-2-9-1">Nun könn­te man auf un­se­re der Ver­nunft­kri­tik ge­gen­über gel­tend ge­mach­ten Ein­wän­de noch fol­gen­des er­wi­dern.</span>
         
         <span id="s-2-9-2">Man könn­te sagen, dass doch jede Er­kennt­nis­theo­rie den Leser erst dahin füh­ren müsse, wo der vor­aus­set­zungs­lo­se Aus­gangs­punkt zu fin­den ist.</span>
         
-        <span id="s-2-9-3">Denn was wir zu ir­gend­ei­nem Zee­spunkt un­se­res Le­bens als Er­kennt­nis­se be­ses­zen, hat sich wees von die­sem Aus­gangs­punkt ent­fernt, und wir müs­sen erst wie­der künst­lich zu ihm zu­rück­ge­führt wer­den.</span>
+        <span id="s-2-9-3">Denn was wir zu ir­gend­ei­nem Zeit­punkt un­se­res Le­bens als Er­kennt­nis­se be­sit­zen, hat sich weit von die­sem Aus­gangs­punkt ent­fernt, und wir müs­sen erst wie­der künst­lich zu ihm zu­rück­ge­führt wer­den.</span>
         
-        <span id="s-2-9-4">In der Tat ist eine sol­che rein di­dak­ti­sche Ver­stän­di­gung über den An­fang sei­ner Wis­sen­schaft für jeden Er­kennt­nis­theo­re­ti­ker eine Not­wen­dig­kees.</span>
+        <span id="s-2-9-4">In der Tat ist eine sol­che rein di­dak­ti­sche Ver­stän­di­gung über den An­fang sei­ner Wis­sen­schaft für jeden Er­kennt­nis­theo­re­ti­ker eine Not­wen­dig­keit.</span>
         
         <span id="s-2-9-5">Die­sel­be muss sich aber je­den­falls dar­auf be­schrän­ken, zu zei­gen, in­wie­fern der in Rede ste­hen­de An­fang des Er­ken­nens wirk­lich ein sol­cher ist, sie müss­te in rein selbst­ver­ständ­li­chen ana­ly­ti­schen Sät­zen ver­lau­fen und kei­ner­lei wirk­li­che in­halts­vol­le Be­haup­tun­gen auf­stel­len, die den In­halt der fol­gen­den Er­ör­te­run­gen be­ein­flus­sen, wie das bei Kant der Fall ist.</span>
         
         <span id="s-2-9-6">Auch ob­liegt es dem Er­kennt­nis­theo­re­ti­ker, zu zei­gen, dass der von ihm an­ge­nom­me­ne An­fang wirk­lich vor­aus­set­zungs­los ist.</span>
         
-        <span id="s-2-9-7">Aber alles das hat mes dem Wesen die­ses An­fangs selbst nichts zu tun, steht ganz au­ßer­halb des­sel­ben, sagt nichts über ihn aus.</span>
+        <span id="s-2-9-7">Aber alles das hat mit dem Wesen die­ses An­fangs selbst nichts zu tun, steht ganz au­ßer­halb des­sel­ben, sagt nichts über ihn aus.</span>
         
-        <span id="s-2-9-8">Auch am Be­ginn des Ma­the­ma­tik­un­ter­richts muss ich mich ja be­mü­hen, den Schü­ler von dem axio­ma­ti­schen Cha­rak­ter ge­wis­ser Wahr­heesen zu über­zeu­gen.</span>
+        <span id="s-2-9-8">Auch am Be­ginn des Ma­the­ma­tik­un­ter­richts muss ich mich ja be­mü­hen, den Schü­ler von dem axio­ma­ti­schen Cha­rak­ter ge­wis­ser Wahr­hei­ten zu über­zeu­gen.</span>
         
-        <span id="s-2-9-9">Aber nie­mand wird be­haup­ten wol­len, dass der In­halt der Axio­me von die­sen vor­her an­ge­stell­ten Er­wä­gun­gen ab­hän­gig ge­macht wird .</span>
+        <span id="s-2-9-9">Aber nie­mand wird be­haup­ten wol­len, dass der <i>In­halt</i> der Axio­me von die­sen vor­her an­ge­stell­ten Er­wä­gun­gen ab­hän­gig ge­macht wird .</span>
         
-        <span id="s-2-9-10">Genau in der­sel­ben Weise müss­te der Er­kennt­nis­theo­re­ti­ker in sei­nen ein­lee­sen­den Be­mer­kun­gen den Weg zei­gen, wie man zu einem vor­aus­set­zungs­lo­sen An­fang kom­men kann; der ei­gent­li­che In­halt des­sel­ben aber muss von die­sen Er­wä­gun­gen un­ab­hän­gig sein.</span>
+        <span id="s-2-9-10">Genau in der­sel­ben Weise müss­te der Er­kennt­nis­theo­re­ti­ker in sei­nen ein­lei­ten­den Be­mer­kun­gen den Weg zei­gen, wie man zu einem vor­aus­set­zungs­lo­sen An­fang kom­men kann; der ei­gent­li­che In­halt des­sel­ben aber muss von die­sen Er­wä­gun­gen un­ab­hän­gig sein.</span>
         
-        <span id="s-2-9-11">Von einer sol­chen Ein­lee­sung in die Er­kennt­nis­theo­rie ist der aber je­den­falls wees ent­fernt, der wie Kant am An­fang Be­haup­tun­gen mes ganz be­stimm­tem, dog­ma­ti­schem Cha­rak­ter auf­stellt.</span>
+        <span id="s-2-9-11">Von einer sol­chen Ein­lei­tung in die Er­kennt­nis­theo­rie ist der aber je­den­falls weit ent­fernt, der wie Kant am An­fang Be­haup­tun­gen mit ganz be­stimm­tem, dog­ma­ti­schem Cha­rak­ter auf­stellt.</span>
         
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="01-i-vorbemerkungen.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="03-iii-die-erkenntnistheorie-nach-kant.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

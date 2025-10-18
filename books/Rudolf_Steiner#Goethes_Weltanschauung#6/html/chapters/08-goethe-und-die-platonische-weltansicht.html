@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GOETHE UND DIE PLATONISCHE WELTANSICHT</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -14,7 +27,8 @@
     <h1 id="c-8-title" data-slug="goethe-und-die-platonische-weltansicht">GOETHE UND DIE PLATONISCHE WELTANSICHT</h1>
     <section id="p-8-1">
       <p>
-        <span id="s-8-1-1">1| Ich habe die Ge­dan­ken­ent­wick­lung von Pla­tos bis zu Kants Zeit ge­schil­dert, um zei­gen zu kön­nen, wel­che Ein­drü­cke Goe­the emp­fan­gen muss­te, wenn er sich an den Nie­der­schlag der phi­lo­so­phi­schen Ge­dan­ken wand­te, an die er sich hal­ten konn­te, um sein so star­kes Er­kennt­nis­be­dürf­nis zu be­frie­di­gen.</span>
+        <a class="p-num" href="#p-8-1">1|</a>
+        <span id="s-8-1-1">Ich habe die Ge­dan­ken­ent­wick­lung von Pla­tos bis zu Kants Zeit ge­schil­dert, um zei­gen zu kön­nen, wel­che Ein­drü­cke Goe­the emp­fan­gen muss­te, wenn er sich an den Nie­der­schlag der phi­lo­so­phi­schen Ge­dan­ken wand­te, an die er sich hal­ten konn­te, um sein so star­kes Er­kennt­nis­be­dürf­nis zu be­frie­di­gen.</span>
         
         <span id="s-8-1-2">Auf die un­zäh­li­gen Fra­gen, zu denen ihn seine Natur dräng­te, fand er in den Phi­lo­so­phi­en keine Ant­wor­ten.</span>
         
@@ -48,7 +62,8 @@
     </section>
     <section id="p-8-2">
       <p>
-        <span id="s-8-2-1">2| Zu sol­cher Denk­wei­se führ­te Goe­the seine Künst­ler­na­tur.</span>
+        <a class="p-num" href="#p-8-2">2|</a>
+        <span id="s-8-2-1">Zu sol­cher Denk­wei­se führ­te Goe­the seine Künst­ler­na­tur.</span>
         
         <span id="s-8-2-2">Mit der­sel­ben Not­wen­dig­keit, mit der eine Blume blüht, fühl­te er seine dich­te­ri­schen Er­zeug­nis­se aus sei­ner Per­sön­lich­keit her­aus­wach­sen.</span>
         
@@ -72,41 +87,32 @@
         
         <span id="s-8-2-12">Er er­kann­te, dass in den voll­ende­ten Kunst­wer­ken das ent­hal­ten ist, was die Men­schen als Gött­li­ches, als Ewi­ges ver­eh­ren.</span>
         
-        <span id="s-8-2-13">Nach dem An­blick von künst­le­ri­schen Schöp­fun­gen, die ihn be­son­ders in­ter­es­sie­ren, schreibt er die Worte nie­der: «Die hohen Kunst­wer­ke sind zu­gleich als die höchs­ten Na­tur­wer­ke von Men­schen nach wah­ren und na­tür­li­chen Ge­set­zen her­vor­ge­bracht wor­den.</span>
-        
-        <span id="s-8-2-14">Alles Will­kür­li­che, Ein­ge­bil­de­te fällt zu­sam­men; da ist Not­wen­dig­keit, da ist Gott.» Die Kunst der Grie­chen ent­lockt ihm den Aus­spruch: «Ich habe eine Ver­mu­tung, dass sie (die Grie­chen) nach eben den Ge­set­zen ver­fuh­ren, nach wel­chen die Natur ver­fährt und denen ich auf der Spur bin.» Was Pla­ton in der Ide­en­welt zu fin­den glaub­te, was die Phi­lo­so­phen Goe­the nie nahe brin­gen konn­ten, das blickt ihm aus den Kunst­wer­ken Ita­li­ens ent­ge­gen.</span>
+        <span id="s-8-2-13">Nach dem An­blick von künst­le­ri­schen Schöp­fun­gen, die ihn be­son­ders in­ter­es­sie­ren, schreibt er die Worte nie­der: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Die hohen Kunst­wer­ke sind zu­gleich als die höchs­ten Na­tur­wer­ke von Men­schen nach <i>wah­ren</i> und <i>na­tür­li­chen</i> Ge­set­zen her­vor­ge­bracht wor­den. Alles Will­kür­li­che, Ein­ge­bil­de­te fällt zu­sam­men; <i>da ist Not­wen­dig­keit, da ist Gott</i>.</q> Die Kunst der Grie­chen ent­lockt ihm den Aus­spruch: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Ich habe eine Ver­mu­tung, dass sie (die Grie­chen) nach eben den Ge­set­zen ver­fuh­ren, nach wel­chen die Natur ver­fährt und denen ich auf der Spur bin.</q> Was Pla­ton in der Ide­en­welt zu fin­den glaub­te, was die Phi­lo­so­phen Goe­the nie nahe brin­gen konn­ten, das blickt ihm aus den Kunst­wer­ken Ita­li­ens ent­ge­gen.</span>
         
         <span id="s-8-2-15">In der Kunst of­fen­bart sich für Goe­the zu­erst das in voll­kom­me­ner Ge­stalt, was er als die Grund­la­ge der Er­kennt­nis an­se­hen kann.</span>
         
         <span id="s-8-2-16">Er er­blickt in der künst­le­ri­schen Pro­duk­ti­on eine Art und hö­he­re Stufe des Na­tur­wir­kens; künst­le­ri­sches Schaf­fen ist ihm ge­stei­ger­tes Na­tur­schaf­fen.</span>
         
-        <span id="s-8-2-17">Er hat das in sei­ner Cha­rak­te­ris­tik Winckel­manns spä­ter aus­ge­spro­chen: «...</span>
+        <span id="s-8-2-17">Er hat das in sei­ner Cha­rak­te­ris­tik Winckel­manns spä­ter aus­ge­spro­chen: <q author="Jo­hann Wolf­gang von Goe­the" part="1">... indem der Mensch auf den Gip­fel der Natur ge­stellt ist, so sieht er sich wie­der als eine ganze Natur an, die in sich aber­mals einen Gip­fel her­vor­zu­brin­gen hat. Dazu stei­gert er sich, indem er sich mit allen Voll­kom­men­hei­ten und Tu­gen­den durch­dringt, Wahl, Ord­nung, Har­mo­nie und Be­deu­tung auf­ruft <i>und sich end­lich bis zur Pro­duk­ti­on des Kunst­werks er­hebt</i>...</q>. Nicht auf dem Wege lo­gi­scher Schluss­fol­ge­rung, son­dern durch Be­trach­tung des We­sens der Kunst ge­langt Goe­the zu sei­ner Welt­an­schau­ung.</span>
         
-        <span id="s-8-2-18">indem der Mensch auf den Gip­fel der Natur ge­stellt ist, so sieht er sich wie­der als eine ganze Natur an, die in sich aber­mals einen Gip­fel her­vor­zu­brin­gen hat.</span>
-        
-        <span id="s-8-2-19">Dazu stei­gert er sich, indem er sich mit allen Voll­kom­men­hei­ten und Tu­gen­den durch­dringt, Wahl, Ord­nung, Har­mo­nie und Be­deu­tung auf­ruft und sich end­lich bis zur Pro­duk­ti­on des Kunst­werks er­hebt...».</span>
-        
-        <span id="s-8-2-20">Nicht auf dem Wege lo­gi­scher Schluss­fol­ge­rung, son­dern durch Be­trach­tung des We­sens der Kunst ge­langt Goe­the zu sei­ner Welt­an­schau­ung.</span>
-        
-        <span id="s-8-2-21">Und was er in der Kunst ge­fun­den hat, das sucht er auch in der Natur.</span>
+        <span id="s-8-2-20">Und was er in der Kunst ge­fun­den hat, das sucht er auch in der Natur.</span>
         
       </p>
     </section>
     <section id="p-8-3">
       <p>
-        <span id="s-8-3-1">3| Die Tä­tig­keit, durch die sich Goe­the in den Be­sitz einer Na­tur­er­kennt­nis setzt, ist nicht we­sent­lich von der künst­le­ri­schen ver­schie­den.</span>
+        <a class="p-num" href="#p-8-3">3|</a>
+        <span id="s-8-3-1">Die Tä­tig­keit, durch die sich Goe­the in den Be­sitz einer Na­tur­er­kennt­nis setzt, ist nicht we­sent­lich von der künst­le­ri­schen ver­schie­den.</span>
         
         <span id="s-8-3-2">Beide gehen in­ein­an­der über und grei­fen über­ein­an­der.</span>
         
-        <span id="s-8-3-3">Der Künst­ler muss, nach Goe­thes An­sicht, grö­ßer und ent­schie­de­ner wer­den, «wenn er zu sei­nem Ta­len­te noch ein un­ter­rich­te­ter Bo­ta­ni­ker ist; wenn er von der Wur­zel an den Ein­fluss der ver­schie­de­nen Teile auf das Ge­dei­hen und das Wachs­tum der Pflan­ze, ihre Be­stim­mung und wech­sel­sei­ti­gen Wir­kun­gen er­kennt; wenn er die suk­zes­si­ve Ent­wick­lung der Blät­ter, Blu­men, Be­fruch­tung, Frucht und des neuen Kei­mes ein­sieht und über­denkt.</span>
-        
-        <span id="s-8-3-4">Er wird als­dann nicht bloß durch die Wahl aus den Er­schei­nun­gen sei­nen Ge­schmack zei­gen, son­dern er wird uns auch durch eine rich­ti­ge Dar­stel­lung der Ei­gen­schaf­ten zu­gleich in Ver­wun­de­rung set­zen und be­leh­ren.» Das Kunst­werk ist dem­nach um so voll­kom­me­ner, je mehr in ihm die­sel­be Ge­setz­mä­ßig­keit zum Aus­druck kommt, die in dem Na­tur­werk ent­hal­ten ist, dem es ent­spricht.</span>
+        <span id="s-8-3-3">Der Künst­ler muss, nach Goe­thes An­sicht, grö­ßer und ent­schie­de­ner wer­den, <q author="Jo­hann Wolf­gang von Goe­the" part="1">wenn er zu sei­nem Ta­len­te noch ein un­ter­rich­te­ter Bo­ta­ni­ker ist; wenn er von der Wur­zel an den Ein­fluss der ver­schie­de­nen Teile auf das Ge­dei­hen und das Wachs­tum der Pflan­ze, ihre Be­stim­mung und wech­sel­sei­ti­gen Wir­kun­gen er­kennt; wenn er die suk­zes­si­ve Ent­wick­lung der Blät­ter, Blu­men, Be­fruch­tung, Frucht und des neuen Kei­mes ein­sieht und über­denkt. Er wird als­dann nicht bloß durch die Wahl aus den Er­schei­nun­gen sei­nen Ge­schmack zei­gen, son­dern er wird uns auch durch eine rich­ti­ge Dar­stel­lung der Ei­gen­schaf­ten zu­gleich in Ver­wun­de­rung set­zen und be­leh­ren.</q> Das Kunst­werk ist dem­nach um so voll­kom­me­ner, je mehr in ihm die­sel­be Ge­setz­mä­ßig­keit zum Aus­druck kommt, die in dem Na­tur­werk ent­hal­ten ist, dem es ent­spricht.</span>
         
         <span id="s-8-3-5">Es gibt nur ein ein­heit­li­ches Reich der Wahr­heit, und die­ses um­fasst Kunst und Natur.</span>
         
         <span id="s-8-3-6">Daher kann auch die Fä­hig­keit des künst­le­ri­schen Schaf­fens von der des Na­tur­er­ken­nens nicht we­sent­lich ver­schie­den sein.</span>
         
-        <span id="s-8-3-7">Vom Stil des Künst­lers sagt Goe­the, dass er «auf den tiefs­ten Grund­fes­ten der Er­kennt­nis , auf dem Wesen der Dinge, in­so­fern uns er­laubt ist, es in sicht­ba­ren und greif­li­chen Ge­stal­ten zu er­ken­nen.» Die aus ein­sei­tig er­fass­ten pla­to­ni­schen Vor­stel­lun­gen her­vor­ge­gan­ge­ne Welt­be­trach­tung zieht eine schar­fe Grenz­li­nie zwi­schen Wis­sen­schaft und Kunst.</span>
+        <span id="s-8-3-7">Vom Stil des Künst­lers sagt Goe­the, dass er «auf den tiefs­ten Grund­fes­ten der <i>Er­kennt­nis</i>, auf dem Wesen der Dinge, in­so­fern uns er­laubt ist, es in sicht­ba­ren und greif­li­chen Ge­stal­ten zu er­ken­nen.» Die aus ein­sei­tig er­fass­ten pla­to­ni­schen Vor­stel­lun­gen her­vor­ge­gan­ge­ne Welt­be­trach­tung zieht eine schar­fe Grenz­li­nie zwi­schen Wis­sen­schaft und Kunst.</span>
         
         <span id="s-8-3-8">Die künst­le­ri­sche Tä­tig­keit lässt sie auf der Fan­ta­sie, auf dem Ge­fühl be­ru­hen; die wis­sen­schaft­li­chen Er­geb­nis­se sol­len das Re­sul­tat einer phan­ta­sie­frei­en Be­griffs­ent­wick­lung sein.</span>
         
@@ -118,29 +124,28 @@
         
         <span id="s-8-3-12">Auch auf den Künst­ler wirkt die­ses Ide­el­le.</span>
         
-        <span id="s-8-3-13">Aber es treibt ihn ein Werk zu ge­stal­ten, in dem die Idee nicht bloß wie in einem Na­tur­werk wirkt, son­dern zur ge­gen­wär­ti­gen Er­schei­nung wird.</span>
+        <span id="s-8-3-13">Aber es treibt ihn ein Werk zu ge­stal­ten, in dem die Idee nicht bloß wie in einem Na­tur­werk wirkt, son­dern zur ge­gen­wär­ti­gen <i>Er­schei­nung wird</i>. Was in dem Na­tur­werk bloß ide­ell ist und sich dem geis­ti­gen Auge des Be­ob­ach­ters ent­hüllt, das wird in dem Kunst­werk real, wird wahr­nehm­ba­re Wirk­lich­keit.</span>
         
-        <span id="s-8-3-14">Was in dem Na­tur­werk bloß ide­ell ist und sich dem geis­ti­gen Auge des Be­ob­ach­ters ent­hüllt, das wird in dem Kunst­werk real, wird wahr­nehm­ba­re Wirk­lich­keit.</span>
+        <span id="s-8-3-14">Der Künst­ler ver­wirk­licht die Ideen der Natur.</span>
         
-        <span id="s-8-3-15">Der Künst­ler ver­wirk­licht die Ideen der Natur.</span>
+        <span id="s-8-3-15">Er braucht sich aber diese nicht in Form der Ideen zum Be­wusst­sein zu brin­gen.</span>
         
-        <span id="s-8-3-16">Er braucht sich aber diese nicht in Form der Ideen zum Be­wusst­sein zu brin­gen.</span>
+        <span id="s-8-3-16">Wenn er ein Ding oder ein Er­eig­nis be­trach­tet, so ge­stal­tet sich in sei­nem Geist un­mit­tel­bar ein an­de­res, das in rea­ler Er­schei­nung ent­hält, was jene nur als Idee.</span>
         
-        <span id="s-8-3-17">Wenn er ein Ding oder ein Er­eig­nis be­trach­tet, so ge­stal­tet sich in sei­nem Geist un­mit­tel­bar ein an­de­res, das in rea­ler Er­schei­nung ent­hält, was jene nur als Idee.</span>
+        <span id="s-8-3-17">Der Künst­ler lie­fert Bil­der der Na­tur­wer­ke, wel­che deren Ide­en­ge­halt in einen Wahr­neh­mungs­ge­halt um­set­zen.</span>
         
-        <span id="s-8-3-18">Der Künst­ler lie­fert Bil­der der Na­tur­wer­ke, wel­che deren Ide­en­ge­halt in einen Wahr­neh­mungs­ge­halt um­set­zen.</span>
+        <span id="s-8-3-18">Der Phi­lo­soph zeigt, wie sich die Natur der den­ken­den Be­trach­tung dar­stellt; der Künst­ler zeigt, wie die Natur aus­se­hen würde, wenn sie ihre wir­ken­den Kräf­te nicht bloß dem Den­ken, son­dern auch der Wahr­neh­mung offen ent­ge­gen­bräch­te.</span>
         
-        <span id="s-8-3-19">Der Phi­lo­soph zeigt, wie sich die Natur der den­ken­den Be­trach­tung dar­stellt; der Künst­ler zeigt, wie die Natur aus­se­hen würde, wenn sie ihre wir­ken­den Kräf­te nicht bloß dem Den­ken, son­dern auch der Wahr­neh­mung offen ent­ge­gen­bräch­te.</span>
+        <span id="s-8-3-19">Es ist eine und die­sel­be Wahr­heit, die der Phi­lo­soph in Form des Ge­dan­kens, der Künst­ler in Form des Bil­des dar­stellt.</span>
         
-        <span id="s-8-3-20">Es ist eine und die­sel­be Wahr­heit, die der Phi­lo­soph in Form des Ge­dan­kens, der Künst­ler in Form des Bil­des dar­stellt.</span>
-        
-        <span id="s-8-3-21">Beide un­ter­schei­den sich nur durch ihre Aus­drucks­mit­tel.</span>
+        <span id="s-8-3-20">Beide un­ter­schei­den sich nur durch ihre Aus­drucks­mit­tel.</span>
         
       </p>
     </section>
     <section id="p-8-4">
       <p>
-        <span id="s-8-4-1">4| Die Ein­sicht in das wahre Ver­hält­nis von Idee und Er­fah­rung, die Goe­the sich in Ita­li­en an­ge­eig­net hat, ist nur die Frucht aus dem Samen, der in sei­ner Na­tur­an­la­ge ver­bor­gen war.</span>
+        <a class="p-num" href="#p-8-4">4|</a>
+        <span id="s-8-4-1">Die Ein­sicht in das wahre Ver­hält­nis von Idee und Er­fah­rung, die Goe­the sich in Ita­li­en an­ge­eig­net hat, ist nur die Frucht aus dem Samen, der in sei­ner Na­tur­an­la­ge ver­bor­gen war.</span>
         
         <span id="s-8-4-2">Die ita­lie­ni­sche Reise brach­te ihm jene Son­nen­wär­me, die ge­eig­net war, den Samen zur Reife zu brin­gen.</span>
         
@@ -150,41 +155,27 @@
         
         <span id="s-8-4-5">Was hier dunk­le Emp­fin­dung ist, wird spä­ter kla­rer deut­li­cher Ge­dan­ke.</span>
         
-        <span id="s-8-4-6">«Natur!</span>
-        
-        <span id="s-8-4-7">Wir sind von ihr um­ge­ben und um­schlun­gen – un­ver­mö­gend, aus ihr her­aus­zu­tre­ten, und un­ver­mö­gend, tie­fer in sie hin­ein­zu­kom­men.</span>
-        
-        <span id="s-8-4-8">Un­ge­be­ten und un­ge­warnt nimmt sie uns in den Kreis­lauf ihres Tan­zes auf und treibt sich mit uns fort, bis wir er­mü­det sind und ihrem Arme ent­fal­len...</span>
-        
-        <span id="s-8-4-9">Ge­dacht hat sie (die Natur) und sinnt be­stän­dig; aber nicht als ein Mensch, son­dern als Natur...</span>
-        
-        <span id="s-8-4-10">Sie hat keine Spra­che noch Rede, aber sie schafft Zun­gen und Her­zen, durch die sie fühlt und spricht...</span>
-        
-        <span id="s-8-4-11">Ich sprach nicht von ihr.</span>
-        
-        <span id="s-8-4-12">Nein, was wahr ist und was falsch ist, alles hat sie ge­spro­chen.</span>
-        
-        <span id="s-8-4-13">Alles ist ihre Schuld, alles ist ihr Ver­dienst!</span>
-        
-        <span id="s-8-4-14">-» Als Goe­the diese Sätze nie­der­schrieb, war ihm noch nicht klar, wie die Natur durch den Men­schen ihre ide­el­le We­sen­heit aus­spricht; dass es aber die Stim­me des Geis­tes der Natur ist, die im Geist des Men­schen er­tönt, das fühl­te er.</span>
+        <span id="s-8-4-6"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Die Natur" part="1">Natur! Wir sind von ihr um­ge­ben und um­schlun­gen – un­ver­mö­gend, aus ihr her­aus­zu­tre­ten, und un­ver­mö­gend, tie­fer in sie hin­ein­zu­kom­men. Un­ge­be­ten und un­ge­warnt nimmt sie uns in den Kreis­lauf ihres Tan­zes auf und treibt sich mit uns fort, bis wir er­mü­det sind und ihrem Arme ent­fal­len... <i>Ge­dacht</i> hat sie (die Natur) und <i>sinnt</i> be­stän­dig; aber nicht als ein Mensch, son­dern als Natur... Sie hat keine Spra­che noch Rede, aber <i>sie schafft Zun­gen und Her­zen, durch die sie fühlt und spricht</i>... Ich sprach nicht von ihr. Nein, was wahr ist und was falsch ist, alles hat sie ge­spro­chen. Alles ist ihre Schuld, alles ist ihr Ver­dienst! -</q> Als Goe­the diese Sätze nie­der­schrieb, war ihm noch nicht klar, wie die Natur durch den Men­schen ihre ide­el­le We­sen­heit aus­spricht; dass es aber die Stim­me des Geis­tes der Natur ist, die im Geist des Men­schen er­tönt, das fühl­te er.</span>
         
       </p>
     </section>
     <section id="p-8-5">
       <p>
-        <span id="s-8-5-1">5| In Ita­li­en fand Goe­the die geis­ti­ge At­mo­sphä­re, in der sich seine Er­kennt­nis­or­ga­ne aus­bil­den konn­ten, wie sie es ihren An­la­gen gemäß muss­ten, wenn er zur vol­len Be­frie­di­gung kom­men soll­te.</span>
+        <a class="p-num" href="#p-8-5">5|</a>
+        <span id="s-8-5-1">In Ita­li­en fand Goe­the die geis­ti­ge At­mo­sphä­re, in der sich seine Er­kennt­nis­or­ga­ne aus­bil­den konn­ten, wie sie es ihren An­la­gen gemäß muss­ten, wenn er zur vol­len Be­frie­di­gung kom­men soll­te.</span>
         
         <span id="s-8-5-2">In Rom hat er «über Kunst und ihre theo­re­ti­schen For­de­run­gen mit viel ver­han­delt»; auf der Reise hat sich in ihm bei Be­ob­ach­tung der Pflan­zen­me­ta­mor­pho­se eine na­tur­ge­mä­ße Me­tho­de aus­ge­bil­det, die sich spä­ter für die Er­kennt­nis der gan­zen or­ga­ni­schen Natur frucht­bar er­wie­sen hat.</span>
         
-        <span id="s-8-5-3">«Denn als die Ve­ge­ta­ti­on mir Schritt für Schritt ihr Ver­fah­ren vor­bil­de­te, konn­te ich nicht irren, son­dern muss­te, indem ich sie ge­wäh­ren ließ, die Wege und Mit­tel an­er­ken­nen, wie sie den ein­ge­hüll­tes­ten Zu­stand zur Voll­endung nach und nach zu be­för­dern weiß.» We­ni­ge Jahre nach sei­ner Rück­kehr aus Ita­li­en ge­lang es ihm, auch für die Be­trach­tung der un­or­ga­ni­schen Natur ein aus sei­nen geis­ti­gen Be­dürf­nis­sen ge­bo­re­nes Ver­fah­ren zu fin­den.</span>
+        <span id="s-8-5-3"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Ita­lie­ni­sche Reise" part="1">Denn als die Ve­ge­ta­ti­on mir Schritt für Schritt ihr Ver­fah­ren vor­bil­de­te, konn­te ich nicht irren, son­dern muss­te, indem ich sie ge­wäh­ren ließ, die Wege und Mit­tel an­er­ken­nen, wie sie den ein­ge­hüll­tes­ten Zu­stand zur Voll­endung nach und nach zu be­för­dern weiß.</q> We­ni­ge Jahre nach sei­ner Rück­kehr aus Ita­li­en ge­lang es ihm, auch für die Be­trach­tung der un­or­ga­ni­schen Natur ein aus sei­nen geis­ti­gen Be­dürf­nis­sen ge­bo­re­nes Ver­fah­ren zu fin­den.</span>
         
-        <span id="s-8-5-4">«Bei phy­si­schen Un­ter­su­chun­gen dräng­te sich mir die Über­zeu­gung auf, dass, bei aller Be­trach­tung der Ge­gen­stän­de, die höchs­te Pflicht sei, jede Be­din­gung, unter wel­cher ein Phä­no­men er­scheint, genau auf­zu­su­chen und nach mög­lichs­ter Voll­stän­dig­keit der Phä­no­me­ne zu trach­ten; weil sie doch zu­letzt sich an­ein­an­der­zu­rei­hen, oder viel­mehr über­ein­an­der­zu­grei­fen ge­nö­tigt wer­den, und vor dem An­schau­en des For­schers auch eine Art Or­ga­ni­sa­ti­on bil­den, ihr in­ne­res Ge­samt­le­ben ma­ni­fes­tie­ren müs­sen.»</span>
+        <span id="s-8-5-4"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Zur Far­ben­leh­re" part="1">Bei phy­si­schen Un­ter­su­chun­gen dräng­te sich mir die Über­zeu­gung auf, dass, bei aller Be­trach­tung der Ge­gen­stän­de, die höchs­te Pflicht sei, jede Be­din­gung, unter wel­cher ein Phä­no­men er­scheint, genau auf­zu­su­chen und nach mög­lichs­ter Voll­stän­dig­keit der Phä­no­me­ne zu trach­ten; weil sie doch zu­letzt sich an­ein­an­der­zu­rei­hen, oder viel­mehr über­ein­an­der­zu­grei­fen ge­nö­tigt wer­den, und vor dem An­schau­en des For­schers auch eine Art Or­ga­ni­sa­ti­on bil­den, ihr in­ne­res Ge­samt­le­ben ma­ni­fes­tie­ren müs­sen.</q></span>
         
       </p>
     </section>
     <section id="p-8-6">
       <p>
-        <span id="s-8-6-1">6| Goe­the fand nir­gends Auf­klä­rung.</span>
+        <a class="p-num" href="#p-8-6">6|</a>
+        <span id="s-8-6-1">Goe­the fand nir­gends Auf­klä­rung.</span>
         
         <span id="s-8-6-2">Er muss­te sich selbst auf­klä­ren.</span>
         
@@ -200,9 +191,7 @@
         
         <span id="s-8-6-8">Wenn sich Goe­the aber auf den In­halt der Spi­no­zis­ti­schen Phi­lo­so­phie ein­ließ, so fühl­te er doch, dass die­ser ihm fremd blieb.</span>
         
-        <span id="s-8-6-9">«Denke man aber nicht, dass ich seine Schrif­ten hätte un­ter­schrei­ben und mich dazu buch­stäb­lich be­ken­nen mögen.</span>
-        
-        <span id="s-8-6-10">Denn, dass nie­mand den an­de­ren ver­steht, dass kei­ner bei den­sel­ben Wor­ten das­sel­be, was der an­de­re, denkt, dass ein Ge­spräch, eine Lek­tü­re bei ver­schie­de­nen Per­so­nen ver­schie­de­ne Ge­dan­ken­fol­gen auf­regt, hatte ich schon allzu deut­lich ein­ge­se­hen, und man wird dem Ver­fas­ser von Wer­t­her und Faust wohl zu­trau­en, dass er, von sol­chen Miss­ver­ständ­nis­sen tief durch­drun­gen, nicht selbst den Dün­kel ge­hegt, einen Mann voll­kom­men zu ver­ste­hen, der als Schü­ler von Des­car­tes durch ma­the­ma­ti­sche und rab­bi­ni­sche Kul­tur sich zu dem Gip­fel des Den­kens her­vor­ge­ho­ben; der bis auf den heu­ti­gen Tag noch das Ziel aller spe­ku­la­ti­ven Be­mü­hun­gen zu sein scheint.» Nicht der Um­stand, dass Spi­no­za durch Des­car­tes ge­schult wor­den ist, auch nicht der, dass er durch ma­the­ma­ti­sche und rab­bi­ni­sche Kul­tur sich zu dem Gip­fel des Den­kens er­ho­ben hat, mach­te ihn für Goe­the zu einem Ele­ment, an das er sich doch nicht ganz hin­ge­ben konn­te, son­dern seine wirk­lich­keits­frem­de, rein lo­gi­sche Art, die Er­kennt­nis zu be­han­deln.</span>
+        <span id="s-8-6-9"><q author="Jo­hann Wolf­gang von Goe­the" part="1">Denke man aber nicht, dass ich seine Schrif­ten hätte un­ter­schrei­ben und mich dazu buch­stäb­lich be­ken­nen mögen. Denn, dass nie­mand den an­de­ren ver­steht, dass kei­ner bei den­sel­ben Wor­ten das­sel­be, was der an­de­re, denkt, dass ein Ge­spräch, eine Lek­tü­re bei ver­schie­de­nen Per­so­nen ver­schie­de­ne Ge­dan­ken­fol­gen auf­regt, hatte ich schon allzu deut­lich ein­ge­se­hen, und man wird dem Ver­fas­ser von <i>Wer­t­her</i> und <i>Faust</i> wohl zu­trau­en, dass er, von sol­chen Miss­ver­ständ­nis­sen tief durch­drun­gen, nicht selbst den Dün­kel ge­hegt, einen Mann voll­kom­men zu ver­ste­hen, der als Schü­ler von Des­car­tes durch ma­the­ma­ti­sche und rab­bi­ni­sche Kul­tur sich zu dem Gip­fel des Den­kens her­vor­ge­ho­ben; der bis auf den heu­ti­gen Tag noch das Ziel aller spe­ku­la­ti­ven Be­mü­hun­gen zu sein scheint.</q> Nicht der Um­stand, dass Spi­no­za durch Des­car­tes ge­schult wor­den ist, auch nicht der, dass er durch ma­the­ma­ti­sche und rab­bi­ni­sche Kul­tur sich zu dem Gip­fel des Den­kens er­ho­ben hat, mach­te ihn für Goe­the zu einem Ele­ment, an das er sich doch nicht ganz hin­ge­ben konn­te, son­dern seine wirk­lich­keits­frem­de, rein lo­gi­sche Art, die Er­kennt­nis zu be­han­deln.</span>
         
         <span id="s-8-6-11">Goe­the konn­te sich dem rei­nen er­fah­rungs­frei­en Den­ken nicht hin­ge­ben, weil er es nicht zu tren­nen ver­moch­te von der Ge­samt­heit des Wirk­li­chen.</span>
         
@@ -214,87 +203,78 @@
         
         <span id="s-8-6-15">Die Wech­sel­wir­kung von Idee und Wahr­neh­mung war ihm ein geis­ti­ges Atem­ho­len.</span>
         
-        <span id="s-8-6-16">«Durch die Pen­del­schlä­ge wird die Zeit, durch die Wech­sel­be­we­gung von Idee und Er­fah­rung die sitt­li­che und wis­sen­schaft­li­che Welt re­giert.» Im Sinne die­ses Sat­zes die Welt und ihre Er­schei­nun­gen zu be­trach­ten, schien Goe­the na­tur­ge­mäß.</span>
+        <span id="s-8-6-16"><q author="Jo­hann Wolf­gang von Goe­the" part="1">Durch die Pen­del­schlä­ge wird die Zeit, durch die Wech­sel­be­we­gung von Idee und Er­fah­rung die sitt­li­che und wis­sen­schaft­li­che Welt re­giert.</q> Im Sinne die­ses Sat­zes die Welt und ihre Er­schei­nun­gen zu be­trach­ten, schien Goe­the na­tur­ge­mäß.</span>
         
-        <span id="s-8-6-17">Denn für ihn gab es kei­nen Zwei­fel dar­über, dass die Natur das­sel­be Ver­fah­ren be­ob­ach­tet: dass sie «eine Ent­wick­lung aus einem le­ben­di­gen ge­heim­nis­vol­len Gan­zen» zu den man­nig­fal­ti­gen be­son­de­ren Er­schei­nun­gen hin ist, die den Raum und die Zeit er­fül­len.</span>
+        <span id="s-8-6-17">Denn für ihn gab es kei­nen Zwei­fel dar­über, dass die Natur das­sel­be Ver­fah­ren be­ob­ach­tet: dass sie <q author="Jo­hann Wolf­gang von Goe­the" part="1">eine Ent­wick­lung aus einem le­ben­di­gen ge­heim­nis­vol­len Gan­zen</q> zu den man­nig­fal­ti­gen be­son­de­ren Er­schei­nun­gen hin ist, die den Raum und die Zeit er­fül­len.</span>
         
         <span id="s-8-6-18">Das ge­heim­nis­vol­le Ganze ist die Welt der Idee.</span>
         
-        <span id="s-8-6-19">«Die Idee ist ewig und ein­zig; dass wir auch den Plu­ral brau­chen, ist nicht wohl­ge­tan.</span>
+        <span id="s-8-6-19"><q author="Jo­hann Wolf­gang von Goe­the" part="1">Die Idee ist ewig und ein­zig; dass wir auch den Plu­ral brau­chen, ist nicht wohl­ge­tan. Alles, was wir ge­wahr wer­den und wovon wir reden kön­nen, sind nur Ma­ni­fes­ta­tio­nen der Idee; Be­grif­fe spre­chen wir aus, und in­so­fern ist die Idee selbst ein Be­griff.</q> Das Schaf­fen der Natur geht aus dem Gan­zen, das ide­el­ler Art ist, ins Ein­zel­ne, das als Re­el­les der Wahr­neh­mung ge­ge­ben ist.</span>
         
-        <span id="s-8-6-20">Alles, was wir ge­wahr wer­den und wovon wir reden kön­nen, sind nur Ma­ni­fes­ta­tio­nen der Idee; Be­grif­fe spre­chen wir aus, und in­so­fern ist die Idee selbst ein Be­griff.» Das Schaf­fen der Natur geht aus dem Gan­zen, das ide­el­ler Art ist, ins Ein­zel­ne, das als Re­el­les der Wahr­neh­mung ge­ge­ben ist.</span>
+        <span id="s-8-6-21">Des­halb soll der Be­ob­ach­ter: <q author="Jo­hann Wolf­gang von Goe­the" part="1">das Ide­el­le im Re­el­len an­er­ken­nen und sein je­wei­li­ges Miss­be­ha­gen mit dem End­li­chen durch Er­he­bung ins Un­end­li­che be­schwich­ti­gen</q>. Goe­the ist über­zeugt davon, dass <q author="Jo­hann Wolf­gang von Goe­the" part="1">die Natur nach Ideen ver­fah­re, inglei­chen dass der Mensch in allem, was er be­ginnt, eine Idee ver­fol­ge</q>. Wenn es dem Men­schen wirk­lich ge­lingt, sich zu der Idee zu er­he­ben, und von der Idee aus die Ein­zel­hei­ten der Wahr­neh­mung zu be­grei­fen, so voll­bringt er das­sel­be, was die Natur voll­bringt, indem sie ihre Ge­schöp­fe aus dem ge­heim­nis­vol­len Gan­zen her­vor­ge­hen lässt.</span>
         
-        <span id="s-8-6-21">Des­halb soll der Be­ob­ach­ter: «das Ide­el­le im Re­el­len an­er­ken­nen und sein je­wei­li­ges Miss­be­ha­gen mit dem End­li­chen durch Er­he­bung ins Un­end­li­che be­schwich­ti­gen».</span>
+        <span id="s-8-6-22">So­lan­ge der Mensch das Wir­ken und Schaf­fen der Idee nicht fühlt, bleibt sein Den­ken von der le­ben­di­gen Natur ab­ge­son­dert.</span>
         
-        <span id="s-8-6-22">Goe­the ist über­zeugt davon, dass «die Natur nach Ideen ver­fah­re, inglei­chen dass der Mensch in allem, was er be­ginnt, eine Idee ver­fol­ge».</span>
+        <span id="s-8-6-23">Er muss das Den­ken als eine bloß sub­jek­ti­ve Tä­tig­keit an­se­hen, die ein abs­trak­tes Bild von der Natur ent­wer­fen kann.</span>
         
-        <span id="s-8-6-23">Wenn es dem Men­schen wirk­lich ge­lingt, sich zu der Idee zu er­he­ben, und von der Idee aus die Ein­zel­hei­ten der Wahr­neh­mung zu be­grei­fen, so voll­bringt er das­sel­be, was die Natur voll­bringt, indem sie ihre Ge­schöp­fe aus dem ge­heim­nis­vol­len Gan­zen her­vor­ge­hen lässt.</span>
+        <span id="s-8-6-24">So­bald er aber fühlt, wie die Idee in sei­nem In­nern lebt und tätig ist, be­trach­tet er sich und die Natur als <i>ein</i> Gan­zes, und was als Sub­jek­ti­ves in sei­nem In­nern er­scheint, das gilt ihm zu­gleich als ob­jek­tiv; er weiß, dass er der Natur nicht mehr als Frem­der ge­gen­über­steht, son­dern er fühlt sich ver­wach­sen mit dem Gan­zen der­sel­ben.</span>
         
-        <span id="s-8-6-24">So­lan­ge der Mensch das Wir­ken und Schaf­fen der Idee nicht fühlt, bleibt sein Den­ken von der le­ben­di­gen Natur ab­ge­son­dert.</span>
+        <span id="s-8-6-25">Das Sub­jek­ti­ve ist ob­jek­tiv ge­wor­den; das Ob­jek­ti­ve von dem Geist ganz durch­drun­gen.</span>
         
-        <span id="s-8-6-25">Er muss das Den­ken als eine bloß sub­jek­ti­ve Tä­tig­keit an­se­hen, die ein abs­trak­tes Bild von der Natur ent­wer­fen kann.</span>
+        <span id="s-8-6-26">Goe­the ist der Mei­nung, der Grun­dirr­tum Kants be­ste­he darin, dass die­ser <q author="Im­ma­nu­el Kant" book-title="Kri­tik der rei­nen Ver­nunft" part="1">das sub­jek­ti­ve Er­kennt­nis­ver­mö­gen nun selbst als Ob­jekt be­trach­tet und den Punkt, wo sub­jek­tiv und ob­jek­tiv zu­sam­men­tref­fen, zwar scharf aber nicht ganz rich­tig son­dert.</q> (Wei­ma­rer Aus­ga­be, 2.</span>
         
-        <span id="s-8-6-26">So­bald er aber fühlt, wie die Idee in sei­nem In­nern lebt und tätig ist, be­trach­tet er sich und die Natur als ein Gan­zes, und was als Sub­jek­ti­ves in sei­nem In­nern er­scheint, das gilt ihm zu­gleich als ob­jek­tiv; er weiß, dass er der Natur nicht mehr als Frem­der ge­gen­über­steht, son­dern er fühlt sich ver­wach­sen mit dem Gan­zen der­sel­ben.</span>
+        <span id="s-8-6-27">Ab­tei­lung, Bd.</span>
         
-        <span id="s-8-6-27">Das Sub­jek­ti­ve ist ob­jek­tiv ge­wor­den; das Ob­jek­ti­ve von dem Geist ganz durch­drun­gen.</span>
+        <span id="s-8-6-28">XI, S. 376.) Das Er­kennt­nis­ver­mö­gen er­scheint dem Men­schen nur so lange als sub­jek­tiv, als er nicht be­ach­tet, dass die Natur selbst es ist, die durch das­sel­be spricht.</span>
         
-        <span id="s-8-6-28">Goe­the ist der Mei­nung, der Grun­dirr­tum Kants be­ste­he darin, dass die­ser «das sub­jek­ti­ve Er­kennt­nis­ver­mö­gen nun selbst als Ob­jekt be­trach­tet und den Punkt, wo sub­jek­tiv und ob­jek­tiv zu­sam­men­tref­fen, zwar scharf aber nicht ganz rich­tig son­dert.» (Wei­ma­rer Aus­ga­be, 2.</span>
+        <span id="s-8-6-29">Sub­jek­tiv und ob­jek­tiv tref­fen zu­sam­men, wenn die ob­jek­ti­ve Ide­en­welt im Sub­jekt auf­lebt, und in dem Geist des Men­schen das­je­ni­ge lebt, was in der Natur selbst tätig ist.</span>
         
-        <span id="s-8-6-29">Ab­tei­lung, Bd.</span>
+        <span id="s-8-6-30">Wenn das der Fall ist, dann hört aller Ge­gen­satz von sub­jek­tiv und ob­jek­tiv auf.</span>
         
-        <span id="s-8-6-30">XI, S. 376.) Das Er­kennt­nis­ver­mö­gen er­scheint dem Men­schen nur so lange als sub­jek­tiv, als er nicht be­ach­tet, dass die Natur selbst es ist, die durch das­sel­be spricht.</span>
+        <span id="s-8-6-31">Die­ser Ge­gen­satz hat nur eine Be­deu­tung, so­lan­ge der Mensch ihn künst­lich auf­recht er­hält, so­lan­ge er die Ideen als <i>seine</i> Ge­dan­ken be­trach­tet, durch die das Wesen der Natur ab­ge­bil­det wird, in denen es aber nicht selbst wirk­sam ist.</span>
         
-        <span id="s-8-6-31">Sub­jek­tiv und ob­jek­tiv tref­fen zu­sam­men, wenn die ob­jek­ti­ve Ide­en­welt im Sub­jekt auf­lebt, und in dem Geist des Men­schen das­je­ni­ge lebt, was in der Natur selbst tätig ist.</span>
+        <span id="s-8-6-32">Kant und die Kan­tia­ner hat­ten keine Ah­nung davon, dass in den Ideen der Ver­nunft das Wesen, das An­sich der Dinge un­mit­tel­bar er­lebt wird.</span>
         
-        <span id="s-8-6-32">Wenn das der Fall ist, dann hört aller Ge­gen­satz von sub­jek­tiv und ob­jek­tiv auf.</span>
+        <span id="s-8-6-33">Für sie ist alles Ide­el­le ein bloß Sub­jek­ti­ves.</span>
         
-        <span id="s-8-6-33">Die­ser Ge­gen­satz hat nur eine Be­deu­tung, so­lan­ge der Mensch ihn künst­lich auf­recht er­hält, so­lan­ge er die Ideen als seine Ge­dan­ken be­trach­tet, durch die das Wesen der Natur ab­ge­bil­det wird, in denen es aber nicht selbst wirk­sam ist.</span>
+        <span id="s-8-6-34">Des­halb kamen sie zu der Mei­nung, das Ide­el­le könne nur dann not­wen­dig gül­tig sein, wenn auch das­je­ni­ge, auf das es sich be­zieht, die Er­fah­rungs­welt, nur sub­jek­tiv ist.</span>
         
-        <span id="s-8-6-34">Kant und die Kan­tia­ner hat­ten keine Ah­nung davon, dass in den Ideen der Ver­nunft das Wesen, das An­sich der Dinge un­mit­tel­bar er­lebt wird.</span>
+        <span id="s-8-6-35">Mit Goe­thes An­schau­un­gen steht die Kan­ti­sche Denk­wei­se in einem schar­fen Ge­gen­satz.</span>
         
-        <span id="s-8-6-35">Für sie ist alles Ide­el­le ein bloß Sub­jek­ti­ves.</span>
+        <span id="s-8-6-36">Es gibt zwar ein­zel­ne Äu­ße­run­gen Goe­thes, in denen er von Kants An­sich­ten in einer an­er­ken­nen­den Art spricht.</span>
         
-        <span id="s-8-6-36">Des­halb kamen sie zu der Mei­nung, das Ide­el­le könne nur dann not­wen­dig gül­tig sein, wenn auch das­je­ni­ge, auf das es sich be­zieht, die Er­fah­rungs­welt, nur sub­jek­tiv ist.</span>
+        <span id="s-8-6-37">Er er­zählt, dass er man­chem Ge­spräch über diese An­sich­ten bei­ge­wohnt habe.</span>
         
-        <span id="s-8-6-37">Mit Goe­thes An­schau­un­gen steht die Kan­ti­sche Denk­wei­se in einem schar­fen Ge­gen­satz.</span>
+        <span id="s-8-6-38"><q author="Jo­hann Wolf­gang von Goe­the" book-title="Dich­tung und Wahr­heit" part="1">Mit ei­ni­ger Auf­merk­sam­keit konn­te ich be­mer­ken, dass die alte Haupt­fra­ge sich er­neue­re, wie viel unser Selbst und wie viel die Au­ßen­welt zu un­serm geis­ti­gen Da­sein bei­tra­ge. <i>Ich hatte beide nie­mals ge­son­dert</i>, und wenn ich nach mei­ner Weise über Ge­gen­stän­de phi­lo­so­phier­te, so tat ich es mit un­be­wuss­ter Nai­vi­tät und glaub­te wirk­lich, ich sähe meine Mei­nun­gen vor Augen. So­bald aber jener Streit zur Spra­che kam, moch­te ich mich gern auf die­je­ni­ge Seite stel­len, wel­che dem Men­schen am meis­ten Ehre macht, und gab allen Freun­den voll­kom­men Bei­fall, die mit Kant be­haup­te­ten: wenn gleich alle un­se­re Er­kennt­nis mit der Er­fah­rung an­ge­he, so ent­sprin­ge sie darum doch nicht eben alle aus der Er­fah­rung.</q> Die Idee stammt auch, nach Goe­thes An­sicht, nicht aus dem Teil der Er­fah­rung, wel­cher der blo­ßen Wahr­neh­mung durch die Sinne des Men­schen sich dar­bie­tet.</span>
         
-        <span id="s-8-6-38">Es gibt zwar ein­zel­ne Äu­ße­run­gen Goe­thes, in denen er von Kants An­sich­ten in einer an­er­ken­nen­den Art spricht.</span>
+        <span id="s-8-6-41">Die Ver­nunft, die Fan­ta­sie müs­sen sich be­tä­ti­gen, müs­sen in das In­ne­re der Wesen drin­gen, um sich der ide­el­len Ele­men­te des Da­seins zu be­mäch­ti­gen.</span>
         
-        <span id="s-8-6-39">Er er­zählt, dass er man­chem Ge­spräch über diese An­sich­ten bei­ge­wohnt habe.</span>
+        <span id="s-8-6-42">In­so­fern hat der Geist des Men­schen An­teil an dem Zu­stan­de­kom­men der Er­kennt­nis.</span>
         
-        <span id="s-8-6-40">«Mit ei­ni­ger Auf­merk­sam­keit konn­te ich be­mer­ken, dass die alte Haupt­fra­ge sich er­neue­re, wie viel unser Selbst und wie viel die Au­ßen­welt zu un­serm geis­ti­gen Da­sein bei­tra­ge.</span>
+        <span id="s-8-6-43">Goe­the meint, es mache dem Men­schen Ehre, dass in sei­nem Geist die hö­he­re Wirk­lich­keit, die den Sin­nen nicht zu­gäng­lich ist, zur Er­schei­nung komme; Kant da­ge­gen spricht der Er­fah­rungs­welt den Cha­rak­ter der hö­he­ren Wirk­lich­keit ab, weil sie Be­stand­tei­le ent­hält, die aus dem Geist stam­men.</span>
         
-        <span id="s-8-6-41">Ich hatte beide nie­mals ge­son­dert, und wenn ich nach mei­ner Weise über Ge­gen­stän­de phi­lo­so­phier­te, so tat ich es mit un­be­wuss­ter Nai­vi­tät und glaub­te wirk­lich, ich sähe meine Mei­nun­gen vor Augen.</span>
+        <span id="s-8-6-44">Nur wenn er die Kant­schen Sätze erst im Sinne sei­ner Welt­an­schau­ung um­deu­te­te, konn­te Goe­the sich zu­stim­mend zu ihnen ver­hal­ten.</span>
         
-        <span id="s-8-6-42">So­bald aber jener Streit zur Spra­che kam, moch­te ich mich gern auf die­je­ni­ge Seite stel­len, wel­che dem Men­schen am meis­ten Ehre macht, und gab allen Freun­den voll­kom­men Bei­fall, die mit Kant be­haup­te­ten: wenn gleich alle un­se­re Er­kennt­nis mit der Er­fah­rung an­ge­he, so ent­sprin­ge sie darum doch nicht eben alle aus der Er­fah­rung.» Die Idee stammt auch, nach Goe­thes An­sicht, nicht aus dem Teil der Er­fah­rung, wel­cher der blo­ßen Wahr­neh­mung durch die Sinne des Men­schen sich dar­bie­tet.</span>
+        <span id="s-8-6-45">Die Grund­la­gen der Kant­schen Denk­wei­se wi­der­spre­chen Goe­thes Wesen aufs schärfs­te.</span>
         
-        <span id="s-8-6-43">Die Ver­nunft, die Fan­ta­sie müs­sen sich be­tä­ti­gen, müs­sen in das In­ne­re der Wesen drin­gen, um sich der ide­el­len Ele­men­te des Da­seins zu be­mäch­ti­gen.</span>
+        <span id="s-8-6-46">Wenn die­ser den Wi­der­spruch nicht scharf genug be­ton­te, so liegt das wohl nur darin, dass er sich auf diese Grund­la­gen nicht ein­ließ, weil sie ihm zu fremd waren.</span>
         
-        <span id="s-8-6-44">In­so­fern hat der Geist des Men­schen An­teil an dem Zu­stan­de­kom­men der Er­kennt­nis.</span>
+        <span id="s-8-6-47"><q author="Jo­hann Wolf­gang von Goe­the" part="1">Der Ein­gang (der Kri­tik der rei­nen Ver­nunft) war es, der mir ge­fiel, ins La­by­rinth selbst könnt’ ich mich nicht wagen: bald hin­der­te mich die Dich­tungs­ga­be, bald der Men­schen­ver­stand, und ich fühl­te mich nir­gend ge­bes­sert.</q> Über seine Ge­sprä­che mit den Kan­tia­nern muss­te sich Goe­the ein­ge­ste­hen: <q author="Jo­hann Wolf­gang von Goe­the" part="1">Sie hör­ten mich wohl, konn­ten mir aber nichts er­wi­dern, noch ir­gend för­der­lich sein.</q></span>
         
-        <span id="s-8-6-45">Goe­the meint, es mache dem Men­schen Ehre, dass in sei­nem Geist die hö­he­re Wirk­lich­keit, die den Sin­nen nicht zu­gäng­lich ist, zur Er­schei­nung komme; Kant da­ge­gen spricht der Er­fah­rungs­welt den Cha­rak­ter der hö­he­ren Wirk­lich­keit ab, weil sie Be­stand­tei­le ent­hält, die aus dem Geist stam­men.</span>
-        
-        <span id="s-8-6-46">Nur wenn er die Kant­schen Sätze erst im Sinne sei­ner Welt­an­schau­ung um­deu­te­te, konn­te Goe­the sich zu­stim­mend zu ihnen ver­hal­ten.</span>
-        
-        <span id="s-8-6-47">Die Grund­la­gen der Kant­schen Denk­wei­se wi­der­spre­chen Goe­thes Wesen aufs schärfs­te.</span>
-        
-        <span id="s-8-6-48">Wenn die­ser den Wi­der­spruch nicht scharf genug be­ton­te, so liegt das wohl nur darin, dass er sich auf diese Grund­la­gen nicht ein­ließ, weil sie ihm zu fremd waren.</span>
-        
-        <span id="s-8-6-49">«Der Ein­gang (der Kri­tik der rei­nen Ver­nunft) war es, der mir ge­fiel, ins La­by­rinth selbst könnt’ ich mich nicht wagen: bald hin­der­te mich die Dich­tungs­ga­be, bald der Men­schen­ver­stand, und ich fühl­te mich nir­gend ge­bes­sert.» Über seine Ge­sprä­che mit den Kan­tia­nern muss­te sich Goe­the ein­ge­ste­hen: «Sie hör­ten mich wohl, konn­ten mir aber nichts er­wi­dern, noch ir­gend för­der­lich sein.</span>
-        
-        <span id="s-8-6-50">Mehr als ein­mal be­geg­ne­te es mir, dass einer oder der an­de­re mit lä­cheln­der Ver­wun­de­rung zu­ge­stand: es sei frei­lich ein Ana­lo­gon Kant­scher Vor­stel­lungs­art, aber ein selt­sa­mes.» Es war, wie ich ge­zeigt, auch kein Ana­lo­gon, son­dern das ent­schie­dens­te Ge­gen­teil der Kant­schen Vor­stel­lungs­art.</span>
+        <span id="s-8-6-48">Mehr als ein­mal be­geg­ne­te es mir, dass einer oder der an­de­re mit lä­cheln­der Ver­wun­de­rung zu­ge­stand: es sei frei­lich ein Ana­lo­gon Kant­scher Vor­stel­lungs­art, aber ein selt­sa­mes. Es war, wie ich ge­zeigt, auch kein Ana­lo­gon, son­dern das ent­schie­dens­te Ge­gen­teil der Kant­schen Vor­stel­lungs­art.</span>
         
       </p>
     </section>
     <section id="p-8-7">
       <p>
-        <span id="s-8-7-1">7| Es ist in­ter­es­sant zu sehen, wie Schil­ler sich über den Ge­gen­satz der Goe­the­schen Denk­wei­se und sei­ner ei­ge­nen auf­zu­klä­ren sucht.</span>
+        <a class="p-num" href="#p-8-7">7|</a>
+        <span id="s-8-7-1">Es ist in­ter­es­sant zu sehen, wie <i>Schil­ler</i> sich über den Ge­gen­satz der Goe­the­schen Denk­wei­se und sei­ner ei­ge­nen auf­zu­klä­ren sucht.</span>
         
         <span id="s-8-7-2">Er emp­fin­det das Ur­sprüng­li­che und Freie der Goe­the­schen Welt­an­schau­ung.</span>
         
         <span id="s-8-7-3">Aber er kann die ein­sei­tig er­fass­ten pla­to­ni­schen Ge­dan­ken­ele­men­te aus sei­nem ei­ge­nen Geist nicht ent­fer­nen.</span>
         
-        <span id="s-8-7-4">Er kann sich nicht zu der Ein­sicht er­he­ben, dass Idee und Wahr­neh­mung in der Wirk­lich­keit nicht ge­trennt vor­han­den sind, son­dern nur künst­lich von dem durch falsch ge­lenk­te Ide­en­rich­tung ver­führ­ten Ver­stand ge­trennt ge­dacht wer­den.</span>
+        <span id="s-8-7-4">Er kann sich nicht zu der Ein­sicht er­he­ben, dass Idee und Wahr­neh­mung in der Wirk­lich­keit nicht ge­trennt vor­han­den sind, son­dern nur künst­lich von dem durch falsch ge­lenk­te Ide­en­rich­tung ver­führ­ten Ver­stand ge­trennt <i>ge­dacht</i> wer­den.</span>
         
         <span id="s-8-7-5">Des­halb stellt er der Goe­the­schen Geis­tes­art, die er als eine in­tui­ti­ve be­zeich­net, die ei­ge­ne als spe­ku­la­ti­ve ge­gen­über und be­haup­tet, dass beide, wenn sie nur kraft­voll genug wir­ken, zu einem glei­chen Ziele füh­ren müs­sen.</span>
         
@@ -312,7 +292,7 @@
         
         <span id="s-8-7-12">Wäre dies der Fall, dann könn­te es einen Weg geben, auf dem der In­halt der Ideen über die Dinge der Wahr­neh­mung in den Geist käme, auch wenn ihn die­ser nicht in der Er­fah­rung auf­such­te.</span>
         
-        <span id="s-8-7-13">Ist aber die Ide­en­welt mit der Er­fah­rungs­wirk­lich­keit un­trenn­bar ver­bun­den, sind beide nur als ein Gan­zes vor­han­den, so kann es nur eine in­tui­ti­ve Er­kennt­nis, die in der Er­fah­rung die Idee auf­sucht und mit dem In­di­vi­du­el­len zu­gleich die Gat­tung er­fasst, geben.</span>
+        <span id="s-8-7-13">Ist aber die Ide­en­welt mit der Er­fah­rungs­wirk­lich­keit un­trenn­bar ver­bun­den, sind beide nur als <i>ein</i> Gan­zes vor­han­den, so kann es nur eine in­tui­ti­ve Er­kennt­nis, die in der Er­fah­rung die Idee auf­sucht und mit dem In­di­vi­du­el­len zu­gleich die Gat­tung er­fasst, geben.</span>
         
         <span id="s-8-7-14">In Wahr­heit gibt es auch kei­nen rein spe­ku­la­ti­ven Geist im Sinne Schil­lers.</span>
         
@@ -334,7 +314,7 @@
         
         <span id="s-8-7-23">Er wird aus sei­ner Ide­en­welt aber nie mehr her­aus­ho­len kön­nen, als die­je­ni­gen hin­ein­ge­legt haben, von denen er sie über­lie­fert er­hal­ten hat.</span>
         
-        <span id="s-8-7-24">Wenn Schil­ler meint, dass der spe­ku­la­ti­ve Geist, wenn er ge­nia­lisch ist, «zwar immer nur Gat­tun­gen, aber mit der Mög­lich­keit des Le­bens und mit ge­grün­de­ter Be­zie­hung auf wirk­li­che Ob­jek­te» er­zeugt (vgl. Schil­lers Brief an Goe­the vom 23.</span>
+        <span id="s-8-7-24">Wenn Schil­ler meint, dass der spe­ku­la­ti­ve Geist, wenn er ge­nia­lisch ist, <q author="Fried­rich Schil­ler" part="1">zwar immer nur Gat­tun­gen, aber mit der Mög­lich­keit des Le­bens und mit ge­grün­de­ter Be­zie­hung auf wirk­li­che Ob­jek­te</q> er­zeugt (vgl. Schil­lers Brief an Goe­the vom 23.</span>
         
         <span id="s-8-7-25">Au­gust 1794), so ist er im Irr­tum.</span>
         
@@ -354,7 +334,7 @@
         
         <span id="s-8-7-33">Nicht als eine Geis­tes­art, die neben der in­tui­ti­ven als gleich­be­rech­tigt an­zu­se­hen ist, kann die spe­ku­la­ti­ve gel­ten, son­dern als eine ver­küm­mer­te, an Leben ver­arm­te Den­kart.</span>
         
-        <span id="s-8-7-34">Der in­tui­ti­ve Geist hat es nicht bloß mit In­di­vi­du­en zu tun, er sucht nicht in dem Em­pi­ri­schen den Cha­rak­ter der Not­wen­dig­keit auf.</span>
+        <span id="s-8-7-34">Der in­tui­ti­ve Geist hat es nicht bloß mit In­di­vi­du­en zu tun, er <i>sucht</i> nicht in dem Em­pi­ri­schen den Cha­rak­ter der Not­wen­dig­keit auf.</span>
         
         <span id="s-8-7-35">Son­dern wenn er sich der Natur zu­wen­det, ver­ei­ni­gen sich bei ihm Wahr­neh­mung und Idee un­mit­tel­bar zu einer Ein­heit.</span>
         
@@ -366,9 +346,7 @@
         
         <span id="s-8-7-39">Hein­roth hat in sei­ner An­thro­po­lo­gie ein treff­li­ches Wort über die­ses Den­ken ge­spro­chen, das Goe­the im höchs­ten Grad ge­fiel, weil es ihn über seine Natur auf­klär­te.</span>
         
-        <span id="s-8-7-40">«Herr Dr. Hein­roth...</span>
-        
-        <span id="s-8-7-41">spricht von mei­nem Wesen und Wir­ken güns­tig, ja er be­zeich­net meine Ver­fah­rungs­art als eine ei­gen­tüm­li­che: dass näm­lich mein Denk­ver­mö­gen ge­gen­ständ­lich tätig sei, womit er aus­spre­chen will: dass mein Den­ken sich von den Ge­gen­stän­den nicht son­de­re; dass die Ele­men­te der Ge­gen­stän­de, die An­schau­un­gen in das­sel­be ein­ge­hen und von ihm auf das in­nigs­te durch­drun­gen wer­den; dass mein An­schau­en selbst ein Den­ken, mein Den­ken ein An­schau­en sei.» Im Grun­de schil­dert Hein­roth nichts als die Art, wie sich jedes ge­sun­de Den­ken zu den Ge­gen­stän­den ver­hält.</span>
+        <span id="s-8-7-40"><q author="Jo­hann Chris­ti­an Au­gust Hein­roth" book-title="An­thro­po­lo­gie" part="1">Herr Dr. Hein­roth... spricht von mei­nem Wesen und Wir­ken güns­tig, ja er be­zeich­net meine Ver­fah­rungs­art als eine ei­gen­tüm­li­che: dass näm­lich mein Denk­ver­mö­gen <i>ge­gen­ständ­lich</i> tätig sei, womit er aus­spre­chen will: dass mein Den­ken sich von den Ge­gen­stän­den nicht son­de­re; dass die Ele­men­te der Ge­gen­stän­de, die An­schau­un­gen in das­sel­be ein­ge­hen und von ihm auf das in­nigs­te durch­drun­gen wer­den; dass mein An­schau­en selbst ein Den­ken, mein Den­ken ein An­schau­en sei.</q> Im Grun­de schil­dert Hein­roth nichts als die Art, wie sich jedes ge­sun­de Den­ken zu den Ge­gen­stän­den ver­hält.</span>
         
         <span id="s-8-7-42">Jede an­de­re Ver­fah­rungs­art ist eine Ab­ir­rung von dem na­tur­ge­mä­ßen Weg.</span>
         
@@ -380,23 +358,16 @@
         
         <span id="s-8-7-46">Er schreibt im An­fang des Jah­res 1784 einen Auf­satz über den Gra­nit.</span>
         
-        <span id="s-8-7-47">Er ver­setzt sich auf einen aus die­sem Ge­stein be­ste­hen­den Gip­fel, wo er sich sagen kann: «Hier ruhst du un­mit­tel­bar auf einem Grund, der bis zu den tiefs­ten Orten der Erde hin­reicht, keine neue­re Schicht, keine auf­ge­häuf­te, zu­sam­men­ge­schwemm­te Trüm­mer haben sich zwi­schen dich und den fes­ten Boden der Ur­welt ge­legt, du gehst nicht wie in jenen frucht­ba­ren, schö­nen Tä­lern über ein an­hal­ten­des Grab, diese Gip­fel haben nichts Le­ben­di­ges er­zeugt und nichts Le­ben­di­ges ver­schlun­gen, sie sind vor allem Leben und über alles Leben.</span>
-        
-        <span id="s-8-7-48">In die­sem Au­gen­blick, da die in­nern an­zie­hen­den und be­we­gen­den Kräf­te der Erde gleich­sam un­mit­tel­bar auf mich wir­ken, da die Ein­flüs­se des Him­mels mich anher um­schwe­ben, werde ich zu hö­he­ren Be­trach­tun­gen der Natur hin­auf­ge­stimmt, und wie der Men­schen­geist alles be­lebt, so wird auch ein Gleich­nis in mir rege, des­sen Er­ha­ben­heit ich nicht wi­der­ste­hen kann.</span>
-        
-        <span id="s-8-7-49">So ein­sam, sage ich zu mir sel­ber, indem ich die­sen ganz nack­ten Gip­fel hin­ab­se­he und kaum in der Ferne am Fuße ein ge­ring wach­sen­des Moos er­bli­cke, so ein­sam, sage ich, wird es dem Men­schen zu­mu­te, der nur den äl­tes­ten, ers­ten, tiefs­ten Ge­füh­len der Wahr­heit seine Seele er­öff­nen will.</span>
-        
-        <span id="s-8-7-50">– Da kann er zu sich sagen: hier auf dem äl­tes­ten, ewi­gen Altar, der un­mit­tel­bar auf die Tiefe der Schöp­fung ge­baut ist, bring ich dem Wesen aller Wesen ein Opfer.</span>
-        
-        <span id="s-8-7-51">Ich fühle die ers­ten, fes­tes­ten An­fän­ge un­sers Da­seins; ich über­schaue die Welt, ihre schrof­fe­ren und ge­lin­de­ren Täler und ihre fer­nen frucht­ba­ren Wei­den, meine Seele wird über sich selbst und über alles er­ha­ben und sehnt sich nach dem nä­hern Him­mel.</span>
-        
-        <span id="s-8-7-52">Aber bald ruft die bren­nen­de Sonne Durst und Hun­ger, seine mensch­li­chen Be­dürf­nis­se, zu­rück.</span>
-        
-        <span id="s-8-7-53">Er sieht sich nach jenen Tä­lern um, über die sich sein Geist schon hin­aus­schwang.» Sol­chen En­thu­si­as­mus der Er­kennt­nis, sol­che Emp­fin­dun­gen für die äl­tes­ten, fes­ten Wahr­hei­ten kann nur der­je­ni­ge in sich ent­wi­ckeln, der immer und immer wie­der aus den Re­gio­nen der Ide­en­welt den Weg zu­rück­fin­det zu den un­mit­tel­ba­ren An­schau­un­gen.</span>
+        <span id="s-8-7-47">Er ver­setzt sich auf einen aus die­sem Ge­stein be­ste­hen­den Gip­fel, wo er sich sagen kann: <q author="Jo­hann Wolf­gang von Goe­the" book-title="Über den Gra­nit" part="1">Hier ruhst du un­mit­tel­bar auf einem Grund, der bis zu den tiefs­ten Orten der Erde hin­reicht, keine neue­re Schicht, keine auf­ge­häuf­te, zu­sam­men­ge­schwemm­te Trüm­mer haben sich zwi­schen dich und den fes­ten Boden der Ur­welt ge­legt, du gehst nicht wie in jenen frucht­ba­ren, schö­nen Tä­lern über ein an­hal­ten­des Grab, diese Gip­fel haben nichts Le­ben­di­ges er­zeugt und nichts Le­ben­di­ges ver­schlun­gen, sie sind vor allem Leben und über alles Leben. In die­sem Au­gen­blick, da die in­nern an­zie­hen­den und be­we­gen­den Kräf­te der Erde gleich­sam un­mit­tel­bar auf mich wir­ken, da die Ein­flüs­se des Him­mels mich anher um­schwe­ben, werde ich zu hö­he­ren Be­trach­tun­gen der Natur hin­auf­ge­stimmt, und wie der Men­schen­geist alles be­lebt, so wird auch ein Gleich­nis in mir rege, des­sen Er­ha­ben­heit ich nicht wi­der­ste­hen kann. So ein­sam, sage ich zu mir sel­ber, indem ich die­sen ganz nack­ten Gip­fel hin­ab­se­he und kaum in der Ferne am Fuße ein ge­ring wach­sen­des Moos er­bli­cke, so ein­sam, sage ich, wird es dem Men­schen zu­mu­te, <i>der nur den äl­tes­ten, ers­ten, tiefs­ten Ge­füh­len der Wahr­heit</i> seine Seele er­öff­nen will. – Da kann er zu sich sagen: hier auf dem äl­tes­ten, ewi­gen Altar, der un­mit­tel­bar auf die Tiefe der Schöp­fung ge­baut ist, bring ich dem Wesen aller Wesen ein Opfer. Ich fühle die ers­ten, fes­tes­ten An­fän­ge un­sers Da­seins; ich über­schaue die Welt, ihre schrof­fe­ren und ge­lin­de­ren Täler und ihre fer­nen frucht­ba­ren Wei­den, meine Seele wird über sich selbst und über alles er­ha­ben und sehnt sich nach dem nä­hern Him­mel. Aber bald ruft die bren­nen­de Sonne Durst und Hun­ger, seine mensch­li­chen Be­dürf­nis­se, zu­rück. <i>Er sieht sich nach jenen Tä­lern um</i>, über die sich sein Geist schon hin­aus­schwang.</q> Sol­chen En­thu­si­as­mus der Er­kennt­nis, sol­che Emp­fin­dun­gen für die äl­tes­ten, fes­ten Wahr­hei­ten kann nur der­je­ni­ge in sich ent­wi­ckeln, der immer und immer wie­der aus den Re­gio­nen der Ide­en­welt den Weg zu­rück­fin­det zu den un­mit­tel­ba­ren An­schau­un­gen.</span>
         
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="07-die-folgen-der-platonischen-weltanschauung.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="09-personlichkeit-und-weltanschauung.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>

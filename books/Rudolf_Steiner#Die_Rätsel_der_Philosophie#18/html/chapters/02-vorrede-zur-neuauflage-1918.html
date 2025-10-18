@@ -1,10 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" data-theme="classic" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VORREDE ZUR NEUAUFLAGE 1918</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script>
+    (function(){
+      try {
+        var d = document.documentElement;
+        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "classic";
+        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
+        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        d.setAttribute("data-theme", theme);
+        d.setAttribute("data-para", para);
+        d.setAttribute("data-width", width);
+      } catch(e) {}
+    })();
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/styles.css" />
 </head>
@@ -18,35 +31,33 @@
         
         <span id="s-2-1-2">Ich möch­te dem da­mals Ge­sag­ten ei­ni­ges hin­zu­fü­gen, das mit einer Frage zu­sam­men­hängt, die bei dem­je­ni­gen mehr oder we­ni­ger be­wusst in der Seele lebt, der zu einem Buch über «Die Rät­sel der Phi­lo­so­phie» greift.</span>
         
-        <span id="s-2-1-3">Es ist die­je­ni­ge der Be­zie­hung phi­lo­so­phi­scher Be­trach­tung zu dem un­mit­tel­ba­ren Leben.</span>
+        <span id="s-2-1-3">Es ist die­je­ni­ge der Be­zie­hung phi­lo­so­phi­scher Be­trach­tung zu dem un­mit­tel­ba­ren <i>Leben</i>. Jeder phi­lo­so­phi­sche Ge­dan­ke, der nicht von die­sem Leben selbst ge­for­dert wird, ist zur Un­frucht­bar­keit ver­ur­teilt, auch wenn er die­sen oder jenen Men­schen, der eine Nei­gung zum Nach­sin­nen hat, eine Weile an­zieht.</span>
         
-        <span id="s-2-1-4">Jeder phi­lo­so­phi­sche Ge­dan­ke, der nicht von die­sem Leben selbst ge­for­dert wird, ist zur Un­frucht­bar­keit ver­ur­teilt, auch wenn er die­sen oder jenen Men­schen, der eine Nei­gung zum Nach­sin­nen hat, eine Weile an­zieht.</span>
+        <span id="s-2-1-4">Ein frucht­ba­rer Ge­dan­ke muss seine Wur­zel in den Ent­wick­lungs­vor­gän­gen haben, die von der Mensch­heit im Ver­lauf ihres ge­schicht­li­chen Wer­dens durch­zu­ma­chen sind.</span>
         
-        <span id="s-2-1-5">Ein frucht­ba­rer Ge­dan­ke muss seine Wur­zel in den Ent­wick­lungs­vor­gän­gen haben, die von der Mensch­heit im Ver­lauf ihres ge­schicht­li­chen Wer­dens durch­zu­ma­chen sind.</span>
+        <span id="s-2-1-5">Und wer die Ge­schich­te der phi­lo­so­phi­schen Ge­dan­ken­ent­wick­lung von ir­gend­ei­nem Ge­sichts­punkt aus dar­stel­len will, der kann sich nur an sol­che vom Leben ge­for­der­te Ge­dan­ken hal­ten.</span>
         
-        <span id="s-2-1-6">Und wer die Ge­schich­te der phi­lo­so­phi­schen Ge­dan­ken­ent­wick­lung von ir­gend­ei­nem Ge­sichts­punkt aus dar­stel­len will, der kann sich nur an sol­che vom Leben ge­for­der­te Ge­dan­ken hal­ten.</span>
+        <span id="s-2-1-6">Es müs­sen das Ge­dan­ken sein, die über­ge­führt in die Le­bens­hal­tung den Men­schen so durch­drin­gen, dass er an ihnen Kräf­te hat, die seine Er­kennt­nis lei­ten, und die ihm bei den Auf­ga­ben sei­nes Da­seins Be­ra­ter und Hel­fer sein kön­nen.</span>
         
-        <span id="s-2-1-7">Es müs­sen das Ge­dan­ken sein, die über­ge­führt in die Le­bens­hal­tung den Men­schen so durch­drin­gen, dass er an ihnen Kräf­te hat, die seine Er­kennt­nis lei­ten, und die ihm bei den Auf­ga­ben sei­nes Da­seins Be­ra­ter und Hel­fer sein kön­nen.</span>
+        <span id="s-2-1-7">Weil die Mensch­heit sol­che Ge­dan­ken braucht, sind phi­lo­so­phi­sche Welt­an­schau­un­gen ent­stan­den.</span>
         
-        <span id="s-2-1-8">Weil die Mensch­heit sol­che Ge­dan­ken braucht, sind phi­lo­so­phi­sche Welt­an­schau­un­gen ent­stan­den.</span>
+        <span id="s-2-1-8">Könn­te man das Leben meis­tern ohne sol­che Ge­dan­ken, so hätte nie ein Mensch eine wahr­haft in­ne­re Be­rech­ti­gung ge­habt, an die «Rät­sel der Phi­lo­so­phie» zu den­ken.</span>
         
-        <span id="s-2-1-9">Könn­te man das Leben meis­tern ohne sol­che Ge­dan­ken, so hätte nie ein Mensch eine wahr­haft in­ne­re Be­rech­ti­gung ge­habt, an die «Rät­sel der Phi­lo­so­phie» zu den­ken.</span>
+        <span id="s-2-1-9">Ein Zeit­al­ter, das sol­chem Den­ken ab­ge­neigt ist, zeigt da­durch nur, dass es kein Be­dürf­nis emp­fin­det, das Men­schen­le­ben so zu ge­stal­ten, dass die­ses wirk­lich nach allen Sei­ten sei­nen Auf­ga­ben gemäß zur Er­schei­nung kommt.</span>
         
-        <span id="s-2-1-10">Ein Zeit­al­ter, das sol­chem Den­ken ab­ge­neigt ist, zeigt da­durch nur, dass es kein Be­dürf­nis emp­fin­det, das Men­schen­le­ben so zu ge­stal­ten, dass die­ses wirk­lich nach allen Sei­ten sei­nen Auf­ga­ben gemäß zur Er­schei­nung kommt.</span>
+        <span id="s-2-1-10">Aber diese Ab­nei­gung rächt sich im Laufe der mensch­li­chen Ent­wick­lung.</span>
         
-        <span id="s-2-1-11">Aber diese Ab­nei­gung rächt sich im Laufe der mensch­li­chen Ent­wick­lung.</span>
+        <span id="s-2-1-11">Das Leben bleibt ver­küm­mert in sol­chen Zeit­al­tern.</span>
         
-        <span id="s-2-1-12">Das Leben bleibt ver­küm­mert in sol­chen Zeit­al­tern.</span>
+        <span id="s-2-1-12">Und die Men­schen be­mer­ken die Ver­küm­me­rung nicht, weil sie von den For­de­run­gen nichts wis­sen wol­len, die in den Tie­fen des Men­schen­we­sens doch vor­han­den blei­ben und die sie nur nicht er­fül­len.</span>
         
-        <span id="s-2-1-13">Und die Men­schen be­mer­ken die Ver­küm­me­rung nicht, weil sie von den For­de­run­gen nichts wis­sen wol­len, die in den Tie­fen des Men­schen­we­sens doch vor­han­den blei­ben und die sie nur nicht er­fül­len.</span>
+        <span id="s-2-1-13">Ein fol­gen­des Zeit­al­ter bringt die Nicht­er­fül­lung zum Vor­schein.</span>
         
-        <span id="s-2-1-14">Ein fol­gen­des Zeit­al­ter bringt die Nicht­er­fül­lung zum Vor­schein.</span>
+        <span id="s-2-1-14">Die Enkel fin­den in der Ge­stal­tung des ver­küm­mer­ten Le­bens etwas vor, das ihnen die Un­ter­las­sung der Groß­vä­ter an­ge­rich­tet hat.</span>
         
-        <span id="s-2-1-15">Die Enkel fin­den in der Ge­stal­tung des ver­küm­mer­ten Le­bens etwas vor, das ihnen die Un­ter­las­sung der Groß­vä­ter an­ge­rich­tet hat.</span>
+        <span id="s-2-1-15">Diese Un­ter­las­sung der vor­her­ge­hen­den Zeit ist zum un­voll­kom­me­nen Leben der Fol­ge­zeit ge­wor­den, in das sich diese Enkel hin­ein­ge­stellt fin­den.</span>
         
-        <span id="s-2-1-16">Diese Un­ter­las­sung der vor­her­ge­hen­den Zeit ist zum un­voll­kom­me­nen Leben der Fol­ge­zeit ge­wor­den, in das sich diese Enkel hin­ein­ge­stellt fin­den.</span>
-        
-        <span id="s-2-1-17">Im Le­bens­gan­zen muss Phi­lo­so­phie wal­ten; man kann gegen die For­de­rung sün­di­gen; aber die Sünde muss ihre Wir­kun­gen her­vor­brin­gen.</span>
+        <span id="s-2-1-16">Im <i>Le­bens­gan­zen</i> muss Phi­lo­so­phie wal­ten; man kann gegen die For­de­rung sün­di­gen; aber die Sünde muss ihre Wir­kun­gen her­vor­brin­gen.</span>
         
       </p>
     </section>
@@ -62,7 +73,7 @@
     </section>
     <section id="p-2-3">
       <p>
-        <span id="s-2-3-1">Von vorn­her­ein wird sich bei man­chem gegen diese Emp­fin­dung etwas hem­mend auf­drän­gen, das den Schein einer Tat­sa­che an sich trägt.</span>
+        <span id="s-2-3-1">Von vorn­her­ein wird sich bei man­chem gegen diese Emp­fin­dung etwas hem­mend auf­drän­gen, das den <i>Schein</i> einer Tat­sa­che an sich trägt.</span>
         
         <span id="s-2-3-2">Die phi­lo­so­phi­sche Be­trach­tung soll eine Le­bens­not­wen­dig­keit sein: und doch gibt das mensch­li­che Den­ken im Laufe sei­ner Ent­wick­lung nicht ein­deu­ti­ge, son­dern viel­deu­ti­ge, schein­bar sich ganz wi­der­spre­chen­de Lö­sun­gen der «Rät­sel der Phi­lo­so­phie».</span>
         
@@ -86,7 +97,7 @@
         
         <span id="s-2-3-12">Die Ge­sin­nung, wel­che vor­an­ge­gan­ge­ne Ge­dan­ken als un­voll­kom­me­ne durch die in der Ge­gen­wart zu­ta­ge tre­ten­den «voll­kom­me­nen» ab­ge­tan wähnt, taugt nicht zum Ver­ste­hen der phi­lo­so­phi­schen Ent­wick­lung der Mensch­heit.</span>
         
-        <span id="s-2-3-13">Ich habe ver­sucht, durch das Er­fas­sen des Sin­nes, den es hat, dass ein fol­gen­des Zeit­al­ter phi­lo­so­phisch das vor­an­ge­hen­de wi­der­legt, den Gang der mensch­li­chen Ge­dan­ken­ent­wick­lung zu be­grei­fen.</span>
+        <span id="s-2-3-13">Ich habe ver­sucht, durch das Er­fas­sen des <i>Sin­nes</i>, den es hat, dass ein fol­gen­des Zeit­al­ter phi­lo­so­phisch das vor­an­ge­hen­de wi­der­legt, den Gang der mensch­li­chen Ge­dan­ken­ent­wick­lung zu be­grei­fen.</span>
         
         <span id="s-2-3-14">Wel­che Ideen ein sol­ches Er­fas­sen zei­tigt, habe ich in den ein­lei­ten­den Aus­füh­run­gen «Zur Ori­en­tie­rung über die Leit­li­ni­en der Dar­stel­lung» aus­ge­spro­chen.</span>
         
@@ -96,11 +107,11 @@
         
         <span id="s-2-3-17">Ich kann nur hof­fen, dass man doch fin­den werde, diese Ideen seien nicht vor­her aus­ge­dacht und dann der Be­trach­tung des phi­lo­so­phi­schen Wer­de­gangs auf­ge­drängt, son­dern sie seien so ge­won­nen, wie der Na­tur­for­scher seine Ge­set­ze fin­det.</span>
         
-        <span id="s-2-3-18">Sie sind aus der Be­ob­ach­tung der phi­lo­so­phi­schen Ge­dan­ken­ent­wick­lung her­aus­ge­flos­sen.</span>
+        <span id="s-2-3-18">Sie sind aus der <i>Be­ob­ach­tung</i> der phi­lo­so­phi­schen Ge­dan­ken­ent­wick­lung her­aus­ge­flos­sen.</span>
         
         <span id="s-2-3-19">Und man hat nicht das Recht, die Er­geb­nis­se einer Be­ob­ach­tung zu­rück­zu­wei­sen, weil sie Vor­stel­lun­gen wi­der­spre­chen, die man aus ir­gend­wel­chen Ge­dan­kennei­gun­gen ohne Be­ob­ach­tung für rich­tig hält.</span>
         
-        <span id="s-2-3-20">Der Aber­glau­be - denn als sol­cher zei­gen sich sol­che Vor­stel­lun­gen, dass es im ge­schicht­li­chen Wer­den der Mensch­heit Kräf­te nicht geben könne, die sich in zu be­gren­zen­den Zeit­al­tern auf eine ei­gen­tüm­li­che Art of­fen­ba­ren und die in sinn- und ge­setz­ge­mä­ßer Weise das Wer­den der mensch­li­chen Ge­dan­ken le­bens­voll be­herr­schen, er wird mei­ner Dar­stel­lung ent­ge­gen­ste­hen.</span>
+        <span id="s-2-3-20">Der Aber­glau­be - denn als sol­cher zei­gen sich sol­che Vor­stel­lun­gen, dass es im ge­schicht­li­chen Wer­den der Mensch­heit Kräf­te <i>nicht</i> geben könne, die sich in zu be­gren­zen­den Zeit­al­tern auf eine ei­gen­tüm­li­che Art of­fen­ba­ren und die in sinn- und ge­setz­ge­mä­ßer Weise das Wer­den der mensch­li­chen Ge­dan­ken le­bens­voll be­herr­schen, er wird mei­ner Dar­stel­lung ent­ge­gen­ste­hen.</span>
         
         <span id="s-2-3-21">Denn diese war mir auf­ge­zwun­gen, weil mir die Be­ob­ach­tung die­ses Wer­dens das Vor­han­den­sein sol­cher Kräf­te be­wie­sen hat.</span>
         
@@ -110,7 +121,7 @@
     </section>
     <section id="p-2-4">
       <p>
-        <span id="s-2-4-1">Mir scheint, dass nur mög­lich ist, in der Ge­gen­wart eine Stel­lung zu den «Rät­seln der Phi­lo­so­phie» zu ge­win­nen, die für das Leben frucht­bar ist, wenn man diese die ver­gan­ge­nen Zeit­al­ter be­herr­schen­den Kräf­te kennt.</span>
+        <span id="s-2-4-1">Mir scheint, dass nur mög­lich ist, in der <i>Ge­gen­wart</i> eine Stel­lung zu den «Rät­seln der Phi­lo­so­phie» zu ge­win­nen, die für das Leben frucht­bar ist, wenn man diese die ver­gan­ge­nen Zeit­al­ter be­herr­schen­den Kräf­te kennt.</span>
         
         <span id="s-2-4-2">Und mehr als bei einem an­de­ren Zwei­ge ge­schicht­li­cher Be­trach­tung ist es bei einer Ge­schich­te der Ge­dan­ken das ein­zig Mög­li­che, die Ge­gen­wart aus der Ver­gan­gen­heit her­vor­wach­sen zu las­sen.</span>
         
@@ -118,13 +129,13 @@
         
         <span id="s-2-4-4">Wer nicht ver­mag, einen den Trieb­kräf­ten sei­nes ei­ge­nen Zeit­al­ters wahr­haft an­ge­mes­se­nen Welt­an­schau­ungs­ge­sichts­punkt zu ge­win­nen, dem muss auch der Sinn des ver­gan­ge­nen Geis­tes­le­bens ver­bor­gen blei­ben.</span>
         
-        <span id="s-2-4-5">Ich will hier nicht ent­schei­den, ob auf einem an­de­ren Ge­bie­te ge­schicht­li­cher Be­trach­tung eine Dar­stel­lung frucht­bar sein kann, der nicht we­nigs­tens eine An­sicht über die Ver­hält­nis­se der Ge­gen­wart auf dem ent­spre­chen­den Ge­bie­te zu­grun­de liegt.</span>
+        <span id="s-2-4-5">Ich will hier nicht ent­schei­den, ob auf einem an­de­ren Ge­bie­te ge­schicht­li­cher Be­trach­tung eine Dar­stel­lung frucht­bar sein kann, der nicht we­nigs­tens eine <i>An­sicht</i> über die Ver­hält­nis­se der Ge­gen­wart auf dem ent­spre­chen­den Ge­bie­te zu­grun­de liegt.</span>
         
         <span id="s-2-4-6">Auf dem Felde der Ge­dan­ken­ge­schich­te kann aber eine sol­che Dar­stel­lung nur un­frucht­bar sein.</span>
         
         <span id="s-2-4-7">Denn hier muss das Be­trach­te­te un­be­dingt mit dem un­mit­tel­ba­ren Leben zu­sam­men­hän­gen.</span>
         
-        <span id="s-2-4-8">Und die­ses Leben, in dem der Ge­dan­ke Le­bens­pra­xis wird, kann nur das­je­ni­ge der Ge­gen­wart sein.</span>
+        <span id="s-2-4-8">Und die­ses Leben, in dem der Ge­dan­ke <i>Le­bens­pra­xis</i> wird, kann nur das­je­ni­ge der Ge­gen­wart sein.</span>
         
       </p>
     </section>
@@ -139,6 +150,11 @@
       </p>
     </section>
   </article>
+  <nav class="chapter-nav">
+    <a class="nav-btn prev" href="01-vorrede-zur-neuauflage-1924.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="03-vorrede-1914.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
 </main>
+
 </body>
 </html>
