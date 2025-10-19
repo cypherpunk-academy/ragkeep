@@ -50,18 +50,20 @@ html[data-theme="classic"] {
 /* Dark preference tweaks */
 @media (prefers-color-scheme: dark) {
   html[data-theme="default"], html:not([data-theme]) {
-    --background: #111111;
-    --foreground: #eeeeee;
-    --quote-color: #93c5fd;
+    --background: #0b1220; /* dark blue for lower contrast */
+    --foreground: #b1d7fb;
+    --font-size: clamp(19px, 2.31vw, 24px); /* ~10% larger for dark mode */
+    --quote-color: #76b2f7;
     --italics-color: #99f6e4;
     --p-num-color: #909090;
   }
   html[data-theme="classic"] {
-    --background: #0f0e0c;
-    --foreground: #f2efe9;
-    --quote-color: #c4b5fd;
-    --italics-color: #f5d0c5;
-    --p-num-color: #b1ada6;
+    --background: #0b1220; /* dark blue for lower contrast */
+    --foreground: #85b7e6;
+    --font-size: clamp(26px, 2.42vw, 26px); /* ~10% larger for dark mode */
+    --quote-color: #949cf7;
+    --italics-color: #8e3dc5;
+    --p-num-color: #3b57a9;
   }
 }
 
@@ -88,6 +90,9 @@ h1, h2, h3 {
   line-height: 1.25;
   margin: 2rem 0 1rem;
 }
+
+/* Chapter headers (level 1) 30% smaller than typical default (~2em -> ~1.4em) */
+h1 { font-size: 1.4em; }
 
 p { text-align: justify; }
 
@@ -163,6 +168,6 @@ i, em { color: var(--italics-color); font-style: italic; }
 
 /* Dark mode smartphone: make body text light grey */
 @media (max-width: 640px) and (prefers-color-scheme: dark) {
-  body { color: #d1d5db; }
+  body { color: var(--foreground); }
 }
 
