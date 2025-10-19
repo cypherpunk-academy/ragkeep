@@ -40,7 +40,7 @@ html[data-theme="classic"] {
   --font-size: clamp(24px, 2.2vw, 24px);
   --line-height: 1.5;
   --text-width: 70ch;
-  --background: #fdf9ed;
+  --background: #dbd4c2;
   --foreground: #14110f;
   --quote-color: #220c93;
   --italics-color: #860505;
