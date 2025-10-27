@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" data-theme="default" data-para="margin" data-width="normal" data-mode="desktop">
+<html lang="de" data-theme="default" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,13 +10,13 @@
       try {
         var d = document.documentElement;
         var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "default";
-        var mode = localStorage.getItem("readerMode") || d.getAttribute("data-mode") || "desktop";
         var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
         var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
+        var size = localStorage.getItem("readerSize") || d.getAttribute("data-size") || "base";
         d.setAttribute("data-theme", theme);
-        d.setAttribute("data-mode", mode);
         d.setAttribute("data-para", para);
         d.setAttribute("data-width", width);
+        if (size && size !== "base") d.setAttribute("data-size", size); else d.removeAttribute("data-size");
       } catch(e) {}
     })();
   </script>
@@ -26,7 +26,7 @@
 <body>
 <main>
   <button id="themeToggle" class="theme-toggle" aria-label="Theme umschalten" title="Theme umschalten" style="position:fixed;top:8px;right:8px;z-index:9999;background:rgba(0,0,0,0.03);backdrop-filter:saturate(120%) blur(2px);border:1px solid rgba(127,127,127,.35);color:inherit;border-radius:9999px;padding:6px 10px;font:inherit;line-height:1;cursor:pointer;">🌙</button>
-  <button id="deviceToggle" class="device-toggle" aria-label="Anzeigemodus umschalten" title="Anzeigemodus umschalten" style="position:fixed;top:8px;right:48px;z-index:9999;background:rgba(0,0,0,0.03);backdrop-filter:saturate(120%) blur(2px);border:1px solid rgba(127,127,127,.35);color:inherit;border-radius:9999px;padding:6px 10px;font:inherit;line-height:1;cursor:pointer;">📱</button>
+  <button id="sizeToggle" class="size-toggle" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten" style="position:fixed;top:8px;right:48px;z-index:9999;background:rgba(0,0,0,0.03);backdrop-filter:saturate(120%) blur(2px);border:1px solid rgba(127,127,127,.35);color:inherit;border-radius:9999px;padding:6px 10px;font:inherit;line-height:1;cursor:pointer;">A</button>
   <article data-chapter="3" id="c-3">
     <h1 id="c-3-title" data-slug="iii-die-erkenntnistheorie-nach-kant">III. DIE ERKENNTNISTHEORIE NACH KANT</h1>
     <section id="p-3-1">
@@ -311,18 +311,18 @@
 (function(){
   var d = document.documentElement;
   var themeBtn = document.getElementById("themeToggle");
-  var deviceBtn = document.getElementById("deviceToggle");
+  var sizeBtn = document.getElementById("sizeToggle");
   function getTheme(){ return d.getAttribute("data-theme") || "default"; }
   function setTheme(t){
     d.setAttribute("data-theme", t);
     try { localStorage.setItem("readerTheme", t); } catch(e) {}
     updateTheme();
   }
-  function getMode(){ return d.getAttribute("data-mode") || "desktop"; }
-  function setMode(m){
-    d.setAttribute("data-mode", m);
-    try { localStorage.setItem("readerMode", m); } catch(e) {}
-    updateMode();
+  function getSize(){ return d.getAttribute("data-size") || "base"; }
+  function setSize(s){
+    if (s === "base") d.removeAttribute("data-size"); else d.setAttribute("data-size", s);
+    try { localStorage.setItem("readerSize", s); } catch(e) {}
+    updateSize();
   }
   function updateTheme(){
     if (!themeBtn) return;
@@ -330,12 +330,12 @@
     themeBtn.textContent = (t === "default") ? "🌙" : "☀️";
     themeBtn.setAttribute("aria-pressed", String(t === "dark"));
   }
-  function updateMode(){
-    if (!deviceBtn) return;
-    var m = getMode();
-    // Show the opposite icon as an affordance: 📱 when desktop (switch to mobile), 💻 when mobile
-    deviceBtn.textContent = (m === "desktop") ? "📱" : "💻";
-    deviceBtn.setAttribute("aria-pressed", String(m === "mobile"));
+  function updateSize(){
+    if (!sizeBtn) return;
+    var s = getSize();
+    // Visual hint: A, A+, A++
+    sizeBtn.textContent = (s === "base") ? "A" : (s === "l" ? "A+" : "A++");
+    sizeBtn.setAttribute("aria-pressed", String(s !== "base"));
   }
   if (themeBtn) {
     themeBtn.addEventListener("click", function(){
@@ -343,14 +343,19 @@
       setTheme(t === "dark" ? "default" : "dark");
     });
   }
-  if (deviceBtn) {
-    deviceBtn.addEventListener("click", function(){
-      var m = getMode();
-      setMode(m === "mobile" ? "desktop" : "mobile");
+  if (sizeBtn) {
+    sizeBtn.addEventListener("click", function(){
+      var s = getSize();
+      var next = (s === "base") ? "l" : (s === "l" ? "xl" : "base");
+      setSize(next);
     });
   }
+  // Restore stored size on load
+  try {
+    var stored = localStorage.getItem("readerSize");
+    if (stored) setSize(stored); else updateSize();
+  } catch(e) { updateSize(); }
   updateTheme();
-  updateMode();
 })();
 </script>
 </body>
