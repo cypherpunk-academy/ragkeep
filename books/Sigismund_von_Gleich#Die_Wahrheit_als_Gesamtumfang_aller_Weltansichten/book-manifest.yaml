@@ -1,0 +1,15 @@
+author: Sigismund von Gleich
+title: Die Wahrheit als Gesamtumfang aller Weltansichten
+book-index: 1
+book-type: allgemeines-philosophisches-werk
+first-author-page: 6
+last-author-page: 309
+auto-replacements:
+  "\"": "“"
+journal:
+  pages: 304
+  chapters: 14
+  paragraphs: 1065
+  lines: 12616
+  words: 123454
+  footnotes: 0

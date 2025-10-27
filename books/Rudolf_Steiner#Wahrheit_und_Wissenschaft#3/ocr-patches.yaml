@@ -55,3 +55,29 @@
   isFootnote: false
   isFootnoteStart: false
   footnoteReferenceWordIndices: []
+- page: 38
+  action: modify
+  lineIndex: 29
+  text: rede S. 10.
+  footnoteReferenceWordIndices: []
+- page: 38
+  action: modify
+  lineIndex: 30
+  text: "** Liebmann, Zur Analysis der Wirklichkeit, S. 28 ff."
+  isFootnote: true
+  isFootnoteStart: true
+  footnoteReferenceWordIndices: []
+- page: 38
+  action: insert
+  lineIndex: 31
+  text: "*** Volkelt, Kants Erkenntnistheorie, S. 1."
+  isFootnote: true
+  isFootnoteStart: true
+  footnoteReferenceWordIndices: []
+- page: 38
+  action: insert
+  lineIndex: 32
+  text: "**** Dörner, Das menschliche Erkennen."
+  isFootnote: true
+  isFootnoteStart: true
+  footnoteReferenceWordIndices: []
