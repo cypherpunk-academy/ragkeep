@@ -179,3 +179,16 @@
   isFootnoteReference: true
   footnoteReferenceWordIndices:
     - 0
+- page: 78
+  action: modify
+  lineIndex: 29
+  isFootnote: true
+  isFootnoteStart: true
+  footnoteReferenceWordIndices: []
+- page: 78
+  action: modify
+  lineIndex: [30,31,32,33,34,35,36]
+  isFootnote: true
+  isFootnoteStart: false
+  isFootnoteReference: false
+  footnoteReferenceWordIndices: []

@@ -81,3 +81,59 @@
   isFootnote: true
   isFootnoteStart: true
   footnoteReferenceWordIndices: []
+- page: 30
+  action: modify
+  lineIndex: 30
+  isFootnote: true
+  isFootnoteStart: true
+  footnoteReferenceWordIndices: []
+- page: 33
+  action: modify
+  lineIndex: 29
+  isFootnoteStart: true
+  footnoteReferenceWordIndices: []
+- page: 34
+  action: modify
+  lineIndex: 26
+  isFootnote: true
+  isFootnoteStart: true
+  footnoteReferenceWordIndices: []
+- page: 38
+  action: modify
+  lineIndex: 11
+  isFootnoteReference: true
+  footnoteReferenceWordIndices:
+    - 3
+- page: 38
+  action: modify
+  lineIndex: 18
+  isFootnoteReference: true
+  footnoteReferenceWordIndices:
+    - 6
+- page: 38
+  action: modify
+  lineIndex: 24
+  isFootnoteReference: true
+  footnoteReferenceWordIndices:
+    - 1
+- page: 38
+  action: modify
+  lineIndex: 27
+- page: 38
+  action: modify
+  lineIndex: 27
+- page: 39
+  action: modify
+  lineIndex: 30
+  isFootnoteStart: true
+  footnoteReferenceWordIndices: []
+- page: 76
+  action: modify
+  lineIndex: 30
+  isFootnoteStart: true
+  footnoteReferenceWordIndices: []
+- page: 74
+  action: modify
+  lineIndex: 30
+  isFootnoteStart: true
+  footnoteReferenceWordIndices: []

@@ -2,7 +2,7 @@
 
 :root {
   color-scheme: light dark;
-  /* Base variables (overridden by themes) */
+  /* Base variables (overridden by themes and modes) */
   --font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --heading-font-family: 'Cormorant Garamond', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   --font-size: clamp(18px, 2.2vw, 24px);
@@ -19,50 +19,61 @@
   --p-num-color: #666666;
 }
 
-/* Default theme (modern) */
+/* Default theme (book-like; moved from previous classic) */
 html[data-theme="default"] {
-  --font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --heading-font-family: 'Cormorant Garamond', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  --font-size: clamp(17px, 2.1vw, 22px);
-  --line-height: 1.5;
-  --text-width: 68ch;
-  --background: #ffffff;
-  --foreground: #111111;
-  --quote-color: #1d4ed8;
-  --italics-color: #0f766e;
-  --p-num-color: #6b7280;
-}
-
-/* Classic theme (book-like) */
-html[data-theme="classic"] {
   --font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --heading-font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --font-size: clamp(24px, 2.2vw, 24px);
   --line-height: 1.5;
   --text-width: 70ch;
-  --background: #fdf9ed;
+  --background: #f9f6ee;
   --foreground: #14110f;
-  --quote-color: #220c93;
-  --italics-color: #860505;
+  --quote-color: #3015b4;
+  --italics-color: #9b0909;
   --p-num-color: #726e68;
 }
 
-/* Dark preference tweaks */
-@media (prefers-color-scheme: dark) {
-  html[data-theme="default"], html:not([data-theme]) {
-    --background: #111111;
-    --foreground: #eeeeee;
-    --quote-color: #93c5fd;
-    --italics-color: #99f6e4;
-    --p-num-color: #909090;
-  }
-  html[data-theme="classic"] {
-    --background: #0f0e0c;
-    --foreground: #f2efe9;
-    --quote-color: #c4b5fd;
-    --italics-color: #f5d0c5;
-    --p-num-color: #b1ada6;
-  }
+/* Explicit dark theme */
+html[data-theme="dark"] {
+  --font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --heading-font-family: 'Cormorant Garamond', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-size: clamp(19px, 2.31vw, 24px);
+  --line-height: 1.5;
+  --text-width: 68ch;
+  --background: #0b1220;
+  --foreground: #abc1d5;
+  --quote-color: #76b2f7;
+  --italics-color: #fec8d2;
+  --p-num-color: #909090;
+}
+
+/* Font size overrides (three levels) */
+/* Default theme scaling */
+html[data-theme="default"][data-size="l"] { --font-size: clamp(31px, 2.86vw, 31px); }
+html[data-theme="default"][data-size="xl"] { --font-size: clamp(36px, 3.30vw, 36px); }
+/* Dark theme scaling (based on its base clamp) */
+html[data-theme="dark"][data-size="l"] { --font-size: clamp(25px, 3.00vw, 31px); }
+html[data-theme="dark"][data-size="xl"] { --font-size: clamp(29px, 3.47vw, 36px); }
+
+/* Mobile mode overrides (applied regardless of viewport) */
+html[data-mode="mobile"][data-theme="default"] {
+  --font-size: clamp(22px, 3.5vw, 26px);
+  --line-height: 1.6;
+  --text-width: 92vw;
+  --page-padding-inline: 1rem;
+  --paragraph-spacing: 1.1rem;
+}
+
+html[data-mode="mobile"][data-theme="dark"] {
+  --font-size: clamp(21px, 3.3vw, 26px);
+  --line-height: 1.6;
+  --text-width: 92vw;
+  --page-padding-inline: 1rem;
+  --background: #0a0f1a;
+  --foreground: #b7d1f3;
+  --quote-color: #8ab9ff;
+  --italics-color: #a5ffe8;
+  --p-num-color: #a0aecd;
 }
 
 html, body { margin: 0; padding: 0; }
@@ -88,6 +99,9 @@ h1, h2, h3 {
   line-height: 1.25;
   margin: 2rem 0 1rem;
 }
+
+/* Chapter headers (level 1) 30% smaller than typical default (~2em -> ~1.4em) */
+h1 { font-size: 1.4em; }
 
 p { text-align: justify; }
 
@@ -163,6 +177,6 @@ i, em { color: var(--italics-color); font-style: italic; }
 
 /* Dark mode smartphone: make body text light grey */
 @media (max-width: 640px) and (prefers-color-scheme: dark) {
-  body { color: #d1d5db; }
+  body { color: var(--foreground); }
 }
 

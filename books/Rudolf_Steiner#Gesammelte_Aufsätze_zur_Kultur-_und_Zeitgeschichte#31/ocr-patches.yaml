@@ -217,3 +217,15 @@
   isFootnoteReference: true
   footnoteReferenceWordIndices:
     - 3
+- page: 315
+  action: modify
+  lineIndex: 26
+  text: Antwort darauf dürfte sein, daß dieser Mann zu den Bedürf-
+  isFootnote: false
+  isFootnoteStart: false
+  footnoteReferenceWordIndices: []
+- page: 315
+  action: modify
+  lineIndex: [27,28,29,30]
+  isFootnote: false
+  footnoteReferenceWordIndices: []
