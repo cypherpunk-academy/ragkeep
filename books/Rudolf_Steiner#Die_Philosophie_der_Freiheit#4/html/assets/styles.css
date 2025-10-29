@@ -26,8 +26,8 @@ html[data-theme="default"] {
   --font-size: clamp(19px, 2.2vw, 24px);
   --line-height: 1.5;
   --text-width: 70ch;
-  --background: #f9f6ee;
-  --foreground: #14110f;
+  --background: #fff4d5;
+  --foreground: #000000;
   --quote-color: #3015b4;
   --italics-color: #9b0909;
   --p-num-color: #726e68;

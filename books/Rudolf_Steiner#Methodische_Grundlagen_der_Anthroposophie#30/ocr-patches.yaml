@@ -93,6 +93,11 @@
   footnoteReferenceWordIndices: []
   isHeader: true
   headerLevel: 2
+- page: 405
+  action: modify
+  lineIndex: 0
+  isHeader: true
+  headerLevel: 2
 - page: 408
   action: modify
   lineIndex: 15
@@ -187,8 +192,28 @@
   footnoteReferenceWordIndices: []
 - page: 78
   action: modify
-  lineIndex: [30,31,32,33,34,35,36]
+  lineIndex:
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 35
+    - 36
   isFootnote: true
   isFootnoteStart: false
   isFootnoteReference: false
   footnoteReferenceWordIndices: []
+- page: 568
+  action: remove
+  lineIndex: 34
+  text: z
+- page: 568
+  action: remove
+  lineIndex: 34
+  text: Buch:30 Seite:568
+- page: 575
+  action: modify
+  lineIndex: [19,20]
+  footnoteReferenceWordIndices: []
+  headerLevel: 1

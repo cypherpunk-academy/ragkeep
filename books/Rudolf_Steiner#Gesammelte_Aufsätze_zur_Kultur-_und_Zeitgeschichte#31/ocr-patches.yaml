@@ -57,6 +57,10 @@
   footnoteReferenceWordIndices: []
   isHeader: true
   headerLevel: 2
+- page: 308
+  action: modify
+  lineIndex: 0
+  headerLevel: 2
 - page: 398
   action: modify
   lineIndex: 17
@@ -69,12 +73,20 @@
   footnoteReferenceWordIndices: []
   isHeader: true
   headerLevel: 2
+- page: 403
+  action: modify
+  lineIndex: 0
+  headerLevel: 2
 - page: 407
   action: insert
   lineIndex: 0
   text: III
   footnoteReferenceWordIndices: []
   isHeader: true
+  headerLevel: 2
+- page: 407
+  action: modify
+  lineIndex: 0
   headerLevel: 2
 - page: 410
   action: modify
