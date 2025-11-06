@@ -19,10 +19,33 @@ Individualismus:
 Mathematismus:
   books:
     "Rudolf_Steiner#Die_Philosophie_der_Freiheit#4":
-      paragraphs: "2-8"
-    "Rudolf_Steiner#Die_Rätsel_der_Philosophie#18": {}
-    "Rudolf_Steiner#Wahrheit_und_Wissenschaft#3": {}
-    "Sigismund_von_Gleich#Die_Wahrheit_als_Gesamtumfang_aller_Weltansichten": {}
+      chapters:
+        - "I DAS BEWUSSTE MENSCHLICHE HANDELN"
+        - "II DER GRUNDTRIEB ZUR WISSENSCHAFT"
+        - "III DAS DENKEN IM DIENSTE DER WELTAUFFASSUNG"
+        - "IV DIE WELT ALS WAHRNEHMUNG"
+        - "V DAS ERKENNEN DER WELT"
+        - "VI DIE MENSCHLICHE INDIVIDUALITÄT"
+        - "VII GIBT ES GRENZEN DES ERKENNENS?"
+      importance: 0.99
+    "Rudolf_Steiner#Wahrheit_und_Wissenschaft#3":
+      importance: 0.99
+    "Rudolf_Steiner#Die_Rätsel_der_Philosophie#18":
+      importance: 0.80
+    "Sigismund_von_Gleich#Die_Wahrheit_als_Gesamtumfang_aller_Weltansichten":
+      importance: 0.70
+    "Eric_S_Raymond#A_brief_history_of_Hackerdom#1":
+      importance: 0.60
+    "Eric_S_Raymond#How_to_become_a_hacker#1":
+      importance: 0.60
+    "Eric_S_Raymond#The_Cathedral_and_the_Bazaar#1":
+      importance: 0.60
+    "Glyn_Moody#Rebel_Code#1":
+      importance: 0.50
+    "Lawrence_Lessig#Code_Version_2_0#1":
+      importance: 0.50
+    "Richard_M_Stallman#Free_Software_Free_Society#1":
+      importance: 0.50
 
 Pneumatismus:
   books:
