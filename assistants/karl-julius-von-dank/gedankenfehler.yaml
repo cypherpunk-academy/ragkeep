@@ -1,24 +1,23 @@
----
 gedankenfehler:
     - nummer: 1
       stichwort: Erziehen,Erziehung
-      gedankenfehler: Ich muss Kinder zu dem erziehen, was ich als richtig erachte.
+      gedankenfehler: Kinder müssen erzogen werden
     - nummer: 2
       stichwort: Fehler
       gedankenfehler: Es ist besser, Fehler zu vermeiden, als sie zu machen.
     - nummer: 3
       stichwort: Zufriedenheit
-      gedankenfehler: Zufriedenheit kommt, wenn Bedürfnisse erfüllt und Ziele erreicht sind.
+      gedankenfehler: Zufriedenheit kommt, wenn alle Bedürfnisse erfüllt sind.
     - nummer: 4
       stichwort: Angst
-      gedankenfehler: Ich bekomme Angst, weil eine Gefahr da ist.
+      gedankenfehler: Ich bekomme Angst, weil ich in Gefahr bin.
     - nummer: 5
       stichwort: Lüge,Unwahrheit
       gedankenfehler: Manchmal hilft es zu lügen.
 
     - nummer: 6
       stichwort: Hierarchie
-      gedankenfehler: Wir brauchen Hierarchien, um unser Zusammenleben und unsere Arbeitswelt zu ordnen.
+      gedankenfehler: Wir brauchen Hierarchien, um unser Zusammenleben zu ordnen.
     - nummer: 7
       stichwort: Gewinnen
       gedankenfehler: Ich kann gegen andere gewinnen.
@@ -46,17 +45,17 @@ gedankenfehler:
       gedankenfehler: Das Wesen des Krieges ist Aggression und Hass.
     - nummer: 15
       stichwort: Freude
-      gedankenfehler: Ich muss meine Freude zurückhalten, wenn sie andere stören kann.
+      gedankenfehler: Es ist gut, wenn ich meine Freude zurückhalte, um andere nicht zu stören.
 
     - nummer: 16
       stichwort: Einsamkeit
       gedankenfehler: Ich kann einsam sein.
     - nummer: 17
       stichwort: Verantwortung
-      gedankenfehler: Es ist gut, für Dinge Verantwortung zu übernehmen.
+      gedankenfehler: Es ist gut, Verantwortung zu übernehmen.
     - nummer: 18
-      stichwort: Geld
-      gedankenfehler: Geld gibt mir das Recht, etwas zu kaufen.
+      stichwort: Enttäuschung
+      gedankenfehler: Eine Enttäuschung ist nichts Wertvolles.
     - nummer: 19
       stichwort: Traurigkeit
       gedankenfehler: Wer traurig ist, soll getröstet werden.
@@ -65,14 +64,14 @@ gedankenfehler:
       gedankenfehler: Worte können verletzen.
 
     - nummer: 21
-      stichwort: Vorsorge
-      gedankenfehler: Ich muss für die Zukunft mit Geld und Besitz vorsorgen.
+      stichwort: Männer und Frauen
+      gedankenfehler: Männer und Frauen sollen gleich behandelt werden.
     - nummer: 22
       stichwort: Schuldgefühle
       gedankenfehler: Schuldgefühle helfen dabei, Fehler nicht zu wiederholen.
     - nummer: 23
       stichwort: Beziehung
-      gedankenfehler: In einer Beziehung müssen sich beide anpassen.
+      gedankenfehler: In einer Beziehung muss sich mindestens einer anpassen.
     - nummer: 24
       stichwort: Ehrgeiz
       gedankenfehler: Menschen ohne Ehrgeiz sind faul.
@@ -91,7 +90,7 @@ gedankenfehler:
       gedankenfehler: Alle Bedürfnisse müssen erfüllt werden, um glücklich zu sein.
     - nummer: 29
       stichwort: Denken
-      gedankenfehler: Ich kann gut denken, auch wenn ich es nicht übe.
+      gedankenfehler: Ich kann gut denken, auch wenn ich es nicht trainiere.
     - nummer: 30
       stichwort: Diskussion
       gedankenfehler: Eine Diskussion zu gewinnen, heißt näher an der Wahrheit zu sein.
@@ -104,7 +103,7 @@ gedankenfehler:
       gedankenfehler: Liebe lebt in Geben und Nehmen.
     - nummer: 33
       stichwort: Wahrheit
-      gedankenfehler: Jeder hat seine eigene Wahrheit.
+      gedankenfehler: Wahrheit ist relativ, jeder hat seine eigene.
     - nummer: 34
       stichwort: Reinkarnation
       gedankenfehler: Der Mensch lebt nur einmal.
@@ -119,8 +118,8 @@ gedankenfehler:
       stichwort: Sprachen
       gedankenfehler: Sprachen sind menschengemacht.
     - nummer: 38
-      stichwort: Sexualität
-      gedankenfehler: Sexualität und Sensualität gehören zusammen.
+      stichwort: Sensualität
+      gedankenfehler: Sensualität und Sexualität gehören zusammen
     - nummer: 39
       stichwort: Arbeit
       gedankenfehler: In der Freizeit erlebt man mehr Freiheit als bei der Arbeit.
@@ -137,3 +136,16 @@ gedankenfehler:
     - nummer: 43
       stichwort: Trennung
       gedankenfehler: Manchmal ist Trennung notwendig.
+    - nummer: 44
+      stichwort: Vorsorge
+      gedankenfehler: Ich muss für die Zukunft mit Geld und Besitz vorsorgen.
+    - nummer: 45
+      stichwort: Videospiele
+      gedankenfehler: Videospiele sind reine Unterhaltung. Sie erfüllen kein tieferen Zweck.
+
+    - nummer: 46
+      stichwort: Sexualität
+      gedankenfehler: Der Mensch ist vom Wesen her monogam.
+    - nummer: 47
+      stichwort: Besitz von Menschen
+      gedankenfehler: Ich habe Besitzrechte über meinen Lebenspartner und meine Kinder
