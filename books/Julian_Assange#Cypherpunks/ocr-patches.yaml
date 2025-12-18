@@ -1,0 +1,17 @@
+- page: 6
+  action: modify
+  lineIndex: 0
+  footnoteReferenceWordIndices: []
+  isHeader: true
+  headerLevel: 1
+- page: 6
+  action: modify
+  lineIndex: 1
+  footnoteReferenceWordIndices: []
+  isHeader: true
+  headerLevel: 1
+- page: 193
+  action: modify
+  lineIndex: 0
+  text: 90 Die zu diesem Thema von WikiLeaks veröffentlichten US-Botschaftsde-
+  footnoteReferenceWordIndices: []

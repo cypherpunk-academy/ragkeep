@@ -1,6 +1,7 @@
 # Books
 books/**/results
 books/**/input
+books/**/research
 
 # Images
 *.png

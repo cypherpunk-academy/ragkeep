@@ -1,0 +1,65 @@
+author: Julian Assange
+title: Julian Assange in his own words
+book-index: 1
+book-type: general-english-book-header-left-with-space
+first-author-page: 5
+last-author-page: 168
+journal:
+  pages: 164
+  chapters: 16
+  paragraphs: 226
+  lines: 3304
+  words: 29240
+  footnotes: 268
+erase-line-markers:
+  - text: JULIAN ASSANGE IN HIS OWN WORDS
+    position-in-line: centered
+    position-on-page: first-line
+  - text: PREFACE
+    position-in-line: centered
+    position-on-page: first-line
+  - text: ACKNOWLEDGMENTS
+    position-in-line: centered
+    position-on-page: first-line
+  - text: INTRODUCTION
+    position-in-line: centered
+    position-on-page: first-line
+  - text: ACCOUNTABILITY
+    position-in-line: centered
+    position-on-page: first-line
+  - text: ACTIVISM
+    position-in-line: centered
+    position-on-page: first-line
+  - text: CENSORSHIP
+    position-in-line: centered
+    position-on-page: first-line
+  - text: EMPIRE
+    position-in-line: centered
+    position-on-page: first-line
+  - text: INTERNET
+    position-in-line: centered
+    position-on-page: first-line
+  - text: JOURNALISM
+    position-in-line: centered
+    position-on-page: first-line
+  - text: JUSTICE
+    position-in-line: centered
+    position-on-page: first-line
+  - text: POWER
+    position-in-line: centered
+    position-on-page: first-line
+  - text: PRISON
+    position-in-line: centered
+    position-on-page: first-line
+  - text: SOCIETY
+    position-in-line: centered
+    position-on-page: first-line
+  - text: SURVEILLANCE
+    position-in-line: centered
+    position-on-page: first-line
+  - text: WAR
+    position-in-line: centered
+    position-on-page: first-line
+  - text: WIKILEAK
+    position-in-line: centered
+    position-on-page: first-line

@@ -1,0 +1,106 @@
+- page: 11
+  action: modify
+  lineIndex: 4
+  text: lies.1
+  footnoteReferenceWordIndices: []
+- page: 11
+  action: modify
+  lineIndex: 10
+  text: British prison.2
+  footnoteReferenceWordIndices: []
+- page: 12
+  action: modify
+  lineIndex: 11
+  text: Isolation considered torture by international legal 2 and med-
+  footnoteReferenceWordIndices: []
+- page: 12
+  action: modify
+  lineIndex: 11
+  text: Isolation considered torture by international legal 3 and med-
+  footnoteReferenceWordIndices: []
+- page: 12
+  action: modify
+  lineIndex: 12
+  text: ical bodies,4 his words live on. As reminder, as inspiration, as
+  footnoteReferenceWordIndices: []
+- page: 11
+  action: modify
+  lineIndex: 4
+  isFootnoteReference: true
+  footnoteReferenceWordIndices:
+    - 0
+- page: 99
+  action: modify
+  lineIndex: 12
+  text: correspondent Eric Schmitt, and that story was killed.”159
+  footnoteReferenceWordIndices: []
+- page: 152
+  action: modify
+  lineIndex: 2
+  text: are those of people like Jefferson and Madison.”238
+  footnoteReferenceWordIndices: []
+- page: 152
+  action: modify
+  lineIndex: 8
+  text: give to us.”239
+  footnoteReferenceWordIndices: []
+- page: 99
+  action: modify
+  lineIndex: 12
+  text: .
+  footnoteReferenceWordIndices: []
+- page: 13
+  action: modify
+  lineIndex:
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+  isFootnote: true
+  isFootnoteStart: false
+  footnoteReferenceWordIndices: []
+- page: 22
+  action: modify
+  lineIndex:
+    - 15
+    - 16
+  isFootnote: true
+  footnoteReferenceWordIndices: []
+- page: 23
+  action: modify
+  lineIndex:
+    - 19
+    - 20
+  isFootnote: true
+  footnoteReferenceWordIndices: []
+- page: 28
+  action: modify
+  lineIndex: 10
+  isFootnote: true
+  footnoteReferenceWordIndices: []
+- page: 64
+  action: modify
+  lineIndex: [13,14,15,16,17,18,19,20,21,22,23]
+  isParagraphStart: false
+  isFootnote: true
+  footnoteReferenceWordIndices: []
