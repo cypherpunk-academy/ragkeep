@@ -1,0 +1,123 @@
+- page: 44
+  action: remove
+  lineIndex: 6
+  text: Spiritualismus
+- page: 44
+  action: remove
+  lineIndex: 5
+  text: Pneumatismus Monadismus
+- page: 44
+  action: remove
+  lineIndex: 4
+  text: Psychismus Dynamismus
+- page: 44
+  action: remove
+  lineIndex: 3
+  text: Idealismus; Realismus
+- page: 44
+  action: remove
+  lineIndex: 2
+  text: Rationalismus
+- page: 44
+  action: remove
+  lineIndex: 1
+  text: Mathematizismus
+- page: 44
+  action: remove
+  lineIndex: 0
+  text: Materialismus
+- page: 44
+  action: modify
+  lineIndex: 0
+  isParagraphStart: false
+  footnoteReferenceWordIndices: []
+- page: 45
+  action: remove
+  lineIndex: 8
+  text: Spiritualismus
+- page: 45
+  action: remove
+  lineIndex: 7
+  text: Pneumatismus Monadismus
+- page: 45
+  action: remove
+  lineIndex: 6
+  text: Psychismus Dynamismus
+- page: 45
+  action: remove
+  lineIndex: 5
+  text: Realismus Idealismus
+- page: 45
+  action: remove
+  lineIndex: 4
+  text: Rationalismus Phänomenalismus
+- page: 45
+  action: remove
+  lineIndex: 3
+  text: Mathematizismus Sensualismus
+- page: 45
+  action: remove
+  lineIndex: 2
+  text: Materialismus
+- page: 39
+  action: remove
+  lineIndex: 25
+  text: Spiritualismus
+- page: 39
+  action: remove
+  lineIndex: 24
+  text: Realismus
+- page: 39
+  action: remove
+  lineIndex: 23
+  text: "'s"
+- page: 39
+  action: remove
+  lineIndex: 22
+  text: "_?///-'/Z/Z/Z/ZA zZZZz/Zz"
+- page: 39
+  action: remove
+  lineIndex: 21
+  text: Idealismus
+- page: 39
+  action: remove
+  lineIndex: 20
+  text: Rationalismus
+- page: 39
+  action: remove
+  lineIndex: 19
+  text: Mathematizismus
+- page: 39
+  action: remove
+  lineIndex: 18
+  text: Materialismus
+- page: 42
+  action: remove
+  lineIndex: 6
+  text: Spiritualismus
+- page: 42
+  action: remove
+  lineIndex: 5
+  text: Pneumatismus
+- page: 42
+  action: remove
+  lineIndex: 4
+  text: Psychismus
+- page: 42
+  action: remove
+  lineIndex: 3
+  text: Idealismus versus Realismus
+- page: 42
+  action: remove
+  lineIndex: 2
+  text: Rationalismus
+- page: 42
+  action: remove
+  lineIndex: 1
+  text: Mathematizismus
+- page: 42
+  action: remove
+  lineIndex: 0
+  text: Materialismus
+
+
