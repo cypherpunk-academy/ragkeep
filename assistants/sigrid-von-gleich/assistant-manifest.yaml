@@ -12,18 +12,23 @@ worldviews:
   
   Individualismus:
     books:
+      "Rudolf_Steiner#Die_Philosophie_der_Freiheit#4":
+        chapters:
+          - "XII DIE MORALISCHE PHANTASIE (DARWINISMUS UND SITTLICHKEIT)"
   
   Mathematismus:
     books:
       "Rudolf_Steiner#Die_Philosophie_der_Freiheit#4":
         chapters:
-          - "I DAS BEWUSSTE MENSCHLICHE HANDELN"
-          - "II DER GRUNDTRIEB ZUR WISSENSCHAFT"
           - "III DAS DENKEN IM DIENSTE DER WELTAUFFASSUNG"
           - "IV DIE WELT ALS WAHRNEHMUNG"
           - "V DAS ERKENNEN DER WELT"
           - "VI DIE MENSCHLICHE INDIVIDUALITÄT"
           - "VII GIBT ES GRENZEN DES ERKENNENS?"
+          - "VIII DIE FAKTOREN DES LEBENS"
+          - "IX DIE IDEE DER FREIHEIT"
+          - "XI WELTZWECK UND LEBENSZWECK (BESTIMMUNG DES MENSCHEN)"
+          - 
         importance: 0.99
       "Rudolf_Steiner#Wahrheit_und_Wissenschaft#3":
         importance: 0.99

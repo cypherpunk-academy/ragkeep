@@ -1,0 +1,109 @@
+{
+  "Mathematismus": [
+    { "id": 1, "keywords": ["Logik", "Notwendigkeit", "Beweis", "Stringenz"], "label": "Logiknotwendigkeit" },
+    { "id": 2, "keywords": ["Genauigkeit", "Klarheit", "Wachheit", "Präzision"], "label": "Klarheit" },
+    { "id": 3, "keywords": ["Grundbegriffe", "Sein", "Raumzeit", "Kausalität"], "label": "Grundbegriffe" },
+    { "id": 4, "keywords": ["Inspiration", "Einheit", "Monismus", "Weltgedanke"], "label": "Monistische Inspiration" },
+    { "id": 5, "keywords": ["Reines Denken", "lebendig", "Formkraft", "Freiheit"], "label": "Formkraft" }
+  ],
+  "Individualismus": [
+    { "id": 1, "keywords": ["Vielheit", "Monaden", "Mikrokosmos", "Selbstheit"], "label": "Monadenvielfalt" },
+    { "id": 2, "keywords": ["Eigenart", "Individuell", "Vorrang", "Anti-Abstrakt"], "label": "Eigenart" },
+    { "id": 3, "keywords": ["Denken", "Hingabe", "Ehrfurcht", "Fantasie"], "label": "Hingabedenken" },
+    { "id": 4, "keywords": ["Achtung", "Würde", "Einzigartigkeit", "Selbstsein"], "label": "Ehrfurcht" },
+    { "id": 5, "keywords": ["Beziehungen", "Harmonie", "Föderativ", "Organismus"], "label": "Beziehungsorganismus" },
+    { "id": 6, "keywords": ["Vorstellen", "Innerlichkeit", "Selbstbewusstsein", "Würde"], "label": "Vorstellkraft" }
+  ],
+  "Dynamismus": [
+    { "id": 1, "keywords": ["Unsichtbar", "Kraft", "Prinzip", "Wirksamkeit"], "label": "Kräftewirken" },
+    { "id": 2, "keywords": ["Irrational", "blind", "unbewusst", "dunkel"], "label": "Blindkraft" },
+    { "id": 3, "keywords": ["Triebe", "Durchdringung", "Naturhaft", "Determination"], "label": "Triebbindung" },
+    { "id": 4, "keywords": ["Egoismus", "Böse", "Selbstsucht", "Machtgier"], "label": "Egoismus" },
+    { "id": 5, "keywords": ["Entmoralisierung", "Kälte", "Nihilismus", "Anti-Herder"], "label": "Entmoralisierung" },
+    { "id": 6, "keywords": ["Doppelpol", "Skorpion/Adler", "Umwandlung", "Vergeistigung"], "label": "Doppelpol" },
+    { "id": 7, "keywords": ["Kulturdeutung", "Strömungen", "Beispiele", "Diagnostik"], "label": "Kulturdeutung" },
+    { "id": 8, "keywords": ["Politik", "Gewalt", "Totalitarismus", "Machttrieb"], "label": "Machtpolitik" }
+  ],
+  "Pneumatismus": [
+    { "id": 1, "keywords": ["Einheit", "Sinnlich/Übersinnlich", "Identität", "Indifferenz"], "label": "Polare Einheit" },
+    { "id": 2, "keywords": ["Imagination", "Anschauung", "Gewissheit", "lebendig"], "label": "Imagination" },
+    { "id": 3, "keywords": ["Äther", "Zwischenwelt", "Bildhaft", "Medium"], "label": "Äthermedium" },
+    { "id": 4, "keywords": ["Pantheismus", "All-Eines", "Durchdringung", "Erfüllung"], "label": "Pantheismus" },
+    { "id": 5, "keywords": ["Veredelung", "Harmonie", "Sinnlichkeit", "Geist"], "label": "Veredelung" },
+    { "id": 6, "keywords": ["Sammlung", "Meditation", "Kontemplation", "Innenerfahrung"], "label": "Meditation" },
+    { "id": 7, "keywords": ["Anti-Sensualismus", "Anti-Materialismus", "Überschreitung", "Kritik"], "label": "Anti-Materialismus" },
+    { "id": 8, "keywords": ["Geisteszeit", "Wassermann", "Geistestaufe", "Zukunft"], "label": "Geisteszeit" }
+  ],
+  "Idealismus": [
+    { "id": 1, "keywords": ["Idee", "Urtyp", "Form", "Entelechie"], "label": "Ideenprimat" },
+    { "id": 2, "keywords": ["Werden", "Entwicklung", "Metamorphose", "Ziel"], "label": "Werdeprozess" },
+    { "id": 3, "keywords": ["schöpferisch", "Willen", "Mächte", "Impuls"], "label": "Ideenwirken" },
+    { "id": 4, "keywords": ["Mensch", "Mitschöpfer", "Idealmensch", "Christusmensch"], "label": "Mitschöpfertum" },
+    { "id": 5, "keywords": ["Sinn", "Ideale", "Zweck", "Moralentwicklung"], "label": "Sinnideale" },
+    { "id": 6, "keywords": ["Tradition", "Platon", "Goethe", "Steiner"], "label": "Traditionslinie" },
+    { "id": 7, "keywords": ["Licht/Geist", "Stoff/Finsternis", "Polarität", "Gunas"], "label": "Licht-Stoff" }
+  ],
+  "Spiritualismus": [
+    { "id": 1, "keywords": ["Geist", "Maya", "Manifestation", "Materie-Schein"], "label": "Geistprimat" },
+    { "id": 2, "keywords": ["Hierarchien", "Äonen", "Wesenheiten", "Vielfalt"], "label": "Geistwesen" },
+    { "id": 3, "keywords": ["Genius", "Manas", "Vorgeburt", "Ewigkeit"], "label": "Geistselbst" },
+    { "id": 4, "keywords": ["Anamnesis", "Wiedererinnerung", "Urwissen", "Ursprung"], "label": "Anamnesis" },
+    { "id": 5, "keywords": ["Reinkarnation", "Karma", "Schicksal", "Wiedergeburt"], "label": "Karma" },
+    { "id": 6, "keywords": ["Leib-Seele-Geist", "Trichotomie", "Gliederung", "Unterscheidung"], "label": "Trichotomie" },
+    { "id": 7, "keywords": ["Stufen", "Hierarchien", "kosmisch", "Lenker"], "label": "Hierarchien" },
+    { "id": 8, "keywords": ["Tod", "Befreiung", "Geburt", "Bindung"], "label": "Tod-Befreiung" },
+    { "id": 9, "keywords": ["Materialismus", "Einseitigkeit", "Ergänzung", "Anerkennung"], "label": "Einseitigkeit" },
+    { "id": 10, "keywords": ["Theosophie", "Anthroposophie", "Schau", "Geistwissen"], "label": "Theosophie" }
+  ],
+  "Materialismus": [
+    { "id": 1, "keywords": ["Materie", "Stoff", "Atome", "Grund"], "label": "Materiegrund" },
+    { "id": 2, "keywords": ["Gesetz", "Kausalität", "Objektivität", "Naturwissenschaft"], "label": "Gesetzlichkeit" },
+    { "id": 3, "keywords": ["Gehirn", "Bewusstsein", "Bindung", "Physiologie"], "label": "Gehirnbindung" },
+    { "id": 4, "keywords": ["Diesseits", "Gegenwart", "Hier-und-jetzt", "Realität"], "label": "Diesseitigkeit" },
+    { "id": 5, "keywords": ["Anti-Dualismus", "Einheit", "Monismus", "Trennungskritik"], "label": "Monismus" },
+    { "id": 6, "keywords": ["Präzision", "Wissenschaft", "Moderne", "Leistung"], "label": "Wissenschaft" },
+    { "id": 7, "keywords": ["keine Transzendenz", "kein Übersinnliches", "Nüchternheit", "Empirie"], "label": "Anti-Übersinnlich" }
+  ],
+  "Sensualismus": [
+    { "id": 1, "keywords": ["Sinnesempfindung", "Unmittelbarkeit", "Gewissheit", "Qualitäten"], "label": "Sinnesgewissheit" },
+    { "id": 2, "keywords": ["Anti-Mechanik", "Qualität", "Lebendigkeit", "Nicht-Quantität"], "label": "Qualitäten" },
+    { "id": 3, "keywords": ["Denken", "Empfinden", "Metamorphose", "Vorstellung"], "label": "Denkempfinden" },
+    { "id": 4, "keywords": ["Herz", "Zentrum", "Gemeinsinn", "Erkenntnis"], "label": "Herzorgan" },
+    { "id": 5, "keywords": ["Wohlwollen", "moral sense", "Altruismus", "Herz"], "label": "Wohlwollen" },
+    { "id": 6, "keywords": ["Empirie", "Erlebnis", "Anti-Spekulation", "Anschauung"], "label": "Empirie" },
+    { "id": 7, "keywords": ["Sonne", "Licht", "Sinneswelt", "Ermöglichung"], "label": "Sonnenwelt" },
+    { "id": 8, "keywords": ["astral", "seelisch", "fließend", "Sympathie"], "label": "Astralität" },
+    { "id": 9, "keywords": ["Takt", "Gleichmut", "Edelheit", "Feinfühligkeit"], "label": "Taktgefühl" },
+    { "id": 10, "keywords": ["Zeit", "Sukzession", "Form", "Sinnlichkeit"], "label": "Zeitform" }
+  ],
+  "Psychismus": [
+    { "id": 1, "keywords": ["Ich", "Denktätigkeit", "aktiv", "frei"], "label": "Ich-Tätigkeit" },
+    { "id": 2, "keywords": ["Intuition", "Selbsterkenntnis", "Tiefe", "Klarheit"], "label": "Selbstintuition" },
+    { "id": 3, "keywords": ["Leiden", "Ich-Kraft", "Vergeistigung", "Überwindung"], "label": "Leidüberwindung" },
+    { "id": 4, "keywords": ["Liebe", "Seelenwesen", "Einswerden", "Wahrheit"], "label": "Liebe" },
+    { "id": 5, "keywords": ["Allbeseelung", "Urseele", "Panpsychismus", "Anti-Materie"], "label": "Allbeseelung" },
+    { "id": 6, "keywords": ["Einheit", "Monismus", "Innen/Außen", "Anti-Dualismus"], "label": "Innen-Außen" },
+    { "id": 7, "keywords": ["Christus", "Auferstehung", "Siegerkraft", "Impuls"], "label": "Christusimpuls" },
+    { "id": 8, "keywords": ["Moral", "Intuition", "Tätigkeit", "Freiheit"], "label": "Liebestätigkeit" }
+  ],
+  "Phänomenalismus": [
+    { "id": 1, "keywords": ["Staunen", "Bewunderung", "Ehrfurcht", "Anfang"], "label": "Bewunderung" },
+    { "id": 2, "keywords": ["Phänomene", "Lehre", "Goethe", "Anti-Dahinter"], "label": "Phänomenlehre" },
+    { "id": 3, "keywords": ["Erscheinung", "Offenbarung", "Wesen", "Kundgabe"], "label": "Offenbarung" },
+    { "id": 4, "keywords": ["Schönheit", "Tugend", "Selbstmitteilung", "Sein"], "label": "Schönheit" },
+    { "id": 5, "keywords": ["Anti-Kant", "Anti-Maya", "Nicht-Illusion", "Abgrenzung"], "label": "Anti-Illusion" },
+    { "id": 6, "keywords": ["Äther", "Licht", "Quintessenz", "Durchscheinen"], "label": "Ätherlicht" },
+    { "id": 7, "keywords": ["Anti-Mechanik", "Anti-Modelle", "Anschaulichkeit", "Kritik"], "label": "Anti-Mechanik" },
+    { "id": 8, "keywords": ["Demut", "Vorurteilslos", "kindlich", "Hingabe"], "label": "Empfänglichkeit" }
+  ],
+  "Rationalismus": [
+    { "id": 1, "keywords": ["Wahrheit", "Güte", "Einheit", "Verpflichtung"], "label": "Wahr-Gut" },
+    { "id": 2, "keywords": ["Fruchtbarkeit", "Leben", "Maßstab", "Goethe"], "label": "Lebensfruchtbarkeit" },
+    { "id": 3, "keywords": ["Aufrichtigkeit", "Gewissen", "Redlichkeit", "Einsatz"], "label": "Wahrheitsgewissen" },
+    { "id": 4, "keywords": ["praktische Vernunft", "Werte", "Kultur", "Vorrang"], "label": "Praktische Vernunft" },
+    { "id": 5, "keywords": ["Wort", "Logos", "Inspiration", "Aufbau"], "label": "Wortkraft" },
+    { "id": 6, "keywords": ["Werte", "objektiv", "Moral", "Vernehmen"], "label": "Objektive Moral" },
+    { "id": 7, "keywords": ["Humanität", "Kultur", "Würde", "Ideal"], "label": "Kulturideal" },
+    { "id": 8, "keywords": ["Selbstlosigkeit", "Liebe", "Erkenntnis", "Entschlagenheit"], "label": "Erkenntnisliebe" }
+  ]
+}

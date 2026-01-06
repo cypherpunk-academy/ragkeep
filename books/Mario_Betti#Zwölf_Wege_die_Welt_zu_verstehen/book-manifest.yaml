@@ -1,0 +1,22 @@
+author: Mario Betti
+title: Zwölf Wege die Welt zu verstehen
+book-index: 1
+book-type: allgemeines-philosophisches-werk-lowercase-headers
+language: german
+first-author-page: 7
+last-author-page: 329
+note-mode: endnotes
+endnotes-appendix-start-page: 317
+endnotes-appendix-end-page: 329
+auto-replacements:
+  <: ‹
+  ">": ›
+journal:
+  pages: 329
+  chapters: 17
+  paragraphs: 527
+  lines: 10142
+  words: 81221
+  footnotes: 1
+known-issues: 
+  - Einrückung von Zitaten verursacht fehlerhafte Erkennung von Absatzstarts wie bei "eurer Tugend! Eure schenkende Liebe und eure Erkenntnis"
