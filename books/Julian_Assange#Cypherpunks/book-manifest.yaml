@@ -15,3 +15,12 @@ journal:
   lines: 5865
   words: 49710
   footnotes: 137
+chunks: 278
+multi-paragraph-chunks: 24
+single-paragraph-chunks: 50
+large-paragraph-chunks: 204
+average: 1258
+p01_length: 168
+p05_length: 378
+p95_length: 1763
+p99_length: 2250

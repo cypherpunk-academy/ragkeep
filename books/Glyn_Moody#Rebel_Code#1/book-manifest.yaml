@@ -3,5 +3,14 @@ title: Rebel Code
 book-id: Glyn_Moody#Rebel_Code#1
 book-index: 1
 book-type: allgemeiner-buchtext-mit-toc
-quotation-mark-open: '“'
-quotation-mark-close: '”'
+quotation-mark-open: “
+quotation-mark-close: ”
+chunks: 730
+multi-paragraph-chunks: 693
+single-paragraph-chunks: 14
+large-paragraph-chunks: 23
+average: 1250
+p01_length: 434
+p05_length: 1008
+p95_length: 1614
+p99_length: 1814

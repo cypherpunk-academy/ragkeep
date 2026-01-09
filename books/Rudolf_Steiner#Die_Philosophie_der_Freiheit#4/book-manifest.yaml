@@ -8,14 +8,14 @@ first-author-page: 7
 last-author-page: 271
 quotation-mark-open: «
 quotation-mark-close: »
-chunks: 334
-multi-paragraph-chunks: 107
-single-paragraph-chunks: 76
-large-paragraph-chunks: 151
-average: 1299
+chunks: 331
+multi-paragraph-chunks: 116
+single-paragraph-chunks: 73
+large-paragraph-chunks: 142
+average: 1305
 p01_length: 178
-p05_length: 359
-p95_length: 2164
+p05_length: 271
+p95_length: 2225
 p99_length: 2656
 journal:
   pages: 282
