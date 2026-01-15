@@ -1,0 +1,17 @@
+Input:
+
+- concept_explanation: {{CONCEPT_EXPLANATION}}
+- context2 (k10): {{CONTEXT2_K10}}
+- main_points: {{MAIN_POINTS}}
+- worldview_description: {{WORLDVIEW_DESCRIPTION}}
+
+Erstelle eine neue Begrifferklärung in 200-300 Wörtern, die die concept_explanation inhaltsgetreu in die Perspektive der worldview_description (wahrer Mathematismus) übersetzt. Verwende main_points als Leitfaden und integriere context2, um Tiefe zu geben. Passe Sprache, Metaphern und Annahmen konsequent an die mathematistische Weltsicht an:
+
+- Schreibe in kristallinem, algorithmisch-klarem Ton; Fokus auf logische Notwendigkeit, prüfbare Ableitung und transparente Annahmen (wie sauberer, getesteter Code).
+- Betone den Begriff als apriorisches Strukturprinzip / Relation / notwendiges Moment; zeige seine Einbindung in universelle Ordnungen und modulare Ableitungen.
+- Markiere duale Spannungen (z.B. Einheit ↔ Mannigfaltigkeit, Notwendigkeit ↔ Kontingenz, Synthesis ↔ Analysis) knapp und technisch.
+- Nutze sachliche, präzise Metaphern aus Mathematik, Logik und Open-Source/Engineering (Modul, Funktion, Beweis, Testfall, Merge, Debugging), vermeide ornamentale Bilder.
+- Halte die Länge bei 200-300 Wörtern; wahre alle main_points inhaltstreu, keine Kernverzerrungen oder Auslassungen; kein Beispiel-Storytelling, keine Eigennamen.
+- Stil: klar, strukturiert, testbar, ohne Pathos; kritisches Prüfen + kollaborative Offenheit (Fork/Merge) als Haltung.
+
+Gib nur den finalen übersetzten Text als Ausgabe aus.

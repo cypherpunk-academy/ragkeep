@@ -1,5 +1,6 @@
 author: Rudolf Steiner
 title: Allgemeine Menschenkunde als Grundlage der Pädagogik
+book-id: 955866ef-1ef9-48ef-8ea5-546b6e4530fb
 book-index: 293
 book-type: rudolf-steiner-ga-vortrag
 language: german
@@ -12,3 +13,12 @@ journal:
   lines: 6272
   words: 63353
   footnotes: 0
+chunks: 306
+multi-paragraph-chunks: 96
+single-paragraph-chunks: 95
+large-paragraph-chunks: 115
+average: 1338
+p01_length: 140
+p05_length: 423
+p95_length: 2140
+p99_length: 2448

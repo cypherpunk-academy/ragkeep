@@ -1,7 +1,16 @@
 author: Richard M Stallman
 title: Free Software Free Society
-book-id: Richard_M_Stallman#Free_Software_Free_Society#1
+book-id: 4c09f3d5-3f5c-42b7-beba-f12fc46594bc
 book-index: 1
 book-type: allgemeiner-buchtext-mit-toc
-quotation-mark-open: '“'
-quotation-mark-close: '”'
+quotation-mark-open: “
+quotation-mark-close: ”
+chunks: 380
+multi-paragraph-chunks: 354
+single-paragraph-chunks: 22
+large-paragraph-chunks: 4
+average: 1238
+p01_length: 181
+p05_length: 1003
+p95_length: 1732
+p99_length: 1976

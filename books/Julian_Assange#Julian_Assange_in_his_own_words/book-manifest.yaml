@@ -1,5 +1,6 @@
 author: Julian Assange
 title: Julian Assange in his own words
+book-id: 36371313-0400-4c90-9656-67d54052cf89
 book-index: 1
 book-type: general-english-book-header-left-with-space
 first-author-page: 5
@@ -63,3 +64,12 @@ erase-line-markers:
   - text: WIKILEAK
     position-in-line: centered
     position-on-page: first-line
+chunks: 143
+multi-paragraph-chunks: 80
+single-paragraph-chunks: 14
+large-paragraph-chunks: 49
+average: 1275
+p01_length: 170
+p05_length: 601
+p95_length: 1871
+p99_length: 2182

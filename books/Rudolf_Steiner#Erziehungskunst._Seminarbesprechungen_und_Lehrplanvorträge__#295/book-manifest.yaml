@@ -1,5 +1,6 @@
 author: Rudolf Steiner
 title: Erziehungskunst. Seminarbesprechungen und Lehrplanvorträge
+book-id: a3c25e9c-bcf5-4577-bdf5-c5bf9bec9f59
 book-index: 295
 book-type: rudolf-steiner-ga-vortrag
 language: german
@@ -12,3 +13,12 @@ journal:
   lines: 5723
   words: 54348
   footnotes: 0
+chunks: 252
+multi-paragraph-chunks: 214
+single-paragraph-chunks: 34
+large-paragraph-chunks: 4
+average: 1384
+p01_length: 365
+p05_length: 784
+p95_length: 2082
+p99_length: 2546

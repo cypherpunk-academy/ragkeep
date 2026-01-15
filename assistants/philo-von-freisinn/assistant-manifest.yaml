@@ -12,6 +12,43 @@ primary-books:
   - Rudolf_Steiner#Wahrheit_und_Wissenschaft#3
   - Rudolf_Steiner#Die_Kernpunkte_der_sozialen_Frage#23
   - Rudolf_Steiner#Aufsätze_über_die_Dreigliederung_des_sozialen_Organismus_und_zur_Zeitlage#24
-secondary-books: null
-augmentation-types: summaries,concepts,quotes
-last-updated: 2025-12-13T12:48:03.242Z
+secondary-books:
+  - Rudolf_Steiner#Fachwissenschaften_und_Anthroposophie#73a
+  - Rudolf_Steiner#Die_befruchtende_Wirkung_der_Anthroposophie_auf_die_Fachwissenschaften#76
+  - Rudolf_Steiner#Die_Wirklichkeit_der_höheren_Welten#79
+  - Rudolf_Steiner#Methodische_Grundlagen_der_Anthroposophie#30
+  - Rudolf_Steiner#Damit_der_Mensch_ganz_Mensch_werde#82
+  - Rudolf_Steiner#Gesammelte_Aufsätze_zur_Kultur-_und_Zeitgeschichte#31
+  - Rudolf_Steiner#Entsprechungen_zwischen_Mikrokosmos_und_Makrokosmos._Der_Mensch_—_eine_Hieroglyphe_des_Weltenalls.#201
+  - Rudolf_Steiner#Geschichtliche_Symptomatologie#185
+  - Rudolf_Steiner#Einleitungen_zu_Goethes_Naturwissenschaftlichen_Schriften#1
+  - Rudolf_Steiner#Lucifer-Gnosis._Grundlegende_Aufsätze_zur_Anthroposophie_und_Berichte_aus_den_Zeitschriften_«Luzifer»_und_«Lucifer-Gnosis»#34
+  - Rudolf_Steiner#Goethes_Weltanschauung#6
+  - Rudolf_Steiner#Der_menschliche_und_der_kosmische_Gedanke#151
+  - Rudolf_Steiner#Geisteswissenschaft_als_Erkenntnis_der_Grundimpulse_sozialer_Gestaltung#199
+  - Rudolf_Steiner#Die_soziale_Frage#328
+  - Rudolf_Steiner#Die_Befreiung_des_Menschenwesens_als_Grundlage_für_eine_soziale_Neugestaltung.#329
+  - Rudolf_Steiner#Neugestaltung_des_sozialen_Organismus#330
+  - Rudolf_Steiner#Betriebsräte_und_Sozialisierung#331
+  - Rudolf_Steiner#Soziale_Zukunft#332a
+  - Rudolf_Steiner#Vom_Einheitsstaat_zum_dreigliedrigen_sozialen_Organismus#334
+  - Rudolf_Steiner#Die_Krisis_der_Gegenwart_und_der_Weg_zu_gesundem_Denken#335
+  - Rudolf_Steiner#Soziale_Ideen.#337a
+  - Rudolf_Steiner#Soziale_Ideen.#337b
+  - Rudolf_Steiner#Anthroposophie_soziale_Dreigliederung_und_Redekunst.#339
+  - Rudolf_Steiner#Nationalökonomischer_Kurs.#340
+  - Rudolf_Steiner#Nationalökonomisches_Seminar.#341
+  - Rudolf_Steiner#Allgemeine_Menschenkunde_als_Grundlage_der_Pädagogik__#293
+  - Rudolf_Steiner#Erziehungskunst._Methodisch-Didaktisches__#294
+  - Rudolf_Steiner#Erziehungskunst._Seminarbesprechungen_und_Lehrplanvorträge__#295
+  - Eric_S_Raymond#A_brief_history_of_Hackerdom#1
+  - Eric_S_Raymond#How_to_become_a_hacker#1
+  - Eric_S_Raymond#The_Cathedral_and_the_Bazaar#1
+  - Glyn_Moody#Rebel_Code#1
+  - Lawrence_Lessig#Code_Version_2_0#1
+  - Richard_M_Stallman#Free_Software_Free_Society#1
+  - Julian_Assange#Cypherpunks
+  - Julian_Assange#Julian_Assange_in_his_own_words
+  - Julian_Assange#Various_Interviews_and_Articles#1
+  - Lawrence_Lessig#Code_Version_2_0#1
+last-updated: 2026-01-12T13:42:15.131Z

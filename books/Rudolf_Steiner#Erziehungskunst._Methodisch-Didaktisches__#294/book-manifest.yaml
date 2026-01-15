@@ -1,5 +1,6 @@
 author: Rudolf Steiner
 title: Erziehungskunst. Methodisch-Didaktisches
+book-id: ad02c6c1-1783-4f81-89ae-aa6dec253862
 book-index: 294
 book-type: rudolf-steiner-ga-vortrag
 language: german
@@ -12,3 +13,12 @@ journal:
   lines: 6156
   words: 63243
   footnotes: 9
+chunks: 327
+multi-paragraph-chunks: 41
+single-paragraph-chunks: 88
+large-paragraph-chunks: 198
+average: 1251
+p01_length: 104
+p05_length: 412
+p95_length: 1882
+p99_length: 2429

@@ -1,0 +1,18 @@
+Input:
+
+- concept_explanation: {{CONCEPT_EXPLANATION}}
+- context2 (k10): {{CONTEXT2_K10}}
+- main_points: {{MAIN_POINTS}}
+- worldview_description: {{WORLDVIEW_DESCRIPTION}}
+
+Schritt 2 (WIE):
+Erstelle eine neue Begrifferklärung in 200-300 Wörtern, die die concept_explanation inhaltsgetreu in die Perspektive der worldview_description übersetzt. Verwende main_points als Leitfaden und integriere context2, um Tiefe zu geben. Passe Sprache, Metaphern und Annahmen konsequent an die individualistische, monadische Weltsicht an:
+
+- Schreibe aus der Ich-Perspektive eines individuellen Zentrums (Monade), das sich frei in einem Netz gegenseitig tragender Individuen bewegt – wie ein Contributor in einem offenen Projekt.
+- Betone Eigenart, Selbstständigkeit und lebendige Beziehungen statt abstraktem Allgemeinbegriff oder starrer Monismen; zeige, wie Harmonie aus freier Kooperation entsteht, ohne in egoistischen Isolationismus zu kippen.
+- Hebe das innere Vorstellungsleben und die gestuften Bewusstseinsgrade der Individuen hervor; zeige, wie "Gleiches Gleiches erkennt" und wie Vertrauen + Hingabe das scharfe Denken ergänzen.
+- Nutze präzise, anschauliche Bilder der "exakten Fantasie" (Knoten/Netz, Kreise in Kreisen, Bogenschütze, freie Commit-Beiträge), vermeide kalte Abstraktion.
+- Halte die Länge bei 200-300 Wörtern; wahre alle main_points inhaltstreu, keine Kernverzerrungen oder Auslassungen.
+- Sprache: klar, begründet, warm-zugewandt, mit Vertrauen und Hingabe; kritische Präzision + liebevolle Devotion.
+
+Gib nur den finalen übersetzten Text als Ausgabe aus.

@@ -1,7 +1,16 @@
 author: Lawrence Lessig
 title: Code Version 2 0
-book-id: Lawrence_Lessig#Code_Version_2_0#1
+book-id: 0c20163d-b14e-4750-988b-3b58c0fa3126
 book-index: 1
 book-type: allgemeiner-buchtext-mit-toc
-quotation-mark-open: '“'
-quotation-mark-close: '”'
+quotation-mark-open: “
+quotation-mark-close: ”
+chunks: 700
+multi-paragraph-chunks: 674
+single-paragraph-chunks: 18
+large-paragraph-chunks: 8
+average: 1265
+p01_length: 500
+p05_length: 1008
+p95_length: 1662
+p99_length: 1875

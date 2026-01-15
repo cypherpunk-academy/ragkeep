@@ -1,7 +1,16 @@
 author: Eric S Raymond
 title: The Cathedral and the Bazaar
-book-id: Eric_S_Raymond#The_Cathedral_and_the_Bazaar#1
+book-id: a1fa8d65-911c-4adc-b11f-2c8a4e3866c7
 book-index: 1
 book-type: allgemeiner-buchtext-mit-toc
-quotation-mark-open: '„'
-quotation-mark-close: '“'
+quotation-mark-open: „
+quotation-mark-close: “
+chunks: 69
+multi-paragraph-chunks: 64
+single-paragraph-chunks: 5
+large-paragraph-chunks: 0
+average: 1143
+p01_length: 353
+p05_length: 439
+p95_length: 1426
+p99_length: 1643

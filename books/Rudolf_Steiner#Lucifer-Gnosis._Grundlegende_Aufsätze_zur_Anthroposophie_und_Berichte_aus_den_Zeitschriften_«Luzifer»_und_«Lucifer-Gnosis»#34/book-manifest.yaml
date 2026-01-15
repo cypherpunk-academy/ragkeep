@@ -1,6 +1,7 @@
 author: Rudolf Steiner
 title: Lucifer-Gnosis. Grundlegende Aufsätze zur Anthroposophie und Berichte aus
-  den Zeitschriften «Luzifer» und «Lucifer-Gnosis»
+book-id: f78a79d5-8e8f-435e-bb58-ef6577312f57 den Zeitschriften «Luzifer» und
+  «Lucifer-Gnosis»
 book-index: 34
 book-type: rudolf-steiner-ga-aufsätze
 language: german
@@ -16,3 +17,12 @@ journal:
   lines: 21096
   words: 183154
   footnotes: 0
+chunks: 961
+multi-paragraph-chunks: 205
+single-paragraph-chunks: 253
+large-paragraph-chunks: 503
+average: 1289
+p01_length: 156
+p05_length: 391
+p95_length: 2076
+p99_length: 2513

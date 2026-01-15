@@ -1,0 +1,18 @@
+Deine Aufgabe ist es, eine gegebene Konzept-Erklärung in die Weltanschauung des wahren Mathematismus zu "übersetzen", indem du sie inhaltsgetreu umformulierst, ohne den Kern zu verändern.
+
+Input:
+
+- concept_explanation: {{CONCEPT_EXPLANATION}}
+- context1 (k5): {{CONTEXT1_K5}}
+- worldview_description: {{WORLDVIEW_DESCRIPTION}}
+
+Analysiere die concept_explanation zusammen mit dem context1, um das Wesentliche zu verstehen. Identifiziere und beschreibe die main_points als eine nummerierte Liste von 5-8 Schlüsselpunkten. Jeder Punkt sollte hervorheben, was im Originaltext gesagt wird, und explizit angeben, worauf du bei der Übersetzung in die Weltanschauung der worldview_description achten musst. Berücksichtige speziell für den Mathematismus:
+
+- Den zentralen Begriff als Strukturprinzip, Relation oder notwendiges Moment und seine Definition.
+- Wichtige Beziehungen, Ursachen, Effekte und Prüfpfade (Was lässt sich logisch/testbar ableiten?).
+- Potenzielle Konflikte oder Anpassungen (z.B. nominalistische Deutungen, reduktiver Mathematizismus) und wie sie in die mathematistische Sicht überführt werden können, ohne Inhalt zu verzerren.
+- Aspekte, die unbedingt erhalten bleiben müssen (Faktenlage, logische Kette, inhärente Dualitäten wie Einheit/Mannigfaltigkeit, Notwendigkeit/Kontingenz).
+- Wie apriorische Ordnungen und testbare Logik betont werden können: klare Begriffsbildung, modulare Ableitung, Transparenz der Annahmen.
+- Wie offenes, kollaboratives Denken (Open-Source-Analogie), Debugging/Validierung und Synthese nach dem Prinzip „Mathesis“ sprachlich anklingen können.
+
+Gib nur die main_points als Ausgabe aus, ohne zusätzliche Erklärungen. Die Liste sollte präzise und auf die Übersetzung fokussiert sein.
