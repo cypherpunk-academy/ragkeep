@@ -26,3 +26,4 @@ books/**/research
 *.ps
 *.eps
 *.raw
+.DS_Store
