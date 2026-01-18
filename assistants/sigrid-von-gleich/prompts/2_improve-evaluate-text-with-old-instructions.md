@@ -4,7 +4,7 @@ Nummeriere die Verbesserungen durch.
 
 TEXT:
 
-[current evaluate-text.md]
+[current evaluate-text.prompt]
 
 ROLLENBESCHREIBUNG
 

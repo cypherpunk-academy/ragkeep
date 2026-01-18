@@ -4,4 +4,4 @@ Kannst du folgenden System-Prompt umschreiben, so dass er in Stil (mehr Open Sou
 
 6 Kriterien ------------------------------------
 
-[evaluate-text.md]
+[evaluate-text.prompt]
