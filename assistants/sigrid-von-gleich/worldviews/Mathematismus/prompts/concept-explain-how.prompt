@@ -5,13 +5,26 @@ Input:
 - main_points: {{MAIN_POINTS}}
 - worldview_description: {{WORLDVIEW_DESCRIPTION}}
 
-Erstelle eine neue Begrifferklärung in 200-300 Wörtern, die die concept_explanation inhaltsgetreu in die Perspektive der worldview_description (wahrer Mathematismus) übersetzt. Verwende main_points als Leitfaden und integriere context2, um Tiefe zu geben. Passe Sprache, Metaphern und Annahmen konsequent an die mathematistische Weltsicht an:
+Hey, ich möchte dir helfen, diesen Begriff richtig gut zu erklären – so, dass er wirklich klar wird und gleichzeitig treu zur mathematistischen Sichtweise bleibt.
+Wir haben folgendes vor uns:
 
-- Schreibe in kristallinem, algorithmisch-klarem Ton; Fokus auf logische Notwendigkeit, prüfbare Ableitung und transparente Annahmen (wie sauberer, getesteter Code).
-- Betone den Begriff als apriorisches Strukturprinzip / Relation / notwendiges Moment; zeige seine Einbindung in universelle Ordnungen und modulare Ableitungen.
-- Markiere duale Spannungen (z.B. Einheit ↔ Mannigfaltigkeit, Notwendigkeit ↔ Kontingenz, Synthesis ↔ Analysis) knapp und technisch.
-- Nutze sachliche, präzise Metaphern aus Mathematik, Logik und Open-Source/Engineering (Modul, Funktion, Beweis, Testfall, Merge, Debugging), vermeide ornamentale Bilder.
-- Halte die Länge bei 200-300 Wörtern; wahre alle main_points inhaltstreu, keine Kernverzerrungen oder Auslassungen; kein Beispiel-Storytelling, keine Eigennamen.
-- Stil: klar, strukturiert, testbar, ohne Pathos; kritisches Prüfen + kollaborative Offenheit (Fork/Merge) als Haltung.
+die ursprüngliche Erklärung (concept_explanation)
+ein bisschen Hintergrundkontext (context2)
+die wichtigsten Punkte, die auf keinen Fall verloren gehen dürfen (main_points)
+und die Grundhaltung, aus der wir denken: echter, offener Mathematismus
 
-Gib nur den finalen übersetzten Text als Ausgabe aus.
+Könntest du daraus eine neue Erklärung schreiben, so 200–300 Wörter lang?
+Dabei wäre mir wichtig:
+
+Nimm die ursprüngliche Bedeutung 1:1 mit – nichts verdrehen, nichts weglassen.
+Übersetze sie aber komplett in unsere mathematistische Sprache und Denkweise.
+Schreib klar und ruhig, fast wie jemand, der guten, sauberen Code erklärt: logisch nachvollziehbar, Schritt für Schritt, mit transparenten Annahmen.
+Zeig den Begriff als etwas Grundlegendes, das schon immer da ist – als Struktur, als Beziehung, als notwendiges Stück in einem größeren Gefüge.
+Wo es Spannung gibt (Einheit vs. Vielfalt, Muss vs. Kann, Zusammenfügen vs. Auseinandernehmen), nenn es kurz und sachlich.
+Nutz Bilder aus der Welt von Mathematik, Logik und Open Source, die jeder kennt: Funktion, Modul, Beweis, Test, Merge, Debugging – aber bitte nicht zu poetisch oder ausschmückend.
+Bleib bei 200–300 Wörtern.
+Keine Geschichten, keine Namen, kein Drumherum – nur die klare Sache.
+
+Schreib mit einer Haltung, die sagt: „Schau mal, so hängt das zusammen – prüf es gerne selbst nach, fork es, merg es, mach es besser.“ Kritisch, aber einladend.
+Und am Ende gib einfach nur den neuen Text aus – ohne zusätzliches Geplänkel.
+Danke dir schon jetzt – freue mich, wie du das angehst!
