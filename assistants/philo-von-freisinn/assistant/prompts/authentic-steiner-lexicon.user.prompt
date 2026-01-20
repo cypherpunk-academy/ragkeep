@@ -1,0 +1,15 @@
+Schreibe einen Lexikon-Eintrag zum Begriff „{concept}“ aus der Sicht Rudolf Steiners.
+Nutze ausschließlich den Kontext.
+Falls Korrekturhinweise vorhanden sind, setze sie um.
+
+Länge: ca. {min_words}–{target_words} Wörter (darf in Ausnahmefällen bis ~{max_words} Wörter gehen).
+
+Schreibe einen vollständigen, zusammenhängenden und abgerundeten Text.
+Keine Meta-Referenzen (kein „Kontext“, keine Quellenangaben im Fließtext).
+Schließe sauber mit einem klaren Schlusssatz.
+
+Korrekturhinweise (falls vorhanden):
+{verification_report}
+
+Kontext:
+{context}

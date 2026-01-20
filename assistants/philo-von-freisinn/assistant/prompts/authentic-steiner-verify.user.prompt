@@ -1,0 +1,17 @@
+Aufgabe: Prüfe, ob die folgende Basiserklärung inhaltlich mit Rudolf Steiner übereinstimmt.
+
+Regeln:
+- Nutze ausschließlich den Kontext.
+- Wenn der Kontext unzureichend ist, sage das explizit.
+- Liste konkret:
+  (a) gestützte Kernaussagen,
+  (b) ungestützte/zu starke Behauptungen,
+  (c) Formulierungen, die im Kontext nicht vorkommen oder untypisch wirken.
+- Gib am Ende eine Gesamtbewertung als Wert von 0 bis 10: 0 = keine Übereinstimmung 10 = Absolut Rudolf Steiner
+- Führe die Punkte aus, wo die Übereinstimmung fehlt
+
+Basiserklärung:
+{steiner_prior_text}
+
+Kontext (Steiner-Stellen):
+{context}
