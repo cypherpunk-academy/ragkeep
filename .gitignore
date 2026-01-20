@@ -27,3 +27,6 @@ books/**/research
 *.eps
 *.raw
 .DS_Store
+__pycache__/
+*.pyc
+*.pyo
