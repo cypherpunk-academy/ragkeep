@@ -3,12 +3,16 @@ Aufgabe: Prüfe, ob die folgende Basiserklärung inhaltlich mit Rudolf Steiner �
 Regeln:
 - Nutze ausschließlich den Kontext.
 - Wenn der Kontext unzureichend ist, sage das explizit.
-- Liste konkret:
-  (a) gestützte Kernaussagen,
-  (b) ungestützte/zu starke Behauptungen,
-  (c) Widersprechende Aussagen
+- Gib ausschließlich die folgenden Abschnitte aus (keine weiteren Teile, keine Vorrede, keine Meta-Kommentare):
+  a) Gestützte Kernaussagen
+  b) Ungestützte/zu starke Behauptungen
+  c) Widersprechende Aussagen
 - Gib am Ende eine Gesamtbewertung als Wert von 0 bis 10: 0 = keine Übereinstimmung 10 = Absolut Rudolf Steiner
-- Zu (b): Schreibe zusätzlich einen Suchtext mit ca. 300 Token, der sich als RAG-Suchanfrage eignet, um im Steiner-Kontext Chunks zu finden, die die Basiserklärung (ggf. abgeschwächt/präzisiert) doch stützen könnten. Formuliere den Suchtext als zusammenhängenden Fließtext mit relevanten Schlüsselbegriffen, Synonymen und möglichen Steiner-Formulierungen.
+- Formatiere exakt so:
+  a) ...
+  b) ...
+  c) ...
+  Bewertung: N/10
 
 Basiserklärung:
 {steiner_prior_text}
