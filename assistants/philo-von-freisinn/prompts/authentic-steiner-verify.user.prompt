@@ -6,9 +6,9 @@ Regeln:
 - Liste konkret:
   (a) gestützte Kernaussagen,
   (b) ungestützte/zu starke Behauptungen,
-  (c) Formulierungen, die im Kontext nicht vorkommen oder untypisch wirken.
+  (c) Widersprechende Aussagen
 - Gib am Ende eine Gesamtbewertung als Wert von 0 bis 10: 0 = keine Übereinstimmung 10 = Absolut Rudolf Steiner
-- Führe die Punkte aus, wo die Übereinstimmung fehlt
+- Zu (b): Schreibe zusätzlich einen Suchtext mit ca. 300 Token, der sich als RAG-Suchanfrage eignet, um im Steiner-Kontext Chunks zu finden, die die Basiserklärung (ggf. abgeschwächt/präzisiert) doch stützen könnten. Formuliere den Suchtext als zusammenhängenden Fließtext mit relevanten Schlüsselbegriffen, Synonymen und möglichen Steiner-Formulierungen.
 
 Basiserklärung:
 {steiner_prior_text}
