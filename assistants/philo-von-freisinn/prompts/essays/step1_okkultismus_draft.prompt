@@ -1,0 +1,29 @@
+Entwirf aus dem folgenden Input-Chunk, den Eingangstext für ein Essay zu dem Thema oder der Frage:
+
+{essay_title}
+
+Er soll Interesse oder Neugier wecken, den Text zu lesen. Einen kurzen, zusammenhängenden Text (ca. 200–300 Token) mit
+- Grundton: Das Wesen der Dinge bleibt den gewöhnlichen Erkenntnismitteln entzogen; die Erscheinung ist nicht einfach „das Wesen selbst“ (was ich sehe ist Illusion als Hintergrund, ohne es auszuerklären).
+- Wirkung: sanftes Interesse wecken, keine Sensationslust, kein esoterisches Reklame-Pathos.
+- Stil: klar, nüchtern, anschaulich. Keine Fachjargon-Wörter (z.B. vermeide „Epistemologie“, „transzendental“ etc.).
+
+Inhaltliche Ziele (alle müssen vorkommen):
+
+1) Erörtere Fragen, die man zum im Chunk behandelten Thema stellen kann:
+   - Formuliere **bis zu 5 echte Fragen**, die das Thema „umkreisen“, Grenzen des Wissens markieren und das Unausgesprochene sichtbar machen.
+   - Fragen sollen konkret sein (nicht: „Was ist Wahrheit?“), sondern am Chunk hängen.
+
+2) Zeige das Rätselhafte am Thema aus Sicht des heutigen Lebens:
+   - Beschreibe in **2–4 Sätzen**, warum das Thema im Alltag/Heute zugleich greifbar und ungreifbar wirkt.
+   - Du darfst moderne Beispiele nur als **Erfahrungs- oder Beobachtungsrahmen** nutzen (ohne neue Tatsachen über den Chunk zu behaupten).
+
+Wichtige Regeln:
+- Nutze den Chunk als Grundlage; erfinde keine Details, die im Chunk nicht angelegt sind.
+- Schreibe **keine** Überschrift und **keine** Aufzählungspunkte im Output; der Text soll fließen.
+- Keine Meta-Sätze über „Prompt“, „Chunk“, „Aufgabe“ oder „Token“.
+- Der Text muss rund enden (letzter Satz abgeschlossen, Punkt).
+
+-----------------------------------------------------------------------------
+**Ausgangstext**
+{text}
+-----------------------------------------------------------------------------

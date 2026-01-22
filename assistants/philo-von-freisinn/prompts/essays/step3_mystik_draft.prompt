@@ -1,0 +1,40 @@
+Schreibe den folgenden Essay-Entwurf als **nächsten Abschnitt** fort.
+
+Input:
+- {essay_title}: Arbeitstitel des Essays
+- {text}: Ausgangstext / Kontext, auf den sich der Essay bezieht
+- {essay_draft}: bisheriger Essay-Entwurf (Ende = dein Anschluss-Punkt; enthält bereits mehrere nummerierte Abschnitte)
+
+Aufgabe:
+- Den Leser miterleben zu lassen, wie die Frage, die Aufgabe oder das Problem im Inneren erlebt werden kann.
+- Schreibe **200–300 Token** als Fortsetzung von `{essay_draft}`.
+- **Wiederhole nicht** die bisherigen Gedanken; knüpfe unmittelbar am letzten Satz/Absatz an.
+- Schreibe einen fließenden Text ohne Überschrift und ohne Aufzählungszeichen.
+- Erkläre nicht die Weltanschauungsstimmung der Mystik, nutze sie einfach.
+
+Weltanschauungsstimmung: **Mystik (Venus)**
+
+- Grundton: Wahrheit wird durch inneres Erleben gesucht; wenn die Seele gelassen wird, heißt das nicht Gefühlsarmut, eher im Gegenteil, sondern das Nachlassen des Erzwingens, sodass Wesentliches im Innern aufleuchten kann.
+- Erkenntnisbewegung (Akzent): kein willentliches Erzwingen, sondern hingebendes Sich-Öffnen; das kann als stilles Nachklingen beginnen, aber auch als intensives inneres Begegnen auftreten, Seelenstürme!, die gerade durch ihre Kraft klärend wirken.
+- Wirkung: Vertiefung und Sinnschärfung; das Thema bekommt Gewicht, ohne dramatisch zu werden.
+- Stil: tief fühlend, leidensbereit, anschaulich; keine Fachjargon-Wörter, keine esoterische Reklame-Sprache.
+
+Inhaltliche Ziele (alle müssen vorkommen):
+- Führe das Thema in eine Innenperspektive, still oder strümisch-wogend: Nicht „mehr verstehen“, sondern merken, wie sich im ruhigen Nachklingen ein Sinnzusammenhang zeigt, der im schnellen Denken übersehen wird.
+- Zeige 1–2 Momente des inneren Aufleuchtens (ohne Pathos): ein Satz, der nacharbeitet; eine Beobachtung, die plötzlich „sprechen“ kann; eine vertraute Sache, die in neuer Bedeutung erscheint – nicht erzwungen, eher zugelassen.
+- Schließe den Abschnitt mit einem ruhigen, abgerundeten Satz (Punkt).
+
+Wichtige Regeln:
+- Nutze ausschließlich `{essay_title}`, `{text}` und `{essay_draft}` als inhaltliche Grundlage; keine anderen Quellen, kein Vorwissen.
+- Keine Meta-Sätze über „Prompt“, „Token“ oder „Aufgabe“.
+- Keine Zitate erfinden.
+
+-----------------------------------------------------------------------------
+{essay_title}
+
+Ausgangstext:
+{text}
+
+Bisheriger Essay-Entwurf:
+{essay_draft}
+-----------------------------------------------------------------------------
