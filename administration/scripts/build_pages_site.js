@@ -141,13 +141,14 @@ function copyBookHtmlToSite(book) {
   fs.cpSync(book.absHtmlDir, destAbs, { recursive: true });
   ensurePrettyTocCss(destAbs);
   injectTocSummaries({ absBookDir: book.absBookDir, destBookHtmlDir: destAbs });
+  unescapeInlineItalicsEntities(destAbs);
 }
 
 function ensurePrettyTocCss(destBookHtmlDir) {
   const cssPath = path.join(destBookHtmlDir, 'assets', 'styles.css');
   if (!fileExists(cssPath)) return;
 
-  const marker = '/* ragkeep:pretty-toc:v3 */';
+  const marker = '/* ragkeep:pretty-toc:v5 */';
   const current = fs.readFileSync(cssPath, 'utf8');
   if (current.includes(marker)) return;
 
@@ -196,19 +197,6 @@ nav.toc li:first-child {
   border-top: 0;
 }
 
-/* Plain TOC links (for books without summaries, or chapters we couldn't match) */
-nav.toc li > a {
-  display: flex;
-  gap: 10px;
-  align-items: baseline;
-}
-
-nav.toc li > a::before {
-  content: "→";
-  width: 1ch;
-  opacity: 0.55;
-}
-
 /* Expandable TOC items (injected by build:pages when summaries exist) */
 nav.toc details.toc-details {
   padding: 0;
@@ -228,15 +216,27 @@ nav.toc summary.toc-summary-line {
 
 nav.toc summary.toc-summary-line::-webkit-details-marker { display: none; }
 
-nav.toc summary.toc-summary-line::before {
-  content: "→";
-  width: 1ch;
-  opacity: 0.55;
-  transition: opacity 140ms ease;
+nav.toc button.toc-toggle {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  line-height: 1;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  flex: 0 0 auto;
 }
 
-nav.toc details[open] summary.toc-summary-line::before {
-  content: "↓";
+nav.toc .toc-arrow {
+  width: 1.2ch;
+  opacity: 0.6;
+  display: inline-block;
+  text-align: center;
 }
 
 nav.toc summary.toc-summary-line:hover { opacity: 0.95; }
@@ -273,6 +273,21 @@ nav.toc .toc-excerpt {
 @media (max-width: 640px) {
   nav.toc .toc-excerpt { font-size: 0.98em; }
 }
+
+/* Toggle the arrow icons based on expanded/collapsed state */
+nav.toc details:not([open]) .toc-arrow-open { display: none; }
+nav.toc details[open] .toc-arrow-closed { display: none; }
+
+/* Make chapter links look like the rest of the TOC */
+nav.toc a.toc-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav.toc a.toc-link:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(127,127,127,0.45);
+}
 `;
 
   fs.writeFileSync(cssPath, current + extra, 'utf8');
@@ -285,7 +300,7 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
   const tocPath = path.join(destBookHtmlDir, 'index.html');
   if (!fileExists(tocPath)) return;
 
-  const marker = 'data-ragkeep-toc-summaries="1"';
+  const marker = 'data-ragkeep-toc-summaries="3"';
   let html = fs.readFileSync(tocPath, 'utf8');
   if (html.includes(marker)) return;
 
@@ -304,15 +319,24 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
   }
   if (summariesByTitle.size === 0) return;
 
-  html = html.replace(/<nav class="toc">([\s\S]*?)<\/nav>/m, (navMatch, navInner) => {
-    const replaced = navInner.replace(/<li>\s*<a href="([^"]+)">([^<]+)<\/a>\s*<\/li>/g, (liMatch, href, rawTitle) => {
-      const titleText = decodeHtmlEntities(rawTitle.trim());
-      const summaryText = pickBestSummaryText(summariesByTitle, titleText);
-      if (!summaryText) return `<li><a href="${href}">${escapeHtml(titleText)}</a></li>`;
+  html = html.replace(/<nav class="toc"[^>]*>([\s\S]*?)<\/nav>/m, (navMatch, navInner) => {
+    const replaced = navInner.replace(/<li>\s*<a href="([^"]+)">([\s\S]*?)<\/a>\s*<\/li>/g, (liMatch, href, rawTitleHtml) => {
+      const decoded = decodeHtmlEntities(String(rawTitleHtml || '').trim());
+      const titlePlain = stripTags(decoded).trim();
+      const titleHtml = renderInlineWithEmphasis(decoded).trim();
+
+      const summaryText = pickBestSummaryText(summariesByTitle, titlePlain);
+      if (!summaryText) return `<li><a class="toc-link" href="${href}">${titleHtml}</a></li>`;
 
       return `<li>
   <details class="toc-details">
-    <summary class="toc-summary-line">${escapeHtml(titleText)}</summary>
+    <summary class="toc-summary-line">
+      <button class="toc-toggle" type="button" aria-label="Zusammenfassung anzeigen">
+        <span class="toc-arrow toc-arrow-closed" aria-hidden="true">→</span>
+        <span class="toc-arrow toc-arrow-open" aria-hidden="true">↓</span>
+      </button>
+      <a class="toc-link toc-title" href="${href}">${titleHtml}</a>
+    </summary>
     <div class="toc-panel">
       <div class="toc-actions"><a class="toc-open" href="${href}">Kapitel öffnen</a></div>
       <div class="toc-excerpt">${renderSummaryHtml(summaryText)}</div>
@@ -345,9 +369,12 @@ function pickBestSummaryText(summariesByTitle, tocTitle) {
 }
 
 function renderSummaryHtml(text) {
-  const paras = text.split(/\n\s*\n/g).map((p) => p.trim()).filter(Boolean);
-  const safe = paras.map((p) => `<p>${escapeHtml(p).replace(/\n/g, '<br/>')}</p>`).join('');
-  return safe || `<p>${escapeHtml(text)}</p>`;
+  const cleaned = String(text || '').replace(/\*\*/g, '');
+  const paras = cleaned.split(/\n\s*\n/g).map((p) => p.trim()).filter(Boolean);
+  const safe = paras
+    .map((p) => `<p>${renderInlineWithEmphasis(p).replace(/\n/g, '<br/>')}</p>`)
+    .join('');
+  return safe || `<p>${renderInlineWithEmphasis(cleaned)}</p>`;
 }
 
 function decodeHtmlEntities(s) {
@@ -356,7 +383,58 @@ function decodeHtmlEntities(s) {
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'");
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, ' ');
+}
+
+function stripTags(s) {
+  return String(s || '').replace(/<[^>]*>/g, '');
+}
+
+function renderInlineWithEmphasis(s) {
+  // Allow <i>...</i> (or <em>) to render as emphasis, but strip any other tags.
+  let t = String(s || '');
+  t = t.replace(/<\s*\/\s*em\s*>/gi, '__EM_CLOSE__');
+  t = t.replace(/<\s*em\s*>/gi, '__EM_OPEN__');
+  t = t.replace(/<\s*\/\s*i\s*>/gi, '__EM_CLOSE__');
+  t = t.replace(/<\s*i\s*>/gi, '__EM_OPEN__');
+  // Remove any other tags
+  t = t.replace(/<[^>]*>/g, '');
+  // Escape, then re-inject allowed tags
+  t = escapeHtml(t);
+  t = t.replace(/__EM_OPEN__/g, '<em>').replace(/__EM_CLOSE__/g, '</em>');
+  return t;
+}
+
+function unescapeInlineItalicsEntities(rootDir) {
+  // Convert literal "&lt;i&gt;...&lt;/i&gt;" to real emphasis tags in copied HTML files.
+  const stack = [rootDir];
+  while (stack.length) {
+    const dir = stack.pop();
+    let entries = [];
+    try {
+      entries = fs.readdirSync(dir, { withFileTypes: true });
+    } catch {
+      continue;
+    }
+    for (const e of entries) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) {
+        stack.push(p);
+        continue;
+      }
+      if (!e.isFile() || !p.endsWith('.html')) continue;
+      try {
+        const cur = fs.readFileSync(p, 'utf8');
+        const next = cur
+          .replace(/&lt;\s*i\s*&gt;/gi, '<em>')
+          .replace(/&lt;\s*\/\s*i\s*&gt;/gi, '</em>');
+        if (next !== cur) fs.writeFileSync(p, next, 'utf8');
+      } catch {
+        // ignore
+      }
+    }
+  }
 }
 
 function writeNoJekyll() {

@@ -256,7 +256,7 @@ em {
     }
 }
 
-/* ragkeep:pretty-toc:v3 */
+/* ragkeep:pretty-toc:v5 */
 nav.toc {
   margin: 1.25rem 0 2.25rem;
 }
@@ -299,19 +299,6 @@ nav.toc li:first-child {
   border-top: 0;
 }
 
-/* Plain TOC links (for books without summaries, or chapters we couldn't match) */
-nav.toc li > a {
-  display: flex;
-  gap: 10px;
-  align-items: baseline;
-}
-
-nav.toc li > a::before {
-  content: "→";
-  width: 1ch;
-  opacity: 0.55;
-}
-
 /* Expandable TOC items (injected by build:pages when summaries exist) */
 nav.toc details.toc-details {
   padding: 0;
@@ -331,15 +318,27 @@ nav.toc summary.toc-summary-line {
 
 nav.toc summary.toc-summary-line::-webkit-details-marker { display: none; }
 
-nav.toc summary.toc-summary-line::before {
-  content: "→";
-  width: 1ch;
-  opacity: 0.55;
-  transition: opacity 140ms ease;
+nav.toc button.toc-toggle {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  line-height: 1;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0;
+  flex: 0 0 auto;
 }
 
-nav.toc details[open] summary.toc-summary-line::before {
-  content: "↓";
+nav.toc .toc-arrow {
+  width: 1.2ch;
+  opacity: 0.6;
+  display: inline-block;
+  text-align: center;
 }
 
 nav.toc summary.toc-summary-line:hover { opacity: 0.95; }
@@ -375,4 +374,19 @@ nav.toc .toc-excerpt {
 
 @media (max-width: 640px) {
   nav.toc .toc-excerpt { font-size: 0.98em; }
+}
+
+/* Toggle the arrow icons based on expanded/collapsed state */
+nav.toc details:not([open]) .toc-arrow-open { display: none; }
+nav.toc details[open] .toc-arrow-closed { display: none; }
+
+/* Make chapter links look like the rest of the TOC */
+nav.toc a.toc-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav.toc a.toc-link:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(127,127,127,0.45);
 }
