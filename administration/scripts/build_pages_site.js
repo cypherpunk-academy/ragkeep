@@ -8,7 +8,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const REPO_ROOT = path.resolve(__dirname, '..');
+// This script lives under `administration/scripts/`, so repo root is 2 levels up.
+const REPO_ROOT = path.resolve(__dirname, '..', '..');
 const OUTPUT_DIR = path.join(REPO_ROOT, 'site');
 
 /**

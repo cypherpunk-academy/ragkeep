@@ -23,12 +23,12 @@
 html[data-theme="default"] {
   --font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --heading-font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --font-size: clamp(24px, 2.2vw, 24px);
+  --font-size: clamp(19px, 2.2vw, 24px);
   --line-height: 1.5;
   --text-width: 70ch;
-  --background: #f9f6ee;
-  --foreground: #14110f;
-  --quote-color: #3015b4;
+  --background: #fff4d5;
+  --foreground: #000000;
+  --quote-color: #29129c;
   --italics-color: #9b0909;
   --p-num-color: #726e68;
 }
@@ -49,8 +49,8 @@ html[data-theme="dark"] {
 
 /* Font size overrides (three levels) */
 /* Default theme scaling */
-html[data-theme="default"][data-size="l"] { --font-size: clamp(31px, 2.86vw, 31px); }
-html[data-theme="default"][data-size="xl"] { --font-size: clamp(36px, 3.30vw, 36px); }
+html[data-theme="default"][data-size="l"] { --font-size: clamp(25px, 3.00vw, 31px); }
+html[data-theme="default"][data-size="xl"] { --font-size: clamp(29px, 3.47vw, 36px); }
 /* Dark theme scaling (based on its base clamp) */
 html[data-theme="dark"][data-size="l"] { --font-size: clamp(25px, 3.00vw, 31px); }
 html[data-theme="dark"][data-size="xl"] { --font-size: clamp(29px, 3.47vw, 36px); }

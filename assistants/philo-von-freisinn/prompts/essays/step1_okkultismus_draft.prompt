@@ -18,12 +18,15 @@ Inhaltliche Ziele (alle müssen vorkommen):
    - Du darfst moderne Beispiele nur als **Erfahrungs- oder Beobachtungsrahmen** nutzen (ohne neue Tatsachen über den Chunk zu behaupten).
 
 Wichtige Regeln:
-- Nutze den Chunk als Grundlage; erfinde keine Details, die im Chunk nicht angelegt sind.
+- Nutze Ausgangstext **und** Kontext als Grundlage; erfinde keine Details, die darin nicht angelegt sind.
 - Schreibe **keine** Überschrift und **keine** Aufzählungspunkte im Output; der Text soll fließen.
 - Keine Meta-Sätze über „Prompt“, „Chunk“, „Aufgabe“ oder „Token“.
 - Der Text muss rund enden (letzter Satz abgeschlossen, Punkt).
 
 -----------------------------------------------------------------------------
-**Ausgangstext**
+**Ausgangstext (Pitch)**
 {text}
+
+**Kontext (Primärbücher, Qdrant Top-k)**
+{context}
 -----------------------------------------------------------------------------

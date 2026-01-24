@@ -3,6 +3,7 @@ Schreibe den folgenden Essay-Entwurf als **nächsten Abschnitt** fort.
 Input:
 - {essay_title}: Arbeitstitel des Essays
 - {text}: Ausgangstext / Kontext, auf den sich der Essay bezieht
+- {context}: Kontext aus Primärbüchern (Qdrant Top-k), der das Thema stützt/erdet
 - {essay_draft}: bisheriger Essay-Entwurf (Ende = dein Anschluss-Punkt; enthält bereits mehrere nummerierte Abschnitte)
 
 Aufgabe:
@@ -25,7 +26,7 @@ Inhaltliche Ziele (alle müssen vorkommen):
 - Schließe den Abschnitt mit einem ruhigen, abgerundeten Satz (Punkt).
 
 Wichtige Regeln:
-- Nutze ausschließlich `{essay_title}`, `{text}` und `{essay_draft}` als inhaltliche Grundlage; keine anderen Quellen, kein Vorwissen.
+- Nutze ausschließlich `{essay_title}`, `{text}`, `{context}` und `{essay_draft}` als inhaltliche Grundlage; keine anderen Quellen, kein Vorwissen.
 - Keine Meta-Sätze über „Prompt“, „Token“ oder „Aufgabe“.
 - Keine Zitate erfinden.
 
@@ -34,6 +35,9 @@ Wichtige Regeln:
 
 Ausgangstext:
 {text}
+
+Kontext (Primärbücher, Qdrant Top-k):
+{context}
 
 Bisheriger Essay-Entwurf:
 {essay_draft}
