@@ -3,6 +3,12 @@ books/**/results
 books/**/input
 books/**/research
 
+# Keep chapter summaries tracked (needed for GitHub Pages TOC summaries)
+!books/**/results/
+books/**/results/**
+!books/**/results/rag-chunks/
+!books/**/results/rag-chunks/summaries-chunks.jsonl
+
 # Images
 *.png
 *.jpg
