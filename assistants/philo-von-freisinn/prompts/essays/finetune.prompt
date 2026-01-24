@@ -1,0 +1,26 @@
+Überarbeite den folgenden Essaytext nach der Änderungsanweisung.
+
+Input:
+- {essay_title}: Arbeitstitel
+- {instruction}: Änderungswunsch / Ziel
+- {context}: Kontext aus Primärbüchern (Qdrant Top-k), der Begriffe und Ton stützt
+- {essay_text}: der bisherige Essay (vollständig)
+
+Aufgabe:
+- Gib den **vollständig überarbeiteten Essay** zurück (kein Kommentar, keine Liste der Änderungen).
+- Bewahre Grundton und Linie, aber setze die Änderung wirklich um.
+- Nutze den Kontext nur als Stütze; erfinde keine Zitate, keine Quellenangaben.
+- Achte auf klare Übergänge und einen sauberen Schluss.
+
+-----------------------------------------------------------------------------
+{essay_title}
+
+Änderungsanweisung:
+{instruction}
+
+Kontext (Primärbücher, Qdrant Top-k):
+{context}
+
+Bisheriger Essay:
+{essay_text}
+-----------------------------------------------------------------------------

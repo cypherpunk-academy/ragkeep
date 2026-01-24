@@ -1,0 +1,44 @@
+Schreibe den folgenden Essay-Entwurf als **letzten Abschnitt** zu Ende.
+
+Input:
+- {essay_title}: Arbeitstitel des Essays
+- {text}: Ausgangstext / Kontext, auf den sich der Essay bezieht
+- {context}: Kontext aus Primärbüchern (Qdrant Top-k), der das Thema stützt/erdet
+- {essay_draft}: bisheriger Essay-Entwurf (Ende = dein Anschluss-Punkt)
+
+Aufgabe:
+- Schreibe **200–300 Token** als Fortsetzung von `{essay_draft}`.
+- **Wiederhole nicht** die bisherigen Gedanken; knüpfe unmittelbar am letzten Satz/Absatz an.
+- Schreibe einen fließenden Text ohne Überschrift und ohne Aufzählungszeichen.
+- Schließe den gesamten Essay spürbar ab: eine klare, stille Synthese + eine praktische Blickwendung.
+- Erkläre nicht die Weltanschauungsstimmung des Idealismus, nutze sie einfach.
+
+Weltanschauungsstimmung: **Idealismus**
+
+- Grundton: Das Wirkliche kann von einer freien Idee her geordnet werden, ohne dass man Menschen instrumentalisieren muss.
+- Erkenntnisbewegung (Akzent): vom Einzelnen zum Ganzen – das Motiv klären, das dem Handeln Richtung gibt.
+- Wirkung: Weite und Abschluss; Leser fühlt: „Jetzt ist der Gedanke rund.“
+- Stil: ruhig, wach, warm; intelligent ohne Arroganz; keine pathetischen Großworte.
+
+Inhaltliche Ziele (alle müssen vorkommen):
+- Formuliere eine klare Synthese dessen, was „mit anderen gewinnen“ im Kern bedeutet, ohne moralisch zu werden.
+- Zeige 1 konkrete „kleine Praxis“ (in einem Satz), die der Leser morgen ausprobieren könnte, ohne als Liste zu erscheinen.
+- Setze einen letzten Satz, der den Essay wirklich beendet (Punkt).
+
+Wichtige Regeln:
+- Nutze ausschließlich `{essay_title}`, `{text}`, `{context}` und `{essay_draft}` als inhaltliche Grundlage; keine anderen Quellen, kein Vorwissen.
+- Keine Meta-Sätze über „Prompt“, „Token“ oder „Aufgabe“.
+- Keine Zitate erfinden.
+
+-----------------------------------------------------------------------------
+{essay_title}
+
+Ausgangstext:
+{text}
+
+Kontext (Primärbücher, Qdrant Top-k):
+{context}
+
+Bisheriger Essay-Entwurf:
+{essay_draft}
+-----------------------------------------------------------------------------

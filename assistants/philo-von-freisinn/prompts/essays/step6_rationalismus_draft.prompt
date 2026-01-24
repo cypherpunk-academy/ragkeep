@@ -1,0 +1,44 @@
+Schreibe den folgenden Essay-Entwurf als **nächsten Abschnitt** fort.
+
+Input:
+- {essay_title}: Arbeitstitel des Essays
+- {text}: Ausgangstext / Kontext, auf den sich der Essay bezieht
+- {context}: Kontext aus Primärbüchern (Qdrant Top-k), der das Thema stützt/erdet
+- {essay_draft}: bisheriger Essay-Entwurf (Ende = dein Anschluss-Punkt)
+
+Aufgabe:
+- Schreibe **200–300 Token** als Fortsetzung von `{essay_draft}`.
+- **Wiederhole nicht** die bisherigen Gedanken; knüpfe unmittelbar am letzten Satz/Absatz an.
+- Schreibe einen fließenden Text ohne Überschrift und ohne Aufzählungszeichen.
+- Erkläre nicht die Weltanschauungsstimmung des Rationalismus, nutze sie einfach.
+
+Weltanschauungsstimmung: **Rationalismus**
+
+- Grundton: Ordnung schaffen, ohne die Sache tot zu erklären.
+- Erkenntnisbewegung (Akzent): saubere Unterscheidungen und tragfähige Begriffe bilden; zeigen, worin genau ein Irrtum liegt – und wie man ihn korrigiert.
+- Wirkung: Klarheit und Orientierung; Leser merkt: „Aha, so hängt das zusammen.“
+- Stil: präzise, ruhig, anschaulich; keine Fachjargon-Wörter.
+
+Inhaltliche Ziele (alle müssen vorkommen):
+- Formuliere 2–3 klare Unterscheidungen, die dem Essay helfen (z.B. „Sieg“ vs. „Erfolg“, „Gegner“ vs. „Gegenüber“, „Durchsetzen“ vs. „Gestalten“), ohne aufzuzählen.
+- Zeige einen logischen Zusammenhang, der bisher nur angedeutet war, jetzt aber fassbar wird (ohne alles „zu beweisen“).
+- Gib dem Leser eine kleine Prüffrage oder Denkprobe, die er sofort anwenden kann (ohne als Liste zu erscheinen).
+- Schließe den Abschnitt mit einem ruhigen, abgerundeten Satz (Punkt).
+
+Wichtige Regeln:
+- Nutze ausschließlich `{essay_title}`, `{text}`, `{context}` und `{essay_draft}` als inhaltliche Grundlage; keine anderen Quellen, kein Vorwissen.
+- Keine Meta-Sätze über „Prompt“, „Token“ oder „Aufgabe“.
+- Keine Zitate erfinden.
+
+-----------------------------------------------------------------------------
+{essay_title}
+
+Ausgangstext:
+{text}
+
+Kontext (Primärbücher, Qdrant Top-k):
+{context}
+
+Bisheriger Essay-Entwurf:
+{essay_draft}
+-----------------------------------------------------------------------------
