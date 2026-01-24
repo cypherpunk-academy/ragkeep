@@ -271,7 +271,9 @@ nav.toc details.toc-details {
   width: 100%;
 }
 
-nav.toc .toc-header-row {
+nav.toc summary.toc-summary-line {
+  list-style: none;
+  cursor: pointer;
   display: flex;
   align-items: baseline;
   gap: 10px;
@@ -279,34 +281,37 @@ nav.toc .toc-header-row {
   min-width: 0;
 }
 
-nav.toc button.toc-toggle {
-  appearance: none;
-  border: 0;
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
-  line-height: 1;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0;
-  flex: 0 0 auto;
-  width: 1.2ch;
-  text-align: center;
-}
+nav.toc summary.toc-summary-line::-webkit-details-marker { display: none; }
 
 nav.toc .toc-arrow {
   width: 1.2ch;
   opacity: 0.6;
   display: inline-block;
   text-align: center;
+  flex: 0 0 auto;
 }
 
-nav.toc button.toc-toggle:hover { opacity: 0.95; }
+nav.toc .toc-title-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
+}
 
-nav.toc button.toc-toggle:focus-visible {
+nav.toc a.toc-book-link {
+  flex: 0 0 auto;
+  text-decoration: none;
+  font-size: 1.1em;
+  opacity: 0.7;
+  transition: opacity 140ms ease;
+}
+
+nav.toc a.toc-book-link:hover {
+  opacity: 1;
+}
+
+nav.toc summary.toc-summary-line:hover { opacity: 0.95; }
+
+nav.toc summary.toc-summary-line:focus-visible {
   outline: 3px solid rgba(120, 170, 255, 0.55);
   outline-offset: 4px;
   border-radius: 10px;
@@ -317,11 +322,12 @@ nav.toc .toc-panel {
   margin-left: calc(1.2ch + 10px);
 }
 
-nav.toc .toc-summary-label {
-  font-size: 0.9em;
-  opacity: 0.7;
-  font-style: italic;
-  margin-bottom: 0.35rem;
+nav.toc .toc-summary-heading {
+  font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
+  font-size: 0.95em;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  opacity: 0.85;
 }
 
 nav.toc .toc-actions {
@@ -407,18 +413,30 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
       const summaryText = pickBestSummaryText(summariesByTitle, titlePlain);
       if (!summaryText) return `<li><a class="toc-link" href="${href}">${titleHtml}</a></li>`;
 
+      // Remove duplicate chapter title from summary if it appears at the start
+      let cleanedSummary = summaryText;
+      const titlePlainLower = titlePlain.toLowerCase().trim();
+      const summaryStart = cleanedSummary.substring(0, Math.min(200, cleanedSummary.length)).toLowerCase();
+      if (summaryStart.startsWith(titlePlainLower)) {
+        // Remove title if it's at the very start
+        cleanedSummary = cleanedSummary.substring(titlePlain.length).trim();
+        // Also remove if followed by newline/paragraph break
+        if (cleanedSummary.match(/^[\n\r\s]*[:\-\.]?[\n\r\s]*/)) {
+          cleanedSummary = cleanedSummary.replace(/^[\n\r\s]*[:\-\.]?[\n\r\s]*/, '').trim();
+        }
+      }
+
       return `<li>
   <details class="toc-details">
-    <div class="toc-header-row">
-      <button class="toc-toggle" type="button" aria-label="Zusammenfassung anzeigen">
-        <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
-        <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
-      </button>
-      <a class="toc-link toc-title" href="${href}">${titleHtml}</a>
-    </div>
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">${titleHtml}</span>
+      <a class="toc-link toc-book-link" href="${href}" aria-label="Kapitel öffnen">📖</a>
+    </summary>
     <div class="toc-panel">
-      <div class="toc-summary-label">(Zusammenfassung)</div>
-      <div class="toc-excerpt">${renderSummaryHtml(summaryText)}</div>
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt">${renderSummaryHtml(cleanedSummary)}</div>
     </div>
   </details>
 </li>`;
@@ -427,22 +445,12 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
     return `<nav class="toc" ${marker}>${replaced}</nav>`;
   });
 
-  // Inject JavaScript to handle arrow button clicks (prevent navigation, only toggle)
+  // Inject JavaScript to prevent book link from toggling summary
   if (!html.includes('ragkeep-toc-toggle-handler')) {
     html = html.replace(/<\/body>/i, `<script>
 (function() {
-  document.querySelectorAll('nav.toc button.toc-toggle').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      var details = this.closest('details');
-      if (details) {
-        details.open = !details.open;
-      }
-    });
-  });
-  // Prevent details from toggling when clicking the title link
-  document.querySelectorAll('nav.toc a.toc-title').forEach(function(link) {
+  // Prevent book link (📖) from toggling the summary
+  document.querySelectorAll('nav.toc a.toc-book-link').forEach(function(link) {
     link.addEventListener('click', function(e) {
       e.stopPropagation();
     });

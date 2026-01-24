@@ -230,7 +230,9 @@ nav.toc details.toc-details {
   width: 100%;
 }
 
-nav.toc .toc-header-row {
+nav.toc summary.toc-summary-line {
+  list-style: none;
+  cursor: pointer;
   display: flex;
   align-items: baseline;
   gap: 10px;
@@ -238,34 +240,37 @@ nav.toc .toc-header-row {
   min-width: 0;
 }
 
-nav.toc button.toc-toggle {
-  appearance: none;
-  border: 0;
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
-  line-height: 1;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0;
-  flex: 0 0 auto;
-  width: 1.2ch;
-  text-align: center;
-}
+nav.toc summary.toc-summary-line::-webkit-details-marker { display: none; }
 
 nav.toc .toc-arrow {
   width: 1.2ch;
   opacity: 0.6;
   display: inline-block;
   text-align: center;
+  flex: 0 0 auto;
 }
 
-nav.toc button.toc-toggle:hover { opacity: 0.95; }
+nav.toc .toc-title-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
+}
 
-nav.toc button.toc-toggle:focus-visible {
+nav.toc a.toc-book-link {
+  flex: 0 0 auto;
+  text-decoration: none;
+  font-size: 1.1em;
+  opacity: 0.7;
+  transition: opacity 140ms ease;
+}
+
+nav.toc a.toc-book-link:hover {
+  opacity: 1;
+}
+
+nav.toc summary.toc-summary-line:hover { opacity: 0.95; }
+
+nav.toc summary.toc-summary-line:focus-visible {
   outline: 3px solid rgba(120, 170, 255, 0.55);
   outline-offset: 4px;
   border-radius: 10px;
@@ -276,11 +281,12 @@ nav.toc .toc-panel {
   margin-left: calc(1.2ch + 10px);
 }
 
-nav.toc .toc-summary-label {
-  font-size: 0.9em;
-  opacity: 0.7;
-  font-style: italic;
-  margin-bottom: 0.35rem;
+nav.toc .toc-summary-heading {
+  font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
+  font-size: 0.95em;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  opacity: 0.85;
 }
 
 nav.toc .toc-actions {
