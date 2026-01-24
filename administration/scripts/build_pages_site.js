@@ -147,7 +147,7 @@ function ensurePrettyTocCss(destBookHtmlDir) {
   const cssPath = path.join(destBookHtmlDir, 'assets', 'styles.css');
   if (!fileExists(cssPath)) return;
 
-  const marker = '/* ragkeep:pretty-toc */';
+  const marker = '/* ragkeep:pretty-toc:v2 */';
   const current = fs.readFileSync(cssPath, 'utf8');
   if (current.includes(marker)) return;
 
@@ -216,15 +216,14 @@ nav.toc summary.toc-summary-line {
 nav.toc summary.toc-summary-line::-webkit-details-marker { display: none; }
 
 nav.toc summary.toc-summary-line::before {
-  content: "▸";
+  content: "→";
   width: 1ch;
   opacity: 0.55;
-  transform-origin: 50% 55%;
-  transition: transform 140ms ease;
+  transition: opacity 140ms ease;
 }
 
 nav.toc details[open] summary.toc-summary-line::before {
-  transform: rotate(90deg);
+  content: "↓";
 }
 
 nav.toc summary.toc-summary-line:hover { opacity: 0.95; }

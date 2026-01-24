@@ -256,7 +256,7 @@ em {
     }
 }
 
-/* ragkeep:pretty-toc */
+/* ragkeep:pretty-toc:v2 */
 nav.toc {
   margin: 1.25rem 0 2.25rem;
 }
@@ -319,15 +319,14 @@ nav.toc summary.toc-summary-line {
 nav.toc summary.toc-summary-line::-webkit-details-marker { display: none; }
 
 nav.toc summary.toc-summary-line::before {
-  content: "▸";
+  content: "→";
   width: 1ch;
   opacity: 0.55;
-  transform-origin: 50% 55%;
-  transition: transform 140ms ease;
+  transition: opacity 140ms ease;
 }
 
 nav.toc details[open] summary.toc-summary-line::before {
-  transform: rotate(90deg);
+  content: "↓";
 }
 
 nav.toc summary.toc-summary-line:hover { opacity: 0.95; }
