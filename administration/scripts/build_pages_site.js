@@ -77,6 +77,41 @@ function readSubtitleFromManifest(absBookDir) {
   return '';
 }
 
+function readScalarFromManifest(absBookDir, key) {
+  const p = path.join(absBookDir, 'book-manifest.yaml');
+  if (!fileExists(p)) return '';
+  const content = fs.readFileSync(p, 'utf8');
+  const lines = content.split('\n');
+  const re = new RegExp(`^${key}:\\s*(.*)\\s*$`);
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const m = line.match(re);
+    if (!m) continue;
+
+    let v = (m[1] || '').trim();
+    if (!v) return '';
+
+    // Handle quoted multi-line: key: "foo ...\n  bar"
+    if (v.startsWith('"')) {
+      v = v.slice(1);
+      while (true) {
+        const endIdx = v.indexOf('"');
+        if (endIdx !== -1) {
+          v = v.slice(0, endIdx);
+          break;
+        }
+        const next = lines[++i];
+        if (next == null) break;
+        v += ' ' + next.trim();
+      }
+    }
+
+    return v.replace(/\s+/g, ' ').trim();
+  }
+  return '';
+}
+
 function findHtmlDirForBook(bookRootDir) {
   const rootHtml = path.join(bookRootDir, 'html');
   const resultsHtml = path.join(bookRootDir, 'results', 'html');
@@ -107,8 +142,10 @@ function collectBooks() {
       const absBookDir = path.join(source, dirName);
       const absHtmlDir = findHtmlDirForBook(absBookDir);
       if (!absHtmlDir) continue;
-      const { author, title } = parseAuthorAndTitle(dirName);
-      const subtitle = readSubtitleFromManifest(absBookDir);
+      const parsed = parseAuthorAndTitle(dirName);
+      const author = readScalarFromManifest(absBookDir, 'author') || parsed.author;
+      const title = readScalarFromManifest(absBookDir, 'title') || parsed.title;
+      const subtitle = readScalarFromManifest(absBookDir, 'subtitle') || '';
       const relOutputDir = path.join('books', dirName);
       books.push({ dirName, absBookDir, absHtmlDir, relOutputDir, author, title, subtitle });
     }
@@ -142,13 +179,32 @@ function copyBookHtmlToSite(book) {
   ensurePrettyTocCss(destAbs);
   injectTocSummaries({ absBookDir: book.absBookDir, destBookHtmlDir: destAbs });
   unescapeInlineItalicsEntities(destAbs);
+  fixBookTocPageTitle({ book, destBookHtmlDir: destAbs });
+}
+
+function fixBookTocPageTitle({ book, destBookHtmlDir }) {
+  const tocPath = path.join(destBookHtmlDir, 'index.html');
+  if (!fileExists(tocPath)) return;
+
+  const titleText = (book?.title || '').trim();
+  if (!titleText) return;
+
+  let html = fs.readFileSync(tocPath, 'utf8');
+
+  // Update <title>...</title>
+  html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(titleText)}</title>`);
+
+  // Replace the first <h1>...</h1> only (TOC page header)
+  html = html.replace(/<h1[^>]*>[\s\S]*?<\/h1>/i, `<h1>${escapeHtml(titleText)}</h1>`);
+
+  fs.writeFileSync(tocPath, html, 'utf8');
 }
 
 function ensurePrettyTocCss(destBookHtmlDir) {
   const cssPath = path.join(destBookHtmlDir, 'assets', 'styles.css');
   if (!fileExists(cssPath)) return;
 
-  const marker = '/* ragkeep:pretty-toc:v5 */';
+  const marker = '/* ragkeep:pretty-toc:v7 */';
   const current = fs.readFileSync(cssPath, 'utf8');
   if (current.includes(marker)) return;
 
@@ -205,7 +261,7 @@ nav.toc details.toc-details {
 nav.toc summary.toc-summary-line {
   list-style: none;
   cursor: pointer;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
   font-size: 0.95em;
   line-height: 1.25;
   letter-spacing: -0.01em;
@@ -257,7 +313,7 @@ nav.toc .toc-actions {
 }
 
 nav.toc a.toc-open {
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
   font-size: 0.82em;
   color: inherit;
   opacity: 0.72;
@@ -282,11 +338,16 @@ nav.toc details[open] .toc-arrow-closed { display: none; }
 nav.toc a.toc-link {
   color: inherit;
   text-decoration: none;
+  font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
 }
 
 nav.toc a.toc-link:hover {
   text-decoration: underline;
   text-decoration-color: rgba(127,127,127,0.45);
+}
+
+nav.toc .toc-title {
+  font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
 }
 `;
 
@@ -300,7 +361,7 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
   const tocPath = path.join(destBookHtmlDir, 'index.html');
   if (!fileExists(tocPath)) return;
 
-  const marker = 'data-ragkeep-toc-summaries="3"';
+  const marker = 'data-ragkeep-toc-summaries="4"';
   let html = fs.readFileSync(tocPath, 'utf8');
   if (html.includes(marker)) return;
 
@@ -335,7 +396,7 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
         <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
         <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
       </button>
-      <a class="toc-link toc-title" href="${href}">${titleHtml}</a>
+      <span class="toc-title">${titleHtml}</span>
     </summary>
     <div class="toc-panel">
       <div class="toc-actions"><a class="toc-open" href="${href}">Kapitel öffnen</a></div>
@@ -458,7 +519,6 @@ function generateIndexHtml(books) {
     const author = escapeHtml(b.author);
     const subtitle = escapeHtml(b.subtitle || '');
     const subtitleCover = subtitle ? `<div class="coverSubtitle">${subtitle}</div>` : '';
-    const subtitleMeta = subtitle ? `<div class="metaSubtitle">${subtitle}</div>` : '';
     return `
         <a class="card" href="${href}" aria-label="${author}: ${title}">
           <div class="cover" aria-hidden="true">
@@ -466,13 +526,8 @@ function generateIndexHtml(books) {
               <div class="coverTitle">${title}</div>
               ${subtitleCover}
               <div class="coverAuthor">${author}</div>
+              <div class="coverHint">Kapitelübersicht</div>
             </div>
-          </div>
-          <div class="meta">
-            <div class="metaTitle">${title}</div>
-            ${subtitleMeta}
-            <div class="metaAuthor">${author}</div>
-            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>`;
   }).join('\n');
@@ -544,8 +599,7 @@ function generateIndexHtml(books) {
 
       .card {
         display: grid;
-        grid-template-rows: auto 1fr;
-        gap: 10px;
+        grid-template-rows: auto;
         padding: 14px;
         border-radius: var(--radius);
         background: var(--card);
@@ -591,11 +645,11 @@ function generateIndexHtml(books) {
         font-size: 12px;
         opacity: 0.92;
       }
-
-      .metaTitle { font-weight: 700; font-size: 14px; line-height: 1.25; text-wrap: balance; }
-      .metaSubtitle { margin-top: 6px; color: rgba(11, 18, 32, 0.70); font-size: 12.5px; line-height: 1.25; text-wrap: balance; }
-      .metaAuthor { margin-top: 4px; color: var(--muted); font-size: 12.5px; }
-      .metaHint { margin-top: 6px; color: rgba(11, 18, 32, 0.55); font-size: 12px; }
+      .coverHint {
+        margin-top: 4px;
+        font-size: 12px;
+        opacity: 0.60;
+      }
 
       footer { margin-top: 22px; color: var(--muted); font-size: 12px; }
       footer a { color: inherit; text-decoration: underline; text-decoration-color: rgba(127,127,127,0.55); }
