@@ -268,23 +268,25 @@ nav.toc li > a::before {
 /* Expandable TOC items (injected by build:pages when summaries exist) */
 nav.toc details.toc-details {
   padding: 0;
-  display: grid;
-  grid-template-columns: 2ch 1fr;
-  grid-template-rows: auto auto;
-  column-gap: 10px;
-  align-items: baseline;
   width: 100%;
+}
+
+nav.toc .toc-header-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
 }
 
 nav.toc summary.toc-summary-line {
   list-style: none;
   cursor: pointer;
-  grid-column: 1;
-  grid-row: 1;
-  justify-self: start;
-  align-self: start;
+  flex: 0 0 auto;
   position: relative;
   z-index: 2;
+  margin: 0;
+  padding: 0;
 }
 
 nav.toc summary.toc-summary-line::-webkit-details-marker { display: none; }
@@ -303,6 +305,8 @@ nav.toc button.toc-toggle {
   align-items: baseline;
   gap: 0;
   flex: 0 0 auto;
+  width: 1.2ch;
+  text-align: center;
 }
 
 nav.toc .toc-arrow {
@@ -321,9 +325,8 @@ nav.toc summary.toc-summary-line:focus-visible {
 }
 
 nav.toc .toc-panel {
-  grid-column: 2;
-  grid-row: 2;
   margin-top: 0.55rem;
+  margin-left: calc(1.2ch + 10px);
 }
 
 nav.toc .toc-actions {
@@ -371,14 +374,12 @@ nav.toc .toc-title {
 }
 
 nav.toc .toc-title-row {
-  grid-column: 2;
-  grid-row: 1;
+  flex: 1 1 auto;
   display: flex;
   gap: 8px;
   align-items: baseline;
   flex-wrap: wrap;
   min-width: 0;
-  width: 100%;
 }
 
 nav.toc .toc-summary-label {
@@ -429,15 +430,17 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
 
       return `<li>
   <details class="toc-details">
-    <summary class="toc-summary-line" aria-label="Zusammenfassung ein-/ausklappen">
-      <button class="toc-toggle" type="button" aria-label="Zusammenfassung anzeigen">
-        <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
-        <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
-      </button>
-    </summary>
-    <div class="toc-title-row">
-      <a class="toc-link toc-title" href="${href}">${titleHtml}</a>
-      <span class="toc-summary-label">(Zusammenfassung)</span>
+    <div class="toc-header-row">
+      <summary class="toc-summary-line" aria-label="Zusammenfassung ein-/ausklappen">
+        <button class="toc-toggle" type="button" aria-label="Zusammenfassung anzeigen">
+          <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+          <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+        </button>
+      </summary>
+      <div class="toc-title-row">
+        <a class="toc-link toc-title" href="${href}">${titleHtml}</a>
+        <span class="toc-summary-label">(Zusammenfassung)</span>
+      </div>
     </div>
     <div class="toc-panel">
       <div class="toc-excerpt">${renderSummaryHtml(summaryText)}</div>
@@ -448,6 +451,25 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
 
     return `<nav class="toc" ${marker}>${replaced}</nav>`;
   });
+
+  // Inject JavaScript to handle arrow button clicks (prevent navigation, only toggle)
+  if (!html.includes('ragkeep-toc-toggle-handler')) {
+    html = html.replace(/<\/body>/i, `<script>
+(function() {
+  document.querySelectorAll('nav.toc button.toc-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var details = this.closest('details');
+      if (details) {
+        details.open = !details.open;
+      }
+    });
+  });
+})();
+</script>
+</body>`);
+  }
 
   fs.writeFileSync(tocPath, html, 'utf8');
 }
