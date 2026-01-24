@@ -232,7 +232,7 @@ nav.toc li {
 nav.toc a {
   color: inherit;
   text-decoration: none;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
   font-size: 0.95em;
   line-height: 1.25;
   letter-spacing: -0.01em;
@@ -269,10 +269,11 @@ nav.toc li > a::before {
 nav.toc details.toc-details {
   padding: 0;
   display: grid;
-  grid-template-columns: 1.6ch 1fr;
+  grid-template-columns: 2ch 1fr;
   grid-template-rows: auto auto;
   column-gap: 10px;
   align-items: baseline;
+  width: 100%;
 }
 
 nav.toc summary.toc-summary-line {
@@ -280,6 +281,10 @@ nav.toc summary.toc-summary-line {
   cursor: pointer;
   grid-column: 1;
   grid-row: 1;
+  justify-self: start;
+  align-self: start;
+  position: relative;
+  z-index: 2;
 }
 
 nav.toc summary.toc-summary-line::-webkit-details-marker { display: none; }
@@ -361,24 +366,26 @@ nav.toc a.toc-link:hover {
 
 nav.toc .toc-title {
   font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
-  grid-column: 2;
-  grid-row: 1;
-  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 nav.toc .toc-title-row {
   grid-column: 2;
   grid-row: 1;
-  display: inline-flex;
+  display: flex;
   gap: 8px;
   align-items: baseline;
   flex-wrap: wrap;
+  min-width: 0;
+  width: 100%;
 }
 
 nav.toc .toc-summary-label {
   font-size: 0.9em;
   opacity: 0.7;
   font-style: italic;
+  flex: 0 0 auto;
 }
 `;
 
@@ -559,7 +566,10 @@ function generateIndexHtml(books) {
               <div class="coverTitle">${title}</div>
               ${subtitleCover}
               <div class="coverAuthor">${author}</div>
-              <div class="coverHint">Kapitelübersicht</div>
+              <div class="coverBottom">
+                <div class="coverHint">Kapitelübersicht</div>
+                <div class="coverBrand">@ragkeep</div>
+              </div>
             </div>
           </div>
         </a>`;
@@ -664,7 +674,7 @@ function generateIndexHtml(books) {
       }
       .coverTitle {
         font-weight: 800;
-        font-size: 16px;
+        font-size: 24px;
         line-height: 1.1;
         letter-spacing: -0.02em;
         text-wrap: balance;
@@ -677,11 +687,23 @@ function generateIndexHtml(books) {
       .coverAuthor {
         font-size: 12px;
         opacity: 0.92;
+        font-weight: 700;
+      }
+      .coverBottom {
+        margin-top: 6px;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
       }
       .coverHint {
-        margin-top: 4px;
         font-size: 12px;
         opacity: 0.60;
+      }
+      .coverBrand {
+        margin-left: auto;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 12px;
+        opacity: 0.55;
       }
 
       footer { margin-top: 22px; color: var(--muted); font-size: 12px; }
