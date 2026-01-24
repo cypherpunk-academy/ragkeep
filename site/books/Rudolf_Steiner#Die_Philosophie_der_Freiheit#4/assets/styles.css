@@ -256,7 +256,7 @@ em {
     }
 }
 
-/* ragkeep:pretty-toc:v2 */
+/* ragkeep:pretty-toc:v3 */
 nav.toc {
   margin: 1.25rem 0 2.25rem;
 }
@@ -297,6 +297,19 @@ nav.toc a:focus-visible {
 
 nav.toc li:first-child {
   border-top: 0;
+}
+
+/* Plain TOC links (for books without summaries, or chapters we couldn't match) */
+nav.toc li > a {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+nav.toc li > a::before {
+  content: "→";
+  width: 1ch;
+  opacity: 0.55;
 }
 
 /* Expandable TOC items (injected by build:pages when summaries exist) */

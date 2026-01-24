@@ -147,7 +147,7 @@ function ensurePrettyTocCss(destBookHtmlDir) {
   const cssPath = path.join(destBookHtmlDir, 'assets', 'styles.css');
   if (!fileExists(cssPath)) return;
 
-  const marker = '/* ragkeep:pretty-toc:v2 */';
+  const marker = '/* ragkeep:pretty-toc:v3 */';
   const current = fs.readFileSync(cssPath, 'utf8');
   if (current.includes(marker)) return;
 
@@ -194,6 +194,19 @@ nav.toc a:focus-visible {
 
 nav.toc li:first-child {
   border-top: 0;
+}
+
+/* Plain TOC links (for books without summaries, or chapters we couldn't match) */
+nav.toc li > a {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+nav.toc li > a::before {
+  content: "→";
+  width: 1ch;
+  opacity: 0.55;
 }
 
 /* Expandable TOC items (injected by build:pages when summaries exist) */
@@ -394,6 +407,8 @@ function generateIndexHtml(books) {
     <title>ragkeep – Datenlager für ragrun KI Assistenten</title>
     <meta name="description" content="RAGKeep – automatisch generierte HTML-Ausgaben von Büchern." />
     <meta name="color-scheme" content="light" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
     <style>
       :root {
         --bg: #ffffff;
@@ -411,8 +426,8 @@ function generateIndexHtml(books) {
         margin: 0;
         color: var(--fg);
         background: var(--bg);
-        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-        line-height: 1.45;
+        font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+        line-height: 1.5;
       }
 
       .wrap { max-width: 1120px; margin: 0 auto; padding: 42px 18px 56px; }
@@ -427,6 +442,7 @@ function generateIndexHtml(books) {
         border-radius: 999px;
         background: rgba(11, 18, 32, 0.04);
         border: 1px solid var(--cardBorder);
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
       }
       .brand {
         margin-left: auto;
@@ -471,30 +487,6 @@ function generateIndexHtml(books) {
         overflow: hidden;
         background: #ffffff;
         border: 1px solid rgba(11, 18, 32, 0.10);
-      }
-      .cover::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background:
-          linear-gradient(90deg,
-            rgba(11, 18, 32, 0.18) 0%,
-            rgba(11, 18, 32, 0.08) 10%,
-            rgba(255,255,255,0.70) 16%,
-            rgba(11, 18, 32, 0.04) 22%,
-            rgba(11, 18, 32, 0.00) 36%
-          );
-        pointer-events: none;
-      }
-      .cover::after {
-        content: "";
-        position: absolute;
-        inset: -40% -40% auto auto;
-        width: 220px;
-        height: 220px;
-        background: radial-gradient(circle at 30% 30%, rgba(11, 18, 32, 0.08), transparent 60%);
-        transform: rotate(18deg);
-        pointer-events: none;
       }
       .coverInner {
         position: absolute;
