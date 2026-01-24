@@ -193,9 +193,8 @@ function generateIndexHtml(books) {
     const href = `books/${encodeURIComponent(b.dirName)}/index.html`;
     const title = escapeHtml(b.title);
     const author = escapeHtml(b.author);
-    const hue = hashToHue(b.dirName);
     return `
-        <a class="card" href="${href}" aria-label="${author}: ${title}" style="--h:${hue}">
+        <a class="card" href="${href}" aria-label="${author}: ${title}">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">${title}</div>
@@ -205,6 +204,7 @@ function generateIndexHtml(books) {
           <div class="meta">
             <div class="metaTitle">${title}</div>
             <div class="metaAuthor">${author}</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>`;
   }).join('\n');
@@ -216,27 +216,16 @@ function generateIndexHtml(books) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>RAGKeep – Bücher mit HTML</title>
     <meta name="description" content="RAGKeep – automatisch generierte HTML-Ausgaben von Büchern." />
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="light" />
     <style>
       :root {
-        --bg: #0b0f17;
-        --fg: #e8eefc;
-        --muted: rgba(232, 238, 252, 0.72);
-        --card: rgba(255, 255, 255, 0.06);
-        --cardBorder: rgba(255, 255, 255, 0.10);
-        --shadow: 0 20px 60px rgba(0,0,0,0.45);
+        --bg: #ffffff;
+        --fg: #0b1220;
+        --muted: rgba(11, 18, 32, 0.70);
+        --card: #ffffff;
+        --cardBorder: rgba(11, 18, 32, 0.10);
+        --shadow: 0 20px 60px rgba(11, 18, 32, 0.12);
         --radius: 16px;
-      }
-
-      @media (prefers-color-scheme: light) {
-        :root {
-          --bg: #f6f8ff;
-          --fg: #0b1220;
-          --muted: rgba(11, 18, 32, 0.70);
-          --card: rgba(255, 255, 255, 0.85);
-          --cardBorder: rgba(11, 18, 32, 0.10);
-          --shadow: 0 20px 60px rgba(11, 18, 32, 0.12);
-        }
       }
 
       * { box-sizing: border-box; }
@@ -244,10 +233,7 @@ function generateIndexHtml(books) {
       body {
         margin: 0;
         color: var(--fg);
-        background: radial-gradient(1200px 800px at 20% 0%, rgba(120, 150, 255, 0.25), transparent 55%),
-                    radial-gradient(1000px 700px at 90% 10%, rgba(255, 130, 200, 0.18), transparent 60%),
-                    radial-gradient(900px 700px at 50% 100%, rgba(120, 255, 210, 0.16), transparent 60%),
-                    var(--bg);
+        background: var(--bg);
         font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
         line-height: 1.45;
       }
@@ -255,15 +241,23 @@ function generateIndexHtml(books) {
       .wrap { max-width: 1120px; margin: 0 auto; padding: 42px 18px 56px; }
       header { margin-bottom: 22px; }
       h1 { margin: 0 0 6px 0; font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.02em; }
+      .lede { margin: 0 0 10px 0; color: var(--muted); font-size: 15px; max-width: 70ch; }
       .sub { margin: 0; color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 14px; }
       .pill {
         display: inline-flex;
         align-items: center;
         padding: 6px 10px;
         border-radius: 999px;
-        background: rgba(255,255,255,0.06);
+        background: rgba(11, 18, 32, 0.04);
         border: 1px solid var(--cardBorder);
-        backdrop-filter: blur(10px);
+      }
+      .brand {
+        margin-left: auto;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 12px;
+        letter-spacing: 0.01em;
+        opacity: 0.65;
+        user-select: none;
       }
 
       .grid {
@@ -288,7 +282,7 @@ function generateIndexHtml(books) {
         transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
       }
       .card:focus-visible { outline: 3px solid rgba(120, 170, 255, 0.6); outline-offset: 2px; }
-      .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: rgba(255,255,255,0.18); }
+      .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: rgba(11, 18, 32, 0.18); }
 
       /* “Book cover” without images: gradient + subtle spine + title/author */
       .cover {
@@ -296,12 +290,9 @@ function generateIndexHtml(books) {
         border-radius: 14px;
         position: relative;
         overflow: hidden;
-        background:
-          linear-gradient(135deg,
-            hsl(var(--h) 85% 55% / 0.95),
-            hsl(calc(var(--h) + 32) 85% 52% / 0.92),
-            hsl(calc(var(--h) + 68) 85% 48% / 0.90)
-          );
+        background: #ffffff;
+        border: 1px solid rgba(11, 18, 32, 0.10);
+        box-shadow: 0 16px 40px rgba(11, 18, 32, 0.08);
       }
       .cover::before {
         content: "";
@@ -309,13 +300,12 @@ function generateIndexHtml(books) {
         inset: 0;
         background:
           linear-gradient(90deg,
-            rgba(0,0,0,0.35) 0%,
-            rgba(0,0,0,0.10) 10%,
-            rgba(255,255,255,0.10) 16%,
-            rgba(0,0,0,0.06) 22%,
-            rgba(0,0,0,0.00) 36%
+            rgba(11, 18, 32, 0.18) 0%,
+            rgba(11, 18, 32, 0.08) 10%,
+            rgba(255,255,255,0.70) 16%,
+            rgba(11, 18, 32, 0.04) 22%,
+            rgba(11, 18, 32, 0.00) 36%
           );
-        mix-blend-mode: overlay;
         pointer-events: none;
       }
       .cover::after {
@@ -324,7 +314,7 @@ function generateIndexHtml(books) {
         inset: -40% -40% auto auto;
         width: 220px;
         height: 220px;
-        background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), transparent 60%);
+        background: radial-gradient(circle at 30% 30%, rgba(11, 18, 32, 0.08), transparent 60%);
         transform: rotate(18deg);
         pointer-events: none;
       }
@@ -343,16 +333,15 @@ function generateIndexHtml(books) {
         line-height: 1.1;
         letter-spacing: -0.02em;
         text-wrap: balance;
-        text-shadow: 0 2px 16px rgba(0,0,0,0.35);
       }
       .coverAuthor {
         font-size: 12px;
         opacity: 0.92;
-        text-shadow: 0 2px 16px rgba(0,0,0,0.35);
       }
 
       .metaTitle { font-weight: 700; font-size: 14px; line-height: 1.25; text-wrap: balance; }
       .metaAuthor { margin-top: 4px; color: var(--muted); font-size: 12.5px; }
+      .metaHint { margin-top: 6px; color: rgba(11, 18, 32, 0.55); font-size: 12px; }
 
       footer { margin-top: 22px; color: var(--muted); font-size: 12px; }
       footer a { color: inherit; text-decoration: underline; text-decoration-color: rgba(127,127,127,0.55); }
@@ -362,9 +351,11 @@ function generateIndexHtml(books) {
     <div class="wrap">
       <header>
         <h1>RAGKeep – Bücher mit HTML</h1>
+        <p class="lede">Statische HTML-Ausgaben mit Kapitelübersicht – einfach ein Buch anklicken.</p>
         <p class="sub">
           <span class="pill">${total} Bücher</span>
           <span class="pill">Automatisch generiert: ${generatedAt}</span>
+          <span class="brand">@ragkeep</span>
         </p>
       </header>
 

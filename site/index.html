@@ -5,27 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>RAGKeep – Bücher mit HTML</title>
     <meta name="description" content="RAGKeep – automatisch generierte HTML-Ausgaben von Büchern." />
-    <meta name="color-scheme" content="light dark" />
+    <meta name="color-scheme" content="light" />
     <style>
       :root {
-        --bg: #0b0f17;
-        --fg: #e8eefc;
-        --muted: rgba(232, 238, 252, 0.72);
-        --card: rgba(255, 255, 255, 0.06);
-        --cardBorder: rgba(255, 255, 255, 0.10);
-        --shadow: 0 20px 60px rgba(0,0,0,0.45);
+        --bg: #ffffff;
+        --fg: #0b1220;
+        --muted: rgba(11, 18, 32, 0.70);
+        --card: #ffffff;
+        --cardBorder: rgba(11, 18, 32, 0.10);
+        --shadow: 0 20px 60px rgba(11, 18, 32, 0.12);
         --radius: 16px;
-      }
-
-      @media (prefers-color-scheme: light) {
-        :root {
-          --bg: #f6f8ff;
-          --fg: #0b1220;
-          --muted: rgba(11, 18, 32, 0.70);
-          --card: rgba(255, 255, 255, 0.85);
-          --cardBorder: rgba(11, 18, 32, 0.10);
-          --shadow: 0 20px 60px rgba(11, 18, 32, 0.12);
-        }
       }
 
       * { box-sizing: border-box; }
@@ -33,10 +22,7 @@
       body {
         margin: 0;
         color: var(--fg);
-        background: radial-gradient(1200px 800px at 20% 0%, rgba(120, 150, 255, 0.25), transparent 55%),
-                    radial-gradient(1000px 700px at 90% 10%, rgba(255, 130, 200, 0.18), transparent 60%),
-                    radial-gradient(900px 700px at 50% 100%, rgba(120, 255, 210, 0.16), transparent 60%),
-                    var(--bg);
+        background: var(--bg);
         font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
         line-height: 1.45;
       }
@@ -44,15 +30,23 @@
       .wrap { max-width: 1120px; margin: 0 auto; padding: 42px 18px 56px; }
       header { margin-bottom: 22px; }
       h1 { margin: 0 0 6px 0; font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.02em; }
+      .lede { margin: 0 0 10px 0; color: var(--muted); font-size: 15px; max-width: 70ch; }
       .sub { margin: 0; color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 14px; }
       .pill {
         display: inline-flex;
         align-items: center;
         padding: 6px 10px;
         border-radius: 999px;
-        background: rgba(255,255,255,0.06);
+        background: rgba(11, 18, 32, 0.04);
         border: 1px solid var(--cardBorder);
-        backdrop-filter: blur(10px);
+      }
+      .brand {
+        margin-left: auto;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-size: 12px;
+        letter-spacing: 0.01em;
+        opacity: 0.65;
+        user-select: none;
       }
 
       .grid {
@@ -77,7 +71,7 @@
         transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
       }
       .card:focus-visible { outline: 3px solid rgba(120, 170, 255, 0.6); outline-offset: 2px; }
-      .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: rgba(255,255,255,0.18); }
+      .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: rgba(11, 18, 32, 0.18); }
 
       /* “Book cover” without images: gradient + subtle spine + title/author */
       .cover {
@@ -85,12 +79,9 @@
         border-radius: 14px;
         position: relative;
         overflow: hidden;
-        background:
-          linear-gradient(135deg,
-            hsl(var(--h) 85% 55% / 0.95),
-            hsl(calc(var(--h) + 32) 85% 52% / 0.92),
-            hsl(calc(var(--h) + 68) 85% 48% / 0.90)
-          );
+        background: #ffffff;
+        border: 1px solid rgba(11, 18, 32, 0.10);
+        box-shadow: 0 16px 40px rgba(11, 18, 32, 0.08);
       }
       .cover::before {
         content: "";
@@ -98,13 +89,12 @@
         inset: 0;
         background:
           linear-gradient(90deg,
-            rgba(0,0,0,0.35) 0%,
-            rgba(0,0,0,0.10) 10%,
-            rgba(255,255,255,0.10) 16%,
-            rgba(0,0,0,0.06) 22%,
-            rgba(0,0,0,0.00) 36%
+            rgba(11, 18, 32, 0.18) 0%,
+            rgba(11, 18, 32, 0.08) 10%,
+            rgba(255,255,255,0.70) 16%,
+            rgba(11, 18, 32, 0.04) 22%,
+            rgba(11, 18, 32, 0.00) 36%
           );
-        mix-blend-mode: overlay;
         pointer-events: none;
       }
       .cover::after {
@@ -113,7 +103,7 @@
         inset: -40% -40% auto auto;
         width: 220px;
         height: 220px;
-        background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.35), transparent 60%);
+        background: radial-gradient(circle at 30% 30%, rgba(11, 18, 32, 0.08), transparent 60%);
         transform: rotate(18deg);
         pointer-events: none;
       }
@@ -132,16 +122,15 @@
         line-height: 1.1;
         letter-spacing: -0.02em;
         text-wrap: balance;
-        text-shadow: 0 2px 16px rgba(0,0,0,0.35);
       }
       .coverAuthor {
         font-size: 12px;
         opacity: 0.92;
-        text-shadow: 0 2px 16px rgba(0,0,0,0.35);
       }
 
       .metaTitle { font-weight: 700; font-size: 14px; line-height: 1.25; text-wrap: balance; }
       .metaAuthor { margin-top: 4px; color: var(--muted); font-size: 12.5px; }
+      .metaHint { margin-top: 6px; color: rgba(11, 18, 32, 0.55); font-size: 12px; }
 
       footer { margin-top: 22px; color: var(--muted); font-size: 12px; }
       footer a { color: inherit; text-decoration: underline; text-decoration-color: rgba(127,127,127,0.55); }
@@ -151,15 +140,17 @@
     <div class="wrap">
       <header>
         <h1>RAGKeep – Bücher mit HTML</h1>
+        <p class="lede">Statische HTML-Ausgaben mit Kapitelübersicht – einfach ein Buch anklicken.</p>
         <p class="sub">
           <span class="pill">13 Bücher</span>
-          <span class="pill">Automatisch generiert: 2026-01-24T07:51:31.193Z</span>
+          <span class="pill">Automatisch generiert: 2026-01-24T07:57:28.113Z</span>
+          <span class="brand">@ragkeep</span>
         </p>
       </header>
 
       <main class="grid">
         
-        <a class="card" href="books/Rudolf_Steiner%23Die_Kernpunkte_der_sozialen_Frage%2323/index.html" aria-label="Rudolf Steiner: Die Kernpunkte der sozialen Frage" style="--h:239">
+        <a class="card" href="books/Rudolf_Steiner%23Die_Kernpunkte_der_sozialen_Frage%2323/index.html" aria-label="Rudolf Steiner: Die Kernpunkte der sozialen Frage">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">Die Kernpunkte der sozialen Frage</div>
@@ -169,10 +160,11 @@
           <div class="meta">
             <div class="metaTitle">Die Kernpunkte der sozialen Frage</div>
             <div class="metaAuthor">Rudolf Steiner</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>
 
-        <a class="card" href="books/Rudolf_Steiner%23Die_Philosophie_der_Freiheit%234/index.html" aria-label="Rudolf Steiner: Die Philosophie der Freiheit" style="--h:104">
+        <a class="card" href="books/Rudolf_Steiner%23Die_Philosophie_der_Freiheit%234/index.html" aria-label="Rudolf Steiner: Die Philosophie der Freiheit">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">Die Philosophie der Freiheit</div>
@@ -182,10 +174,11 @@
           <div class="meta">
             <div class="metaTitle">Die Philosophie der Freiheit</div>
             <div class="metaAuthor">Rudolf Steiner</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>
 
-        <a class="card" href="books/Rudolf_Steiner%23Die_R%C3%A4tsel_der_Philosophie%2318/index.html" aria-label="Rudolf Steiner: Die Rätsel der Philosophie" style="--h:89">
+        <a class="card" href="books/Rudolf_Steiner%23Die_R%C3%A4tsel_der_Philosophie%2318/index.html" aria-label="Rudolf Steiner: Die Rätsel der Philosophie">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">Die Rätsel der Philosophie</div>
@@ -195,10 +188,11 @@
           <div class="meta">
             <div class="metaTitle">Die Rätsel der Philosophie</div>
             <div class="metaAuthor">Rudolf Steiner</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>
 
-        <a class="card" href="books/Rudolf_Steiner%23Die_soziale_Frage%23328/index.html" aria-label="Rudolf Steiner: Die soziale Frage" style="--h:265">
+        <a class="card" href="books/Rudolf_Steiner%23Die_soziale_Frage%23328/index.html" aria-label="Rudolf Steiner: Die soziale Frage">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">Die soziale Frage</div>
@@ -208,10 +202,11 @@
           <div class="meta">
             <div class="metaTitle">Die soziale Frage</div>
             <div class="metaAuthor">Rudolf Steiner</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>
 
-        <a class="card" href="books/Rudolf_Steiner%23Einleitungen_zu_Goethes_Naturwissenschaftlichen_Schriften%231/index.html" aria-label="Rudolf Steiner: Einleitungen zu Goethes Naturwissenschaftlichen Schriften" style="--h:207">
+        <a class="card" href="books/Rudolf_Steiner%23Einleitungen_zu_Goethes_Naturwissenschaftlichen_Schriften%231/index.html" aria-label="Rudolf Steiner: Einleitungen zu Goethes Naturwissenschaftlichen Schriften">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">Einleitungen zu Goethes Naturwissenschaftlichen Schriften</div>
@@ -221,10 +216,11 @@
           <div class="meta">
             <div class="metaTitle">Einleitungen zu Goethes Naturwissenschaftlichen Schriften</div>
             <div class="metaAuthor">Rudolf Steiner</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>
 
-        <a class="card" href="books/Rudolf_Steiner%23Erziehungskunst._Methodisch-Didaktisches__%23294/index.html" aria-label="Rudolf Steiner: Erziehungskunst. Methodisch-Didaktisches  " style="--h:124">
+        <a class="card" href="books/Rudolf_Steiner%23Erziehungskunst._Methodisch-Didaktisches__%23294/index.html" aria-label="Rudolf Steiner: Erziehungskunst. Methodisch-Didaktisches  ">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">Erziehungskunst. Methodisch-Didaktisches  </div>
@@ -234,10 +230,11 @@
           <div class="meta">
             <div class="metaTitle">Erziehungskunst. Methodisch-Didaktisches  </div>
             <div class="metaAuthor">Rudolf Steiner</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>
 
-        <a class="card" href="books/Rudolf_Steiner%23Erziehungskunst._Seminarbesprechungen_und_Lehrplanvortr%C3%A4ge__%23295/index.html" aria-label="Rudolf Steiner: Erziehungskunst. Seminarbesprechungen und Lehrplanvorträge  " style="--h:14">
+        <a class="card" href="books/Rudolf_Steiner%23Erziehungskunst._Seminarbesprechungen_und_Lehrplanvortr%C3%A4ge__%23295/index.html" aria-label="Rudolf Steiner: Erziehungskunst. Seminarbesprechungen und Lehrplanvorträge  ">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">Erziehungskunst. Seminarbesprechungen und Lehrplanvorträge  </div>
@@ -247,10 +244,11 @@
           <div class="meta">
             <div class="metaTitle">Erziehungskunst. Seminarbesprechungen und Lehrplanvorträge  </div>
             <div class="metaAuthor">Rudolf Steiner</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>
 
-        <a class="card" href="books/Rudolf_Steiner%23Geschichtliche_Symptomatologie%23185/index.html" aria-label="Rudolf Steiner: Geschichtliche Symptomatologie" style="--h:329">
+        <a class="card" href="books/Rudolf_Steiner%23Geschichtliche_Symptomatologie%23185/index.html" aria-label="Rudolf Steiner: Geschichtliche Symptomatologie">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">Geschichtliche Symptomatologie</div>
@@ -260,10 +258,11 @@
           <div class="meta">
             <div class="metaTitle">Geschichtliche Symptomatologie</div>
             <div class="metaAuthor">Rudolf Steiner</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>
 
-        <a class="card" href="books/Rudolf_Steiner%23Goethes_Weltanschauung%236/index.html" aria-label="Rudolf Steiner: Goethes Weltanschauung" style="--h:345">
+        <a class="card" href="books/Rudolf_Steiner%23Goethes_Weltanschauung%236/index.html" aria-label="Rudolf Steiner: Goethes Weltanschauung">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">Goethes Weltanschauung</div>
@@ -273,10 +272,11 @@
           <div class="meta">
             <div class="metaTitle">Goethes Weltanschauung</div>
             <div class="metaAuthor">Rudolf Steiner</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>
 
-        <a class="card" href="books/Rudolf_Steiner%23Grundlinien_einer_Erkenntnistheorie_der_Goetheschen_Weltanschauung%232/index.html" aria-label="Rudolf Steiner: Grundlinien einer Erkenntnistheorie der Goetheschen Weltanschauung" style="--h:259">
+        <a class="card" href="books/Rudolf_Steiner%23Grundlinien_einer_Erkenntnistheorie_der_Goetheschen_Weltanschauung%232/index.html" aria-label="Rudolf Steiner: Grundlinien einer Erkenntnistheorie der Goetheschen Weltanschauung">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">Grundlinien einer Erkenntnistheorie der Goetheschen Weltanschauung</div>
@@ -286,10 +286,11 @@
           <div class="meta">
             <div class="metaTitle">Grundlinien einer Erkenntnistheorie der Goetheschen Weltanschauung</div>
             <div class="metaAuthor">Rudolf Steiner</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>
 
-        <a class="card" href="books/Rudolf_Steiner%23Methodische_Grundlagen_der_Anthroposophie%2330/index.html" aria-label="Rudolf Steiner: Methodische Grundlagen der Anthroposophie" style="--h:214">
+        <a class="card" href="books/Rudolf_Steiner%23Methodische_Grundlagen_der_Anthroposophie%2330/index.html" aria-label="Rudolf Steiner: Methodische Grundlagen der Anthroposophie">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">Methodische Grundlagen der Anthroposophie</div>
@@ -299,10 +300,11 @@
           <div class="meta">
             <div class="metaTitle">Methodische Grundlagen der Anthroposophie</div>
             <div class="metaAuthor">Rudolf Steiner</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>
 
-        <a class="card" href="books/Rudolf_Steiner%23Wahrheit_und_Wissenschaft%233/index.html" aria-label="Rudolf Steiner: Wahrheit und Wissenschaft" style="--h:50">
+        <a class="card" href="books/Rudolf_Steiner%23Wahrheit_und_Wissenschaft%233/index.html" aria-label="Rudolf Steiner: Wahrheit und Wissenschaft">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">Wahrheit und Wissenschaft</div>
@@ -312,10 +314,11 @@
           <div class="meta">
             <div class="metaTitle">Wahrheit und Wissenschaft</div>
             <div class="metaAuthor">Rudolf Steiner</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>
 
-        <a class="card" href="books/Sigismund_von_Gleich%23Die_Wahrheit_als_Gesamtumfang_aller_Weltansichten/index.html" aria-label="Sigismund von Gleich: Die Wahrheit als Gesamtumfang aller Weltansichten" style="--h:273">
+        <a class="card" href="books/Sigismund_von_Gleich%23Die_Wahrheit_als_Gesamtumfang_aller_Weltansichten/index.html" aria-label="Sigismund von Gleich: Die Wahrheit als Gesamtumfang aller Weltansichten">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">Die Wahrheit als Gesamtumfang aller Weltansichten</div>
@@ -325,6 +328,7 @@
           <div class="meta">
             <div class="metaTitle">Die Wahrheit als Gesamtumfang aller Weltansichten</div>
             <div class="metaAuthor">Sigismund von Gleich</div>
+            <div class="metaHint">Kapitelübersicht</div>
           </div>
         </a>
       </main>
