@@ -425,6 +425,10 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
       let cleanedSummary = summaryText;
       const titlePlainTrimmed = titlePlain.trim();
       
+      // Normalize spelling variations for comparison (e.g., PHANTASIE -> FANTASIE)
+      const normalizeSpelling = (s) => s.replace(/phantasie/gi, 'fantasie');
+      const titleNormalized = normalizeSpelling(titlePlainTrimmed);
+      
       // Remove markdown bold formatting from title for comparison
       const titleWithBold = `**${titlePlainTrimmed}**`;
       const titleWithBoldAndNewline = `${titleWithBold}\n\n`;
@@ -445,16 +449,33 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
         cleanedSummary = cleanedSummary.replace(/^[\s\n\r]+/, '').trim();
       }
       
-      // After HTML rendering, also check if first paragraph is just the title
+      // Check if first paragraph (in raw text) is just the title (with spelling variations)
+      // Split by double newlines to get paragraphs
+      const paragraphs = cleanedSummary.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
+      if (paragraphs.length > 0) {
+        const firstParaRaw = paragraphs[0];
+        // Remove markdown bold if present
+        const firstParaText = firstParaRaw.replace(/^\*\*|\*\*$/g, '').trim();
+        const firstParaNormalized = normalizeSpelling(firstParaText.toLowerCase());
+        const titleNormalizedLower = titleNormalized.toLowerCase();
+        
+        // Check if first paragraph matches title (exact or normalized, case-insensitive for normalized)
+        if (firstParaText === titlePlainTrimmed || firstParaNormalized === titleNormalizedLower) {
+          // Remove first paragraph
+          paragraphs.shift();
+          cleanedSummary = paragraphs.join('\n\n').trim();
+        }
+      }
+      
+      // Also check after HTML rendering as fallback
       const renderedHtml = renderSummaryHtml(cleanedSummary);
       const firstParaMatch = renderedHtml.match(/^<p>([^<]*)<\/p>/i);
       if (firstParaMatch) {
         const firstParaText = stripTags(firstParaMatch[1]).trim();
-        // Case-sensitive exact match
-        if (firstParaText === titlePlainTrimmed) {
-          cleanedSummary = cleanedSummary.replace(new RegExp(`^${titlePlainTrimmed.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\s\\n\\r]*`, 'i'), '').trim();
-          // Also try removing markdown bold version
-          cleanedSummary = cleanedSummary.replace(new RegExp(`^\\*\\*${titlePlainTrimmed.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\*\\*[\\s\\n\\r]*`, 'i'), '').trim();
+        const firstParaNormalized = normalizeSpelling(firstParaText);
+        if (firstParaText === titlePlainTrimmed || firstParaNormalized === titleNormalized) {
+          // Remove the entire first paragraph from HTML
+          cleanedSummary = cleanedSummary.replace(/^[^\n]*\n\n/, '').trim();
         }
       }
 
@@ -504,11 +525,29 @@ function pickBestSummaryText(summariesByTitle, tocTitle) {
       .replace(/\s+/g, ' ')
       .replace(/[^a-z0-9äöüß\s]/g, '')
       .trim();
-  const n = norm(tocTitle);
+  
+  // Also normalize common spelling variations
+  const normWithVariants = (s) => {
+    let normalized = norm(s);
+    // Handle common German spelling variations
+    normalized = normalized.replace(/phantasie/g, 'fantasie');
+    normalized = normalized.replace(/philosophie/g, 'filosofie'); // in case of variations
+    return normalized;
+  };
+  
+  const n = normWithVariants(tocTitle);
   if (!n) return null;
+  
+  // First try exact match
   for (const [k, v] of summariesByTitle.entries()) {
-    if (norm(k) === n) return v;
+    if (norm(k) === norm(tocTitle)) return v;
   }
+  
+  // Then try with spelling variants
+  for (const [k, v] of summariesByTitle.entries()) {
+    if (normWithVariants(k) === n) return v;
+  }
+  
   return null;
 }
 
