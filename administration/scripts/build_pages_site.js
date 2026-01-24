@@ -43,6 +43,40 @@ function fileExists(p) {
   }
 }
 
+function readSubtitleFromManifest(absBookDir) {
+  const p = path.join(absBookDir, 'book-manifest.yaml');
+  if (!fileExists(p)) return '';
+  const content = fs.readFileSync(p, 'utf8');
+  const lines = content.split('\n');
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const m = line.match(/^subtitle:\s*(.*)\s*$/);
+    if (!m) continue;
+
+    let v = (m[1] || '').trim();
+    if (!v) return '';
+
+    // Handle quoted multi-line: subtitle: "foo ...\n  bar"
+    if (v.startsWith('"')) {
+      v = v.slice(1);
+      while (true) {
+        const endIdx = v.indexOf('"');
+        if (endIdx !== -1) {
+          v = v.slice(0, endIdx);
+          break;
+        }
+        const next = lines[++i];
+        if (next == null) break;
+        v += ' ' + next.trim();
+      }
+    }
+
+    return v.replace(/\s+/g, ' ').trim();
+  }
+  return '';
+}
+
 function findHtmlDirForBook(bookRootDir) {
   const rootHtml = path.join(bookRootDir, 'html');
   const resultsHtml = path.join(bookRootDir, 'results', 'html');
@@ -61,7 +95,7 @@ function collectBooks() {
     path.join(REPO_ROOT, 'ragkeep-deutsche-klassik-books-de', 'books'),
   ];
 
-  /** @type {Array<{dirName:string, absBookDir:string, absHtmlDir:string, relOutputDir:string, author:string, title:string}>} */
+  /** @type {Array<{dirName:string, absBookDir:string, absHtmlDir:string, relOutputDir:string, author:string, title:string, subtitle:string}>} */
   const books = [];
 
   for (const source of sources) {
@@ -74,8 +108,9 @@ function collectBooks() {
       const absHtmlDir = findHtmlDirForBook(absBookDir);
       if (!absHtmlDir) continue;
       const { author, title } = parseAuthorAndTitle(dirName);
+      const subtitle = readSubtitleFromManifest(absBookDir);
       const relOutputDir = path.join('books', dirName);
-      books.push({ dirName, absBookDir, absHtmlDir, relOutputDir, author, title });
+      books.push({ dirName, absBookDir, absHtmlDir, relOutputDir, author, title, subtitle });
     }
   }
 
@@ -105,6 +140,7 @@ function copyBookHtmlToSite(book) {
   fs.mkdirSync(path.dirname(destAbs), { recursive: true });
   fs.cpSync(book.absHtmlDir, destAbs, { recursive: true });
   ensurePrettyTocCss(destAbs);
+  injectTocSummaries({ absBookDir: book.absBookDir, destBookHtmlDir: destAbs });
 }
 
 function ensurePrettyTocCss(destBookHtmlDir) {
@@ -119,59 +155,196 @@ function ensurePrettyTocCss(destBookHtmlDir) {
   const extra = `
 \n${marker}
 nav.toc {
-  margin: 1.25rem 0 2.5rem;
+  margin: 1.25rem 0 2.25rem;
 }
 
 nav.toc ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 10px;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
 nav.toc li {
   margin: 0;
+  padding: 0.65rem 0;
+  border-top: 1px solid rgba(127, 127, 127, 0.22);
 }
 
 nav.toc a {
-  display: block;
-  padding: 0.85rem 0.95rem;
-  border-radius: 14px;
-  border: 1px solid rgba(127, 127, 127, 0.25);
-  background: rgba(0, 0, 0, 0.03);
   color: inherit;
   text-decoration: none;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   font-size: 0.95em;
   line-height: 1.25;
   letter-spacing: -0.01em;
-  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+  transition: opacity 140ms ease, text-decoration-color 140ms ease;
 }
 
 nav.toc a:hover {
-  transform: translateY(-1px);
-  background: rgba(0, 0, 0, 0.05);
-  border-color: rgba(127, 127, 127, 0.35);
+  opacity: 0.9;
+  text-decoration: underline;
+  text-decoration-color: rgba(127, 127, 127, 0.45);
 }
 
 nav.toc a:focus-visible {
   outline: 3px solid rgba(120, 170, 255, 0.55);
-  outline-offset: 2px;
+  outline-offset: 4px;
+  border-radius: 10px;
 }
 
-html[data-theme="dark"] nav.toc a {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.14);
+nav.toc li:first-child {
+  border-top: 0;
 }
 
-html[data-theme="dark"] nav.toc a:hover {
-  background: rgba(255, 255, 255, 0.10);
-  border-color: rgba(255, 255, 255, 0.20);
+/* Expandable TOC items (injected by build:pages when summaries exist) */
+nav.toc details.toc-details {
+  padding: 0;
+}
+
+nav.toc summary.toc-summary-line {
+  list-style: none;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.95em;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+nav.toc summary.toc-summary-line::-webkit-details-marker { display: none; }
+
+nav.toc summary.toc-summary-line::before {
+  content: "▸";
+  width: 1ch;
+  opacity: 0.55;
+  transform-origin: 50% 55%;
+  transition: transform 140ms ease;
+}
+
+nav.toc details[open] summary.toc-summary-line::before {
+  transform: rotate(90deg);
+}
+
+nav.toc summary.toc-summary-line:hover { opacity: 0.95; }
+
+nav.toc summary.toc-summary-line:focus-visible {
+  outline: 3px solid rgba(120, 170, 255, 0.55);
+  outline-offset: 4px;
+  border-radius: 10px;
+}
+
+nav.toc .toc-panel {
+  margin-top: 0.55rem;
+  padding-left: 1.65ch; /* align under arrow */
+}
+
+nav.toc .toc-actions {
+  margin-bottom: 0.35rem;
+}
+
+nav.toc a.toc-open {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.82em;
+  color: inherit;
+  opacity: 0.72;
+  text-decoration: underline;
+  text-decoration-color: rgba(127,127,127,0.45);
+}
+
+nav.toc .toc-excerpt {
+  font-size: 0.92em;
+  line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+  nav.toc .toc-excerpt { font-size: 0.98em; }
 }
 `;
 
   fs.writeFileSync(cssPath, current + extra, 'utf8');
+}
+
+function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
+  const summariesPath = path.join(absBookDir, 'results', 'rag-chunks', 'summaries-chunks.jsonl');
+  if (!fileExists(summariesPath)) return;
+
+  const tocPath = path.join(destBookHtmlDir, 'index.html');
+  if (!fileExists(tocPath)) return;
+
+  const marker = 'data-ragkeep-toc-summaries="1"';
+  let html = fs.readFileSync(tocPath, 'utf8');
+  if (html.includes(marker)) return;
+
+  const summariesByTitle = new Map();
+  const lines = fs.readFileSync(summariesPath, 'utf8').split('\n').filter(Boolean);
+  for (const line of lines) {
+    try {
+      const obj = JSON.parse(line);
+      const title = (obj?.metadata?.source_title || obj?.source_title || '').toString().trim();
+      const text = (obj?.text || '').toString().trim();
+      if (!title || !text) continue;
+      if (!summariesByTitle.has(title)) summariesByTitle.set(title, text);
+    } catch {
+      // ignore malformed line
+    }
+  }
+  if (summariesByTitle.size === 0) return;
+
+  html = html.replace(/<nav class="toc">([\s\S]*?)<\/nav>/m, (navMatch, navInner) => {
+    const replaced = navInner.replace(/<li>\s*<a href="([^"]+)">([^<]+)<\/a>\s*<\/li>/g, (liMatch, href, rawTitle) => {
+      const titleText = decodeHtmlEntities(rawTitle.trim());
+      const summaryText = pickBestSummaryText(summariesByTitle, titleText);
+      if (!summaryText) return `<li><a href="${href}">${escapeHtml(titleText)}</a></li>`;
+
+      return `<li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">${escapeHtml(titleText)}</summary>
+    <div class="toc-panel">
+      <div class="toc-actions"><a class="toc-open" href="${href}">Kapitel öffnen</a></div>
+      <div class="toc-excerpt">${renderSummaryHtml(summaryText)}</div>
+    </div>
+  </details>
+</li>`;
+    });
+
+    return `<nav class="toc" ${marker}>${replaced}</nav>`;
+  });
+
+  fs.writeFileSync(tocPath, html, 'utf8');
+}
+
+function pickBestSummaryText(summariesByTitle, tocTitle) {
+  if (summariesByTitle.has(tocTitle)) return summariesByTitle.get(tocTitle);
+
+  const norm = (s) =>
+    s
+      .toLowerCase()
+      .replace(/\s+/g, ' ')
+      .replace(/[^a-z0-9äöüß\s]/g, '')
+      .trim();
+  const n = norm(tocTitle);
+  if (!n) return null;
+  for (const [k, v] of summariesByTitle.entries()) {
+    if (norm(k) === n) return v;
+  }
+  return null;
+}
+
+function renderSummaryHtml(text) {
+  const paras = text.split(/\n\s*\n/g).map((p) => p.trim()).filter(Boolean);
+  const safe = paras.map((p) => `<p>${escapeHtml(p).replace(/\n/g, '<br/>')}</p>`).join('');
+  return safe || `<p>${escapeHtml(text)}</p>`;
+}
+
+function decodeHtmlEntities(s) {
+  return s
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
 }
 
 function writeNoJekyll() {
@@ -193,16 +366,21 @@ function generateIndexHtml(books) {
     const href = `books/${encodeURIComponent(b.dirName)}/index.html`;
     const title = escapeHtml(b.title);
     const author = escapeHtml(b.author);
+    const subtitle = escapeHtml(b.subtitle || '');
+    const subtitleCover = subtitle ? `<div class="coverSubtitle">${subtitle}</div>` : '';
+    const subtitleMeta = subtitle ? `<div class="metaSubtitle">${subtitle}</div>` : '';
     return `
         <a class="card" href="${href}" aria-label="${author}: ${title}">
           <div class="cover" aria-hidden="true">
             <div class="coverInner">
               <div class="coverTitle">${title}</div>
+              ${subtitleCover}
               <div class="coverAuthor">${author}</div>
             </div>
           </div>
           <div class="meta">
             <div class="metaTitle">${title}</div>
+            ${subtitleMeta}
             <div class="metaAuthor">${author}</div>
             <div class="metaHint">Kapitelübersicht</div>
           </div>
@@ -214,7 +392,7 @@ function generateIndexHtml(books) {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RAGKeep – Bücher mit HTML</title>
+    <title>ragkeep – Datenlager für ragrun KI Assistenten</title>
     <meta name="description" content="RAGKeep – automatisch generierte HTML-Ausgaben von Büchern." />
     <meta name="color-scheme" content="light" />
     <style>
@@ -256,8 +434,12 @@ function generateIndexHtml(books) {
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
         font-size: 12px;
         letter-spacing: 0.01em;
-        opacity: 0.65;
+        opacity: 0.8;
         user-select: none;
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--cardBorder);
+        background: rgba(11, 18, 32, 0.03);
       }
 
       .grid {
@@ -277,12 +459,10 @@ function generateIndexHtml(books) {
         border: 1px solid var(--cardBorder);
         color: inherit;
         text-decoration: none;
-        box-shadow: 0 0 0 rgba(0,0,0,0);
-        transform: translateY(0);
-        transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+        transition: background 160ms ease, border-color 160ms ease;
       }
       .card:focus-visible { outline: 3px solid rgba(120, 170, 255, 0.6); outline-offset: 2px; }
-      .card:hover { transform: translateY(-2px); box-shadow: var(--shadow); border-color: rgba(11, 18, 32, 0.18); }
+      .card:hover { border-color: rgba(11, 18, 32, 0.18); background: rgba(11, 18, 32, 0.012); }
 
       /* “Book cover” without images: gradient + subtle spine + title/author */
       .cover {
@@ -292,7 +472,6 @@ function generateIndexHtml(books) {
         overflow: hidden;
         background: #ffffff;
         border: 1px solid rgba(11, 18, 32, 0.10);
-        box-shadow: 0 16px 40px rgba(11, 18, 32, 0.08);
       }
       .cover::before {
         content: "";
@@ -334,12 +513,18 @@ function generateIndexHtml(books) {
         letter-spacing: -0.02em;
         text-wrap: balance;
       }
+      .coverSubtitle {
+        font-size: 12px;
+        color: rgba(11, 18, 32, 0.70);
+        text-wrap: balance;
+      }
       .coverAuthor {
         font-size: 12px;
         opacity: 0.92;
       }
 
       .metaTitle { font-weight: 700; font-size: 14px; line-height: 1.25; text-wrap: balance; }
+      .metaSubtitle { margin-top: 6px; color: rgba(11, 18, 32, 0.70); font-size: 12.5px; line-height: 1.25; text-wrap: balance; }
       .metaAuthor { margin-top: 4px; color: var(--muted); font-size: 12.5px; }
       .metaHint { margin-top: 6px; color: rgba(11, 18, 32, 0.55); font-size: 12px; }
 
@@ -350,7 +535,7 @@ function generateIndexHtml(books) {
   <body>
     <div class="wrap">
       <header>
-        <h1>RAGKeep – Bücher mit HTML</h1>
+        <h1>ragkeep – Datenlager für ragrun KI Assistenten</h1>
         <p class="lede">Statische HTML-Ausgaben mit Kapitelübersicht – einfach ein Buch anklicken.</p>
         <p class="sub">
           <span class="pill">${total} Bücher</span>
