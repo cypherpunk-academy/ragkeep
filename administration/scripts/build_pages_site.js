@@ -204,9 +204,11 @@ function ensurePrettyTocCss(destBookHtmlDir) {
   const cssPath = path.join(destBookHtmlDir, 'assets', 'styles.css');
   if (!fileExists(cssPath)) return;
 
-  const marker = '/* ragkeep:pretty-toc:v7 */';
+  const marker = '/* ragkeep:pretty-toc */';
   const current = fs.readFileSync(cssPath, 'utf8');
-  if (current.includes(marker)) return;
+
+  // Replace any previous injected TOC block (we always keep it at file end)
+  const base = current.replace(/\/\* ragkeep:pretty-toc[\s\S]*$/m, '').trimEnd();
 
   // Keep this strictly scoped to TOC pages: the selector is `nav.toc ...`
   const extra = `
@@ -253,21 +255,31 @@ nav.toc li:first-child {
   border-top: 0;
 }
 
+/* If there are no summaries available (no <details> injected), keep a simple arrow for plain links */
+nav.toc li > a::before {
+  content: "►";
+  width: 1.2ch;
+  opacity: 0.6;
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+}
+
 /* Expandable TOC items (injected by build:pages when summaries exist) */
 nav.toc details.toc-details {
   padding: 0;
+  display: grid;
+  grid-template-columns: 1.6ch 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 10px;
+  align-items: baseline;
 }
 
 nav.toc summary.toc-summary-line {
   list-style: none;
   cursor: pointer;
-  font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
-  font-size: 0.95em;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-  display: flex;
-  gap: 10px;
-  align-items: baseline;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 nav.toc summary.toc-summary-line::-webkit-details-marker { display: none; }
@@ -304,8 +316,9 @@ nav.toc summary.toc-summary-line:focus-visible {
 }
 
 nav.toc .toc-panel {
+  grid-column: 2;
+  grid-row: 2;
   margin-top: 0.55rem;
-  padding-left: 1.65ch; /* align under arrow */
 }
 
 nav.toc .toc-actions {
@@ -348,10 +361,28 @@ nav.toc a.toc-link:hover {
 
 nav.toc .toc-title {
   font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
+  grid-column: 2;
+  grid-row: 1;
+  display: block;
+}
+
+nav.toc .toc-title-row {
+  grid-column: 2;
+  grid-row: 1;
+  display: inline-flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+nav.toc .toc-summary-label {
+  font-size: 0.9em;
+  opacity: 0.7;
+  font-style: italic;
 }
 `;
 
-  fs.writeFileSync(cssPath, current + extra, 'utf8');
+  fs.writeFileSync(cssPath, base + extra, 'utf8');
 }
 
 function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
@@ -361,7 +392,7 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
   const tocPath = path.join(destBookHtmlDir, 'index.html');
   if (!fileExists(tocPath)) return;
 
-  const marker = 'data-ragkeep-toc-summaries="4"';
+  const marker = 'data-ragkeep-toc-summaries="6"';
   let html = fs.readFileSync(tocPath, 'utf8');
   if (html.includes(marker)) return;
 
@@ -391,15 +422,17 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
 
       return `<li>
   <details class="toc-details">
-    <summary class="toc-summary-line">
+    <summary class="toc-summary-line" aria-label="Zusammenfassung ein-/ausklappen">
       <button class="toc-toggle" type="button" aria-label="Zusammenfassung anzeigen">
         <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
         <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
       </button>
-      <span class="toc-title">${titleHtml}</span>
     </summary>
+    <div class="toc-title-row">
+      <a class="toc-link toc-title" href="${href}">${titleHtml}</a>
+      <span class="toc-summary-label">(Zusammenfassung)</span>
+    </div>
     <div class="toc-panel">
-      <div class="toc-actions"><a class="toc-open" href="${href}">Kapitel öffnen</a></div>
       <div class="toc-excerpt">${renderSummaryHtml(summaryText)}</div>
     </div>
   </details>

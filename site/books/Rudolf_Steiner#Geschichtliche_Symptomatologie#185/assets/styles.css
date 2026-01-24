@@ -171,9 +171,7 @@ i, em { color: var(--italics-color); font-style: italic; }
   body { color: var(--foreground); }
 }
 
-
-
-/* ragkeep:pretty-toc:v5 */
+/* ragkeep:pretty-toc */
 nav.toc {
   margin: 1.25rem 0 2.25rem;
 }
@@ -216,21 +214,31 @@ nav.toc li:first-child {
   border-top: 0;
 }
 
+/* If there are no summaries available (no <details> injected), keep a simple arrow for plain links */
+nav.toc li > a::before {
+  content: "►";
+  width: 1.2ch;
+  opacity: 0.6;
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+}
+
 /* Expandable TOC items (injected by build:pages when summaries exist) */
 nav.toc details.toc-details {
   padding: 0;
+  display: grid;
+  grid-template-columns: 1.6ch 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 10px;
+  align-items: baseline;
 }
 
 nav.toc summary.toc-summary-line {
   list-style: none;
   cursor: pointer;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 0.95em;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
-  display: flex;
-  gap: 10px;
-  align-items: baseline;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 nav.toc summary.toc-summary-line::-webkit-details-marker { display: none; }
@@ -267,8 +275,9 @@ nav.toc summary.toc-summary-line:focus-visible {
 }
 
 nav.toc .toc-panel {
+  grid-column: 2;
+  grid-row: 2;
   margin-top: 0.55rem;
-  padding-left: 1.65ch; /* align under arrow */
 }
 
 nav.toc .toc-actions {
@@ -276,7 +285,7 @@ nav.toc .toc-actions {
 }
 
 nav.toc a.toc-open {
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
   font-size: 0.82em;
   color: inherit;
   opacity: 0.72;
@@ -301,9 +310,32 @@ nav.toc details[open] .toc-arrow-closed { display: none; }
 nav.toc a.toc-link {
   color: inherit;
   text-decoration: none;
+  font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
 }
 
 nav.toc a.toc-link:hover {
   text-decoration: underline;
   text-decoration-color: rgba(127,127,127,0.45);
+}
+
+nav.toc .toc-title {
+  font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
+  grid-column: 2;
+  grid-row: 1;
+  display: block;
+}
+
+nav.toc .toc-title-row {
+  grid-column: 2;
+  grid-row: 1;
+  display: inline-flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+nav.toc .toc-summary-label {
+  font-size: 0.9em;
+  opacity: 0.7;
+  font-style: italic;
 }
