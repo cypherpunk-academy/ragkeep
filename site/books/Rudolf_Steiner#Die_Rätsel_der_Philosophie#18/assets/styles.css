@@ -253,7 +253,7 @@ nav.toc summary.toc-summary-line::-webkit-details-marker { display: none; }
 
 nav.toc .toc-arrow {
   width: 1.2ch;
-  opacity: 0.6;
+  color: rgba(127, 127, 127, 0.22);
   display: inline-block;
   text-align: center;
   flex: 0 0 auto;
