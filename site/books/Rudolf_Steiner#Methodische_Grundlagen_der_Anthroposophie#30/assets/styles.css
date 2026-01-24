@@ -257,6 +257,13 @@ nav.toc .toc-arrow {
   display: inline-block;
   text-align: center;
   flex: 0 0 auto;
+  position: absolute;
+  left: 0;
+}
+
+nav.toc summary.toc-summary-line {
+  position: relative;
+  padding-left: calc(1.2ch + 10px);
 }
 
 nav.toc .toc-title-text {
@@ -268,9 +275,10 @@ nav.toc .toc-title-text {
 nav.toc a.toc-book-link {
   flex: 0 0 auto;
   text-decoration: none;
-  font-size: 1.1em;
+  font-size: 1.65em;
   opacity: 0.7;
   transition: opacity 140ms ease;
+  line-height: 1;
 }
 
 nav.toc a.toc-book-link:hover {
@@ -292,7 +300,7 @@ nav.toc .toc-panel {
 
 nav.toc .toc-summary-heading {
   font-family: var(--heading-font-family, var(--font-family, "Cormorant Garamond", Georgia, "Times New Roman", serif));
-  font-size: 0.95em;
+  font-size: 0.8075em;
   font-weight: 600;
   margin: 0 0 0.5rem 0;
   opacity: 0.85;
@@ -320,9 +328,9 @@ nav.toc .toc-excerpt {
   nav.toc .toc-excerpt { font-size: 0.98em; }
 }
 
-/* Toggle the arrow icons based on expanded/collapsed state */
-nav.toc details:not([open]) .toc-arrow-open { display: none; }
-nav.toc details[open] .toc-arrow-closed { display: none; }
+/* Toggle the arrow icons based on expanded/collapsed state - only one visible at a time */
+nav.toc details:not([open]) .toc-arrow-open { display: none !important; }
+nav.toc details[open] .toc-arrow-closed { display: none !important; }
 
 /* Make chapter links look like the rest of the TOC */
 nav.toc a.toc-link {
