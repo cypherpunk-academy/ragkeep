@@ -234,8 +234,8 @@ nav.toc summary.toc-summary-line {
   list-style: none;
   cursor: pointer;
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  align-items: center;
+  gap: 18px;
   width: 100%;
   min-width: 0;
 }
@@ -254,7 +254,7 @@ nav.toc .toc-arrow {
 
 nav.toc summary.toc-summary-line {
   position: relative;
-  padding-left: calc(1.2ch + 10px);
+  padding-left: calc(1.2ch + 18px);
 }
 
 nav.toc .toc-title-text {
@@ -286,7 +286,7 @@ nav.toc summary.toc-summary-line:focus-visible {
 
 nav.toc .toc-panel {
   margin-top: 0.55rem;
-  margin-left: calc(1.2ch + 10px);
+  margin-left: calc(1.2ch + 18px);
 }
 
 nav.toc .toc-summary-heading {

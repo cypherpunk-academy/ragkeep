@@ -275,8 +275,8 @@ nav.toc summary.toc-summary-line {
   list-style: none;
   cursor: pointer;
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  align-items: center;
+  gap: 18px;
   width: 100%;
   min-width: 0;
 }
@@ -295,7 +295,7 @@ nav.toc .toc-arrow {
 
 nav.toc summary.toc-summary-line {
   position: relative;
-  padding-left: calc(1.2ch + 10px);
+  padding-left: calc(1.2ch + 18px);
 }
 
 nav.toc .toc-title-text {
@@ -327,7 +327,7 @@ nav.toc summary.toc-summary-line:focus-visible {
 
 nav.toc .toc-panel {
   margin-top: 0.55rem;
-  margin-left: calc(1.2ch + 10px);
+  margin-left: calc(1.2ch + 18px);
 }
 
 nav.toc .toc-summary-heading {
@@ -421,16 +421,40 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
       const summaryText = pickBestSummaryText(summariesByTitle, titlePlain);
       if (!summaryText) return `<li><a class="toc-link" href="${href}">${titleHtml}</a></li>`;
 
-      // Remove duplicate chapter title from summary if it appears at the start
+      // Remove duplicate chapter title from summary if it appears at the start (case-sensitive)
       let cleanedSummary = summaryText;
-      const titlePlainLower = titlePlain.toLowerCase().trim();
-      const summaryStart = cleanedSummary.substring(0, Math.min(200, cleanedSummary.length)).toLowerCase();
-      if (summaryStart.startsWith(titlePlainLower)) {
-        // Remove title if it's at the very start
-        cleanedSummary = cleanedSummary.substring(titlePlain.length).trim();
-        // Also remove if followed by newline/paragraph break
-        if (cleanedSummary.match(/^[\n\r\s]*[:\-\.]?[\n\r\s]*/)) {
-          cleanedSummary = cleanedSummary.replace(/^[\n\r\s]*[:\-\.]?[\n\r\s]*/, '').trim();
+      const titlePlainTrimmed = titlePlain.trim();
+      
+      // Remove markdown bold formatting from title for comparison
+      const titleWithBold = `**${titlePlainTrimmed}**`;
+      const titleWithBoldAndNewline = `${titleWithBold}\n\n`;
+      
+      // Case-sensitive check: does summary start with the exact title (with or without markdown bold)?
+      if (cleanedSummary.trim().startsWith(titlePlainTrimmed)) {
+        // Remove the title and any following whitespace/punctuation
+        cleanedSummary = cleanedSummary.substring(titlePlainTrimmed.length).trim();
+        // Remove leading punctuation (colon, dash, period) and whitespace
+        cleanedSummary = cleanedSummary.replace(/^[\s\n\r]*[:\-\.]?[\s\n\r]*/, '').trim();
+      } else if (cleanedSummary.trim().startsWith(titleWithBoldAndNewline)) {
+        // Remove markdown bold title with double newline
+        cleanedSummary = cleanedSummary.substring(titleWithBoldAndNewline.length).trim();
+      } else if (cleanedSummary.trim().startsWith(titleWithBold)) {
+        // Remove markdown bold title (might be followed by single newline or space)
+        cleanedSummary = cleanedSummary.substring(titleWithBold.length).trim();
+        // Remove any following newlines/whitespace
+        cleanedSummary = cleanedSummary.replace(/^[\s\n\r]+/, '').trim();
+      }
+      
+      // After HTML rendering, also check if first paragraph is just the title
+      const renderedHtml = renderSummaryHtml(cleanedSummary);
+      const firstParaMatch = renderedHtml.match(/^<p>([^<]*)<\/p>/i);
+      if (firstParaMatch) {
+        const firstParaText = stripTags(firstParaMatch[1]).trim();
+        // Case-sensitive exact match
+        if (firstParaText === titlePlainTrimmed) {
+          cleanedSummary = cleanedSummary.replace(new RegExp(`^${titlePlainTrimmed.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\s\\n\\r]*`, 'i'), '').trim();
+          // Also try removing markdown bold version
+          cleanedSummary = cleanedSummary.replace(new RegExp(`^\\*\\*${titlePlainTrimmed.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\*\\*[\\s\\n\\r]*`, 'i'), '').trim();
         }
       }
 
