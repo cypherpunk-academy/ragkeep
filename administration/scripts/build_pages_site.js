@@ -332,8 +332,8 @@ function injectTocSummaries({ absBookDir, destBookHtmlDir }) {
   <details class="toc-details">
     <summary class="toc-summary-line">
       <button class="toc-toggle" type="button" aria-label="Zusammenfassung anzeigen">
-        <span class="toc-arrow toc-arrow-closed" aria-hidden="true">→</span>
-        <span class="toc-arrow toc-arrow-open" aria-hidden="true">↓</span>
+        <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+        <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
       </button>
       <a class="toc-link toc-title" href="${href}">${titleHtml}</a>
     </summary>
