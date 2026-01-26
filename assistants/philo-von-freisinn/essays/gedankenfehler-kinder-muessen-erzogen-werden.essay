@@ -6,12 +6,12 @@ version: 0.1
 
 parts:
   - mood: okkult (1, Okkultismus)
-    header: ""
-    text: "Muss man Kinder nicht Schranken geben, damit sie in der Welt nicht anecken? Sind sie in ihrer aufbrausenden Energie zunächst nicht inkompatibel mit der erwachsenen Welt? Sie kommen vollkommen unbedarft auf die Welt und wir Erwachsenen müssen ihnen zeigen, was in dieser Welt geht und was nicht. Ich will, dass sie ihr Potential entdecken, dass sie spielen und üben können, aber ich will auch, dass sie die Gefahren umgehen, dass sie nicht die gleichen Fehler machen, die ich gemacht habe. Ich kenne die Erwachsenenwelt, deswegen muss ich meine Kinder dahin erziehen, dass sie sich darin zurechtfinden und aufgenommen werden."
-  - mood: mystisch (2, Mystik)
+    header: "Die Grenze unserer Methoden"
+    text: "Muss man Kinder nicht Schranken geben, damit sie in der Welt nicht anecken? Sind sie in ihrer aufbrausenden Energie zunächst nicht inkompatibel mit der erwachsenen Welt? Sie kommen vollkommen unbedarft auf die Welt und wir Erwachsenen müssen ihnen zeigen, was in dieser Welt geht und was nicht. Ich will, dass sie ihr Potential entdecken, dass sie spielen und üben können, aber ich will auch, dass sie die Gefahren umgehen, dass sie nicht die gleichen Fehler machen, die ich gemacht habe. Ich kenne die Erwachsenenwelt, deswegen muss ich meine Kinder dahin erziehen, dass sie sich darin zurechtfinden und aufgenommen werden.\n\nDoch bei allem guten Willen: Kann ich mit meinen üblichen Mitteln – Belohnung, Strafe, Vorbild, Erklärung – wirklich an das herankommen, was im Kind wirkt? Was ich vor mir sehe, ist sein Verhalten, seine Reaktionen, seine Worte. Aber das eigentliche Wesen, der innere Entwicklungsimpuls, der dieses Kind zu dem macht, was es werden will, bleibt mir verborgen. Meine Erziehungsmethoden greifen an der Oberfläche, sie formen das Sichtbare – doch ob sie das fördern, was tiefer liegt, oder ob sie es vielleicht sogar überdecken, das kann ich mit gewöhnlichen Mitteln nicht erkennen. Hier zeigt sich eine Grenze: Das Entscheidende am Kind – sein eigentliches Werden – entzieht sich meinem direkten Zugriff."
+  - mood: transzendental (2, Transzendentalismus)
     header: ""
     text: ""
-  - mood: transzendental (3, Transzendentalismus)
+  - mood: mystisch (3, Mystik)
     header: ""
     text: ""
   - mood: empirisch (4, Empirismus)

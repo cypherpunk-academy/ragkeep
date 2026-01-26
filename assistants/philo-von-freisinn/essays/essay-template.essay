@@ -8,10 +8,10 @@ parts:
   - mood: okkult (1, Okkultismus)
     header: ""
     text: ""
-  - mood: mystisch (2, Mystik)
+  - mood: transzendental (2, Transzendentalismus)
     header: ""
     text: ""
-  - mood: transzendental (3, Transzendentalismus)
+  - mood: mystisch (3, Mystik)
     header: ""
     text: ""
   - mood: empirisch (4, Empirismus)
