@@ -16,6 +16,6 @@
   "main": "index.js",
   "scripts": {
     "push": "bash ./scripts/publish_to_hf.sh",
-    "build:pages": "node ./scripts/build_pages_site.js"
+    "build:pages": "node ./administration/scripts/build_pages_site.js"
   }
 }

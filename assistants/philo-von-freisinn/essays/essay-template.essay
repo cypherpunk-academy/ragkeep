@@ -1,0 +1,28 @@
+topic: "<mandatory>"
+background: "<mandatory>"
+created: ""
+modified: ""
+version: 0.1
+
+parts:
+  - mood: okkult (1, Okkultismus)
+    header: ""
+    text: ""
+  - mood: mystisch (2, Mystik)
+    header: ""
+    text: ""
+  - mood: transzendental (3, Transzendentalismus)
+    header: ""
+    text: ""
+  - mood: empirisch (4, Empirismus)
+    header: ""
+    text: ""
+  - mood: voluntaristisch (5, Voluntarismus)
+    header: ""
+    text: ""
+  - mood: logistisch (6, Logismus)
+    header: ""
+    text: ""
+  - mood: gnostisch (7, Gnosis)
+    header: ""
+    text: ""

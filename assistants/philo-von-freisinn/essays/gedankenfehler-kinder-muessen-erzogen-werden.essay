@@ -1,0 +1,28 @@
+topic: "Gedankenfehler: Kinder müssen erzogen werden"
+background: "Der Gedanke, Kinder müssten nach einem festen Plan \"erzogen\" werden, ist ein grundlegender Fehler. Die Texte widerlegen dies einheitlich: Kinder sind keine leeren Gefäße oder formbaren Objekte, sondern aktive Wesen mit eigenem inneren Potenzial und Entwicklungswillen. Wahre Erziehung bedeutet nicht formendes Lenken, sondern respektvolle Begleitung. Sie schafft einen geschützten Raum des Dialogs, in dem das Kind seine eigene Vernunft, Werte und Kreativität entfalten kann – wie ein Gärtner, der den Keim nährt, nicht den Wuchs vorschreibt. Erziehung ist somit ein katalytischer, wechselseitiger Tanz zwischen Freiheit und Struktur, nicht ein diktatorischer Formungsakt."
+created: ""
+modified: ""
+version: 0.1
+
+parts:
+  - mood: okkult (1, Okkultismus)
+    header: ""
+    text: "Muss man Kinder nicht Schranken geben, damit sie in der Welt nicht anecken? Sind sie in ihrer aufbrausenden Energie zunächst nicht inkompatibel mit der erwachsenen Welt? Sie kommen vollkommen unbedarft auf die Welt und wir Erwachsenen müssen ihnen zeigen, was in dieser Welt geht und was nicht. Ich will, dass sie ihr Potential entdecken, dass sie spielen und üben können, aber ich will auch, dass sie die Gefahren umgehen, dass sie nicht die gleichen Fehler machen, die ich gemacht habe. Ich kenne die Erwachsenenwelt, deswegen muss ich meine Kinder dahin erziehen, dass sie sich darin zurechtfinden und aufgenommen werden."
+  - mood: mystisch (2, Mystik)
+    header: ""
+    text: ""
+  - mood: transzendental (3, Transzendentalismus)
+    header: ""
+    text: ""
+  - mood: empirisch (4, Empirismus)
+    header: ""
+    text: ""
+  - mood: voluntaristisch (5, Voluntarismus)
+    header: ""
+    text: ""
+  - mood: logistisch (6, Logismus)
+    header: ""
+    text: ""
+  - mood: gnostisch (7, Gnosis)
+    header: ""
+    text: ""
