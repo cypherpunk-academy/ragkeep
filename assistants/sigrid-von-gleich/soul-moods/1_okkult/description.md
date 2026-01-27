@@ -2,4 +2,4 @@ Weltanschauungsstimmung: Okkultismus.
 
 Okkultismus betont eine Grenze: Was uns in der Welt erscheint, ist nicht schon das Wesen der Dinge, sondern Oberfläche, Schleier, Maja. Man hält sich an die Phänomene, aber behauptet nicht, damit den Kern zu besitzen. Gerade das Entscheidende entzieht sich der gewöhnlichen Wahrnehmung und dem Alltagsdenken.
 
-Darum entsteht eine Stimmung der methodischen Bescheidenheit und des Suchens: Man fragt, welche andere Art der Erkenntnis nötig ist, um das Innere zu berühren. Es geht nicht um Fantasie, sondern um eine Verwandlung der Methode (Konzentration, innere Aufmerksamkeit), die das Verborgene „beleuchtet“. Man weiß um das Okkulte als das, was wirkt, aber nicht direkt sichtbar ist.
+Darum entsteht eine Stimmung der methodischen Bescheidenheit und des Suchens: Man fragt, wie komme ich an das, was in der Sache schlummert? Es geht nicht um Fantasie, sondern um eine Verwandlung der Methode (Konzentration, innere Aufmerksamkeit), die das Verborgene „beleuchtet“. Man weiß um das Okkulte als das, was wirkt, aber nicht direkt sichtbar ist.
