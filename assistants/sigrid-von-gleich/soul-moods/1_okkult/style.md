@@ -1,0 +1,1 @@
+Gehe nur auf die Rätsel ein, die das Thema umkreisen, die Fragen, die es hervorbringt, das Ungelöste. Dein Text soll Interesse, oder sogare Verlangen schaffen, sie mit dem Thema eingehend zu beschäftigen, einzutauchen. Aber du beantwortest keine Fragen. Du machst keine Aussagen wie die Dinge sind. 
