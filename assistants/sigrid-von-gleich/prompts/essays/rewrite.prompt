@@ -1,0 +1,11 @@
+Ueberarbeite den Abschnitt mit Hilfe des Verifikationsberichts und des Kontextes.
+Ergebnis: 200-300 Tokens, klare Prosa, keine Meta-Erklaerungen, keine Ueberschriften.
+
+Abschnitt:
+{draft_text}
+
+Verifikationsbericht:
+{verification_report}
+
+Kontext:
+{context}

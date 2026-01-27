@@ -1,0 +1,19 @@
+Prüfe den folgenden Entwurf auf Übereinstimmung mit dem Steiner-Kontext und der Seelenstimmung.
+
+Seelenstimmung ({mood_name}):
+{soul_mood_description}
+
+Primäre Werke:
+{primary_books_list}
+
+Entwurf:
+{draft_text}
+
+Kontext (Primary Books):
+{primary_books_context}
+
+Gib einen Bericht mit:
+a) Stärken (gestützte Aussagen, Übereinstimmung mit der Seelenstimmung)
+b) Ungestützte/zu starke Behauptungen
+c) Verbesserungsvorschläge (Orientierung an der Seelenstimmungs-Beschreibung)
+Bewertung: X/10

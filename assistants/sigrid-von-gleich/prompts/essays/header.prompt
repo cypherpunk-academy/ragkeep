@@ -1,0 +1,13 @@
+Erstelle einen prägnanten Header (maximal 100 Zeichen) für folgenden Essay-Abschnitt:
+
+Essay-Titel: {essay_title}
+Seelenstimmung: {mood_name}
+
+Text:
+{text}
+
+Anforderungen:
+- Maximal 100 Zeichen
+- Keine Meta-Erklärungen
+- Eine Zeile
+- Fasst den Kern des Texts zusammen

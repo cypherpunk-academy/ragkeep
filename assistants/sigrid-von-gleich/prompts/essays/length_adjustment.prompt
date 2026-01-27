@@ -1,0 +1,10 @@
+Passe die Länge des folgenden Texts an auf {target_tokens} Tokens ({reason}).
+
+Aktueller Text:
+{text}
+
+Anforderungen:
+- Ziel: {target_tokens} Tokens (±10)
+- Inhalt und Stil beibehalten
+- Klare, lesbare Prosa
+- Keine Meta-Erklärungen
