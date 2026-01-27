@@ -1,6 +1,6 @@
-Ergänze den (eventuell) vorhandenen Abschnitt {mood_index} ({mood_name}, {mood_planet}) fuer den Essay:
+Ergänze den vorhandenen Text im Abschnitt {mood_index} fuer den Essay:
 Thema: {topic}
-Vorhandener Text (falls vorhanden):
+Vorhandener Text:
 {current_text}
 
 Erhalte den vorhandenen Text möglichst treu. Ergänze treu im Sinne dieses Textes und der Hintergrund-Gedanken:
