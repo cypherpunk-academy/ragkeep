@@ -1,16 +1,16 @@
 Ergänze den (eventuell) vorhandenen Abschnitt {mood_index} ({mood_name}, {mood_planet}) fuer den Essay:
 Thema: {topic}
-Hintergrund: {background}
-Modifiziere vorhandenen Text nur sehr vorsichtig. Beachte Stichpunkte streng und ersetze sie dann durch Prosa. 
+Vorhandener Text (falls vorhanden):
+{current_text}
 
-Seelenstimmung (Zusammenfassung):
+Erhalte den vorhandenen Text möglichst treu. Ergänze treu im Sinne dieses Textes und der Hintergrund-Gedanken:
+{background}
+
+Schreibe in der Seelenstimmung:
 {mood_description}
 
 Antworte im Sinne folgender Bücher:
 {primary_books_list}
-
-Vorhandener Text (falls vorhanden):
-{current_text}
 
 Anforderungen:
 - 200-300 Tokens (keine Stichpunkte)
