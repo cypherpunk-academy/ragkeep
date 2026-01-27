@@ -1,5 +1,7 @@
 Ergänze den (eventuell) vorhandenen Abschnitt {mood_index} ({mood_name}, {mood_planet}) fuer den Essay:
-"{essay_title}".  Modifiziere vorhandenen Text nur sehr vorsichtig. Beachte Stichpunkte streng und ersetze sie dann durch Prosa. 
+Thema: {topic}
+Hintergrund: {background}
+Modifiziere vorhandenen Text nur sehr vorsichtig. Beachte Stichpunkte streng und ersetze sie dann durch Prosa. 
 
 Seelenstimmung (Zusammenfassung):
 {mood_description}
