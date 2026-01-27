@@ -6,7 +6,7 @@ version: 0.1
 parts:
   - mood: okkult (1, Okkultismus)
     header: ""
-    text: ''
+    text: ""
   - mood: transzendental (2, Transzendentalismus)
     header: ""
     text: ""
