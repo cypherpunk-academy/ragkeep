@@ -1,11 +1,22 @@
-Ueberarbeite den Abschnitt mit Hilfe des Verifikationsberichts und des Kontextes.
-Ergebnis: 200-300 Tokens, klare Prosa, keine Meta-Erklaerungen, keine Ueberschriften.
+Ueberarbeite den Text für Abschnitt {part} fuer den Essay, in dem du
 
-Abschnitt:
+WICHTIG!
+{style}
+
+Der Text, wie er gerade ist:
 {draft_text}
 
-Verifikationsbericht:
+Hier die Anweisungen für die Änderungen:
 {verification_report}
 
-Kontext:
-{context}
+Gehe von folgendem Grundgedanken aus:
+{background}
+
+Antworte im Sinne folgendes Kontext:
+{primary_books_context}
+
+Anforderungen:
+- 200-300 Tokens (keine Stichpunkte)
+- Keine Meta-Erklaerungen
+- Keine Ueberschriften im Text
+- Klare, lesbare Prosa
