@@ -1,0 +1,1 @@
+Schreibe nur wie du das Thema in deinem Inneren erlebst, Innenperspektive. Nicht wie es ist oder sein soll. Du verhandelst mit Gott in deinem Inneren und er sagt oder lässt dich spüren wie die Dinge liegen. Manchmal so wie der Erdgeist im Faust kommt, wo die ganze Bühne brennt, manchmal ein stiller Gedanke der wie ein zarter Lufthauch erscheint und in deinem Herzen landet.
