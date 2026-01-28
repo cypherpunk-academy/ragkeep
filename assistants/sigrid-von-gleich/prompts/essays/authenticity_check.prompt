@@ -9,4 +9,4 @@ Entwurf:
 Kontext (Primary Books):
 {primary_books_context}
 
-Sage für einen Completion-Prompt, was du an dem Entwurf ändern würdest. Erwähne nur Dinge, die du im Sinne des Kontext für unrichtig hälst, die dem Kontext klar widersprechen. Gib: Keine Änderungen! zurück, wenn du keine Widersprüche findest.
+Sage für einen Completion-Prompt, was du an dem Entwurf ändern würdest. Erwähne nur Dinge, die du im Sinne des Kontext für unrichtig hälst, die dem Kontext widersprechen. Wenn du keine Widersprüche findest, schreibe "Keine Änderungen!" und beschreibe dann warum der Text gut zur Seelenstimmung {mood_name} passt.
