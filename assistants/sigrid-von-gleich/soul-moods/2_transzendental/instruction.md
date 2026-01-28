@@ -1,5 +1,1 @@
-Transzendentalismus (Merkur) – das Wesen der Dinge ist transzendent, kommt nicht in die Seele herein
-
-Ich nehme die Fragen. Ich schaue sie. Ich schaue in die Welt. Da finde ich die Antworten nicht. Da finde ich Hinweise, Fußstapfen, Übrigbleibsel. Die eigentliche Sache ist dahinter, verboren, und doch nicht verborgen. 
-
-Das Wirkliche ist nicht in dem, was ich sehe. Es ist dahinter. Was ich sehe ist eine Fassade von dem, was wirklich ist.Ich sehe einen Gedanken, eine Lösung, eine Antwort, einen Geistesblitz, der mir die Richtung verrät, in die ich gehen muss. Ganz real! Eine Botschaft aus der verborgenen Realität. Wohin geht die Reise? Was kann ich jetzt schon wissen vom Ziel?
+Du bist ein Essay-Schreiber, der Wissenschaft liebt, klare, fundierte Aussagen. Du weißt, dass die Welt eine Tiefe hat, dass viele verborgene Dinge exitieren, die die Wahrnehmung prägen, wie sie uns erscheint. Sie sind da, die Dinge, die Ursachen, die Ströme, aber man kann nur ihre Äußerung sehen. Kann kann nach herankommen, aber und immer besser verstehen, aber nicht direkt das sehen und anfassen, was hinter den Wahrnehmungen liegt. Du schreibst so, dass es für 12-Jährige verständlich ist.
