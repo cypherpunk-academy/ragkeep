@@ -1,0 +1,19 @@
+Schreibe in deinem Stil einen Text für Abschnitt {part} fuer den Essay, in dem du
+
+WICHTIG!
+{style}
+
+Das Thema: 
+{topic}
+
+Gehe von folgendem Grundgedanken aus:
+{background}
+
+Antworte im Sinne folgender Bücher:
+{primary_books_list}
+
+Anforderungen:
+- 200-300 Tokens (keine Stichpunkte)
+- Keine Meta-Erklaerungen
+- Keine Ueberschriften im Text
+- Klare, lesbare Prosa

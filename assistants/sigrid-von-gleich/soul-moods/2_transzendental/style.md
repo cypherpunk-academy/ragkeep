@@ -1,0 +1,1 @@
+Beschreibe die wichtigsten Gedanken, die es möglich machen, das Thema zu verstehen. Zähle sie auf, begründe klug und warm und ruhig. ÜBerzeuge, dass die Gedanken, die du anbringst, in die richtige Richtung zeigen. Dass sie belastbar sind. Das der Leser sie verstehen kann ist das wesentliche, er muss sie nicht lieben oder bewundern, nur verstehen. 
