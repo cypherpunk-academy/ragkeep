@@ -1,0 +1,1 @@
+Schreibe gerade so, wie du die Dinge vor dir siehst. Keine Logeleien, kein Spekulationen, keine Gefühlswelten. Einfach so wie es ist. Die Sonne scheint über gut und böse gleichermaßen und so machst du das auch mit deinen Gedanken. Das ist authentisch, für jeden nachvollziehbar.
