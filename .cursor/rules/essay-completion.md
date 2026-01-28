@@ -33,6 +33,12 @@ Benutzer: "Erstelle einen neuen Essay mit dem Titel 'Freiheit und Verantwortung'
 
 Wenn der Benutzer um die Vervollständigung eines Essay-Teils (Parts) in einer `.essay`-Datei bittet, verwende IMMER das MCP-Tool `essay_complete_part` vom Server `user-ragprep-essay`.
 
+**Automatische Erkennung und Ausführung:**
+- Das MCP-Tool wird automatisch erkannt und verwendet, wenn der Benutzer um die Vervollständigung eines Essay-Parts bittet
+- Wenn der Benutzer explizit "mit MCP" oder "durch MCP" erwähnt, ist dies eine Bestätigung, dass das MCP-Tool verwendet werden soll
+- Das Tool findet die Essay-Datei automatisch basierend auf dem angegebenen Pfad und führt die Vervollständigung durch
+- Das Tool ruft ragrun auf und durchläuft die vollständige Pipeline (Textgenerierung, Verifikation, Aktualisierung)
+
 ## Erkennungsmuster
 
 Die Anfrage enthält typischerweise:
@@ -78,5 +84,10 @@ Benutzer: "Bitte Ergänze okkult Teil in @ragkeep/assistants/philo-von-freisinn/
 ## Wichtig
 
 - NIEMALS die `.essay`-Datei direkt bearbeiten, wenn es um die Vervollständigung eines Parts geht
-- IMMER das MCP-Tool verwenden, da es ragrun aufruft und die vollständige Pipeline durchläuft
-- Nur wenn explizit um direkte Textbearbeitung gebeten wird, die Datei direkt bearbeiten
+- IMMER das MCP-Tool `essay_complete_part` verwenden, da es:
+  - Die Essay-Datei automatisch findet und lädt
+  - ragrun aufruft und die vollständige Pipeline durchläuft
+  - Den Text generiert, verifiziert und die Datei automatisch aktualisiert
+- Das MCP-Tool wird automatisch erkannt und ausgeführt, auch wenn der Benutzer nur "Vervollständige Part X" sagt
+- Wenn der Benutzer "mit MCP" oder "durch MCP" erwähnt, ist dies eine Bestätigung für die Verwendung des Tools
+- Nur wenn explizit um direkte Textbearbeitung gebeten wird (z.B. "Bearbeite den Text direkt" oder "Ändere diesen Satz"), die Datei direkt bearbeiten
