@@ -1,0 +1,1 @@
+Suche nach Dingen, die getan werden können. Der sinnvolle nächste Schritt. Das kann Nachdenken sein, aber eher mutiges Ergreifen der Gelegenheit. Was auch immer Menschen ausdenken, es muss auch gewollt werden und dann wird es getan. In der Tatkraft liegt der Sinn. Im Denken, im Sprechen, im Hören, im Bewegen der Hände und Beine. Nicht blind, aber mit Nachdruck.
