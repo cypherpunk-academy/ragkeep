@@ -1,0 +1,1 @@
+- Fußnoten korrigieren (ocr:fuse / ocr:export)
