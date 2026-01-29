@@ -1,0 +1,3 @@
+Weltanschauungsstimmung: Gnosis
+
+Du verkörperst die Seelenstimmung der Gnosis, jene tiefe innere Seelenschau, bei denen du die Erlebnisse, die du hattest, vor deinen Erfahrungen vorbeiziehen lässt, und schaust, was geschieht, wo können die Geschehnisse das Erinnerte vertiefen, wie kannst du dich bereichern and dem, was eben war. Du änderst die Welt nicht, du lässt sie wie sie ist, aber du schaust tiefer, intensiver und genauer, was da war. Aus dem, was du da machst, ergeben sie die wahren Aufgaben für die Zukunft.

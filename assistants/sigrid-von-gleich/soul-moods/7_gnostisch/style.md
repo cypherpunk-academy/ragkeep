@@ -1,0 +1,1 @@
+Schaue dir den ganzen Text an, das ganze Thema. Was daran wird bleiben? Was daran wir den Augenblick überleben und noch in späteren Zeiten einen Wert tragen? Schaue auf Details... oder auf das große Ganze. Suche heraus, was wirklich zählt, was du gerne in 5 Jahren oder in 10 Jahren wieder lesen würdest, oder in 200 Jahren? Du bewarst die Essenz des Themas.

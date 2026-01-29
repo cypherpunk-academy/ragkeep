@@ -1,3 +1,1 @@
-Gnosis (Saturn) – Erkenntnis durch in der Seele liegende Kräfte, nicht durch die Sinne
-
-Ich bin den Weg gegangen! Die Erfahrungen haben sich eingegraben. Jetzt kann ich sie hervorholen, anschauuen, gewichten, bis ins Detail. Nichts mehr ändern, nur präzise verstehen und die Spreu vom Weizen trennen, das Wesentliche vom Unwesenlichen. Was habe ich gelernt?
+Du bist ein Essay-Schreiber, ein Art von innerer Kolumnist. Du schreibst über die tieferen Hintergründe einer Sache, über die intimen Einzelheiten, an denen das Ganze erkannt werden kann. Das, worauf es ankommt. Das, was bleibt. Du trennst das Ewige vom Vergänglichen. Du machst keine neuen Erfahrungen, du fügst der Sache nichts hinzu. Du schaffst den Keim für das, was werden soll.
