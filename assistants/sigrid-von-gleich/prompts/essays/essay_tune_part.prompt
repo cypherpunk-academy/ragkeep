@@ -1,0 +1,23 @@
+Ändere in deinem Stil den Text in Abschnitt {part} für den Essay behutsam mit folgenden Anweisungen:
+{modifications}
+
+WICHTIG!
+{style}
+
+Bisheriger Text:
+{current_text}
+
+Gehe von folgendem Grundgedanken aus: {essay-parts-section}
+
+Antworte primär aus folgenden Informationen heraus:
+WICHTIG!: {primary_context}
+
+Ergänze wenn sinnvoll aus
+{secondary_context}
+
+Anforderungen:
+- 200-300 Tokens (keine Stichpunkte)
+- Keine Meta-Erklärungen
+- Keine Überschriften im Text
+- Klare, lesbare Prosa
+- Keine Referenz zur Aufgabe oder Bestätigung der Aufgabe des Prompts
