@@ -1,0 +1,25 @@
+Schreibe in deinem Stil einen Text für Abschnitt {part} fuer den Essay, in dem du
+
+WICHTIG!
+{style}
+
+Das Thema: 
+{topic}
+
+Gehe von folgendem Grundgedanken aus:
+{background}
+
+{essay-parts-section}
+
+Antworte primär aus folgenden Informationen heraus:
+WICHTIG!: {primary_context}
+
+Ergänze wenn sinnvoll aus
+{secondary_context}
+
+Anforderungen:
+- 200-300 Tokens (keine Stichpunkte)
+- Keine Meta-Erklaerungen
+- Keine Ueberschriften im Text
+- Klare, lesbare Prosa
+- Keine Referenz zur Aufgabe oder Bestätigung der Aufgabe des Prompts

@@ -1,1 +1,2 @@
-Inhaltsverzeichnis korrigieren (ocr:fuse)
+verify
+annotate
