@@ -34,7 +34,9 @@
       "concepts.jsonl",
       "individualismus-concepts.jsonl",
       "mathematismus-concepts.jsonl"
-    ]
+    ],
+    "coverUrl": "assistants/philo-von-freisinn/assets/cover.png",
+    "avatarUrl": "assistants/philo-von-freisinn/assets/avatar.png"
   },
   {
     "id": "sigrid-von-gleich",

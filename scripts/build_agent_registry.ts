@@ -8,6 +8,8 @@ type ManifestData = {
   name?: string;
   ["rag-collection"]?: string;
   description?: string;
+  ["cover-image"]?: string;
+  ["avatar-image"]?: string;
   ["writing-style"]?: string;
   ["primary-books"]?: unknown;
   ["secondary-books"]?: unknown;
@@ -25,6 +27,8 @@ type AgentRecord = {
   secondaryBooks: string[];
   concepts: string[];
   essays: string[];
+  coverUrl?: string;
+  avatarUrl?: string;
 };
 
 type BookResolution = {
@@ -108,6 +112,39 @@ function copySelectedFiles(params: {
   return copied;
 }
 
+function safeManifestRelativePath(inputPath: string): string | null {
+  const normalized = inputPath.replace(/\\/g, "/").trim();
+  if (!normalized) return null;
+  if (normalized.startsWith("/") || normalized.includes("..")) return null;
+  return normalized;
+}
+
+function copyManifestAsset(params: {
+  assistantId: string;
+  assistantDir: string;
+  manifestPathValue?: string;
+}): string | undefined {
+  const { assistantId, assistantDir, manifestPathValue } = params;
+  if (!manifestPathValue) return undefined;
+
+  const relative = safeManifestRelativePath(manifestPathValue);
+  if (!relative) return undefined;
+
+  const absSource = path.join(assistantDir, relative);
+  if (!fs.existsSync(absSource) || !fs.statSync(absSource).isFile()) {
+    return undefined;
+  }
+
+  const absDest = path.join(OUTPUT_ASSISTANTS_DIR, assistantId, relative);
+  fs.mkdirSync(path.dirname(absDest), { recursive: true });
+  fs.cpSync(absSource, absDest, { recursive: false });
+
+  return `assistants/${encodeURIComponent(assistantId)}/${relative
+    .split("/")
+    .map((part) => encodeURIComponent(part))
+    .join("/")}`;
+}
+
 function collectAgentsAndBooks(): {
   agents: AgentRecord[];
   booksToCopy: Map<string, BookResolution>;
@@ -167,6 +204,18 @@ function collectAgentsAndBooks(): {
       selectedNames: conceptsRequested,
     });
 
+    const coverUrl = copyManifestAsset({
+      assistantId,
+      assistantDir,
+      manifestPathValue: manifest["cover-image"],
+    });
+
+    const avatarUrl = copyManifestAsset({
+      assistantId,
+      assistantDir,
+      manifestPathValue: manifest["avatar-image"],
+    });
+
     agents.push({
       id: assistantId,
       name: manifest.name?.trim() || assistantId,
@@ -177,6 +226,8 @@ function collectAgentsAndBooks(): {
       secondaryBooks,
       essays: copiedEssays,
       concepts: copiedConcepts,
+      coverUrl,
+      avatarUrl,
     });
   }
 

@@ -13,6 +13,7 @@ export interface Agent {
   taxonomies?: string[];
   conversations?: Conversation[];
   avatarUrl?: string;
+  coverUrl?: string;
 }
 
 export interface Conversation {

@@ -41,7 +41,7 @@ export const AgentDetailPage = ({ agents }: { agents: Agent[] }) => {
         <div className="w-32 h-32 flex-shrink-0 rounded-full overflow-hidden border-4 border-indigo-50 shadow-md">
           {agent.avatarUrl ? (
             <ImageWithFallback 
-              src={agent.avatarUrl} 
+              src={`${import.meta.env.BASE_URL}${agent.avatarUrl}`}
               alt={agent.name} 
               className="w-full h-full object-cover" 
             />

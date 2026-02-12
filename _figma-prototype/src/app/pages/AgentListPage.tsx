@@ -22,9 +22,15 @@ export const AgentListPage = ({ agents }: { agents: Agent[] }) => {
             className="group relative flex flex-col bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl hover:border-indigo-300 transition-all duration-300 transform hover:-translate-y-1"
           >
             <div className="h-48 w-full overflow-hidden bg-gray-100 relative">
-              {agent.avatarUrl ? (
+              {agent.coverUrl ? (
+                <img
+                  src={`${import.meta.env.BASE_URL}${agent.coverUrl}`}
+                  alt={`${agent.name} Cover`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              ) : agent.avatarUrl ? (
                 <img 
-                  src={agent.avatarUrl} 
+                  src={`${import.meta.env.BASE_URL}${agent.avatarUrl}`}
                   alt={agent.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
