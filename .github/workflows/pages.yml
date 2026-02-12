@@ -35,13 +35,19 @@ jobs:
         with:
           node-version: 20
 
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Install app dependencies
+        run: npm --prefix ./_figma-prototype ci
+
       - name: Build site
         run: npm run build:pages --silent
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: _figma-prototype/dist
 
   deploy:
     needs: build

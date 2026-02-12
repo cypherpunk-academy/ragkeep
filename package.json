@@ -16,6 +16,17 @@
   "main": "index.js",
   "scripts": {
     "push": "bash ./scripts/publish_to_hf.sh",
-    "build:pages": "node ./administration/scripts/build_pages_site.js"
+    "build:pages": "npm run build:registry && npm run build:app",
+    "build:registry": "node --import tsx ./scripts/build_agent_registry.ts",
+    "build:app": "npm --prefix ./_figma-prototype run build"
+  },
+  "devDependencies": {
+    "tsx": "latest",
+    "typescript": "latest",
+    "@types/node": "latest",
+    "@types/js-yaml": "latest"
+  },
+  "dependencies": {
+    "js-yaml": "latest"
   }
 }
