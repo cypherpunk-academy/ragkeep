@@ -39,7 +39,7 @@ jobs:
         run: npm ci
 
       - name: Install app dependencies
-        run: npm --prefix ./_figma-prototype ci
+        run: npm --prefix ./website/figma-prototype ci
 
       - name: Build site
         run: npm run build:pages --silent
@@ -47,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _figma-prototype/dist
+          path: website/figma-prototype/dist
 
   deploy:
     needs: build
