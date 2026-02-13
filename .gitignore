@@ -26,6 +26,12 @@ books/**/results/**
 *.ai
 *.eps
 *.raw
+# Assistant avatars/covers für GitHub Pages – müssen im Repo liegen
+!assistants/*/assets/*.png
+!assistants/*/assets/*.jpg
+!assistants/*/assets/*.jpeg
+!assistants/*/assets/*.gif
+!assistants/*/assets/*.webp
 
 # PDFs
 *.pdf
