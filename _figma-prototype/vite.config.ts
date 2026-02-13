@@ -4,7 +4,8 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: "/ragkeep/",
+  // Nur in Produktion /ragkeep/ – in Dev root, damit public-Assets (Bilder) korrekt laden
+  base: process.env.NODE_ENV === "production" ? "/ragkeep/" : "/",
   plugins: [
     // The React and Tailwind plugins are both required for Make, even if
     // Tailwind is not being actively used – do not remove them

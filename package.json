@@ -18,7 +18,8 @@
     "push": "bash ./scripts/publish_to_hf.sh",
     "build:pages": "npm run build:registry && npm run build:app",
     "build:registry": "node --import tsx ./scripts/build_agent_registry.ts",
-    "build:app": "npm --prefix ./_figma-prototype run build"
+    "build:app": "npm --prefix ./_figma-prototype run build",
+    "dev": "npm run build:registry && npm --prefix ./_figma-prototype run dev"
   },
   "devDependencies": {
     "tsx": "latest",
