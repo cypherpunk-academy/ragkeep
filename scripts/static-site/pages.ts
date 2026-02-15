@@ -1,6 +1,15 @@
 import path from "node:path";
 import type { Agent, Book, Conversation } from "./types";
-import { escapeHtml, parseBookString, writeTextFile } from "./utils";
+import type { ConceptEntry } from "./concepts";
+import { getConceptFileLabel } from "./concepts";
+import type { EssayData } from "./essays";
+import {
+  escapeHtml,
+  parseBookString,
+  renderInlineWithEmphasis,
+  renderSummaryHtml,
+  writeTextFile,
+} from "./utils";
 
 type AgentSection =
   | "overview"
@@ -27,7 +36,7 @@ const SECTION_META: Record<
   concepts: {
     label: "Begriffe",
     fileName: "concepts.html",
-    heading: "Begriffskonzepte (JSONL)",
+    heading: "Die häufigsten Begriffe der Bücher",
   },
   quotes: { label: "Zitate", fileName: "quotes.html", heading: "Zitate" },
   taxonomies: {
@@ -146,11 +155,116 @@ function renderFileRows(
     .join("")}</div>`;
 }
 
+function renderEssayRows(
+  essayFiles: string[],
+  essaysData: Map<string, EssayData>
+): string {
+  if (essayFiles.length === 0) return `<p class="empty-state">Keine Essays verfügbar.</p>`;
+
+  const items = essayFiles
+    .filter((f) => f.endsWith(".essay"))
+    .map((file) => {
+      const slug = file.replace(/\.essay$/, "");
+      const essay = essaysData.get(slug);
+      const title = escapeHtml(essay?.topic ?? slug);
+      const essayUrl = `essays/${encodeURIComponent(slug)}.html`;
+      const summary = essay?.summary;
+
+      if (summary) {
+        const summaryHtml = renderSummaryHtml(summary);
+        return `<div class="essay-card book-link">
+  <a href="${essayUrl}" style="text-decoration: none; color: inherit;"><strong>${title}</strong></a>
+  <details class="toc-details essay-summary-details">
+    <summary class="toc-summary-line"><span class="toc-title-text">Zusammenfassung</span></summary>
+    <div class="toc-panel">
+      <div class="toc-excerpt">${summaryHtml}</div>
+    </div>
+  </details>
+</div>`;
+      }
+
+      return `<a class="book-link" href="${essayUrl}">
+  <strong>${title}</strong>
+</a>`;
+    });
+
+  return `<div class="book-list">${items.join("")}</div>`;
+}
+
 function renderQuotes(quotes: string[]): string {
   if (quotes.length === 0) return `<p class="empty-state">Keine Zitate verfügbar.</p>`;
   return `<div class="stack-16">${quotes
     .map((quote) => `<blockquote class="quote-card">"${escapeHtml(quote)}"</blockquote>`)
     .join("")}</div>`;
+}
+
+function renderConceptsRows(
+  agent: Agent,
+  conceptsByFile: Map<string, ConceptEntry[]>
+): string {
+  const files = Array.from(conceptsByFile.keys());
+  if (files.length === 0) return `<p class="empty-state">Keine Begriffe verfügbar.</p>`;
+
+  const dropdownOptions = files
+    .map(
+      (f) =>
+        `<option value="${escapeHtml(f)}">${escapeHtml(
+          getConceptFileLabel(f, agent.name)
+        )}</option>`
+    )
+    .join("");
+
+  const accordionPanels = files.map((fileName) => {
+    const entries = conceptsByFile.get(fileName) ?? [];
+    const items = entries
+      .map((entry) => {
+        const title = entry.segmentTitle
+          ? entry.segmentTitle.charAt(0).toUpperCase() + entry.segmentTitle.slice(1)
+          : "(Ohne Titel)";
+        const titleHtml = renderInlineWithEmphasis(title);
+        const textHtml = renderSummaryHtml(entry.text);
+        return `<details class="toc-details concept-accordion-item">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">${titleHtml}</span>
+    </summary>
+    <div class="toc-panel">
+      <div class="toc-excerpt">${textHtml}</div>
+    </div>
+  </details>`;
+      })
+      .join("");
+    const displayStyle = files.indexOf(fileName) === 0 ? "" : "display:none";
+    const styleAttr = displayStyle ? ` style="${displayStyle}"` : "";
+    return `<div class="concepts-panel" data-concepts-file="${escapeHtml(fileName)}"${styleAttr}>${items}</div>`;
+  });
+
+  const script = `
+<script>
+(function(){
+  var sel = document.getElementById("conceptsDropdown");
+  var panels = document.querySelectorAll(".concepts-panel");
+  if (!sel || !panels.length) return;
+  sel.addEventListener("change", function(){
+    var v = sel.value;
+    panels.forEach(function(p){
+      p.style.display = (p.getAttribute("data-concepts-file") === v) ? "" : "none";
+    });
+  });
+})();
+</script>`;
+
+  return `<div class="concepts-section stack-8">
+  <label for="conceptsDropdown" class="concepts-dropdown-label">Quelle:</label>
+  <select id="conceptsDropdown" class="concepts-dropdown" aria-label="Begriffsquelle wählen">
+    ${dropdownOptions}
+  </select>
+  <div class="concepts-accordions stack-16">
+    ${accordionPanels.join("")}
+  </div>
+  ${script}
+</div>`;
 }
 
 function renderTaxonomies(taxonomies: string[]): string {
@@ -176,7 +290,9 @@ function renderConversations(conversations: Conversation[]): string {
 function renderSectionContent(
   section: AgentSection,
   agent: Agent,
-  availableBooks: Map<string, Book>
+  availableBooks: Map<string, Book>,
+  essaysByAgent: Map<string, Map<string, EssayData>>,
+  conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>
 ): string {
   if (section === "overview") {
     return `<div class="stack-24">
@@ -203,17 +319,17 @@ function renderSectionContent(
     )}</div>`;
   }
   if (section === "essays") {
-    return `<div class="stack-8"><h3>${SECTION_META.essays.heading}</h3>${renderFileRows(
+    const essaysData = essaysByAgent.get(agent.id) ?? new Map();
+    return `<div class="stack-8"><h3>${SECTION_META.essays.heading}</h3>${renderEssayRows(
       agent.essays,
-      `../../assistants/${encodeURIComponent(agent.id)}/essays`,
-      "Keine Essays verfügbar."
+      essaysData
     )}</div>`;
   }
   if (section === "concepts") {
-    return `<div class="stack-8"><h3>${SECTION_META.concepts.heading}</h3>${renderFileRows(
-      agent.concepts,
-      `../../assistants/${encodeURIComponent(agent.id)}/concepts`,
-      "Keine Begriffe verfügbar."
+    const conceptsData = conceptsByAgent.get(agent.id) ?? new Map();
+    return `<div class="stack-8"><h3>${SECTION_META.concepts.heading}</h3>${renderConceptsRows(
+      agent,
+      conceptsData
     )}</div>`;
   }
   if (section === "quotes") {
@@ -244,6 +360,8 @@ function renderAgentPage(
   outputDir: string,
   agent: Agent,
   availableBooks: Map<string, Book>,
+  essaysByAgent: Map<string, Map<string, EssayData>>,
+  conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>,
   section: AgentSection
 ): void {
   const sectionMeta = SECTION_META[section];
@@ -269,7 +387,7 @@ function renderAgentPage(
       </header>
       ${renderTabRow(section)}
       <main class="site-card content-card">
-        ${renderSectionContent(section, agent, availableBooks)}
+        ${renderSectionContent(section, agent, availableBooks, essaysByAgent, conceptsByAgent)}
       </main>
     </div>`
   );
@@ -279,12 +397,21 @@ function renderAgentPage(
 export function generateAgentPages(
   outputDir: string,
   agents: Agent[],
-  availableBooks: Map<string, Book>
+  availableBooks: Map<string, Book>,
+  essaysByAgent: Map<string, Map<string, EssayData>>,
+  conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>
 ): void {
   const sections = Object.keys(SECTION_META) as AgentSection[];
   for (const agent of agents) {
     for (const section of sections) {
-      renderAgentPage(outputDir, agent, availableBooks, section);
+      renderAgentPage(
+        outputDir,
+        agent,
+        availableBooks,
+        essaysByAgent,
+        conceptsByAgent,
+        section
+      );
     }
   }
 }
