@@ -8,6 +8,11 @@ import {
   collectReferencedBookIds,
   copyBookHtmlToSite,
 } from "./static-site/books";
+import {
+  collectConcepts,
+  type ConceptEntry,
+} from "./static-site/concepts";
+import { collectEssays, generateEssayPages, type EssayData } from "./static-site/essays";
 import { writeSiteAssets } from "./static-site/assets";
 import { generateAgentPages, generateHomePage } from "./static-site/pages";
 import fs from "node:fs";
@@ -54,8 +59,24 @@ function main(): void {
   }
 
   copyAssistantFiles(REPO_ROOT, OUTPUT_DIR, assistants);
+
+  const essaysByAgent = new Map<string, Map<string, EssayData>>();
+  for (const agent of assistants) {
+    if (agent.essays.length > 0) {
+      essaysByAgent.set(agent.id, collectEssays(REPO_ROOT, agent));
+    }
+  }
+
+  const conceptsByAgent = new Map<string, Map<string, ConceptEntry[]>>();
+  for (const agent of assistants) {
+    if (agent.concepts.length > 0) {
+      conceptsByAgent.set(agent.id, collectConcepts(REPO_ROOT, agent));
+    }
+  }
+
   generateHomePage(OUTPUT_DIR, assistants);
-  generateAgentPages(OUTPUT_DIR, assistants, booksById);
+  generateAgentPages(OUTPUT_DIR, assistants, booksById, essaysByAgent, conceptsByAgent);
+  generateEssayPages(OUTPUT_DIR, assistants, essaysByAgent);
 
   // eslint-disable-next-line no-console
   console.log(

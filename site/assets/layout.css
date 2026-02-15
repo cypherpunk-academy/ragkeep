@@ -151,6 +151,81 @@
   gap: 12px;
 }
 
+.essay-card {
+  display: block;
+}
+
+.essay-summary-details .toc-summary-line {
+  padding-left: 0;
+}
+
+.essay-summary-details .toc-arrow {
+  display: none;
+}
+
+.concepts-dropdown-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-header);
+  font-weight: 400;
+}
+
+.concepts-dropdown {
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  background: var(--surface);
+}
+
+.concept-accordion-item {
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.concepts-accordions .toc-details {
+  padding: 0;
+}
+
+.concepts-accordions .toc-summary-line {
+  padding: 12px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.concepts-accordions .toc-summary-line::-webkit-details-marker {
+  display: none;
+}
+
+.concepts-accordions .toc-panel {
+  padding: 0 12px 12px;
+  margin-left: 0;
+}
+
+.concepts-accordions .toc-excerpt {
+  font-family: var(--font-summary);
+  font-weight: 300;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+.concepts-accordions .toc-arrow {
+  display: inline-block;
+  width: 1.2ch;
+  margin-right: 0.5rem;
+}
+
+.concepts-accordions details:not([open]) .toc-arrow-open {
+  display: none !important;
+}
+
+.concepts-accordions details[open] .toc-arrow-closed {
+  display: none !important;
+}
+
 .book-link {
   display: grid;
   grid-template-columns: 1fr;

@@ -7,6 +7,8 @@ import {
   findHtmlDirForBook,
   parseAuthorAndTitle,
   readScalarFromManifest,
+  renderInlineWithEmphasis,
+  renderSummaryHtml,
 } from "./utils";
 
 export function collectBooks(repoRoot: string): Book[] {
@@ -105,29 +107,6 @@ function decodeHtmlEntities(value: string): string {
 
 function stripTags(value: string): string {
   return String(value || "").replace(/<[^>]*>/g, "");
-}
-
-function renderInlineWithEmphasis(value: string): string {
-  let text = String(value || "");
-  text = text.replace(/<\s*\/\s*em\s*>/gi, "__EM_CLOSE__");
-  text = text.replace(/<\s*em\s*>/gi, "__EM_OPEN__");
-  text = text.replace(/<\s*\/\s*i\s*>/gi, "__EM_CLOSE__");
-  text = text.replace(/<\s*i\s*>/gi, "__EM_OPEN__");
-  text = text.replace(/<[^>]*>/g, "");
-  text = escapeHtml(text);
-  return text.replace(/__EM_OPEN__/g, "<em>").replace(/__EM_CLOSE__/g, "</em>");
-}
-
-function renderSummaryHtml(text: string): string {
-  const cleaned = String(text || "").replace(/\*\*/g, "");
-  const paras = cleaned
-    .split(/\n\s*\n/g)
-    .map((item) => item.trim())
-    .filter(Boolean);
-  const safe = paras
-    .map((item) => `<p>${renderInlineWithEmphasis(item).replace(/\n/g, "<br/>")}</p>`)
-    .join("");
-  return safe || `<p>${renderInlineWithEmphasis(cleaned)}</p>`;
 }
 
 function pickBestSummaryText(summariesByTitle: Map<string, string>, tocTitle: string): string | null {
