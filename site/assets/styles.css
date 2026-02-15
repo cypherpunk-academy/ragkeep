@@ -1,0 +1,121 @@
+:root {
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-header: "Lato", sans-serif;
+  --font-summary: "Lato", sans-serif;
+  --font-sans: "Lato", ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  --bg: #f8f9fb;
+  --surface: #ffffff;
+  --surface-soft: #f3f4f6;
+  --fg: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #4f46e5;
+  --accent-soft: #eef2ff;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+}
+
+.site-shell {
+  min-height: 100vh;
+}
+
+.site-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.hero-title {
+  font-family: var(--font-header);
+  font-weight: 400;
+  font-size: clamp(2.15rem, 4.2vw, 3.35rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.hero-lede {
+  color: var(--muted);
+  margin: 0;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  border: 1px solid transparent;
+  font-size: 0.82rem;
+}
+
+.pill-accent {
+  background: var(--accent-soft);
+  border-color: #c7d2fe;
+  color: #3730a3;
+}
+
+.pill-muted {
+  background: var(--surface-soft);
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+.tab-link {
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid transparent;
+  color: #4b5563;
+  font-size: 0.94rem;
+}
+
+.tab-link:hover {
+  background: #eef2ff;
+  color: #1f2937;
+}
+
+.tab-link-active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.book-link,
+.file-link {
+  text-decoration: none;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.book-link:hover,
+.file-link:hover {
+  border-color: #c7d2fe;
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.1);
+}
+
+.empty-state {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.meta-quiet {
+  color: var(--muted);
+}

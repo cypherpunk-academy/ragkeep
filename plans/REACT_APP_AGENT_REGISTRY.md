@@ -6,7 +6,7 @@ Dieses Dokument beschreibt die Architektur und den Workflow für die ragkeep-Web
 
 ## 1. Übersicht
 
-- **Hauptseite**: React-App (Figma-Prototyp) unter `website/figma-prototype/`
+- **Hauptseite**: React-App (Figma-Prototyp) unter `_figma-prototype/`
 - **Entfernt**: `site/` und `administration/scripts/build_pages_site.js`
 - **Datenquelle**: `assistants/`, `books/`, Essays, Concepts – zur Build-Zeit in die App integriert
 - **Design-Workflow**: Figma → `design-tokens.json` / `theme.css` oder Prompt-basierte Änderungen
@@ -17,7 +17,7 @@ Dieses Dokument beschreibt die Architektur und den Workflow für die ragkeep-Web
 
 ```
 ragkeep/
-├── website/figma-prototype/           # React-App (Hauptseite, TypeScript)
+├── _figma-prototype/           # React-App (Hauptseite, TypeScript)
 │   ├── src/
 │   │   ├── app/
 │   │   │   ├── components/
@@ -39,13 +39,13 @@ ragkeep/
 ├── scripts/
 │   └── build_agent_registry.ts   # Neuer Build: Daten + Buch-HTML (TypeScript)
 └── .github/workflows/
-    └── pages.yml                 # deployt website/figma-prototype/dist
+    └── pages.yml                 # deployt _figma-prototype/dist
 ```
 
 ### 2.1 TypeScript
 
-- **React-App** (`website/figma-prototype/`): Vollständig in TypeScript (`.ts`, `.tsx`)
-- **Build-Script** (`website/scripts/build_agent_registry.ts`): TypeScript, Ausführung z.B. via `tsx` oder `ts-node`
+- **React-App** (`_figma-prototype/`): Vollständig in TypeScript (`.ts`, `.tsx`)
+- **Build-Script** (`scripts/build_agent_registry.ts`): TypeScript, Ausführung z.B. via `tsx` oder `ts-node`
 - **tsconfig.json**: Strict-Mode, `@/*`-Pfad-Alias
 - **Scripts**: `typecheck` (nur Prüfung), `build` (tsc --noEmit && vite build)
 
@@ -53,19 +53,19 @@ ragkeep/
 
 ## 3. Build-Pipeline
 
-### 3.1 Einziger Build-Script: `website/scripts/build_agent_registry.ts`
+### 3.1 Einziger Build-Script: `scripts/build_agent_registry.ts`
 
 TypeScript-Script. Ersetzt `build_pages_site.js` und übernimmt:
 
 1. **Assistenten-Daten** aus `assistants/*/assistant-manifest.yaml`
-   - Erzeugt `website/figma-prototype/public/data/assistants.json`
+   - Erzeugt `_figma-prototype/public/data/assistants.json`
    - Inhalt: name, ragCollection, description, writingStyle, primaryBooks, secondaryBooks, concepts, essays
    - Optional: Avatar-URL, Zitate, Taxonomien (falls vorhanden)
 
 2. **Buch-HTML kopieren**
    - **Nur aus `books/`** (nicht aus `ragkeep-deutsche-klassik-books-de/books/`)
    - Nur Bücher, die im `assistant-manifest` (primary-books, secondary-books) mindestens eines Assistenten vorkommen
-   - Nach `website/figma-prototype/public/books/<bookDir>/`
+   - Nach `_figma-prototype/public/books/<bookDir>/`
    - Gleiche Logik wie bisher (html/, results/html/, TOC-Summaries etc.)
 
 3. **Assistenten-Daten strikt aus Manifest**
@@ -75,14 +75,14 @@ TypeScript-Script. Ersetzt `build_pages_site.js` und übernimmt:
 
 ### 3.2 Vite Build
 
-- `npm run build` in `website/figma-prototype/` → `dist/`
+- `npm run build` in `_figma-prototype/` → `dist/`
 - `base: '/ragkeep/'` in `vite.config.ts` für GitHub Pages
 - React Router: `BrowserRouter` mit `base` oder `HashRouter` für SPA-Routing
 
 ### 3.3 GitHub Pages Workflow
 
-- Workflow baut `website/figma-prototype` statt `site/`
-- Artifact: `website/figma-prototype/dist`
+- Workflow baut `_figma-prototype` statt `site/`
+- Artifact: `_figma-prototype/dist`
 - Kein `site/`, kein `build_pages_site.js`
 
 ---
@@ -136,7 +136,7 @@ assistants/*/concepts/*.jsonl
 books/*/html/  bzw.  books/*/results/html/
         │
         ▼
-website/scripts/build_agent_registry.ts
+scripts/build_agent_registry.ts
         │
         ├──► public/data/assistants.json
         └──► public/books/<bookDir>/
@@ -153,8 +153,8 @@ dist/  →  GitHub Pages
 ## 6. Umstellungsschritte
 
 1. **Build-Script anlegen**
-   - `website/scripts/build_agent_registry.ts` erstellen (TypeScript)
-   - Ausführung: `tsx website/scripts/build_agent_registry.ts` oder `npx ts-node --esm`
+   - `scripts/build_agent_registry.ts` erstellen (TypeScript)
+   - Ausführung: `tsx scripts/build_agent_registry.ts` oder `npx ts-node --esm`
    - Logik aus `build_pages_site.js` für Bücher übernehmen
    - Assistenten-Daten aus `assistant-manifest.yaml` auslesen
    - `public/data/assistants.json` schreiben
@@ -168,12 +168,12 @@ dist/  →  GitHub Pages
    - SPA-Routing: `404.html`-Redirect oder `HashRouter`
 
 3. **package.json**
-   - `build:pages` → Aufruf von `build_agent_registry.ts` + `cd website/figma-prototype && npm run build`
-   - Abhängigkeit: `tsx` (Dev) für `tsx website/scripts/build_agent_registry.ts`
+   - `build:pages` → Aufruf von `build_agent_registry.ts` + `cd _figma-prototype && npm run build`
+   - Abhängigkeit: `tsx` (Dev) für `tsx scripts/build_agent_registry.ts`
    - Oder separates `build:registry`-Script
 
 4. **GitHub Pages Workflow**
-   - Artifact-Pfad: `website/figma-prototype/dist` statt `site`
+   - Artifact-Pfad: `_figma-prototype/dist` statt `site`
 
 5. **Aufräumen**
    - `site/` entfernen
@@ -215,7 +215,7 @@ Ein kleines Script kann `design-tokens.json` in CSS-Variablen für `theme.css` u
 - [ ] `base: '/ragkeep/'` in `vite.config.ts` für GitHub Pages gesetzt
 - [ ] SPA-Routing funktioniert (HashRouter oder 404.html-Redirect)
 - [ ] `site/` und `build_pages_site.js` entfernt
-- [ ] Workflow deployt aus `website/figma-prototype/dist`
+- [ ] Workflow deployt aus `_figma-prototype/dist`
 
 ---
 
@@ -232,12 +232,12 @@ Ein kleines Script kann `design-tokens.json` in CSS-Variablen für `theme.css` u
 | Voraussetzung | Status |
 |---------------|--------|
 | React-App mit TypeScript | ✅ Erledigt |
-| `tsconfig.json` in `website/figma-prototype/` | ✅ Erledigt |
+| `tsconfig.json` in `_figma-prototype/` | ✅ Erledigt |
 | `base: '/ragkeep/'` in `vite.config.ts` | ❌ Nicht gesetzt |
 | `build_agent_registry.ts` | ❌ Nicht implementiert |
 | `assistants.json` zur Laufzeit | ❌ App nutzt noch `mockAgents` |
 | `build:pages` → neuer Build | ❌ Aktuell: `build_pages_site.js` |
-| Workflow-Pfad `website/figma-prototype/dist` | ❌ Aktuell: `site/` |
+| Workflow-Pfad `_figma-prototype/dist` | ❌ Aktuell: `site/` |
 | SPA-Routing (404.html oder HashRouter) | ❌ Nicht implementiert |
 
 ### Was noch fehlt
@@ -245,6 +245,6 @@ Ein kleines Script kann `design-tokens.json` in CSS-Variablen für `theme.css` u
 1. **`vite.config.ts`**: `base: '/ragkeep/'` setzen (URL: `https://<user>.github.io/ragkeep/`).
 2. **`build_agent_registry.ts`**: Erstellen und ausführbar machen.
 3. **Root package.json**: `build:pages` auf neues Build-Script umstellen.
-4. **Workflow `.github/workflows/pages.yml`**: `path: site` → `path: website/figma-prototype/dist`.
+4. **Workflow `.github/workflows/pages.yml`**: `path: site` → `path: _figma-prototype/dist`.
 5. **SPA-Routing**: Entweder `HashRouter` oder `404.html` → `index.html` kopieren.
 6. **App**: `mockAgents` durch Laden von `/data/assistants.json` ersetzen.

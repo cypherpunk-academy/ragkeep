@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Mail Must Get Through</title>
+  <link rel="stylesheet" href="../../../assets/book.css" />
+</head>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <article class="book-chapter" data-chapter="2" id="c-2">
+    <h1 class="book-chapter-title" id="c-2-title" data-slug="the-mail-must-get-through">The Mail Must Get Through</h1>
+    <section class="book-paragraph" id="p-2-1">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-1">1|</a>
+        <span class="book-sentence" id="s-2-1-1-p0">Since 1993 I'd been run­ning the tech­ni­cal side of a small free-ac­cess In­ter­net ser­vice pro­vi­der cal­led Ches­ter Coun­ty In­ter­Link (CCIL) in West Ches­ter, Penn­syl­va­nia.</span>
+        
+        <span class="book-sentence" id="s-2-1-2-p0">I co-foun­ded CCIL and wrote our uni­que mul­ti­user bul­le­tin-board soft­ware—you can check it out by tel­net­ting to locke.ccil.org.</span>
+        
+        <span class="book-sentence" id="s-2-1-3-p0">Today it sup­ports al­most three thousand users on thir­ty lines.</span>
+        
+        <span class="book-sentence" id="s-2-1-4-p0">The job al­lo­wed me 24-hour-a-day ac­cess to the net through CCIL's 56K line—in fact, the job prac­tical­ly de­man­ded it!</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-2">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-2">2|</a>
+        <span class="book-sentence" id="s-2-2-1-p0">I had got­ten quite used to in­stant In­ter­net email.</span>
+        
+        <span class="book-sentence" id="s-2-2-2-p0">I found ha­ving to pe­ri­o­di­cal­ly tel­net over to locke to check my mail an­noy­ing.</span>
+        
+        <span class="book-sentence" id="s-2-2-3-p0">What I wan­ted was for my mail to be de­li­ve­r­ed on snark (my home sys­tem) so that I would be no­ti­fied when it ar­ri­ved and could hand­le it using all my local tools.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-3">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-3">3|</a>
+        <span class="book-sentence" id="s-2-3-1-p0">The In­ter­net's na­ti­ve mail for­war­ding pro­to­col, SMTP (Sim­ple Mail Trans­fer Pro­to­col), wouldn't suit, be­cau­se it works best when ma­chi­nes are con­nec­ted full-time, while my per­so­nal ma­chi­ne isn't al­ways on the In­ter­net, and doesn't have a sta­tic IP ad­dress.</span>
+        
+        <span class="book-sentence" id="s-2-3-2-p0">What I nee­ded was a pro­gram that would reach out over my in­ter­mit­tent di­alup con­nec­tion and pull across my mail to be de­li­ve­r­ed lo­cal­ly.</span>
+        
+        <span class="book-sentence" id="s-2-3-3-p0">I knew such things exis­ted, and that most of them used a sim­ple ap­p­li­ca­ti­on pro­to­col cal­led POP (Post Of­fice Pro­to­col).</span>
+        
+        <span class="book-sentence" id="s-2-3-4-p0">POP is now wi­de­ly sup­por­ted by most com­mon mail cli­ents, but at the time, it wasn't built in to the mail re­a­der I was using.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-4">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-4">4|</a>
+        <span class="book-sentence" id="s-2-4-1-p0">I nee­ded a POP3 cli­ent.</span>
+        
+        <span class="book-sentence" id="s-2-4-2-p0">So I went out on the In­ter­net and found one.</span>
+        
+        <span class="book-sentence" id="s-2-4-3-p0">Ac­tual­ly, I found three or four.</span>
+        
+        <span class="book-sentence" id="s-2-4-4-p0">I used one of them for a while, but it was mis­sing what see­med an ob­vious fea­ture, the abili­ty to hack the ad­dres­ses on fet­ched mail so re­plies would work pro­per­ly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-5">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-5">5|</a>
+        <span class="book-sentence" id="s-2-5-1-p0">The pro­blem was this: sup­po­se so­meo­ne named <code>joe</code> on locke sent me mail.</span>
+        
+        <span class="book-sentence" id="s-2-5-2-p0">If I fet­ched the mail to snark and then tried to reply to it, my mai­ler would cheer­ful­ly try to ship it to a non­e­xis­tent <code>joe</code> on snark.</span>
+        
+        <span class="book-sentence" id="s-2-5-3-p0">Hand-edit­ing reply ad­dres­ses to tack on &#x3C;@ccil.org> quick­ly got to be a se­rious pain.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-6">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-6">6|</a>
+        <span class="book-sentence" id="s-2-6-1-p0">This was cle­ar­ly so­me­thing the com­pu­ter ought to be doing for me.</span>
+        
+        <span class="book-sentence" id="s-2-6-2-p0">But none of the exis­ting POP cli­ents knew how!</span>
+        
+        <span class="book-sentence" id="s-2-6-3-p0">And this brings us to the first les­son:</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-2-1" data-slug="1-every-good-work-of-software-starts-by-scratching-a-developer-s-personal-itch">1. Every good work of software starts by scratching a developer's personal itch.</h2>
+    <section class="book-paragraph" id="p-2-7">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-7">7|</a>
+        <span class="book-sentence" id="s-2-7-1-p0">Per­haps this should have been ob­vious (it's long been pro­ver­bi­al that "Ne­ces­si­ty is the mo­ther of in­ven­ti­on") but too often soft­ware de­ve­l­o­pers spend their days grin­ding away for pay at pro­grams they neit­her need nor love.</span>
+        
+        <span class="book-sentence" id="s-2-7-2-p0">But not in the Linux world—which may ex­plain why the aver­age qua­li­ty of soft­ware ori­gi­na­ted in the Linux com­mu­ni­ty is so high.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-8">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-8">8|</a>
+        <span class="book-sentence" id="s-2-8-1-p0">So, did I im­me­dia­te­ly launch into a fu­rious whirl of co­ding up a brand-new POP3 cli­ent to com­pe­te with the exis­ting ones?</span>
+        
+        <span class="book-sentence" id="s-2-8-2-p0">Not on your life!</span>
+        
+        <span class="book-sentence" id="s-2-8-3-p0">I loo­ked ca­re­ful­ly at the POP uti­li­ties I had in hand, as­king mys­elf "Which one is clo­sest to what I want?" Be­cau­se:</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-2-2" data-slug="2-good-programmers-know-what-to-write-great-ones-know-what-to-rewrite-and-reuse">2. Good programmers know what to write. Great ones know what to rewrite (and reuse).</h2>
+    <section class="book-paragraph" id="p-2-9">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-9">9|</a>
+        <span class="book-sentence" id="s-2-9-1-p0">While I don't claim to be a great pro­gram­mer, I try to imi­ta­te one.</span>
+        
+        <span class="book-sentence" id="s-2-9-2-p0">An im­portant trait of the great ones is con­struc­tive la­zi­ness.</span>
+        
+        <span class="book-sentence" id="s-2-9-3-p0">They know that you get an A not for ef­fort but for re­sults, and that it's al­most al­ways ea­sier to start from a good par­ti­al so­lu­ti­on than from not­hing at all.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-10">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-10">10|</a>
+        <span class="book-sentence" id="s-2-10-1-p0">Linus Tor­valds, for ex­amp­le, didn't ac­tual­ly try to write Linux from scratch.</span>
+        
+        <span class="book-sentence" id="s-2-10-2-p0">Ins­tead, he star­ted by reu­sing code and ideas from Minix, a tiny Unix-like ope­ra­ting sys­tem for PC clo­nes.</span>
+        
+        <span class="book-sentence" id="s-2-10-3-p0">Even­tual­ly all the Minix code went away or was com­ple­te­ly re­writ­ten—but while it was there, it pro­vi­ded scaf­fol­ding for the in­fant that would even­tual­ly be­co­me Linux.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-11">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-11">11|</a>
+        <span class="book-sentence" id="s-2-11-1-p0">In the same spi­rit, I went loo­king for an exis­ting POP uti­li­ty that was re­a­son­ab­ly well coded, to use as a de­ve­lop­ment base.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-12">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-12">12|</a>
+        <span class="book-sentence" id="s-2-12-1-p0">The sour­ce-sharing tra­di­ti­on of the Unix world has al­ways been fri­end­ly to code reuse (this is why the GNU pro­ject chose Unix as a base OS, in spite of se­rious re­ser­va­tions about the OS its­elf).</span>
+        
+        <span class="book-sentence" id="s-2-12-2-p0">The Linux world has taken this tra­di­ti­on ne­ar­ly to its tech­no­lo­gi­cal limit; it has te­ra­bytes of open sour­ces ge­ne­ral­ly avail­able.</span>
+        
+        <span class="book-sentence" id="s-2-12-3-p0">So spen­ding time loo­king for some else's al­most-good-en­ough is more li­kely to give you good re­sults in the Linux world than anyw­he­re else.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-13">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-13">13|</a>
+        <span class="book-sentence" id="s-2-13-1-p0">And it did for me.</span>
+        
+        <span class="book-sentence" id="s-2-13-2-p0">With those I'd found ear­lier, my se­cond se­arch made up a total of nine can­di­da­tes—fetch­pop, Po­p­Tart, get-mail, gwpop, pimp, pop-perl, popc, pop­mail and upop.</span>
+        
+        <span class="book-sentence" id="s-2-13-3-p0">The one I first sett­led on was <code>fetch­pop</code> by Seung-Hong Oh.</span>
+        
+        <span class="book-sentence" id="s-2-13-4-p0">I put my hea­der-re­wri­te fea­ture in it, and made va­rious other im­pro­ve­ments which the aut­hor ac­cep­ted into his 1.9 re­lease.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-14">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-14">14|</a>
+        <span class="book-sentence" id="s-2-14-1-p0">A few weeks later, though, I stum­bled across the code for pop­cli­ent by Carl Har­ris, and found I had a pro­blem.</span>
+        
+        <span class="book-sentence" id="s-2-14-2-p0">Though fetch­pop had some good ori­gi­nal ideas in it (such as its back­ground-da­e­mon mode), it could only hand­le POP3 and was ra­ther ama­teu­rish­ly coded (Seung-Hong was at that time a bright but in­ex­pe­ri­en­ced pro­gram­mer, and both traits show­ed).</span>
+        
+        <span class="book-sentence" id="s-2-14-3-p0">Carl's code was bet­ter, quite pro­fes­sio­nal and solid, but his pro­gram la­cked se­veral im­portant and ra­ther tri­cky-to-im­ple­ment fetch­pop fea­tures (in­clu­ding those I'd coded mys­elf).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-15">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-15">15|</a>
+        <span class="book-sentence" id="s-2-15-1-p0">Stay or switch?</span>
+        
+        <span class="book-sentence" id="s-2-15-2-p0">If I swit­ched, I'd be thro­wing away the co­ding I'd al­re­a­dy done in ex­ch­an­ge for a bet­ter de­ve­lop­ment base.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-16">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-16">16|</a>
+        <span class="book-sentence" id="s-2-16-1-p0">A prac­tical mo­ti­ve to switch was the pre­sence of mul­ti­ple-pro­to­col sup­port.</span>
+        
+        <span class="book-sentence" id="s-2-16-2-p0">POP3 is the most com­mon­ly used of the post-of­fice ser­ver pro­to­cols, but not the only one.</span>
+        
+        <span class="book-sentence" id="s-2-16-3-p0">Fetch­pop and the other com­pe­ti­ti­on didn't do POP2, RPOP, or APOP, and I was al­re­a­dy ha­ving vague thoughts of per­haps ad­ding IMAP (In­ter­net Mes­sa­ge Ac­cess Pro­to­col, the most re­cent­ly de­si­gned and most power­ful post-of­fice pro­to­col) just for fun.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-17">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-17">17|</a>
+        <span class="book-sentence" id="s-2-17-1-p0">But I had a more theo­re­ti­cal re­a­son to think swit­ching might be as good an idea as well, so­me­thing I lear­ned long be­fo­re Linux.</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-2-3" data-slug="3-plan-to-throw-one-away-you-will-anyhow-fred-brooks-the-mythical-man-month-chapter-11">3. "Plan to throw one away; you will, anyhow." (Fred Brooks, The Mythical Man-Month, Chapter 11)</h2>
+    <section class="book-paragraph" id="p-2-18">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-18">18|</a>
+        <span class="book-sentence" id="s-2-18-1-p0">Or, to put it ano­ther way, you often don't re­al­ly un­der­stand the pro­blem until after the first time you im­ple­ment a so­lu­ti­on.</span>
+        
+        <span class="book-sentence" id="s-2-18-2-p0">The se­cond time, maybe you know en­ough to do it right.</span>
+        
+        <span class="book-sentence" id="s-2-18-3-p0">So if you want to get it right, be ready to start over at least once [JB].</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-19">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-19">19|</a>
+        <span class="book-sentence" id="s-2-19-1-p0">Well (I told mys­elf) the chan­ges to fetch­pop had been my first try.</span>
+        
+        <span class="book-sentence" id="s-2-19-2-p0">So I swit­ched.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-20">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-20">20|</a>
+        <span class="book-sentence" id="s-2-20-1-p0">After I sent my first set of pop­cli­ent patches to Carl Har­ris on 25 June 1996, I found out that he had ba­si­cal­ly lost in­te­rest in pop­cli­ent some time be­fo­re.</span>
+        
+        <span class="book-sentence" id="s-2-20-2-p0">The code was a bit dusty, with minor bugs han­ging out.</span>
+        
+        <span class="book-sentence" id="s-2-20-3-p0">I had many chan­ges to make, and we quick­ly agreed that the lo­gi­cal thing for me to do was take over the pro­gram.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-21">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-21">21|</a>
+        <span class="book-sentence" id="s-2-21-1-p0">Wi­thout my ac­tual­ly no­ti­cing, the pro­ject had esca­la­ted.</span>
+        
+        <span class="book-sentence" id="s-2-21-2-p0">No lon­ger was I just con­tem­pla­ting minor patches to an exis­ting POP cli­ent.</span>
+        
+        <span class="book-sentence" id="s-2-21-3-p0">I took on main­tai­ning an ent­i­re one, and there were ideas bub­b­ling in my head that I knew would pro­bab­ly lead to major chan­ges.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-2-22">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-22">22|</a>
+        <span class="book-sentence" id="s-2-22-1-p0">In a soft­ware cul­tu­re that en­cou­ra­ges code-sharing, this is a na­tu­ral way for a pro­ject to evol­ve.</span>
+        
+        <span class="book-sentence" id="s-2-22-2-p0">I was ac­ting out this prin­ciple:</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-2-4" data-slug="4-if-you-have-the-right-attitude-interesting-problems-will-find-you">4. If you have the right attitude, interesting problems will find you.</h2>
+    <section class="book-paragraph" id="p-2-23">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-23">23|</a>
+        <span class="book-sentence" id="s-2-23-1-p0">But Carl Har­ris's at­ti­tu­de was even more im­portant.</span>
+        
+        <span class="book-sentence" id="s-2-23-2-p0">He un­ders­tood that</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-2-5" data-slug="5-when-you-lose-interest-in-a-program-your-last-duty-to-it-is-to-hand-it-off-to-a-competent-successor">5. When you lose interest in a program, your last duty to it is to hand it off to a competent successor.</h2>
+    <section class="book-paragraph" id="p-2-24">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-2-24">24|</a>
+        <span class="book-sentence" id="s-2-24-1-p0">Wi­thout ever ha­ving to dis­cuss it, Carl and I knew we had a com­mon goal of ha­ving the best so­lu­ti­on out there.</span>
+        
+        <span class="book-sentence" id="s-2-24-2-p0">The only ques­ti­on for eit­her of us was whe­ther I could es­ta­blish that I was a safe pair of hands.</span>
+        
+        <span class="book-sentence" id="s-2-24-3-p0">Once I did that, he acted with grace and dis­patch.</span>
+        
+        <span class="book-sentence" id="s-2-24-4-p0">I hope I will do as well when it comes my turn.</span>
+        
+      </p>
+    </section>
+  </article>
+  <nav class="chapter-nav book-chapter-nav">
+    <a class="nav-btn prev" href="01-the-cathedral-and-the-bazaar.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="03-the-importance-of-having-users.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
+</main>
+  <script src="../../../assets/reader.js" defer></script>
+</body>
+</html>

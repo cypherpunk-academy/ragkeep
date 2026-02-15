@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>9 - The Art of Code</title>
+  <link rel="stylesheet" href="../../../assets/book.css" />
+</head>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <article class="book-chapter" data-chapter="10" id="c-10">
+    <h1 class="book-chapter-title" id="c-10-title" data-slug="9-the-art-of-code">9 - The Art of Code</h1>
+    <section class="book-paragraph" id="p-10-1">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-1-1-p0">LONG BE­FO­RE LARRY WALL WAS THIN­KING about how to make Perl suc­cess­ful, Ri­chard Stall­man had ana­ly­zed why the ha­cker com­mu­ni­ty at the MIT AI Lab had worked so well.</span>
+        
+        <span class="book-sentence" id="s-10-1-2-p0">He then set about re-crea­ting that com­mu­ni­ty, con­scious­ly ta­king steps that would ma­xi­mi­ze the chan­ces for its sur­vi­val.</span>
+        
+        <span class="book-sentence" id="s-10-1-3-p0">Ass GNU/Linux and the other free soft­ware pro­jects such as Perl, Apa­che, and the rest grew not only in ma­tu­ri­ty but in vi­si­bi­li­ty, others, too, began to no­ti­ce a lar­ger trend, and a few tried to un­der­stand it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-2">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-2-1-p0">One of the first for­mal at­tempts to ana­ly­ze the GNU/Linux pheno­me­non was writ­ten by Larry McVoy.</span>
+        
+        <span class="book-sentence" id="s-10-2-2-p0">He was born in Con­cord, Mas­sa­chu­setts, in 1962, and so was a good mea­su­re older than the likes of the other top Linux ha­ckers such as Linus, Alan Cox, and Ted Ts’o. McVoy was stee­ped in the main­stream Unix tra­di­ti­on, ha­ving worked first for The Santa Cruz Ope­ra­ti­on (SCO)—which later bought Unix from No­vell—and then for Sun, in both its soft­ware and hard­ware di­vi­si­ons.</span>
+        
+        <span class="book-sentence" id="s-10-2-3-p0">This work ex­pe­ri­ence gave him a depth of prac­tical know­ledge in how the soft­ware in­dus­try func­tio­ned that few others in the GNU/Linux mo­ve­ment could match.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-3">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-3-1-p0">While he was at Sun, McVoy put to­ge­ther what he cal­led his Sour­ce­wa­re Ope­ra­ting Sys­tem Pro­po­sal, writ­ten du­ring Sep­tem­ber and Oc­to­ber 1993.</span>
+        
+        <span class="book-sentence" id="s-10-3-2-p0">In it, he sug­gested that Sun give away the sour­ce code to its SunOS 4 ver­si­on of Unix so that a united Unix plat­form could be crea­ted that could take on the ra­pidly ri­sing might of Mi­cro­soft.</span>
+        
+        <span class="book-sentence" id="s-10-3-3-p0">Ass an al­ter­na­ti­ve pro­po­sal, McVoy sug­gested that the Unix in­dus­try adopt GNU/Linux as this com­mon plat­form—an ex­tra­or­di­na­ri­ly bold move in 1993, when Linux was ba­re­ly two years old.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-4">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-4-1-p0">McVoy was con­cer­ned about not­hing less than the fu­ture of Unix.</span>
+        
+        <span class="book-sentence" id="s-10-4-2-p0">In the early 1990s, he says, “the Unix in­dus­try is all ex­ci­ted about what they’re doing, and they think they’re going to win and blah-blah-blah.</span>
+        
+        <span class="book-sentence" id="s-10-4-3-p0">But the real an­s­wer is, if you look out a few years, as an en­gi­neer you could see very, very cle­ar­ly that they were com­mit­ting sui­ci­de,” for re­a­sons his paper would spell out.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-5">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-5-1-p0">There was also a spe­ci­fic im­pe­tus to write the paper: Sun’s de­ci­si­on to chan­ge the ver­si­on of Unix it would offer with its hard­ware.</span>
+        
+        <span class="book-sentence" id="s-10-5-2-p0">Up to that point, its ope­ra­ting sys­tem, cal­led SunOS, had drawn on the BSD ver­si­on of Unix that had been put to­ge­ther lar­ge­ly by ha­ckers at the Uni­ver­si­ty of Ca­li­for­nia at Ber­ke­ley; SunOS was a strong com­pe­ti­tor to AT&#x26;T’s com­mer­ci­al of­fe­ring, then cal­led Unix­Wa­re.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-6">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-6-1-p0">Even wi­t­hin Sun, that ha­cker tra­di­ti­on con­ti­nued.</span>
+        
+        <span class="book-sentence" id="s-10-6-2-p0">“SunOS was a sour­ce base that had en­gi­neers put­ting ef­fort into it more out of love for in­tel­lec­tu­al cor­rect­ness and ex­cel­lence than out of re­wards of my sala­ry or my stock op­ti­ons,” McVoy ex­plains.</span>
+        
+        <span class="book-sentence" id="s-10-6-3-p0">“It was seven or eight years of en­gi­neers sit­ting there on weekends po­lis­hing that thing.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-7">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-7-1-p0">De­s­pi­te this, Sun’s CEO Scott Mc­Nea­ly an­noun­ced that the com­pa­ny was thro­wing away this uni­que asset and mo­ving to AT&#x26;T’s “of­fi­ci­al” ver­si­on of Unix.</span>
+        
+        <span class="book-sentence" id="s-10-7-2-p0">“I don’t think there was a sin­gle en­gi­neer or even ma­na­ger that didn’t make the jour­ney to the Mecca of Scott’s of­fice and say, ‘You’re out of your mind, don’t do this.’” But in the end, McVoy says, “Mc­Nea­ly did this as a busi­ness de­ci­si­on.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-8">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-8-1-p0">Ass a re­sult, McVoy re­mem­bers, “I fumed, I fumed, I fumed—I was very upset.” He thought that with the move from SunOS to what would come to be cal­led So­la­ris, the com­pa­ny was lo­sing not only a great pro­duct but a uni­que en­vi­ron­ment.</span>
+        
+        <span class="book-sentence" id="s-10-8-2-p0">“It was the sort of place that as a sys­tems en­gi­neer, as an OS [ope­ra­ting sys­tem] per­son, you would do any­thing you could to get into that or­ga­niza­t­i­on,” he says.</span>
+        
+        <span class="book-sentence" id="s-10-8-3-p0">“The best minds in the in­dus­try were there.</span>
+        
+        <span class="book-sentence" id="s-10-8-4-p0">If you wan­ted to be working with the best, and learning the most that you could learn, you went to Sun, there was no ques­ti­on about it.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-9">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-9-1-p0">But the move to So­la­ris would not only dis­card the fruit of the la­bors of all those who made up that uni­que or­ga­niza­t­i­on but also de­s­troy its spi­rit.</span>
+        
+        <span class="book-sentence" id="s-10-9-2-p0">In ef­fect, then, McVoy was about to be cast out of the Unix pa­ra­di­se that had been pre­sent at Sun, just as Stall­man was cast out of the ha­ckers’ Eden at MIT.</span>
+        
+        <span class="book-sentence" id="s-10-9-3-p0">Like Stall­man, McVoy de­ci­ded to fight back: “The [Sour­ce­wa­re] paper was in some ways a back­han­ded way of try­ing to make Mc­Nea­ly re­ver­se his de­ci­si­on.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-10">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-10-1-p0">McVoy began his Sour­ce­wa­re white paper by of­fe­ring an in­sight­ful and dam­ning re­port on the par­lous state of the Unix world of that time.</span>
+        
+        <span class="book-sentence" id="s-10-10-2-p0">It spel­led out why Mi­cro­soft would be so suc­cess­ful with its then-new Win­dows NT, and ex­plai­ned, too, why GNU/Linux was later wel­co­med with ala­cri­ty by so many Unix users.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-11">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-11-1-p0">“Unix needs our help be­cau­se Unix is dying.</span>
+        
+        <span class="book-sentence" id="s-10-11-2-p0">Unix is no lon­ger even close to com­pe­ti­ti­ve,” he began his paper, and pro­cee­ded to ca­ta­lo­gue the woes aff­lic­ting the Unix world.</span>
+        
+        <span class="book-sentence" id="s-10-11-3-p0">He esti­ma­ted that collec­tive­ly the Unix ven­dors were spen­ding around $1 bil­li­on on what they cal­led de­ve­lop­ment.</span>
+        
+        <span class="book-sentence" id="s-10-11-4-p0">He noted that “a great deal of this ex­pen­ditu­re is red­un­dant over the set of ven­dors.” That is, every Unix ven­dor came up with its own so­lu­ti­on to the same pro­blem, re­sul­ting in a huge du­pli­ca­ti­on of ef­fort.</span>
+        
+        <span class="book-sentence" id="s-10-11-5-p0">By con­trast, he poin­ted out, “Mi­cro­soft spends much less than this and pro­du­ces a bet­ter pro­duct.</span>
+        
+        <span class="book-sentence" id="s-10-11-6-p0">Their pro­duct is bet­ter in terms of ease of use, in­stal­la­ti­on, and ad­mi­nis­tra­ti­on.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-12">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-12-1-p0">McVoy be­lie­ves that Unix pro­gramm­ers were as much to blame as their ma­nage­ment for this waste.</span>
+        
+        <span class="book-sentence" id="s-10-12-2-p0">“It’s ri­di­cu­lous,” he says, “you look at that bil­li­on dol­lars, and the real an­s­wer was...</span>
+        
+        <span class="book-sentence" id="s-10-12-3-p0">there was this pool of OS en­gi­nee­ring ta­lent, and these guys would en­cou­ra­ge their ma­na­gers to do this sort of [du­pli­ca­ti­on].</span>
+        
+        <span class="book-sentence" id="s-10-12-4-p0">Be­cau­se they re­al­ly didn’t want to get out of the OS busi­ness, they liked being the kings of the heap, being the ker­nel jocks.</span>
+        
+        <span class="book-sentence" id="s-10-12-5-p0">They kind of liked this si­tua­ti­on where every OS ven­dor was doing their own ver­si­on of Unix and the ker­nel [en­gi­neers] could move from com­pa­ny to com­pa­ny, and con­ti­nue to be the big studs.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-13">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-13-1-p0">The re­sult was a stag­ge­ring frag­men­ta­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-14">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-14-1-p0">Ass McVoy wrote, “The major Unix ven­dors each pro­vi­de their own ver­si­on of Unix, re­sul­ting in at least ten major Unix sys­tems all com­pe­ting for about 3 per­cent of the com­pu­ter mar­ket.” This lack of di­rect com­pe­ti­ti­on led to high costs for the end users: “Li­cen­sing ran­ges from $20 to $100 per seat, with ven­dor mark up for their cost­ly ‘value add’ re­sul­ting in cust­o­m­er seat costs of $600—$3000.</span>
+        
+        <span class="book-sentence" id="s-10-14-2-p0">Mi­cro­soft sells Win­dows/NT for about $150.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-15">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-15-1-p0">Cust­o­m­ers were re­cei­ving litt­le in re­turn for the high costs, the Sour­ce­wa­re paper poin­ted out.</span>
+        
+        <span class="book-sentence" id="s-10-15-2-p0">“Unix has be­co­me sta­gnant.</span>
+        
+        <span class="book-sentence" id="s-10-15-3-p0">Unix has cea­sed to be the plat­form of choice for the de­ve­lop­ment and de­ploy­ment of in­no­va­ti­ve tech­no­lo­gy.” McVoy then went on to note one re­a­son for this: “A great deal of the early de­ve­lop­ment of Unix was done by re­se­ar­chers be­cau­se of Unix’s ready ac­ces­si­bi­li­ty.” That is, when Unix was open, it was in­no­va­ti­ve; now it was clo­sed and mo­ri­bund.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-16">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-16-1-p0">McVoy noted in his paper that “the Unix pro­blems are not being ad­dres­sed.</span>
+        
+        <span class="book-sentence" id="s-10-16-2-p0">The ven­dors think ‘stan­dards’ are the an­s­wers.</span>
+        
+        <span class="book-sentence" id="s-10-16-3-p0">The pro­gramm­ers think ‘free’ soft­ware is the an­s­wer.</span>
+        
+        <span class="book-sentence" id="s-10-16-4-p0">The cust­o­m­ers think NT is the an­s­wer.” Un­for­t­u­n­a­te­ly, as McVoy ex­plains, when ven­dors pus­hed for “stan­dards,” they re­al­ly meant so­me­thing else.</span>
+        
+        <span class="book-sentence" id="s-10-16-5-p0">“It was just so in­credi­b­ly pa­the­tic,” he says.</span>
+        
+        <span class="book-sentence" id="s-10-16-6-p0">“Each of these Unix ven­dors said they wan­ted to do a ‘let’s unify’—and then the next state­ment was, ‘OK, you dump yours, and we’ll use mine.’ And it was sort of like, jeez, we’re re­al­ly not get­ting anyw­he­re.” Be­cau­se McVoy was try­ing to avoid re­cour­se to the “cust­o­m­er so­lu­ti­on” of NT, that left the pro­gramm­ers’ so­lu­ti­on: free soft­ware, or “sour­ce­wa­re,” as he ter­med it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-17">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-17-1-p0">McVoy wrote: “More and more tra­di­tio­nal Unix de­ve­l­o­pers have given up on the pro­prieta­ry Unix im­ple­men­ta­ti­ons and are fo­cu­sing their en­er­gy on sour­ce­wa­re.” Among the “re­sults of their la­bors,” he sin­gled out GNU soft­ware (GCC and GNU Emacs), the X Win­dow sys­tem, and GNU/Linux, which he de­scri­bed as ha­ving “many fea­tures found only in ma­tu­re ope­ra­ting sys­tems,” and noted that it was “fea­ture rich but lacks the qua­li­ty and sta­bi­li­ty of a com­mer­ci­al pro­duct,” a fair as­sess­ment for the state of Linux in 1993.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-18">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-18-1-p0">McVoy poin­ted out that “al­most every good fea­ture in com­pu­ter ope­ra­ting sys­tems today, in­clu­ding most fea­tures in DOS, Win­dows, and Win­dows/NT, came from the mind of one ha­cker or ano­ther.</span>
+        
+        <span class="book-sentence" id="s-10-18-2-p0">Ty­pi­cal­ly, the work was not com­mis­sio­ned by a com­pa­ny.” He com­men­ted that “for the busi­ness com­mu­ni­ty to dis­miss the ha­ckers as ‘nuts’ is a di­sas­ter,” and sug­gested, pre­sci­ent­ly, that “it is far bet­ter to fi­gu­re out a way to allow the busi­ness world and the ha­cker world to co­exist and be­ne­fit one ano­ther.</span>
+        
+        <span class="book-sentence" id="s-10-18-3-p0">If busi­nes­ses want the best tech­no­lo­gy, then busi­nes­ses should move towards sour­ce­wa­re.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-19">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-19-1-p0">McVoy’s Sour­ce­wa­re pro­po­sal to solve the pro­blems of Unix frag­men­ta­ti­on, cost, and sta­gna­ti­on, cal­led for the ven­dor com­mu­ni­ty to rally around a sin­gle Unix ver­si­on whose sour­ce code would be fre­e­ly avail­able.</span>
+        
+        <span class="book-sentence" id="s-10-19-2-p0">Ide­al­ly, this would be his bel­oved SunOS, but if that were not pos­si­ble, GNU/Linux would still be “a win on the po­li­ti­cal front,” even if so­me­thing of “a lose on the ma­tu­ri­ty front,” as he put it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-20">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-20-1-p0">“I never re­al­ly pu­blis­hed it, it just sort of made the rounds,” McVoy says of his paper.</span>
+        
+        <span class="book-sentence" id="s-10-20-2-p0">“And I asked peop­le to dis­tri­bu­te it amongst peop­le that could have some in­flu­ence.</span>
+        
+        <span class="book-sentence" id="s-10-20-3-p0">I was ho­ping to try and build up a grounds­well of pres­su­re on Mc­Nea­ly and the other exe­cu­ti­ves.</span>
+        
+        <span class="book-sentence" id="s-10-20-4-p0">I got in to see most of them, and spent a lot of time tal­king to them about this stuff.” The re­s­pon­se was en­cou­ra­ging: “Ever­y­bo­dy who read it was very gung-ho,” he re­calls.</span>
+        
+        <span class="book-sentence" id="s-10-20-5-p0">“I was view­ed as a sa­vi­or of Unix to these guys.” Even many se­ni­or exe­cu­ti­ves were sup­por­ti­ve—in pri­va­te.</span>
+        
+        <span class="book-sentence" id="s-10-20-6-p0">Ul­ti­mate­ly, though, none of this hel­ped.</span>
+        
+        <span class="book-sentence" id="s-10-20-7-p0">“Of cour­se, not­hing hap­pe­n­ed,” McVoy says, “and it was all very disap­poin­ting.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-21">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-21-1-p0">Ass he looks back, McVoy now un­der­stands what was going on.</span>
+        
+        <span class="book-sentence" id="s-10-21-2-p0">“The role I play­ed at Sun was the idiot that would open his mouth and say that the em­peror had no clo­thes,” he ex­plains.</span>
+        
+        <span class="book-sentence" id="s-10-21-3-p0">“I was this guy who was idea­lis­tic en­ough and pas­sio­na­te to do this, and it com­ple­te­ly tor­pe­do­ed my ca­re­er over and over.</span>
+        
+        <span class="book-sentence" id="s-10-21-4-p0">I mean, man, talk about stu­pid, I had it prin­ted on my fo­rehead.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-22">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-22-1-p0">McVoy’s Sour­ce­wa­re pro­po­sal was, in re­tro­s­pect, pro­phe­tic.</span>
+        
+        <span class="book-sentence" id="s-10-22-2-p0">It ex­po­sed the weak­nes­ses wi­t­hin the Unix ven­dor com­mu­ni­ty that would lead to its in­cre­a­sing mar­gi­na­liza­t­i­on, and to the cor­re­spon­ding rise of Win­dows NT as an en­t­er­pri­se ope­ra­ting sys­tem.</span>
+        
+        <span class="book-sentence" id="s-10-22-3-p0">More im­portant, the pro­po­sal re­co­gni­zed GNU/Linux and Sour­ce­wa­re—free soft­ware—as an im­portant new force, and the one bright spot in an other­wi­se dis­mal out­look.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-23">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-23-1-p0">The role of chief theo­re­ti­ci­an to the nas­cent open-sour­ce world even­tual­ly pas­sed to so­meo­ne who would also later grow into a key fi­gu­re there.</span>
+        
+        <span class="book-sentence" id="s-10-23-2-p0">Like McVoy, Eric Ray­mond has a gift for sharp ana­ly­sis and co­lor­ful prose, but in most other re­spects the two could not be more in con­trast.</span>
+        
+        <span class="book-sentence" id="s-10-23-3-p0">Where McVoy’s ac­tivi­ty as free soft­ware apo­lo­gist was ac­ci­den­tal and pe­ri­pheral to his main con­cerns, Ray­mond’s as­sump­ti­on of that role was con­scious; it was al­most in­e­vi­ta­ble in light of his pre­vious tra­jec­to­ry through the world of com­pu­ting.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-24">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-24-1-p0">Ray­mond was born in the same state as McVoy, in Bos­ton, Mas­sa­chu­setts, but even ear­lier, in 1957.</span>
+        
+        <span class="book-sentence" id="s-10-24-2-p0">He was the el­dest of five child­ren.</span>
+        
+        <span class="book-sentence" id="s-10-24-3-p0">His fa­ther was one of the first com­pu­ter pro­gramm­ers, be­gin­ning in the 1950s, and was an exe­cu­ti­ve with Sper­ry-Uni­vac, one of the ori­gi­nal ven­dors of main­frame com­pu­ters.</span>
+        
+        <span class="book-sentence" id="s-10-24-4-p0">Says Ray­mond, “I like to de­scri­be mys­elf as a se­cond-ge­ne­ra­ti­on ha­cker.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-25">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-25-1-p0">His fa­ther’s work meant that Ray­mond lived ab­road as a child, in Ve­ne­zue­la, Italy and Eng­land.</span>
+        
+        <span class="book-sentence" id="s-10-25-2-p0">Ass he puts it with a ty­pi­cal­ly Ray­mon­dian flou­rish, “I lived on three con­ti­nents and for­got two lan­gua­ges be­fo­re I was thir­teen.” The fa­mi­ly moved back to the United Sta­tes when he was thir­teen, to Penn­syl­va­nia, where Ray­mond still lives.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-26">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-26-1-p0">Aside from re­si­du­es of these for­got­ten lan­gua­ges, the tra­vel­ling seems not to have in­flu­en­ced him.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-27">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-27-1-p0">“It was just part of my en­vi­ron­ment, and I didn’t re­al­ly have a jud­ge­ment about it,” he says.</span>
+        
+        <span class="book-sentence" id="s-10-27-2-p0">But so­me­thing else did leave a deep mark.</span>
+        
+        <span class="book-sentence" id="s-10-27-3-p0">“I’ve an ex­tre­me­ly mild case of spas­tic palsy,” he ex­plains, “im­pai­red motor con­trol of my left leg, ba­si­cal­ly.</span>
+        
+        <span class="book-sentence" id="s-10-27-4-p0">It’s com­ple­te­ly sta­tic: It doesn’t get any bet­ter, it doesn’t get any worse.</span>
+        
+        <span class="book-sentence" id="s-10-27-5-p0">What chan­ges is how well you adapt to it over time.” Ray­mond would later de­scri­be him­s­elf as an “an­xious, angry, frus­tra­ted child.” He ex­plains, “Other peop­le gave me a hard time.</span>
+        
+        <span class="book-sentence" id="s-10-27-6-p0">There are cer­tain things that are pret­ty tough to do if you have im­pai­red phy­si­cal co­or­di­na­ti­on.</span>
+        
+        <span class="book-sentence" id="s-10-27-7-p0">Kind of threw me back on my men­tal re­sour­ces.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-28">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-28-1-p0">He de­scri­bes how the shift to com­pu­ters oc­cur­red.</span>
+        
+        <span class="book-sentence" id="s-10-28-2-p0">“I got in­te­rested in com­pu­ters in col­le­ge main­ly as a si­de­li­ne, and then I bur­ned out on ma­the­ma­tics,” his ori­gi­nal field of study.</span>
+        
+        <span class="book-sentence" id="s-10-28-3-p0">“Well, com­pu­ters were there.” Ray­mond was ent­i­re­ly self-taught: “The books didn’t exist then,” he points out.</span>
+        
+        <span class="book-sentence" id="s-10-28-4-p0">“That was only a few years after the first de­gree in com­pu­ter sci­ence, ac­tual­ly.</span>
+        
+        <span class="book-sentence" id="s-10-28-5-p0">Most of the learning ap­pa­ra­tus we have today didn’t yet exist.</span>
+        
+        <span class="book-sentence" id="s-10-28-6-p0">Peop­le who were pro­gramm­ers then ba­si­cal­ly did what I did; they drif­ted in from other fiel­ds and taught them­sel­ves.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-29">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-29-1-p0">So­meo­ne else who had taught him­s­elf, and was also ori­gi­nal­ly a ma­the­ma­ti­ci­an, was Ri­chard Stall­man.</span>
+        
+        <span class="book-sentence" id="s-10-29-2-p0">Ray­mond says he knew Stall­man not just seven years be­fo­re he star­ted the GNU pro­ject but be­fo­re he had ac­qui­red his trade­mark mane and beard.</span>
+        
+        <span class="book-sentence" id="s-10-29-3-p0">Ass Ray­mond ex­plains, “I have oc­ca­sio­nal­ly stood be­si­de him, and said to peop­le, yes, I knew Ri­chard be­fo­re he had long hair and a Jesus com­plex.</span>
+        
+        <span class="book-sentence" id="s-10-29-4-p0">To his credit, Ri­chard laughs when I say this.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-30">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-30-1-p0">Through Stall­man, Ray­mond got to know the MIT cul­tu­re, which he cha­rac­te­ri­zes as “or­ga­ni­zed around PDP-10, as­sem­bler lan­gua­ge, and LISP.” He al­re­a­dy knew about the Unix and C cul­tu­re, which meant that “I got to see both sides of that [ha­cker] scene pret­ty early on,” he says.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-31">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-31-1-p0">Even in the early 1980s, then, Ray­mond was a pri­vi­le­ged ob­ser­ver of a wide range of co­ding ac­tivi­ty.</span>
+        
+        <span class="book-sentence" id="s-10-31-2-p0">He likes to em­pha­si­ze that much of this was dis­con­nec­ted, or at least con­nec­ted only from time to time; there was no uni­fied ha­cker cul­tu­re as we know it today.</span>
+        
+        <span class="book-sentence" id="s-10-31-3-p0">“That pe­ri­od was very dif­fe­rent from the open-sour­ce cul­tu­re now,” he says, “be­cau­se the tech­no­lo­gi­cal in­fra­struc­tu­re to do soft­ware sharing the way we do it today didn’t exist.</span>
+        
+        <span class="book-sentence" id="s-10-31-4-p0">The only way you could pass around soft­ware du­ring that stage was on ma­gne­tic tapes, and so it was only done spo­ra­di­cal­ly.</span>
+        
+        <span class="book-sentence" id="s-10-31-5-p0">The cul­tu­res that did that were very small and very iso­la­ted from each other.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-32">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-32-1-p0">“There’s a cer­tain school of his­to­ri­cal in­ter­pre­ta­ti­on that views today’s free soft­ware as a re­turn to a pre-pro­prieta­ry gol­den age.</span>
+        
+        <span class="book-sentence" id="s-10-32-2-p0">That gol­den age never exis­ted,” Ray­mond in­sists.</span>
+        
+        <span class="book-sentence" id="s-10-32-3-p0">“I was there and I know.</span>
+        
+        <span class="book-sentence" id="s-10-32-4-p0">From ’77 to the early ’90s, the free soft­ware cul­tu­re, or the open-sour­ce cul­tu­re as we think of it today, only exis­ted in the sense that there were a bunch of peop­le doing things not gross­ly dis­si­mi­lar from what we do today.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-33">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-33-1-p0">“But it had no self-con­scious­ness,” he points out.</span>
+        
+        <span class="book-sentence" id="s-10-33-2-p0">“It had no cul­tu­ral iden­ti­ty; there was no­bo­dy who was thin­king ‘let’s do these things for par­ti­cu­lar re­a­sons.’ It was just a bunch of peop­le doing so­lu­ti­ons to pro­blems and scratching it­ches that hap­pe­n­ed to know about each other and pass in­for­ma­ti­on around.</span>
+        
+        <span class="book-sentence" id="s-10-33-3-p0">One of Ri­chard’s cont­ri­bu­ti­ons was that he made that cul­tu­re self-con­scious.” One of Ray­mond’s core cont­ri­bu­ti­ons would be to streng­t­hen that self-con­scious­ness and to help mo­bi­li­ze the com­mu­ni­ty it en­gen­de­red.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-34">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-34-1-p0">He began this work with a new edi­ti­on of the Jar­gon File, a major collec­tion of ha­cker lore ar­ran­ged as a dic­tio­na­ry of terms and usa­ges.</span>
+        
+        <span class="book-sentence" id="s-10-34-2-p0">It was first put to­ge­ther in 1975, but had lan­gu­is­hed so­mew­hat in the 1980s, part­ly, no doubt, as a re­sult of the de­struc­tion of the MIT ha­cker com­mu­ni­ty, one of the main sour­ces for Jar­gon File ent­ries.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-35">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-35-1-p0">“I stum­bled over a copy of it in 1990,” Ray­mond re­calls, “and rea­li­zed, wow, (a) this is a litt­le out of date, there’s a lot of new stuff in the cul­tu­re that ought to be in here, and (b) I’ve got the se­nio­ri­ty to do so­me­thing about this now.</span>
+        
+        <span class="book-sentence" id="s-10-35-2-p0">It just never oc­cur­red to me be­fo­re that the do­cu­ment could be mo­di­fied....</span>
+        
+        <span class="book-sentence" id="s-10-35-3-p0">I spent a weekend ad­ding ent­ries and I rea­li­zed, wow, this is pret­ty in­te­res­ting; it de­ser­ves to be dus­ted off and main­tai­ned.</span>
+        
+        <span class="book-sentence" id="s-10-35-4-p0">And when I asked the per­son who was es­sen­ti­al­ly re­s­pon­si­ble for it at that time [he said], ‘Well, you know, there’s been some de­mand for a se­cond edi­ti­on of the dic­tio­na­ry, why don’t you do it.’”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-36">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-36-1-p0">The se­cond edi­ti­on was pu­blis­hed in 1991 as The New Ha­cker’s Dic­tio­na­ry.</span>
+        
+        <span class="book-sentence" id="s-10-36-2-p0">Ray­mond’s mo­ti­ves for un­der­ta­king this major pro­ject are si­gni­fi­cant.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-37">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-37-1-p0">I rea­li­zed that a book like that could do a num­ber of worthw­hi­le things.</span>
+        
+        <span class="book-sentence" id="s-10-37-2-p0">One major mo­ti­ve that I had at the time was that, like Ri­chard, but in­de­pen­dent­ly of him, I thought that it would be worthw­hi­le to streng­t­hen the self-awa­ren­ess, the cul­tu­ral con­scious­ness, if you will, of the peop­le that cont­ri­bu­ted to the dic­tio­na­ry.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-38">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-38-1-p0">I had part­ly dif­fe­rent mo­ti­ves from Ri­chard.</span>
+        
+        <span class="book-sentence" id="s-10-38-2-p0">He was al­re­a­dy on his moral cru­sa­de to ab­olish pro­prieta­ry soft­ware at that time; had been for five years.</span>
+        
+        <span class="book-sentence" id="s-10-38-3-p0">I was con­cer­ned that ugly things were hap­pe­ning to the pu­blic image of the ha­cker cul­tu­re—which was al­re­a­dy a cul­tu­re in em­bryo, then.</span>
+        
+        <span class="book-sentence" id="s-10-38-4-p0">I was con­cer­ned that that might crea­te the po­li­ti­cal con­di­ti­ons under which the In­ter­net and other new com­mu­ni­ca­ti­ons media could be se­ver­ely po­li­ti­cal­ly re­stric­ted.</span>
+        
+        <span class="book-sentence" id="s-10-38-5-p0">I wan­ted hund­reds of thousands of peop­le in the main­stream cul­tu­re to sym­pa­thi­ze and laugh with my tribe so that when the po­li­tics star­ted get­ting nasty we had some al­lies.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-39">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-39-1-p0">Ano­ther goal was that I thought that even back then the In­ter­net was gro­wing much fas­ter than it had been in the mid- or late ’70s when I first got in­vol­ved with it, and I was con­cer­ned that the growth of the In­ter­net was outs­trip­ping our abili­ty to ac­cul­tu­ra­te new peop­le.</span>
+        
+        <span class="book-sentence" id="s-10-39-2-p0">And I wan­ted to make it ea­sier to ac­cul­tu­ra­te new peop­le.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-40">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-40-1-p0">One per­son at least part­ly “ac­cul­tu­ra­ted” in this way was Linus.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-41">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-41-1-p0">“When we first met in 1996,” Ray­mond re­calls, “he wan­ted my au­to­graph.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-42">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-42-1-p0">Fi­nal­ly, <em>The New Ha­cker’s Dic­tio­na­ry</em> was, as Ray­mond puts it, “a way of pay­ing tri­bu­te to my roots.” Al­re­a­dy by the late 1980s he was be­gin­ning to think of the glo­bal ha­cker com­mu­ni­ty as not just a dis­tinct, well-de­fi­ned tribe, united by a cul­tu­re and a set of be­liefs (both of which <em>The New Ha­cker’s Dic­tio­na­ry</em> was ho­ping to re­cord and sti­mu­la­te), but more spe­ci­fi­cal­ly as his own tribe: a tribe, mo­re­o­ver, that ten­ded to judge peop­le by their real achie­ve­ments in hacking and that was in­dif­fe­rent to munda­ne is­su­es of who you were—or whe­ther you have ce­re­b­ral palsy.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-43">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-43-1-p0">Aside from these novel mo­ti­va­tions, <em>The New Ha­cker’s Dic­tio­na­ry</em> was also unusu­al in the way it was put to­ge­ther.</span>
+        
+        <span class="book-sentence" id="s-10-43-2-p0">“I con­scious­ly ap­proa­ched it as a large-scale col­la­bo­ra­ti­ve pro­cess,” Ray­mond ex­plains, “in which I would be a cen­tral nexus, but not as­sert as much con­trol of the pro­cess as a con­ven­tio­nal edi­tor does.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-44">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-44-1-p0"><em>The New Ha­cker’s Dic­tio­na­ry</em> was pu­blis­hed—ap­pro­pria­te­ly en­ough—by MIT Press, and be­ca­me so­me­thing of a best-sel­ler; as such, it achie­ved one of Ray­mond’s major aims in evan­ge­li­zing about his tribe and its lore.</span>
+        
+        <span class="book-sentence" id="s-10-44-2-p0">The re­sul­ting in­te­rest also al­lo­wed Ray­mond to de­ve­lop his skills in hand­ling the media, an ex­tre­me­ly rare abili­ty among ha­ckers, and gave him “some street cred among jour­na­lists” as he puts it, which he would put to good use later on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-45">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-45-1-p0"><em>The New Ha­cker’s Dic­tio­na­ry</em> ne­ar­ly had one other dra­ma­tic con­se­quence, as Ray­mond de­scri­bes.</span>
+        
+        <span class="book-sentence" id="s-10-45-2-p0">“In 1991, I was working on the first edi­ti­on of <em>The New Ha­cker’s Dic­tio­na­ry</em>, and I was sent an in­te­res­ting hunk of code by a guy named Ray Gard­ner.</span>
+        
+        <span class="book-sentence" id="s-10-45-3-p0">It was what we would now think of as a hy­per­text view­er for the Jar­gon File.” That is, you could use links wi­t­hin the text to jump to other ent­ries as with a Web brow­ser.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-46">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-46-1-p0">“Ray had writ­ten it for MS-DOS,” Ray­mond con­ti­nues.</span>
+        
+        <span class="book-sentence" id="s-10-46-2-p0">“He sent me the first build, and I thought this was a cool idea.</span>
+        
+        <span class="book-sentence" id="s-10-46-3-p0">I com­ple­te­ly re­w­ro­te it, and ge­ne­ra­li­zed and por­ted it to Unix, and I tur­ned it into a baby hy­per­text re­a­der which I cal­led VH, or Volks­Hy­per­text.” He ex­plains the ra­ther un­wiel­dy name: “At the time I was aware of the Xa­na­du pro­ject, which was this huge com­plex Ca­dil­lac of a hy­per­text sys­tem.” Ray­mond had been in­vi­ted to join the Xa­na­du pro­ject in 1980.</span>
+        
+        <span class="book-sentence" id="s-10-46-4-p0">“VH was a very strip­ped down, sim­ple, light­weight hy­per­text sys­tem, so I thought of it sort of as a Volks­wa­gen to Xa­na­du’s Ca­dil­lac.</span>
+        
+        <span class="book-sentence" id="s-10-46-5-p0">No chro­me, no tail fins, but it got the job done.</span>
+        
+        <span class="book-sentence" id="s-10-46-6-p0">So I cal­led it Volks­Hy­per­text.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-47">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-47-1-p0">Xa­na­du wasn’t the only hy­per­text sys­tem that was being de­ve­l­o­ped in this pe­ri­od.</span>
+        
+        <span class="book-sentence" id="s-10-47-2-p0">“It was late ’91, I think, I got mail from Tim Ber­ners-Lee—who no­bo­dy had heard of at the time—say­ing, ‘I hear you’ve been doing some in­te­res­ting things with hy­per­text; shall we col­la­bo­ra­te?’ And so I sent him back some mail, ba­si­cal­ly say­ing sure, stan­dards are good.</span>
+        
+        <span class="book-sentence" id="s-10-47-3-p0">And I didn’t hear back from him.</span>
+        
+        <span class="book-sentence" id="s-10-47-4-p0">I still don’t know why.” Hap­pi­ly for Ray­mond, he has many other claims to fame other than al­most co-in­ven­ting the World Wide Web.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-48">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-48-1-p0">Pro­bab­ly his most im­portant achie­ve­ment, the essay <em>The Ca­the­dral and the Ba­zaar</em>, which ana­ly­zes the suc­cess of Linux and open-sour­ce soft­ware, arose in part be­cau­se of a CD-ROM that tur­ned up on his door­step in late 1993.</span>
+        
+        <span class="book-sentence" id="s-10-48-2-p0">The CD-ROM was from the GNU/Linux dis­tri­bu­tor Ygg­d­ra­sil, and as Ray­mond re­calls was “the first avail­able CD-ROM Linux dis­tri­bu­ti­on.</span>
+        
+        <span class="book-sentence" id="s-10-48-3-p0">That lan­ded on my door­step be­cau­se I had al­re­a­dy writ­ten en­ough free soft­ware that some of my stuff was on that disk.” Ass men­tio­ned pre­vious­ly, this was the “token of app­re­cia­ti­on” that Ygg­d­ra­sil had sent to “the many free soft­ware de­ve­l­o­pers” who had cont­ri­bu­ted to its dis­tri­bu­ti­on, often un­wit­ting­ly as in Ray­mond’s case.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-49">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-49-1-p0">He ad­mits that he was skep­ti­cal of Linux until he tried it; and he might never have tried it had it meant wi­ping his cur­rent sys­tem, as would have been the case with any GNU/Linux dis­tri­bu­ti­on other than Ygg­d­ra­sil.</span>
+        
+        <span class="book-sentence" id="s-10-49-2-p0">But “Ygg­d­ra­sil had an in­te­res­ting fea­ture,” Ray­mond notes.</span>
+        
+        <span class="book-sentence" id="s-10-49-3-p0">“It was pos­si­ble to run Linux as a demo wi­thout chan­ging any par­ti­ti­ons on your hard disc”—in other words, wi­thout nee­ding to de­le­te or in­stall any­thing.</span>
+        
+        <span class="book-sentence" id="s-10-49-4-p0">“And that’s what I did for a few hours, and I was as­to­nis­hed at what I saw.</span>
+        
+        <span class="book-sentence" id="s-10-49-5-p0">I aban­do­ned the rest of my plans for that day, scrub­bed the com­mer­ci­al [AT&#x26;T] Sys­tem V that I had been using off my disk, and in­stal­led Linux.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-50">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-50-1-p0">Ray­mond was more than as­to­nis­hed, he says: “Flab­ber­gas­ted wouldn’t be too strong a way to put it.</span>
+        
+        <span class="book-sentence" id="s-10-50-2-p0">Be­cau­se it com­ple­te­ly con­tra­dic­ted all my ex­pec­ta­ti­ons about the qua­li­ty of a pro­ject like that.</span>
+        
+        <span class="book-sentence" id="s-10-50-3-p0">I still had the clas­si­cal­ly Brook­si­an idea that you couldn’t do high-qua­li­ty soft­ware with a mob,” ano­ther re­fe­rence to Brooks’s <em>The My­thi­cal Man-Month</em> paper.</span>
+        
+        <span class="book-sentence" id="s-10-50-4-p0">Ray­mond set out to study and un­der­stand this in­te­res­ting pheno­me­non.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-51">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-51-1-p0">“The turning point for me in terms of get­ting to know the peop­le of the cul­tu­re de­eply was in 1996 when I was on the pro­gram com­mit­tee for the first Fre­e­ly Re­dis­tri­bu­ta­ble Soft­ware Con­fe­rence.” This con­fe­rence was held in Bos­ton, from 3 Fe­bru­ary to 6 Fe­bru­ary 1996.</span>
+        
+        <span class="book-sentence" id="s-10-51-2-p0">It had been or­ga­ni­zed by Peter Salus, and was being run under the aus­pices of the Free Soft­ware Foun­da­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-52">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-52-1-p0">“I was al­re­a­dy pret­ty sure that [Linux] was my per­so­nal place to stand,” Ray­mond says, “and the ha­cker cul­tu­re’s place to stand in a shif­ting world.</span>
+        
+        <span class="book-sentence" id="s-10-52-2-p0">And going to the con­fe­rence cer­tain­ly rein­forced my sense that there were a lot of peop­le out there with a lot of en­er­gy who were be­gin­ning to work on this.” The con­fe­rence had a fur­ther and un­ex­pec­ted ef­fect on Ray­mond, who met Linus face-to-face for the first time there.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-53">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-53-1-p0">That con­fe­rence “was when I first be­ca­me con­scious­ly aware that the lea­dership role in the cul­tu­re was pas­sing from RMS and the old MIT AI Lab crowd to the Linux peop­le,” he says—and that a new ge­ne­ra­ti­on of ha­ckers had taken over.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-54">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-54-1-p0">It was a subt­le thing, Ray­mond re­calls, ap­pa­rent “in what peop­le were tal­king about, and who they were loo­king towards.” It was also per­cep­ti­ble in what should have been the high­light of the con­fe­rence and the crow­ning glory of Stall­man’s GNU pro­ject.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-55">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-55-1-p0">“One of the day-long tu­to­ri­als there was the first pu­blic ou­ting of the new Hurd de­sign, which of cour­se was the Free Soft­ware Foun­da­ti­on’s shot at a free ker­nel,” Ray­mond re­calls.</span>
+        
+        <span class="book-sentence" id="s-10-55-2-p0">In the in­ter­ve­ning twel­ve years after Stall­man had in­itia­ted the GNU pro­ject, the Hurd ker­nel had at­tai­ned a kind of my­thic sta­tus that made its ar­ri­val all the more eager­ly awai­ted and, per­haps, its ul­ti­ma­te reve­la­ti­on all the more disap­poin­ting.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-56">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-56-1-p0">Ray­mond de­scri­bes the mo­ment.</span>
+        
+        <span class="book-sentence" id="s-10-56-2-p0">“I re­mem­ber Keith Bostic—again, this was also si­gni­fi­cant, he being one of the key BSD peop­le—as­king what I thought of the pre­sen­ta­ti­on.</span>
+        
+        <span class="book-sentence" id="s-10-56-3-p0">And I re­mem­ber say­ing to him, ‘It’s ele­gant, it’s be­au­ti­ful, it’s ela­bo­ra­te, and it’s going to get kil­led by its per­for­mance over­head.’ And Keith nod­ding in glum agree­ment.” The re­a­son for his glum­ness was that “like all of us,” Ray­mond says, “he wan­ted it to suc­ceed.</span>
+        
+        <span class="book-sentence" id="s-10-56-4-p0">But Keith and I and other peop­le there sort of loo­ked at that and went, ‘It’s be­au­ti­ful but it will never fly, it’s too com­pli­ca­ted.’” Subt­le and flee­ting as that mo­ment of rea­liza­t­i­on was, it re­pre­sen­ted the end of a ha­cker era.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-57">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-57-1-p0">And also the be­gin­ning of the next.</span>
+        
+        <span class="book-sentence" id="s-10-57-2-p0">“The tribe as a whole wasn’t that con­scious about rea­li­zing that the Linux ker­nel was going to be it yet,” Ray­mond says, “but I think we al­re­a­dy knew it.” Ray­mond emer­ged from the con­fe­rence chan­ged by the ex­pe­ri­ence.</span>
+        
+        <span class="book-sentence" id="s-10-57-3-p0">He be­lie­ves “that con­fe­rence was one of the things that pus­hed me over the edge” to set down his theo­ry about Linux and its de­ve­lop­ment me­tho­do­lo­gy in what be­ca­me <em>The Ca­the­dral and the Ba­zaar</em>.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-58">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-58-1-p0">Be­fo­re doing so, Ray­mond re­sol­ved to do so­me­thing ex­tra­or­di­na­ry: to test that theo­ry first.</span>
+        
+        <span class="book-sentence" id="s-10-58-2-p0">“I have the men­tal at­ti­tu­de of a sci­en­tist,” he says.</span>
+        
+        <span class="book-sentence" id="s-10-58-3-p0">“If you’re a sci­en­tist, when you form a theo­ry, you test it by ex­pe­ri­ment; that’s just what you do.” His test re­qui­red a piece of free soft­ware to which he could at­tempt to apply a Linux-like de­ve­lop­ment ap­proach.</span>
+        
+        <span class="book-sentence" id="s-10-58-4-p0">Ray­mond wan­ted to find out whe­ther ap­p­ly­ing the me­tho­do­lo­gy in its­elf would be en­ough to crea­te a com­mu­ni­ty around the soft­ware that would see to its con­stant im­pro­ve­ment.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-59">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-59-1-p0">“I was quite con­scious­ly on the look­out for so­me­thing sui­ta­ble,” he says.</span>
+        
+        <span class="book-sentence" id="s-10-59-2-p0">A piece of soft­ware cal­led Pop­cli­ent pre­sen­ted its­elf.</span>
+        
+        <span class="book-sentence" id="s-10-59-3-p0">Ray­mond began the pro­ject in June 1996; in Oc­to­ber he re­leased the first beta ver­si­on of what he had re­na­med Fetchmail; as its name im­plies, Fetchmail’s main job is to fetch mail from mail ser­vers, un­li­ke All­man’s more fa­mous Send­mail, which sends it on.</span>
+        
+        <span class="book-sentence" id="s-10-59-4-p0">Through his ex­pe­ri­en­ces with Fetchmail, Ray­mond was able to test and re­fi­ne his ideas about how it might be pos­si­ble to “do high qua­li­ty soft­ware with a mob,” as he put it.</span>
+        
+        <span class="book-sentence" id="s-10-59-5-p0">The re­sult was his essay <em>The Ca­the­dral and the Ba­zaar</em>, which he wrote in late 1996 and fi­nis­hed in early 1997.</span>
+        
+        <span class="book-sentence" id="s-10-59-6-p0">Ass well as being fre­e­ly avail­able on­line, the essay has also been pu­blis­hed in book form by O’Reil­ly &#x26; As­so­cia­tes, along with Ray­mond’s other es­says.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-60">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-60-1-p0"><em>The Ca­the­dral and the Ba­zaar</em> be­gins with a chal­len­ge to the soft­ware world: “Linux is sub­ver­si­ve.” Ray­mond then goes on to ex­plain the basic me­ta­phors of his paper: “I be­lie­ved that the most im­portant soft­ware (ope­ra­ting sys­tems and re­al­ly large tools like Emacs) nee­ded to be built like ca­the­drals, ca­re­ful­ly craf­ted by in­di­vi­du­al wi­zards or small bands of mages working in sple­ndid iso­la­ti­on, with no beta to be re­leased be­fo­re its time.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-61">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-61-1-p0">Ass a re­sult, Ray­mond wri­tes, “Linus Tor­valds’s style of de­ve­lop­ment—re­lease early and often, de­le­ga­te ever­y­thing you can, be open to the point of pro­mis­cui­ty—came as a sur­pri­se....</span>
+        
+        <span class="book-sentence" id="s-10-61-2-p0">the Linux com­mu­ni­ty see­med to re­sem­ble a great bab­b­ling ba­zaar of dif­fe­ring agen­das and ap­proa­ches....</span>
+        
+        <span class="book-sentence" id="s-10-61-3-p0">out of which a co­he­rent and sta­ble sys­tem could see­mingly emer­ge only by a suc­ces­si­on of mi­ra­cles.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-62">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-62-1-p0">The rest of the essay con­sists of a se­ries of apho­risms about the open sour­ce pro­cess, to­ge­ther with com­men­ta­ry.</span>
+        
+        <span class="book-sentence" id="s-10-62-2-p0">The form is in­di­ca­ti­ve of Ray­mond’s li­tera­ry tas­tes: the apho­rism—a short, pithy say­ing—pro­vi­des a per­fect show­ca­se for his gifts as a wri­ter.</span>
+        
+        <span class="book-sentence" id="s-10-62-3-p0">One of the re­a­sons he has been so in­flu­en­ti­al in the world of free soft­ware is his abili­ty to en­cap­su­la­te com­plex ideas in snap­py slo­gans.</span>
+        
+        <span class="book-sentence" id="s-10-62-4-p0">Ass the self-ap­poin­ted front-man for free soft­ware, Ray­mond is con­ti­nuing Mark Bolz­ern’s pionee­ring work as the de facto mar­ke­ting di­rec­tor for GNU/Linux—with a si­mi­lar­ly non­e­xis­tent re­mu­n­e­ra­ti­on other than peer es­te­em.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-63">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-63-1-p0">Ray­mond’s first apho­rism: “Every good work of soft­ware starts by scratching a de­ve­l­oper’s per­so­nal itch.” “Scratching an itch” is a me­mo­r­able way to de­scri­be the act of be­gin­ning a free soft­ware pro­ject, even if it does gloss over the com­plex re­a­sons that top ha­ckers such as Linus start co­ding, as the ge­ne­sis of Linux de­mons­tra­tes.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-64">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-64-1-p0">His se­cond apho­rism, “Good pro­gramm­ers know what to write.</span>
+        
+        <span class="book-sentence" id="s-10-64-2-p0">Great ones know what to re­wri­te (and reuse)” is close to a si­mi­lar phra­se that is usual­ly at­tri­bu­ted to Pablo Pi­cas­so: “Good ar­tists bor­row, great ar­tists steal.” Ray­mond says the “par­al­le­lism was in­ten­tio­nal.” The key point, of cour­se, is that tra­di­tio­nal, black box clo­sed soft­ware does not per­mit such re­wri­ting and reu­sing, and so can­not enjoy the be­ne­fits they bring.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-65">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-65-1-p0">“Plan to throw one away; you will, anyhow” is not just si­mi­lar to the words of so­meo­ne else, but a di­rect quo­ta­ti­on, in this case of Fred Brooks.</span>
+        
+        <span class="book-sentence" id="s-10-65-2-p0">Brooks ho­vers as a con­stant pre­sence over not only Ray­mond’s paper but of the ent­i­re free soft­ware mo­ve­ment.</span>
+        
+        <span class="book-sentence" id="s-10-65-3-p0">Alt­hough Brooks was wri­ting about the crea­ti­on of main­frame soft­ware de­ca­des ago, the es­says in which he de­scri­bed and war­ned against the pit­falls of large-scale de­ve­lop­ment pro­jects also in­di­rect­ly sug­gest ways of avo­iding them—do things in a ra­di­cal­ly dif­fe­rent man­ner.</span>
+        
+        <span class="book-sentence" id="s-10-65-4-p0">Much of <em>The Ca­the­dral and the Ba­zaar</em> is about un­der­stan­ding how to rea­li­ze that dif­fe­rence in prac­tical terms.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-66">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-66-1-p0">The next three apho­risms form the heart of Ray­mond’s paper.</span>
+        
+        <span class="book-sentence" id="s-10-66-2-p0">“Trea­ting your users as co-de­ve­l­o­pers is your least-hass­le route to rapid code im­pro­ve­ment and ef­fec­tive de­bug­ging,” he wri­tes.</span>
+        
+        <span class="book-sentence" id="s-10-66-3-p0">“Re­lease early.</span>
+        
+        <span class="book-sentence" id="s-10-66-4-p0">Re­lease often.</span>
+        
+        <span class="book-sentence" id="s-10-66-5-p0">And lis­ten to your cust­o­m­ers.” And last: “given a large en­ough beta-tes­ter and co-de­ve­l­oper base, al­most every pro­blem will be cha­rac­te­ri­zed quick­ly and the fix ob­vious to so­meo­ne.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-67">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-67-1-p0">Ray­mond re­casts the last of these in the more pun­chy phra­se “Given en­ough eye­balls, all bugs are shal­low,” and dubs it Linus’s Law; in many ways this stands as the re­so­lu­ti­on of the co­nund­rum posed by what is known as Brooks’s Law: “Ad­ding man­power to a late soft­ware pro­ject makes it later.” Linus’s Law, taken with the pre­vious two apho­risms, sta­tes that the strength of open sour­ce lies in its abili­ty to har­ness a huge user base, no­ta­b­ly via the In­ter­net.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-68">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-68-1-p0">Ray­mond right­ly calls Linus’s Law the “core dif­fe­rence” bet­ween the ca­the­dral-buil­der and the ba­zaar modes.</span>
+        
+        <span class="book-sentence" id="s-10-68-2-p0">Ass he wri­tes, “In the ca­the­dral-buil­der view of pro­gramming, bugs and de­ve­lop­ment pro­blems are tri­cky, in­s­idious, deep pheno­me­na.</span>
+        
+        <span class="book-sentence" id="s-10-68-3-p0">It takes months of scru­ti­ny by a de­di­ca­ted few to de­ve­lop con­fi­dence that you’ve win­k­led them all out.</span>
+        
+        <span class="book-sentence" id="s-10-68-4-p0">Thus the long re­lease in­ter­vals, and the in­e­vi­ta­ble disap­point­ment when long-awai­ted re­lea­ses are not per­fect.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-69">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-69-1-p0">“In the ba­zaar view, on the other hand,” he con­ti­nues, “you as­su­me that bugs are ge­ne­ral­ly shal­low pheno­me­na—or, at least, that they turn shal­low pret­ty quick when ex­po­sed to a thousand eager co-de­ve­l­o­pers poun­ding on every sin­gle new re­lease.</span>
+        
+        <span class="book-sentence" id="s-10-69-2-p0">Ac­cor­dingly you re­lease often in order to get more cor­rec­tions, and as a be­ne­fi­ci­al side ef­fect you have less to lose if an oc­ca­sio­nal botch gets out the door.” In other words, Linus’s Law im­plies the other two apho­risms, and taken to­ge­ther re­pre­sent the open-sour­ce pro­cess boi­led down to its very es­sence.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-70">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-70-1-p0">Ray­mond throws some im­portant light on the for­mu­la­ti­on of this key sec­tion.</span>
+        
+        <span class="book-sentence" id="s-10-70-2-p0">Linus, he says, “saw the drafts be­fo­re it was fi­nis­hed, and he did two im­portant things.</span>
+        
+        <span class="book-sentence" id="s-10-70-3-p0">One was he said that he thought I ge­ne­ral­ly had it right.</span>
+        
+        <span class="book-sentence" id="s-10-70-4-p0">And the se­cond thing was he mo­di­fied my state­ment of Linus’s Law in a cru­ci­al way.</span>
+        
+        <span class="book-sentence" id="s-10-70-5-p0">The ori­gi­nal ver­si­on of the law was ‘given a suf­fi­ci­ent­ly large num­ber of eye­balls, all bugs will be fixed’; he mo­di­fied that to ‘given a suf­fi­ci­ent­ly large num­ber of eye­balls, all bugs will be cha­rac­te­ri­zed,’ which is a so­mew­hat dif­fe­rent state­ment.</span>
+        
+        <span class="book-sentence" id="s-10-70-6-p0">For­t­u­n­a­te­ly, cha­rac­te­riza­t­i­on is the hard part.</span>
+        
+        <span class="book-sentence" id="s-10-70-7-p0">Once you have a bug cha­rac­te­ri­zed, it’s ge­ne­ral­ly easy to fix it.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-71">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-71-1-p0">Ray­mond also of­fers some in­te­res­ting thoughts on the extent to which <em>The Ca­the­dral and the Ba­zaar</em> was re­sta­ting so­me­thing that Linus al­re­a­dy knew.</span>
+        
+        <span class="book-sentence" id="s-10-71-2-p0">“My im­pres­si­on at the time was that he had those con­clu­si­ons as la­tent know­ledge, but that I was cau­sing that know­ledge to be­co­me ex­pli­cit in his mind.</span>
+        
+        <span class="book-sentence" id="s-10-71-3-p0">So I think that when he read my draft, he es­sen­ti­al­ly con­scious­ly dis­co­ve­r­ed what he al­re­a­dy knew.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-72">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-72-1-p0">The paper had a si­mi­lar ef­fect on many other ha­ckers.</span>
+        
+        <span class="book-sentence" id="s-10-72-2-p0">For ex­amp­le, at the first pu­blic rea­ding, to the Phil­adel­phia Linux User Group in early 1997, Ray­mond says that “rea­ding this paper to a bunch of ha­ckers was like put­ting a spark to tin­der.</span>
+        
+        <span class="book-sentence" id="s-10-72-3-p0">That was my ex­pe­ri­ence all through ’97, that peop­le would get ex­po­sed to this paper, and their whole view of the cul­tu­ral world they in­ha­bi­ted would chan­ge in­stant­ly.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-73">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-73-1-p0">One of his aims in crea­ting <em>The New Ha­cker’s Dic­tio­na­ry</em> was gi­ving his tribe a grea­ter con­scious­ness about what they were doing.</span>
+        
+        <span class="book-sentence" id="s-10-73-2-p0">“Over and over, I had the ex­pe­ri­ence of watching peop­le get­ting ex­po­sed to that paper,” he says, “and sud­den­ly their level of un­der­stan­ding of what they had been doing for years would jump.</span>
+        
+        <span class="book-sentence" id="s-10-73-3-p0">And their en­er­gy level would jump with it.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-74">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-74-1-p0">Alt­hough there were more im­me­dia­te ef­fects of <em>The Ca­the­dral and the Ba­zaar</em>, the abili­ty to en­er­gi­ze the ha­cker com­mu­ni­ty was in its­elf a major achie­ve­ment.</span>
+        
+        <span class="book-sentence" id="s-10-74-2-p0">At a stroke Ray­mond gave an al­re­a­dy im­pres­si­ve mo­ve­ment new im­pe­tus, and as a re­sult play­ed a major part in pre­pa­ring for its later suc­ces­ses.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-75">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-75-1-p0">Ray­mond has also pre­sen­ted these gro­wing suc­ces­ses in a way that the main­stream media can un­der­stand and re­spond to them po­si­tive­ly.</span>
+        
+        <span class="book-sentence" id="s-10-75-2-p0">“I like to de­scri­be mys­elf as Linus’s mi­nis­ter of pro­pa­gan­da,” he says.</span>
+        
+        <span class="book-sentence" id="s-10-75-3-p0">A side ef­fect of this has been that many more tra­di­tio­nal mem­bers of the free soft­ware com­mu­ni­ty see Ray­mond as pro­mo­ting him­s­elf more than the tribe.</span>
+        
+        <span class="book-sentence" id="s-10-75-4-p0">In part, this is a na­tu­ral sus­pi­ci­on in the face of that ra­rest of be­asts, the ex­tro­vert ha­cker.</span>
+        
+        <span class="book-sentence" id="s-10-75-5-p0">But these cri­tics miss the point: Those who are good at this role have to push them­sel­ves in the face of the media.</span>
+        
+        <span class="book-sentence" id="s-10-75-6-p0">To ask them to be suc­cess­ful and re­ti­ring is sim­ply a con­tra­dic­tion in terms.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-76">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-76-1-p0">Ray­mond has been ef­fec­tive in this role not only be­cau­se of his abili­ty to coin quo­ta­ble sound bites but also be­cau­se his wide and unusu­al range of in­te­rests make him into what jour­na­lists like best: a “co­lor­ful” fi­gu­re.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-77">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-77-1-p0">Ray­mond pos­ses­ses a black belt in the mar­ti­al art Tae Kwon Do and de­scri­bes him­s­elf as a “happy gun nut”; he has even per­sua­ded peop­le as di­ver­se as Linus and Stall­man to join some of his shoo­ting par­ties.</span>
+        
+        <span class="book-sentence" id="s-10-77-2-p0">A ha­cker into fire­arms is striking en­ough per­haps, but Ray­mond ma­na­ges to cap that by cal­ling him­s­elf a neo-pagan.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-78">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-78-1-p0">“I’m a third-de­gree witch” in the Wic­can re­li­gi­on—the hig­hest level, he says.</span>
+        
+        <span class="book-sentence" id="s-10-78-2-p0">“Wicca is a re­la­xed, na­tu­re-cen­te­red po­lyt­he­ism long on di­rect ex­pe­ri­ence and short on dogma,” he ex­plains.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-79">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-79-1-p0">“My be­liefs don’t in­vol­ve much re­sem­bling any­thing that you would call tra­di­tio­nal re­li­gious faith,” he says, and in any case, he adds, “I don’t prac­tice a lot any­mo­re.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-80">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-80-1-p0">But Ray­mond be­lie­ves that “the tech­ni­ques and at­ti­tu­des that I’ve lear­ned from Zen and neo-pa­ga­nism are very much part of what makes me pu­bli­cly ef­fec­tive.” They are also com­ple­te­ly con­sis­tent with the other be­liefs that are cen­tral to his life: free soft­ware, no gun con­trol—or “an armed and self-re­li­ant ci­ti­zen­ry” as Ray­mond pre­fers to put it—and li­ber­ta­ria­nism, which he ex­plains as “the ori­gi­nal in­di­vi­dua­list, small go­vern­ment, free-trade, rely-on-the-mar­ket-not-on-co­er­ci­on ideo­lo­gy.” More spe­ci­fi­cal­ly, he de­scri­bes him­s­elf as be­longing to a group cal­led “mar­ket an­ar­chists” who “would like to ab­olish go­vern­ment al­to­ge­ther.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-81">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-81-1-p0">It is not hard to di­vi­ne where this tho­rough­go­ing dis­li­ke of cen­tra­li­zed powers—be it in the world of soft­ware, re­li­gi­on, or po­li­tics—has its roots.</span>
+        
+        <span class="book-sentence" id="s-10-81-2-p0">“I hated fee­ling power­less as a child,” Ray­mond says.</span>
+        
+        <span class="book-sentence" id="s-10-81-3-p0">“And it wasn’t just the palsy: Even if I had not had the palsy, I would not have liked being a child, be­cau­se I was in a con­di­ti­on of de­pen­dence all the time.</span>
+        
+        <span class="book-sentence" id="s-10-81-4-p0">Some peop­le can rea­di­ly live with that; I could not.</span>
+        
+        <span class="book-sentence" id="s-10-81-5-p0">I guess in some sense I’ve ge­ne­ra­li­zed that; I want ever­y­bo­dy to feel em­powe­r­ed.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-82">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-82-1-p0">His la­test pro­ject in em­power­ing peop­le is cal­led <em>The Art of Unix Pro­gramming</em>.</span>
+        
+        <span class="book-sentence" id="s-10-82-2-p0">“This is a book about how to think like a Unix guru,” he says.</span>
+        
+        <span class="book-sentence" id="s-10-82-3-p0">“You can view it as a con­ti­nua­ti­on of a theme that’s been pre­sent in my work all along, which is the con­scious elu­ci­da­ti­on of un­con­scious know­ledge.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-83">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-83-1-p0">“The spe­ci­fic mo­ti­va­ti­on in this case,” he says, “is that there are thousands of eager young Linux pro­gramm­ers who are run­ning around with bits and pie­ces of this Unix tra­di­ti­on, but they don’t have the whole thing; they don’t have this syn­the­tic over­view, the phi­lo­so­phy, and it will make them more ef­fec­tive if they have that.” Ass with <em>The New Ha­cker’s Dic­tio­na­ry</em>, Ray­mond views this as a col­la­bo­ra­ti­ve ven­ture.</span>
+        
+        <span class="book-sentence" id="s-10-83-2-p0">“But the po­pu­la­ti­on that I ex­pect to be in­vol­ved with this is so­mew­hat more re­stric­ted,” he notes, given the more ra­re­fied na­tu­re of its con­tents.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-84">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-84-1-p0">Unix pro­gramming is an art, Ray­mond be­lie­ves, be­cau­se “when you do it at a high en­ough level, there’s a very strong aes­t­he­tic sa­tis­fac­tion that you get from wri­ting an ele­gant pro­gram.</span>
+        
+        <span class="book-sentence" id="s-10-84-2-p0">If you don’t get that kind of gra­ti­fi­ca­ti­on, you never join the cul­tu­re.</span>
+        
+        <span class="book-sentence" id="s-10-84-3-p0">Just as you don’t get com­po­sers wi­thout an ear for music, you don’t get ha­ckers wi­thout an abili­ty to be aes­t­he­ti­cal­ly gra­ti­fied by wri­ting pro­grams.” This ele­ment of aes­t­he­tic gra­ti­fi­ca­ti­on per­haps pro­vi­des the key to ex­plai­ning one of the mis­sing pie­ces of Ray­mond’s other­wi­se com­pre­hen­si­ve ex­pla­na­ti­on of the open-sour­ce pro­cess.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-85">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-85-1-p0">In a fol­low-up essay to <em>The Ca­the­dral and the Ba­zaar</em>, cal­led <em>Ho­mes­tea­ding the Noo­s­phe­re</em>, Ray­mond ex­plo­red an ap­pa­rent pa­ra­dox at the heart of open-sour­ce soft­ware: If ever­yo­ne is free to take the code and mo­di­fy it, why do major pro­jects like Linux or Apa­che ra­re­ly split, or ‘fork,’ as ha­ckers say, just as the old-style com­mer­ci­al Uni­xes did?</span>
+        
+        <span class="book-sentence" id="s-10-85-2-p0">He sug­gests that peer es­te­em, the key dri­ving force for peop­le working in the world of free soft­ware, ex­plains the ef­fect.</span>
+        
+        <span class="book-sentence" id="s-10-85-3-p0">He de­mons­tra­tes well that the dy­na­mics of such a “gift eco­no­my”—where pres­ti­ge is mea­su­red not by what you have, but by what you give away—tend to re­du­ce the thre­at of for­king.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-86">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-86-1-p0">Cer­tain­ly this ana­ly­sis goes a long way to ex­plai­ning why so many coders around the world wil­lingly de­vo­te them­sel­ves to these pro­jects with no im­me­dia­te thought of ma­te­ri­al re­ward.</span>
+        
+        <span class="book-sentence" id="s-10-86-2-p0">In one re­spect, it is un­sa­tis­fac­to­ry: It does not ex­plain why top ha­ckers—Linus or Larry Wall—began and then de­vo­ted so much ef­fort to their fledgling pro­jects.</span>
+        
+        <span class="book-sentence" id="s-10-86-3-p0">Ray­mond’s “scratching an itch” does not suf­fice, eit­her: The it­ches would have been amply scrat­ched by pro­jects far less am­bi­tious—and far less im­pres­si­ve—than what be­ca­me Linux or Perl, say.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-87">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-87-1-p0">There are pre­ce­dents for gif­ted in­di­vi­du­als who con­cei­ve and work on huge pro­jects, often with litt­le hope not only of re­com­pen­se but of re­co­gni­ti­on.</span>
+        
+        <span class="book-sentence" id="s-10-87-2-p0">In other sphe­res, these peop­le are cal­led ar­tists, and much of the his­to­ry of art is the story of those who crea­te mas­ter­works out of an inner ne­ces­si­ty to do so, over and above what they may have been paid to pro­du­ce.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-88">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-88-1-p0">Striking par­al­lels exist bet­ween the sto­ries of top ha­ckers and fa­mous ar­tists.</span>
+        
+        <span class="book-sentence" id="s-10-88-2-p0">For ex­amp­le, ge­nerous fun­ding from aristo­cra­tic pa­trons enab­led Lud­wig van Beet­ho­ven to de­vo­te him­s­elf to wri­ting works of such ori­gi­na­li­ty that they were often in­com­pre­hen­si­ble to his con­tem­pora­ries, and also to pro­mo­te the then-ra­di­cal ide­als of li­ber­ty he be­lie­ved in.</span>
+        
+        <span class="book-sentence" id="s-10-88-3-p0">In the same way, Ri­chard Stall­man has been able to de­vo­te him­s­elf to his co­ding and cam­pai­gning thanks in part to pa­tro­na­ge such as the McAr­thur Foun­da­ti­on fel­lowship.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-89">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-89-1-p0">Jo­hann Wolf­gang von Goe­the was a mi­nis­ter of state at the Ger­man court of Wei­mar, and took his du­ties there as se­rious­ly as his work on such pro­jects as his mas­ter­pie­ce <em>Faust</em>, a vast patch­work of poe­try that oc­cu­p­ied him for fifty years.</span>
+        
+        <span class="book-sentence" id="s-10-89-2-p0">Along­s­ide these major re­s­pon­si­bi­li­ties, Goe­the ma­na­ged to jugg­le a fa­mi­ly life (un­li­ke Beet­ho­ven), ra­ther as Linus so­mehow does (un­li­ke Stall­man) while hol­ding down a full-time job at Trans­me­ta and pus­hing for­ward his own life work that grows through con­stant ac­cre­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-90">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-90-1-p0">Per­cep­ti­ve ana­lyst that he is, Ray­mond is well aware of this as­pect.</span>
+        
+        <span class="book-sentence" id="s-10-90-2-p0">In <em>Ho­mes­tea­ding the Noo­s­phe­re</em>, he wri­tes, “In ma­king this ‘re­pu­ta­ti­on game’ ana­ly­sis, by the way, I do not mean to de­va­lue or igno­re the pure ar­tis­tic sa­tis­fac­tion of de­si­gning be­au­ti­ful soft­ware and ma­king it work.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-91">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-91-1-p0">We all ex­pe­ri­ence this kind of sa­tis­fac­tion and thri­ve on it.” But he tends to down­play it and sub­su­me it in the ‘re­pu­ta­ti­on model.’</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-92">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-92-1-p0">Sup­port for the view that ar­tis­tic sa­tis­fac­tion is a bet­ter ex­pla­na­ti­on, at least for the key in­itia­ting fi­gu­res of the free soft­ware mo­ve­ment, is pro­vi­ded by so­meo­ne to whom Ray­mond made a nod of re­spect in his choice of the title <em>The Art of Unix Pro­gramming</em> for his next book.</span>
+        
+        <span class="book-sentence" id="s-10-92-2-p0">“It was a con­scious re­fe­rence to Do­nald Knuth’s <em>The Art of Com­pu­ter Pro­gramming</em>,” he says.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-93">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-93-1-p0">Alt­hough not well known outs­ide com­pu­ting cir­cles, Do­nald Knuth towers over the di­sci­pli­ne of com­pu­ter sci­ence; he is a kind of grand­fa­ther of the free soft­ware mo­ve­ment and fo­res­ha­do­wed many of its ideas and tech­ni­ques with his own im­portant and wi­de­ly used pro­grams, all fre­e­ly avail­able.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-94">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-94-1-p0">Knuth was born in 1938, in Mil­wau­kee, Wis­con­sin.</span>
+        
+        <span class="book-sentence" id="s-10-94-2-p0">Du­ring a bril­li­ant early ca­re­er as a phy­si­cist and ma­the­ma­ti­ci­an at Case In­sti­tu­te of Tech­no­lo­gy—where he was awar­ded a mas­ter’s de­gree con­tem­pora­neous­ly with his B.S.—he be­ca­me in­te­rested in the young world of com­pu­ter sci­ence.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-95">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-95-1-p0">In 1962, he star­ted work on a book that was ori­gi­nal­ly in­ten­ded to be about the de­sign of com­pi­lers—the pro­grams that con­vert sour­ce code into bi­na­ries.</span>
+        
+        <span class="book-sentence" id="s-10-95-2-p0">The pro­ject blos­s­o­med and be­ca­me the mul­ti­vo­lu­me work <em>The Art of Com­pu­ter Pro­gramming</em>.</span>
+        
+        <span class="book-sentence" id="s-10-95-3-p0">The first vo­lu­me ap­peared in 1968, the se­cond in 1969, and the third in 1973.</span>
+        
+        <span class="book-sentence" id="s-10-95-4-p0">Alt­hough these three books al­re­a­dy con­tain over 2,000 pages, Knuth plans se­veral more vo­lu­mes.</span>
+        
+        <span class="book-sentence" id="s-10-95-5-p0">This huge opus is not about how to pro­gram in a par­ti­cu­lar lan­gua­ge; it is about the theo­re­ti­cal un­der­pin­nings of all such pro­grams.</span>
+        
+        <span class="book-sentence" id="s-10-95-6-p0">Knuth is the ack­now­led­ged ex­pert on al­go­rithms, the ways of car­ry­ing out basic com­pu­ter ope­ra­ti­ons such as or­de­ring, se­ar­ching, etc.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-96">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-96-1-p0">He ex­plai­ned why he chose the word “art” for this work in a speech given in 1974 when he re­cei­ved the A. M. Tu­ring Award of the As­so­cia­ti­on for Com­pu­ting Ma­chine­ry, the world’s ol­dest com­pu­ter so­cie­ty.</span>
+        
+        <span class="book-sentence" id="s-10-96-2-p0">Knuth’s speech was later pu­blis­hed in the book tit­led <em>Li­te­ra­te Pro­gramming</em>.</span>
+        
+        <span class="book-sentence" id="s-10-96-3-p0">“When I speak about com­pu­ter pro­gramming as an art,” he said, “I am thin­king pri­ma­ri­ly of it as an art form, in an aes­t­he­tic sense.</span>
+        
+        <span class="book-sentence" id="s-10-96-4-p0">The chief goal of my work as edu­ca­tor and aut­hor is to help peop­le learn how to write be­au­ti­ful pro­grams.” He later ex­plai­ned, “My fee­ling is that when we pre­pa­re a pro­gram, the ex­pe­ri­ence can be just like com­po­sing poe­try or music.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-97">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-97-1-p0">Knuth went fur­ther.</span>
+        
+        <span class="book-sentence" id="s-10-97-2-p0">Pro­gramming was not just an ar­tis­tic ac­tivi­ty but an art-form that could be en­joy­ed by others.</span>
+        
+        <span class="book-sentence" id="s-10-97-3-p0">“When we read other peop­le’s pro­grams, we can re­co­gni­ze some of them as ge­nui­ne works of art.” This as­su­mes that the sour­ce is avail­able, as is the case for open-sour­ce soft­ware.</span>
+        
+        <span class="book-sentence" id="s-10-97-4-p0">The re­sul­ting aes­t­he­tic ex­pe­ri­ence is not minor or in­ci­den­tal: “My claim is that it is pos­si­ble to write grand pro­grams, noble pro­grams, truly ma­gni­fi­cent ones!” (The em­pha­ses in this and the pre­vious pa­ra­graph are Knuth’s.).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-98">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-98-1-p0">Knuth sum­ma­ri­zes his views this way: “Com­pu­ter pro­gramming is an art, be­cau­se it ap­p­lies ac­cu­mu­la­ted know­ledge to the world, be­cau­se it re­qui­res skill and in­ge­nui­ty, and es­pe­cial­ly be­cau­se it pro­du­ces ob­jects of be­au­ty.</span>
+        
+        <span class="book-sentence" id="s-10-98-2-p0">Pro­gramm­ers who sub­con­scious­ly view them­sel­ves as ar­tists will enjoy what they do and will do it bet­ter.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-99">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-99-1-p0">Knuth’s own pur­su­it of be­au­ty was not re­stric­ted to pro­gramming.</span>
+        
+        <span class="book-sentence" id="s-10-99-2-p0">Ass he said in a later lec­tu­re given on the re­ce­ipt of ano­ther award—the 1996 Kyoto Prize for Ad­van­ced Tech­no­lo­gy—“I was ex­ci­ted to see these vo­lu­mes [of <em>The Art of Com­pu­ter Pro­gramming</em>] not only be­cau­se I was plea­sed with the in­for­ma­ti­on they con­tai­ned but also be­cau­se of the be­au­ti­ful ty­po­gra­phy and lay­out.” They are clas­sics of ma­the­ma­ti­cal wri­ting and gent­le wit, too, no­ta­b­ly through the many quo­ta­ti­ons from texts selec­ted from Knuth’s wide rea­ding.</span>
+        
+        <span class="book-sentence" id="s-10-99-3-p0">At the head of the pre­face to Vo­lu­me 2 of <em>The Art of Com­pu­ter Pro­gramming</em>, which deals with “Se­mi­nu­me­ri­cal Al­go­rithms,” Knuth quo­tes Shake­speare’s <em>Ham­let</em>: “O dear Ophe­lia!</span>
+        
+        <span class="book-sentence" id="s-10-99-4-p0">I am ill at these num­bers: I have not art to reckon my gro­ans.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-100">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-100-1-p0">When later edi­ti­ons de­te­rio­ra­ted in ty­po­gra­phy and lay­out be­cau­se of the lower qua­li­ty of the photo-op­ti­cal ty­pe­set­ting tech­no­lo­gy in­tro­du­ced in the 1970s, Knuth did what any true ha­cker would do: He sat down and wrote some code to solve the pro­blem.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-101">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-101-1-p0">The re­sult was TEX, “a new ty­pe­set­ting pro­gram for the crea­ti­on of be­au­ti­ful books” as Knuth de­scri­bes it in the Pre­face to <em>The TEX­book</em>, his own hand­book to the pro­gram, and writ­ten to pro­vi­de users with ab­so­lu­te con­trol over the ap­pearan­ce of cha­rac­ters on the page.</span>
+        
+        <span class="book-sentence" id="s-10-101-2-p0">TEX al­lo­wed him to re-crea­te the ef­fects of hot-lead ty­pe­set­ting that had been used for the first edi­ti­ons of his book but which had now all but disap­peared.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-102">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-102-1-p0">The name TEX is de­ri­ved from the Greek word τεχνη (tekhne), which means “art,” and is also the root of the words “tech­no­lo­gy” and “tech­ni­que.” Ass well as co­m­ing with its own idio­syn­cra­tic form, TEX also has a par­ti­cu­lar pro­nun­cia­ti­on: The “X” in TEX is like the “ch” in the name of Ger­man aut­hor Ber­tolt Brecht.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-103">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-103-1-p0">Alt­hough Knuth wrote TEX for his own needs—“I first in­ten­ded it to be for mys­elf and my se­creta­ry,” he says—it soon spre­ad more wi­de­ly as others re­co­gni­zed its power and use­ful­ness.</span>
+        
+        <span class="book-sentence" id="s-10-103-2-p0">Knuth had star­ted co­ding it in March 1978, but as he was later to write in a 1989 piece cal­led <em>The Er­rors of TEX</em>, “other peop­le had begun to use TEX in Au­gust of 1978, and I was sur­pri­sed to see how fast the sys­tem was pro­pa­ga­ting.” Ass with other free soft­ware pro­jects, the more users TEX had, the more bugs they found.</span>
+        
+        <span class="book-sentence" id="s-10-103-3-p0">Well be­fo­re Eric Ray­mond had for­mu­la­ted the idea, Knuth had dis­co­ve­r­ed that “new users find new bugs,” as he later put it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-104">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-104-1-p0">“The pre­vious soft­ware that I had writ­ten for wide con­sump­ti­on had been com­pi­lers pri­ma­ri­ly, so I didn’t have as wide a fa­mi­ly of users,” Knuth ex­plains.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-105">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-105-1-p0">“So [the in­sight about users and bugs] was so­me­thing that came to me after just from the ex­pe­ri­ence that I had after, be­cau­se TEX [had] a much lar­ger, more di­ver­se set of users.” This gro­wing com­mu­ni­ty cau­sed Knuth to spend more time on the pro­ject than he had in­ten­ded.</span>
+        
+        <span class="book-sentence" id="s-10-105-2-p0">The exis­tence of these users was not an un­mi­xed bles­sing: “It was a sti­mu­lus,” Knuth says, “and it was a ter­ror.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-106">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-106-1-p0">On the one hand, he re­calls, “it was en­cou­ra­ging in the sense [that] I could see how this could re­al­ly be use­ful.” He re­joiced that what had star­ted out as a pri­va­te pro­ject had tur­ned out to be so ge­ne­ral­ly ap­p­lica­ble—just as Linux would.</span>
+        
+        <span class="book-sentence" id="s-10-106-2-p0">Today, Knuth esti­ma­tes, there are around 1 mil­li­on TEX users, and “95 per­cent of all pu­bli­ca­ti­ons in phy­sics and ma­the­ma­tics” use it, he says.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-107">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-107-1-p0">On the other hand, though, “I didn’t want it to take over my whole life.</span>
+        
+        <span class="book-sentence" id="s-10-107-2-p0">I had only one life to live,” he ex­plains, “and that had al­re­a­dy been de­ci­ded: The Art of Com­pu­ter Pro­gramming.</span>
+        
+        <span class="book-sentence" id="s-10-107-3-p0">I was sup­po­sed to fi­nish [TEX] in one year.” Ins­tead, he was faced with the pro­s­pect of spen­ding de­ca­des of his life ma­king “the best ty­pe­set­ting sys­tems for the world.” Ass a com­pro­mi­se bet­ween these con­flic­ting de­man­ds, he asked him­s­elf, “What’s the mi­ni­mum I can do and get back to wri­ting The Art of Com­pu­ter Pro­gramming wi­thout being to­tal­ly ir­re­s­pon­si­ble?”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-108">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-108-1-p0">He de­ci­ded that “ins­tead of patching what I have, let me go to what I wish I had done ori­gi­nal­ly.</span>
+        
+        <span class="book-sentence" id="s-10-108-2-p0">I’m going to give it my ab­so­lu­te best shot, and then I’m going to fi­nish it.</span>
+        
+        <span class="book-sentence" id="s-10-108-3-p0">It’s going to be good en­ough to cover 98 per­cent of ever­y­thing that peop­le need and then I’m going to free­ze it.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-109">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-109-1-p0">Ha­ving writ­ten TEX78, Knuth star­ted over with a new ver­si­on that he cal­led TEX82.</span>
+        
+        <span class="book-sentence" id="s-10-109-2-p0">Ass well as buil­ding on what he had lear­ned about wri­ting the pro­gram its­elf, Knuth was also able to ex­ploit more ef­fi­ci­ent­ly what later be­ca­me known as the Linux me­thod.</span>
+        
+        <span class="book-sentence" id="s-10-109-3-p0">Ass he wrote in The Er­rors of TEX: “from the be­gin­ning there were hund­reds of users....</span>
+        
+        <span class="book-sentence" id="s-10-109-4-p0">But now there was a new di­men­si­on: Se­veral dozen peop­le were also rea­ding the code and ma­king well-in­for­med com­ments on how to im­pro­ve it.” He was ad­op­ting a clas­sic open-sour­ce stra­te­gy; Knuth even had his own TEX lieu­ten­ants.</span>
+        
+        <span class="book-sentence" id="s-10-109-5-p0">“I had re­gu­lar mee­tings with vol­un­te­er hel­pers who re­pre­sen­ted many dif­fe­rent points of view,” he wrote.</span>
+        
+        <span class="book-sentence" id="s-10-109-6-p0">“So I had a gol­den op­por­tu­ni­ty to hone the ideas to a new state of per­fec­tion,” just as Linus would do with his inner cir­cle of ad­vi­sors.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-110">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-110-1-p0">Knuth’s quest for be­au­ty and per­fec­tion has been more sin­gle-min­ded than that of Linus or other open-sour­ce cap­ta­ins.</span>
+        
+        <span class="book-sentence" id="s-10-110-2-p0">For ex­amp­le, he not only has kept a log of all the er­rors that have been found in TEX but has writ­ten the ar­ti­cle re­fer­red to above de­tailing the ent­i­re saga.</span>
+        
+        <span class="book-sentence" id="s-10-110-3-p0">To fur­ther en­cou­ra­ge the de­bug­ging pro­cess, Knuth has taken the un­pre­ce­den­ted step of of­fe­ring fi­nan­ci­al re­wards to an­yo­ne who finds er­rors in his books or soft­ware.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-111">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-111-1-p0">The dif­fe­rence in at­ti­tu­de bet­ween Knuth and ven­dors of pro­prieta­ry soft­ware is no­te­wor­thy; the lat­ter not only don’t pay when users find bugs in their pro­ducts but char­ge cust­o­m­ers for the pri­vi­le­ge of re­porting them, be­cau­se ty­pi­cal­ly the only way to do so is to take out often ex­pen­si­ve sup­port contracts.</span>
+        
+        <span class="book-sentence" id="s-10-111-2-p0">For­t­u­n­a­te­ly for Knuth, few of his boun­ty checks have been cas­hed be­cau­se their ow­ners value them more for ha­ving been awar­ded by him than for their no­mi­nal value.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-112">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-112-1-p0">In part be­cau­se of this de­di­ca­ti­on to per­fec­tion—and be­cau­se the pro­gram is ef­fec­tive­ly fro­zen now—TEX may well be the first and only com­ple­te­ly de­bug­ged piece of com­plex soft­ware ever writ­ten.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-113">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-113-1-p0">Cur­rent­ly, Knuth is busy working on the re­mai­ning vo­lu­mes of The Art of Com­pu­ter Pro­gramming.</span>
+        
+        <span class="book-sentence" id="s-10-113-2-p0">He is re­leasing these in 128-page fa­sci­cles, in­spi­red in part by the ex­amp­le of Charles Di­ckens, whose no­vels were se­ria­li­zed in a si­mi­lar way.</span>
+        
+        <span class="book-sentence" id="s-10-113-3-p0">The main ad­van­ta­ge in se­ria­liza­t­i­on is that Knuth will re­cei­ve feed­back from his re­a­ders as he goes along; thus the de­bug­ging pro­cess will move fas­ter.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-114">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-114-1-p0">Knuth’s mas­ter­work would not have been pos­si­ble had he not had ac­cess to the work of his fel­low com­pu­ter sci­en­tists and the aca­de­mic tra­di­ti­on they for­med part of.</span>
+        
+        <span class="book-sentence" id="s-10-114-2-p0">The ready avail­a­bi­li­ty of their re­sults meant that he could draw ideas from many sour­ces.</span>
+        
+        <span class="book-sentence" id="s-10-114-3-p0">“You put to­ge­ther two ideas that are in two dif­fe­rent jour­nals,” he says; “maybe the aut­hors never knew each other.</span>
+        
+        <span class="book-sentence" id="s-10-114-4-p0">I’m the first per­son that re­al­ly knew that these two peop­le were working on the same sub­ject, which hap­pens an awful lot.” Put­ting them to­ge­ther in this way often enab­led Knuth to come up with im­portant and ori­gi­nal re­sults, but far more quick­ly and ef­fi­ci­ent­ly than if he had per­for­med all the preli­mi­na­ry work, too.</span>
+        
+        <span class="book-sentence" id="s-10-114-5-p0">In this sense, The Art of Com­pu­ter Pro­gramming is one of the grea­test mo­nu­ments to the open­ness and sharing that lies at the heart not only of open-sour­ce soft­ware but of the ent­i­re sci­en­ti­fic tra­di­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-115">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-115-1-p0">Con­scious of the ma­gni­tu­de of the task still be­fo­re him, Knuth has not used e-mail since 1990.</span>
+        
+        <span class="book-sentence" id="s-10-115-2-p0">This ap­pa­r­ent­ly ex­tre­me de­ci­si­on to cut him­s­elf off from the outs­ide world to mi­ni­mi­ze distrac­tions du­ring the crea­ti­ve pro­cess is not wi­thout pre­ce­dents.</span>
+        
+        <span class="book-sentence" id="s-10-115-3-p0">In the early years of the twen­ti­eth cen­tu­ry, Mar­cel Proust was si­mi­lar­ly en­ga­ged in a work that would do­mi­na­te his life: his vast, au­to­bio­gra­phi­cal novel A la re­cher­che du temps perdu (In se­arch of lost time).</span>
+        
+        <span class="book-sentence" id="s-10-115-4-p0">To aid his con­cen­tra­ti­on, Proust had the room where he worked in his Paris home lined with cork to muf­fle the sounds from the outs­ide world.</span>
+        
+        <span class="book-sentence" id="s-10-115-5-p0">It is hard to think of a bet­ter phy­si­cal cor­re­la­te for Knuth’s act of on­line dis­con­nec­tion.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-116">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-116-1-p0">The link bet­ween Proust and Knuth goes de­eper.</span>
+        
+        <span class="book-sentence" id="s-10-116-2-p0">The opening page of The Art of Com­pu­ter Pro­gramming reads, “This se­ries of books is af­fec­tio­na­te­ly de­di­ca­ted to the Type 650 com­pu­ter once in­stal­led at Case In­sti­tu­te of Tech­no­lo­gy, in re­mem­bran­ce of many plea­sant eve­nings”—a con­scious re­fe­rence, Knuth ack­now­led­ges, to the title of Charles Scott-Mon­crieff’s stan­dard Eng­lish trans­la­ti­on of Proust’s mas­ter­work: Re­mem­bran­ce of Things Past.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-117">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-117-1-p0">It seems ap­pro­pria­te that some­bo­dy who began his ca­re­er working with the then-new IBM 650 com­pu­ter sys­tem now finds him­s­elf an ho­no­ra­ry and high­ly ho­no­red mem­ber of today’s com­pu­ter van­guard: open sour­ce.</span>
+        
+        <span class="book-sentence" id="s-10-117-2-p0">Given his per­so­nal track re­cord of open­ness and free dis­tri­bu­ti­on of soft­ware, it is not sur­pri­sing that he should be such a staunch sup­por­ter of sour­ce code avail­a­bi­li­ty.</span>
+        
+        <span class="book-sentence" id="s-10-117-3-p0">“I’m more than sym­pa­the­tic to that; I con­sider that ab­so­lu­tely in­dis­pensa­ble for pro­gress,” he says.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-118">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-118-1-p0">Knuth uses GNU/Linux for his own com­pu­ting, and one of the main pro­grams he runs is Emacs: “That’s my fa­vo­ri­te piece of open-sour­ce soft­ware,” he says.</span>
+        
+        <span class="book-sentence" id="s-10-118-2-p0">Knuth has even sent Stall­man sug­ges­ti­ons for Emacs.</span>
+        
+        <span class="book-sentence" id="s-10-118-3-p0">“He hasn’t put them in yet,” he notes, but ack­now­led­ges that “I didn’t send them by e-mail,” be­cau­se he never uses it, and that this omis­si­on may have had an in­flu­ence.</span>
+        
+        <span class="book-sentence" id="s-10-118-4-p0">No­nethe­l­ess, Stall­man re­mains so­me­thing of a per­so­nal hero for him.</span>
+        
+        <span class="book-sentence" id="s-10-118-5-p0">“He’s on the right side of the cru­sa­de,” Knuth says.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-119">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-119-1-p0">Ass well as being a dis­tin­gu­is­hed aca­de­mic, a pro­li­fic aut­hor of key books and pa­pers in his field, and what can only be de­scri­bed as one of the most se­ni­or proto-ha­ckers, Knuth is also a keen mu­si­ci­an: He even con­tem­pla­ted stu­dy­ing music at uni­ver­si­ty ins­tead of phy­sics.</span>
+        
+        <span class="book-sentence" id="s-10-119-2-p0">More re­cent­ly, he had a fine two-ma­nu­al ba­ro­que organ built in a spe­cial­ly de­si­gned room of his house.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-120">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-120-1-p0">Knuth sha­res a love of music with many of his fel­low pro­gramm­ers of free soft­ware: Larry Wall trai­ned as a mu­si­ci­an, Ri­chard Stall­man takes music and in­stru­ments with him whe­re­ver he goes, Ted Ts’o and Ste­phen Tweed­ie sing in choirs (and Tweed­ie con­ducts them, too), Dave Mil­ler has va­rious­ly play­ed gui­tar, drums, and piano, and Eric Ray­mond has been a ses­si­on flu­tist on two al­bums.</span>
+        
+        <span class="book-sentence" id="s-10-120-2-p0">The Vic­to­ri­an art his­to­ri­an and theo­rist Wal­ter Pater wrote in his 1877 essay “The School of Gior­gio­ne” that “all art con­stant­ly aspi­res towards the con­di­ti­on of music”; per­haps this ap­p­lies to the art of code, too.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-121">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-121-1-p0">But wha­te­ver the close links bet­ween co­ding and ar­tis­tic crea­ti­on, it would be a mis­ta­ke to re­gard hacking as an ivory tower ac­tivi­ty, of in­te­rest only to some inner cir­cle of adepts.</span>
+        
+        <span class="book-sentence" id="s-10-121-2-p0">Knuth him­s­elf wrote in his essay Com­pu­ter Pro­gramming as an Art: “The ideal si­tua­ti­on oc­curs when the things we re­gard as be­au­ti­ful are also re­gar­ded by other peop­le as use­ful.” He adds, “I es­pe­cial­ly enjoy wri­ting pro­grams which do the grea­test good, in some sense,” a clear echo of Stall­man’s com­ment about the pride he felt early on in his pro­grams that were use­ful to peop­le.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-122">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-122-1-p0">Just as the best sour­ce code al­ways im­plies the exis­tence of a usa­ble bi­na­ry, so there seems to be a sense among ha­ckers that the best soft­ware—the most be­au­ti­ful as Knuth and others would say—im­plies that it ser­ves its users as much as pos­si­ble.</span>
+        
+        <span class="book-sentence" id="s-10-122-2-p0">Time and again, the top ha­ckers refer to the sense of com­mu­ni­ty their work crea­tes, a com­mu­ni­ty de­fi­ned by the users of the bi­na­ries ge­ne­ra­ted from their code.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-123">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-123-1-p0">This sense of crea­ting and ser­ving a com­mu­ni­ty, per­haps as much as any aes­t­he­tic sense, is the com­mo­nest mo­ti­va­ti­on for the grea­test ha­ckers.</span>
+        
+        <span class="book-sentence" id="s-10-123-2-p0">The com­mu­ni­ty was the goal, not just a re­sult, of Stall­man’s crea­ti­on of the GNU pro­ject.</span>
+        
+        <span class="book-sentence" id="s-10-123-3-p0">Send­mail’s crea­tor Eric All­man says that for him free soft­ware is “about so­cie­ty,” and adds, “I sup­po­se that sounds fair­ly out there, but that re­al­ly does it for me.” Si­mi­lar­ly, spea­king for the core mem­bers of the Apa­che Group, Brian Beh­len­dorf puts it this way: “To us the pri­ma­ry be­ne­fit of using Apa­che was using it as part of the com­mu­ni­ty at large, ra­ther than just using it for the 1s and 0s it re­pre­sen­ted.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-124">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-124-1-p0">Per­haps the most ar­ti­cu­la­te ex­po­nent of the cen­tra­li­ty of the com­mu­ni­ty to open sour­ce is Larry Wall.</span>
+        
+        <span class="book-sentence" id="s-10-124-2-p0">He has spo­ken of wan­ting to serve peop­le through Perl, and rea­li­zed that this “nee­ded the cul­tu­re around the lan­gua­ge,” as he says—and cul­tu­res are ge­ne­ra­ted by a com­mu­ni­ty of users.</span>
+        
+        <span class="book-sentence" id="s-10-124-3-p0">“That starts off small with the feed­back loop,” he says, “but I also rea­li­zed that there’s not only the first-order feed­back loop going on there, there’s the in­ter­ac­tions among peop­le, and that it’s pro­bab­ly more va­luable what the other peop­le ex­ch­an­ge among them­sel­ves in terms of Perl scripts than what I’m ex­ch­an­ging with them.</span>
+        
+        <span class="book-sentence" id="s-10-124-4-p0">Be­cau­se the se­cond-order ef­fects are many-to-many, whe­re­as the re­la­ti­ons­hip with the cen­ter is one-to-many.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-125">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-125-1-p0">In a sense, Wall wrote Perl and dis­tri­bu­ted it fre­e­ly to give mem­bers of the com­mu­ni­ty that grew around it the pos­si­bi­li­ty of a si­mi­lar ge­ne­ro­si­ty in their in­ter­ac­tions with each other—but one on an even lar­ger scale, thanks to the net­work ef­fect.</span>
+        
+        <span class="book-sentence" id="s-10-125-2-p0">“By and large I think I’ve got my wish on that,” Wall says.</span>
+        
+        <span class="book-sentence" id="s-10-125-3-p0">“Peop­le re­al­ly do help peop­le for the sake of hel­ping peop­le.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-126">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-126-1-p0">For Wall, a com­mit­ted Chris­ti­an, this hoped-for ef­fect is not­hing less than “theo­lo­gi­cal.” Wall draws ex­pli­cit par­al­lels bet­ween his crea­ti­on of Perl, ar­tis­tic crea­ti­on in ge­ne­ral, and the pri­mor­di­al Crea­ti­on.</span>
+        
+        <span class="book-sentence" id="s-10-126-2-p0">“The me­ta­phor of mes­sia­nic over­to­nes is cer­tain­ly there,” he ad­mits, and adds with a cha­rac­te­ris­tic am­bi­gui­ty, “I si­mul­ta­neous­ly try to take them se­rious­ly and not se­rious­ly.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-127">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-127-1-p0">Su­re­ly it is no ac­ci­dent that Knuth, too, is a de­eply re­li­gious man, as are other lea­ding ha­ckers such as Ted Ts’o, and that even those who are not re­li­gious, such as Ri­chard Stall­man and Linus, have a strong un­der­ly­ing ethi­cal com­po­nent to their cha­rac­ters.</span>
+        
+        <span class="book-sentence" id="s-10-127-2-p0">This per­va­si­ve as­pect means that, un­li­ke com­mer­ci­al soft­ware ven­dors, which at most can pro­mi­se ma­te­ri­al re­wards, the free soft­ware pro­jects can offer so­me­thing much more va­luable on a human level, if more int­an­gi­b­le.</span>
+        
+        <span class="book-sentence" id="s-10-127-3-p0">Tap­ping into the best that is in peop­le, it calls forth the best in all sorts of ways, not least in code qua­li­ty.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-10-128">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-10-128-1-p0">After 1996, even the most cy­ni­cal and jaded ob­ser­vers of the tech­no­lo­gy scene were be­gin­ning to no­ti­ce this.</span>
+        
+        <span class="book-sentence" id="s-10-128-2-p0">Free soft­ware, the In­ter­net’s best-kept se­cret, was about to enter the main­stream.</span>
+        
+      </p>
+    </section>
+  </article>
+  <nav class="chapter-nav book-chapter-nav">
+    <a class="nav-btn prev" href="09-8-learning-from-berkeley.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="11-10-low-down-in-the-valley.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
+</main>
+  <script src="../../../assets/reader.js" defer></script>
+</body>
+</html>

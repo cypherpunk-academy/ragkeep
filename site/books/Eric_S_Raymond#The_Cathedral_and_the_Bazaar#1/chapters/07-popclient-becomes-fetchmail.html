@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Popclient becomes Fetchmail</title>
+  <link rel="stylesheet" href="../../../assets/book.css" />
+</head>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <article class="book-chapter" data-chapter="7" id="c-7">
+    <h1 class="book-chapter-title" id="c-7-title" data-slug="popclient-becomes-fetchmail">Popclient becomes Fetchmail</h1>
+    <section class="book-paragraph" id="p-7-1">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-1">1|</a>
+        <span class="book-sentence" id="s-7-1-1-p0">The real turning point in the pro­ject was when Harry Hoch­hei­ser sent me his scratch code for for­war­ding mail to the cli­ent ma­chi­ne's SMTP port.</span>
+        
+        <span class="book-sentence" id="s-7-1-2-p0">I rea­li­zed al­most im­me­dia­te­ly that a re­lia­ble im­ple­men­ta­ti­on of this fea­ture would make all the other mail de­li­very modes next to ob­so­le­te.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-2">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-2">2|</a>
+        <span class="book-sentence" id="s-7-2-1-p0">For many weeks I had been twea­king fetchmail ra­ther in­cre­men­tal­ly while fee­ling like the in­ter­face de­sign was ser­vice­able but grub­by—in­ele­gant and with too many exi­guous op­ti­ons han­ging out all over.</span>
+        
+        <span class="book-sentence" id="s-7-2-2-p0">The op­ti­ons to dump fet­ched mail to a mail­box file or stan­dard out­put par­ti­cu­lar­ly bo­the­red me, but I couldn't fi­gu­re out why.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-3">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-3">3|</a>
+        <span class="book-sentence" id="s-7-3-1-p0">(If you don't care about the tech­ni­ca­lia of In­ter­net mail, the next two pa­ra­graphs can be safe­ly skip­ped.)</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-4">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-4">4|</a>
+        <span class="book-sentence" id="s-7-4-1-p0">What I saw when I thought about SMTP for­war­ding was that pop­cli­ent had been try­ing to do too many things.</span>
+        
+        <span class="book-sentence" id="s-7-4-2-p0">It had been de­si­gned to be both a mail trans­port agent (MTA) and a local de­li­very agent (MDA).</span>
+        
+        <span class="book-sentence" id="s-7-4-3-p0">With SMTP for­war­ding, it could get out of the MDA busi­ness and be a pure MTA, han­ding off mail to other pro­grams for local de­li­very just as send­mail does.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-5">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-5">5|</a>
+        <span class="book-sentence" id="s-7-5-1-p0">Why mess with all the com­ple­xi­ty of con­fi­gu­ring a mail de­li­very agent or set­ting up lock-and-ap­pend on a mail­box when port 25 is al­most gua­ran­te­ed to be there on any plat­form with TCP/IP sup­port in the first place?</span>
+        
+        <span class="book-sentence" id="s-7-5-2-p0">Es­pe­cial­ly when this means re­trie­ved mail is gua­ran­te­ed to look like nor­mal sen­der-in­itia­ted SMTP mail, which is re­al­ly what we want any­way.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-6">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-6">6|</a>
+        <span class="book-sentence" id="s-7-6-1-p0">(Back to a hig­her level....)</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-7">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-7">7|</a>
+        <span class="book-sentence" id="s-7-7-1-p0">Even if you didn't fol­low the pre­ce­ding tech­ni­cal jar­gon, there are se­veral im­portant les­sons here.</span>
+        
+        <span class="book-sentence" id="s-7-7-2-p0">First, this SMTP-for­war­ding con­cept was the big­gest sin­gle pay­off I got from con­scious­ly try­ing to emu­la­te Linus's me­thods.</span>
+        
+        <span class="book-sentence" id="s-7-7-3-p0">A user gave me this ter­ri­fic idea—all I had to do was un­der­stand the im­pli­ca­ti­ons.</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-7-1" data-slug="11-the-next-best-thing-to-having-good-ideas-is-recognizing-good-ideas-from-your-users-sometimes-the-latter-is-better">11. The next best thing to having good ideas is recognizing good ideas from your users. Sometimes the latter is better.</h2>
+    <section class="book-paragraph" id="p-7-8">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-8">8|</a>
+        <span class="book-sentence" id="s-7-8-1-p0">In­te­res­ting­ly en­ough, you will quick­ly find that if you are com­ple­te­ly and self-depre­ca­ting­ly trut­h­ful about how much you owe other peop­le, the world at large will treat you as though you did every bit of the in­ven­ti­on yours­elf and are just being be­co­m­ingly mo­dest about your in­na­te ge­ni­us.</span>
+        
+        <span class="book-sentence" id="s-7-8-2-p0">We can all see how well this worked for Linus!</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-9">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-9">9|</a>
+        <span class="book-sentence" id="s-7-9-1-p0">(When I gave my talk at the first Perl Con­fe­rence in Au­gust 1997, ha­cker ex­tra­or­di­nai­re Larry Wall was in the front row.</span>
+        
+        <span class="book-sentence" id="s-7-9-2-p0">Ass I got to the last line above he cal­led out, re­li­gious-re­vi­val style,</span>
+        
+        <span class="book-sentence" id="s-7-9-2-p1-q"><q author="Larry Wall" part="1">Tell it, tell it, bro­ther!</q></span>
+        
+        <span class="book-sentence" id="s-7-9-2-p2">. The whole au­di­ence laug­hed, be­cau­se they knew this had worked for the in­ven­tor of Perl, too.)</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-10">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-10">10|</a>
+        <span class="book-sentence" id="s-7-10-1-p0">After a very few weeks of run­ning the pro­ject in the same spi­rit, I began to get si­mi­lar prai­se not just from my users but from other peop­le to whom the word lea­k­ed out.</span>
+        
+        <span class="book-sentence" id="s-7-10-2-p0">I stas­hed away some of that email; I'll look at it again so­me­time if I ever start won­de­ring whe­ther my life has been worthw­hi­le:-).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-11">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-11">11|</a>
+        <span class="book-sentence" id="s-7-11-1-p0">But there are two more fun­da­men­tal, non-po­li­ti­cal les­sons here that are ge­ne­ral to all kinds of de­sign.</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-7-2" data-slug="12-often-the-most-striking-and-innovative-solutions-come-from-realizing-that-your-concept-of-the-problem-was-wrong">12. Often, the most striking and innovative solutions come from realizing that your concept of the problem was wrong.</h2>
+    <section class="book-paragraph" id="p-7-12">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-12">12|</a>
+        <span class="book-sentence" id="s-7-12-1-p0">I had been try­ing to solve the wrong pro­blem by con­ti­nuing to de­ve­lop pop­cli­ent as a com­bi­ned MTA/MDA with all kinds of funky local de­li­very modes.</span>
+        
+        <span class="book-sentence" id="s-7-12-2-p0">Fetchmail's de­sign nee­ded to be re­thought from the ground up as a pure MTA, a part of the nor­mal SMTP-spea­king In­ter­net mail path.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-13">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-13">13|</a>
+        <span class="book-sentence" id="s-7-13-1-p0">When you hit a wall in de­ve­lop­ment—when you find yours­elf hard put to think past the next patch—it's often time to ask not whe­ther you've got the right an­s­wer, but whe­ther you're as­king the right ques­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-13-2-p0">Per­haps the pro­blem needs to be re­framed.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-14">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-14">14|</a>
+        <span class="book-sentence" id="s-7-14-1-p0">Well, I had re­framed my pro­blem.</span>
+        
+        <span class="book-sentence" id="s-7-14-2-p0">Cle­ar­ly, the right thing to do was (1) hack SMTP for­war­ding sup­port into the ge­ne­ric dri­ver, (2) make it the de­fault mode, and (3) even­tual­ly throw out all the other de­li­very modes, es­pe­cial­ly the de­li­ver-to-file and de­li­ver-to-stan­dard-out­put op­ti­ons.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-15">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-15">15|</a>
+        <span class="book-sentence" id="s-7-15-1-p0">I he­si­ta­ted over step 3 for some time, fea­ring to upset long-time pop­cli­ent users de­pen­dent on the al­ter­na­te de­li­very me­cha­nisms.</span>
+        
+        <span class="book-sentence" id="s-7-15-2-p0">In theo­ry, they could im­me­dia­te­ly switch to.for­ward files or their non-send­mail equi­va­l­ents to get the same ef­fects.</span>
+        
+        <span class="book-sentence" id="s-7-15-3-p0">In prac­tice the tran­si­ti­on might have been messy.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-16">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-16">16|</a>
+        <span class="book-sentence" id="s-7-16-1-p0">But when I did it, the be­ne­fits pro­ved huge.</span>
+        
+        <span class="book-sentence" id="s-7-16-2-p0">The cruf­tiest parts of the dri­ver code va­nis­hed.</span>
+        
+        <span class="book-sentence" id="s-7-16-3-p0">Con­fi­gu­ra­ti­on got ra­di­cal­ly sim­pler—no more gro­vel­ling around for the sys­tem MDA and user's mail­box, no more worries about whe­ther the un­der­ly­ing OS sup­ports file lo­cking.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-17">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-17">17|</a>
+        <span class="book-sentence" id="s-7-17-1-p0">Also, the only way to lose mail va­nis­hed.</span>
+        
+        <span class="book-sentence" id="s-7-17-2-p0">If you spe­ci­fied de­li­very to a file and the disk got full, your mail got lost.</span>
+        
+        <span class="book-sentence" id="s-7-17-3-p0">This can't hap­pen with SMTP for­war­ding be­cau­se your SMTP lis­tener won't re­turn OK un­less the mes­sa­ge can be de­li­ve­r­ed or at least spoo­led for later de­li­very.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-18">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-18">18|</a>
+        <span class="book-sentence" id="s-7-18-1-p0">Also, per­for­mance im­pro­ved (though not so you'd no­ti­ce it in a sin­gle run).</span>
+        
+        <span class="book-sentence" id="s-7-18-2-p0">Ano­ther not in­si­gni­fi­cant be­ne­fit of this chan­ge was that the ma­nu­al page got a lot sim­pler.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-19">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-19">19|</a>
+        <span class="book-sentence" id="s-7-19-1-p0">Later, I had to bring de­li­very via a user-spe­ci­fied local MDA back in order to allow hand­ling of some ob­scu­re si­tua­ti­ons in­vol­ving dy­na­mic SLIP.</span>
+        
+        <span class="book-sentence" id="s-7-19-2-p0">But I found a much sim­pler way to do it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-20">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-20">20|</a>
+        <span class="book-sentence" id="s-7-20-1-p0">The moral?</span>
+        
+        <span class="book-sentence" id="s-7-20-2-p0">Don't he­si­ta­te to throw away su­peran­nua­ted fea­tures when you can do it wi­thout loss of ef­fec­tiven­ess.</span>
+        
+        <span class="book-sentence" id="s-7-20-3-p0">An­toi­ne de Saint-Exupéry (who was an avia­tor and air­craft de­si­gner when he wasn't aut­ho­ring clas­sic child­ren's books) said:</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-7-3" data-slug="13-q-author-antoine-de-saint-exupery-book-title-wind-sand-and-stars-part-1-perfection-in-design-is-achieved-not-when-there-is-nothing-more-to-add-but-rather-when-there-is-nothing-more-to-take-away-q">13. &lt;q author="Antoine de Saint-Exupéry" book-title="Wind, Sand and Stars" part="1"&gt;Perfection (in design) is achieved not when there is nothing more to add, but rather when there is nothing more to take away.&lt;/q&gt;</h2>
+    <section class="book-paragraph" id="p-7-21">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-21">21|</a>
+        <span class="book-sentence" id="s-7-21-1-p0">When your code is get­ting both bet­ter and sim­pler, that is when you know it's right.</span>
+        
+        <span class="book-sentence" id="s-7-21-2-p0">And in the pro­cess, the fetchmail de­sign ac­qui­red an iden­ti­ty of its own, dif­fe­rent from the an­ces­tral pop­cli­ent.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-22">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-22">22|</a>
+        <span class="book-sentence" id="s-7-22-1-p0">It was time for the name chan­ge.</span>
+        
+        <span class="book-sentence" id="s-7-22-2-p0">The new de­sign loo­ked much more like a dual of send­mail than the old pop­cli­ent had; both are MTAs, but where send­mail pus­hes then de­li­vers, the new pop­cli­ent pulls then de­li­vers.</span>
+        
+        <span class="book-sentence" id="s-7-22-3-p0">So, two months off the blocks, I re­na­med it fetchmail.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-23">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-23">23|</a>
+        <span class="book-sentence" id="s-7-23-1-p0">There is a more ge­ne­ral les­son in this story about how SMTP de­li­very came to fetchmail.</span>
+        
+        <span class="book-sentence" id="s-7-23-2-p0">It is not only de­bug­ging that is par­al­le­liz­able; de­ve­lop­ment and (to a per­haps sur­pri­sing extent) ex­plo­ra­ti­on of de­sign space is, too.</span>
+        
+        <span class="book-sentence" id="s-7-23-3-p0">When your de­ve­lop­ment mode is ra­pidly ite­ra­ti­ve, de­ve­lop­ment and en­han­ce­ment may be­co­me spe­cial cases of de­bug­ging—fi­xing `bugs of omis­si­on' in the ori­gi­nal ca­pa­bi­li­ties or con­cept of the soft­ware.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-24">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-7-24">24|</a>
+        <span class="book-sentence" id="s-7-24-1-p0">Even at a hig­her level of de­sign, it can be very va­luable to have lots of co-de­ve­l­o­pers ran­dom-wal­king through the de­sign space near your pro­duct.</span>
+        
+        <span class="book-sentence" id="s-7-24-2-p0">Con­sider the way a pudd­le of water finds a drain, or bet­ter yet how ants find food: ex­plo­ra­ti­on es­sen­ti­al­ly by dif­fu­si­on, fol­lo­wed by ex­ploi­ta­ti­on me­dia­ted by a scalable com­mu­ni­ca­ti­on me­cha­nism.</span>
+        
+        <span class="book-sentence" id="s-7-24-3-p0">This works very well; as with Harry Hoch­hei­ser and me, one of your ou­tri­ders may well find a huge win ne­ar­by that you were just a litt­le too close-fo­cu­sed to see.</span>
+        
+      </p>
+    </section>
+  </article>
+  <nav class="chapter-nav book-chapter-nav">
+    <a class="nav-btn prev" href="06-when-is-a-rose-not-a-rose.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="08-fetchmail-grows-up.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
+</main>
+  <script src="../../../assets/reader.js" defer></script>
+</body>
+</html>

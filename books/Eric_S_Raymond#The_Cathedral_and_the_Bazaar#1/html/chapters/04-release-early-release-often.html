@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Release Early, Release Often</title>
+  <link rel="stylesheet" href="../../../assets/book.css" />
+</head>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <article class="book-chapter" data-chapter="4" id="c-4">
+    <h1 class="book-chapter-title" id="c-4-title" data-slug="release-early-release-often">Release Early, Release Often</h1>
+    <section class="book-paragraph" id="p-4-1">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-1">1|</a>
+        <span class="book-sentence" id="s-4-1-1-p0">Early and fre­quent re­lea­ses are a cri­ti­cal part of the Linux de­ve­lop­ment model.</span>
+        
+        <span class="book-sentence" id="s-4-1-2-p0">Most de­ve­l­o­pers (in­clu­ding me) used to be­lie­ve this was bad po­li­cy for lar­ger than tri­vi­al pro­jects, be­cau­se early ver­si­ons are al­most by de­fi­ni­ti­on buggy ver­si­ons and you don't want to wear out the pa­ti­ence of your users.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-2">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-2">2|</a>
+        <span class="book-sentence" id="s-4-2-1-p0">This be­lief rein­forced the ge­ne­ral com­mit­ment to a ca­the­dral-buil­ding style of de­ve­lop­ment.</span>
+        
+        <span class="book-sentence" id="s-4-2-2-p0">If the over­ri­ding ob­jec­tive was for users to see as few bugs as pos­si­ble, why then you'd only re­lease a ver­si­on every six months (or less often), and work like a dog on de­bug­ging bet­ween re­lea­ses.</span>
+        
+        <span class="book-sentence" id="s-4-2-3-p0">The Emacs C core was de­ve­l­o­ped this way.</span>
+        
+        <span class="book-sentence" id="s-4-2-4-p0">The Lisp li­bra­ry, in ef­fect, was not—be­cau­se there were ac­tive Lisp ar­chi­ves outs­ide the FSF's con­trol, where you could go to find new and de­ve­lop­ment code ver­si­ons in­de­pen­dent­ly of Emacs's re­lease cycle [QR].</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-3">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-3">3|</a>
+        <span class="book-sentence" id="s-4-3-1-p0">The most im­portant of these, the Ohio State Emacs Lisp ar­chi­ve, an­ti­ci­pa­ted the spi­rit and many of the fea­tures of today's big Linux ar­chi­ves.</span>
+        
+        <span class="book-sentence" id="s-4-3-2-p0">But few of us re­al­ly thought very hard about what we were doing, or about what the very exis­tence of that ar­chi­ve sug­gested about pro­blems in the FSF's ca­the­dral-buil­ding de­ve­lop­ment model.</span>
+        
+        <span class="book-sentence" id="s-4-3-3-p0">I made one se­rious at­tempt around 1992 to get a lot of the Ohio code for­mal­ly mer­ged into the of­fi­ci­al Emacs Lisp li­bra­ry.</span>
+        
+        <span class="book-sentence" id="s-4-3-4-p0">I ran into po­li­ti­cal trou­ble and was lar­ge­ly un­suc­cess­ful.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-4">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-4">4|</a>
+        <span class="book-sentence" id="s-4-4-1-p0">But by a year later, as Linux be­ca­me wi­de­ly vi­si­ble, it was clear that so­me­thing dif­fe­rent and much healt­hier was going on there.</span>
+        
+        <span class="book-sentence" id="s-4-4-2-p0">Linus's open de­ve­lop­ment po­li­cy was the very op­po­si­te of ca­the­dral-buil­ding.</span>
+        
+        <span class="book-sentence" id="s-4-4-3-p0">Linux's In­ter­net ar­chi­ves were bur­geo­n­ing, mul­ti­ple dis­tri­bu­ti­ons were being floated.</span>
+        
+        <span class="book-sentence" id="s-4-4-4-p0">And all of this was dri­ven by an un­he­ard-of fre­quen­cy of core sys­tem re­lea­ses.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-5">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-5">5|</a>
+        <span class="book-sentence" id="s-4-5-1-p0">Linus was trea­ting his users as co-de­ve­l­o­pers in the most ef­fec­tive pos­si­ble way:</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-4-1" data-slug="7-release-early-release-often-and-listen-to-your-customers">7. Release early. Release often. And listen to your customers.</h2>
+    <section class="book-paragraph" id="p-4-6">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-6">6|</a>
+        <span class="book-sentence" id="s-4-6-1-p0">Linus's in­no­va­ti­on wasn't so much in doing quick-tur­naround re­lea­ses in­cor­po­ra­ting lots of user feed­back (so­me­thing like this had been Unix-world tra­di­ti­on for a long time), but in sca­ling it up to a level of in­ten­si­ty that matched the com­ple­xi­ty of what he was de­ve­lo­ping.</span>
+        
+        <span class="book-sentence" id="s-4-6-2-p0">In those early times (around 1991) it wasn't un­k­nown for him to re­lease a new ker­nel more than once a day!</span>
+        
+        <span class="book-sentence" id="s-4-6-3-p0">Be­cau­se he cul­ti­va­ted his base of co-de­ve­l­o­pers and le­ver­aged the In­ter­net for col­la­bo­ra­ti­on har­der than an­yo­ne else, this worked.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-7">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-7">7|</a>
+        <span class="book-sentence" id="s-4-7-1-p0">But how did it work?</span>
+        
+        <span class="book-sentence" id="s-4-7-2-p0">And was it so­me­thing I could du­pli­ca­te, or did it rely on some uni­que ge­ni­us of Linus Tor­valds?</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-8">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-8">8|</a>
+        <span class="book-sentence" id="s-4-8-1-p0">I didn't think so.</span>
+        
+        <span class="book-sentence" id="s-4-8-2-p0">Gran­ted, Linus is a damn fine ha­cker.</span>
+        
+        <span class="book-sentence" id="s-4-8-3-p0">How many of us could en­gi­neer an ent­i­re pro­duc­tion-qua­li­ty ope­ra­ting sys­tem ker­nel from scratch?</span>
+        
+        <span class="book-sentence" id="s-4-8-4-p0">But Linux didn't re­pre­sent any awe­so­me con­cep­tu­al leap for­ward.</span>
+        
+        <span class="book-sentence" id="s-4-8-5-p0">Linus is not (or at least, not yet) an in­no­va­ti­ve ge­ni­us of de­sign in the way that, say, Ri­chard Stall­man or James Gos­ling (of NeWS and Java) are.</span>
+        
+        <span class="book-sentence" id="s-4-8-6-p0">Ra­ther, Linus seems to me to be a ge­ni­us of en­gi­nee­ring and im­ple­men­ta­ti­on, with a sixth sense for avo­iding bugs and de­ve­lop­ment dead-ends and a true knack for fin­ding the mi­ni­mum-ef­fort path from point A to point B. In­de­ed, the whole de­sign of Linux brea­thes this qua­li­ty and mir­rors Linus's es­sen­ti­al­ly con­ser­va­ti­ve and sim­pli­fy­ing de­sign ap­proach.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-9">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-9">9|</a>
+        <span class="book-sentence" id="s-4-9-1-p0">So, if rapid re­lea­ses and le­ver­aging the In­ter­net me­di­um to the hilt were not ac­ci­dents but in­te­gral parts of Linus's en­gi­nee­ring-ge­ni­us in­sight into the mi­ni­mum-ef­fort path, what was he ma­xi­mi­zing?</span>
+        
+        <span class="book-sentence" id="s-4-9-2-p0">What was he cran­king out of the ma­chine­ry?</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-10">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-10">10|</a>
+        <span class="book-sentence" id="s-4-10-1-p0">Put that way, the ques­ti­on an­s­wers its­elf.</span>
+        
+        <span class="book-sentence" id="s-4-10-2-p0">Linus was ke­eping his ha­cker/users con­stant­ly sti­mu­la­ted and re­war­ded—sti­mu­la­ted by the pro­s­pect of ha­ving an ego-sa­tis­fy­ing piece of the ac­tion, re­war­ded by the sight of con­stant (even daily) im­pro­ve­ment in their work.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-11">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-11">11|</a>
+        <span class="book-sentence" id="s-4-11-1-p0">Linus was di­rect­ly ai­ming to ma­xi­mi­ze the num­ber of per­son-hours thrown at de­bug­ging and de­ve­lop­ment, even at the pos­si­ble cost of in­sta­bi­li­ty in the code and user-base bur­nout if any se­rious bug pro­ved intrac­ta­ble.</span>
+        
+        <span class="book-sentence" id="s-4-11-2-p0">Linus was be­ha­ving as though he be­lie­ved so­me­thing like this:</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-4-2" data-slug="8-given-a-large-enough-beta-tester-and-co-developer-base-almost-every-problem-will-be-characterized-quickly-and-the-fix-obvious-to-someone">8. Given a large enough beta-tester and co-developer base, almost every problem will be characterized quickly and the fix obvious to someone.</h2>
+    <section class="book-paragraph" id="p-4-12">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-12">12|</a>
+        <span class="book-sentence" id="s-4-12-1-p0">Or, less for­mal­ly, "Given en­ough eye­balls, all bugs are shal­low." I dub this: "Linus's Law".</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-13">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-13">13|</a>
+        <span class="book-sentence" id="s-4-13-1-p0">My ori­gi­nal for­mu­la­ti­on was that every pro­blem "will be trans­pa­rent to some­bo­dy".</span>
+        
+        <span class="book-sentence" id="s-4-13-2-p0">Linus de­mur­red that the per­son who un­der­stands and fixes the pro­blem is not ne­ces­sa­ri­ly or even usual­ly the per­son who first cha­rac­te­ri­zes it.</span>
+        
+        <span class="book-sentence" id="s-4-13-3-p0">"Some­bo­dy finds the pro­blem," he says, "and some­bo­dy else un­der­stands it.</span>
+        
+        <span class="book-sentence" id="s-4-13-4-p0">And I'll go on re­cord as say­ing that fin­ding it is the big­ger chal­len­ge." That cor­rec­tion is im­portant; we'll see how in the next sec­tion, when we ex­ami­ne the prac­tice of de­bug­ging in more de­tail.</span>
+        
+        <span class="book-sentence" id="s-4-13-5-p0">But the key point is that both parts of the pro­cess (fin­ding and fi­xing) tend to hap­pen ra­pidly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-14">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-14">14|</a>
+        <span class="book-sentence" id="s-4-14-1-p0">In Linus's Law, I think, lies the core dif­fe­rence un­der­ly­ing the ca­the­dral-buil­der and ba­zaar sty­les.</span>
+        
+        <span class="book-sentence" id="s-4-14-2-p0">In the ca­the­dral-buil­der view of pro­gramming, bugs and de­ve­lop­ment pro­blems are tri­cky, in­s­idious, deep pheno­me­na.</span>
+        
+        <span class="book-sentence" id="s-4-14-3-p0">It takes months of scru­ti­ny by a de­di­ca­ted few to de­ve­lop con­fi­dence that you've win­k­led them all out.</span>
+        
+        <span class="book-sentence" id="s-4-14-4-p0">Thus the long re­lease in­ter­vals, and the in­e­vi­ta­ble disap­point­ment when long-awai­ted re­lea­ses are not per­fect.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-15">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-15">15|</a>
+        <span class="book-sentence" id="s-4-15-1-p0">In the ba­zaar view, on the other hand, you as­su­me that bugs are ge­ne­ral­ly shal­low pheno­me­na—or, at least, that they turn shal­low pret­ty quick­ly when ex­po­sed to a thousand eager co-de­ve­l­o­pers poun­ding on every sin­gle new re­lease.</span>
+        
+        <span class="book-sentence" id="s-4-15-2-p0">Ac­cor­dingly you re­lease often in order to get more cor­rec­tions, and as a be­ne­fi­ci­al side ef­fect you have less to lose if an oc­ca­sio­nal botch gets out the door.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-16">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-16">16|</a>
+        <span class="book-sentence" id="s-4-16-1-p0">And that's it.</span>
+        
+        <span class="book-sentence" id="s-4-16-2-p0">That's en­ough.</span>
+        
+        <span class="book-sentence" id="s-4-16-3-p0">If "Linus's Law" is false, then any sys­tem as com­plex as the Linux ker­nel, being ha­cked over by as many hands as the that ker­nel was, should at some point have col­lap­sed under the weight of un­for­se­en bad in­ter­ac­tions and un­dis­co­ve­r­ed "deep" bugs.</span>
+        
+        <span class="book-sentence" id="s-4-16-4-p0">If it's true, on the other hand, it is suf­fi­ci­ent to ex­plain Linux's re­la­ti­ve lack of bug­gi­ness and its con­ti­nuous up­ti­mes span­ning months or even years.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-17">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-17">17|</a>
+        <span class="book-sentence" id="s-4-17-1-p0">Maybe it shouldn't have been such a sur­pri­se, at that.</span>
+        
+        <span class="book-sentence" id="s-4-17-2-p0">So­cio­lo­gists years ago dis­co­ve­r­ed that the aver­aged opi­ni­on of a mass of equal­ly ex­pert (or equal­ly igno­rant) ob­ser­vers is quite a bit more re­lia­ble a pre­dic­tor than the opi­ni­on of a sin­gle ran­dom­ly-cho­sen one of the ob­ser­vers.</span>
+        
+        <span class="book-sentence" id="s-4-17-3-p0">They cal­led this the Del­phi ef­fect.</span>
+        
+        <span class="book-sentence" id="s-4-17-4-p0">It ap­pears that what Linus has shown is that this ap­p­lies even to de­bug­ging an ope­ra­ting sys­tem—that the Del­phi ef­fect can tame de­ve­lop­ment com­ple­xi­ty even at the com­ple­xi­ty level of an OS ker­nel.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-18">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-18">18|</a>
+        <span class="book-sentence" id="s-4-18-1-p0">One spe­cial fea­ture of the Linux si­tua­ti­on that cle­ar­ly helps along the Del­phi ef­fect is the fact that the cont­ri­bu­tors for any given pro­ject are self-selec­ted.</span>
+        
+        <span class="book-sentence" id="s-4-18-2-p0">An early re­spon­dent poin­ted out that cont­ri­bu­ti­ons are re­cei­ved not from a ran­dom samp­le, but from peop­le who are in­te­rested en­ough to use the soft­ware, learn about how it works, at­tempt to find so­lu­ti­ons to pro­blems they en­coun­ter, and ac­tual­ly pro­du­ce an ap­pa­r­ent­ly re­a­sonable fix.</span>
+        
+        <span class="book-sentence" id="s-4-18-3-p0">An­yo­ne who pas­ses all these fil­ters is high­ly li­kely to have so­me­thing use­ful to cont­ri­bu­te.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-19">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-19">19|</a>
+        <span class="book-sentence" id="s-4-19-1-p0">Linus's Law can be re­phra­sed as "De­bug­ging is par­al­le­liz­able".</span>
+        
+        <span class="book-sentence" id="s-4-19-2-p0">Alt­hough de­bug­ging re­qui­res de­bug­gers to com­mu­ni­ca­te with some co­or­di­na­ting de­ve­l­oper, it doesn't re­qui­re si­gni­fi­cant co­or­di­na­ti­on bet­ween de­bug­gers.</span>
+        
+        <span class="book-sentence" id="s-4-19-3-p0">Thus it doesn't fall prey to the same qua­dra­tic com­ple­xi­ty and ma­nage­ment costs that make ad­ding de­ve­l­o­pers pro­ble­ma­tic.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-20">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-20">20|</a>
+        <span class="book-sentence" id="s-4-20-1-p0">In prac­tice, the theo­re­ti­cal loss of ef­fi­ci­en­cy due to du­pli­ca­ti­on of work by de­bug­gers al­most never seems to be an issue in the Linux world.</span>
+        
+        <span class="book-sentence" id="s-4-20-2-p0">One ef­fect of a "re­lease early and often" po­li­cy is to mi­ni­mi­ze such du­pli­ca­ti­on by pro­pa­ga­ting fed-back fixes quick­ly [JH].</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-21">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-21">21|</a>
+        <span class="book-sentence" id="s-4-21-1-p0">Brooks (the aut­hor of The My­thi­cal Man-Month) even made an off-hand ob­ser­va­ti­on re­la­ted to this: "The total cost of main­tai­ning a wi­de­ly used pro­gram is ty­pi­cal­ly 40 per­cent or more of the cost of de­ve­lo­ping it.</span>
+        
+        <span class="book-sentence" id="s-4-21-2-p0">Sur­pri­sin­gly this cost is stron­gly af­fec­ted by the num­ber of users.</span>
+        
+        <span class="book-sentence" id="s-4-21-3-p0">More users find more bugs." [em­pha­sis added].</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-22">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-22">22|</a>
+        <span class="book-sentence" id="s-4-22-1-p0">More users find more bugs be­cau­se ad­ding more users adds more dif­fe­rent ways of stres­sing the pro­gram.</span>
+        
+        <span class="book-sentence" id="s-4-22-2-p0">This ef­fect is am­pli­fied when the users are co-de­ve­l­o­pers.</span>
+        
+        <span class="book-sentence" id="s-4-22-3-p0">Each one ap­proa­ches the task of bug cha­rac­te­riza­t­i­on with a slight­ly dif­fe­rent per­cep­tu­al set and ana­ly­ti­cal tool­kit, a dif­fe­rent angle on the pro­blem.</span>
+        
+        <span class="book-sentence" id="s-4-22-4-p0">The "Del­phi ef­fect" seems to work pre­cise­ly be­cau­se of this va­ria­ti­on.</span>
+        
+        <span class="book-sentence" id="s-4-22-5-p0">In the spe­ci­fic con­text of de­bug­ging, the va­ria­ti­on also tends to re­du­ce du­pli­ca­ti­on of ef­fort.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-23">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-23">23|</a>
+        <span class="book-sentence" id="s-4-23-1-p0">So ad­ding more beta-tes­ters may not re­du­ce the com­ple­xi­ty of the cur­rent "de­epest" bug from the de­ve­l­oper's point of view, but it in­crea­ses the pro­ba­bi­li­ty that so­meo­ne's tool­kit will be matched to the pro­blem in such a way that the bug is shal­low to that per­son.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-24">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-4-24">24|</a>
+        <span class="book-sentence" id="s-4-24-1-p0">Linus cop­pers his bets, too.</span>
+        
+        <span class="book-sentence" id="s-4-24-2-p0">In case there are se­rious bugs, Linux ker­nel ver­si­on are num­be­red in such a way that po­ten­ti­al users can make a choice eit­her to run the last ver­si­on de­si­gna­ted "sta­ble" or to ride the cut­ting edge and risk bugs in order to get new fea­tures.</span>
+        
+        <span class="book-sentence" id="s-4-24-3-p0">This tac­tic is not yet sys­te­ma­ti­cal­ly imi­ta­ted by most Linux ha­ckers, but per­haps it should be; the fact that eit­her choice is avail­able makes both more attrac­tive.</span>
+        
+      </p>
+    </section>
+  </article>
+  <nav class="chapter-nav book-chapter-nav">
+    <a class="nav-btn prev" href="03-the-importance-of-having-users.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="05-how-many-eyeballs-tame-complexity.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
+</main>
+  <script src="../../../assets/reader.js" defer></script>
+</body>
+</html>

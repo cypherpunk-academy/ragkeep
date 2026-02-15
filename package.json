@@ -16,11 +16,9 @@
   "main": "index.js",
   "scripts": {
     "push": "bash ./scripts/publish_to_hf.sh",
-    "build:pages": "npm run build:registry && npm run apply:overrides && npm run build:app",
-    "build:registry": "node --import tsx ./website/scripts/build_agent_registry.ts",
-    "apply:overrides": "node --import tsx ./website/scripts/apply_overrides.ts",
-    "build:app": "npm --prefix ./website/figma-prototype run build",
-    "dev": "npm run build:registry && npm run apply:overrides && npm --prefix ./website/figma-prototype run dev"
+    "build:pages": "npm run build:registry && node --import tsx ./scripts/build_static_site.ts",
+    "build:registry": "node --import tsx ./scripts/build_agent_registry.ts",
+    "dev": "npm run build:pages"
   },
   "devDependencies": {
     "tsx": "latest",

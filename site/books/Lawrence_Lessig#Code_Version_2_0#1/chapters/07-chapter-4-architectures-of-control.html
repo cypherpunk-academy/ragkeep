@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chapter 4. Architectures of Control</title>
+  <link rel="stylesheet" href="../../../assets/book.css" />
+</head>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <article class="book-chapter" data-chapter="7" id="c-7">
+    <h1 class="book-chapter-title" id="c-7-title" data-slug="chapter-4-architectures-of-control">Chapter 4. Architectures of Control</h1>
+    <section class="book-paragraph" id="p-7-1">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-1-1-p0">THE IN­VI­SI­BLE MAN DOESN’T FEAR THE STATE.</span>
+        
+        <span class="book-sentence" id="s-7-1-2-p0">HE KNOWS HIS NA­TU­RE PUTS HIM bey­ond its reach (un­less he gets stu­pid, and of cour­se, he al­ways gets stu­pid).</span>
+        
+        <span class="book-sentence" id="s-7-1-3-p0">His story is the key to a ge­ne­ral les­son: If you can’t know who so­meo­ne is, or where he is, or what he’s doing, you can’t re­gu­la­te him.</span>
+        
+        <span class="book-sentence" id="s-7-1-4-p0">His be­ha­vi­or is as he wants it to be.</span>
+        
+        <span class="book-sentence" id="s-7-1-5-p0">There’s litt­le the state can do to chan­ge it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-2">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-2-1-p0">So too with the ori­gi­nal In­ter­net: Ever­yo­ne was an in­vi­si­ble man.</span>
+        
+        <span class="book-sentence" id="s-7-2-2-p0">Ass cy­ber­space was ori­gi­nal­ly ar­chi­tec­ted, there was no sim­ple way to know who so­meo­ne was, where he was, or what he was doing.</span>
+        
+        <span class="book-sentence" id="s-7-2-3-p0">Ass the In­ter­net was ori­gi­nal­ly ar­chi­tec­ted, then, there was no sim­ple way to re­gu­la­te be­ha­vi­or there.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-3">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-3-1-p0">The aim of the last chap­ter, howe­ver, was to add a small but im­portant point to this ob­vious idea: Wha­te­ver cy­ber­space was, there’s no re­a­son it has to stay this way.</span>
+        
+        <span class="book-sentence" id="s-7-3-2-p0">The “na­tu­re” of the In­ter­net is not God’s will.</span>
+        
+        <span class="book-sentence" id="s-7-3-3-p0">Its na­tu­re is sim­ply the pro­duct of its de­sign.</span>
+        
+        <span class="book-sentence" id="s-7-3-4-p0">That de­sign could be dif­fe­rent.</span>
+        
+        <span class="book-sentence" id="s-7-3-5-p0">The Net could be de­si­gned to re­veal who so­meo­ne is, where they are, and what they’re doing.</span>
+        
+        <span class="book-sentence" id="s-7-3-6-p0">And if it were so de­si­gned, then the Net could be­co­me, as I will argue throughout this part, the most re­gulable space that man has ever known.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-4">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-4-1-p0">In this chap­ter, I de­scri­be the chan­ges that could—and are—pus­hing the Net from the un­re­gulable space it was, to the per­fect­ly re­gulable space it could be.</span>
+        
+        <span class="book-sentence" id="s-7-4-2-p0">These chan­ges are not being ar­chi­tec­ted by go­vern­ment.</span>
+        
+        <span class="book-sentence" id="s-7-4-3-p0">They are ins­tead being de­man­ded by users and de­ploy­ed by com­mer­ce.</span>
+        
+        <span class="book-sentence" id="s-7-4-4-p0">They are not the pro­duct of some 1984-in­spi­red con­spi­ra­cy; they are the con­se­quence of chan­ges made for pu­re­ly prag­ma­tic, com­mer­ci­al ends.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-5">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-5-1-p0">This ob­vious­ly doesn’t make these chan­ges bad or good.</span>
+        
+        <span class="book-sentence" id="s-7-5-2-p0">My pur­po­se just now is not nor­ma­ti­ve, but de­scrip­ti­ve.</span>
+        
+        <span class="book-sentence" id="s-7-5-3-p0">We should un­der­stand where we are going, and why, be­fo­re we ask whe­ther this is where, or who, we want to be.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-6">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-6-1-p0">The his­to­ry of the fu­ture of the In­ter­net was writ­ten in Ger­ma­ny in Ja­nu­a­ry 1995.</span>
+        
+        <span class="book-sentence" id="s-7-6-2-p0">Ger­man law re­gu­la­ted porn.</span>
+        
+        <span class="book-sentence" id="s-7-6-3-p0">In Ba­va­ria, it re­gu­la­ted porn hea­vi­ly.</span>
+        
+        <span class="book-sentence" id="s-7-6-4-p0">Com­pu­Ser­ve made (a mo­dera­te amount of, through USE­NET,) porn avail­able to its users.</span>
+        
+        <span class="book-sentence" id="s-7-6-5-p0">Com­pu­Ser­ve was ser­ving Ba­va­ria’s ci­ti­zens.</span>
+        
+        <span class="book-sentence" id="s-7-6-6-p0">Ba­va­ria told Com­pu­Ser­ve to re­mo­ve the porn from its ser­vers, or its exe­cu­ti­ves would be pu­nis­hed.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-7">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-7-1-p0">Com­pu­Ser­ve at first ob­jec­ted that there was not­hing it could do—save re­mo­ving the porn from every ser­ver, ever­yw­he­re in the world.</span>
+        
+        <span class="book-sentence" id="s-7-7-2-p0">That didn’t trou­ble the Ger­mans much, but it did trou­ble Com­pu­Ser­ve.</span>
+        
+        <span class="book-sentence" id="s-7-7-3-p0">So in Ja­nu­a­ry 1995, Com­pu­Ser­ve an­noun­ced a tech­ni­cal fix: Ra­ther than blo­cking ac­cess to the USE­NET news­groups that the Ba­va­ri­ans had com­plai­ned about for all mem­bers of Com­pu­Ser­ve, Com­pu­Ser­ve had de­vi­sed a tech­no­lo­gy to fil­ter con­tent on a coun­try-by-coun­try basis.¹</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-8">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-8-1-p0">To make that fix work, Com­pu­Ser­ve had to begin to reckon who a user was, what they were doing, and where they were doing it.</span>
+        
+        <span class="book-sentence" id="s-7-8-2-p0">Tech­no­lo­gy could give them ac­cess to the data that nee­ded recko­n­ing.</span>
+        
+        <span class="book-sentence" id="s-7-8-3-p0">And with that shift, the fu­ture was set.</span>
+        
+        <span class="book-sentence" id="s-7-8-4-p0">An ob­vious re­s­pon­se to a pro­blem of re­gu­la­bi­li­ty would begin to re­peat its­elf.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-9">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-9-1-p0">Com­pu­Ser­ve, of cour­se, was not the In­ter­net.</span>
+        
+        <span class="book-sentence" id="s-7-9-2-p0">But its re­s­pon­se sug­gests the pat­tern that the In­ter­net will fol­low.</span>
+        
+        <span class="book-sentence" id="s-7-9-3-p0">In this Chap­ter, I map just how the In­ter­net can ef­fec­tive­ly be made to run (in this re­spect at least) like Com­pu­Ser­ve.</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-7-1" data-slug="who-did-what-where">WHO DID WHAT, WHERE?</h2>
+    <section class="book-paragraph" id="p-7-10">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-10-1-p0">To re­gu­la­te, the state needs a way to know the who, in “Who did what, where?” To see how the Net will show the state “who,” we need to think a bit more ca­re­ful­ly about how “iden­ti­fi­ca­ti­on” works in ge­ne­ral, and how it might work on the In­ter­net.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-11">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-11-1-p0">Iden­ti­ty and Au­then­ti­ca­ti­on: Real Space</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-12">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-12-1-p0">To make sense of the tech­no­lo­gies we use to iden­ti­fy who so­meo­ne is, con­sider the re­la­ti­ons­hip among three fa­mi­li­ar ideas—(1) “iden­ti­ty,” (2) “au­then­ti­ca­ti­on,” and (3) “creden­ti­al.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-13">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-13-1-p0">By “iden­ti­ty” I mean so­me­thing more than just who you are.</span>
+        
+        <span class="book-sentence" id="s-7-13-2-p0">I mean as well your “at­tri­bu­tes,” or more broad­ly, all the facts about you (or a cor­po­ra­ti­on, or a thing) that are true.</span>
+        
+        <span class="book-sentence" id="s-7-13-3-p0">Your iden­ti­ty, in this sense, in­clu­des your name, your sex, where you live, what your edu­ca­ti­on is, your dri­ver’s li­cen­se num­ber, your so­ci­al se­cu­ri­ty num­ber, your purcha­ses on Ama­zon.com, whe­ther you’re a la­wy­er—and so on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-14">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-14-1-p0">These at­tri­bu­tes are known by others when they are com­mu­ni­ca­ted.</span>
+        
+        <span class="book-sentence" id="s-7-14-2-p0">In real space, some are com­mu­ni­ca­ted au­to­ma­ti­cal­ly: for most, sex, skin color, height, age range, and whe­ther you have a good smile get trans­mit­ted au­to­ma­ti­cal­ly.</span>
+        
+        <span class="book-sentence" id="s-7-14-3-p0">Other at­tri­bu­tes can’t be known un­less they are re­vea­led eit­her by you, or by so­meo­ne else: your GPA in high school, your fa­vo­ri­te color, your so­ci­al se­cu­ri­ty num­ber, your last purcha­se on Ama­zon, whe­ther you’ve pas­sed a bar exam.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-15">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-15-1-p0">Just be­cau­se an at­tri­bu­te has been as­ser­ted, howe­ver, does not mean the at­tri­bu­te is be­lie­ved.</span>
+        
+        <span class="book-sentence" id="s-7-15-2-p0">(“You pas­sed the bar?!”) Ra­ther be­lief will often de­pend upon a pro­cess of “au­then­ti­ca­ti­on.” In ge­ne­ral, we “au­then­ti­ca­te” when we want to be­co­me more con­fi­dent about the truth about some as­ser­ted claim than ap­pears on its face.</span>
+        
+        <span class="book-sentence" id="s-7-15-3-p0">“I’m mar­ried,” you say.</span>
+        
+        <span class="book-sentence" id="s-7-15-4-p0">“Show me the ring,” she says.</span>
+        
+        <span class="book-sentence" id="s-7-15-5-p0">The first state­ment is an as­ser­ti­on about an at­tri­bu­te you claim you have.</span>
+        
+        <span class="book-sentence" id="s-7-15-6-p0">The se­cond is a de­mand for au­then­ti­ca­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-15-7-p0">We could ima­gi­ne (in a come­dy at least) that de­mand con­ti­nuing.</span>
+        
+        <span class="book-sentence" id="s-7-15-8-p0">“Oh come on, that’s not a wed­ding ring.</span>
+        
+        <span class="book-sentence" id="s-7-15-9-p0">Show me your mar­ria­ge li­cen­se.” At some point, the de­man­ds stop, eit­her when en­ough con­fi­dence has been achie­ved, or when the in­qui­ry has just be­co­me too weird.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-16">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-16-1-p0">So­me­ti­mes this pro­cess of au­then­ti­ca­ti­on is re­la­tive­ly au­to­ma­tic.</span>
+        
+        <span class="book-sentence" id="s-7-16-2-p0">Some at­tri­bu­tes, that is, are re­la­tive­ly self-au­then­ti­ca­ting: You say you’re a woman; I’m li­kely to be­lie­ve it when I see you.</span>
+        
+        <span class="book-sentence" id="s-7-16-3-p0">You say you’re a na­ti­ve spea­ker; I’m li­kely to be­lie­ve it once I speak with you.</span>
+        
+        <span class="book-sentence" id="s-7-16-4-p0">Of cour­se, in both cases, I could be foo­led.</span>
+        
+        <span class="book-sentence" id="s-7-16-5-p0">Thus, if my life de­pen­ded upon it, I might take other steps to be ab­so­lu­tely con­fi­dent of what other­wi­se ap­pears plain.</span>
+        
+        <span class="book-sentence" id="s-7-16-6-p0">But for most pur­po­ses, with most fa­mi­li­ar sorts of at­tri­bu­tes, we learn how to eva­lua­te wi­thout much more than our own in­di­vi­du­al judgment.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-17">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-17-1-p0">Some at­tri­bu­tes, howe­ver, can­not be self-au­then­ti­ca­ting.</span>
+        
+        <span class="book-sentence" id="s-7-17-2-p0">You say you’re li­cen­s­ed to fly an air­plane; I want to see the li­cen­se.</span>
+        
+        <span class="book-sentence" id="s-7-17-3-p0">You say you’re a mem­ber of the Ca­li­for­nia bar; I want to see your cer­ti­fi­ca­te.</span>
+        
+        <span class="book-sentence" id="s-7-17-4-p0">You say you’re qua­li­fied to per­form open heart sur­ge­ry on my fa­ther; I want to see things that make me con­fi­dent that your claim is true.</span>
+        
+        <span class="book-sentence" id="s-7-17-5-p0">Once again, these au­then­ti­ca­ting “things” could be for­ged, and my con­fi­dence could be un­ju­s­ti­fied.</span>
+        
+        <span class="book-sentence" id="s-7-17-6-p0">But if I’m ca­re­ful to match the pro­cess for au­then­ti­ca­ti­on with the level of con­fi­dence that I need, I’m be­ha­ving quite ra­tio­nal­ly.</span>
+        
+        <span class="book-sentence" id="s-7-17-7-p0">And most of us can usual­ly get by wi­thout a ter­ri­b­ly com­pli­ca­ted pro­cess of au­then­ti­ca­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-18">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-18-1-p0">One im­portant tool so­me­ti­mes used in this pro­cess of au­then­ti­ca­ti­on is a creden­ti­al.</span>
+        
+        <span class="book-sentence" id="s-7-18-2-p0">By “creden­ti­al,” I mean a stan­dar­di­zed de­vice for au­then­ti­ca­ting (to some level of con­fi­dence) an as­ser­ti­on made.</span>
+        
+        <span class="book-sentence" id="s-7-18-3-p0">A dri­ver’s li­cen­se is a creden­ti­al in this sense.</span>
+        
+        <span class="book-sentence" id="s-7-18-4-p0">Its pur­po­se is to au­then­ti­ca­te the sta­tus of a dri­ver.</span>
+        
+        <span class="book-sentence" id="s-7-18-5-p0">We’re ge­ne­ral­ly fa­mi­li­ar with the form of such li­cen­ses; that gives us some con­fi­dence that we’ll be able to de­ter­mi­ne whe­ther a par­ti­cu­lar li­cen­se is valid.</span>
+        
+        <span class="book-sentence" id="s-7-18-6-p0">A passport is also a creden­ti­al in this sense.</span>
+        
+        <span class="book-sentence" id="s-7-18-7-p0">Its pur­po­se is to es­ta­blish the ci­ti­zenship of the per­son it iden­ti­fies, and it iden­ti­fies a per­son through re­la­tive­ly self-au­then­ti­ca­ting at­tri­bu­tes.</span>
+        
+        <span class="book-sentence" id="s-7-18-8-p0">Once again, we are fa­mi­li­ar with the form of this creden­ti­al, and that gives us a re­la­tive­ly high level of con­fi­dence about the facts as­ser­ted in that passport.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-19">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-19-1-p0">Ob­vious­ly, some creden­ti­als are bet­ter than others.</span>
+        
+        <span class="book-sentence" id="s-7-19-2-p0">Some are ar­chi­tec­ted to give more con­fi­dence than others; some are more ef­fi­ci­ent at de­li­ver­ing their con­fi­dence than others.</span>
+        
+        <span class="book-sentence" id="s-7-19-3-p0">But we select among the creden­ti­als avail­able de­pen­ding upon the level of con­fi­dence that we need.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-20">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-20-1-p0">So take an ob­vious ex­amp­le to bring these points to­ge­ther: Ima­gi­ne you’re a bank tel­ler.</span>
+        
+        <span class="book-sentence" id="s-7-20-2-p0">So­meo­ne ap­pears in front of you and de­cla­res that she is the owner of ac­count # 654–543231.</span>
+        
+        <span class="book-sentence" id="s-7-20-3-p0">She says she would like to wi­th­draw all the money from that ac­count.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-21">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-21-1-p0">In the sense I’ve de­scri­bed, this so­meo­ne (call her Ms.</span>
+        
+        <span class="book-sentence" id="s-7-21-2-p0">X) has as­ser­ted a fact about her iden­ti­ty—that she is the owner of ac­count # 654–543231.</span>
+        
+        <span class="book-sentence" id="s-7-21-3-p0">Your job now is to au­then­ti­ca­te that as­ser­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-21-4-p0">So you pull up on your com­pu­ter the re­cor­ds for the ac­count, and you dis­co­ver that there’s lots of money in it.</span>
+        
+        <span class="book-sentence" id="s-7-21-5-p0">Now your de­si­re to be con­fi­dent about the au­then­ti­ca­ti­on you make is even stron­ger.</span>
+        
+        <span class="book-sentence" id="s-7-21-6-p0">You ask Ms.</span>
+        
+        <span class="book-sentence" id="s-7-21-7-p0">X her name; that name matches the name on the ac­count.</span>
+        
+        <span class="book-sentence" id="s-7-21-8-p0">That gives you some con­fi­dence.</span>
+        
+        <span class="book-sentence" id="s-7-21-9-p0">You ask Ms.</span>
+        
+        <span class="book-sentence" id="s-7-21-10-p0">X for two forms of iden­ti­fi­ca­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-21-11-p0">Both match to Ms.</span>
+        
+        <span class="book-sentence" id="s-7-21-12-p0">X. Now you have even more con­fi­dence.</span>
+        
+        <span class="book-sentence" id="s-7-21-13-p0">You ask Ms.</span>
+        
+        <span class="book-sentence" id="s-7-21-14-p0">X to sign a wi­th­dra­wal slip.</span>
+        
+        <span class="book-sentence" id="s-7-21-15-p0">The si­gna­tu­res seem to match; more con­fi­dence still.</span>
+        
+        <span class="book-sentence" id="s-7-21-16-p0">Fi­nal­ly, you note in the re­cord that the ac­count was es­ta­blis­hed by your ma­na­ger.</span>
+        
+        <span class="book-sentence" id="s-7-21-17-p0">You ask her whe­ther she knows Ms.</span>
+        
+        <span class="book-sentence" id="s-7-21-18-p0">X. She con­firms that she does, and that the “Ms.</span>
+        
+        <span class="book-sentence" id="s-7-21-19-p0">X” stan­ding at the coun­ter is in­de­ed Ms.</span>
+        
+        <span class="book-sentence" id="s-7-21-20-p0">X. Now you’re suf­fi­ci­ent­ly con­fi­dent to turn over the money.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-22">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-22-1-p0">No­ti­ce that throughout this pro­cess, you’ve used tech­no­lo­gies to help you au­then­ti­ca­te the at­tri­bu­te as­ser­ted by Ms.</span>
+        
+        <span class="book-sentence" id="s-7-22-2-p0">X to be true.</span>
+        
+        <span class="book-sentence" id="s-7-22-3-p0">Your com­pu­ter links a name to an ac­count num­ber.</span>
+        
+        <span class="book-sentence" id="s-7-22-4-p0">A dri­ver’s li­cen­se or passport ties a pic­tu­re to a name.</span>
+        
+        <span class="book-sentence" id="s-7-22-5-p0">The com­pu­ter keeps a copy of a si­gna­tu­re.</span>
+        
+        <span class="book-sentence" id="s-7-22-6-p0">These are all tech­no­lo­gies to in­crea­se con­fi­dence.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-23">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-23-1-p0">And no­ti­ce too that we could ima­gi­ne even bet­ter tech­no­lo­gies to in­crea­se this con­fi­dence.</span>
+        
+        <span class="book-sentence" id="s-7-23-2-p0">Credit cards, for ex­amp­le, were de­ve­l­o­ped at a time when me­rely pos­ses­sing the credit card au­then­ti­ca­ted its use.</span>
+        
+        <span class="book-sentence" id="s-7-23-3-p0">That de­sign crea­tes the in­cen­ti­ve to steal a credit card.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-24">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-24-1-p0">ATM cards are dif­fe­rent—in ad­di­ti­on to pos­ses­si­on, ATM cards re­qui­re a pass­word.</span>
+        
+        <span class="book-sentence" id="s-7-24-2-p0">That de­sign re­du­ces the value of sto­len cards.</span>
+        
+        <span class="book-sentence" id="s-7-24-3-p0">But some write their pass­words on their ATM cards, or keep them in their wal­lets with their ATMs.</span>
+        
+        <span class="book-sentence" id="s-7-24-4-p0">This means the risk from theft is not to­tal­ly re­mo­ved.</span>
+        
+        <span class="book-sentence" id="s-7-24-5-p0">But that risk could be fur­ther re­du­ced by other tech­no­lo­gies of au­then­ti­ca­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-24-6-p0">For ex­amp­le, cer­tain bio­metric tech­no­lo­gies, such as thumbprint re­a­ders or eye scans, would in­crea­se the con­fi­dence that the hol­der of a card was an aut­ho­ri­zed user.</span>
+        
+        <span class="book-sentence" id="s-7-24-7-p0">(Though these tech­no­lo­gies them­sel­ves can crea­te their own risks: At a con­fe­rence I heard a ven­dor de­scri­bing a new tech­no­lo­gy for iden­ti­fy­ing so­meo­ne based upon his hand­print; a par­ti­ci­pant in the con­fe­rence asked whe­ther the hand had to be alive for the au­then­ti­ca­ti­on to work.</span>
+        
+        <span class="book-sentence" id="s-7-24-8-p0">The ven­dor went very pale.</span>
+        
+        <span class="book-sentence" id="s-7-24-9-p0">After a mo­ment, he re­plied, “I guess not.”)</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-25">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-25-1-p0">We are con­stant­ly ne­go­tia­ting these pro­ces­ses of au­then­ti­ca­ti­on in real life, and in this pro­cess, bet­ter tech­no­lo­gies and bet­ter creden­ti­als enable more dis­tant au­then­ti­ca­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-25-2-p0">In a small town, in a quie­ter time, creden­ti­als were not ne­cessa­ry.</span>
+        
+        <span class="book-sentence" id="s-7-25-3-p0">You were known by your face, and your face car­ri­ed with it a re­fe­rence (held in the com­mon know­ledge of the com­mu­ni­ty) about your cha­rac­ter.</span>
+        
+        <span class="book-sentence" id="s-7-25-4-p0">But as life be­co­mes more fluid, so­ci­al in­sti­tu­ti­ons de­pend upon other tech­no­lo­gies to build con­fi­dence around im­portant iden­ti­ty as­ser­ti­ons.</span>
+        
+        <span class="book-sentence" id="s-7-25-5-p0">Creden­ti­als thus be­co­me an un­avo­i­da­ble tool for se­cu­ring such au­then­ti­ca­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-26">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-26-1-p0">If tech­no­lo­gies of au­then­ti­ca­ti­on can be bet­ter or worse, then, ob­vious­ly, many have an in­te­rest in these tech­no­lo­gies be­co­m­ing bet­ter.</span>
+        
+        <span class="book-sentence" id="s-7-26-2-p0">We each would be bet­ter off if we could more ea­si­ly and con­fi­dent­ly au­then­ti­ca­te cer­tain facts about us.</span>
+        
+        <span class="book-sentence" id="s-7-26-3-p0">Com­mer­ce, too, would cer­tain­ly be bet­ter off with bet­ter tech­no­lo­gies of au­then­ti­ca­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-26-4-p0">Poor tech­no­lo­gies begat fraud; fraud is an un­pro­duc­tive cost for busi­ness.</span>
+        
+        <span class="book-sentence" id="s-7-26-5-p0">If bet­ter tech­no­lo­gy could eli­mi­na­te that cost, then pri­ces could be lower and pro­fits pos­si­bly hig­her.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-27">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-27-1-p0">And fi­nal­ly, go­vern­ments be­ne­fit from bet­ter tech­no­lo­gies of au­then­ti­ca­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-27-2-p0">If it is sim­ple to au­then­ti­ca­te your age, then rules that are trig­ge­red based upon age are more ea­si­ly en­forced (drin­king ages, or li­mits on ci­ga­ret­tes).</span>
+        
+        <span class="book-sentence" id="s-7-27-3-p0">And if it is sim­ple to au­then­ti­ca­te who you are, then it will be ea­sier for the go­vern­ment to trace who did what.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-28">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-28-1-p0">Fun­da­men­tal­ly, the re­gu­la­bi­li­ty of life in real-space de­pends upon cer­tain ar­chi­tec­tu­res of au­then­ti­ca­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-28-2-p0">The fact that wit­nes­ses can iden­ti­fy who com­mit­ted a crime, eit­her be­cau­se they know the per­son or be­cau­se of self-au­then­ti­ca­ting fea­tures such as “he was a white male, six feet tall,” en­han­ces the abili­ty of the state to re­gu­la­te against that crime.</span>
+        
+        <span class="book-sentence" id="s-7-28-3-p0">If cri­mi­nals were in­vi­si­ble or wit­nes­ses had no me­mo­ry, crime would in­crea­se.</span>
+        
+        <span class="book-sentence" id="s-7-28-4-p0">The fact that fin­ger­prints are hard to chan­ge and are now au­to­ma­ti­cal­ly tra­ced to con­vic­ted fel­ons in­crea­ses the li­kelihood that fel­ons will be caught again.</span>
+        
+        <span class="book-sentence" id="s-7-28-5-p0">Re­ly­ing on a more chan­ge­able phy­si­cal cha­rac­te­ris­tic would re­du­ce the abili­ty of the po­li­ce to track re­peat of­fen­ders.</span>
+        
+        <span class="book-sentence" id="s-7-28-6-p0">The fact that cars have li­cen­se pla­tes and are re­gis­te­red by their ow­ners in­crea­ses the li­kelihood that a hit-and-run dri­ver will be caught.</span>
+        
+        <span class="book-sentence" id="s-7-28-7-p0">Wi­thout li­cen­ses, and wi­thout sys­tems re­gis­te­ring ow­ners, it would be ex­tre­me­ly dif­fi­cult to track car-re­la­ted crime.</span>
+        
+        <span class="book-sentence" id="s-7-28-8-p0">In all these cases, and in many more, tech­no­lo­gies of au­then­ti­ca­ti­on of real-space life make re­gu­la­ting that life pos­si­ble.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-29">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-29-1-p0">These three se­pa­ra­te in­te­rests the­re­fo­re point to a com­mon in­te­rest.</span>
+        
+        <span class="book-sentence" id="s-7-29-2-p0">That’s not to say that every tech­no­lo­gy of au­then­ti­ca­ti­on meets that com­mon in­te­rest, nor is it to say that these in­te­rests will be en­ough to fa­ci­li­ta­te more ef­fi­ci­ent au­then­ti­ca­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-29-3-p0">But it does mean that we can see which way these in­te­rests push.</span>
+        
+        <span class="book-sentence" id="s-7-29-4-p0">Bet­ter au­then­ti­ca­ti­on can be­ne­fit ever­yo­ne.</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-7-2" data-slug="identity-and-authentication-cyberspace">Identity and Authentication: Cyberspace</h2>
+    <section class="book-paragraph" id="p-7-30">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-30-1-p0">Iden­ti­ty and au­then­ti­ca­ti­on in cy­ber­space and real space are in theo­ry the same.</span>
+        
+        <span class="book-sentence" id="s-7-30-2-p0">In prac­tice they are quite dif­fe­rent.</span>
+        
+        <span class="book-sentence" id="s-7-30-3-p0">To see that dif­fe­rence, howe­ver, we need to see more about the tech­ni­cal de­tail of how the Net is built.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-31">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-31-1-p0">Ass I’ve al­re­a­dy said, the In­ter­net is built from a suite of pro­to­cols re­fer­red to collec­tive­ly as “TCP/IP.” At its core, the TCP/IP suite in­clu­des pro­to­cols for ex­ch­an­ging pa­ckets of data bet­ween two ma­chi­nes “on” the Net.</span>
+        
+        <span class="book-sentence" id="s-7-31-2-p0">Bru­tal­ly sim­pli­fied, the sys­tem takes a bunch of data (a file, for ex­amp­le), chops it up into pa­ckets, and slaps on the ad­dress to which the pa­cket is to be sent and the ad­dress from which it is sent.</span>
+        
+        <span class="book-sentence" id="s-7-31-3-p0">The ad­dres­ses are cal­led In­ter­net Pro­to­col ad­dres­ses, and they look like this: 128.34.35.204.</span>
+        
+        <span class="book-sentence" id="s-7-31-4-p0">Once pro­per­ly ad­dres­sed, the pa­ckets are then sent across the In­ter­net to their in­ten­ded de­sti­na­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-31-5-p0">Ma­chi­nes along the way (“rou­ters”) look at the ad­dress to which the pa­cket is sent, and de­pen­ding upon an (in­cre­a­sin­gly com­pli­ca­ted) al­go­rithm, the ma­chi­nes de­ci­de to which ma­chi­ne the pa­cket should be sent next.</span>
+        
+        <span class="book-sentence" id="s-7-31-6-p0">A pa­cket could make many “hops” bet­ween its start and its end.</span>
+        
+        <span class="book-sentence" id="s-7-31-7-p0">But as the net­work be­co­mes fas­ter and more ro­bust, those many hops seem al­most in­stan­ta­neous.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-32">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-32-1-p0">In the terms I’ve de­scri­bed, there are many at­tri­bu­tes that might be as­so­cia­ted with any pa­cket of data sent across the net­work.</span>
+        
+        <span class="book-sentence" id="s-7-32-2-p0">For ex­amp­le, the pa­cket might come from an e-mail writ­ten by Al Gore.</span>
+        
+        <span class="book-sentence" id="s-7-32-3-p0">That means the e-mail is writ­ten by a for­mer vice pre­si­dent of the United Sta­tes, by a man know­led­ge­able about glo­bal war­ming, by a man over the age of 50, by a tall man, by an Ame­ri­can ci­ti­zen, by a for­mer mem­ber of the United Sta­tes Se­na­te, and so on.</span>
+        
+        <span class="book-sentence" id="s-7-32-4-p0">Ima­gi­ne also that the e-mail was writ­ten while Al Gore was in Ger­ma­ny, and that it is about ne­go­tia­ti­ons for cli­ma­te con­trol.</span>
+        
+        <span class="book-sentence" id="s-7-32-5-p0">The iden­ti­ty of that pa­cket of in­for­ma­ti­on might be said to in­clu­de all these at­tri­bu­tes.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-33">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-33-1-p0">But the e-mail its­elf au­then­ti­ca­tes none of these facts.</span>
+        
+        <span class="book-sentence" id="s-7-33-2-p0">The e-mail may say it’s from Al Gore, but the TCP/IP pro­to­col alone gives us no way to be sure.</span>
+        
+        <span class="book-sentence" id="s-7-33-3-p0">It may have been writ­ten while Gore was in Ger­ma­ny, but he could have sent it through a ser­ver in Wa­shing­ton.</span>
+        
+        <span class="book-sentence" id="s-7-33-4-p0">And of cour­se, while the sys­tem even­tual­ly will fi­gu­re out that the pa­cket is part of an e-mail, the in­for­ma­ti­on tra­ve­ling across TCP/IP its­elf does not con­tain any­thing that would in­di­ca­te what the con­tent was.</span>
+        
+        <span class="book-sentence" id="s-7-33-5-p0">The pro­to­col thus doesn’t au­then­ti­ca­te who sent the pa­cket, where they sent it from, and what the pa­cket is.</span>
+        
+        <span class="book-sentence" id="s-7-33-6-p0">All it pur­ports to as­sert is an IP ad­dress to which the pa­cket is to be sent, and an IP ad­dress from which the pa­cket comes.</span>
+        
+        <span class="book-sentence" id="s-7-33-7-p0">From the per­spec­tive of the net­work, this other in­for­ma­ti­on is un­ne­cessa­ry sur­p­lus.</span>
+        
+        <span class="book-sentence" id="s-7-33-8-p0">Like a day­drea­m­ing pos­tal worker, the net­work sim­ply moves the data and lea­ves its in­ter­pre­ta­ti­on to the ap­p­li­ca­ti­ons at eit­her end.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-34">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-34-1-p0">This mi­ni­ma­lism in the In­ter­net’s de­sign was not an ac­ci­dent.</span>
+        
+        <span class="book-sentence" id="s-7-34-2-p0">It re­flects a de­ci­si­on about how best to de­sign a net­work to per­form a wide range over very dif­fe­rent func­tions.</span>
+        
+        <span class="book-sentence" id="s-7-34-3-p0">Ra­ther than build into this net­work a com­plex set of func­tio­na­li­ty thought to be nee­ded by every sin­gle ap­p­li­ca­ti­on, this net­work phi­lo­so­phy pus­hes com­ple­xi­ty to the edge of the net­work—to the ap­p­li­ca­ti­ons that run on the net­work, ra­ther than the net­work’s core.</span>
+        
+        <span class="book-sentence" id="s-7-34-4-p0">The core is kept as sim­ple as pos­si­ble.</span>
+        
+        <span class="book-sentence" id="s-7-34-5-p0">Thus if au­then­ti­ca­ti­on about who is using the net­work is ne­cessa­ry, that func­tio­na­li­ty should be per­for­med by an ap­p­li­ca­ti­on con­nec­ted to the net­work, not by the net­work its­elf.</span>
+        
+        <span class="book-sentence" id="s-7-34-6-p0">Or if con­tent needs to be en­cryp­ted, that func­tio­na­li­ty should be per­for­med by an ap­p­li­ca­ti­on con­nec­ted to the net­work, not by the net­work its­elf.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-35">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-35-1-p0">This de­sign prin­ciple was named by net­work ar­chi­tects Je­ro­me Salt­zer, David Clark, and David Reed as the end-to-end prin­ciple.</span>
+        
+        <span class="book-sentence" id="s-7-35-2-p0">It has been a core prin­ciple of the In­ter­net’s ar­chi­tec­tu­re, and, in my view, one of the most im­portant re­a­sons that the In­ter­net pro­du­ced the in­no­va­ti­on and growth that it has en­joy­ed.</span>
+        
+        <span class="book-sentence" id="s-7-35-3-p0">But its con­se­quen­ces for pur­po­ses of iden­ti­fi­ca­ti­on and au­then­ti­ca­ti­on make both ex­tre­me­ly dif­fi­cult with the basic pro­to­cols of the In­ter­net alone.</span>
+        
+        <span class="book-sentence" id="s-7-35-4-p0">It is as if you were in a car­ni­val fun­hou­se with the lights dim­med to darkness and voices co­m­ing from around you, but from peop­le you do not know and from pla­ces you can­not iden­ti­fy.</span>
+        
+        <span class="book-sentence" id="s-7-35-5-p0">The sys­tem knows that there are en­t­i­ties out there in­ter­ac­ting with it, but it knows not­hing about who those en­t­i­ties are.</span>
+        
+        <span class="book-sentence" id="s-7-35-6-p0">While in real space—and here is the im­portant point—an­ony­mi­ty has to be crea­ted, in cy­ber­space an­ony­mi­ty is the given.</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-7-3" data-slug="identity-and-authentication-regulability">Identity and Authentication: Regulability</h2>
+    <section class="book-paragraph" id="p-7-36">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-36-1-p0">This dif­fe­rence in the ar­chi­tec­tu­res of real space and cy­ber­space makes a big dif­fe­rence in the re­gu­la­bi­li­ty of be­ha­vi­or in each.</span>
+        
+        <span class="book-sentence" id="s-7-36-2-p0">The ab­sence of re­la­tive­ly self-au­then­ti­ca­ting facts in cy­ber­space makes it ex­tre­me­ly dif­fi­cult to re­gu­la­te be­ha­vi­or there.</span>
+        
+        <span class="book-sentence" id="s-7-36-3-p0">If we could all walk around as “The In­vi­si­ble Man” in real space, the same would be true about real space as well.</span>
+        
+        <span class="book-sentence" id="s-7-36-4-p0">That we’re not ca­pa­ble of be­co­m­ing in­vi­si­ble in real space (or at least not ea­si­ly) is an im­portant re­a­son that re­gu­la­ti­on can work.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-37">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-37-1-p0">Thus, for ex­amp­le, if a state wants to con­trol child­ren’s ac­cess to “in­de­cent” speech on the In­ter­net, the ori­gi­nal In­ter­net ar­chi­tec­tu­re pro­vi­des litt­le help.</span>
+        
+        <span class="book-sentence" id="s-7-37-2-p0">The state can say to web­sites, “don’t let kids see porn.” But the web­site ope­ra­tors can’t know—from the data pro­vi­ded by the TCP/IP pro­to­cols at least—whe­ther the en­t­i­ty ac­ces­sing its web page is a kid or an adult.</span>
+        
+        <span class="book-sentence" id="s-7-37-3-p0">That’s dif­fe­rent, again, from real space.</span>
+        
+        <span class="book-sentence" id="s-7-37-4-p0">If a kid walks into a porn shop wea­ring a mus­ta­che and stilts, his ef­fort to con­ce­al is li­kely to fail.</span>
+        
+        <span class="book-sentence" id="s-7-37-5-p0">The at­tri­bu­te “being a kid” is as­ser­ted in real space, even if ef­forts to con­ce­al it are pos­si­ble.</span>
+        
+        <span class="book-sentence" id="s-7-37-6-p0">But in cy­ber­space, there’s no need to con­ce­al, be­cau­se the facts you might want to con­ce­al about your iden­ti­ty (i.e., that you’re a kid) are not as­ser­ted any­way.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-38">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-38-1-p0">All this is true, at least, under the basic In­ter­net ar­chi­tec­tu­re.</span>
+        
+        <span class="book-sentence" id="s-7-38-2-p0">But as the last ten years have made clear, none of this is true by ne­ces­si­ty.</span>
+        
+        <span class="book-sentence" id="s-7-38-3-p0">To the extent that the lack of ef­fi­ci­ent tech­no­lo­gies for au­then­ti­ca­ting facts about in­di­vi­du­als makes it har­der to re­gu­la­te be­ha­vi­or, there are ar­chi­tec­tu­res that could be laye­red onto the TCP/IP pro­to­col to crea­te ef­fi­ci­ent au­then­ti­ca­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-38-4-p0">We’re far en­ough into the his­to­ry of the In­ter­net to see what these tech­no­lo­gies could look like.</span>
+        
+        <span class="book-sentence" id="s-7-38-5-p0">We’re far en­ough into this his­to­ry to see that the trend toward this au­then­ti­ca­ti­on is un­stopp­able.</span>
+        
+        <span class="book-sentence" id="s-7-38-6-p0">The only ques­ti­on is whe­ther we will build into this sys­tem of au­then­ti­ca­ti­on the kinds of pro­tec­tions for pri­va­cy and au­to­no­my that are nee­ded.</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-7-4" data-slug="architectures-of-identification">Architectures of Identification</h2>
+    <section class="book-paragraph" id="p-7-39">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-39-1-p0">Most who use the In­ter­net have no real sense about whe­ther their be­ha­vi­or is mo­ni­to­red, or tra­ce­able.</span>
+        
+        <span class="book-sentence" id="s-7-39-2-p0">Ins­tead, the ex­pe­ri­ence of the Net sug­gests an­ony­mi­ty.</span>
+        
+        <span class="book-sentence" id="s-7-39-3-p0">Wi­ki­pe­dia doesn’t say “Wel­co­me Back, Larry” when I surf to its site to look up an entry, and neit­her does Goog­le.</span>
+        
+        <span class="book-sentence" id="s-7-39-4-p0">Most, I ex­pect, take this lack of ack­now­led­ge­ment to mean that no one is no­ti­cing.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-40">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-40-1-p0">But ap­pearan­ces are quite de­cei­ving.</span>
+        
+        <span class="book-sentence" id="s-7-40-2-p0">In fact, as the In­ter­net has ma­tu­red, the tech­no­lo­gies for lin­king be­ha­vi­or with an iden­ti­ty have in­crea­sed dra­ma­ti­cal­ly.</span>
+        
+        <span class="book-sentence" id="s-7-40-3-p0">You can still take steps to as­su­re an­ony­mi­ty on the Net, and many de­pend upon that abili­ty to do good (human rights workers in Burma) or evil (co­or­di­na­ting ter­ro­rist plots).</span>
+        
+        <span class="book-sentence" id="s-7-40-4-p0">But to achie­ve that an­ony­mi­ty takes ef­fort.</span>
+        
+        <span class="book-sentence" id="s-7-40-5-p0">For most of us, our use of the In­ter­net has been made at least tra­ce­able in ways most of us would never even con­sider pos­si­ble.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-41">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-41-1-p0">Con­sider first the tra­ce­a­bi­li­ty re­sul­ting from the basic pro­to­cols of the In­ter­net—TCP/IP.</span>
+        
+        <span class="book-sentence" id="s-7-41-2-p0">Whe­ne­ver you make a re­quest to view a page on the Web, the web ser­ver needs to know where to send the pa­ckets of data that will ap­pe­ar as a web page in your brow­ser.</span>
+        
+        <span class="book-sentence" id="s-7-41-3-p0">Your com­pu­ter thus tells the web ser­ver where you are—in IP space at least—by re­vea­ling an IP ad­dress.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-42">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-42-1-p0">Ass I’ve al­re­a­dy de­scri­bed, the IP ad­dress its­elf doesn’t re­veal any­thing about who you are, or where in phy­si­cal space you come from.</span>
+        
+        <span class="book-sentence" id="s-7-42-2-p0">But it does enable a cer­tain kind of trace.</span>
+        
+        <span class="book-sentence" id="s-7-42-3-p0">If (1) you have got­ten ac­cess to the web through an In­ter­net Ser­vice Pro­vi­der (ISP) that as­signs you an IP ad­dress while you’re on the In­ter­net and (2) that ISP keeps the logs of that as­si­gn­ment, then it’s per­fect­ly pos­si­ble to trace your sur­fing back to you.</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-7-5" data-slug="how">How?</h2>
+    <section class="book-paragraph" id="p-7-43">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-43-1-p0">Well, ima­gi­ne you’re angry at your boss.</span>
+        
+        <span class="book-sentence" id="s-7-43-2-p0">You think she’s a blow­hard who is dri­ving the com­pa­ny into bankrupt­cy.</span>
+        
+        <span class="book-sentence" id="s-7-43-3-p0">After months of frus­tra­ti­on, you de­ci­de to go pu­blic.</span>
+        
+        <span class="book-sentence" id="s-7-43-4-p0">Not “pu­blic” as in a press con­fe­rence, but pu­blic as in a pos­ting to an on­line forum wi­t­hin which your com­pa­ny is being dis­cus­sed.</span>
+        
+        <span class="book-sentence" id="s-7-43-5-p0">You know you’d get in lots of trou­ble if your cri­ti­cism were tied back to you.</span>
+        
+        <span class="book-sentence" id="s-7-43-6-p0">So you take steps to be “an­ony­mous” on the forum.</span>
+        
+        <span class="book-sentence" id="s-7-43-7-p0">Maybe you crea­te an ac­count in the forum under a fic­ti­tious name, and that fic­ti­tious name makes you feel safe.</span>
+        
+        <span class="book-sentence" id="s-7-43-8-p0">Your boss may see the nasty post, but even if she suc­ceeds in get­ting the forum host to re­veal what you said when you si­gned up, all that stuff was bogus.</span>
+        
+        <span class="book-sentence" id="s-7-43-9-p0">Your se­cret, you be­lie­ve, is safe.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-44">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-44-1-p0">Wrong.</span>
+        
+        <span class="book-sentence" id="s-7-44-2-p0">In ad­di­ti­on to the iden­ti­fi­ca­ti­on that your user­na­me might, or might not, pro­vi­de, if the forum is on the web, then it knows the IP ad­dress from which you made your post.</span>
+        
+        <span class="book-sentence" id="s-7-44-3-p0">With that IP ad­dress, and the time you made your post, using “a re­ver­se DNS look-up,” it is sim­ple to iden­ti­fy the In­ter­net Ser­vice Pro­vi­der that gave you ac­cess to the In­ter­net.</span>
+        
+        <span class="book-sentence" id="s-7-44-4-p0">And in­cre­a­sin­gly, it is re­la­tive­ly sim­ple for the In­ter­net Ser­vice Pro­vi­der to check its re­cor­ds to re­veal which ac­count was using that IP ad­dress at that spe­ci­fied time.</span>
+        
+        <span class="book-sentence" id="s-7-44-5-p0">Thus, the ISP could (if re­qui­red) say that it was your ac­count that was using the IP ad­dress that pos­ted the nasty mes­sa­ge about your boss.</span>
+        
+        <span class="book-sentence" id="s-7-44-6-p0">Try as you will to deny it (“Hey, on the In­ter­net, no one knows you’re a dog!”), I’d ad­vi­se you to give up quick­ly.</span>
+        
+        <span class="book-sentence" id="s-7-44-7-p0">They’ve got you.</span>
+        
+        <span class="book-sentence" id="s-7-44-8-p0">You’ve been trap­ped by the Net.</span>
+        
+        <span class="book-sentence" id="s-7-44-9-p0">Dog or no, you’re de­fi­ni­te­ly in the do­g­hou­se.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-45">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-45-1-p0">Now again, what made this tra­c­ing pos­si­ble?</span>
+        
+        <span class="book-sentence" id="s-7-45-2-p0">No plan by the NSA.</span>
+        
+        <span class="book-sentence" id="s-7-45-3-p0">No stra­te­gy of Mi­cro­soft.</span>
+        
+        <span class="book-sentence" id="s-7-45-4-p0">Ins­tead, what made this tra­c­ing pos­si­ble was a by-pro­duct of the ar­chi­tec­tu­re of the Web and the ar­chi­tec­tu­re of ISPs char­ging ac­cess to the Web.</span>
+        
+        <span class="book-sentence" id="s-7-45-5-p0">The Web must know an IP ad­dress; ISPs re­qui­re iden­ti­fi­ca­ti­on be­fo­re they as­sign an IP ad­dress to a cust­o­m­er.</span>
+        
+        <span class="book-sentence" id="s-7-45-6-p0">So long as the log re­cor­ds of the ISP are kept, the tran­sac­tion is tra­ce­able.</span>
+        
+        <span class="book-sentence" id="s-7-45-7-p0">Bot­tom line: If you want an­ony­mi­ty, use a pay phone!</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-46">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-46-1-p0">This tra­ce­a­bi­li­ty in the In­ter­net rai­sed some im­portant con­cerns at the be­gin­ning of 2006.</span>
+        
+        <span class="book-sentence" id="s-7-46-2-p0">Goog­le an­noun­ced it would fight a de­mand by the go­vern­ment to pro­du­ce one mil­li­on samp­le se­ar­ches.</span>
+        
+        <span class="book-sentence" id="s-7-46-3-p0">(MSN and Yahoo!</span>
+        
+        <span class="book-sentence" id="s-7-46-4-p0">had both com­plied with the same re­quest.) That re­quest was made as part of an in­ves­ti­ga­ti­on the go­vern­ment was con­duc­ting to sup­port its de­fen­se of a sta­tu­te de­si­gned to block kids from porn.</span>
+        
+        <span class="book-sentence" id="s-7-46-5-p0">And though the re­quest pro­mi­sed the data would be used for no other pur­po­se, it rai­sed deep con­cerns in the In­ter­net com­mu­ni­ty.</span>
+        
+        <span class="book-sentence" id="s-7-46-6-p0">De­pen­ding upon the data that Goog­le kept, the re­quest show­ed in prin­ciple that it was pos­si­ble to trace le­gal­ly trou­bling se­ar­ches back to in­di­vi­du­al IP ad­dres­ses (and to in­di­vi­du­als with Goog­le ac­counts).</span>
+        
+        <span class="book-sentence" id="s-7-46-7-p0">Thus, for ex­amp­le, if your In­ter­net ad­dress at work is a fixed-IP ad­dress, then every se­arch you’ve ever made from work is at least pos­si­bly kept by Goog­le.</span>
+        
+        <span class="book-sentence" id="s-7-46-8-p0">Does that make you con­cer­ned?</span>
+        
+        <span class="book-sentence" id="s-7-46-9-p0">And as­su­me for the mo­ment you are not a ter­ro­rist: Would you still be con­cer­ned?</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-47">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-47-1-p0">A link back to an IP ad­dress, howe­ver, only fa­ci­li­ta­tes tra­c­ing, and again, even then not per­fect tra­ce­a­bi­li­ty.</span>
+        
+        <span class="book-sentence" id="s-7-47-2-p0">ISPs don’t keep data for long (or­di­na­ri­ly); some don’t even keep as­si­gn­ment re­cor­ds at all.</span>
+        
+        <span class="book-sentence" id="s-7-47-3-p0">And if you’ve ac­ces­sed the In­ter­net at an In­ter­net café, then there’s no re­a­son to be­lie­ve any­thing could be tra­ced back to you.</span>
+        
+        <span class="book-sentence" id="s-7-47-4-p0">So still, the In­ter­net pro­vi­des at least some an­ony­mi­ty.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-48">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-48-1-p0">But IP tra­c­ing isn’t the only tech­no­lo­gy of iden­ti­fi­ca­ti­on that has been laye­red onto the In­ter­net.</span>
+        
+        <span class="book-sentence" id="s-7-48-2-p0">A much more per­va­si­ve tech­no­lo­gy was de­ve­l­o­ped early in the his­to­ry of the Web to make the web more va­luable to com­mer­ce and its cust­o­m­ers.</span>
+        
+        <span class="book-sentence" id="s-7-48-3-p0">This is the tech­no­lo­gy re­fer­red to as “coo­kies.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-49">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-49-1-p0">When the World Wide Web was first de­ploy­ed, the pro­to­col sim­ply enab­led peop­le to view con­tent that had been mar­ked up in a spe­cial pro­gramming lan­gua­ge.</span>
+        
+        <span class="book-sentence" id="s-7-49-2-p0">This lan­gua­ge (HTML) made it easy to link to other pages, and it made it sim­ple to apply basic for­mat­ting to the con­tent (bold, or ita­lics, for ex­amp­le).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-50">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-50-1-p0">But the one thing the pro­to­col didn’t enable was a sim­ple way for a web­site to know which ma­chi­nes had ac­ces­sed it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-51">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-51-1-p0">The pro­to­col was “state-less.” When a web ser­ver re­cei­ved a re­quest to serve a web page, it didn’t know any­thing about the state of the re­ques­ter be­fo­re that re­quest was made.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-52">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-52-1-p0">From the per­spec­tive of pri­va­cy, this sounds like a great fea­ture for the Web.</span>
+        
+        <span class="book-sentence" id="s-7-52-2-p0">Why should a web­site know any­thing about me if I go to that site to view cer­tain con­tent?</span>
+        
+        <span class="book-sentence" id="s-7-52-3-p0">You don’t have to be a cri­mi­nal to app­re­cia­te the value in an­ony­mous brow­sing.</span>
+        
+        <span class="book-sentence" id="s-7-52-4-p0">Ima­gi­ne li­bra­ries kept re­cor­ds of every time you opened a book at the li­bra­ry, even for just a se­cond.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-53">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-53-1-p0">Yet from the per­spec­tive of com­mer­ce, this “fea­ture” of the ori­gi­nal Web is plain­ly a bug, and not be­cau­se com­mer­ci­al sites ne­ces­sa­ri­ly want to know ever­y­thing there is to know about you.</span>
+        
+        <span class="book-sentence" id="s-7-53-2-p0">Ins­tead, the pro­blem is much more prag­ma­tic.</span>
+        
+        <span class="book-sentence" id="s-7-53-3-p0">Say you go to Ama­zon.com and in­di­ca­te you want to buy 20 co­pies of my la­test book.</span>
+        
+        <span class="book-sentence" id="s-7-53-4-p0">(Try it.</span>
+        
+        <span class="book-sentence" id="s-7-53-5-p0">It’s fun.) Now your “shop­ping cart” has 20 co­pies of my book.</span>
+        
+        <span class="book-sentence" id="s-7-53-6-p0">You then click on the icon to check out, and you no­ti­ce your shop­ping cart is empty.</span>
+        
+        <span class="book-sentence" id="s-7-53-7-p0">Why?</span>
+        
+        <span class="book-sentence" id="s-7-53-8-p0">Well be­cau­se, as ori­gi­nal­ly ar­chi­tec­ted, the Web had no easy way to re­co­gni­ze that you were the same en­t­i­ty that just or­de­red 20 books.</span>
+        
+        <span class="book-sentence" id="s-7-53-9-p0">Or put dif­fer­ent­ly, the web ser­ver would sim­ply for­get you.</span>
+        
+        <span class="book-sentence" id="s-7-53-10-p0">The Web as ori­gi­nal­ly built had no way to re­mem­ber you from one page to ano­ther.</span>
+        
+        <span class="book-sentence" id="s-7-53-11-p0">And thus, the Web as ori­gi­nal­ly built would not be of much use to com­mer­ce.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-54">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-54-1-p0">But as I’ve said again and again, the way the Web was is not the way the Web had to be.</span>
+        
+        <span class="book-sentence" id="s-7-54-2-p0">And so those who were buil­ding the in­fra­struc­tu­re of the Web quick­ly began to think through how the web could be “im­pro­ved” to make it easy for com­mer­ce to hap­pen.</span>
+        
+        <span class="book-sentence" id="s-7-54-3-p0">“Coo­kies” were the so­lu­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-54-4-p0">In 1994, Net­scape in­tro­du­ced a pro­to­col to make it pos­si­ble for a web ser­ver to de­po­sit a small bit of data on your com­pu­ter when you ac­ces­sed that ser­ver.</span>
+        
+        <span class="book-sentence" id="s-7-54-5-p0">That small bit of data—the “coo­kie”—made it pos­si­ble for the ser­ver to re­co­gni­ze you when you tra­ve­led to a dif­fe­rent page.</span>
+        
+        <span class="book-sentence" id="s-7-54-6-p0">Of cour­se, there are lots of other con­cerns about what that coo­kie might enable.</span>
+        
+        <span class="book-sentence" id="s-7-54-7-p0">We’ll get to those in the chap­ter about pri­va­cy.</span>
+        
+        <span class="book-sentence" id="s-7-54-8-p0">The point that’s im­portant here, howe­ver, is not the dan­gers this tech­no­lo­gy crea­tes.</span>
+        
+        <span class="book-sentence" id="s-7-54-9-p0">The point is the po­ten­ti­al and how that po­ten­ti­al was built.</span>
+        
+        <span class="book-sentence" id="s-7-54-10-p0">A small chan­ge in the pro­to­col for cli­ent-ser­ver in­ter­ac­tion now makes it pos­si­ble for web­sites to mo­ni­tor and track those who use the site.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-55">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-55-1-p0">This is a small step toward au­then­ti­ca­ted iden­ti­ty.</span>
+        
+        <span class="book-sentence" id="s-7-55-2-p0">It’s far from that, but it is a step toward it.</span>
+        
+        <span class="book-sentence" id="s-7-55-3-p0">Your com­pu­ter isn’t you (yet).</span>
+        
+        <span class="book-sentence" id="s-7-55-4-p0">But coo­kies make it pos­si­ble for the com­pu­ter to au­then­ti­ca­te that it is the same ma­chi­ne that was ac­ces­sing a web­site a mo­ment be­fo­re.</span>
+        
+        <span class="book-sentence" id="s-7-55-5-p0">And it is upon this tech­no­lo­gy that the whole of web com­mer­ce in­iti­al­ly was built.</span>
+        
+        <span class="book-sentence" id="s-7-55-6-p0">Ser­vers could now “know” that this ma­chi­ne is the same ma­chi­ne that was here be­fo­re.</span>
+        
+        <span class="book-sentence" id="s-7-55-7-p0">And from that know­ledge, they could build a great deal of value.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-56">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-56-1-p0">Now again, strict­ly spea­king, coo­kies are not­hing more than a tra­c­ing tech­no­lo­gy.</span>
+        
+        <span class="book-sentence" id="s-7-56-2-p0">They make it sim­ple to trace a ma­chi­ne across web pages.</span>
+        
+        <span class="book-sentence" id="s-7-56-3-p0">That tra­c­ing doesn’t ne­ces­sa­ri­ly re­veal any in­for­ma­ti­on about the user.</span>
+        
+        <span class="book-sentence" id="s-7-56-4-p0">Just as we could fol­low a trail of coo­kie crumbs in real space to an empty room, a web ser­ver could fol­low a trail of “mouse drop­pings” from the first entry on the site until the user lea­ves.</span>
+        
+        <span class="book-sentence" id="s-7-56-5-p0">In both cases, not­hing is ne­ces­sa­ri­ly re­vea­led about the user.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-57">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-57-1-p0">But so­me­ti­mes so­me­thing im­portant is re­vea­led about the user by as­so­cia­ti­on with data stored el­sew­he­re.</span>
+        
+        <span class="book-sentence" id="s-7-57-2-p0">For ex­amp­le, ima­gi­ne you enter a site, and it asks you to re­veal your name, your te­le­pho­ne num­ber, and your e-mail ad­dress as a con­di­ti­on of en­te­ring a con­test.</span>
+        
+        <span class="book-sentence" id="s-7-57-3-p0">You trust the web­site, and do that, and then you leave the web­site.</span>
+        
+        <span class="book-sentence" id="s-7-57-4-p0">The next day, you come back, and you brow­se through a num­ber of pages on that web­site.</span>
+        
+        <span class="book-sentence" id="s-7-57-5-p0">In this in­ter­ac­tion, of cour­se, you’ve re­vea­led not­hing.</span>
+        
+        <span class="book-sentence" id="s-7-57-6-p0">But if a coo­kie was de­po­si­ted on your ma­chi­ne through your brow­ser (and you have not taken steps to re­mo­ve it), then when you re­turn to the site, the web­site again “knows” all these facts about you.</span>
+        
+        <span class="book-sentence" id="s-7-57-7-p0">The coo­kie tra­ces your ma­chi­ne, and this trace links back to a place where you pro­vi­ded in­for­ma­ti­on the ma­chi­ne would not other­wi­se know.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-58">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-58-1-p0">The tra­ce­a­bi­li­ty of IP ad­dres­ses and coo­kies is the de­fault on the In­ter­net now.</span>
+        
+        <span class="book-sentence" id="s-7-58-2-p0">Again, steps can be taken to avoid this tra­ce­a­bi­li­ty, but the vast ma­jo­ri­ty of us don’t take them.</span>
+        
+        <span class="book-sentence" id="s-7-58-3-p0">For­t­u­n­a­te­ly, for so­cie­ty and for most of us, what we do on the Net doesn’t re­al­ly con­cern an­yo­ne.</span>
+        
+        <span class="book-sentence" id="s-7-58-4-p0">But if it did con­cern so­meo­ne, it wouldn’t be hard to track us down.</span>
+        
+        <span class="book-sentence" id="s-7-58-5-p0">We are a peop­le who leave our “mouse drop­pings” ever­yw­he­re.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-59">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-59-1-p0">This de­fault tra­ce­a­bi­li­ty, howe­ver, is not en­ough for some.</span>
+        
+        <span class="book-sentence" id="s-7-59-2-p0">They re­qui­re so­me­thing more.</span>
+        
+        <span class="book-sentence" id="s-7-59-3-p0">That was Har­vard’s view, as I noted in the pre­vious chap­ter.</span>
+        
+        <span class="book-sentence" id="s-7-59-4-p0">That is also the view of just about all pri­va­te net­works today.</span>
+        
+        <span class="book-sentence" id="s-7-59-5-p0">A va­rie­ty of tech­no­lo­gies have de­ve­l­o­ped that enable stron­ger au­then­ti­ca­ti­on by those who use the Net.</span>
+        
+        <span class="book-sentence" id="s-7-59-6-p0">I will de­scri­be two of these tech­no­lo­gies in this sec­tion.</span>
+        
+        <span class="book-sentence" id="s-7-59-7-p0">But it is the se­cond of these two that will, in my view, prove to be the most im­portant.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-60">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-60-1-p0">The first of these tech­no­lo­gies is the Sin­gle Sign-on (SSO) tech­no­lo­gy.</span>
+        
+        <span class="book-sentence" id="s-7-60-2-p0">This tech­no­lo­gy al­lows so­meo­ne to “sign-on” to a net­work once, and then get ac­cess to a wide range of re­sour­ces on that net­work wi­thout nee­ding to au­then­ti­ca­te again.</span>
+        
+        <span class="book-sentence" id="s-7-60-3-p0">Think of it as a badge you wear at your place of work.</span>
+        
+        <span class="book-sentence" id="s-7-60-4-p0">De­pen­ding upon what the badge says (“vi­si­tor” or “re­se­ar­cher”) you get dif­fe­rent ac­cess to dif­fe­rent parts of the buil­ding.</span>
+        
+        <span class="book-sentence" id="s-7-60-5-p0">And like a badge at a place of work, you get the creden­ti­al by gi­ving up other data.</span>
+        
+        <span class="book-sentence" id="s-7-60-6-p0">You give the re­cep­tio­nist an ID; he gives you a badge; you wear that badge whe­re­ver you go while at the busi­ness.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-61">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-61-1-p0">The most com­mon­ly de­ploy­ed SSO is a sys­tem cal­led Ker­be­ros.</span>
+        
+        <span class="book-sentence" id="s-7-61-2-p0">But there are many dif­fe­rent SSOs out there—Mi­cro­soft’s Passport sys­tem is an ex­amp­le—and there is a strong push to build fe­dera­ted SSOs for lin­king many dif­fe­rent sites on the In­ter­net.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-62">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-62-1-p0">Thus, for ex­amp­le, in a fe­dera­ted sys­tem, I might au­then­ti­ca­te mys­elf to my uni­ver­si­ty, but then I could move across any do­main wi­t­hin the fe­de­ra­ti­on wi­thout au­then­ti­ca­ting again.</span>
+        
+        <span class="book-sentence" id="s-7-62-2-p0">The big ad­van­ta­ge in this ar­chi­tec­tu­re is that I can au­then­ti­ca­te to the in­sti­tu­ti­on I trust wi­thout sprea­ding lots of data about mys­elf to in­sti­tu­ti­ons I don’t trust.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-63">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-63-1-p0">SSOs have been very im­portant in buil­ding iden­ti­ty into the In­ter­net.</span>
+        
+        <span class="book-sentence" id="s-7-63-2-p0">But a se­cond tech­no­lo­gy, I be­lie­ve, will be­co­me the most im­portant tool for iden­ti­fi­ca­ti­on in the next ten years.</span>
+        
+        <span class="book-sentence" id="s-7-63-3-p0">This is be­cau­se this al­ter­na­ti­ve re­spects im­portant ar­chi­tec­tu­ral fea­tures of the In­ter­net, and be­cau­se the de­mand for bet­ter tech­no­lo­gies of iden­ti­fi­ca­ti­on will con­ti­nue to be strong.</span>
+        
+        <span class="book-sentence" id="s-7-63-4-p0">For­get the hass­le of typ­ing your name and ad­dress at every site you want to buy so­me­thing from.</span>
+        
+        <span class="book-sentence" id="s-7-63-5-p0">You only need to think about the ex­tra­or­di­na­ry growth in iden­ti­ty theft to re­co­gni­ze there are many who would be eager to see so­me­thing bet­ter come along.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-64">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-64-1-p0">To un­der­stand this se­cond sys­tem, think first about how creden­ti­als work in real space.6 You’ve got a wal­let.</span>
+        
+        <span class="book-sentence" id="s-7-64-2-p0">In it is li­kely to be a dri­ver’s li­cen­se, some credit cards, a health in­suran­ce card, an ID for where you work, and, if you’re lucky, some money.</span>
+        
+        <span class="book-sentence" id="s-7-64-3-p0">Each of these cards can be used to au­then­ti­ca­te some fact about you—again, with very dif­fe­rent le­vels of con­fi­dence.</span>
+        
+        <span class="book-sentence" id="s-7-64-4-p0">The dri­ver’s li­cen­se has a pic­tu­re and a list of phy­si­cal cha­rac­te­ris­tics.</span>
+        
+        <span class="book-sentence" id="s-7-64-5-p0">That’s en­ough for a wine store, but not en­ough for the NSA.</span>
+        
+        <span class="book-sentence" id="s-7-64-6-p0">The credit card has your si­gna­tu­re.</span>
+        
+        <span class="book-sentence" id="s-7-64-7-p0">Ven­dors are sup­po­sed to use that data to au­then­ti­ca­te that the per­son who signs the bill is the owner of the card.</span>
+        
+        <span class="book-sentence" id="s-7-64-8-p0">If the ven­dor be­co­mes sus­pi­cious, she might de­mand that you show an ID as well.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-65">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-65-1-p0">No­ti­ce the cri­ti­cal fea­tures of this “wal­let” ar­chi­tec­tu­re.</span>
+        
+        <span class="book-sentence" id="s-7-65-2-p0">First, these creden­ti­als are is­sued by dif­fe­rent en­t­i­ties.</span>
+        
+        <span class="book-sentence" id="s-7-65-3-p0">Se­cond, de­pen­ding upon their tech­no­lo­gy, they offer dif­fe­rent le­vels of con­fi­dence.</span>
+        
+        <span class="book-sentence" id="s-7-65-4-p0">Third, I’m free to use these creden­ti­als in ways never ori­gi­nal­ly plan­ned or in­ten­ded by the is­su­er of the creden­ti­al.</span>
+        
+        <span class="book-sentence" id="s-7-65-5-p0">The De­part­ment of Motor Ve­hi­cles never co­or­di­na­ted with Visa to enable dri­ver’s li­cen­ses to be used to au­then­ti­ca­te the hol­der of a credit card.</span>
+        
+        <span class="book-sentence" id="s-7-65-6-p0">But once the one was pre­va­lent, the other could use it.</span>
+        
+        <span class="book-sentence" id="s-7-65-7-p0">And fourth, not­hing re­qui­res that I show all my cards when I can use just one.</span>
+        
+        <span class="book-sentence" id="s-7-65-8-p0">That is, to show my dri­ver’s li­cen­se, I don’t also re­veal my health in­suran­ce card.</span>
+        
+        <span class="book-sentence" id="s-7-65-9-p0">Or to use my Visa, I don’t also have to re­veal my Ame­ri­can Ex­press card.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-66">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-66-1-p0">These same fea­tures are at the core of what may prove to be the most im­portant ad­di­ti­on to the ef­fec­tive ar­chi­tec­tu­re of the In­ter­net since its birth.</span>
+        
+        <span class="book-sentence" id="s-7-66-2-p0">This is a pro­ject being led by Mi­cro­soft to es­sen­ti­al­ly de­ve­lop an Iden­ti­ty Me­ta­sys­tem—a new layer of the In­ter­net, an Iden­ti­ty Layer, that would com­ple­ment the exis­ting net­work lay­ers to add a new kind of func­tio­na­li­ty.</span>
+        
+        <span class="book-sentence" id="s-7-66-3-p0">This Iden­ti­ty Layer is not Mi­cro­soft Passport, or some other Sin­gle Sign-On tech­no­lo­gy.</span>
+        
+        <span class="book-sentence" id="s-7-66-4-p0">Ins­tead it is a pro­to­col to enable a kind of vir­tu­al wal­let of creden­ti­als, with all the same at­tri­bu­tes of the creden­ti­als in your wal­let—ex­cept bet­ter.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-67">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-67-1-p0">This vir­tu­al wal­let will not only be more re­lia­ble than the wal­let in your po­cket, it will also give you the abili­ty to con­trol more pre­cise­ly what data about you is re­vea­led to those who de­mand data about you.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-68">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-68-1-p0">For ex­amp­le, in real space, your wal­let can ea­si­ly be sto­len.</span>
+        
+        <span class="book-sentence" id="s-7-68-2-p0">If it’s sto­len, then there’s a pe­ri­od of time when it’s re­la­tive­ly easy for the thief to use the cards to buy stuff.</span>
+        
+        <span class="book-sentence" id="s-7-68-3-p0">In cy­ber­space, these wal­lets are not ea­si­ly sto­len.</span>
+        
+        <span class="book-sentence" id="s-7-68-4-p0">In­de­ed, if they’re ar­chi­tec­ted well, it would be prac­tical­ly im­pos­si­ble to “steal” them.</span>
+        
+        <span class="book-sentence" id="s-7-68-5-p0">Re­mo­ve the cards from their hol­der, and they be­co­me use­l­ess di­gi­tal ob­jects.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-69">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-69-1-p0">Or again, in real space, if you want to au­then­ti­ca­te that you’re over 21 and the­re­fo­re can buy a six-pack of beer, you show the clerk your dri­ver’s li­cen­se.</span>
+        
+        <span class="book-sentence" id="s-7-69-2-p0">With that, he au­then­ti­ca­tes your age.</span>
+        
+        <span class="book-sentence" id="s-7-69-3-p0">But with that bit of data, he also gets ac­cess to your name, your ad­dress, and in some sta­tes, your so­ci­al se­cu­ri­ty num­ber.</span>
+        
+        <span class="book-sentence" id="s-7-69-4-p0">Those other bits of data are not ne­cessa­ry for him to know.</span>
+        
+        <span class="book-sentence" id="s-7-69-5-p0">In some con­texts, de­pen­ding on how cree­py he is, these data are ex­act­ly the sort you don’t want him to know.</span>
+        
+        <span class="book-sentence" id="s-7-69-6-p0">But the in­ef­fi­ci­en­cies of real-space tech­no­lo­gies re­veal these data.</span>
+        
+        <span class="book-sentence" id="s-7-69-7-p0">This loss of pri­va­cy is a cost of doing busi­ness.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-70">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-70-1-p0">The vir­tu­al wal­let would be dif­fe­rent.</span>
+        
+        <span class="book-sentence" id="s-7-70-2-p0">If you need to au­then­ti­ca­te your age, the tech­no­lo­gy could au­then­ti­ca­te that fact alone—in­de­ed, it could au­then­ti­ca­te sim­ply that you’re over 21, or over 65, or under 18, wi­thout re­vea­ling any­thing more.</span>
+        
+        <span class="book-sentence" id="s-7-70-3-p0">Or if you need to au­then­ti­ca­te your ci­ti­zenship, that fact can be cer­ti­fied wi­thout re­vea­ling your name, or where you live, or your passport num­ber.</span>
+        
+        <span class="book-sentence" id="s-7-70-4-p0">The tech­no­lo­gy is craf­ted to re­veal just what you want it to re­veal, wi­thout also re­vea­ling other stuff.</span>
+        
+        <span class="book-sentence" id="s-7-70-5-p0">(Ass one of the key ar­chi­tects for this me­ta­sys­tem, Kim Ca­me­ron, de­scri­bed it: “To me, that’s the cen­ter of the sys­tem.”7) And, most im­port­ant­ly, using the power of cryp­to­gra­phy, the pro­to­col makes it pos­si­ble for the other side to be con­fi­dent about the fact you re­veal wi­thout re­qui­ring any more data.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-71">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-71-1-p0">The bril­li­an­ce in this so­lu­ti­on to the pro­blems of iden­ti­fi­ca­ti­on is first that it mir­rors the basic ar­chi­tec­tu­re of the In­ter­net.</span>
+        
+        <span class="book-sentence" id="s-7-71-2-p0">There’s no cen­tral re­po­si­to­ry for data; there’s no net­work tech­no­lo­gy that ever­yo­ne must adopt.</span>
+        
+        <span class="book-sentence" id="s-7-71-3-p0">There is ins­tead a plat­form for buil­ding iden­ti­ty tech­no­lo­gies that en­cou­ra­ges com­pe­ti­ti­on among dif­fe­rent pri­va­cy and se­cu­ri­ty pro­vi­ders—TCP/IP for iden­ti­ty.</span>
+        
+        <span class="book-sentence" id="s-7-71-4-p0">Mi­cro­soft may be lea­ding the pro­ject, but an­yo­ne can build for this pro­to­col.</span>
+        
+        <span class="book-sentence" id="s-7-71-5-p0">Not­hing ties the pro­to­col to the Win­dows ope­ra­ting sys­tem.</span>
+        
+        <span class="book-sentence" id="s-7-71-6-p0">Or to any other spe­ci­fic ven­dor.</span>
+        
+        <span class="book-sentence" id="s-7-71-7-p0">Ass Ca­me­ron wi­se­ly puts it, “it can’t be owned by any one com­pa­ny or any one coun­try.</span>
+        
+        <span class="book-sentence" id="s-7-71-8-p0">.</span>
+        
+        <span class="book-sentence" id="s-7-71-9-p0">.</span>
+        
+        <span class="book-sentence" id="s-7-71-10-p0">or just have the tech­no­lo­gy stamp of any one en­gi­neer.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-72">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-72-1-p0">The Iden­ti­ty Layer is in­fra­struc­tu­re for the In­ter­net.</span>
+        
+        <span class="book-sentence" id="s-7-72-2-p0">It gives value (and rai­ses con­cerns) to many bey­ond Mi­cro­soft.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-73">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-73-1-p0">But though Mi­cro­soft’s work is an im­portant gift to the In­ter­net, the Iden­ti­ty Layer is not al­tru­ism.</span>
+        
+        <span class="book-sentence" id="s-7-73-2-p0">“Mi­cro­soft’s stra­te­gy is based on web ser­vices,” Ca­me­ron de­scri­bed to me.</span>
+        
+        <span class="book-sentence" id="s-7-73-3-p0">“Web ser­vices are im­pos­si­ble wi­thout iden­ti­ty.” There is im­portant pu­blic value here, but pri­va­te in­te­rest is dri­ving the de­ploy­ment of this pu­blic value.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-74">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-74-1-p0">The Iden­ti­ty Layer would be­ne­fit in­di­vi­du­als, busi­nes­ses, and the go­vern­ment, but each dif­fer­ent­ly.</span>
+        
+        <span class="book-sentence" id="s-7-74-2-p0">In­di­vi­du­als could more ea­si­ly pro­tect them­sel­ves from iden­ti­ty theft; if you get an e-mail from Pay­Pal de­man­ding you up­date your ac­count, you’ll know whe­ther the web­site is ac­tual­ly Pay­Pal.</span>
+        
+        <span class="book-sentence" id="s-7-74-3-p0">Or if you want to pro­tect yours­elf against spam, you could block all e-mail that doesn’t come from an au­then­ti­ca­ted ser­ver.</span>
+        
+        <span class="book-sentence" id="s-7-74-4-p0">In eit­her case, the tech­no­lo­gy is in­cre­a­sing con­fi­dence about the In­ter­net.</span>
+        
+        <span class="book-sentence" id="s-7-74-5-p0">And the harms that come from a lack of con­fi­dence—main­ly fraud—would the­re­fo­re be re­du­ced.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-75">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-75-1-p0">Com­mer­ce too would be­ne­fit from this form of tech­no­lo­gy.</span>
+        
+        <span class="book-sentence" id="s-7-75-2-p0">It too be­ne­fits from the re­duc­tion of fraud.</span>
+        
+        <span class="book-sentence" id="s-7-75-3-p0">And it too would be­ne­fit from a more se­cu­re in­fra­struc­tu­re for con­duc­ting on­line tran­sac­tions.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-76">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-76-1-p0">And fi­nal­ly, the go­vern­ment would be­ne­fit from this in­fra­struc­tu­re of trust.</span>
+        
+        <span class="book-sentence" id="s-7-76-2-p0">If there were a sim­ple way to de­mand that peop­le au­then­ti­ca­te facts about them­sel­ves, it would be ea­sier for the go­vern­ment to in­sist that they do so.</span>
+        
+        <span class="book-sentence" id="s-7-76-3-p0">If it were ea­sier to have high con­fi­dence that the per­son on the web­site was who he said he was, then it would be chea­per to de­li­ver cer­tain in­for­ma­ti­on across the web.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-77">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-77-1-p0">But while in­di­vi­du­als, com­mer­ce, and go­vern­ment would all be­ne­fit from this sort of tech­no­lo­gy, there is also so­me­thing that each could lose.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-78">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-78-1-p0">In­di­vi­du­als right now can be ef­fec­tive­ly an­ony­mous on the Net.</span>
+        
+        <span class="book-sentence" id="s-7-78-2-p0">A plat­form for au­then­ti­ca­ted iden­ti­ty would make an­ony­mi­ty much har­der.</span>
+        
+        <span class="book-sentence" id="s-7-78-3-p0">We might ima­gi­ne, for ex­amp­le, a norm de­ve­lo­ping to block ac­cess to a web­site by an­yo­ne not car­ry­ing a token that at least made it pos­si­ble to trace back to the user—a kind of dri­ver’s li­cen­se for the In­ter­net.</span>
+        
+        <span class="book-sentence" id="s-7-78-4-p0">That norm, plus this tech­no­lo­gy, would make an­ony­mous speech ex­tre­me­ly dif­fi­cult.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-79">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-79-1-p0">Com­mer­ce could also lose so­me­thing from this de­sign.</span>
+        
+        <span class="book-sentence" id="s-7-79-2-p0">To the extent that there are sim­ple ways to au­then­ti­ca­te that I am the aut­ho­ri­zed user of this credit card, for ex­amp­le, it’s less ne­cessa­ry for web­sites to de­mand all sorts of data about me—my ad­dress, my te­le­pho­ne num­bers, and in one case I re­cent­ly en­coun­te­red, my bir­th­day.</span>
+        
+        <span class="book-sentence" id="s-7-79-3-p0">That fact could build a norm against re­vea­ling extra­neous data.</span>
+        
+        <span class="book-sentence" id="s-7-79-4-p0">But that data may be va­luable to busi­ness bey­ond sim­ply con­fir­ming a char­ge.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-80">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-80-1-p0">And go­vern­ments, too, may lose so­me­thing from this ar­chi­tec­tu­re of iden­ti­fi­ca­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-80-2-p0">Just as com­mer­ce may lose the extra data that in­di­vi­du­als need to re­veal to au­then­ti­ca­te them­sel­ves, so too will the go­vern­ment lose that.</span>
+        
+        <span class="book-sentence" id="s-7-80-3-p0">It may feel that such data is ne­cessa­ry for some other pur­po­se, but gathe­ring it would be­co­me more dif­fi­cult.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-81">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-81-1-p0">Each of these be­ne­fits and costs can be ad­jus­ted, de­pen­ding upon how the tech­no­lo­gy is im­ple­men­ted.</span>
+        
+        <span class="book-sentence" id="s-7-81-2-p0">And as the re­sul­ting mix of pri­va­cy and se­cu­ri­ty is the pro­duct of com­pe­ti­ti­on and an equi­li­bri­um bet­ween in­di­vi­du­als and busi­nes­ses, there’s no way up front to pre­dict what it will be.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-82">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-82-1-p0">But for our pur­po­ses, the only im­portant fact to no­ti­ce is that this in­fra­struc­tu­re could ef­fec­tive­ly an­s­wer the first ques­ti­on that re­gu­la­bi­li­ty re­qui­res an­s­we­ring: Who did what where?</span>
+        
+        <span class="book-sentence" id="s-7-82-2-p0">With an in­fra­struc­tu­re en­ab­ling cheap iden­ti­fi­ca­ti­on whe­re­ver you are, the fre­quen­cy of un­iden­ti­fied ac­tivi­ty falls dra­ma­ti­cal­ly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-83">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-83-1-p0">This final ex­amp­le of an iden­ti­fi­ca­ti­on tech­no­lo­gy throws into re­li­ef an im­portant fact about en­cryp­ti­on tech­no­lo­gy.</span>
+        
+        <span class="book-sentence" id="s-7-83-2-p0">The Iden­ti­ty Layer de­pends upon cryp­to­gra­phy.</span>
+        
+        <span class="book-sentence" id="s-7-83-3-p0">It thus de­mons­tra­tes the sense in which cryp­to­gra­phy is Janus-faced.</span>
+        
+        <span class="book-sentence" id="s-7-83-4-p0">Ass Ste­wart Baker and Paul Hurst put it, cryp­to­gra­phy “su­re­ly is the best of tech­no­lo­gies and the worst of tech­no­lo­gies.</span>
+        
+        <span class="book-sentence" id="s-7-83-5-p0">It will stop cri­mes and it will crea­te new cri­mes.</span>
+        
+        <span class="book-sentence" id="s-7-83-6-p0">It will un­der­mi­ne dic­ta­tor­ships, and it will drive them to new ex­ces­ses.</span>
+        
+        <span class="book-sentence" id="s-7-83-7-p0">It will make us all an­ony­mous, and it will track our every tran­sac­tion.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-84">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-84-1-p0">Cryp­to­gra­phy can be all these things, both good and bad, be­cau­se en­cryp­ti­on can serve two fun­da­men­tal­ly dif­fe­rent ends.</span>
+        
+        <span class="book-sentence" id="s-7-84-2-p0">In its “con­fi­den­tia­li­ty” func­tion it can be “used to keep com­mu­ni­ca­ti­ons se­cret.” In its “iden­ti­fi­ca­ti­on” func­tion it can be “used to pro­vi­de for­ge­ry-proof di­gi­tal iden­ti­ties.” It enables free­dom from re­gu­la­ti­on (as it en­han­ces con­fi­den­tia­li­ty), but it can also enable more ef­fi­ci­ent re­gu­la­ti­on (as it en­han­ces iden­ti­fi­ca­ti­on).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-85">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-85-1-p0">Its tra­di­tio­nal use is se­crets.</span>
+        
+        <span class="book-sentence" id="s-7-85-2-p0">En­crypt a mes­sa­ge, and only those with the pro­per key can open and read it.</span>
+        
+        <span class="book-sentence" id="s-7-85-3-p0">This type of en­cryp­ti­on has been around as long as lan­gua­ge its­elf.</span>
+        
+        <span class="book-sentence" id="s-7-85-4-p0">But until the mid-1970s it suf­fe­red from an im­portant weak­ness: the same key that was used to en­crypt a mes­sa­ge was also used to de­crypt it.</span>
+        
+        <span class="book-sentence" id="s-7-85-5-p0">So if you lost that key, all the mes­sa­ges hi­d­den with that key were also ren­de­red vul­nerable.</span>
+        
+        <span class="book-sentence" id="s-7-85-6-p0">If a large num­ber of mes­sa­ges were en­cryp­ted with the same key, lo­sing the key com­pro­mi­sed the whole ar­chi­ve of se­crets pro­tec­ted by the key.</span>
+        
+        <span class="book-sentence" id="s-7-85-7-p0">This risk was si­gni­fi­cant.</span>
+        
+        <span class="book-sentence" id="s-7-85-8-p0">You al­ways had to “trans­port” the key nee­ded to un­lock the mes­sa­ge, and in­herent in that trans­port was the risk that the key would be lost.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-86">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-86-1-p0">In the mid-1970s, howe­ver, a bre­akth­rough in en­cryp­ti­on tech­ni­que was an­noun­ced by two com­pu­ter sci­en­tists, Whit­field Dif­fie and Mar­tin Hell­man.</span>
+        
+        <span class="book-sentence" id="s-7-86-2-p0">Ra­ther than re­ly­ing on a sin­gle key, the Dif­fie-Hell­man sys­tem used two keys—one pu­blic, the other pri­va­te.</span>
+        
+        <span class="book-sentence" id="s-7-86-3-p0">What is en­cryp­ted with one can be de­cryp­ted only with the other.</span>
+        
+        <span class="book-sentence" id="s-7-86-4-p0">Even with one key there is no way to infer the other.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-87">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-87-1-p0">This dis­co­very was the clue to an ar­chi­tec­tu­re that could build an ex­tra­or­di­na­ry range of con­fi­dence into any net­work, whe­ther or not the phy­si­cal net­work its­elf was se­cu­re.</span>
+        
+        <span class="book-sentence" id="s-7-87-2-p0">And again, that con­fi­dence could both make me con­fi­dent that my se­crets won’t be re­vea­led and make me con­fi­dent that the per­son using my site just now is you.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-88">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-88-1-p0">The tech­no­lo­gy the­re­fo­re works to keep se­crets, but it also makes it har­der to keep se­crets.</span>
+        
+        <span class="book-sentence" id="s-7-88-2-p0">It works to make stuff less re­gulable, and more re­gulable.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-89">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-89-1-p0">In the In­ter­net’s first life, en­cryp­ti­on tech­no­lo­gy was on the side of pri­va­cy.</span>
+        
+        <span class="book-sentence" id="s-7-89-2-p0">Its most com­mon use was to keep in­for­ma­ti­on se­cret.</span>
+        
+        <span class="book-sentence" id="s-7-89-3-p0">But in the In­ter­net’s next life, en­cryp­ti­on tech­no­lo­gy’s most im­portant role will be in ma­king the Net more re­gulable.</span>
+        
+        <span class="book-sentence" id="s-7-89-4-p0">Ass an Iden­ti­ty Layer gets built into the Net, the easy abili­ty to de­mand some form of iden­ti­ty as a con­di­ti­on to ac­ces­sing the re­sour­ces of the Net in­crea­ses.</span>
+        
+        <span class="book-sentence" id="s-7-89-5-p0">Ass that abili­ty in­crea­ses, its pre­va­lence will in­crea­se as well.</span>
+        
+        <span class="book-sentence" id="s-7-89-6-p0">In­de­ed, as Shawn Helms de­scri­bes, the next ge­ne­ra­ti­on of the In­ter­net Pro­to­col—IPv6—“marks each pa­cket with an en­cryp­ti­on ‘key’ that can­not be al­te­red or for­ged, thus se­cu­re­ly iden­ti­fy­ing the pa­cket’s ori­gin.</span>
+        
+        <span class="book-sentence" id="s-7-89-7-p0">This au­then­ti­ca­ti­on func­tion can iden­ti­fy every sen­der and re­cei­ver of in­for­ma­ti­on over the In­ter­net, thus ma­king it ne­ar­ly im­pos­si­ble for peop­le to re­main an­ony­mous on the In­ter­net.”^^16^^</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-90">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-90-1-p0">And even if not im­pos­si­ble, suf­fi­ci­ent­ly dif­fi­cult for the vast ma­jo­ri­ty of us.</span>
+        
+        <span class="book-sentence" id="s-7-90-2-p0">Our pa­ckets will be mar­ked.</span>
+        
+        <span class="book-sentence" id="s-7-90-3-p0">We—or so­me­thing about us—will be known.</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-7-6" data-slug="who-did-what-where">WHO DID WHAT, WHERE?</h2>
+    <section class="book-paragraph" id="p-7-91">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-91-1-p0">Re­gu­la­bi­li­ty also de­pends upon kno­wing the “what” in “who did what, where?” But again, the In­ter­net as ori­gi­nal­ly de­si­gned didn’t help the re­gu­la­tor here eit­her.</span>
+        
+        <span class="book-sentence" id="s-7-91-2-p0">If the In­ter­net pro­to­col sim­ply cuts up data into pa­ckets and stamps an ad­dress on them, then not­hing in the basic pro­to­col would tell an­yo­ne loo­king at the pa­cket what the pa­cket was for.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-92">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-92-1-p0">For ex­amp­le, ima­gi­ne you’re a te­le­pho­ne com­pa­ny pro­vi­ding broad­band In­ter­net ac­cess (DSL) across your te­le­pho­ne lines.</span>
+        
+        <span class="book-sentence" id="s-7-92-2-p0">Some smart in­no­va­tor de­ve­lops Voice-over-IP (VOIP)—an ap­p­li­ca­ti­on that makes it pos­si­ble to use the In­ter­net to make te­le­pho­ne calls.</span>
+        
+        <span class="book-sentence" id="s-7-92-3-p0">You, the phone com­pa­ny, aren’t happy about that, be­cau­se now peop­le using your DSL ser­vice can make un­me­te­red te­le­pho­ne calls.</span>
+        
+        <span class="book-sentence" id="s-7-92-4-p0">That free­dom cuts into your pro­fit.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-93">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-93-1-p0">Is there any­thing you can do about this?</span>
+        
+        <span class="book-sentence" id="s-7-93-2-p0">Re­ly­ing upon just the In­ter­net pro­to­cols, the an­s­wer is no.</span>
+        
+        <span class="book-sentence" id="s-7-93-3-p0">The “pa­ckets” of data that con­tain the si­mu­la­ted-te­le­pho­ne calls look just like any pa­cket of data.</span>
+        
+        <span class="book-sentence" id="s-7-93-4-p0">They don’t come la­be­led with VOIP or any other con­sis­tent mo­ni­ker.</span>
+        
+        <span class="book-sentence" id="s-7-93-5-p0">Ins­tead, pa­ckets are sim­ply mar­ked with ad­dres­ses.</span>
+        
+        <span class="book-sentence" id="s-7-93-6-p0">They are not mar­ked with ex­pla­na­ti­ons of what is going on with each.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-94">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-94-1-p0">But as my ex­amp­le is meant to sug­gest, we can ea­si­ly un­der­stand why some would be very keen to un­der­stand what pa­ckets are flo­wing across their net­work, and not just for anti-com­pe­ti­ti­ve pur­po­ses.</span>
+        
+        <span class="book-sentence" id="s-7-94-2-p0">Net­work ad­mi­nis­tra­tors try­ing to de­ci­de whe­ther to add new ca­pa­ci­ty need to know what the exis­ting ca­pa­ci­ty is being used for.</span>
+        
+        <span class="book-sentence" id="s-7-94-3-p0">Busi­nes­ses keen to avoid their em­ployees was­ting time with sports or porn have a strong in­te­rest in kno­wing just what their em­ployees are doing.</span>
+        
+        <span class="book-sentence" id="s-7-94-4-p0">Uni­ver­si­ties try­ing to avoid vi­ru­s­es or mal­wa­re being in­stal­led on net­work com­pu­ters need to know what kind of pa­ckets are flo­wing onto their net­work.</span>
+        
+        <span class="book-sentence" id="s-7-94-5-p0">In all these cases, there’s an ob­vious and valid will to iden­ti­fy what pa­ckets are flo­wing on the net­work.</span>
+        
+        <span class="book-sentence" id="s-7-94-6-p0">And as they say, where there’s a will, there’s a way.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-95">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-95-1-p0">The way fol­lows the same tech­ni­que de­scri­bed in the sec­tion above.</span>
+        
+        <span class="book-sentence" id="s-7-95-2-p0">Again, the TCP/IP pro­to­col doesn’t in­clu­de tech­no­lo­gy for iden­ti­fy­ing the con­tent car­ri­ed in TCP/IP pa­ckets.</span>
+        
+        <span class="book-sentence" id="s-7-95-3-p0">But it also doesn’t in­ter­fe­re with ap­p­li­ca­ti­ons that might ex­ami­ne TCP/IP pa­ckets and re­port what those pa­ckets are about.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-96">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-96-1-p0">So, for ex­amp­le, con­sider a pa­cka­ge pro­du­ced by Ipa­ne­ma Tech­no­lo­gies.</span>
+        
+        <span class="book-sentence" id="s-7-96-2-p0">This tech­no­lo­gy enables a net­work owner to in­spect the pa­ckets tra­ve­ling on its net­work.</span>
+        
+        <span class="book-sentence" id="s-7-96-3-p0">Ass its web­page pro­mi­ses,</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-97">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-97-1-p0">The Ipa­ne­ma Sys­tems “deep” layer 7 pa­cket in­spec­tion au­to­ma­ti­cal­ly re­co­gni­zes all cri­ti­cal busi­ness and re­crea­tio­nal ap­p­li­ca­ti­on flows run­ning over the net­work.</span>
+        
+        <span class="book-sentence" id="s-7-97-2-p0">Real-time gra­phi­cal in­ter­faces as well as mi­nu­te-by-mi­nu­te re­ports are avail­able to ra­pidly dis­co­ver newly de­ploy­ed ap­p­li­ca­ti­ons.¹⁷</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-98">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-98-1-p0">Using the data gathe­red by this tech­no­lo­gy, the sys­tem ge­ne­ra­tes re­ports about the ap­p­li­ca­ti­ons being used in the net­work, and who’s using them.</span>
+        
+        <span class="book-sentence" id="s-7-98-2-p0">These tech­no­lo­gies make it pos­si­ble to con­trol net­work use, eit­her to eco­no­mi­ze on band­width costs, or to block uses that the net­work owner doesn’t per­mit.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-99">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-99-1-p0">Ano­ther ex­amp­le of this kind of con­tent con­trol is a pro­duct cal­led “iPro­tec­tY­ou.”¹⁸ This pro­duct also scans pa­ckets on a net­work, but this con­trol is im­ple­men­ted at the level of a par­ti­cu­lar ma­chi­ne.</span>
+        
+        <span class="book-sentence" id="s-7-99-2-p0">Par­ents load this soft­ware on a com­pu­ter; the soft­ware then mo­ni­tors all net­work traf­fic with that com­pu­ter.</span>
+        
+        <span class="book-sentence" id="s-7-99-3-p0">Ass the com­pa­ny de­scri­bes, the pro­gram can then “fil­ter harm­ful web­sites and news­groups; re­strict In­ter­net time to a pre­de­ter­mi­ned sche­du­le; de­ci­de which pro­grams can have In­ter­net ac­cess; limit the amount of data that can be sent or re­cei­ved to/from your com­pu­ter; block e-mails, on­line chats, in­stant mes­sa­ges and P2P con­nec­tions con­tai­ning in­ap­pro­pria­te words; [and pro­du­ce] de­tai­led In­ter­net ac­tivi­ty logs.” Once again, this is an ap­p­li­ca­ti­on that sits on top of the net­work and wat­ches.</span>
+        
+        <span class="book-sentence" id="s-7-99-4-p0">It in­ter­venes in net­work ac­tivi­ty when it iden­ti­fies the ac­tivi­ty as the kind the ad­mi­nis­tra­tor wants to con­trol.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-100">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-100-1-p0">In ad­di­ti­on to these tech­no­lo­gies of con­trol, pro­gramm­ers have de­ve­l­o­ped a wide range of pro­grams to mo­ni­tor net­works.</span>
+        
+        <span class="book-sentence" id="s-7-100-2-p0">Per­haps the do­mi­nant ap­p­li­ca­ti­on in this con­text is cal­led “nmap”—a pro­gram for net­work ex­plo­ra­ti­on or se­cu­ri­ty au­dit­ing.</span>
+        
+        <span class="book-sentence" id="s-7-100-3-p0">.</span>
+        
+        <span class="book-sentence" id="s-7-100-4-p0">.</span>
+        
+        <span class="book-sentence" id="s-7-100-5-p0">de­si­gned to ra­pidly scan large net­works.</span>
+        
+        <span class="book-sentence" id="s-7-100-6-p0">.</span>
+        
+        <span class="book-sentence" id="s-7-100-7-p0">.</span>
+        
+        <span class="book-sentence" id="s-7-100-8-p0">.</span>
+        
+        <span class="book-sentence" id="s-7-100-9-p0">Nmap uses raw IP pa­ckets in novel ways to de­ter­mi­ne what hosts are avail­able on the net­work, what ser­vices (ap­p­li­ca­ti­on name and ver­si­on) those hosts are of­fe­ring, what ope­ra­ting sys­tems (and OS ver­si­ons) they are run­ning, what type of pa­cket fil­ters/fire­walls are in use, and do­zens of other cha­rac­te­ris­tics.¹⁹</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-101">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-101-1-p0">This soft­ware is “free soft­ware,” mea­ning the sour­ce code is avail­able, and any mo­di­fi­ca­ti­ons of the sour­ce code must be made avail­able as well.</span>
+        
+        <span class="book-sentence" id="s-7-101-2-p0">These con­di­ti­ons es­sen­ti­al­ly gua­ran­tee that the code ne­cessa­ry to en­ga­ge in this mo­ni­to­ring will al­ways be avail­able.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-102">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-102-1-p0">Fi­nal­ly, coders have de­ve­l­o­ped “pa­cket fil­te­ring” tech­no­lo­gy, which, as one po­pu­lar ex­amp­le de­scri­bes, “is the selec­tive pas­sing or blo­cking of data pa­ckets as they pass through a net­work in­ter­face.</span>
+        
+        <span class="book-sentence" id="s-7-102-2-p0">.</span>
+        
+        <span class="book-sentence" id="s-7-102-3-p0">.</span>
+        
+        <span class="book-sentence" id="s-7-102-4-p0">.</span>
+        
+        <span class="book-sentence" id="s-7-102-5-p0">The most often used cri­te­ria are sour­ce and de­sti­na­ti­on ad­dress, sour­ce and de­sti­na­ti­on port, and pro­to­col.” This again is a tech­no­lo­gy that’s mo­ni­to­ring “what” is car­ri­ed wi­t­hin pa­ckets, and de­ci­des what’s al­lo­wed based upon what it finds.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-103">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-103-1-p0">In each of these cases, a layer of code com­ple­ments the TCP/IP pro­to­col, to give net­work ad­mi­nis­tra­tors so­me­thing TCP/IP alone would not—na­me­ly, know­ledge about “what” is car­ri­ed in the net­work pa­ckets.</span>
+        
+        <span class="book-sentence" id="s-7-103-2-p0">That know­ledge in­crea­ses the “re­gu­la­bi­li­ty” of net­work use.</span>
+        
+        <span class="book-sentence" id="s-7-103-3-p0">If a com­pa­ny doesn’t want its em­ployees using IM chat, then these tech­no­lo­gies will en­force that rule—by blo­cking the pa­ckets con­tai­ning IM chat.</span>
+        
+        <span class="book-sentence" id="s-7-103-4-p0">Or if a com­pa­ny wants to know which em­ployees use se­xu­al­ly ex­pli­cit speech in In­ter­net com­mu­ni­ca­ti­on, these tech­no­lo­gies will re­veal that as well.</span>
+        
+        <span class="book-sentence" id="s-7-103-5-p0">Again, there are ple­nty of per­fect­ly re­spec­ta­ble re­a­sons why net­work ad­mi­nis­tra­tors might want to ex­er­cise this re­gu­la­to­ry aut­ho­ri­ty—even if there are ple­nty of cases where such power would be an abuse.</span>
+        
+        <span class="book-sentence" id="s-7-103-6-p0">Be­cau­se of this le­gi­ti­ma­te de­mand, soft­ware pro­ducts like this are de­ve­l­o­ped.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-104">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-104-1-p0">Now, of cour­se, there are coun­ter­mea­su­res that users can adopt to avoid just this sort of mo­ni­to­ring.</span>
+        
+        <span class="book-sentence" id="s-7-104-2-p0">A user who en­crypts the data he sends across the net­work will avoid any fil­te­ring on the basis of key words.</span>
+        
+        <span class="book-sentence" id="s-7-104-3-p0">And there are ple­nty of tech­no­lo­gies de­si­gned to “an­ony­mi­ze” be­ha­vi­or on the Net, so ad­mi­nis­tra­tors can’t ea­si­ly know what an in­di­vi­du­al is doing on a net­work.</span>
+        
+        <span class="book-sentence" id="s-7-104-4-p0">But these coun­ter­mea­su­res re­qui­re a si­gni­fi­cant in­vest­ment for a par­ti­cu­lar user to de­ploy—whe­ther of time or money.</span>
+        
+        <span class="book-sentence" id="s-7-104-5-p0">The vast ma­jo­ri­ty won’t bo­ther, and the abili­ty of net­work ad­mi­nis­tra­tors to mo­ni­tor con­tent and use of the net­work will be pre­ser­ved.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-105">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-105-1-p0">Thus, as with chan­ges that in­crea­sed the abili­ty to iden­ti­fy “who” so­meo­ne is who is using a net­work, here too, pri­va­te in­te­rests pro­vi­de a suf­fi­ci­ent in­cen­ti­ve to de­ve­lop tech­no­lo­gies that make it in­cre­a­sin­gly easy to say “what” so­meo­ne is doing who is using a net­work.</span>
+        
+        <span class="book-sentence" id="s-7-105-2-p0">A gap in the know­ledge pro­vi­ded by the plain va­nil­la In­ter­net is thus plug­ged by these pri­va­te­ly de­ve­l­o­ped tech­no­lo­gies.</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-7-7" data-slug="who-did-what-where">WHO DID WHAT, WHERE?</h2>
+    <section class="book-paragraph" id="p-7-106">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-106-1-p0">Fi­nal­ly, as long as dif­fe­rent ju­ris­dic­tions im­po­se dif­fe­rent re­qui­re­ments, the third bit of data ne­cessa­ry to re­gu­la­te ef­fi­ci­ent­ly is kno­wing where the tar­get of re­gu­la­ti­on is.</span>
+        
+        <span class="book-sentence" id="s-7-106-2-p0">If Francé for­bids the sel­ling of Nazi pa­ra­pher­na­lia, but the United Sta­tes does not, then a web­site wan­ting to re­spect the laws of Francé must know so­me­thing about where the per­son ac­ces­sing the In­ter­net is co­m­ing from.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-107">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-107-1-p0">But once again, the In­ter­net pro­to­cols didn’t pro­vi­de that data.</span>
+        
+        <span class="book-sentence" id="s-7-107-2-p0">And thus, it would be ex­tre­me­ly dif­fi­cult to re­gu­la­te or zone ac­cess to the con­tent on the basis of geo­gra­phy.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-108">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-108-1-p0">The ori­gi­nal In­ter­net made such re­gu­la­ti­on ex­tre­me­ly dif­fi­cult.</span>
+        
+        <span class="book-sentence" id="s-7-108-2-p0">Ass ori­gi­nal­ly de­ploy­ed, as one court put it:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-109">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-109-1-p0">The In­ter­net is whol­ly in­sen­si­ti­ve to geo­gra­phic dis­tinc­tions.</span>
+        
+        <span class="book-sentence" id="s-7-109-2-p0">In al­most every case, users of the In­ter­net neit­her know nor care about the phy­si­cal lo­ca­ti­on of the In­ter­net re­sour­ces they ac­cess.</span>
+        
+        <span class="book-sentence" id="s-7-109-3-p0">In­ter­net pro­to­cols were de­si­gned to igno­re ra­ther than do­cu­ment geo­gra­phic lo­ca­ti­on; while com­pu­ters on the net­work do have “ad­dres­ses,” they are lo­gi­cal ad­dres­ses on the net­work ra­ther than geo­gra­phic ad­dres­ses in real space.</span>
+        
+        <span class="book-sentence" id="s-7-109-4-p0">The ma­jo­ri­ty of In­ter­net ad­dres­ses con­tain no geo­gra­phic clues and, even where an In­ter­net ad­dress pro­vi­des such a clue, it may be mis­lea­ding.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-110">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-110-1-p0">But once again, com­mer­ce has come to the res­cue of re­gu­la­bi­li­ty.</span>
+        
+        <span class="book-sentence" id="s-7-110-2-p0">There are ob­vious re­a­sons why it would use­ful to be able to iden­ti­fy where so­meo­ne is when they ac­cess some web­site.</span>
+        
+        <span class="book-sentence" id="s-7-110-3-p0">Some of those re­a­sons have to do with re­gu­la­ti­on—again, blo­cking Nazi ma­te­ri­al from the French, or porn from kids in Kan­sas.</span>
+        
+        <span class="book-sentence" id="s-7-110-4-p0">We’ll con­sider these re­a­sons more ex­ten­si­ve­ly later in this book.</span>
+        
+        <span class="book-sentence" id="s-7-110-5-p0">For now, howe­ver, the most in­te­res­ting re­a­sons are those tied pu­re­ly to com­mer­ce.</span>
+        
+        <span class="book-sentence" id="s-7-110-6-p0">And, again, these com­mer­ci­al re­a­sons are suf­fi­ci­ent to in­du­ce the de­ve­lop­ment of this tech­no­lo­gy.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-111">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-111-1-p0">Once again, the gap in the data ne­cessa­ry to iden­ti­fy so­meo­ne’s lo­ca­ti­on is the pro­duct of the way IP ad­dres­ses are as­si­gned.</span>
+        
+        <span class="book-sentence" id="s-7-111-2-p0">IP ad­dres­ses are vir­tu­al ad­dres­ses; they don’t refer to a par­ti­cu­lar geo­gra­phic place.</span>
+        
+        <span class="book-sentence" id="s-7-111-3-p0">They refer to a lo­gi­cal place on the net­work.</span>
+        
+        <span class="book-sentence" id="s-7-111-4-p0">Thus, two IP ad­dres­ses in prin­ciple could be very close to each other in num­ber, but very far from each other in geo­gra­phy.</span>
+        
+        <span class="book-sentence" id="s-7-111-5-p0">That’s not the way, for ex­amp­le, zip codes work.</span>
+        
+        <span class="book-sentence" id="s-7-111-6-p0">If your zip code is one digit from mine (e.g., 94115 vs.</span>
+        
+        <span class="book-sentence" id="s-7-111-7-p0">94116), we’re prac­tical­ly neigh­bors.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-112">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-112-1-p0">But this gap in data is sim­ply the gap in data about where so­meo­ne is de­du­ci­b­le from his IP ad­dress.</span>
+        
+        <span class="book-sentence" id="s-7-112-2-p0">That means, while there’s no sim­ple way to de­du­ce from 23.214.23.15 that so­meo­ne is in Ca­li­for­nia, it is cer­tain­ly pos­si­ble to gather the data ne­cessa­ry to map where so­meo­ne is, given the IP ad­dress.</span>
+        
+        <span class="book-sentence" id="s-7-112-3-p0">To do this, one needs to con­struct a table of IP ad­dres­ses and geo­gra­phic lo­ca­ti­ons, and then track both the ul­ti­ma­te IP ad­dress and the path along which a pa­cket has tra­ve­led to where you are from where it was sent.</span>
+        
+        <span class="book-sentence" id="s-7-112-4-p0">Thus while the TCP/IP pro­to­col can’t re­veal where so­meo­ne is di­rect­ly, it can be used in­di­rect­ly to re­veal at least the ori­gin or de­sti­na­ti­on of an IP pa­cket.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-113">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-113-1-p0">The com­mer­ci­al mo­ti­va­tions for this know­ledge are ob­vious.</span>
+        
+        <span class="book-sentence" id="s-7-113-2-p0">Jack Golds­mith and Tim Wu tell the story of a par­ti­cu­lar­ly fa­mous en­tre­pre­neur, Cyril Houri, who was in­spi­red to de­ve­lop IP map­ping tech­no­lo­gy.</span>
+        
+        <span class="book-sentence" id="s-7-113-3-p0">Sit­ting in his hotel in Paris one night, he ac­ces­sed his e-mail ac­count in the United Sta­tes.</span>
+        
+        <span class="book-sentence" id="s-7-113-4-p0">His e-mail was hosted on a web ser­ver, but he no­ti­ced that the ban­ner ads at the top of the web­site were ad­ver­ti­sing an Ame­ri­can flower com­pa­ny.</span>
+        
+        <span class="book-sentence" id="s-7-113-5-p0">That gave him a (now ob­vious) idea: Why not build a tool to make it easy for a web­site to know from where it is being ac­ces­sed, so it can serve re­le­vant ads to those users?^21</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-114">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-114-1-p0">Houri’s idea has been co­pied by many.</span>
+        
+        <span class="book-sentence" id="s-7-114-2-p0">Geo­select, for ex­amp­le, is a com­pa­ny that pro­vi­des IP map­ping ser­vices.</span>
+        
+        <span class="book-sentence" id="s-7-114-3-p0">Just brow­se to their web­page, and they’re 99 per­cent li­kely to be able to tell you au­to­ma­ti­cal­ly where you are brow­sing from.</span>
+        
+        <span class="book-sentence" id="s-7-114-4-p0">Using their ser­vices, you can get a geo­gra­phi­cal re­port lis­ting the lo­ca­ti­on of the peop­le who visit your site, and you can use their pro­ducts to au­to­ma­ti­cal­ly up­date log files on your web ser­ver with geo­gra­phic data.</span>
+        
+        <span class="book-sentence" id="s-7-114-5-p0">You can au­to­ma­ti­cal­ly chan­ge the gree­ting on your web­site de­pen­ding upon where the user comes from, and you can au­to­ma­ti­cal­ly re­di­rect a user based upon her lo­ca­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-114-6-p0">All of this func­tio­na­li­ty is in­vi­si­ble to the user.</span>
+        
+        <span class="book-sentence" id="s-7-114-7-p0">All he sees is a web page con­struc­ted by tools that know so­me­thing that the TCP/IP alone doesn’t re­veal—where so­meo­ne is from.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-115">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-115-1-p0">So what com­mer­ci­al re­a­sons do web­sites have for using such soft­ware?</span>
+        
+        <span class="book-sentence" id="s-7-115-2-p0">One com­pa­ny, Max­Mind,^22 lists the major re­a­son as credit card fraud: If your cust­o­m­er comes from a “high risk IP ad­dress”—mea­ning a lo­ca­ti­on where it’s li­kely the per­son is en­ga­ged in credit card fraud—then Max­Mind’s ser­vice will flag the tran­sac­tion and di­rect that it have grea­ter se­cu­ri­ty ve­ri­fi­ca­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-115-3-p0">Max­Mind also pro­mi­ses the ser­vice will be va­luable for “tar­ge­ted ad­ver­ti­sing.” Using its pro­duct, a cli­ent can tar­get a mes­sa­ge based upon coun­try, state, or city, as well as a “me­tro­po­li­tan code,” an area code, and con­nec­tion speed of the user (no need to ad­ver­ti­se DVD down­loads to a per­son on a dial-up con­nec­tion).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-116">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-116-1-p0">Here too there is an im­portant and power­ful open sour­ce ap­p­li­ca­ti­on that pro­vi­des the same IP map­ping func­tions.</span>
+        
+        <span class="book-sentence" id="s-7-116-2-p0">Hos­tip.info gives web­site ope­ra­tors—for free—the abili­ty to “geo­lo­ca­te” the users of their site.^23 This again means that the core func­tio­na­li­ty of IP map­ping is not held ex­clu­si­ve­ly by cor­po­ra­ti­ons or a few in­di­vi­du­als.</span>
+        
+        <span class="book-sentence" id="s-7-116-3-p0">Any ap­p­li­ca­ti­on de­ve­l­oper—in­clu­ding a go­vern­ment—could in­cor­po­ra­te the func­tion into its ap­p­li­ca­ti­ons.</span>
+        
+        <span class="book-sentence" id="s-7-116-4-p0">The know­ledge and func­tio­na­li­ty is free.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-117">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-117-1-p0">Thus, again, one of the ori­gi­nal gaps in the data ne­cessa­ry to make be­ha­vi­or re­gulable on the In­ter­net—geo­gra­phic iden­ti­ty—has been fil­led.</span>
+        
+        <span class="book-sentence" id="s-7-117-2-p0">But it has not been fil­led by go­vern­ment man­da­te or se­cret NSA ope­ra­ti­ons (or so I hope).</span>
+        
+        <span class="book-sentence" id="s-7-117-3-p0">Ins­tead, the gap has been fil­led by a com­mer­ci­al in­te­rest in pro­vi­ding the data the net­work its­elf didn’t. Tech­no­lo­gy now lay­ers onto the In­ter­net to pro­du­ce the data the net­work needs.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-118">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-118-1-p0">But it is still pos­si­ble to evade iden­ti­fi­ca­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-118-2-p0">Civil li­ber­ty ac­tivist Seth Fin­kel­stein has testi­fied to the re­la­ti­ve ease with which one can evade this tracking.^24 Yet as I will de­scri­be more below, even ea­si­ly eva­ded tracking can be ef­fec­tive tracking.</span>
+        
+        <span class="book-sentence" id="s-7-118-3-p0">And when tied to the ar­chi­tec­tu­res for iden­ti­ty de­scri­bed above, this sort will be­co­me quite ef­fec­tive.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-119">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-119-1-p0">RE­SULTS</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-120">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-120-1-p0">In the last chap­ter, we saw that the un­re­gu­la­bi­li­ty of the In­ter­net was a pro­duct of de­sign: that the failu­re of that net­work to iden­ti­fy who so­meo­ne is, what they’re doing, and where they’re from meant that it would be par­ti­cu­lar­ly dif­fi­cult to en­force rules upon in­di­vi­du­als using the net­work.</span>
+        
+        <span class="book-sentence" id="s-7-120-2-p0">Not im­pos­si­ble, but dif­fi­cult.</span>
+        
+        <span class="book-sentence" id="s-7-120-3-p0">Not for all peop­le, but for en­ough to mat­ter.</span>
+        
+        <span class="book-sentence" id="s-7-120-4-p0">The In­ter­net as it ori­gi­nal­ly was gave ever­yo­ne a “Ring of Gyges,” the ring which, as Pla­ton re­ports in The Re­pu­blic, made Gyges the she­pherd in­vi­si­ble.</span>
+        
+        <span class="book-sentence" id="s-7-120-5-p0">The di­lem­ma for re­gu­la­ti­on in such a world is pre­cise­ly the fear Pla­ton had about this ring: With such a ring, “no man can be ima­gi­ned to be of such an iron na­tu­re that he would stand fast in jus­ti­ce.”25 And if such a man did choo­se jus­ti­ce, even with the power of the ring, then “he would be thought by the loo­kers-on to be a most wret­ched idiot, alt­hough they would prai­se him to one ano­ther’s faces, and keep up ap­pearan­ces with one ano­ther from a fear that they too might suf­fer in­jus­ti­ce.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-121">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-121-1-p0">But these gaps in the In­ter­net’s ori­gi­nal de­sign are not ne­cessa­ry.</span>
+        
+        <span class="book-sentence" id="s-7-121-2-p0">We can ima­gi­ne net­works that in­ter­act seam­less­ly with the In­ter­net but which don’t have these “im­per­fec­tions.” And, more im­port­ant­ly, we can see why there would be an im­portant com­mer­ci­al in­te­rest in eli­mi­na­ting these gaps.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-122">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-122-1-p0">Yet you may still be skep­ti­cal.</span>
+        
+        <span class="book-sentence" id="s-7-122-2-p0">Even if most In­ter­net ac­tivi­ty is tra­ce­able using the tech­no­lo­gies that I’ve de­scri­bed, you may still be­lie­ve there are si­gni­fi­cant gaps.</span>
+        
+        <span class="book-sentence" id="s-7-122-3-p0">In­de­ed, the ex­plo­si­on of spam, vi­ru­s­es, ID theft, and the like are strong testi­mo­ny to the fact that there’s still a lot of un­re­gulable be­ha­vi­or.</span>
+        
+        <span class="book-sentence" id="s-7-122-4-p0">Com­mer­ce ac­ting alone has not yet eli­mi­na­ted these thre­ats, to both com­mer­ce and civil life.</span>
+        
+        <span class="book-sentence" id="s-7-122-5-p0">For re­a­sons I ex­plo­re later in this book, it’s not even clear com­mer­ce could.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-123">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-123-1-p0">But com­mer­ce is not the only actor here.</span>
+        
+        <span class="book-sentence" id="s-7-123-2-p0">Go­vern­ment is also an im­portant ally, and the frame­work of re­gu­la­bi­li­ty that com­mer­ce has built could be built on again by go­vern­ment.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-124">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-124-1-p0">Go­vern­ment can, in other words, help com­mer­ce and help its­elf.</span>
+        
+        <span class="book-sentence" id="s-7-124-2-p0">How it does so is the sub­ject of the chap­ter that fol­lows.</span>
+        
+      </p>
+    </section>
+  </article>
+  <nav class="chapter-nav book-chapter-nav">
+    <a class="nav-btn prev" href="06-chapter-3-is-ism-is-the-way-it-is-the-way-it-must-be.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="08-chapter-5-regulating-code.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
+</main>
+  <script src="../../../assets/reader.js" defer></script>
+</body>
+</html>

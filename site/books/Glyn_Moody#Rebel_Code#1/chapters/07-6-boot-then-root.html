@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>6 - Boot Then Root</title>
+  <link rel="stylesheet" href="../../../assets/book.css" />
+</head>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <article class="book-chapter" data-chapter="7" id="c-7">
+    <h1 class="book-chapter-title" id="c-7-title" data-slug="6-boot-then-root">6 - Boot Then Root</h1>
+    <section class="book-paragraph" id="p-7-1">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-1-1-p0">THE FIRST RE­LEASE OF LINUX was for “rea­ding” only.</span>
+        
+        <span class="book-sentence" id="s-7-1-2-p0">But be­cau­se there was litt­le point in pro­du­cing a new ker­nel if no one could use it, Linus star­ted of­fe­ring bi­na­ries—com­pi­led ver­si­ons that would run on a PC—along­s­ide the sour­ce code.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-2">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-2-1-p0">Get­ting a sys­tem up and run­ning was a com­pli­ca­ted busi­ness, and only for the most de­di­ca­ted ha­cker.</span>
+        
+        <span class="book-sentence" id="s-7-2-2-p0">To aid peop­le, Linus crea­ted two flop­py disks, cal­led boot and root.</span>
+        
+        <span class="book-sentence" id="s-7-2-3-p0">Lars Wir­ze­ni­us ex­plains the pro­ce­du­re.</span>
+        
+        <span class="book-sentence" id="s-7-2-4-p0">“The boot disk had the ker­nel.” You pla­ced this in your PC and swit­ched it on.</span>
+        
+        <span class="book-sentence" id="s-7-2-5-p0">“When that boo­ted, it asked you to in­sert the other disk, and that one had the whole file sys­tem for the Linux sys­tem,” Wir­ze­ni­us says.</span>
+        
+        <span class="book-sentence" id="s-7-2-6-p0">“All the stuff that these days would be put on a hard disk was that one flop­py.</span>
+        
+        <span class="book-sentence" id="s-7-2-7-p0">But it was a very, very small file sys­tem, very few pro­grams, just en­ough to be cal­led an in­de­pen­dent Unix sys­tem,” he says.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-3">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-3-1-p0">Once you had this sys­tem run­ning, you could get more am­bi­tious.</span>
+        
+        <span class="book-sentence" id="s-7-3-2-p0">“If you knew what you were doing,” Wir­ze­ni­us con­ti­nues, “you could for­mat a hard disk or a par­ti­ti­on on a hard disk, and copy the pro­grams over to the hard disk and then mo­di­fy the boot disk to load the ker­nel from the hard disk ins­tead,” much fas­ter than loa­ding it from the boot flop­py.</span>
+        
+        <span class="book-sentence" id="s-7-3-3-p0">Then users could begin to ex­plo­re the sys­tem and try out some of the few pro­grams that had been por­ted to it—things like Stall­man’s GCC—which were avail­able se­pa­ra­te­ly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-4">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-4-1-p0">Linus pla­ced co­pies of the boot and root disks on the Hel­sin­ki ser­ver, where he also pla­ced the sour­ce code.</span>
+        
+        <span class="book-sentence" id="s-7-4-2-p0">Be­cau­se both the sour­ce and bi­na­ries were fre­e­ly dis­tri­bu­ta­ble, se­veral other sites around the world star­ted “mir­ro­ring,” or co­py­ing, them.</span>
+        
+        <span class="book-sentence" id="s-7-4-3-p0">One of these was the Man­ches­ter Com­pu­ting Cent­re (MCC), part of the Uni­ver­si­ty of Man­ches­ter, in the United King­dom.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-5">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-5-1-p0">After sim­ply mir­ro­ring Linus’s early boot and root disks, MCC de­ci­ded to make its own dis­tri­bu­ti­on, or collec­tion of files that could be used to in­stall GNU/Linux.</span>
+        
+        <span class="book-sentence" id="s-7-5-2-p0">The first MCC In­te­rim ver­si­on, using the 0.12 ker­nel, ap­peared in Fe­bru­ary 1992.</span>
+        
+        <span class="book-sentence" id="s-7-5-3-p0">The Re­ad­me file that ac­com­pa­nies it gives a fa­sci­na­ting in­sight into what was in­vol­ved in get­ting GNU/Linux run­ning in those pioneer days.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-6">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-6-1-p0">The Re­ad­me ex­plains, “The MCC In­te­rim ver­si­ons of Linux are de­si­gned to allow peop­le who are not Unix ex­perts to in­stall a ver­si­on of the Linux ope­ra­ting sys­tem on a PC.</span>
+        
+        <span class="book-sentence" id="s-7-6-2-p0">The in­stal­led sys­tem should be self-con­tai­ned, but easy to ex­tend.” This in­di­ca­tes that there was al­re­a­dy de­mand from peop­le who were not Unix ex­perts for a dis­tri­bu­ti­on that would allow them to in­stall GNU/Linux on their PCs.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-7">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-7-1-p0">The Re­ad­me goes on, “Our ver­si­ons are cal­led ‘in­te­rim’ be­cau­se they are not in­ten­ded to be final or of­fi­ci­al.</span>
+        
+        <span class="book-sentence" id="s-7-7-2-p0">They are small, har­mo­nious, and mo­dera­te­ly tested.” The last point was im­portant: Not only was it ne­cessa­ry to debug the Linux ker­nel; as extra com­po­n­ents were added to a dis­tri­bu­ti­on, it was vital to check that they would all work to­ge­ther, that they were “har­mo­nious.” This kind of large-scale de­bug­ging be­ca­me one of the key tasks of peop­le put­ting to­ge­ther dis­tri­bu­ti­ons.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-8">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-8-1-p0">Ass the MCC Re­ad­me notes, “Very short­ly after the first MCC In­te­rim ver­si­on of Linux ap­peared, other peop­le re­leased si­mi­lar ver­si­ons: Dave Saf­ford’s TAMU [Texas A&#x26;M Uni­ver­si­ty] re­lea­ses, and Mar­tin Ju­ni­us’s MJ ver­si­ons were even­tual­ly fol­lo­wed by Peter Mac­Do­nald’s mas­si­ve, com­pre­hen­si­ve SLS re­lea­ses and H. J. Lu’s small base sys­tems.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-9">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-9-1-p0">Peter Mac­Do­nald was one of the first Linux ha­ckers to sub­mit patches to Linus, but he be­ca­me bet­ter known for put­ting to­ge­ther the Soft­lan­ding Linux Sys­tem (SLS) re­lea­ses.</span>
+        
+        <span class="book-sentence" id="s-7-9-2-p0">Ass the MCC Re­ad­me says, these were “mas­si­ve” and “com­pre­hen­si­ve.” That is, they tried to pro­vi­de not just the ker­nel and basic uti­li­ties, but many of the GNU/Linux ports that were star­ting to ap­pe­ar; this in­clu­ded such major new ele­ments as X Win­dow and TCP/IP.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-10">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-10-1-p0">The draw­back of this ap­proach is that as the Linux ker­nel grew more com­plex, and the choice of ap­p­li­ca­ti­ons ri­cher, the task of ke­eping up-to-date with ever­y­thing and ma­king it all work har­mo­nious­ly grew ever har­der.</span>
+        
+        <span class="book-sentence" id="s-7-10-2-p0">This meant that the SLS dis­tri­bu­ti­on, ad­mi­ra­ble as it was in its in­ten­ti­ons of pro­vi­ding a com­ple­te so­lu­ti­on, did not ul­ti­mate­ly meet the pres­sing need for so­me­thing sta­ble that new­co­mers to the Linux world could in­stall ea­si­ly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-11">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-11-1-p0">One per­son in­cre­a­sin­gly im­pa­ti­ent with SLS was Ian Mur­dock, who was stu­dy­ing ac­coun­ting at Pur­due Uni­ver­si­ty at the time.</span>
+        
+        <span class="book-sentence" id="s-7-11-2-p0">He later wrote an ar­ti­cle for the first issue of the then-new Linux Jour­nal, dated May 1994, in which he said that SLS was “pos­si­bly the most bug-ridden and badly main­tai­ned Linux dis­tri­bu­ti­on avail­able; un­for­t­u­n­a­te­ly, it also quite pos­si­bly the most po­pu­lar.” These are ty­pi­cal young man’s words; Mur­dock was in his early twen­ties at the time.</span>
+        
+        <span class="book-sentence" id="s-7-11-3-p0">“I re­g­ret how harsh I was,” he says now, “be­cau­se the guy was just try­ing to do so­me­thing good.” No­nethe­l­ess, “there were a lot of pro­blems with SLS, and I re­al­ly wasn’t the only one to feel that way.</span>
+        
+        <span class="book-sentence" id="s-7-11-4-p0">In fact, what I wrote is lar­ge­ly a kind of com­mu­ni­ty view at the time.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-12">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-12-1-p0">Mur­dock rea­li­zed that SLS’s pro­blems “came out of the fact the fel­low who was doing it was try­ing to do ever­y­thing by him­s­elf.</span>
+        
+        <span class="book-sentence" id="s-7-12-2-p0">And so I loo­ked on that and I thought, well, you know, if Linux has taught us any­thing it’s that that kind of model is sub­op­ti­mal,” he re­calls.</span>
+        
+        <span class="book-sentence" id="s-7-12-3-p0">“What we re­al­ly ought to do is we ought try to take the model that Linux has pionee­red, in­ten­tio­nal­ly or not, and try to get the same be­ne­fits from that for buil­ding the sys­tem around it.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-13">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-13-1-p0">This was an im­portant in­sight for late 1993, when Mur­dock first had the idea.</span>
+        
+        <span class="book-sentence" id="s-7-13-2-p0">It shows that even at this early stage, some peop­le, at least, were aware that Linux was not just a piece of soft­ware but an ent­i­re de­ve­lop­ment me­tho­do­lo­gy.</span>
+        
+        <span class="book-sentence" id="s-7-13-3-p0">The “model” that Mur­dock men­ti­ons in­vol­ves using a dis­tri­bu­ted team, con­nec­ted by the In­ter­net, to feed through smal­ler ele­ments that to­ge­ther make up the whole—in this case a dis­tri­bu­ti­on—and to let users debug the sys­tem.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-14">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-14-1-p0">Mur­dock de­ci­ded to call his new dis­tri­bu­ti­on De­bi­an.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-15">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-15-1-p0">“The story be­hind the name is pret­ty sim­ple, ac­tual­ly,” he says.</span>
+        
+        <span class="book-sentence" id="s-7-15-2-p0">“My wife’s name is Deb and my name is Ian.</span>
+        
+        <span class="book-sentence" id="s-7-15-3-p0">So it’s sim­ply a con­ca­te­na­ti­on of that.” He goes on, “My first men­ti­on of [De­bi­an] in a pu­blic forum was in Au­gust 1993.</span>
+        
+        <span class="book-sentence" id="s-7-15-4-p0">Ba­si­cal­ly, I had star­ted to do a bit of work on it and I pos­ted a mes­sa­ge that said, ‘Hey, I’m doing this, does an­yo­ne want to help me?’ I had no idea what kind of re­s­pon­se I would get.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-16">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-16-1-p0">He soon found out.</span>
+        
+        <span class="book-sentence" id="s-7-16-2-p0">“I got an overw­hel­ming re­s­pon­se,” Mur­dock ex­plains.</span>
+        
+        <span class="book-sentence" id="s-7-16-3-p0">He be­lie­ves there were two main re­a­sons for this.</span>
+        
+        <span class="book-sentence" id="s-7-16-4-p0">“Linux cle­ar­ly had a lot to offer, and the tools that were built around it had a lot to offer, but the pre­sen­ta­ti­on [the way it was dis­tri­bu­ted] was so­me­thing that was lacking,” he says.</span>
+        
+        <span class="book-sentence" id="s-7-16-5-p0">“Also, the idea of buil­ding a sys­tem that peop­le could be in­vol­ved with tur­ned out to be a very po­pu­lar idea,” he adds, just as the idea that an­yo­ne could help build a ker­nel had been when Linus opened up his pro­ject.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-17">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-17-1-p0">The par­al­lels bet­ween Linux and De­bi­an go de­eper.</span>
+        
+        <span class="book-sentence" id="s-7-17-2-p0">Just as Linux arose in part from a frus­tra­ti­on with Minix, so De­bi­an grew out of dis­sa­tis­fac­tion with SLS.</span>
+        
+        <span class="book-sentence" id="s-7-17-3-p0">Both pro­jects used the In­ter­net as a me­di­um for col­la­bo­ra­ti­on, and both were em­pha­ti­cal­ly open, whe­re­as Minix and SLS had been more con­trol­led and clo­sed.</span>
+        
+        <span class="book-sentence" id="s-7-17-4-p0">Mo­re­o­ver, the De­bi­an pro­ject also ad­op­ted Linus’s idea of par­ce­ling out areas to his “lieu­ten­ants.” Ass Mur­dock ex­plains, “De­bi­an would be based on the idea of a pa­cka­ge, and all these peop­le who wan­ted to work on it could then take re­s­pon­si­bi­li­ty for all these dif­fe­rent pa­cka­ges.” He notes, “Other peop­le ta­king on sub­tas­kings is very much how Linux worked.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-18">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-18-1-p0">To make this ap­proach func­tion, he says, “We would de­fi­ne stan­dards and rules that would allow a pa­cka­ge from any sour­ce to be able to fit into the sys­tem well.</span>
+        
+        <span class="book-sentence" id="s-7-18-2-p0">So that when you take all these pa­cka­ges and you in­stall them, you get an ent­i­re sys­tem that looks like it’s been hand­craf­ted by a sin­gle clo­se­ly knit team.</span>
+        
+        <span class="book-sentence" id="s-7-18-3-p0">And in fact that’s not at all how it was put to­ge­ther.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-19">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-19-1-p0">Even the de­ci­si­onma­king pro­cess of De­bi­an was mo­de­led on Linux.</span>
+        
+        <span class="book-sentence" id="s-7-19-2-p0">“Es­sen­ti­al­ly what would hap­pen is, we would be pre­sen­ted with a de­ci­si­on point,” Mur­dock ex­plains.</span>
+        
+        <span class="book-sentence" id="s-7-19-3-p0">“And I would ask peop­le who were working on De­bi­an, ‘What do you think we should do?’ And that would spark some con­ver­sa­ti­on, some dis­cus­sion, and pos­si­bly some di­sagree­ment.</span>
+        
+        <span class="book-sentence" id="s-7-19-4-p0">And then I’d make a de­ci­si­on,” he says.</span>
+        
+        <span class="book-sentence" id="s-7-19-5-p0">“A lot of the time my de­ci­si­on re­flec­ted what the group wan­ted, and some of the time it didn’t. This is re­al­ly the way Linux works, too.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-20">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-20-1-p0">To­ge­ther with a huge re­s­pon­se from those in­te­rested in hel­ping with the De­bi­an pro­ject, in the fall of 1993 Mur­dock re­cei­ved an e-mail from Ri­chard Stall­man on the sub­ject.</span>
+        
+        <span class="book-sentence" id="s-7-20-2-p0">“He said, ‘We’re learning more about Linux and we’ve been thin­king about dis­tri­bu­ting it our­sel­ves,’ be­cau­se at the time their GNU ker­nel was ta­king lon­ger than ex­pec­ted,” Mur­dock ex­plains.</span>
+        
+        <span class="book-sentence" id="s-7-20-3-p0">“They saw Linux ap­pe­ar on the scene and use pret­ty much the rest of the sys­tem they’d been put­ting to­ge­ther.” That is, the new dis­tri­bu­ti­ons put to­ge­ther the Linux ker­nel with many ele­ments of the GNU pro­ject to form a com­ple­te ope­ra­ting sys­tem.</span>
+        
+        <span class="book-sentence" id="s-7-20-4-p0">“He ba­si­cal­ly said, ‘I’m in­te­rested,’” Mur­dock re­calls.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-21">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-21-1-p0">Stall­man’s ap­proach pro­ved im­portant for De­bi­an.</span>
+        
+        <span class="book-sentence" id="s-7-21-2-p0">“His early in­te­rest was cri­ti­cal in not only gi­ving me the con­fi­dence to do it, but also gi­ving it an air of le­gi­ti­ma­cy,” Mur­dock says.</span>
+        
+        <span class="book-sentence" id="s-7-21-3-p0">“I re­al­ly think that, more than any­thing else in those early days, is what cau­sed peop­le to take no­ti­ce and get in­vol­ved.” But De­bi­an was also im­portant for the GNU pro­ject and Stall­man: “He ba­si­cal­ly got to know Linux through his in­vol­ve­ment with De­bi­an,” Mur­dock be­lie­ves.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-22">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-22-1-p0">There were two con­se­quen­ces.</span>
+        
+        <span class="book-sentence" id="s-7-22-2-p0">First, the Linux ker­nel be­ca­me a can­di­da­te to com­ple­te the GNU pro­ject begun ten years be­fo­re and held up at that time by de­lays in fi­nis­hing the Hurd ker­nel.</span>
+        
+        <span class="book-sentence" id="s-7-22-3-p0">In a sense, the De­bi­an pro­ject led to the for­mal com­ple­ti­on of Stall­man’s dream of a Unix-like ope­ra­ting sys­tem that was fre­e­ly avail­able.</span>
+        
+        <span class="book-sentence" id="s-7-22-4-p0">The other con­se­quence was that Stall­man’s Free Soft­ware Foun­da­ti­on spon­so­red the de­ve­lop­ment of De­bi­an in the early days.</span>
+        
+        <span class="book-sentence" id="s-7-22-5-p0">Mur­dock ex­plains why: “We took a while to come out with our first re­lea­ses.</span>
+        
+        <span class="book-sentence" id="s-7-22-6-p0">Part of the pro­blem had to do with the fact that we were ent­i­re­ly re­li­ant on vol­un­te­ers, [and] we had such a big job to do.</span>
+        
+        <span class="book-sentence" id="s-7-22-7-p0">So in a large sense I nee­ded to get paid to keep working on De­bi­an be­cau­se my at­ten­ti­on to it when I had the free time sim­ply wasn’t cut­ting it.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-23">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-23-1-p0">For­t­u­n­a­te­ly, Stall­man re­co­gni­zed this need and of­fe­red to pay Mur­dock to work on De­bi­an through the Free Soft­ware Foun­da­ti­on (FSF), ano­ther ex­amp­le of Stall­man’s ge­ne­ro­si­ty in fun­ding others and his gro­wing re­co­gni­ti­on of the im­port­an­ce of Linux-based dis­tri­bu­ti­ons.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-24">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-24-1-p0">But re­la­ti­ons with the idea­lis­tic and un­com­pro­mi­sing Stall­man were not easy.</span>
+        
+        <span class="book-sentence" id="s-7-24-2-p0">Mur­dock ex­plains the si­tua­ti­on: “By this time, De­bi­an was much lar­ger than mys­elf,” he says, “and while I had cer­tain ideas about what De­bi­an should be, I was no lon­ger the sin­gle opi­ni­on.</span>
+        
+        <span class="book-sentence" id="s-7-24-3-p0">There were a lot of peop­le who didn’t agree with the FSF’s goals.” Ass a re­sult, “the FSF was spon­so­ring De­bi­an, so they had cer­tain ex­pec­ta­ti­ons of me; and at the same time, I was as­king peop­le to do work in their free time and they had cer­tain ex­pec­ta­ti­ons of me.</span>
+        
+        <span class="book-sentence" id="s-7-24-4-p0">So­me­ti­mes those ex­pec­ta­ti­ons did not match up very well.</span>
+        
+        <span class="book-sentence" id="s-7-24-5-p0">There tur­ned out to be some con­flic­ting goals,” he con­clu­des.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-25">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-25-1-p0">Part­ly be­cau­se of these con­flicts, Mur­dock de­ci­ded to stand down as De­bi­an lea­der in March 1996.</span>
+        
+        <span class="book-sentence" id="s-7-25-2-p0">There were other im­portant fac­tors in his de­ci­si­on.</span>
+        
+        <span class="book-sentence" id="s-7-25-3-p0">“I wan­ted to fi­nish my de­gree,” he says, “and I had re­cent­ly been mar­ried and I wan­ted to spend more time with my fa­mi­ly.</span>
+        
+        <span class="book-sentence" id="s-7-25-4-p0">I’d been doing it for three years, and I think I was ready for so­me­thing new as well.” His suc­ces­sor was Bruce Pe­rens.</span>
+        
+        <span class="book-sentence" id="s-7-25-5-p0">“Bruce was a na­tu­ral choice, ac­tual­ly,” Mur­dock says.</span>
+        
+        <span class="book-sentence" id="s-7-25-6-p0">“He had been in­vol­ved with De­bi­an for a long time, and he had shown a large amount of as­ser­tiven­ess and abili­ty to deal with peop­le.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-26">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-26-1-p0">Pe­rens gives some more de­tails on the pro­blems with Stall­man.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-27">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-27-1-p0">Ri­chard wan­ted to have a part in the tech­ni­cal di­rec­tion, and the de­ve­l­o­pers on the pro­ject didn’t re­al­ly want a boss,” he says, “they were all vol­un­te­ers.</span>
+        
+        <span class="book-sentence" id="s-7-27-2-p0">If they wan­ted to take any di­rec­tion it would be from so­meo­ne who was working with them on the pro­ject.” Mo­re­o­ver, Pe­rens says, “We took issue with some of his tech­ni­cal di­rec­tion be­cau­se we felt it would lower the per­for­mance of the sys­tem and make it take up more disk space.</span>
+        
+        <span class="book-sentence" id="s-7-27-3-p0">We de­ci­ded that we just could not live with FSF ha­ving a right to tell us what to do, and so we split off our own or­ga­niza­t­i­on.</span>
+        
+        <span class="book-sentence" id="s-7-27-4-p0">We fi­gu­red we could make as much money as we nee­ded just from do­na­ti­ons, which was the case.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-28">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-28-1-p0">But the dis­pu­te did not end there.</span>
+        
+        <span class="book-sentence" id="s-7-28-2-p0">One of the early De­bi­an de­ve­l­o­pers was Linus’s fri­end and fel­low stu­dent Lars Wir­ze­ni­us.</span>
+        
+        <span class="book-sentence" id="s-7-28-3-p0">He ex­plains what hap­pe­n­ed: “When Ri­chard Stall­man star­ted to no­ti­ce Linux a lot, he star­ted to make a lot of noise about the re­la­ti­ons­hip bet­ween the Free Soft­ware Foun­da­ti­on and the GNU pro­ject on the one hand, and the Linux com­mu­ni­ty on the other hand.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-29">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-29-1-p0">“His point was most­ly that the Linux com­mu­ni­ty would not exist wi­thout all the free soft­ware that the Free Soft­ware Foun­da­ti­on was pro­du­cing,” Wir­ze­ni­us says.</span>
+        
+        <span class="book-sentence" id="s-7-29-2-p0">“And he was right about that, so his point was a good one.” But from this good point, ac­cor­ding to Wir­ze­ni­us, Stall­man made an un­for­t­u­na­te de­duc­tion: “He de­ci­ded that Linux should be re­na­med LiGNUx,” pro­noun­ced “LIG-NUX.” Stall­man doubt­less found this word­play ir­re­sis­ti­ble in its com­bi­na­ti­on of both cle­ver­ness and, as he saw it, jus­ti­ce.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-30">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-30-1-p0">“And that was a very ter­ri­b­le thing to try to do,” Wir­ze­ni­us notes, “be­cau­se one of the things that peop­le get very at­ta­ched to is the right for them to de­ci­de on the name of the thing they have crea­ted.</span>
+        
+        <span class="book-sentence" id="s-7-30-2-p0">And the GNU pro­ject didn’t have very di­rect input into the ker­nel its­elf, they just made the tools for it, and the tools ne­cessa­ry to add to the ker­nel.</span>
+        
+        <span class="book-sentence" id="s-7-30-3-p0">The way that Stall­man tried to push his views made it very dis­tas­te­ful and it al­most felt like he was be­tray­ing ever­yo­ne in his com­mu­ni­ty.” It felt like be­tra­y­al, Wir­ze­ni­us says, “be­cau­se up until that time it had been all the free soft­ware peop­le against the evil peop­le who did not give sour­ce code away.</span>
+        
+        <span class="book-sentence" id="s-7-30-4-p0">But then Stall­man star­ted to fight, or at least it loo­ked like he was star­ting to fight the Linux com­mu­ni­ty [be­cau­se of] the fact that he wan­ted Linux to be re­na­med.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-31">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-31-1-p0">“My re­ac­tion was fu­el­led so­mew­hat by the fact that in­iti­al­ly De­bi­an had been part­ly fun­ded by FSF,” he says, “which was a very good thing of them to do.” Per­haps be­cau­se of this ear­lier help, and de­s­pi­te this ugly in­ci­dent, the De­bi­an team agreed to call their dis­tri­bu­ti­on De­bi­an GNU/Linux.</span>
+        
+        <span class="book-sentence" id="s-7-31-2-p0">“And that is pre­cise­ly be­cau­se the De­bi­an peop­le agree with Stall­man that GNU is such a big part in the ope­ra­ting sys­tem,” Wir­ze­ni­us says.</span>
+        
+        <span class="book-sentence" id="s-7-31-3-p0">Pe­rens ex­plains: “Ri­chard asked me to do that, when I was still De­bi­an pro­ject lea­der, and it soun­ded fair to me.</span>
+        
+        <span class="book-sentence" id="s-7-31-4-p0">In fact, I don’t be­lie­ve an­yo­ne [in De­bi­an] ob­jec­ted to it at the time.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-32">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-32-1-p0">Linus ten­ded to re­main aloof from such squab­bles.</span>
+        
+        <span class="book-sentence" id="s-7-32-2-p0">“I don’t get too in­vol­ved,” he said in 1996, but added, “per­so­nal­ly I don’t think GNU/Linux flies as a name; it should be catchy.” And he poin­ted out that “it’s not just GNU pro­grams we are using”—the X Win­dow soft­ware, for ex­amp­le, comes from the XFree86 group—“so per­so­nal­ly I pre­fer to have it cal­led just Linux and then give credit where credit is due, and that’s cer­tain­ly with the GNU pro­ject, too.</span>
+        
+        <span class="book-sentence" id="s-7-32-3-p0">Most of the Linux [soft­ware] li­te­ra­tu­re has the GNU co­py­left and I try to make it very clear that there is more than just the ker­nel, and a lot of it is GNU stuff.” No­nethe­l­ess, it is cer­tain­ly true that GNU soft­ware re­pres­ents the lion’s share of most dis­tri­bu­ti­ons, and there is a strong ar­gu­ment that GNU/Linux, even if it does not “fly” as a name, is a fai­rer de­scrip­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-33">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-33-1-p0">Like the De­bi­an team, Ian Mur­dock har­bors no ill-will against Stall­man for his at­tempts to in­flu­ence the de­ve­lop­ment pro­cess, or even to re­na­me Linux.</span>
+        
+        <span class="book-sentence" id="s-7-33-2-p0">“We wouldn’t have our cur­rent idea of free soft­ware wi­thout him, and wi­thout his un­com­pro­mi­sing stand, which has not wa­ve­r­ed an inch the past fif­teen years,” Mur­dock says, “and I think that’s very im­portant.” But he re­co­gni­zes that “some peop­le di­sagree with me”—Stall­man tends to po­la­ri­ze opi­ni­ons.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-34">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-34-1-p0">That Mur­dock views Stall­man so po­si­tive­ly is not sur­pri­sing; one of the main mo­ti­ves for crea­ting the De­bi­an dis­tri­bu­ti­on in the first place was to crea­te a foil to what he view­ed as an ir­re­s­pon­si­ble com­mer­cia­liza­t­i­on of GNU/Linux: “I saw that Linux was one day going to be a com­mer­ci­al pro­duct,” he says, “and I was con­cer­ned at the way it might be­co­me a com­mer­ci­al pro­duct.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-35">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-35-1-p0">“One of the pro­blems with SLS was it was star­ting to be com­mer­cia­li­zed a bit,” he con­ti­nues.</span>
+        
+        <span class="book-sentence" id="s-7-35-2-p0">“You were see­ing ad­ver­ti­se­ments in ma­ga­zi­nes tal­king about Linux, and some of the fea­tures they were ad­ver­ti­sing were just sim­ply false.” He em­pha­si­zes that “it wasn’t the guy who was doing SLS, it was peop­le who were just ap­pearing and sel­ling dis­ket­tes.” This was an im­portant new de­ve­lop­ment; it re­pre­sen­ted the first signs that peop­le outs­ide the GNU/Linux mo­ve­ment had seen a busi­ness op­por­tu­ni­ty in this fast-gro­wing mar­ket.</span>
+        
+        <span class="book-sentence" id="s-7-35-3-p0">And it was from these mo­dest and not ent­i­re­ly prai­se­wor­thy be­gin­nings that the huge GNU/Linux and open­sour­ce in­dus­try of today came into being.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-36">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-36-1-p0">Alt­hough Mur­dock was con­cer­ned about new dis­tri­bu­ti­ons based on SLS, it was Slack­wa­re, SLS’s suc­ces­sor as the most wi­de­ly used dis­tri­bu­ti­on, that re­al­ly hel­ped to crea­te the com­mer­ci­al Linux world.</span>
+        
+        <span class="book-sentence" id="s-7-36-2-p0">Mur­dock re­calls, “Slack­wa­re and De­bi­an had es­sen­ti­al­ly the same orig­ins in that we were both dis­sa­tis­fied with SLS.</span>
+        
+        <span class="book-sentence" id="s-7-36-3-p0">We both got star­ted wi­thout kno­wing about the other, and once we found out about each other we star­ted de­ci­ding well, maybe we ought to com­bi­ne our ef­forts here.</span>
+        
+        <span class="book-sentence" id="s-7-36-4-p0">Not­hing ever re­al­ly came out of that, part­ly be­cau­se we had dif­fe­rent goals.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-37">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-37-1-p0">I wan­ted to take the dis­tri­bu­ted de­ve­lop­ment path, and [the per­son be­hind Slack­wa­re] wasn’t as in­te­rested in that; he thought that that would be a di­sas­ter wait­ing to hap­pen, try­ing to get do­zens of hund­reds of peop­le poin­ted in the same di­rec­tion is a fair­ly dif­fi­cult task”—ob­vious­ly sharing Ta­nen­baum’s view that it would be like try­ing to herd cats.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-38">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-38-1-p0">While De­bi­an evol­ved into the pu­rest dis­tri­bu­ti­on, crea­ted in the same way that the Linux ker­nel was built, Slack­wa­re first of all took over from SLS, which Peter Mac­Do­nald had stop­ped sup­porting, as the lea­ding dis­tri­bu­ti­on, and then spaw­ned a va­rie­ty of new dis­tri­bu­ti­ons its­elf.</span>
+        
+        <span class="book-sentence" id="s-7-38-2-p0">In the June 1994 issue of Linux Jour­nal, in what was only the se­cond in­ter­view this new ma­ga­zi­ne had con­duc­ted (the first was with Linus), Slack­wa­re’s crea­tor, Pa­trick Vol­ker­ding, said, “It would be nice to make money as a re­sult of [Slack­wa­re], but not from sel­ling the ac­tu­al pa­cka­ge.” This in­di­ca­tes that Slack­wa­re was very much part of the ear­lier, non­com­mer­ci­al tra­di­ti­on of GNU/Linux dis­tri­bu­ti­ons that exis­ted main­ly to serve the com­mu­ni­ty.</span>
+        
+        <span class="book-sentence" id="s-7-38-3-p0">The of­fi­ci­al Slack­wa­re was sold not by Vol­ker­ding but by Wal­nut Creek, which pro­du­ced many po­pu­lar CD-ROMs con­tai­ning free soft­ware.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-39">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-39-1-p0">The ar­ri­val of cheap CD-ROM tech­no­lo­gy in the early 1990s pro­bab­ly play­ed as cru­ci­al a role in the com­mer­cia­liza­t­i­on of GNU/Linux dis­tri­bu­ti­ons as the ar­ri­val of chea­per PCs using the 80386 did in the ori­gi­nal ge­ne­sis of Linux its­elf.</span>
+        
+        <span class="book-sentence" id="s-7-39-2-p0">Had this new me­di­um not been avail­able at the right price, there would not have been the sud­den flower­ing of com­pa­nies sel­ling low-cost CD-ROM-based dis­tri­bu­ti­ons.</span>
+        
+        <span class="book-sentence" id="s-7-39-3-p0">Some of the credit for us­he­ring in the CD-ROM as a via­ble dis­tri­bu­ti­on me­di­um must go to Mi­cro­soft.</span>
+        
+        <span class="book-sentence" id="s-7-39-4-p0">Ass early as 1987, it had ship­ped the Mi­cro­soft Books­helf in this form, which the com­pa­ny de­scri­bed as “the first ge­ne­ral pur­po­se ap­p­li­ca­ti­on to bring the be­ne­fits of CD-ROM tech­no­lo­gy to per­so­nal com­pu­ters.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-40">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-40-1-p0">The avail­a­bi­li­ty of CD-ROMs as a dis­tri­bu­ti­on me­di­um for GNU/Linux was im­portant not just be­cau­se they were cheap (ty­pi­cal­ly a few tens of dol­lars) and con­ve­ni­ent.</span>
+        
+        <span class="book-sentence" id="s-7-40-2-p0">Ass more and more pro­grams were por­ted to GNU/Linux and pla­ced as a mat­ter of cour­se on these CDs, they pro­vi­ded a huge boost to the nas­cent GNU/Linux com­mu­ni­ty.</span>
+        
+        <span class="book-sentence" id="s-7-40-3-p0">They not only pro­vi­ded much nee­ded tools and ap­p­li­ca­ti­ons but al­lo­wed the same dis­tri­bu­ted de­ve­lop­ment of soft­ware to occur bey­ond the Linux ker­nel, where it had been per­fec­ted.</span>
+        
+        <span class="book-sentence" id="s-7-40-4-p0">Al­re­a­dy, then, the de­si­ra­bi­li­ty of GNU/Linux was star­ting to kick-start an af­ter­mar­ket of ap­p­li­ca­ti­ons that would in turn make the ope­ra­ting sys­tem even more de­si­ra­ble.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-41">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-41-1-p0">The credit for mo­ving from flop­pies to CDs must be given to ano­ther com­pa­ny that, like Slack­wa­re, was once on ever­yo­ne’s lips in the world of Linux, but which has since fal­len out of view: Ygg­d­ra­sil Com­pu­ting, named after the world tree in Norse my­tho­lo­gy.</span>
+        
+        <span class="book-sentence" id="s-7-41-2-p0">A straw in the wind was the fact that Ygg­d­ra­sil’s crea­tor, Adam Rich­ter, sent out a for­mal press re­lease about the first beta re­lease of his CD-ROM, dated 18 Fe­bru­ary 1993, ba­re­ly a year after the cru­ci­al ver­si­on 0.12 of Linux.</span>
+        
+        <span class="book-sentence" id="s-7-41-3-p0">The first alpha re­lease had ap­peared two months ear­lier, on 8 De­cem­ber 1992.</span>
+        
+        <span class="book-sentence" id="s-7-41-4-p0">The name for the dis­tri­bu­ti­on was LGX, which de­ri­ved from Linux/GNU/X, its three main com­po­n­ents.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-42">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-42-1-p0">The press re­lease an­noun­ced, “The Ygg­d­ra­sil beta re­lease is the first PC UNIX(R) clone to in­clu­de mul­ti­me­dia fa­ci­li­ties as part of its base con­fi­gu­ra­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-42-2-p0">The beta re­lease also in­clu­des X-win­dows, net­wor­king,...</span>
+        
+        <span class="book-sentence" id="s-7-42-3-p0">an easy in­stal­la­ti­on me­cha­nism, and the abili­ty to run di­rect­ly from the CDROM.” Ass the press re­lease noted, the in­clu­si­on of mul­ti­me­dia, audio and video, as part of the base con­fi­gu­ra­ti­on was one no­vel­ty, as was the abili­ty to run di­rect­ly from the CD-ROM.</span>
+        
+        <span class="book-sentence" id="s-7-42-4-p0">That is, it was not ne­cessa­ry to in­stall GNU/Linux first; it could be run, alt­hough slow­ly, di­rect­ly from the CDROM, which func­tio­ned as a kind of re­mova­ble, read-only disk.</span>
+        
+        <span class="book-sentence" id="s-7-42-5-p0">An “easy in­stal­la­ti­on me­cha­nism” was also a wel­co­me in­no­va­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-43">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-43-1-p0">Even though Ygg­d­ra­sil Com­pu­ting was a com­mer­ci­al ope­ra­ti­on (the beta re­lease cost $60 and the final pro­duc­tion ver­si­on price was $99), it did not igno­re the free soft­ware com­mu­ni­ty as many com­pa­nies were doing.</span>
+        
+        <span class="book-sentence" id="s-7-43-2-p0">Ass the press re­lease ex­plai­ned, “Ygg­d­ra­sil is great­ly in­deb­ted to the many free soft­ware de­ve­l­o­pers whose ef­forts have made this re­lease pos­si­ble.</span>
+        
+        <span class="book-sentence" id="s-7-43-3-p0">Ass a token of app­re­cia­ti­on, an­yo­ne who has made a major cont­ri­bu­ti­on to the LGX beta soft­ware can get a free copy, which in­clu­des the CD, ma­nu­al, and boot flop­pies.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-44">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-44-1-p0">An Ygg­d­ra­sil press re­lease dated 17 May 1994 poin­ted out ano­ther of the com­pa­ny’s cont­ri­bu­ti­ons to the free soft­ware world: “Five dol­lars per copy of Motif purcha­sed from Ygg­d­ra­sil goes to the de­ve­lop­ment of a free Motif clone.” Motif was a pro­gramming tool­kit that enab­led the Unix sys­tem to offer some of the fea­tures found in the gra­phi­cal user in­ter­faces em­ploy­ed by Apple and Mi­cro­soft for their ope­ra­ting sys­tems.</span>
+        
+        <span class="book-sentence" id="s-7-44-2-p0">It was dou­bly no­ta­ble that Ygg­d­ra­sil was car­ry­ing Motif; it was an ex­pen­si­ve ($149.95) piece of soft­ware for an ope­ra­ting sys­tem that was es­sen­ti­al­ly free.</span>
+        
+        <span class="book-sentence" id="s-7-44-3-p0">Mo­re­o­ver, it was pro­prieta­ry: It could not be co­pied, and came with no sour­ce code.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-45">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-45-1-p0">Sel­ling pro­prieta­ry soft­ware for use on a GNU/Linux sys­tem was ana­the­ma to Ri­chard Stall­man; it re­pre­sen­ted the sub­ver­si­on of all his work to crea­te GNU in the first place, be­cau­se its aim was to allow users to avoid using pro­prieta­ry soft­ware al­to­ge­ther.</span>
+        
+        <span class="book-sentence" id="s-7-45-2-p0">In many other ways, though, it was an im­portant land­mark in the com­mer­cia­liza­t­i­on of Linux.</span>
+        
+        <span class="book-sentence" id="s-7-45-3-p0">Ma­king Motif avail­able for GNU/Linux users ef­fec­tive­ly opened for them the ent­i­re world of Motif-based soft­ware.</span>
+        
+        <span class="book-sentence" id="s-7-45-4-p0">Alt­hough this soft­ware was most­ly pro­prieta­ry and ex­pen­si­ve, the point was that it re­mo­ved ano­ther bar­ri­er to the use of GNU/Linux sys­tems in tra­di­tio­nal busi­ness en­vi­ron­ments.</span>
+        
+        <span class="book-sentence" id="s-7-45-5-p0">GNU/Linux could be jud­ged pu­re­ly on its ra­pidly im­pro­ving tech­ni­cal me­rits along­s­ide other, com­mer­ci­al Uni­xes.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-46">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-46-1-p0">At al­most the same time that Ygg­d­ra­sil was ta­king this major step, ano­ther com­pa­ny was about to marry free and pro­prieta­ry soft­ware, but in a dif­fe­rent way.</span>
+        
+        <span class="book-sentence" id="s-7-46-2-p0">In 1994, Mark Bolz­ern was try­ing to sell a Unix da­ta­ba­se pro­duct cal­led Flagship, pro­du­ced by the Ger­man com­pa­ny Mul­ti­soft.</span>
+        
+        <span class="book-sentence" id="s-7-46-3-p0">“One of the pro­blems we had was it was cos­ting too much to set up a Unix sys­tem to try it,” he ex­plains.</span>
+        
+        <span class="book-sentence" id="s-7-46-4-p0">Then Bolz­ern came across GNU/Linux.</span>
+        
+        <span class="book-sentence" id="s-7-46-5-p0">It see­med to offer the per­fect so­lu­ti­on: He could use it to de­mons­tra­te Flagship for al­most no cost.</span>
+        
+        <span class="book-sentence" id="s-7-46-6-p0">“So I con­vin­ced Mul­ti­soft to do a port of Flagship to Linux, and that was the first com­mer­ci­al (ap­p­li­ca­ti­on) pro­duct re­leased on Linux,” Bolz­ern as­serts.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-47">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-47-1-p0">Using the free ope­ra­ting sys­tem brought its own pro­blems, howe­ver.</span>
+        
+        <span class="book-sentence" id="s-7-47-2-p0">“Peop­le were al­ways ha­ving trou­ble in­stal­ling Linux,” Bolz­ern re­calls, “and then Flagship wouldn’t run right be­cau­se so­me­thing had chan­ged about the CD.” The issue was the con­stant­ly shif­ting na­tu­re of GNU/Linux: Every dis­tri­bu­ti­on was dif­fe­rent.</span>
+        
+        <span class="book-sentence" id="s-7-47-3-p0">“I de­ci­ded that what was nee­ded was a pro­fes­sio­nal dis­tri­bu­ti­on that would pick the best and then hold it sta­ble for a pe­ri­od of a year or so be­fo­re re­leasing again,” Bolz­ern ex­plains.</span>
+        
+        <span class="book-sentence" id="s-7-47-4-p0">In this way he could be sure that Flagship would in­stall ea­si­ly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-48">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-48-1-p0">“So at that point I gar­ne­red the name Linux Pro,” he says, “and pi­cked a spe­ci­fic dis­tri­bu­ti­on of Slack­wa­re and did some va­rious tes­ting to make sure that I had what I thought was a good solid sta­ble CD, and then pun­ched Flagship onto the CD, too.</span>
+        
+        <span class="book-sentence" id="s-7-48-2-p0">And the next thing I knew we were sel­ling more Linux than we were sel­ling Flagship, not just in terms of num­bers, but in terms of dol­lars.</span>
+        
+        <span class="book-sentence" id="s-7-48-3-p0">We’re tal­king hund­reds [of co­pies] per month” of GNU/Linux sold in late 1994.</span>
+        
+        <span class="book-sentence" id="s-7-48-4-p0">Bolz­ern sud­den­ly found him­s­elf in the GNU/Linux dis­tri­bu­ti­on busi­ness.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-49">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-49-1-p0">The GNU GPL meant not only that Bolz­ern could take Slack­wa­re as the basis of his dis­tri­bu­ti­on but that he could drop it wi­thout dif­fi­cul­ty.</span>
+        
+        <span class="book-sentence" id="s-7-49-2-p0">For ex­amp­le, Bolz­ern says, “When the Red Hat dis­tri­bu­ti­on came out, I re­co­gni­zed it as the bet­ter so­lu­ti­on,” and so he sim­ply swit­ched to using that as the basis of his Linux Pro.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-50">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-50-1-p0">Red Hat had been set up by Marc Ewing in 1993.</span>
+        
+        <span class="book-sentence" id="s-7-50-2-p0">“I star­ted Red Hat to pro­du­ce a de­ve­lop­ment tool I thought the world nee­ded,” he said in 1996.</span>
+        
+        <span class="book-sentence" id="s-7-50-3-p0">“Linux was just be­co­m­ing avail­able, and I used [it] as my de­ve­lop­ment plat­form.</span>
+        
+        <span class="book-sentence" id="s-7-50-4-p0">Howe­ver, I soon found that I was spen­ding more time ma­na­ging my Linux box than I was de­ve­lo­ping my soft­ware, and I con­clu­ded that what the world re­al­ly nee­ded was a good Linux dis­tri­bu­ti­on; at the time there was only SLS.” Ass for the unusu­al name, Ewing ex­plai­ned, “In col­le­ge I used to wear my grand­fa­ther’s la­cros­se hat, which was red and white stri­ped.</span>
+        
+        <span class="book-sentence" id="s-7-50-5-p0">It was my fa­vo­ri­te hat, and I lost it so­mew­he­re in Phil­adel­phia in my last year.</span>
+        
+        <span class="book-sentence" id="s-7-50-6-p0">I named the com­pa­ny to me­mo­ria­li­ze the hat.</span>
+        
+        <span class="book-sentence" id="s-7-50-7-p0">Of cour­se, Red and White Hat Soft­ware wasn’t very catchy, so I took a litt­le li­ber­ty.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-51">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-51-1-p0">Ewing had de­fi­ni­te ideas about what was lacking in cur­rent dis­tri­bu­ti­ons.</span>
+        
+        <span class="book-sentence" id="s-7-51-2-p0">“It was clear that Linux nee­ded a lot of help in the areas of in­stal­la­ti­on, con­fi­gu­ra­ti­on, and pa­cka­ge ma­nage­ment,” he ex­plai­ned.</span>
+        
+        <span class="book-sentence" id="s-7-51-3-p0">“Until Red Hat, there re­al­ly was no such thing as up­gra­ding to a new Linux dis­tri­bu­ti­on; you had to re­install.</span>
+        
+        <span class="book-sentence" id="s-7-51-4-p0">That was a huge draw­back.</span>
+        
+        <span class="book-sentence" id="s-7-51-5-p0">It was also dif­fi­cult to in­cre­men­tal­ly up­grade your ma­chi­ne.</span>
+        
+        <span class="book-sentence" id="s-7-51-6-p0">You eit­her got the sour­ces and con­fi­gu­red and re­built them yours­elf ”—so­me­thing only real ha­ckers would want to do—“or you took a chan­ce with pre­built bi­na­ries.</span>
+        
+        <span class="book-sentence" id="s-7-51-7-p0">Pa­cka­ge ma­nage­ment is what sol­ves these pro­blems.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-52">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-52-1-p0">What is in­te­res­ting about these re­marks is that Ewing was ai­ming to pro­vi­de so­lu­ti­ons to user pro­blems.</span>
+        
+        <span class="book-sentence" id="s-7-52-2-p0">From the start, he was con­cen­tra­ting on the new mar­ket of less tech­ni­cal­ly able users.</span>
+        
+        <span class="book-sentence" id="s-7-52-3-p0">Ass he ex­plai­ned, “Linux is be­co­m­ing so po­pu­lar that a lot of peop­le with no Unix ex­pe­ri­ence are using it, and they are ge­ne­ral­ly not trai­ned in the ar­ca­ne Unix ad­mi­nis­tra­ti­on skills—nor should they have to be in our opi­ni­on.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-53">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-53-1-p0">This was an im­portant de­ve­lop­ment be­cau­se it show­ed how com­mer­ce was star­ting to move GNU/Linux into areas that Linus and his ker­nel ha­ckers, for ex­amp­le, could not ad­dress di­rect­ly.</span>
+        
+        <span class="book-sentence" id="s-7-53-2-p0">This was not a ques­ti­on of pro­gramming, but pa­cka­ging, which new com­pa­nies like Red Hat were ide­al­ly pla­ced to ad­dress.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-54">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-54-1-p0">Un­li­ke some, more op­por­tu­nis­tic, com­pa­nies, Red Hat fully be­lie­ved in the new way of crea­ting and dis­tri­bu­ting soft­ware.</span>
+        
+        <span class="book-sentence" id="s-7-54-2-p0">“All the soft­ware we write is GPL’ed,” Ewing said in 1996.</span>
+        
+        <span class="book-sentence" id="s-7-54-3-p0">That is, whe­ne­ver the com­pa­ny added new fea­tures to its GNU/Linux sys­tem it made them fre­e­ly avail­able under the GNU GPL, even to com­pe­ti­tors.</span>
+        
+        <span class="book-sentence" id="s-7-54-4-p0">This was so­me­thing new in busi­ness, and an early in­di­ca­ti­on of the broa­der im­pli­ca­ti­ons the free soft­ware mo­ve­ment would have on the ent­i­re com­pu­ter world.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-55">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-55-1-p0">“Our re­la­ti­ons­hips with free soft­ware de­ve­l­o­pers around the world are ab­so­lu­tely vital,” Ewing said, re­co­gni­zing that his com­pa­ny de­pen­ded on them for the con­ti­nuing pro­gress of the pro­duct they sold.</span>
+        
+        <span class="book-sentence" id="s-7-55-2-p0">“We help de­ve­l­o­pers out by cont­ri­bu­ting hard­ware and money to or­ga­niza­t­i­ons like the Free Soft­ware Foun­da­ti­on, the Linux Do­cu­men­ta­ti­on Pro­ject, the XFree86 Pro­ject, and others.</span>
+        
+        <span class="book-sentence" id="s-7-55-3-p0">We are ab­so­lu­tely com­mit­ted to the free soft­ware com­mu­ni­ty.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-56">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-56-1-p0">In ad­di­ti­on to de­mons­tra­ting its com­mit­ment to the de­ve­l­oper com­mu­ni­ty, Red Hat had to win the con­fi­dence of users, par­ti­cu­lar­ly those in the busi­ness world, which was just star­ting to ex­plo­re GNU/Linux as an op­ti­on; a lack of di­rect sup­port from the de­ve­l­o­pers was one of the cor­po­ra­tes’ main con­cerns.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-57">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-57-1-p0">A strength of the GNU/Linux de­ve­lop­ment model was that prac­tical­ly every soft­ware aut­hor could be con­tac­ted di­rect­ly by e-mail, or in­di­rect­ly using Use­net news­groups.</span>
+        
+        <span class="book-sentence" id="s-7-57-2-p0">Sto­ries abound of peop­le’s pos­ting que­ries about bugs in soft­ware and re­cei­ving fixes wi­t­hin hours from the ori­gi­nal aut­hor.</span>
+        
+        <span class="book-sentence" id="s-7-57-3-p0">But for com­pa­nies, this novel and slight­ly ad hoc ap­proach was not en­ough; they nee­ded so­meo­ne they could turn to who would be re­lia­ble.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-58">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-58-1-p0">Ass a re­sult of this de­mand, Red Hat and other GNU/Linux dis­tri­bu­ti­ons star­ted to offer free and paid-for sup­port with their pro­ducts.</span>
+        
+        <span class="book-sentence" id="s-7-58-2-p0">“We offer free in­stal­la­ti­on sup­port with Red Hat Linux, and we offer sup­port contracts for those that need long-term se­cu­ri­ty,” Ewing said in 1996.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-59">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-59-1-p0">Ap­pa­r­ent­ly a minor point, the pro­vi­si­on of sup­port for GNU/Linux sys­tem would prove a key de­ve­lop­ment.</span>
+        
+        <span class="book-sentence" id="s-7-59-2-p0">On the one hand, it pro­vi­ded se­cu­ri­ty for com­pa­nies that were con­tem­pla­ting using free soft­ware in a busi­ness con­text; on the other, and just as im­portant, it pro­vi­ded a vital new sour­ce of in­co­me for com­pa­nies that were, after all, sel­ling soft­ware that was also ge­ne­ral­ly fre­e­ly avail­able.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-60">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-60-1-p0">De­s­pi­te GNU/Linux’s gro­wing suc­cess, in 1996 Ewing was still un­su­re how Red Hat would ul­ti­mate­ly fare in the cor­po­ra­te world.</span>
+        
+        <span class="book-sentence" id="s-7-60-2-p0">“Ass a so­lu­ti­on to drop on a se­creta­ry’s desk Linux is pret­ty lacking at the mo­ment,” he ad­mit­ted.</span>
+        
+        <span class="book-sentence" id="s-7-60-3-p0">“Our Ap­p­lix­wa­re pro­ducts”—pro­prieta­ry soft­ware from Ap­p­lix, and one of the ear­liest busi­ness ap­p­li­ca­ti­ons for GNU/Linux—“does bring a high-qua­li­ty of­fice suite to Linux, but there are not a lot of other end-user ap­p­li­ca­ti­ons avail­able.</span>
+        
+        <span class="book-sentence" id="s-7-60-4-p0">How this pans out in the years to come re­mains to be seen.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-61">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-61-1-p0">In sum­ma­ry, he de­scri­bed the issue of how im­portant GNU/Linux would be­co­me in a busi­ness con­text as “the $1,000,000 ques­ti­on.” Ewing was out by a fac­tor of over 1,000: Just three years later, Red Hat’s value was se­veral bil­li­on dol­lars.</span>
+        
+        <span class="book-sentence" id="s-7-61-2-p0">And yet in 1996, the com­pa­ny that ne­ar­ly ever­y­bo­dy ex­pec­ted to be­co­me the top sup­p­lier of GNU/Linux to busi­ness was not Red Hat, but Cal­de­ra.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-62">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-62-1-p0">Even Linus, in 1996, said that “Cal­de­ra is kind of a step bey­ond” Red Hat in the way it ad­dres­sed the cor­po­ra­te mar­ket.</span>
+        
+        <span class="book-sentence" id="s-7-62-2-p0">He con­ti­nued, “I think what’s in­te­res­ting about Cal­de­ra is they based their stuff most­ly on Red Hat and then they add the di­men­si­on of a com­mer­ci­al kind of ap­proach.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-63">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-63-1-p0">Cal­de­ra began as a pro­ject wi­t­hin No­vell, at that time the lea­der in cor­po­ra­te net­wor­king pro­ducts, and also the owner of Unix.</span>
+        
+        <span class="book-sentence" id="s-7-63-2-p0">The man be­hind this work, ori­gi­nal­ly code- named “Exposé,” and later re­na­med “Cor­sair,” was Bryan Sparks.</span>
+        
+        <span class="book-sentence" id="s-7-63-3-p0">“We were doing a re­se­arch pro­ject at No­vell the last year I was there, using Linux as a way to come out with tech­no­lo­gies using non­tra­di­tio­nal de­ve­lop­ment means,” he re­cal­led in 1996, by which time he had be­co­me CEO of Cal­de­ra.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-64">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-64-1-p0">“Un­for­t­u­n­a­te­ly there was a kind of ma­nage­ment chan­ge at No­vell and Ray Noor­da [the foun­der of No­vell] left, and a new pre­si­dent came in.” Prio­ri­ties chan­ged: “Any rate, the pro­ject was kind of can­cel­led,” Sparks said.</span>
+        
+        <span class="book-sentence" id="s-7-64-2-p0">But by then he had caught the bug.</span>
+        
+        <span class="book-sentence" id="s-7-64-3-p0">“[I] per­so­nal­ly was kind of en­a­mou­red with the idea that we could pro­du­ce so­me­thing re­al­ly in­te­res­ting here.</span>
+        
+        <span class="book-sentence" id="s-7-64-4-p0">So I ap­proa­ched Ray, who was now not a part of No­vell, and asked if he would fund this idea outs­ide and I’m gra­te­ful he agreed.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-65">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-65-1-p0">Sparks’s de­scrip­ti­on of the aims of the Noor­da-fun­ded start-up are si­gni­fi­cant: “Our goal is to move Linux along as best we can,” he said, “par­ti­ci­pa­te in the Linux com­mu­ni­ty but also per­haps more im­port­ant­ly for us to pro­vi­de com­mer­ci­al pro­ducts that sur­round it and crea­te a pro­duct that has more com­mer­ci­al ap­peal.” Cal­de­ra, as it came to be known, was spe­ci­fi­cal­ly foun­ded to “sur­round” Linux with com­mer­ci­al pro­ducts to in­crea­se its ap­peal to busi­nes­ses.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-66">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-66-1-p0">Cal­de­ra was set up in Oc­to­ber 1994, and re­leased betas of its first pro­duct, the Cal­de­ra Net­work Desk­top (CND) in 1995.</span>
+        
+        <span class="book-sentence" id="s-7-66-2-p0">The final ver­si­on came out in Fe­bru­ary 1996, and of­fe­red a novel gra­phi­cal desk­top ra­ther like Win­dows 95.</span>
+        
+        <span class="book-sentence" id="s-7-66-3-p0">This “Loo­king Glass” desk­top, as it was cal­led, was pro­prieta­ry, as were se­veral other ap­p­li­ca­ti­ons that Cal­de­ra bund­led with the pa­cka­ge.</span>
+        
+        <span class="book-sentence" id="s-7-66-4-p0">Be­cau­se it was not easy to se­pa­ra­te these out, it was hard to make legal co­pies of the Cal­de­ra dis­tri­bu­ti­on, a dan­ge­rous pre­ce­dent for the new world of com­mer­ci­al GNU/Linux.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-67">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-67-1-p0">Nor did Cal­de­ra make any fri­ends when it de­ci­ded to re­na­me its pro­duct Open­Li­nux, the sug­ges­ti­on being that so­mehow all the other GNU/Linux dis­tri­bu­ti­ons were not open.</span>
+        
+        <span class="book-sentence" id="s-7-67-2-p0">Some peop­le com­pa­red this move to Stall­man’s at­tempt to re­na­me Linux “LiGNUx.” There were three ver­si­ons of Open­Li­nux.</span>
+        
+        <span class="book-sentence" id="s-7-67-3-p0">“We crea­te a very low-end pro­duct for the Linux com­mu­ni­ty, for the ha­ckers on the Net,” Sparks ex­plai­ned.</span>
+        
+        <span class="book-sentence" id="s-7-67-4-p0">“We then do two other pro­ducts tar­ge­ted towards re­sel­lers and the com­mer­ci­al en­vi­ron­ment, with many more com­mer­ci­al com­po­n­ents, fea­tures, ma­nage­ment ca­pa­bi­li­ties and so forth.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-68">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-68-1-p0">The com­mer­ci­al com­po­n­ents came on a se­pa­ra­te So­lu­ti­ons CD, and were ports of ap­p­li­ca­ti­ons from major soft­ware ven­dors such as the Ger­man com­pa­ny Soft­ware AG, which pro­du­ced the hea­vy­weight Ada­bas D da­ta­ba­se.</span>
+        
+        <span class="book-sentence" id="s-7-68-2-p0">Ass Sparks re­co­gni­zed, “One of the di­lem­mas we or an­yo­ne has when in­tro­du­cing a new ope­ra­ting sys­tem or sys­tem- level pro­duct is you have got to have the ap­p­li­ca­ti­on base.</span>
+        
+        <span class="book-sentence" id="s-7-68-3-p0">An ope­ra­ting sys­tem in and of its­elf only sol­ves a cer­tain set of so­lu­ti­ons, a pret­ty tight niche, but if you can bund­le it with third-party pro­ducts the range of so­lu­ti­ons it can offer is quite large.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-69">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-69-1-p0">The ports of com­mer­ci­al soft­ware often arose in a pe­cu­li­ar man­ner.</span>
+        
+        <span class="book-sentence" id="s-7-69-2-p0">Sparks ex­plai­ned, “The Soft­ware AG part­nership has kind of stem­med from the fact that many peop­le in­si­de of Soft­ware AG, par­ti­cu­lar­ly the en­gi­neers, had star­ted to port wi­thout ma­nage­ment’s know­ledge—that isn't un­com­mon, we find.</span>
+        
+        <span class="book-sentence" id="s-7-69-3-p0">We just cal­led a com­pa­ny not long ago and said we would like to talk to you about your Linux port, and they in­sis­ted they didn’t have one when we knew that they did.</span>
+        
+        <span class="book-sentence" id="s-7-69-4-p0">And we said, well, you may want to go check with your en­gi­neers be­cau­se you re­al­ly do have a port done.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-70">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-70-1-p0">The ar­ri­val of these pro­prieta­ry com­mer­ci­al pa­cka­ges enab­led GNU/Linux sys­tems to be of­fe­red as so­lu­ti­ons in a wide range of ap­p­li­ca­ti­ons.</span>
+        
+        <span class="book-sentence" id="s-7-70-2-p0">But Cal­de­ra ten­ded to con­cen­tra­te on one area where GNU/Linux was now par­ti­cu­lar­ly strong.</span>
+        
+        <span class="book-sentence" id="s-7-70-3-p0">Ass Sparks said, “Many peop­le per­cei­ve Linux as a kind of a ha­cker’s Unix, and we come in and say, well, yes, it’s that, but do you know what it re­al­ly is?”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-71">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-71-1-p0">Linux is a con­nec­tivi­ty pro­duct; you want to con­nect to a re­mo­te of­fice, you want to con­nect to the In­ter­net, you want to con­nect to this or that pe­ri­pheral de­vice, Linux can do that.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-72">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-72-1-p0">This was a shr­ewd move on Cal­de­ra’s part in se­veral ways.</span>
+        
+        <span class="book-sentence" id="s-7-72-2-p0">The busi­ness use of the In­ter­net was gro­wing ra­pidly at this time, and many IT de­part­ments had to meet two ap­pa­r­ent­ly con­tra­dic­to­ry re­qui­re­ments: to get their com­pa­ny on­line fast with re­lia­ble soft­ware, and to do it wi­thout any extra bud­get.</span>
+        
+        <span class="book-sentence" id="s-7-72-3-p0">GNU/Linux sys­tems of­fe­red the per­fect so­lu­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-72-4-p0">They were now ro­bust and yet ex­tre­me­ly low-cost.</span>
+        
+        <span class="book-sentence" id="s-7-72-5-p0">Ass a re­sult, many com­pa­nies were using GNU/Linux wi­thout even kno­wing it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-73">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-73-1-p0">Sparks de­scri­bed a ty­pi­cal si­tua­ti­on.</span>
+        
+        <span class="book-sentence" id="s-7-73-2-p0">“We had a com­pa­ny call up,” he said, “an MIS [Ma­nage­ment In­for­ma­ti­on Sys­tems] guy at a large com­pa­ny here in the U.S., who said, ‘We’re using Linux for gate­ways and other things to at­tach all our In­ter­net sites.</span>
+        
+        <span class="book-sentence" id="s-7-73-3-p0">My MIS di­rec­tor just found out that I’m run­ning our com­pa­ny on Linux.’ And he said, ‘My MIS di­rec­tor said we’re not going to run our com­pa­ny on no free soft­ware.’ So he said, ‘Can you help me,’ and I said, ‘Well, you bet I can.’ We set up a mee­ting, I went out and said, ‘Yes, Linux is free, but we’re a real ven­dor.</span>
+        
+        <span class="book-sentence" id="s-7-73-4-p0">If you have pro­blems we’ll stand up and take the bul­let.</span>
+        
+        <span class="book-sentence" id="s-7-73-5-p0">We’ll fix it for you and we’ll give you more value-added than you ex­pect.’ And that is very ty­pi­cal, we’ve done that kind of pre­sen­ta­ti­on now do­zens of times here in the U.S.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-74">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-74-1-p0">This pro­vi­des in­te­res­ting evi­dence that GNU/Linux was al­re­a­dy being wi­de­ly used in busi­ness, but that few com­pa­nies would own up to using it.</span>
+        
+        <span class="book-sentence" id="s-7-74-2-p0">Mark Bolz­ern con­fir­med this.</span>
+        
+        <span class="book-sentence" id="s-7-74-3-p0">Around the same time, in 1996, he said, “Ne­ar­ly every one of the For­tu­ne 5000 have bought our pro­duct and use it in va­rious ways.</span>
+        
+        <span class="book-sentence" id="s-7-74-4-p0">In most cases, ma­nage­ment does not yet know and de­nies it.” He added, “Even Mi­cro­soft uses our Linux ex­ten­si­ve­ly and has bought hund­reds of co­pies.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-75">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-75-1-p0">Along­s­ide this bur­geo­n­ing if hi­d­den com­mer­ci­al ac­tivi­ty based di­rect­ly on GNU/Linux soft­ware, an­cil­la­ry sec­tors began to emer­ge.</span>
+        
+        <span class="book-sentence" id="s-7-75-2-p0">For ex­amp­le, com­pa­nies sprang up that of­fe­red ready-built sys­tems op­ti­mi­zed for run­ning GNU/Linux.</span>
+        
+        <span class="book-sentence" id="s-7-75-3-p0">One of the ear­liest of these was VA Re­se­arch, a com­pa­ny that would grow to be­co­me one of the main play­ers in the GNU/Linux world.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-76">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-76-1-p0">Its foun­der was Larry Au­gus­tin, born in Day­ton, Ohio, in 1962.</span>
+        
+        <span class="book-sentence" id="s-7-76-2-p0">“I was a gra­dua­te stu­dent at Stan­ford in electri­cal en­gi­nee­ring,” he says.</span>
+        
+        <span class="book-sentence" id="s-7-76-3-p0">“Most of the work we did at the time was on Sun work­sta­tions.</span>
+        
+        <span class="book-sentence" id="s-7-76-4-p0">I thought, gee, if I had a Unix work­sta­tion at home I’d be a lot more ef­fi­ci­ent and I’d gra­dua­te so­o­ner.</span>
+        
+        <span class="book-sentence" id="s-7-76-5-p0">Now, I couldn’t af­ford a Sun SparcSta­ti­on”—which cost around $7,000 at the time—but “I’d seen this thing cal­led Linux.” He de­ci­ded to build his own sys­tem, and run GNU/Linux on it.</span>
+        
+        <span class="book-sentence" id="s-7-76-6-p0">“I was able to put to­ge­ther a ma­chi­ne for about $2,000 that was one and a half to two times fas­ter than that $7,000 Sun ma­chi­ne.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-77">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-77-1-p0">“Other peop­le saw what I’d put to­ge­ther, and they said, ‘Gee, can you do one of those for me?’” Au­gus­tin re­calls.</span>
+        
+        <span class="book-sentence" id="s-7-77-2-p0">“So peop­le star­ted pay­ing me to put these sys­tems to­ge­ther for them.” To begin with, Au­gus­tin sold the sys­tems through a pre-exis­ting com­pa­ny cal­led Fin­tro­nic.</span>
+        
+        <span class="book-sentence" id="s-7-77-3-p0">Alt­hough this busi­ness soon pro­spe­red—“About a year later I had three peop­le full-time just put­ting sys­tems to­ge­ther,” Au­gus­tin says—his life had al­most taken a dif­fe­rent cour­se.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-78">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-78-1-p0">While he was at uni­ver­si­ty, he got to know two fel­low stu­dents, Dave Filo and Jerry Yang.</span>
+        
+        <span class="book-sentence" id="s-7-78-2-p0">“Dave and Jerry had star­ted doing this di­rec­to­ry of In­ter­net sites,” Au­gus­tin says, “that they were run­ning out of their rooms at Stan­ford.” Au­gus­tin was also into the In­ter­net by this time.</span>
+        
+        <span class="book-sentence" id="s-7-78-3-p0">“I had put up this Web page in No­vem­ber ’93, which was so­me­thing very new.</span>
+        
+        <span class="book-sentence" id="s-7-78-4-p0">In fact, at the time Intel had just ba­re­ly star­ted a Web site.</span>
+        
+        <span class="book-sentence" id="s-7-78-5-p0">Intel had five com­pa­nies lis­ted on their home page that sold sys­tems [using Intel pro­ces­sors] over the In­ter­net.</span>
+        
+        <span class="book-sentence" id="s-7-78-6-p0">We were one of them.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-79">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-79-1-p0">Ass a re­sult of their com­mon in­te­rest, Au­gus­tin re­calls, “Dave Filo, Jerry, and I said, ‘Gee, there’s so­me­thing going on around this In­ter­net thing, we should fi­gu­re out a way to crea­te a busi­ness.’ I was doing a pret­ty good e-com­mer­ce busi­ness over the In­ter­net, and they had this di­rec­to­ry, and we star­ted wri­ting a busi­ness plan about how to build com­pa­nies around the In­ter­net.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-80">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-80-1-p0">De­s­pi­te this, “the end-re­sult was they de­ci­ded to go off and try and do so­me­thing with this In­ter­net di­rec­to­ry they were buil­ding,” Au­gus­tin ex­plains.</span>
+        
+        <span class="book-sentence" id="s-7-80-2-p0">“And I loo­ked and said, ‘Gee, that’s just mar­ke­ting.’ I want ac­tual­ly to make com­pu­ters, right?</span>
+        
+        <span class="book-sentence" id="s-7-80-3-p0">So I went off and kept doing sys­tems, based around Linux.” What he de­scri­bes as “just mar­ke­ting” would soon be the pre-emi­nent In­ter­net com­pa­ny Yahoo, and worth tens of bil­li­ons of dol­lars.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-81">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-81-1-p0">But Au­gus­tin has no re­g­rets, not least be­cau­se his own com­pa­ny would also do well.</span>
+        
+        <span class="book-sentence" id="s-7-81-2-p0">VA Re­se­arch was spun out of Fin­tro­nic in Fe­bru­ary 1995.</span>
+        
+        <span class="book-sentence" id="s-7-81-3-p0">“VA” stood for Vera and Au­gus­tin: “James Vera ori­gi­nal­ly foun­ded the com­pa­ny with me when we were at Stan­ford,” Au­gus­tin ex­plains.</span>
+        
+        <span class="book-sentence" id="s-7-81-4-p0">VA Re­se­arch’s IPO in 1999 would show the lar­gest opening gain ever, though few would have be­lie­ved this when loo­king at the muddy black-and-white ad­ver­ti­se­ment for what was cal­led “VA re­se­arch” in the July 1995 issue of Linux Jour­nal.</span>
+        
+        <span class="book-sentence" id="s-7-81-5-p0">The top sys­tem on offer there was a 90 MHz Intel Pen­ti­um with 16 Mbytes of RAM and a 1 Gi­ga­byte hard disk, for $3,755, in­clu­ding a 17-inch mo­ni­tor.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-82">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-82-1-p0">Au­gus­tin says, “We were one of four ad­ver­ti­sers in the first issue of Linux Jour­nal,” which bore a cover date of May 1994.</span>
+        
+        <span class="book-sentence" id="s-7-82-2-p0">The man be­hind the first hard-copy pu­bli­ca­ti­on de­vo­ted to the GNU/Linux world was Phil Hug­hes.</span>
+        
+        <span class="book-sentence" id="s-7-82-3-p0">“In 1993, I star­ted tal­king with a few fri­ends about the idea of star­ting a Free Soft­ware ma­ga­zi­ne,” he re­calls.</span>
+        
+        <span class="book-sentence" id="s-7-82-4-p0">“We quick­ly fi­gu­red out that we couldn’t af­ford to start so­me­thing like this be­cau­se, to be non­bia­sed, it would need to have no ad­ver­ti­sing.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-83">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-83-1-p0">I sug­gested, in­iti­al­ly as a joke, that we start a ma­ga­zi­ne on just Linux.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-84">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-84-1-p0">After va­rious pro­blems, Linux Jour­nal was even­tual­ly laun­ched with help from the Ca­na­di­an-born en­tre­pre­neur Bob Young.</span>
+        
+        <span class="book-sentence" id="s-7-84-2-p0">At that time, Young was pu­blis­hing a local news­let­ter cal­led New York Unix, and run­ning the ACC Books­to­re, which sold many GNU/Linux dis­tri­bu­ti­ons and books.</span>
+        
+        <span class="book-sentence" id="s-7-84-3-p0">Young later mer­ged his com­pa­ny with Red Hat, ad­ding his va­luable sales and mar­ke­ting ex­pe­ri­ence to Ewing’s own tech­ni­cal ex­per­ti­se.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-85">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-85-1-p0">Hug­hes says: We star­ted up with four peop­le: Bob as pu­blis­her, mys­elf as edi­tor, a lay­out per­son and a part-time ad sales rep.</span>
+        
+        <span class="book-sentence" id="s-7-85-2-p0">We had two of­fices: pu­blis­her and lay­out in a spare room in Bob’s house, edi­tor and ad sales in my bas­e­ment.</span>
+        
+        <span class="book-sentence" id="s-7-85-3-p0">We prin­ted 20,000 co­pies of the first two is­su­es.</span>
+        
+        <span class="book-sentence" id="s-7-85-4-p0">By the time the se­cond issue was about to ship to the prin­ter, both Bob and I rea­li­zed this setup wasn’t going to work.</span>
+        
+        <span class="book-sentence" id="s-7-85-5-p0">I de­ci­ded that Linux Jour­nal could be rol­led into SSC [a pu­blis­hing com­pa­ny he had foun­ded in 1983] so Bob and I split the los­ses at that time and I went on to hire an edi­tor, Mi­cha­el John­son [an early Linux ha­cker] and took over the du­ties of pu­blis­her.</span>
+        
+        <span class="book-sentence" id="s-7-85-6-p0">At that time, we had 926 sub­scri­bers.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-86">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-86-1-p0">Ass well as a ma­ga­zi­ne, books about GNU/Linux were star­ting to ap­pe­ar, too.</span>
+        
+        <span class="book-sentence" id="s-7-86-2-p0">One of the pioneers in this area was O’Reil­ly &#x26; As­so­cia­tes, then best known for its Unix books.</span>
+        
+        <span class="book-sentence" id="s-7-86-3-p0">Tit­les such as <em>Run­ning Linux</em> and <em>Linux Net­work Ad­mi­nis­tra­tor’s Guide</em> not only pro­vi­ded in­va­luable re­fe­rence ma­te­ri­al for GNU/Linux users but also al­lo­wed the re­spec­tive aut­hors, Matt Welsh and Olaf Kirch, to re­cei­ve some re­mu­n­e­ra­ti­on for their many years’ ser­vice in do­cu­men­ting GNU/Linux.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-87">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-87-1-p0">Linux Jour­nal, ACC Books­to­re, O’Reil­ly &#x26; As­so­cia­tes, and other com­pa­nies like them hel­ped spre­ad the GNU/Linux mes­sa­ge through their va­rious ac­tivi­ties and as­so­cia­ted ad­ver­ti­sing.</span>
+        
+        <span class="book-sentence" id="s-7-87-2-p0">Fur­ther mar­ke­ting came from a body that had been set up with more non­com­mer­ci­al pro­mo­ti­on in mind.</span>
+        
+        <span class="book-sentence" id="s-7-87-3-p0">Linux In­ter­na­tio­nal had been crea­ted by Pa­trick D’Cruze, then a stu­dent in Aus­tra­lia.</span>
+        
+        <span class="book-sentence" id="s-7-87-4-p0">Ass he wrote in a pos­ting to the Linux-Ac­tivists mai­ling list on 2 March 1994, it was “a new not-for-pro­fit or­ga­niza­t­i­on,” which had as its prin­ci­pal aim “in­ter­na­tio­nal mar­ke­ting and sup­port of Linux.</span>
+        
+        <span class="book-sentence" id="s-7-87-5-p0">It is en­vi­sio­ned that a sui­ta­ble mar­ke­ting cam­pai­gn will be moun­ted and the ‘Linux so­lu­ti­on’ be ex­poun­ded upon in the ge­ne­ral media and to po­ten­ti­al cust­o­m­ers.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-88">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-88-1-p0">De­s­pi­te its em­pha­sis on mar­ke­ting, it was main­ly top ha­ckers such as Alan Cox and Ted Ts’o who in­iti­al­ly hel­ped out with Linux In­ter­na­tio­nal.</span>
+        
+        <span class="book-sentence" id="s-7-88-2-p0">But as the nas­cent Linux in­dus­try grew, so more of its play­ers be­ca­me in­vol­ved.</span>
+        
+        <span class="book-sentence" id="s-7-88-3-p0">Bob Young was one, and he hap­pe­n­ed to speak to Mark Bolz­ern about Linux In­ter­na­tio­nal at Fall Com­dex 1994.</span>
+        
+        <span class="book-sentence" id="s-7-88-4-p0">Bolz­ern re­calls, “I said, ‘Oh, if an or­ga­niza­t­i­on like that exists, let’s make it into what it needs to be ra­ther than star­ting a new one’” for the pur­po­ses of rai­sing the pro­fi­le of GNU/Linux.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-89">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-89-1-p0">After being in­vi­ted to join Linux In­ter­na­tio­nal, Bolz­ern says, “I then kind of by de­fault be­ca­me the mar­ke­ting force be­hind Linux In­ter­na­tio­nal.” Ass Linux In­ter­na­tio­nal be­ca­me more ac­tive in pro­mo­ting GNU/Linux, Bolz­ern in turn be­ca­me the se­mi­of­fi­ci­al mar­ke­ting force be­hind the ent­i­re mo­ve­ment.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-90">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-90-1-p0">Bolz­ern ex­plains his aim at the time: “I fi­gu­red the best way to reach Linux In­ter­na­tio­nal’s goals as a be­ne­vo­lent en­t­i­ty that would help Linux to de­ve­lop and help pro­mo­te it com­mer­ci­al­ly, etc., etc., would be to get ven­dors in­vol­ved,” an im­portant chan­ge from Linux In­ter­na­tio­nal’s in­iti­al ap­proach, and one that re­flec­ted the shif­ting power wi­t­hin the GNU/Linux world.</span>
+        
+        <span class="book-sentence" id="s-7-90-2-p0">Bolz­ern’s re­a­son was sim­ple: “Ven­dors are the ones who had re­a­son to spend money to pro­mo­te Linux,” he says.</span>
+        
+        <span class="book-sentence" id="s-7-90-3-p0">Bolz­ern de­ci­ded that the best way of get­ting ven­dors in­vol­ved, and hence co-ope­ra­ting ra­ther than com­pe­ting, was to raise the pro­fi­le of GNU/Linux at major shows so com­pa­nies would want to be as­so­cia­ted with it through Linux In­ter­na­tio­nal.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-91">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-91-1-p0">He put his plans into ac­tion at the next major show, Uni­Fo­rum, which was held in Dal­las, Texas, in March 1995.</span>
+        
+        <span class="book-sentence" id="s-7-91-2-p0">“I de­ci­ded that the way to get Linux In­ter­na­tio­nal laun­ched was to crea­te pa­vi­li­ons, or areas wi­t­hin lar­ger shows” Bolz­ern says, “where we had a num­ber of small Linux ven­dors to­ge­ther able to get much more at­ten­ti­on than the sum of what any of us could get se­pa­ra­te­ly.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-92">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-92-1-p0">Bolz­ern also or­ga­ni­zed Birds of a Fea­ther ses­si­ons—in­for­mal talks—about GNU/Linux at the show.</span>
+        
+        <span class="book-sentence" id="s-7-92-2-p0">“We ended up ha­ving over­flow crowds at the Birds of a Fea­ther ses­si­ons, which was no­ti­ced by Soft­bank Com­dex,” the or­ga­ni­zers of the show.</span>
+        
+        <span class="book-sentence" id="s-7-92-3-p0">This was just what Bolz­ern wan­ted, be­cau­se “as a re­sult,” he re­calls, “they went ahead and com­mit­ted with us for [Com­dex] Fall 95 to put to­ge­ther a pa­vi­li­on of six booths where they cont­ri­bu­ted the Linux In­ter­na­tio­nal booth.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-93">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-93-1-p0">This work in the area of in­cre­a­sing awa­ren­ess about GNU/Linux was crow­ned later in 1995 when Bolz­ern’s own dis­tri­bu­ti­on Linux Pro was a no­minee for Best of Com­dex, a major boost given that GNU/Linux was still al­most un­k­nown in the wider world of com­pu­ting at this point, and Com­dex was the lea­ding show in the com­pu­ting ca­len­dar.</span>
+        
+        <span class="book-sentence" id="s-7-93-2-p0">Ass Bolz­ern re­calls: “When that award hap­pe­n­ed, [the GNU/Linux ven­dors] all of a sud­den got the pic­tu­re of hey, wow, if we get to­ge­ther, we can get more at­ten­ti­on than we can se­pa­ra­te­ly”—his ori­gi­nal aim.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-94">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-94-1-p0">Bolz­ern calls this a turning point in Linux In­ter­na­tio­nal; per­haps it was for the young ven­dor com­mu­ni­ty too, as they rea­li­zed that they were all es­sen­ti­al­ly on the same side in their com­mon fight to make GNU/Linux an ac­cep­ta­ble al­ter­na­ti­ve wi­t­hin busi­ness, and that more united than di­vi­ded them.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-95">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-95-1-p0">The evo­lu­ti­on of Linux In­ter­na­tio­nal into a ven­dor-based or­ga­niza­t­i­on with money to spend on pro­mo­ting GNU/Linux re­flec­ted the emer­gence not only of a new force in the free soft­ware world but also of its sym­bio­tic re­la­ti­ons­hip with ha­ckers and users.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-96">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-96-1-p0">In this re­spect, it mir­rors Linus’s own po­si­ti­on in the Linux com­mu­ni­ty, where, as he had ex­plai­ned to Ta­nen­baum in 1992, his lea­dership is pre­di­ca­ted on his ser­ving that con­sti­tu­en­cy and earning their re­spect.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-7-97">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-7-97-1-p0">But the in­te­res­ting knock-on ef­fect of all this was that as busi­ness en­t­e­red the GNU/Linux arena and star­ted to chan­ge it dra­ma­ti­cal­ly, what had begun as a pure ha­cker mo­ve­ment, born from the crea­ti­on of a new way of wri­ting and dis­tri­bu­ting free soft­ware, was in its turn star­ting to chan­ge the very basis of how those busi­nes­ses nee­ded to ope­ra­te.</span>
+        
+        <span class="book-sentence" id="s-7-97-2-p0">In­cre­a­sing com­mer­cia­liza­t­i­on meant that the world of GNU/Linux would never be the same again, but neit­her would com­mer­ce.</span>
+        
+      </p>
+    </section>
+  </article>
+  <nav class="chapter-nav book-chapter-nav">
+    <a class="nav-btn prev" href="06-5-patching-up.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="08-7-linus-2-0.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
+</main>
+  <script src="../../../assets/reader.js" defer></script>
+</body>
+</html>

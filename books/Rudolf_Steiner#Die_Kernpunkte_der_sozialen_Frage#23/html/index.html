@@ -1,95 +1,28 @@
 <!DOCTYPE html>
-<html lang="de" data-theme="default" data-para="margin" data-width="normal">
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VORREDE UND EINLEITUNG ZUM 41. BIS 80. TAUSEND DIESER SCHRIFT</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <script>
-    (function(){
-      try {
-        var d = document.documentElement;
-        var theme = localStorage.getItem("readerTheme") || d.getAttribute("data-theme") || "default";
-        var para = localStorage.getItem("readerPara") || d.getAttribute("data-para") || "margin";
-        var width = localStorage.getItem("readerWidth") || d.getAttribute("data-width") || "normal";
-        var size = localStorage.getItem("readerSize") || d.getAttribute("data-size") || "base";
-        d.setAttribute("data-theme", theme);
-        d.setAttribute("data-para", para);
-        d.setAttribute("data-width", width);
-        if (size && size !== "base") d.setAttribute("data-size", size); else d.removeAttribute("data-size");
-      } catch(e) {}
-    })();
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="../../assets/book.css" />
 </head>
-<body>
-<main>
-  <button id="themeToggle" class="theme-toggle" aria-label="Theme umschalten" title="Theme umschalten" style="position:fixed;top:8px;right:8px;z-index:9999;background:rgba(0,0,0,0.03);backdrop-filter:saturate(120%) blur(2px);border:1px solid rgba(127,127,127,.35);color:inherit;border-radius:9999px;padding:6px 10px;font:inherit;line-height:1;cursor:pointer;">🌙</button>
-  <button id="sizeToggle" class="size-toggle" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten" style="position:fixed;top:8px;right:48px;z-index:9999;background:rgba(0,0,0,0.03);backdrop-filter:saturate(120%) blur(2px);border:1px solid rgba(127,127,127,.35);color:inherit;border-radius:9999px;padding:6px 10px;font:inherit;line-height:1;cursor:pointer;">A</button>
-  <h1>VORREDE UND EINLEITUNG ZUM 41. BIS 80. TAUSEND DIESER SCHRIFT</h1>
-  <nav class="toc">
-    <ul>
-      <li><a href="chapters/01-vorrede-und-einleitung-zum-41-bis-80-tausend-dieser-schrift.html">VORREDE UND EINLEITUNG ZUM 41. BIS 80. TAUSEND DIESER SCHRIFT</a></li>
-      <li><a href="chapters/02-vorbemerkungen-uber-die-absicht-dieser-schrift.html">VORBEMERKUNGEN ÜBER DIE ABSICHT DIESER SCHRIFT</a></li>
-      <li><a href="chapters/03-i-die-wahre-gestalt-der-sozialen-frage-erfasst-aus-dem-leben-der-modernen-menschheit.html">I. DIE WAHRE GESTALT DER SOZIALEN FRAGE, ERFASST AUS DEM LEBEN DER MODERNEN MENSCHHEIT</a></li>
-      <li><a href="chapters/04-ii-die-vom-leben-geforderten-wirklichkeitsgemassen-losungsversuche-fur-die-sozialen-fragen-und-notwendigkeiten.html">II. DIE VOM LEBEN GEFORDERTEN WIRKLICHKEITSGEMÄSSEN LÖSUNGSVERSUCHE FÜR DIE SOZIALEN FRAGEN UND NOTWENDIGKEITEN</a></li>
-      <li><a href="chapters/05-iii-kapitalismus-und-soziale-ideen-kapital-menschenarbeit.html">III. KAPITALISMUS UND SOZIALE IDEEN (Kapital, Menschenarbeit)</a></li>
-      <li><a href="chapters/06-iv-internationale-beziehungen-der-sozialen-organismen.html">IV. INTERNATIONALE BEZIEHUNGEN DER SOZIALEN ORGANISMEN</a></li>
-      <li><a href="chapters/07-v-anhang-i-an-das-deutsche-volk-und-an-die-kulturwelt-i.html">V. ANHANG &lt;i&gt;An das deutsche Volk und an die Kulturwelt&lt;/i&gt;!</a></li>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <h1 class="book-title">VORREDE UND EINLEITUNG ZUM 41. BIS 80. TAUSEND DIESER SCHRIFT</h1>
+  <nav class="toc book-toc">
+    <ul class="book-toc-list">
+      <li class="book-toc-item"><a class="book-toc-link" href="chapters/01-vorrede-und-einleitung-zum-41-bis-80-tausend-dieser-schrift.html">VORREDE UND EINLEITUNG ZUM 41. BIS 80. TAUSEND DIESER SCHRIFT</a></li>
+      <li class="book-toc-item"><a class="book-toc-link" href="chapters/02-vorbemerkungen-uber-die-absicht-dieser-schrift.html">VORBEMERKUNGEN ÜBER DIE ABSICHT DIESER SCHRIFT</a></li>
+      <li class="book-toc-item"><a class="book-toc-link" href="chapters/03-i-die-wahre-gestalt-der-sozialen-frage-erfasst-aus-dem-leben-der-modernen-menschheit.html">I. DIE WAHRE GESTALT DER SOZIALEN FRAGE, ERFASST AUS DEM LEBEN DER MODERNEN MENSCHHEIT</a></li>
+      <li class="book-toc-item"><a class="book-toc-link" href="chapters/04-ii-die-vom-leben-geforderten-wirklichkeitsgemassen-losungsversuche-fur-die-sozialen-fragen-und-notwendigkeiten.html">II. DIE VOM LEBEN GEFORDERTEN WIRKLICHKEITSGEMÄSSEN LÖSUNGSVERSUCHE FÜR DIE SOZIALEN FRAGEN UND NOTWENDIGKEITEN</a></li>
+      <li class="book-toc-item"><a class="book-toc-link" href="chapters/05-iii-kapitalismus-und-soziale-ideen-kapital-menschenarbeit.html">III. KAPITALISMUS UND SOZIALE IDEEN (Kapital, Menschenarbeit)</a></li>
+      <li class="book-toc-item"><a class="book-toc-link" href="chapters/06-iv-internationale-beziehungen-der-sozialen-organismen.html">IV. INTERNATIONALE BEZIEHUNGEN DER SOZIALEN ORGANISMEN</a></li>
+      <li class="book-toc-item"><a class="book-toc-link" href="chapters/07-v-anhang-i-an-das-deutsche-volk-und-an-die-kulturwelt-i.html">V. ANHANG &lt;i&gt;An das deutsche Volk und an die Kulturwelt&lt;/i&gt;!</a></li>
     </ul>
   </nav>
 </main>
-<script>
-(function(){
-  var d = document.documentElement;
-  var themeBtn = document.getElementById("themeToggle");
-  var sizeBtn = document.getElementById("sizeToggle");
-  function getTheme(){ return d.getAttribute("data-theme") || "default"; }
-  function setTheme(t){
-    d.setAttribute("data-theme", t);
-    try { localStorage.setItem("readerTheme", t); } catch(e) {}
-    updateTheme();
-  }
-  function getSize(){ return d.getAttribute("data-size") || "base"; }
-  function setSize(s){
-    if (s === "base") d.removeAttribute("data-size"); else d.setAttribute("data-size", s);
-    try { localStorage.setItem("readerSize", s); } catch(e) {}
-    updateSize();
-  }
-  function updateTheme(){
-    if (!themeBtn) return;
-    var t = getTheme();
-    themeBtn.textContent = (t === "default") ? "🌙" : "☀️";
-    themeBtn.setAttribute("aria-pressed", String(t === "dark"));
-  }
-  function updateSize(){
-    if (!sizeBtn) return;
-    var s = getSize();
-    // Visual hint: A, A+, A++
-    sizeBtn.textContent = (s === "base") ? "A" : (s === "l" ? "A+" : "A++");
-    sizeBtn.setAttribute("aria-pressed", String(s !== "base"));
-  }
-  if (themeBtn) {
-    themeBtn.addEventListener("click", function(){
-      var t = getTheme();
-      setTheme(t === "dark" ? "default" : "dark");
-    });
-  }
-  if (sizeBtn) {
-    sizeBtn.addEventListener("click", function(){
-      var s = getSize();
-      var next = (s === "base") ? "l" : (s === "l" ? "xl" : "base");
-      setSize(next);
-    });
-  }
-  // Restore stored size on load
-  try {
-    var stored = localStorage.getItem("readerSize");
-    if (stored) setSize(stored); else updateSize();
-  } catch(e) { updateSize(); }
-  updateTheme();
-})();
-</script>
+  <script src="../../assets/reader.js" defer></script>
 </body>
 </html>
