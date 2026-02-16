@@ -159,9 +159,17 @@ const layoutCss = `
 }
 
 .agent-media {
-  height: 180px;
+  height: 270px;
   position: relative;
-  background: linear-gradient(180deg, #eef2ff 0%, #e5e7eb 100%);
+  background: linear-gradient(180deg, #bae6fd 0%, #0e7490 100%);
+}
+
+.agent-card--philo-von-freisinn .agent-media {
+  background: linear-gradient(180deg, #dbeafe 0%, #2563eb 100%);
+}
+
+.agent-card--sigrid-von-gleich .agent-media {
+  background: linear-gradient(180deg, #cffafe 0%, #0d9488 100%);
 }
 
 .agent-media img {
@@ -194,7 +202,7 @@ const layoutCss = `
 }
 
 .agent-body {
-  padding: 14px;
+  padding: 21px;
 }
 
 .agent-meta {
@@ -340,6 +348,31 @@ const layoutCss = `
   line-height: 1.5;
 }
 
+.concept-refs {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 0.9em;
+}
+
+.concept-refs::before {
+  content: "Referenzen: ";
+  color: var(--muted);
+  font-size: 0.85em;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.concept-ref {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.concept-ref:hover {
+  color: #3730a3;
+}
+
 .concepts-accordions .toc-arrow {
   display: inline-block;
   width: 1.2ch;
@@ -426,6 +459,9 @@ const bookCss = `
 :root {
   --book-bg: #ffffff;
   --book-fg: #0b1220;
+  --book-quote: #3015b4;
+  --book-italics: #9b0909;
+  --book-p-num: #666666;
   --book-muted: rgba(11, 18, 32, 0.72);
   --book-border: rgba(127, 127, 127, 0.24);
   --book-focus: rgba(120, 170, 255, 0.55);
@@ -469,6 +505,16 @@ body.book-body { margin: 0; }
 .book-paragraph { margin: 0 0 1.05rem; }
 .book-paragraph-text { margin: 0; }
 .book-sentence { display: inline; }
+
+q { color: var(--book-quote); }
+i, em { color: var(--book-italics); font-style: italic; }
+
+.p-num {
+  color: var(--book-p-num);
+  text-decoration: none;
+  padding-right: 0.5ch;
+  font-size: 0.7em;
+}
 
 .reader-toggle {
   position: fixed;
@@ -634,6 +680,9 @@ nav.toc details[open] .toc-arrow-closed { display: none !important; }
 html[data-theme="dark"] {
   --book-bg: #0f1117;
   --book-fg: #e9ecf3;
+  --book-quote: #76b2f7;
+  --book-italics: #fec8d2;
+  --book-p-num: #909090;
   --book-muted: rgba(233, 236, 243, 0.72);
   --book-border: rgba(233, 236, 243, 0.3);
   --reader-control-bg: rgba(255, 255, 255, 0.06);

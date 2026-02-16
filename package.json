@@ -22,12 +22,13 @@
     "dev": "npm run build:pages && npm run serve"
   },
   "devDependencies": {
-    "tsx": "latest",
-    "typescript": "latest",
+    "@types/js-yaml": "latest",
     "@types/node": "latest",
-    "@types/js-yaml": "latest"
+    "tsx": "latest",
+    "typescript": "latest"
   },
   "dependencies": {
-    "js-yaml": "latest"
+    "js-yaml": "latest",
+    "pg": "^8.18.0"
   }
 }

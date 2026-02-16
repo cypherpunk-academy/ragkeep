@@ -31,9 +31,17 @@
 }
 
 .agent-media {
-  height: 180px;
+  height: 270px;
   position: relative;
-  background: linear-gradient(180deg, #eef2ff 0%, #e5e7eb 100%);
+  background: linear-gradient(180deg, #bae6fd 0%, #0e7490 100%);
+}
+
+.agent-card--philo-von-freisinn .agent-media {
+  background: linear-gradient(180deg, #dbeafe 0%, #2563eb 100%);
+}
+
+.agent-card--sigrid-von-gleich .agent-media {
+  background: linear-gradient(180deg, #cffafe 0%, #0d9488 100%);
 }
 
 .agent-media img {
@@ -66,7 +74,7 @@
 }
 
 .agent-body {
-  padding: 14px;
+  padding: 21px;
 }
 
 .agent-meta {
@@ -210,6 +218,31 @@
   font-weight: 300;
   font-size: 0.95em;
   line-height: 1.5;
+}
+
+.concept-refs {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 0.9em;
+}
+
+.concept-refs::before {
+  content: "Referenzen: ";
+  color: var(--muted);
+  font-size: 0.85em;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.concept-ref {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.concept-ref:hover {
+  color: #3730a3;
 }
 
 .concepts-accordions .toc-arrow {

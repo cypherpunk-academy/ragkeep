@@ -8,6 +8,7 @@ import {
   collectReferencedBookIds,
   copyBookHtmlToSite,
 } from "./static-site/books";
+import { buildChunkIndex } from "./static-site/chunkLookup";
 import {
   collectConcepts,
   type ConceptEntry,
@@ -42,7 +43,7 @@ function writeMetaFiles(outputDir: string): void {
   writeTextFile(path.join(outputDir, "robots.txt"), "User-agent: *\nAllow: /\n");
 }
 
-function main(): void {
+async function main(): Promise<void> {
   cleanSiteOutput(OUTPUT_DIR);
   writeSiteAssets(OUTPUT_DIR);
   writeMetaFiles(OUTPUT_DIR);
@@ -68,14 +69,43 @@ function main(): void {
   }
 
   const conceptsByAgent = new Map<string, Map<string, ConceptEntry[]>>();
+  const chunkIdsByCollection = new Map<string, Set<string>>();
   for (const agent of assistants) {
     if (agent.concepts.length > 0) {
-      conceptsByAgent.set(agent.id, collectConcepts(REPO_ROOT, agent));
+      const concepts = collectConcepts(REPO_ROOT, agent);
+      conceptsByAgent.set(agent.id, concepts);
+      let collSet = chunkIdsByCollection.get(agent.ragCollection);
+      if (!collSet) {
+        collSet = new Set<string>();
+        chunkIdsByCollection.set(agent.ragCollection, collSet);
+      }
+      for (const fileConcepts of concepts.values()) {
+        for (const entry of fileConcepts) {
+          if (entry.references) {
+            for (const ref of entry.references) {
+              collSet.add(ref.chunk_id);
+            }
+          }
+        }
+      }
     }
   }
 
+  const chunkIndex = await buildChunkIndex(
+    chunkIdsByCollection,
+    REPO_ROOT,
+    booksById
+  );
+
   generateHomePage(OUTPUT_DIR, assistants);
-  generateAgentPages(OUTPUT_DIR, assistants, booksById, essaysByAgent, conceptsByAgent);
+  generateAgentPages(
+    OUTPUT_DIR,
+    assistants,
+    booksById,
+    essaysByAgent,
+    conceptsByAgent,
+    chunkIndex
+  );
   generateEssayPages(OUTPUT_DIR, assistants, essaysByAgent);
 
   // eslint-disable-next-line no-console
@@ -84,4 +114,8 @@ function main(): void {
   );
 }
 
-main();
+main().catch((err) => {
+  // eslint-disable-next-line no-console
+  console.error(err);
+  process.exit(1);
+});

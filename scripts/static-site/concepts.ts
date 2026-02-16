@@ -3,15 +3,25 @@ import path from "node:path";
 import type { Agent } from "./types";
 import { fileExists } from "./utils";
 
+export interface ConceptReference {
+  chunk_id: string;
+  description: string;
+  relevance: number;
+}
+
 export interface ConceptEntry {
   segmentTitle: string;
   text: string;
+  references?: ConceptReference[];
 }
 
 interface JsonlLine {
   text?: string;
   segment_title?: string;
-  metadata?: { segment_title?: string };
+  metadata?: {
+    segment_title?: string;
+    references?: Array<{ chunk_id: string; description: string; relevance: number }>;
+  };
 }
 
 export function parseConceptsJsonl(filePath: string): ConceptEntry[] {
@@ -28,8 +38,22 @@ export function parseConceptsJsonl(filePath: string): ConceptEntry[] {
           String(
             obj.metadata?.segment_title ?? obj.segment_title ?? ""
           ).trim() || "(Ohne Titel)";
+        const rawRefs = obj.metadata?.references ?? [];
+        const references = rawRefs
+          .filter(
+            (r): r is { chunk_id: string; description: string; relevance: number } =>
+              r != null &&
+              typeof (r as { chunk_id?: unknown }).chunk_id === "string" &&
+              typeof (r as { description?: unknown }).description === "string" &&
+              typeof (r as { relevance?: unknown }).relevance === "number"
+          )
+          .map((r) => ({ chunk_id: r.chunk_id, description: r.description, relevance: r.relevance }));
         if (text) {
-          entries.push({ segmentTitle, text });
+          entries.push({
+            segmentTitle,
+            text,
+            ...(references.length > 0 && { references }),
+          });
         }
       } catch {
         // skip malformed lines

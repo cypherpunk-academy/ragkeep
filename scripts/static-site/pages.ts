@@ -1,6 +1,7 @@
 import path from "node:path";
 import type { Agent, Book, Conversation } from "./types";
 import type { ConceptEntry } from "./concepts";
+import type { ChunkInfo } from "./chunkLookup";
 import { getConceptFileLabel } from "./concepts";
 import type { EssayData } from "./essays";
 import {
@@ -85,7 +86,7 @@ function renderAgentCard(agent: Agent): string {
     ? `<img src="${escapeHtml(imgUrl)}" alt="${name}" loading="lazy" />`
     : `<div class="agent-avatar-placeholder" aria-hidden="true"></div>`;
 
-  return `<a class="agent-card site-card" href="${target}" aria-label="${name} öffnen">
+  return `<a class="agent-card agent-card--${escapeHtml(agent.id)} site-card" href="${target}" aria-label="${name} öffnen" data-agent-id="${escapeHtml(agent.id)}">
     <div class="agent-media">
       ${imgHtml}
       <div class="agent-overlay">
@@ -200,7 +201,9 @@ function renderQuotes(quotes: string[]): string {
 
 function renderConceptsRows(
   agent: Agent,
-  conceptsByFile: Map<string, ConceptEntry[]>
+  conceptsByFile: Map<string, ConceptEntry[]>,
+  chunkIndex: Map<string, ChunkInfo>,
+  agentBookIds: Set<string>
 ): string {
   const files = Array.from(conceptsByFile.keys());
   if (files.length === 0) return `<p class="empty-state">Keine Begriffe verfügbar.</p>`;
@@ -223,6 +226,37 @@ function renderConceptsRows(
           : "(Ohne Titel)";
         const titleHtml = renderInlineWithEmphasis(title);
         const textHtml = renderSummaryHtml(entry.text);
+        let refsHtml = "";
+        if (entry.references && entry.references.length > 0) {
+          const refLines: string[] = [];
+          for (const ref of entry.references) {
+            const chunk = chunkIndex.get(ref.chunk_id);
+            if (!chunk) continue;
+            if (chunk.source_type !== "book" && chunk.source_type !== "secondary_book") continue;
+            if (!agentBookIds.has(chunk.bookDir)) continue;
+            const href =
+              chunk.chapterFileName && chunk.paragraphTag
+                ? `../../books/${encodeURIComponent(chunk.bookDir)}/chapters/${encodeURIComponent(chunk.chapterFileName)}#${chunk.paragraphTag}`
+                : chunk.chapterFileName
+                  ? `../../books/${encodeURIComponent(chunk.bookDir)}/chapters/${encodeURIComponent(chunk.chapterFileName)}`
+                  : `../../books/${encodeURIComponent(chunk.bookDir)}/index.html`;
+            const label = `${escapeHtml(chunk.author)} – ${escapeHtml(chunk.source_title)}`;
+            const excerpt = chunk.text.length > 200 ? `${chunk.text.slice(0, 200)}…` : chunk.text;
+            const hoverParts = [
+              chunk.author,
+              chunk.source_title,
+              chunk.segment_title || "(Kapitel)",
+              excerpt,
+            ].filter(Boolean);
+            const titleAttr = escapeHtml(hoverParts.join(" · "));
+            refLines.push(
+              `<a href="${href}" class="concept-ref" title="${titleAttr}">${label}</a>`
+            );
+          }
+          if (refLines.length > 0) {
+            refsHtml = `<div class="concept-refs">${refLines.join(" · ")}</div>`;
+          }
+        }
         return `<details class="toc-details concept-accordion-item">
     <summary class="toc-summary-line">
       <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
@@ -231,6 +265,7 @@ function renderConceptsRows(
     </summary>
     <div class="toc-panel">
       <div class="toc-excerpt">${textHtml}</div>
+      ${refsHtml}
     </div>
   </details>`;
       })
@@ -292,7 +327,8 @@ function renderSectionContent(
   agent: Agent,
   availableBooks: Map<string, Book>,
   essaysByAgent: Map<string, Map<string, EssayData>>,
-  conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>
+  conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>,
+  conceptsChunkIndex: Map<string, ChunkInfo>
 ): string {
   if (section === "overview") {
     return `<div class="stack-24">
@@ -327,9 +363,16 @@ function renderSectionContent(
   }
   if (section === "concepts") {
     const conceptsData = conceptsByAgent.get(agent.id) ?? new Map();
+    const chunkIndex = conceptsChunkIndex ?? new Map();
+    const agentBookIds = new Set([
+      ...agent.primaryBooks,
+      ...agent.secondaryBooks,
+    ]);
     return `<div class="stack-8"><h3>${SECTION_META.concepts.heading}</h3>${renderConceptsRows(
       agent,
-      conceptsData
+      conceptsData,
+      chunkIndex,
+      agentBookIds
     )}</div>`;
   }
   if (section === "quotes") {
@@ -362,6 +405,7 @@ function renderAgentPage(
   availableBooks: Map<string, Book>,
   essaysByAgent: Map<string, Map<string, EssayData>>,
   conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>,
+  conceptsChunkIndex: Map<string, ChunkInfo>,
   section: AgentSection
 ): void {
   const sectionMeta = SECTION_META[section];
@@ -387,7 +431,14 @@ function renderAgentPage(
       </header>
       ${renderTabRow(section)}
       <main class="site-card content-card">
-        ${renderSectionContent(section, agent, availableBooks, essaysByAgent, conceptsByAgent)}
+        ${renderSectionContent(
+          section,
+          agent,
+          availableBooks,
+          essaysByAgent,
+          conceptsByAgent,
+          conceptsChunkIndex
+        )}
       </main>
     </div>`
   );
@@ -399,7 +450,8 @@ export function generateAgentPages(
   agents: Agent[],
   availableBooks: Map<string, Book>,
   essaysByAgent: Map<string, Map<string, EssayData>>,
-  conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>
+  conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>,
+  conceptsChunkIndex: Map<string, ChunkInfo>
 ): void {
   const sections = Object.keys(SECTION_META) as AgentSection[];
   for (const agent of agents) {
@@ -410,6 +462,7 @@ export function generateAgentPages(
         availableBooks,
         essaysByAgent,
         conceptsByAgent,
+        conceptsChunkIndex,
         section
       );
     }
