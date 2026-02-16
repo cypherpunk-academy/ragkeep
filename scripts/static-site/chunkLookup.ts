@@ -1,7 +1,7 @@
 /**
  * Chunk-Lookup-Service: Lädt Chunk-Metadaten aus Postgres (rag_chunks)
- * für Begriffs-Referenzen. Bei fehlender DATABASE_URL oder Verbindungsfehler:
- * Build wird abgebrochen.
+ * für Begriffs-Referenzen. Bei fehlender DSN oder Verbindungsfehler:
+ * Graceful Degradation – leeres Map, Begriffe ohne Quell-Links.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -100,8 +100,7 @@ interface RawChunkInfo {
 
 /**
  * Lädt Chunks aus Postgres und baut den Index.
- * Erfordert DATABASE_URL oder POSTGRES_URL.
- * Bei Fehlern: process.exit(1).
+ * Bei fehlender DSN oder Verbindungsfehler: leeres Map (Graceful Degradation).
  */
 export async function buildChunkIndex(
   chunkIdsByCollection: Map<string, Set<string>>,
@@ -114,10 +113,10 @@ export async function buildChunkIndex(
     process.env.POSTGRES_URL;
   if (!dbUrl || String(dbUrl).trim() === "") {
     // eslint-disable-next-line no-console
-    console.error(
-      "Fehler: RAGRUN_POSTGRES_DSN (oder DATABASE_URL/POSTGRES_URL) muss gesetzt sein für den Chunk-Lookup (Begriffs-Referenzen)."
+    console.warn(
+      "Hinweis: RAGRUN_POSTGRES_DSN nicht gesetzt – Begriffs-Referenzen werden ohne Quell-Links gerendert."
     );
-    process.exit(1);
+    return new Map();
   }
 
   const seen = new Set<string>();
@@ -143,11 +142,12 @@ export async function buildChunkIndex(
     await client.connect();
   } catch (err) {
     // eslint-disable-next-line no-console
-    console.error(
-      "Fehler: Konnte keine Verbindung zur Datenbank herstellen:",
+    console.warn(
+      "Hinweis: Keine DB-Verbindung – Begriffs-Referenzen ohne Quell-Links:",
       err instanceof Error ? err.message : String(err)
     );
-    process.exit(1);
+    await client.end();
+    return new Map();
   }
 
   try {
