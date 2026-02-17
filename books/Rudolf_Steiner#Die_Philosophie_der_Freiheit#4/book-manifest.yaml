@@ -8,6 +8,8 @@ first-author-page: 7
 last-author-page: 271
 quotation-mark-open: «
 quotation-mark-close: »
+internal-page-references:
+external-page-references:
 chunks: 331
 multi-paragraph-chunks: 116
 single-paragraph-chunks: 73
