@@ -46,7 +46,6 @@ lectures:
     jahr: "1893"
     ort: Weimar
     vortragstitel: Hypnotismus mit Berücksichtigung des Spiritismus
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 18930827
     datum: 27.08.1893
@@ -61,7 +60,6 @@ lectures:
     ort: Weimar
     vortragstitel: Genie, Irrsinn und Verbrechertum
     anlass: populär-wissenschaftlicher Vortrag, veranstaltet vom "Volksbildungsverein"
-    abdruck: Zuordnung noch offen
     ga: 85
   - id: 18940504
     datum: 04.05.1894
@@ -69,14 +67,12 @@ lectures:
     ort: Weimar
     vortragstitel: Rede für Richard Strauss
     anlass: Feier nach der Uraufführung der Oper "Guntram"
-    abdruck: Zuordnung noch offen
   - id: 18950401
     datum: 01.04.1895
     jahr: "1895"
     ort: Weimar
     vortragstitel: ""
     anlass: Inoffizelle Ansprache bei einer Bismarckfeier
-    abdruck: Zuordnung noch offen
     ga: 85
   - id: 18971209
     datum: 09.12.1897
@@ -153,7 +149,6 @@ lectures:
     jahr: "1898"
     ort: Berlin
     vortragstitel: Votum Rudolf Steiners anlässlich Theaterskandal bei der Erstaufführung von Halbes «Eroberer»
-    abdruck: Zuordnung noch offen
   - id: 18981212
     datum: 12.12.1898
     jahr: "1898"
@@ -181,7 +176,6 @@ lectures:
     ort: Berlin
     vortragstitel: Faust, eine Lebensbeichte
     anlass: Vortrag für den «Verein zur Förderung der Kunst»
-    abdruck: Zuordnung noch offen
   - id: 18991003
     datum: 03.10.1899
     jahr: "1899"
@@ -236,7 +230,6 @@ lectures:
     ort: Berlin
     vortragstitel: Methoden, das Gesetz von der Erhaltung der Kraft im Hochschulunterricht zu behandeln
     anlass: Vortrag für den «Verband für Hochschulpädagogik».
-    abdruck: Zuordnung noch offen
     ga: 85
   - id: 19000617
     datum: 17.06.1900
@@ -609,6 +602,20 @@ lectures:
     vortragstitel: Monismus und Theosophie
     anlass: Diskussion im Giordano Bruno-Bund für einheitliche Weltanschauung über den am 8. Okt. gehaltenen Vortrag
     ga: 51
+  - id: 19021018
+    datum: 18.10.1902
+    jahr: "1902"
+    ort: Berlin
+    vortragstitel: Die Bildung der deutschen Sektion der Theosophischen Gesellschaft
+    anlass: Bericht von Richard Bresch
+    ga: 250
+  - id: 19021019
+    datum: 18.10.1902
+    jahr: "1902"
+    ort: Berlin
+    vortragstitel: Die Bildung der deutschen Sektion der Theosophischen Gesellschaft
+    anlass: Bericht von Richard Bresch
+    ga: 250
   - id: 19030101a
     datum: 1903 Sommer
     jahr: "1903"
@@ -643,7 +650,7 @@ lectures:
     ort: Berlin
     vortragstitel: ""
     anlass: Esoterische Stunde
-    ga: 266/1, GA 267
+    ga: 266/1
   - id: 19030415
     datum: 15.04.1903
     jahr: "1903"
@@ -668,14 +675,13 @@ lectures:
     ort: London
     vortragstitel: Der Zusammenhang des allgemeinen Geisteslebens mit der Theosophie und die Aussichten derselben in der Zukunft der deutschen Kultur
     anlass: Erste Versammlung der Föderation der Europäischen Sektionen der Theosophischen Gesellschaft
-    abdruck: Zuordnung noch offen
+    ga: 250
   - id: 19030720
     datum: 20.07.1903
     jahr: "1903"
     ort: Berlin
     vortragstitel: ""
     anlass: Sommer-Sonnwend-Feier des Giordano Bruno-Bundes bei den Humboldt Gräbern
-    abdruck: Zuordnung noch offen
   - id: 19030802
     datum: 02.08.1903
     jahr: "1903"
@@ -747,7 +753,6 @@ lectures:
     ort: Berlin
     vortragstitel: Wann und auf welche Weise findet die Vereinigung des Egos, des eigentlichen menschlichen Selbtes, mit seinen verschiedenen Körpern statt.
     anlass: bei Klara Motzkus (nicht verbürgt)
-    abdruck: Zuordnung noch offen
   - id: 19030918
     datum: 18.09.1903
     jahr: "1903"
@@ -810,21 +815,20 @@ lectures:
     ort: Berlin
     vortragstitel: Okkulte Geschichtsforschung, mit besonderer Rücksicht auf die Gegenwart
     anlass: Erste Generalversammlung der Deutschen Sektion der Theosophischen Gesellschaft
-    ga: 34,88
+    ga: 34,88,244
   - id: 19031018b
     datum: 18.10.1903
     jahr: "1903"
     ort: Berlin
     vortragstitel: ""
     anlass: Vorstandssitzung
-    abdruck: Zuordnung noch offen
-  - id: 19031018c
-    datum: 18.10.1903
+    ga: 250
+  - id: 19031019
+    datum: 19.10.1903
     jahr: "1903"
-    ort: Berlin
-    vortragstitel: ""
-    anlass: Erste Generalversammlung der deutschen Sektion der Theosophischen Gesellschaft
-    ga: 34,88
+    ort: Berlin-Wilmersdorf
+    vortragstitel: Protokoll der Generalversammlung der Deutschen Sektion der Theosophischen Gesellschaft
+    ga: 250
   - id: 19031020
     datum: 20.10.1903
     jahr: "1903"
@@ -843,7 +847,6 @@ lectures:
     ort: Berlin
     vortragstitel: ""
     anlass: Generalversammlung des Berliner Zweiges
-    abdruck: Zuordnung noch offen
   - id: 19031027
     datum: 27.10.1903
     jahr: "1903"
@@ -942,7 +945,7 @@ lectures:
     jahr: "1903"
     ort: Weimar
     vortragstitel: Die Pilgerfahrt der Seele
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19031124
     datum: 24.11.1903
     jahr: "1903"
@@ -1001,7 +1004,7 @@ lectures:
     jahr: "1903"
     ort: Weimar
     vortragstitel: Weltgesetz und Menschenschicksal – eine Weihnachtsbetrachtung
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19031215
     datum: 15.12.1903
     jahr: "1903"
@@ -1180,7 +1183,7 @@ lectures:
     jahr: "1904"
     ort: Weimar
     vortragstitel: Theosophie und Buddhismus
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19040303
     datum: 03.03.1904
     jahr: "1904"
@@ -1235,17 +1238,22 @@ lectures:
     vortragstitel: Seele und Menschenschicksal Was sind Lust und Leid? Was ist Schicksal? Hat der Mensch sein Schicksal verdient? Optimismus und Pessimismus. Genie und Irrsinn
     reihe: Theosophische Seelenlehre
     ga: 52
+  - id: 19040325
+    datum: 25.03.1904
+    jahr: "1904"
+    ort: Weimar
+    vortragstitel: Theosophie in den Evangelien - EINE OSTERBETRACHTUNG
+    ga: 68a
   - id: 19040326
     datum: 26.03.1904
     jahr: "1904"
     ort: Weimar
     vortragstitel: Theosophie in den Evangelien, eine theosophische Osterbetrachtung
-    abdruck: Zuordnung noch offen
   - id: 19040328
     datum: 28.03.1904
     jahr: "1904"
     ort: Berlin
-    vortragstitel: Geburt und Tod im Leben der Seele 
+    vortragstitel: Geburt und Tod im Leben der Seele
     ga: 68b
   - id: 19040329
     datum: 29.03.1904
@@ -1307,14 +1315,13 @@ lectures:
     jahr: "1904"
     ort: Berlin
     vortragstitel: Rede zum Weißen Lotustag
-    anlass: Gedächtnisabend zum Andenken H. P. Blavatskys ?
-    abdruck: Zuordnung noch offen
+    anlass: Gedächtnisabend zum Andenken H. P. Blavatskys
+    ga: 246
   - id: 19040516
     datum: 16.05.1904
     jahr: "1904"
     ort: Hannover
     vortragstitel: Geburt und Tod im Leben der Seele, ein Blick in die theosophische Weltanschauung
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19040521
     datum: 21.05.1904
@@ -1433,7 +1440,6 @@ lectures:
     jahr: "1904"
     ort: Berlin
     vortragstitel: Kain und Abel (Fortsetzung vom 10. April)
-    abdruck: Zuordnung noch offen
   - id: 19040626
     datum: 26.06.1904
     jahr: "1904"
@@ -1501,7 +1507,7 @@ lectures:
     jahr: "1904"
     ort: Berlin
     vortragstitel: Bericht über den Amsterdamer Kongress
-    abdruck: Zuordnung noch offen
+    ga: 250
   - id: 19040704b
     datum: 04.07.1904
     jahr: "1904"
@@ -1610,7 +1616,7 @@ lectures:
     jahr: "1904"
     ort: Berlin
     vortragstitel: Das Verhältnis der germanischen Völker zum Christentum
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19040802
     datum: 02.08.1904(?)
     jahr: "1904"
@@ -1776,14 +1782,19 @@ lectures:
     ort: Berlin
     vortragstitel: Theosophie, Wissenschaft und Religion. Theosophie und Theosophische Gesellschaft
     anlass: Mitglieder-Zusammenkunft mit Diskussion
-    abdruck: Zuordnung noch offen
   - id: 19040923
     datum: 23.09.1904
     jahr: "1904"
     ort: Köln
     vortragstitel: Die neue Psychologie
     anlass: Wiedergabe des öffentlichen Vortrages von Mrs. Besant in deutscher Sprache
-    abdruck: Zuordnung noch offen
+  - id: 19040925
+    datum: 25.09.1904
+    jahr: "1904"
+    ort: Dresden
+    vortragstitel: Theosophie und moderne Wissenschaft
+    anlass: Öffentlicher Vortrag im Rahmen der Jahresversammlung der Deutschen Theosophischen Gesellschaft
+    ga: 250
   - id: 19040927
     datum: 27.09.1904
     jahr: "1904"
@@ -1850,7 +1861,6 @@ lectures:
     jahr: "1904"
     ort: Berlin
     vortragstitel: Über Mythen
-    abdruck: Zuordnung noch offen
   - id: 19041014
     datum: 14.10.1904
     jahr: "1904"
@@ -1913,7 +1923,6 @@ lectures:
     jahr: "1904"
     ort: Berlin
     vortragstitel: Jahresversammlung des Berliner Zweiges der DTG
-    abdruck: Zuordnung noch offen
   - id: 19041024
     datum: 24.10.1904
     jahr: "1904"
@@ -1970,7 +1979,7 @@ lectures:
     ort: Berlin
     vortragstitel: ""
     anlass: Zweite Generalversammlung der Deutschen Sektion der Theosophischen Gesellschaft. Begrüßung und Bericht
-    ga: 34
+    ga: 34,250
   - id: 19041030b
     datum: 30.10.1904
     jahr: "1904"
@@ -2169,7 +2178,7 @@ lectures:
     jahr: "1904"
     ort: Köln
     vortragstitel: "Die christliche Mystik. Die Meister von Köln: Eckhart, Albertus Magnus"
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19041201
     datum: 01.12.1904
     jahr: "1904"
@@ -2265,7 +2274,7 @@ lectures:
     ort: Berlin
     vortragstitel: ""
     anlass: Esoterische Stunde
-    ga: 266/3, GA 268
+    ga: 266/3
   - id: 19041223
     datum: 23.12.1904
     jahr: "1904"
@@ -2440,7 +2449,12 @@ lectures:
     ort: Berlin
     vortragstitel: ""
     anlass: Vorbesprechung zur außerordentlichen Generalversammlung des Berliner Zweiges der Theosophischen Gesellschaft. Besant Zweig
-    abdruck: Zuordnung noch offen
+  - id: 19050123
+    datum: 23.01.1905
+    jahr: "1905"
+    ort: Hamburg
+    vortragstitel: Über das Wesen des Christentums
+    ga: 68a
   - id: 19050126
     datum: 26.01.1905
     jahr: "1905"
@@ -2483,7 +2497,6 @@ lectures:
     ort: Berlin
     vortragstitel: ""
     anlass: Ausserordentliche Generalversammlung des Berliner Zweiges mit Vortrag von Johanna Mücke
-    abdruck: Zuordnung noch offen
   - id: 19050206
     datum: 06.02.1905
     jahr: "1905"
@@ -2713,6 +2726,12 @@ lectures:
     vortragstitel: Die Wochentage. Sibyllenweisheit.
     anlass: Zweig-Vortrag und fragen Beantwortung
     ga: 90b
+  - id: 19050417
+    datum: 17.04.1905
+    jahr: "1905"
+    ort: Heidelberg
+    vortragstitel: Die Weisheitslehren des Christentums
+    ga: 68a
   - id: 19050421
     datum: 21.04.1905
     jahr: "1905"
@@ -2720,6 +2739,12 @@ lectures:
     vortragstitel: Ostern und die Theosophie
     anlass: Mitglieder-Vortrag
     ga: 90b
+  - id: 19050425
+    datum: 25.04.1905
+    jahr: "1905"
+    ort: Köln
+    vortragstitel: Der Mensch und seine Wesenheiten (Die leibliche, seelische und Geistige Wesenheit des Menschen)
+    ga: 68b
   - id: 19050426
     datum: 26.04.1905
     jahr: "1905"
@@ -2734,6 +2759,12 @@ lectures:
     vortragstitel: Yoga und Unio mystica
     anlass: Mitglieder-Vortrag
     ga: 90b
+  - id: 19050427a
+    datum: 27.04.1905
+    jahr: "1905"
+    ort: Köln
+    vortragstitel: Reinkarnation und Karma (Wiederverkörperung des Geistes und Schicksal)
+    ga: 68b
   - id: 19050504
     datum: 04.05.1905
     jahr: "1905"
@@ -2931,7 +2962,6 @@ lectures:
     jahr: "1905"
     ort: London
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19050806
     datum: 06.08.1905
     jahr: "1905"
@@ -3023,7 +3053,7 @@ lectures:
     datum: 20.08.1905 (?)
     jahr: "1905"
     ort: Berlin
-    vortragstitel: Subjektiv-obkektiv; Dharma in Karma 
+    vortragstitel: Subjektiv-obkektiv; Dharma in Karma
     reihe: Miglieder-Vortrag
     ga: 90b
   - id: 19050827
@@ -3071,14 +3101,12 @@ lectures:
     jahr: "1905"
     ort: Basel
     vortragstitel: Die Überwindung des Materialismus nach neueren Gesichtspunkten
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19050915
     datum: 15.09.1905
     jahr: "1905"
     ort: Freiburg i. Br.
     vortragstitel: Die Weisheitslehren des Christentums
-    abdruck: Zuordnung noch offen
   - id: 19050926
     datum: 26.09.1905
     jahr: "1905"
@@ -3126,7 +3154,6 @@ lectures:
     jahr: "1905"
     ort: Berlin
     vortragstitel: Theosophie von Helena Petrovna Blavatzky
-    abdruck: Zuordnung noch offen
   - id: 19051003
     datum: 03.10.1905
     jahr: "1905"
@@ -3146,7 +3173,7 @@ lectures:
     vortragstitel: ""
     anlass: Esoterische Stunde
     ga: 264,266/1
-  - id: 19051005a
+  - id: 19051005aqw
     datum: 05.10.1905
     jahr: "1905"
     ort: Berlin
@@ -3218,7 +3245,6 @@ lectures:
     jahr: "1905"
     ort: Hamburg
     vortragstitel: Ursprung und Wesen des Menschen
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19051015a
     datum: 15.10.1905
@@ -3290,7 +3316,6 @@ lectures:
     ort: Berlin
     vortragstitel: ""
     anlass: Dritte Generalversammlung der Deutschen Sektion der Theosophischen Gesellschaft
-    abdruck: Zuordnung noch offen
   - id: 19051022b
     datum: 22.10.1905
     jahr: "1905"
@@ -3304,7 +3329,6 @@ lectures:
     ort: Berlin
     vortragstitel: ""
     anlass: Dritte Generalversammlung der Deutschen Sektion der Theosophischen Gesellschaft
-    abdruck: Zuordnung noch offen
   - id: 19051023a
     datum: 23.10.1905
     jahr: "1905"
@@ -3334,14 +3358,13 @@ lectures:
     jahr: "1905"
     ort: Berlin
     vortragstitel: Theosophie, Esoterik, Okkultismus und das tägliche Leben
-    abdruck: Zuordnung noch offen
   - id: 19051024c
     datum: 24.10.1905
     jahr: "1905"
     ort: Berlin
     vortragstitel: ""
     anlass: Esoterische Stunde
-    ga: 266/1, GA 266/3
+    ga: 266/1
   - id: 19051025
     datum: 25.10.1905
     jahr: "1905"
@@ -3465,7 +3488,6 @@ lectures:
     jahr: "1905"
     ort: Hamburg
     vortragstitel: Die Zukunft des Menschen
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19051123
     datum: 23.11.1905
@@ -3473,6 +3495,12 @@ lectures:
     ort: Berlin
     vortragstitel: Bruderschaft und Daseinskampf
     ga: 54
+  - id: 19051201
+    datum: 01.12.1905
+    jahr: "1905"
+    ort: Köln
+    vortragstitel: Die Entstehung der Welt
+    ga: 68b
   - id: 19051202
     datum: 02.12.1905
     jahr: "1905"
@@ -3480,6 +3508,12 @@ lectures:
     vortragstitel: Die Bergpredigt
     anlass: Zweig-Vortrag
     ga: 90b
+  - id: 19051202a
+    datum: 02.12.1905
+    jahr: "1905"
+    ort: Köln
+    vortragstitel: Die Abstammung des Menschen
+    ga: 68b
   - id: 19051203a
     datum: 03.12.1905
     jahr: "1905"
@@ -3491,7 +3525,7 @@ lectures:
     jahr: "1905"
     ort: Düsseldorf
     vortragstitel: Der Weisheitskern in den Religionen
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19051204a
     datum: 04.12.1905
     jahr: "1905"
@@ -3504,7 +3538,6 @@ lectures:
     jahr: "1905"
     ort: Düsseldorf
     vortragstitel: Bruderschaft und Daseinskampf
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19051207
     datum: 07.12.1905
@@ -3517,7 +3550,6 @@ lectures:
     jahr: "1905"
     ort: Hamburg
     vortragstitel: Wiederholte Erdenleben, der Schlüssel zum Menschenrätsel
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19051210
     datum: 10.12.1905
@@ -3559,6 +3591,12 @@ lectures:
     ort: München
     vortragstitel: Bruderschaft und Daseinskampf
     ga: 68d
+  - id: 19051217
+    datum: 17.12.1905
+    jahr: "1905"
+    ort: Regensburg
+    vortragstitel: Fragenbeantwortung
+    ga: 68a
   - id: 19051218
     datum: 18.12.1905
     jahr: "1905"
@@ -3604,14 +3642,19 @@ lectures:
     jahr: "1906"
     ort: Stuttgart
     vortragstitel: Die Ideale der Menschheit und die Ideale der Eingeweihten
-    abdruck: Zuordnung noch offen
     ga: 68b
+  - id: 19060119
+    datum: 19.01.1906
+    jahr: "1906"
+    ort: Frankfurt
+    vortragstitel: Der Weisheitskern in den Religionen
+    ga: 68a
   - id: 19060129
     datum: 29.01.1906
     jahr: "1906"
     ort: Berlin
     vortragstitel: Ursprungsimpulse der Geisteswissenschaft. Spiritismus und Theosophie. Wozu haben wir die Theosophie?
-    ga: 96,264, GA 265
+    ga: 96,264
   - id: 19060131
     datum: 31.01.1906
     jahr: "1906"
@@ -3630,7 +3673,6 @@ lectures:
     jahr: "1906"
     ort: Hamburg
     vortragstitel: Die drei Welten
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19060205
     datum: 05.02.1906
@@ -3661,7 +3703,7 @@ lectures:
     jahr: "1906"
     ort: Düsseldorf
     vortragstitel: Die Freiheit des Menschen
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19060212a
     datum: 12.02.1906
     jahr: "1906"
@@ -3676,6 +3718,12 @@ lectures:
     vortragstitel: ""
     anlass: Esoterische Stunde
     ga: 264,266/1
+  - id: 19060212c
+    datum: 12.02.1906
+    jahr: "1906"
+    ort: Köln
+    vortragstitel: Die innere Entwicklung des Menschen
+    ga: 68b
   - id: 19060213
     datum: 13.02.1906
     jahr: "1906"
@@ -3683,6 +3731,12 @@ lectures:
     vortragstitel: Das Johannes-Evangelium als Einweihungsurkunde, Kap. 13 ff.
     reihe: Das Johannes-Evangelium
     ga: 97
+  - id: 19060214
+    datum: 14.02.1906
+    jahr: "1906"
+    ort: Köln
+    vortragstitel: Die Zukunft des Menschen
+    ga: 68b
   - id: 19060215
     datum: 15.02.1906
     jahr: "1906"
@@ -3703,7 +3757,7 @@ lectures:
     ort: Leipzig
     vortragstitel: Die Weisheitslehren des Christentums
     reihe: Keine Reihe /
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19060222
     datum: 22.02.1906
     jahr: "1906"
@@ -3744,7 +3798,6 @@ lectures:
     jahr: "1906"
     ort: Hamburg
     vortragstitel: Erziehungsfragen
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19060305
     datum: 05.03.1906
@@ -3790,7 +3843,6 @@ lectures:
     jahr: "1906"
     ort: Leipzig
     vortragstitel: Haeckels Welträtsel und die Theosophie
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19060322
     datum: 22.03.1906
@@ -3840,7 +3892,6 @@ lectures:
     jahr: "1906"
     ort: Leipzig
     vortragstitel: Deutsche Theosophen des 19. Jahrhunderts
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19060412
     datum: 12.04.1906
@@ -3854,7 +3905,7 @@ lectures:
     ort: Berlin
     vortragstitel: ""
     anlass: Esoterische Stunde
-    ga: 266/1, GA 266/3
+    ga: 266/1
   - id: 19060416
     datum: 16.04.1906
     jahr: "1906"
@@ -3880,12 +3931,24 @@ lectures:
     ort: München
     vortragstitel: Das Innere der Erde
     ga: 97
+  - id: 19060422
+    datum: 22.04.1906
+    jahr: "1906"
+    ort: München
+    vortragstitel: Germanische und indische Geheimlehre
+    ga: 68a
+  - id: 19060423
+    datum: 23.04.1906
+    jahr: "1906"
+    ort: München
+    vortragstitel: Innere Entwicklung
+    ga: 68a
   - id: 19060424
     datum: 24.04.1906
     jahr: "1906"
     ort: Leipzig
     vortragstitel: Germanische und indische Geheimlehre
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19060425
     datum: 25.04.1906
     jahr: "1906"
@@ -3990,7 +4053,6 @@ lectures:
     jahr: "1906"
     ort: Paris
     vortragstitel: Orientierung über Leadbeater für die anwesenden Deutschen
-    abdruck: Zuordnung noch offen
   - id: 19060602b
     datum: 02.06.1906
     jahr: "1906"
@@ -4016,7 +4078,6 @@ lectures:
     jahr: "1906"
     ort: ""
     vortragstitel: Orientierung über Leadbeater für die anwesenden Deutschen
-    abdruck: Zuordnung noch offen
   - id: 19060607b
     datum: 07.06.1906
     jahr: "1906"
@@ -4346,7 +4407,7 @@ lectures:
     datum: 02.09.1906
     jahr: "1906"
     ort: Stuttgart
-    vortragstitel: "Fragenbeantwortung"
+    vortragstitel: Fragenbeantwortung
     ga: 95,324a
     zyklus: 1
   - id: 19060903
@@ -4369,7 +4430,7 @@ lectures:
     datum: 04.09.1906
     jahr: "1906"
     ort: Stuttgart
-    vortragstitel: "Fragenbeantwortung"
+    vortragstitel: Fragenbeantwortung
     ga: 95
     zyklus: 1
   - id: 19060911
@@ -4496,7 +4557,6 @@ lectures:
     jahr: "1906"
     ort: Leipzig
     vortragstitel: Paracelsus
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19061013
     datum: 13.10.1906
@@ -4528,7 +4588,6 @@ lectures:
     jahr: "1906"
     ort: Berlin
     vortragstitel: Freie Konversation über praktische Fragen
-    abdruck: Zuordnung noch offen
   - id: 19061021a
     datum: 21.10.1906
     jahr: "1906"
@@ -4581,13 +4640,25 @@ lectures:
     vortragstitel: Vortrag 2
     reihe: Die Theosophie an der Hand des Johannes-Evangeliums
     ga: 94
-  - id: 19061029
+  - id: 19061029a
     datum: 29.10.1906
     jahr: "1906"
     ort: München
     vortragstitel: ""
     anlass: Esoterische Stunde
     ga: 266/1
+  - id: 19061029b
+    datum: 29.10.1906
+    jahr: "1906"
+    ort: München
+    vortragstitel: Wie begreift man Krankheit und Tod?
+    ga: 68b
+  - id: 19061030
+    datum: 30.10.1906
+    jahr: "1906"
+    ort: München
+    vortragstitel: Kindererziehung im Lichte der Theosophie
+    ga: 68b
   - id: 19061031
     datum: 31.10.1906
     jahr: "1906"
@@ -4600,7 +4671,7 @@ lectures:
     jahr: "1906"
     ort: München
     vortragstitel: Blut ist ein ganz besondrer Saft
-    abdruck: Zuordnung noch offen
+    ga: 68b
   - id: 19061101b
     datum: 01.11.1906
     jahr: "1906"
@@ -4661,7 +4732,7 @@ lectures:
     jahr: "1906"
     ort: Leipzig
     vortragstitel: Luzifer
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19061110
     datum: 10.11.1906
     jahr: "1906"
@@ -4713,7 +4784,7 @@ lectures:
     jahr: "1906"
     ort: Düsseldorf
     vortragstitel: Esoterisches Christentum
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19061128
     datum: 28.11.1906
     jahr: "1906"
@@ -4732,7 +4803,6 @@ lectures:
     jahr: "1906"
     ort: Köln
     vortragstitel: Blut ist ein ganz besonderer Saft
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19061201a
     datum: 01.12.1906
@@ -4746,7 +4816,7 @@ lectures:
     ort: Köln
     vortragstitel: ""
     anlass: Esoterische Stunde
-    ga: 266/1, GA 268
+    ga: 266/1
   - id: 19061202
     datum: 02.12.1906
     jahr: "1906"
@@ -4770,7 +4840,6 @@ lectures:
     jahr: "1906"
     ort: Bonn
     vortragstitel: Richard Wagner und die Mystik
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19061211
     datum: 11.12.1906
@@ -4783,7 +4852,6 @@ lectures:
     jahr: "1906"
     ort: München
     vortragstitel: Der Begriff der Gruppenseele
-    abdruck: Zuordnung noch offen
   - id: 19061212b
     datum: 12.12.1906
     jahr: "1906"
@@ -4801,7 +4869,7 @@ lectures:
     jahr: "1906"
     ort: Leipzig
     vortragstitel: Die Kinder des Luzifer
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19061215
     datum: 15.12.1906
     jahr: "1906"
@@ -4827,14 +4895,12 @@ lectures:
     jahr: "1907"
     ort: Berlin
     vortragstitel: Die Erziehung des Kindes vom Standpunkte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19070111
     datum: 11.01.1907
     jahr: "1907"
     ort: Leipzig
     vortragstitel: Blut ist ein ganz besondrer Saft
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19070112
     datum: 12.01.1907
@@ -4842,6 +4908,13 @@ lectures:
     ort: Leipzig
     vortragstitel: Die Erziehung des Kindes vom Standpunkt der Geisteswissenschaft. Geisteswissenschaftliche Gesichtspunkte zur Erziehungsfrage
     ga: 97
+  - id: 19070114
+    datum: 14.01.1907
+    jahr: "1907"
+    ort: Kassel
+    vortragstitel: Bibel und Weisheit
+    anlass: Fragenbeantwortung
+    ga: 68a
   - id: 19070116
     datum: 16.01.1907
     jahr: "1907"
@@ -4853,7 +4926,13 @@ lectures:
     jahr: "1907"
     ort: Stuttgart
     vortragstitel: Bibel und Weisheit
-    abdruck: Zuordnung noch offen
+    ga: 68a
+  - id: 19070118
+    datum: 18.01.1907
+    jahr: "1907"
+    ort: Stuttgart
+    vortragstitel: Der Ursprung des Bösen
+    ga: 68a
   - id: 19070119a
     datum: 19.01.1907
     jahr: "1907"
@@ -4878,7 +4957,6 @@ lectures:
     jahr: "1907"
     ort: Nürnberg
     vortragstitel: Wie begreift man Krankheit und Tod?
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19070122
     datum: 22.01.1907
@@ -4891,7 +4969,6 @@ lectures:
     jahr: "1907"
     ort: Berlin
     vortragstitel: Die Rosenkreuzer-Einweihung
-    abdruck: Zuordnung noch offen
   - id: 19070124b
     datum: 24.01.1907
     jahr: "1907"
@@ -4935,7 +5012,6 @@ lectures:
     jahr: "1907"
     ort: Basel
     vortragstitel: Die Rätselfragen des Daseins
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19070211
     datum: 11.02.1907
@@ -4955,7 +5031,6 @@ lectures:
     jahr: "1907"
     ort: Leipzig
     vortragstitel: Der Lebenslauf des Menschen vom geisteswissenschaftlichen Standpunkte
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19070216
     datum: 16.02.1907
@@ -5005,7 +5080,7 @@ lectures:
     jahr: "1907"
     ort: Bonn
     vortragstitel: Esoterisches Christentum
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19070307a
     datum: 07.03.1907
     jahr: "1907"
@@ -5017,7 +5092,7 @@ lectures:
     jahr: "1907"
     ort: Düsseldorf
     vortragstitel: Theosophie, Buddhismus und Christentum
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19070308
     datum: 08.03.1907
     jahr: "1907"
@@ -5064,6 +5139,12 @@ lectures:
     reihe: Das Mysterium von Golgatha
     anlass: Ostervortrag
     ga: 96
+  - id: 19070409
+    datum: 09.04.1907
+    jahr: "1907"
+    ort: München
+    vortragstitel: Das Gleichnis vom ungerechten Haushalter – Evangelium Lucae XVI,1-18
+    ga: 68a
   - id: 19070422
     datum: 22.04.1907
     jahr: "1907"
@@ -5076,7 +5157,6 @@ lectures:
     jahr: "1907"
     ort: Berlin
     vortragstitel: Bibel und Weisheit I
-    abdruck: Zuordnung noch offen
   - id: 19070426
     datum: 26.04.1907
     jahr: "1907"
@@ -5141,13 +5221,13 @@ lectures:
     jahr: "1907"
     ort: München
     vortragstitel: Bibel und Weisheit I
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19070524
     datum: 24.05.1907
     jahr: "1907"
     ort: München
     vortragstitel: Bibel und Weisheit II (München)
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19070525
     datum: 25.05.1907
     jahr: "1907"
@@ -5265,19 +5345,19 @@ lectures:
     ort: München
     vortragstitel: ""
     anlass: Esoterische Stunde
-    ga: 266/1, GA 267
+    ga: 266/1
   - id: 19070608
     datum: 08.06.1907
     jahr: "1907"
     ort: Leipzig
     vortragstitel: Bibel und Weisheit I (Leipzig)
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19070609
     datum: 09.06.1907
     jahr: "1907"
     ort: Leipzig
     vortragstitel: Bibel und Weisheit II (Leipzig)
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19070612
     datum: 12.06.1907
     jahr: "1907"
@@ -5402,7 +5482,6 @@ lectures:
     jahr: "1907"
     ort: Eisenach
     vortragstitel: Das Wesen des Menschen
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19070913
     datum: 13.09.1907
@@ -5576,7 +5655,6 @@ lectures:
     jahr: "1907"
     ort: Berlin
     vortragstitel: Zur Präsidentenwahl von Annie Besant
-    abdruck: Zuordnung noch offen
   - id: 19071009
     datum: 09.10.1907
     jahr: "1907"
@@ -5595,14 +5673,12 @@ lectures:
     jahr: "1907"
     ort: Leipzig
     vortragstitel: Der Krankheitswahn im Lichte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19071012
     datum: 12.10.1907
     jahr: "1907"
     ort: Leipzig
     vortragstitel: Das Gesundheitsfieber im Lichte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19071014
     datum: 14.10.1907
@@ -5641,7 +5717,6 @@ lectures:
     jahr: "1907"
     ort: Berlin
     vortragstitel: Über den Fortgang des Geisteslebens
-    abdruck: Zuordnung noch offen
     ga: 85
   - id: 19071021a
     datum: 21.10.1907
@@ -5695,7 +5770,6 @@ lectures:
     jahr: "1907"
     ort: Berlin
     vortragstitel: Die Abstammung des Menschen
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19071101
     datum: 01.11.1907
@@ -5732,7 +5806,6 @@ lectures:
     jahr: "1907"
     ort: Berlin
     vortragstitel: Mann und Weib im Lichte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19071116
     datum: 16.11.1907
@@ -5787,7 +5860,7 @@ lectures:
     datum: 23.11.1907
     jahr: "1907"
     ort: Basel
-    vortragstitel: Die Naturwissenschaft am Scheidewege 
+    vortragstitel: Die Naturwissenschaft am Scheidewege
     ga: 85
   - id: 19071123b
     datum: 23.11.1907
@@ -5827,7 +5900,6 @@ lectures:
     jahr: "1907"
     ort: Nürnberg
     vortragstitel: Die Naturwissenschaft am Scheidewege
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19071202
     datum: 02.12.1907
@@ -5859,7 +5931,7 @@ lectures:
     ort: München
     vortragstitel: ""
     anlass: Esoterische Stunde
-    ga: 266/1, GA 267
+    ga: 266/1
   - id: 19071207
     datum: 07.12.1907
     jahr: "1907"
@@ -5871,7 +5943,6 @@ lectures:
     jahr: "1907"
     ort: Stuttgart
     vortragstitel: Mann und Weib im Lichte der Geheimwissenschaft
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19071212
     datum: 12.12.1907
@@ -5890,7 +5961,7 @@ lectures:
     jahr: "1907"
     ort: Düsseldorf
     vortragstitel: Das Johannes-Evangelium und die Zukunft des Christentums
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19071215
     datum: 15.12.1907
     jahr: "1907"
@@ -5902,20 +5973,19 @@ lectures:
     jahr: "1907"
     ort: Elberfeld
     vortragstitel: Erdenanfang und Erdenende
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19071218
     datum: 18.12.1907
     jahr: "1907"
     ort: Köln
     vortragstitel: Die Einweihung (Initiation)
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19071219
     datum: 19.12.1907
     jahr: "1907"
     ort: Köln
     vortragstitel: Die sogenannten Gefahren der Einweihung
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19071222
     datum: 22.12.1907
     jahr: "1907"
@@ -5988,21 +6058,18 @@ lectures:
     jahr: "1908"
     ort: Leipzig
     vortragstitel: Mann und Weib im Lichte der Geisteswissenschaft I. Fragebeantwortung
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19080111
     datum: 11.01.1908
     jahr: "1908"
     ort: Leipzig
     vortragstitel: Mann, Weib und Kind im Lichte der Geisteswissenschaft II - Fragebeantwortung
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19080112
     datum: 12.01.1908
     jahr: "1908"
     ort: Leipzig
     vortragstitel: Okkulte Zeichen und Symbole der astralen und der geistigen Welt
-    abdruck: Zuordnung noch offen
   - id: 19080115
     datum: 15.01.1908
     jahr: "1908"
@@ -6040,20 +6107,18 @@ lectures:
     jahr: "1908"
     ort: Wiesbaden
     vortragstitel: Das Wesen des Menschen im Lichte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19080131
     datum: 31.01.1908
     jahr: "1908"
     ort: Mainz
     vortragstitel: Religion, Wissenschaft und Theosophie
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19080201
     datum: 01.02.1908
     jahr: "1908"
     ort: Wiesbaden
     vortragstitel: Das Geheimnis des Todes und das Rätsel des Lebens
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19080202a
     datum: 02.02.1908
@@ -6072,7 +6137,6 @@ lectures:
     jahr: "1908"
     ort: Mannheim
     vortragstitel: Mann und Weib im Lichte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19080206
     datum: 06.02.1908
@@ -6091,7 +6155,6 @@ lectures:
     jahr: "1908"
     ort: ""
     vortragstitel: interner Vortrag
-    abdruck: Zuordnung noch offen
   - id: 19080211
     datum: 11.02.1908
     jahr: "1908"
@@ -6110,7 +6173,6 @@ lectures:
     jahr: "1908"
     ort: Berlin
     vortragstitel: Der Krankheitswahn im Lichte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19080215
     datum: 15.02.1908
@@ -6123,26 +6185,24 @@ lectures:
     jahr: "1908"
     ort: Leipzig
     vortragstitel: Die Naturwissenschaft am Scheidewege
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19080217b
     datum: 17.02.1908
     jahr: "1908"
     ort: Leipzig
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19080220
     datum: 20.02.1908
     jahr: "1908"
     ort: Kassel
     vortragstitel: Der Ursprung des Bösen
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19080221
     datum: 21.02.1908
     jahr: "1908"
     ort: Kassel
     vortragstitel: Der Geist der Wahrheit
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19080222
     datum: 22.02.1908
     jahr: "1908"
@@ -6155,7 +6215,6 @@ lectures:
     jahr: "1908"
     ort: Bielefeld
     vortragstitel: Gott und die Unsterblichkeit im Lichte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
   - id: 19080224
     datum: 24.02.1908
     jahr: "1908"
@@ -6167,7 +6226,6 @@ lectures:
     jahr: "1908"
     ort: Hannover
     vortragstitel: Richard Wagner und die Geisteswelt
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19080226
     datum: 26.02.1908
@@ -6181,7 +6239,6 @@ lectures:
     jahr: "1908"
     ort: Berlin
     vortragstitel: Das Gesundheitsfieber im Lichte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19080229
     datum: 29.02.1908
@@ -6288,7 +6345,6 @@ lectures:
     jahr: "1908"
     ort: Arnheim
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19080312
     datum: 12.03.1908
     jahr: "1908"
@@ -6338,7 +6394,6 @@ lectures:
     jahr: "1908"
     ort: München
     vortragstitel: Mann, Weib und Kind im Lichte der Geisteswissenschaft II
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19080320
     datum: 20.03.1908
@@ -6351,7 +6406,6 @@ lectures:
     jahr: "1908"
     ort: Strassburg
     vortragstitel: Gründung des Goethe-Schiller-Zweiges
-    abdruck: Zuordnung noch offen
   - id: 19080324
     datum: 24.03.1908
     jahr: "1908"
@@ -6365,6 +6419,12 @@ lectures:
     ort: Berlin
     vortragstitel: Sonne, Mond und Sterne
     ga: 56
+  - id: 19080404
+    datum: 04.04.1908
+    jahr: "1908"
+    ort: Kristiania
+    vortragstitel: Das Johannesevangelium vom theosophischen Gesichtspunkt
+    ga: 68a
   - id: 19080409
     datum: 09.04.1908
     jahr: "1908"
@@ -6463,7 +6523,6 @@ lectures:
     jahr: "1908"
     ort: Hamburg
     vortragstitel: Mann, Weib und Kind im Lichte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19080522a
     datum: 22.05.1908
@@ -6977,13 +7036,11 @@ lectures:
     ort: Leipzig
     vortragstitel: Vorführung von Lichtbildern im Anschluß an die Vorträge des Zyklus
     reihe: Ägyptische Mythen und Mysterien
-    abdruck: Zuordnung noch offen
   - id: 19080914c
     datum: 14.09.1908
     jahr: "1908"
     ort: Leipzig
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19081015
     datum: 15.10.1908
     jahr: "1908"
@@ -7032,7 +7089,6 @@ lectures:
     jahr: "1908"
     ort: Berlin
     vortragstitel: Vorstandssitzung der Deutschen Sektion der Theosophischen Gesellschaft
-    abdruck: Zuordnung noch offen
   - id: 19081024b
     datum: 24.10.1908
     jahr: "1908"
@@ -7044,7 +7100,6 @@ lectures:
     jahr: "1908"
     ort: Berlin
     vortragstitel: Schlußwort nach einem Vortrag von Carl Unger (Fichte, Schelling). Über Fichte, Schelling, Hegel
-    abdruck: Zuordnung noch offen
   - id: 19081025b
     datum: 25.10.1908
     jahr: "1908"
@@ -7120,33 +7175,29 @@ lectures:
     jahr: "1908"
     ort: Bielefeld
     vortragstitel: Bibel und Weisheit
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19081104
     datum: 04.11.1908
     jahr: "1908"
     ort: Hannover
     vortragstitel: Okkulte Geschichte
-    abdruck: Zuordnung noch offen
   - id: 19081105
     datum: 05.11.1908
     jahr: "1908"
     ort: Hannover
     vortragstitel: Der Lebenslauf des Menschen vom Standpunkte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19081106
     datum: 06.11.1908
     jahr: "1908"
     ort: München
     vortragstitel: Tolstoi und Carnegie
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19081107
     datum: 07.11.1908
     jahr: "1908"
     ort: München
     vortragstitel: Hellsehen und Phantasie
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19081108a
     datum: 08.11.1908
@@ -7229,14 +7280,12 @@ lectures:
     ort: Wien
     vortragstitel: Das Wesen des Menschen als Schlüssel zu den Geheimnissen der Welt
     reihe: Keine Reihe /
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19081201
     datum: 01.12.1908
     jahr: "1908"
     ort: Breslau
     vortragstitel: Wo und wie findet man den Geist?
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19081202
     datum: 02.12.1908
@@ -7249,7 +7298,7 @@ lectures:
     jahr: "1908"
     ort: Hamburg
     vortragstitel: Bibel und Weisheit
-    ga: 68
+    ga: 68,68a
   - id: 19081206
     datum: 06.12.1908
     jahr: "1908"
@@ -7257,6 +7306,12 @@ lectures:
     vortragstitel: ""
     anlass: Esoterische Stunde
     ga: 266/1
+  - id: 19081207
+    datum: 07.12.1908
+    jahr: "1908"
+    ort: Bremen
+    vortragstitel: Der Apostel Paulus und die Theosophie
+    ga: 68a
   - id: 19081208
     datum: 08.12.1908
     jahr: "1908"
@@ -7287,13 +7342,11 @@ lectures:
     jahr: "1908"
     ort: Stuttgart
     vortragstitel: Fragenbenantwortung im Anschluss zum Zweigvortrag "Die zehn Gebote"
-    abdruck: Zuordnung noch offen
   - id: 19081215
     datum: 15.12.1908
     jahr: "1908"
     ort: Nürnberg
     vortragstitel: Das Geheimnis der menschlichen Temperamente
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19081216
     datum: 16.12.1908
@@ -7338,7 +7391,6 @@ lectures:
     jahr: "1908"
     ort: Berlin
     vortragstitel: Über die Verwendung der Äther- und Astralleiber bedeutender Persönlichkeiten. Die atlantischen Mysterien
-    abdruck: Zuordnung noch offen
   - id: 19081228b
     datum: 28.12.1908
     jahr: "1908"
@@ -7358,7 +7410,6 @@ lectures:
     ort: München
     vortragstitel: Weihnachtsfeier
     anlass: Weihnachtsfeier
-    abdruck: Zuordnung noch offen
   - id: 19090107
     datum: 07.01.1909
     jahr: "1909"
@@ -7371,7 +7422,6 @@ lectures:
     jahr: "1909"
     ort: München
     vortragstitel: Ernährungsfragen im Lichte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19090108b
     datum: 08.01.1909
@@ -7384,7 +7434,6 @@ lectures:
     jahr: "1909"
     ort: München
     vortragstitel: Die Temperamente im Lichte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19090109b
     datum: 09.01.1909
@@ -7423,7 +7472,6 @@ lectures:
     jahr: "1909"
     ort: Pforzheim
     vortragstitel: Die Naturwissenschaft am Scheidewege
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19090118
     datum: 18.01.1909
@@ -7436,7 +7484,6 @@ lectures:
     jahr: "1909"
     ort: Karlsruhe
     vortragstitel: Das Geheimnis der menschlichen Temperamente
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19090121a
     datum: 21.01.1909
@@ -7474,13 +7521,13 @@ lectures:
     jahr: "1909"
     ort: Basel
     vortragstitel: Der Weisheitskern in den Religionen
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19090204
     datum: 04.02.1909
     jahr: "1909"
     ort: Basel
     vortragstitel: Die Bedeutung des Christentums für die Gegenwart. Die Bedeutung des Christentums für die Zukunft
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19090207
     datum: 07.02.1909
     jahr: "1909"
@@ -7492,14 +7539,12 @@ lectures:
     jahr: "1909"
     ort: Stuttgart
     vortragstitel: Gesundheitsfragen im Lichte der Geisteswissenschaft (Stuttgart)
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19090209
     datum: 09.02.1909
     jahr: "1909"
     ort: Stuttgart
     vortragstitel: Rhythmen in der Menschennatur
-    abdruck: Zuordnung noch offen
     ga: 108
   - id: 19090211
     datum: 11.02.1909
@@ -7548,7 +7593,7 @@ lectures:
     jahr: "1909"
     ort: Kassel
     vortragstitel: Die Zehn Gebote
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19090226b
     datum: 26.02.1909
     jahr: "1909"
@@ -7561,7 +7606,7 @@ lectures:
     jahr: "1909"
     ort: Elberfeld
     vortragstitel: Die okkulte Bedeutung des Johannes-Evangeliums
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19090303
     datum: 03.03.1909
     jahr: "1909"
@@ -7580,7 +7625,6 @@ lectures:
     jahr: "1909"
     ort: München
     vortragstitel: Gesundheitsfragen im Licht der Geisteswissenschaft (München)
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19090307
     datum: 07.03.1909
@@ -7593,7 +7637,6 @@ lectures:
     jahr: "1909"
     ort: München
     vortragstitel: "Hellsehen: Unterbewusstsein und Überbewusstsein"
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19090308b
     datum: 08.03.1909
@@ -7720,7 +7763,6 @@ lectures:
     jahr: "1909"
     ort: Berlin
     vortragstitel: Erdenanfang und Erdenende
-    abdruck: Zuordnung noch offen
   - id: 19090410
     datum: 10.04.1909
     jahr: "1909"
@@ -7838,14 +7880,14 @@ lectures:
     datum: 21.04.1909
     jahr: "1909"
     ort: Düsseldorf
-    vortragstitel: "Fragenbeantwortung"
+    vortragstitel: Fragenbeantwortung
     ga: 110,324a
     zyklus: 7
   - id: 19090422
     datum: 22.04.1909
     jahr: "1909"
     ort: Düsseldorf
-    vortragstitel: "Fragenbeantwortung"
+    vortragstitel: Fragenbeantwortung
     ga: 110,324a
     zyklus: 7
   - id: 19090423
@@ -7853,7 +7895,6 @@ lectures:
     jahr: "1909"
     ort: Bonn
     vortragstitel: Das Geheimnis der Temperamente in geisteswissenschaftlicher Beleuchtung
-    abdruck: Zuordnung noch offen
     ga: 68d
   - id: 19090427
     datum: 27.04.1909
@@ -7922,6 +7963,12 @@ lectures:
     vortragstitel: Vortrag 3
     reihe: Theosophie an der Hand der Apokalypse
     ga: 104a
+  - id: 19090512
+    datum: 12.05.1909
+    jahr: "1909"
+    ort: Kristiania (Oslo)
+    vortragstitel: Der Eintritt des Christus in die westliche Welt
+    ga: 68a
   - id: 19090513
     datum: 13.05.1909
     jahr: "1909"
@@ -8011,7 +8058,6 @@ lectures:
     jahr: "1909"
     ort: Budapest
     vortragstitel: Die westlichen Wege der Einweihung
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19090603
     datum: 03.06.1909
@@ -8118,7 +8164,6 @@ lectures:
     jahr: "1909"
     ort: Berlin
     vortragstitel: Bericht über den Budapester Kongress
-    abdruck: Zuordnung noch offen
   - id: 19090622
     datum: 22.06.1909
     jahr: "1909"
@@ -8218,7 +8263,6 @@ lectures:
     ort: Kassel
     vortragstitel: Über Novalis
     anlass: Matinee
-    abdruck: Zuordnung noch offen
   - id: 19090704b
     datum: 04.07.1909
     jahr: "1909"
@@ -8451,7 +8495,6 @@ lectures:
     ort: Basel
     vortragstitel: Gesellige Abschiedsfeier
     anlass: Gesellige Abschiedfeier
-    abdruck: Zuordnung noch offen
   - id: 19091011
     datum: 11.10.1909
     jahr: "1909"
@@ -8475,7 +8518,6 @@ lectures:
     jahr: "1909"
     ort: Berlin
     vortragstitel: Die Mission des Zornes. Der gefesselte Prometheus
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19091022
     datum: 22.10.1909
@@ -8531,7 +8573,6 @@ lectures:
     jahr: "1909"
     ort: Berlin
     vortragstitel: Das Problem des Luzifer
-    abdruck: Zuordnung noch offen
   - id: 19091026c
     datum: 26.10.1909
     jahr: "1909"
@@ -8551,7 +8592,6 @@ lectures:
     jahr: "1909"
     ort: Berlin
     vortragstitel: Das Problem des Luzifer (Fortsetzung)
-    abdruck: Zuordnung noch offen
   - id: 19091028a
     datum: 28.10.1909
     jahr: "1909"
@@ -8569,7 +8609,6 @@ lectures:
     jahr: "1909"
     ort: Berlin
     vortragstitel: Der menschliche Charakter
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19091029b
     datum: 29.10.1909
@@ -8590,7 +8629,12 @@ lectures:
     jahr: "1909"
     ort: Hannover
     vortragstitel: Über die beiden Jesusknaben
-    abdruck: Zuordnung noch offen
+  - id: 19091106
+    datum: 06.11.1909
+    jahr: "1909"
+    ort: Bremen
+    vortragstitel: Die höhere Bedeutung des Johannesevangeliums
+    ga: 68a
   - id: 19091109
     datum: 09.11.1909
     jahr: "1909"
@@ -8622,13 +8666,12 @@ lectures:
     jahr: "1909"
     ort: Stuttgart
     vortragstitel: Die Mission der Hirten, Ackerbauer, Fischer
-    abdruck: Zuordnung noch offen
   - id: 19091117
     datum: 17.11.1909
     jahr: "1909"
     ort: Bern
     vortragstitel: Die Evangelien (Bern)
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19091119
     datum: 19.11.1909
     jahr: "1909"
@@ -8669,6 +8712,12 @@ lectures:
     vortragstitel: Die Mission der Kunst (Homer, Äschylos, Dante, Shakespeare, Goethe)
     anlass: Öffentlicher Vortrag
     ga: 68c
+  - id: 19091130
+    datum: 30.11.1909
+    jahr: "1909"
+    ort: Dresden
+    vortragstitel: Christus und die Geisteswissenschaft
+    ga: 68a
   - id: 19091202
     datum: 02.12.1909
     jahr: "1909"
@@ -8727,20 +8776,17 @@ lectures:
     jahr: "1909"
     ort: Nürnberg
     vortragstitel: Einiges über den Mondeinfluss
-    abdruck: Zuordnung noch offen
   - id: 19091213
     datum: 13.12.1909
     jahr: "1909"
     ort: Nürnberg
     vortragstitel: Askese und Krankheit
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19091217
     datum: 17.12.1909
     jahr: "1909"
     ort: Breslau
     vortragstitel: Das Geheimnis des Todes als Schlüssel zum Rätsel des Lebens
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19091221
     datum: 21.12.1909
@@ -8777,7 +8823,6 @@ lectures:
     jahr: "1910"
     ort: Stockholm
     vortragstitel: Das Geheimnis des Todes als Schlüssel zum Rätsel des Lebens
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19100103
     datum: 03.01.1910
@@ -8940,7 +8985,6 @@ lectures:
     jahr: "1910"
     ort: Kassel
     vortragstitel: Erkenntnis und Unsterblichkeit
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19100206a
     datum: 06.02.1910
@@ -8981,7 +9025,6 @@ lectures:
     jahr: "1910"
     ort: Wiesbaden
     vortragstitel: Das Wesen der Pflanze und die Beziehung des Menschen zum Pflanzenreich
-    abdruck: Zuordnung noch offen
   - id: 19100217
     datum: 17.02.1910
     jahr: "1910"
@@ -9005,13 +9048,12 @@ lectures:
     jahr: "1910"
     ort: Köln
     vortragstitel: Die drei vorchristlichen und die drei nachchristlichen Jahrtausende
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19100224
     datum: 24.02.1910
     jahr: "1910"
     ort: Köln
     vortragstitel: Besondere Fragen über Wiederverkörperung und Schicksal
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19100225
     datum: 25.02.1910
@@ -9043,7 +9085,6 @@ lectures:
     jahr: "1910"
     ort: Essen
     vortragstitel: Einweihung des Zweiges
-    abdruck: Zuordnung noch offen
   - id: 19100303
     datum: 03.03.1910
     jahr: "1910"
@@ -9087,7 +9128,6 @@ lectures:
     jahr: "1910"
     ort: München
     vortragstitel: Die Mission der Andacht
-    abdruck: Zuordnung noch offen
     ga: 68b
   - id: 19100313a
     datum: 13.03.1910
@@ -9174,7 +9214,6 @@ lectures:
     jahr: "1910"
     ort: Wien
     vortragstitel: Osterfeier und Osterbetrachtung
-    abdruck: Zuordnung noch offen
   - id: 19100327b
     datum: 27.03.1910
     jahr: "1910"
@@ -9233,7 +9272,6 @@ lectures:
     jahr: "1910"
     ort: Rom
     vortragstitel: Die Erdenentwicklung
-    abdruck: Zuordnung noch offen
   - id: 19100418
     datum: 18.04.1910
     jahr: "1910"
@@ -9285,7 +9323,6 @@ lectures:
     jahr: "1910"
     ort: Bremen
     vortragstitel: Das künftige ätherische Hellsehen
-    abdruck: Zuordnung noch offen
   - id: 19100515
     datum: 15.05.1910
     jahr: "1910"
@@ -9769,13 +9806,13 @@ lectures:
     jahr: "1910"
     ort: Bern
     vortragstitel: Das Wesen des menschlichen Schicksals
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19100914
     datum: 14.09.1910
     jahr: "1910"
     ort: Bern
     vortragstitel: Theosophie und Bibel
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19100917
     datum: 17.09.1910
     jahr: "1910"
@@ -9793,7 +9830,6 @@ lectures:
     jahr: "1910"
     ort: Stuttgart
     vortragstitel: Das Leben nach dem Tode
-    abdruck: Zuordnung noch offen
   - id: 19101017
     datum: 17.10.1910
     jahr: "1910"
@@ -9835,7 +9871,6 @@ lectures:
     ort: Berlin
     vortragstitel: Über Astrologie
     anlass: Bemerkungen nach dem Vortrag von Herrn Seiler
-    abdruck: Zuordnung noch offen
   - id: 19101031b
     datum: 31.10.1910
     jahr: "1910"
@@ -9909,7 +9944,6 @@ lectures:
     jahr: "1910"
     ort: Nürnberg
     vortragstitel: Moral und Karma
-    abdruck: Zuordnung noch offen
   - id: 19101113
     datum: 13.11.1910
     jahr: "1910"
@@ -9969,13 +10003,12 @@ lectures:
     jahr: "1910"
     ort: Hamburg
     vortragstitel: Erfahrungen beim Durchforschen religiöser Dokumente aus der Zeit vor und nach Christus
-    abdruck: Zuordnung noch offen
+    ga: 68a
   - id: 19101202
     datum: 02.12.1910
     jahr: "1910"
     ort: Kassel
     vortragstitel: Über Lektüre. Neid und Lügenhaftigkeit und ihre karmische Auswirkung
-    abdruck: Zuordnung noch offen
   - id: 19101203a
     datum: 03.12.1910
     jahr: "1910"
@@ -10052,7 +10085,6 @@ lectures:
     jahr: "1910"
     ort: Hannover
     vortragstitel: Neid und Lügenhaftigkeit, karmisch betrachtet
-    abdruck: Zuordnung noch offen
   - id: 19101217b
     datum: 17.12.1910
     jahr: "1910"
@@ -10272,14 +10304,12 @@ lectures:
     jahr: "1911"
     ort: Bonn
     vortragstitel: Menschheitsentwicklung und Theosophie
-    abdruck: Zuordnung noch offen
     ga: 85
   - id: 19110201b
     datum: 01.02.1911
     jahr: "1911"
     ort: Bonn
     vortragstitel: Galilei, Giordano Bruno und Goethe
-    abdruck: Zuordnung noch offen
   - id: 19110202
     datum: 02.02.1911
     jahr: "1911"
@@ -10291,7 +10321,6 @@ lectures:
     jahr: "1911"
     ort: Elberfeld
     vortragstitel: Der Zusammenhang der physischen Welt mit der astralen und geistigen Welt
-    abdruck: Zuordnung noch offen
   - id: 19110205
     datum: 05.02.1911
     jahr: "1911"
@@ -10303,7 +10332,6 @@ lectures:
     jahr: "1911"
     ort: Düsseldorf
     vortragstitel: Die Glieder des Menschen. Gottessohnschaft und Menschensohnschaft
-    abdruck: Zuordnung noch offen
   - id: 19110206b
     datum: 06.02.1911
     jahr: "1911"
@@ -10346,7 +10374,6 @@ lectures:
     jahr: "1911"
     ort: München
     vortragstitel: Über Vererbung
-    abdruck: Zuordnung noch offen
   - id: 19110216
     datum: 16.02.1911
     jahr: "1911"
@@ -10428,7 +10455,6 @@ lectures:
     jahr: "1911"
     ort: Hannover
     vortragstitel: Die menschliche Urschuld. - «Ich bin der Weg, die Wahrheit und das Leben»
-    abdruck: Zuordnung noch offen
   - id: 19110305a
     datum: 05.03.1911
     jahr: "1911"
@@ -10578,7 +10604,6 @@ lectures:
     ort: Bologna
     vortragstitel: Verwandlung des Bewusstseinshorizontes
     anlass: Einladung der Loge Bologna
-    abdruck: Zuordnung noch offen
   - id: 19110411
     datum: 11.04.1911
     jahr: "1911"
@@ -11045,7 +11070,6 @@ lectures:
     jahr: "1911"
     ort: Tübingen
     vortragstitel: Einweihung des Uhland-Zweiges
-    abdruck: Zuordnung noch offen
   - id: 19111127
     datum: 27.11.1911
     jahr: "1911"
@@ -11150,7 +11174,7 @@ lectures:
     ort: Berlin
     vortragstitel: Ein esoterisch-sozialer Zukunftsimpuls. Versuch zur "Stiftung" einer Gesellschaft für theosophische Art und Kunst
     anlass: Mitteilung über die Stiftung einer «Gesellschaft für theosophische Art und Kunst»
-    ga: 264
+    ga: 264,277a
   - id: 19111215b
     datum: 15.12.1911
     jahr: "1911"
@@ -11340,7 +11364,6 @@ lectures:
     jahr: "1912"
     ort: St. Gallen
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19120113
     datum: 13.01.1912
     jahr: "1912"
@@ -11458,7 +11481,6 @@ lectures:
     jahr: "1912"
     ort: Klagenfurt
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19120215
     datum: 15.02.1912
     jahr: "1912"
@@ -11495,7 +11517,6 @@ lectures:
     jahr: "1912"
     ort: Stuttgart
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19120222a
     datum: 22.02.1912
     jahr: "1912"
@@ -11578,7 +11599,6 @@ lectures:
     jahr: "1912"
     ort: Frankfurt
     vortragstitel: Die Theosophie in ihrer Beziehung zum unmittelbaren Seelenleben
-    abdruck: Zuordnung noch offen
   - id: 19120310d
     datum: 10.03.1912
     jahr: "1912"
@@ -11591,7 +11611,6 @@ lectures:
     jahr: "1912"
     ort: Frankfurt
     vortragstitel: Die verborgenen Tiefen des Seelenlebens
-    abdruck: Zuordnung noch offen
   - id: 19120314
     datum: 14.03.1912
     jahr: "1912"
@@ -11769,7 +11788,6 @@ lectures:
     jahr: "1912"
     ort: Stockholm
     vortragstitel: Christus und das XX. Jahrhundert
-    abdruck: Zuordnung noch offen
   - id: 19120423
     datum: 23.04.1912
     jahr: "1912"
@@ -11805,7 +11823,6 @@ lectures:
     ort: Köln
     vortragstitel: Vergessen und Gedenken. Raffaels «Schule von Athen»
     anlass: Einweihung des neuen Zweigraumes
-    abdruck: Zuordnung noch offen
   - id: 19120506b
     datum: 06.05.1912
     jahr: "1912"
@@ -11837,7 +11854,7 @@ lectures:
     ort: Köln
     vortragstitel: ""
     anlass: Esoterische Stunde
-    ga: 266/2, GA 268
+    ga: 266/2
   - id: 19120514
     datum: 14.05.1912
     jahr: "1912"
@@ -11916,7 +11933,6 @@ lectures:
     jahr: "1912"
     ort: Kristiania (Oslo)
     vortragstitel: Tod und Unsterblichkeit im Lichte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 85
   - id: 19120604
     datum: 04.06.1912
@@ -12016,7 +12032,6 @@ lectures:
     jahr: "1912"
     ort: Kristiania (Oslo)
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19120617
     datum: 17.06.1912
     jahr: "1912"
@@ -12289,7 +12304,6 @@ lectures:
     jahr: "1912"
     ort: Berlin
     vortragstitel: Die Polemik der Gegner
-    abdruck: Zuordnung noch offen
   - id: 19121114
     datum: 14.11.1912
     jahr: "1912"
@@ -12604,7 +12618,6 @@ lectures:
     jahr: "1913"
     ort: Klagenfurt
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19130126
     datum: 26.01.1913
     jahr: "1913"
@@ -12637,13 +12650,11 @@ lectures:
     ort: Berlin
     vortragstitel: ""
     anlass: Einleitende Worte zur ersten Generalversammlung der Anthroposophischen Gesellschaft
-    abdruck: Zuordnung noch offen
   - id: 19130203b
     datum: 03.02.1913
     jahr: "1913"
     ort: Berlin
     vortragstitel: Das Wesen der Anthroposphie
-    abdruck: Zuordnung noch offen
   - id: 19130203c
     datum: 03.02.1913
     jahr: "1913"
@@ -12657,13 +12668,11 @@ lectures:
     jahr: "1913"
     ort: Berlin
     vortragstitel: Vom Wesen des Volksliedes
-    abdruck: Zuordnung noch offen
   - id: 19130204a
     datum: 04.02.1913
     jahr: "1913"
     ort: Berlin
     vortragstitel: Skizze eines Lebensabrisses aus Dr. Steiners Jugend
-    abdruck: Zuordnung noch offen
   - id: 19130204b
     datum: 04.02.1913
     jahr: "1913"
@@ -12692,13 +12701,11 @@ lectures:
     jahr: "1913"
     ort: Berlin
     vortragstitel: Über eine zu gründende Handelsgesellschaft «Ceres»
-    abdruck: Zuordnung noch offen
   - id: 19130206b
     datum: 06.02.1913
     jahr: "1913"
     ort: Berlin
     vortragstitel: «Kampf ums Dasein» und «Gegenseitige Hilfe im Tierreich»
-    abdruck: Zuordnung noch offen
   - id: 19130206c
     datum: 06.02.1913
     jahr: "1913"
@@ -12717,7 +12724,6 @@ lectures:
     ort: Berlin
     vortragstitel: ""
     anlass: Erste Abschiedsrede zur ersten Generalversammlung der Anthroposophischen Gesellschaft
-    abdruck: Zuordnung noch offen
   - id: 19130207b
     datum: 07.02.1913
     jahr: "1913"
@@ -12731,27 +12737,23 @@ lectures:
     jahr: "1913"
     ort: Berlin
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19130207d
     datum: 07.02.1913
     jahr: "1913"
     ort: München
     vortragstitel: Die Geisteswissenschaft und die geistige Welt. Ausblicke in die Ziele unserer Zeit
-    abdruck: Zuordnung noch offen
   - id: 19130208a
     datum: 08.02.1913
     jahr: "1913"
     ort: Berlin
     vortragstitel: Über «Das Gralsideal im Lichte naturwissenschaftlicher Beleuchtung»
     anlass: Ausführungen nach einem Vortrag von Dr. F. Peipers
-    abdruck: Zuordnung noch offen
   - id: 19130208b
     datum: 08.02.1913
     jahr: "1913"
     ort: Berlin
     vortragstitel: ""
     anlass: Zweite Abschiedsrede zur ersten Generalversammlung der Anthroposophischen Gesellschaft
-    abdruck: Zuordnung noch offen
   - id: 19130208c
     datum: 08.02.1913
     jahr: "1913"
@@ -12822,7 +12824,6 @@ lectures:
     jahr: "1913"
     ort: Stuttgart
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
     ga: 69e
   - id: 19130219
     datum: 19.02.1913
@@ -12841,14 +12842,12 @@ lectures:
     jahr: "1913"
     ort: Mannheim
     vortragstitel: Die Theosophie in ihrem Verhältnis zum Buddhismus und Christentum
-    abdruck: Zuordnung noch offen
     ga: 85
   - id: 19130225
     datum: 25.02.1913
     jahr: "1913"
     ort: Mannheim
     vortragstitel: Das Leben zwischen Tod und neuer Geburt
-    abdruck: Zuordnung noch offen
   - id: 19130226
     datum: 26.02.1913
     jahr: "1913"
@@ -12860,7 +12859,6 @@ lectures:
     jahr: "1913"
     ort: Heidelberg
     vortragstitel: Das Leben zwischen dem Tode und einer neuen Geburt
-    abdruck: Zuordnung noch offen
   - id: 19130301
     datum: 01.03.1913
     jahr: "1913"
@@ -12950,7 +12948,6 @@ lectures:
     ort: Haag
     reihe: Welche Bedeutung hat die okkulte Entwicklung des Menschen Menschen für seine Hüllen (physischen Leib, Ätherleib, Astralleib) und sein Selbst?
     anlass: Einleitung zum Zyklus
-    abdruck: Zuordnung noch offen
   - id: 19130320b
     datum: 20.03.1913
     jahr: "1913"
@@ -13009,7 +13006,6 @@ lectures:
     jahr: "1913"
     ort: Haag
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19130325a
     datum: 25.03.1913
     jahr: "1913"
@@ -13062,13 +13058,11 @@ lectures:
     jahr: "1913"
     ort: Haag
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19130329c
     datum: 29.03.1913
     jahr: "1913"
     ort: Haag
     vortragstitel: Schlussworte zum Zyklus
-    abdruck: Zuordnung noch offen
   - id: 19130401
     datum: 01.04.1913
     jahr: "1913"
@@ -13100,7 +13094,6 @@ lectures:
     jahr: "1913"
     ort: Berlin
     vortragstitel: Besprechung mit Architekt C. Schmid-Curtius
-    abdruck: Zuordnung noch offen
   - id: 19130411b
     datum: 11.04.1913
     jahr: "1913"
@@ -13126,14 +13119,12 @@ lectures:
     jahr: "1913"
     ort: Essen
     vortragstitel: Über den Verkehr mit den Toten
-    abdruck: Zuordnung noch offen
   - id: 19130425
     datum: 25.04.1913
     jahr: "1913"
     ort: Elberfeld
     vortragstitel: Über den Verkehr mit den Toten
     anlass: Einweihung des Zweigraumes
-    abdruck: Zuordnung noch offen
   - id: 19130427
     datum: 27.04.1913
     jahr: "1913"
@@ -13213,7 +13204,6 @@ lectures:
     jahr: "1913"
     ort: Stuttgart
     vortragstitel: Über Angelegenheiten der Anthroposophischen Gesellschaft
-    abdruck: Zuordnung noch offen
   - id: 19130520b
     datum: 20.05.1913
     jahr: "1913"
@@ -13296,7 +13286,6 @@ lectures:
     jahr: "1913"
     ort: Helsingfors
     vortragstitel: Die Freiheit der Seele im Lichte der theosophischen Erkenntnis
-    abdruck: Zuordnung noch offen
   - id: 19130605a
     datum: 05.06.1913
     jahr: "1913"
@@ -13871,14 +13860,12 @@ lectures:
     ort: Berlin
     vortragstitel: Über eine Broschüre von E. Boldt
     anlass: Bemerkungen zur Diskussion (Über eine Broschüre von E. Boldt)
-    abdruck: Zuordnung noch offen
   - id: 19140119a
     datum: 19.01.1914
     jahr: "1914"
     ort: Berlin
     vortragstitel: Weiteres über die Broschüre von E. Boldt
     anlass: Bemerkungen zur Diskussion (Weiteres über die Broschüre von E. Boldt)
-    abdruck: Zuordnung noch offen
   - id: 19140119b
     datum: 19.01.1914
     jahr: "1914"
@@ -13891,7 +13878,6 @@ lectures:
     jahr: "1914"
     ort: Berlin
     vortragstitel: Pseudowissenschaft der Gegenwart
-    abdruck: Zuordnung noch offen
   - id: 19140120b
     datum: 20.01.1914
     jahr: "1914"
@@ -13924,7 +13910,6 @@ lectures:
     jahr: "1914"
     ort: Berlin
     vortragstitel: Einige Ausführungen über Embryologie im Zusammenhang mit einer Gemäldeausstellung von Frau Peterson
-    abdruck: Zuordnung noch offen
   - id: 19140122
     datum: 22.01.1914
     jahr: "1914"
@@ -13972,7 +13957,6 @@ lectures:
     ort: Berlin
     vortragstitel: Schlusswort zur Generalversammlung
     anlass: 2. Generalversammlung der anthropsophischen Gesellschaft
-    abdruck: Zuordnung noch offen
   - id: 19140127
     datum: 27.01.1914
     jahr: "1914"
@@ -13984,7 +13968,6 @@ lectures:
     jahr: "1914"
     ort: Hannover
     vortragstitel: Das fünfte Evangelium. Der Dornacher Bau
-    abdruck: Zuordnung noch offen
   - id: 19140207b
     datum: 07.02.1914
     jahr: "1914"
@@ -14226,7 +14209,6 @@ lectures:
     jahr: "1914"
     ort: Berlin
     vortragstitel: Marcello Haugen
-    abdruck: Zuordnung noch offen
   - id: 19140425
     datum: 25.04.1914
     jahr: "1914"
@@ -14246,7 +14228,6 @@ lectures:
     jahr: "1914"
     ort: Berlin
     vortragstitel: Marcello Hagen
-    abdruck: Zuordnung noch offen
   - id: 19140428a
     datum: 28.04.1914
     jahr: "1914"
@@ -14258,7 +14239,6 @@ lectures:
     jahr: "1914"
     ort: Berlin
     vortragstitel: Über Traum
-    abdruck: Zuordnung noch offen
   - id: 19140505
     datum: 05.05.1914
     jahr: "1914"
@@ -14344,7 +14324,6 @@ lectures:
     jahr: "1914"
     ort: Dornach
     vortragstitel: Sitzung mit dem Architekten Schmid-Curtius
-    abdruck: Zuordnung noch offen
   - id: 19140607
     datum: 07.06.1914
     jahr: "1914"
@@ -14452,7 +14431,6 @@ lectures:
     jahr: "1914"
     ort: Dornach
     vortragstitel: "Über «Die Pforte der Einweihung». - Anschließend: Samariterkurs, 3. Stunde"
-    abdruck: Zuordnung noch offen
   - id: 19140816
     datum: 16.08.1914
     jahr: "1914"
@@ -14484,19 +14462,16 @@ lectures:
     jahr: "1914"
     ort: Dornach
     vortragstitel: Erinnerungsworte zum Jahrestag der Grundsteinlegung des Dornacher Baues. Die Nationalitätsidee im Völkerleben
-    abdruck: Zuordnung noch offen
   - id: 19140919b
     datum: 19.09.1914
     jahr: "1914"
     ort: Dornach
     vortragstitel: Vortrag am Vorabend des ersten Jahrestages der Grundsteinlegung des Johannesbaus
-    abdruck: Zuordnung noch offen
   - id: 19140920a
     datum: 20.09.1914
     jahr: "1914"
     ort: Dornach
     vortragstitel: Vortrag zum ersten Jahrestag der Grundsteinlegung des Johannesbaus
-    abdruck: Zuordnung noch offen
   - id: 19140920b
     datum: 20.09.1914
     jahr: "1914"
@@ -14618,13 +14593,11 @@ lectures:
     jahr: "1914"
     ort: Hamburg
     vortragstitel: Die gegenwärtigen Ereignisse. Das Wirken Michaels. Die Missionen der europäischen Völker. Der Krieg als Zeit der Prüfung
-    abdruck: Zuordnung noch offen
   - id: 19141103
     datum: 03.11.1914
     jahr: "1914"
     ort: Hamburg
     vortragstitel: Das «Barbaren»-Volk Schillers und Fichtes
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19141105
     datum: 05.11.1914
@@ -14693,14 +14666,12 @@ lectures:
     jahr: "1914"
     ort: München
     vortragstitel: Das «Barbaren»-Volk, Schillers und Fichtes
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19141202
     datum: 02.12.1914
     jahr: "1914"
     ort: München
     vortragstitel: Menschenseele, Schicksal und Tod
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19141203
     datum: 03.12.1914
@@ -14713,7 +14684,6 @@ lectures:
     jahr: "1914"
     ort: Stuttgart
     vortragstitel: Richard Wagners "Ring des Nibelungen" und "Parsifal". Erlösung dem Erlöser. Die Mission Richard Wagners im Zusammenhang mit der V. Kulturepoche
-    abdruck: Zuordnung noch offen
   - id: 19141212
     datum: 12.12.1914
     jahr: "1914"
@@ -14933,7 +14903,6 @@ lectures:
     jahr: "1915"
     ort: Stuttgart
     vortragstitel: Warum nennen «sie» das Volk Fichtes und Schillers ein Barbarenvolk?
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19150216a
     datum: 16.02.1915
@@ -14947,14 +14916,12 @@ lectures:
     jahr: "1915"
     ort: Stuttgart
     vortragstitel: Was ist am Menschenwesen unsterblich?
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19150218
     datum: 18.02.1915
     jahr: "1915"
     ort: Hannover
     vortragstitel: Die verjüngenden Kräfte der deutschen Volksseele
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19150219
     datum: 19.02.1915
@@ -14967,7 +14934,6 @@ lectures:
     jahr: "1915"
     ort: Bremen
     vortragstitel: Die verjüngenden Kräfte der deutschen Volksseele
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19150221
     datum: 21.02.1915
@@ -15014,13 +14980,11 @@ lectures:
     jahr: "1915"
     ort: Berlin
     vortragstitel: Was ist am Menschenwesen unsterblich? (Berlin)
-    abdruck: Zuordnung noch offen
   - id: 19150306
     datum: 06.03.1915
     jahr: "1915"
     ort: Leipzig
     vortragstitel: Die tragende Kraft des deutschen Geistes
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19150307
     datum: 07.03.1915
@@ -15041,7 +15005,6 @@ lectures:
     jahr: "1915"
     ort: Nürnberg
     vortragstitel: Warum nennen sie das Volk Schillers und Fichtes ein Barbarenvolk?
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19150312
     datum: 12.03.1915
@@ -15123,7 +15086,6 @@ lectures:
     jahr: "1915"
     ort: Basel
     vortragstitel: Das Wesen der Geisteswissenschaft und die Erkenntnis der übersinnlichen Welt
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19150410
     datum: 10.04.1915
@@ -15145,7 +15107,6 @@ lectures:
     jahr: "1915"
     ort: Berlin
     vortragstitel: Der Schauplatz der Gedanken als Ergebnis des deutschen Idealismus
-    abdruck: Zuordnung noch offen
   - id: 19150416
     datum: 16.04.1915
     jahr: "1915"
@@ -15188,7 +15149,6 @@ lectures:
     jahr: "1915"
     ort: Wien
     vortragstitel: Die übersinnliche Erkenntnis und ihre stärkende Seelenkraft in unserer schicksaltragenden Zeit
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19150507
     datum: 07.05.1915
@@ -15201,7 +15161,6 @@ lectures:
     jahr: "1915"
     ort: Wien
     vortragstitel: Das Schicksal des Menschen im Lichte der Erkenntnis geistiger Welten
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19150509
     datum: 09.05.1915
@@ -15220,7 +15179,6 @@ lectures:
     jahr: "1915"
     ort: Prag
     vortragstitel: Die übersinnliche Erkenntnis und ihre stärkende Seelenkraft in unserer schicksaltragenden Zeit
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19150515
     datum: 15.05.1915
@@ -15234,7 +15192,6 @@ lectures:
     jahr: "1915"
     ort: Linz
     vortragstitel: Die übersinnliche Erkenntnis und ihre stärkende Seelenkraft in unserer schicksaltragenden Zeit
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19150518
     datum: 18.05.1915
@@ -15299,7 +15256,6 @@ lectures:
     jahr: "1915"
     ort: Elberfeld
     vortragstitel: Warum nennen «sie» das Volk Schillers und Fichtes ein Barbarenvolk ? Eine Betrachtung auf Grundlage der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19150615
     datum: 15.06.1915
@@ -15313,7 +15269,6 @@ lectures:
     jahr: "1915"
     ort: Düsseldorf
     vortragstitel: Die tragende Kraft des deutschen Geistes im Lichte der Geisteswissenschaft und im Hinblick auf unsere schicksaltragende Zeit
-    abdruck: Zuordnung noch offen
     ga: 70a
   - id: 19150617
     datum: 17.06.1915
@@ -15326,7 +15281,6 @@ lectures:
     jahr: "1915"
     ort: Köln
     vortragstitel: Die verjüngende Kraft der deutschen Volksseele im Lichte der Geisteswissenschaft und im Hinblick auf unsere schicksaltragende Zeit
-    abdruck: Zuordnung noch offen
   - id: 19150619
     datum: 19.06.1915
     jahr: "1915"
@@ -15515,7 +15469,6 @@ lectures:
     jahr: "1915"
     ort: Dornach
     vortragstitel: Besprechung des Falles Goesch-Sprengel
-    abdruck: Zuordnung noch offen
   - id: 19150827a
     datum: 27.08.1915
     jahr: "1915"
@@ -15637,7 +15590,6 @@ lectures:
     jahr: "1915"
     ort: Dornach
     vortragstitel: Einleitende Worte zur ersten eurythmischen Darstellung der Satire «Das Lied von der Initiation»
-    abdruck: Zuordnung noch offen
   - id: 19150912b
     datum: 12.09.1915
     jahr: "1915"
@@ -15697,7 +15649,6 @@ lectures:
     jahr: "1915"
     ort: Basel
     vortragstitel: Trauerrede anläßlich des Todes von Frau Gertrud Noss
-    abdruck: Zuordnung noch offen
   - id: 19150925
     datum: 25.09.1915
     jahr: "1915"
@@ -15885,7 +15836,6 @@ lectures:
     jahr: "1915"
     ort: Stuttgart
     vortragstitel: Das Weltbild des deutschen Idealismus. Eine Betrachtung im Hinblick auf unsere schicksaltragende Zeit
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19151126a
     datum: 26.11.1915
@@ -15899,7 +15849,6 @@ lectures:
     jahr: "1915"
     ort: Stuttgart
     vortragstitel: Die ewigen Kräfte der Menschenseele vom Gesichtspunkte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19151128
     datum: 28.11.1915
@@ -15924,7 +15873,6 @@ lectures:
     jahr: "1915"
     ort: München
     vortragstitel: Die ewigen Kräfte der Menschenseele im Lichte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19151202
     datum: 02.12.1915
@@ -15998,7 +15946,7 @@ lectures:
     jahr: "1915"
     ort: Dornach
     vortragstitel: Über alte Weihnachtsspiele und eine verklungene Geistesströmung der Menschheit. Gedenkworte für Sophie Stinde
-    ga: 165,274, GA 261
+    ga: 165,274
   - id: 19151227a
     datum: 27.12.1915
     jahr: "1915"
@@ -16059,7 +16007,6 @@ lectures:
     jahr: "1916"
     ort: Bern
     vortragstitel: Wege zur Erkenntnis der ewigen Kräfte der Menschenseele
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19160109
     datum: 09.01.1916
@@ -16072,7 +16019,6 @@ lectures:
     jahr: "1916"
     ort: Zürich
     vortragstitel: Wege zur Erkenntnis der ewigen Kräfte der Menschenseele
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19160111
     datum: 11.01.1916
@@ -16085,7 +16031,6 @@ lectures:
     jahr: "1916"
     ort: Basel
     vortragstitel: Wie kann die Erforschung der übersinnlichen Wesenheit des Menschen bewirkt werden?
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19160114
     datum: 14.01.1916
@@ -16190,7 +16135,6 @@ lectures:
     jahr: "1916"
     ort: Hamburg
     vortragstitel: Das Weltbild des deutschen Idealismus
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19160216
     datum: 16.02.1916
@@ -16209,14 +16153,12 @@ lectures:
     jahr: "1916"
     ort: Kassel
     vortragstitel: Das Weltbild des deutschen Idealismus. Eine Betrachtung im Hinblick auf unsere schicksaltragende Zeit
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19160221
     datum: 21.02.1916
     jahr: "1916"
     ort: Leipzig
     vortragstitel: Zur deutschen Gedankenentwicklung. Ein vergessenes Streben nach Geisteswissenschaft innerhalb derselben. Eine vergessene Geistesströmung
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19160222
     datum: 22.02.1916
@@ -16241,27 +16183,23 @@ lectures:
     jahr: "1916"
     ort: Hannover
     vortragstitel: Zur deutschen Gedankenentwicklung. Ein vergessenes Streben nach Geisteswissenschaft innerhalb derselben
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19160301
     datum: 01.03.1916
     jahr: "1916"
     ort: Hannover
     vortragstitel: Das Leben zwischen Tod und neuer Geburt. Die Verbindung zwischen Lebenden und Toten. Der gegenwärtige Materialismus und die Aufgabe der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
   - id: 19160302
     datum: 02.03.1916
     jahr: "1916"
     ort: Bremen
     vortragstitel: Ein vergessenes Streben nach Geisteswissenschaft innerhalb der deutschen Gedankenentwicklung
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19160303
     datum: 03.03.1916
     jahr: "1916"
     ort: Bremen
     vortragstitel: Das Leben des Menschen zwischen Tod und neuer Geburt. Das materialistische Denken der Gegenwart und seine Überwindung durch die Geisteswissenschaft
-    abdruck: Zuordnung noch offen
   - id: 19160307
     datum: 07.03.1916
     jahr: "1916"
@@ -16281,14 +16219,12 @@ lectures:
     jahr: "1916"
     ort: Stuttgart
     vortragstitel: Ein vergessenes Streben nach Geisteswissenschaft innerhalb der deutschen Gedankenentwicklung
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19160314
     datum: 14.03.1916
     jahr: "1916"
     ort: Stuttgart
     vortragstitel: Wie werden die unsterblichen Kräfte der Menschenseele entwickelt ?
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19160315
     datum: 15.03.1916
@@ -16301,7 +16237,6 @@ lectures:
     jahr: "1916"
     ort: München
     vortragstitel: Zur deutschen Gedankenentwicklung. Ein vergessenes Streben nach Geisteswissenschaft in derselben
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19160318
     datum: 18.03.1916
@@ -16314,7 +16249,6 @@ lectures:
     jahr: "1916"
     ort: München
     vortragstitel: Gesundes Seelenleben und Geistesforschung
-    abdruck: Zuordnung noch offen
     ga: 70b
   - id: 19160320
     datum: 20.03.1916
@@ -16448,7 +16382,7 @@ lectures:
     ort: Berlin
     vortragstitel: Weltwesen und Ichheit. Die zwölf Sinne des Menschen. Einleitung Gedenkworte für Helmuth Graf von Moltke
     reihe: Weltwesen und Ichheit
-    ga: 169,261, GA 265
+    ga: 169,261
     zyklus: 43
   - id: 19160627
     datum: 27.06.1916
@@ -16642,7 +16576,6 @@ lectures:
     ort: Dornach
     vortragstitel: Zum Fall Goesch-Sprengel
     anlass: Nachwort nach dem Mitgliedervortrag
-    abdruck: Zuordnung noch offen
   - id: 19160923
     datum: 23.09.1916
     jahr: "1916"
@@ -16692,14 +16625,12 @@ lectures:
     jahr: "1916"
     ort: Basel
     vortragstitel: Das übersinnliche Leben des Ewigen in der Menschenseele vom Gesichtspunkte der Geisteswissenschaft (Anthroposophie)
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19161006
     datum: 06.10.1916
     jahr: "1916"
     ort: Basel
     vortragstitel: Die Menschenrätsel in der Philosophie und in der Geisteswissenschaft Anthroposophie
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19161007
     datum: 07.10.1916
@@ -16719,7 +16650,6 @@ lectures:
     jahr: "1916"
     ort: Zürich
     vortragstitel: Die Menschenrätsel in der Philosophie und in der Geistesforschung Anthroposophie
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19161010
     datum: 10.10.1916
@@ -16756,7 +16686,6 @@ lectures:
     jahr: "1916"
     ort: Zürich
     vortragstitel: Menschenseele und Menschenleib vom Gesichtspunkte der Geistesforschung Anthroposophie
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19161024
     datum: 24.10.1916
@@ -16769,7 +16698,6 @@ lectures:
     jahr: "1916"
     ort: St. Gallen
     vortragstitel: Anthroposophie und die menschlichen Lebensrätsel
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19161026
     datum: 26.10.1916
@@ -16850,7 +16778,6 @@ lectures:
     jahr: "1916"
     ort: Bern
     vortragstitel: Die menschlichen Seelenrätsel vom Gesichts punkte der Geisteswissenschaft Anthroposophie
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19161112
     datum: 12.11.1916
@@ -16919,7 +16846,6 @@ lectures:
     jahr: "1916"
     ort: Zürich
     vortragstitel: Menschenseele und Menschenschicksal im Verhältnis zur Weltentwicklung vom Gesichts punkte der Geisteswissenschaft Anthroposophie
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19161203
     datum: 03.12.1916
@@ -16939,7 +16865,6 @@ lectures:
     jahr: "1916"
     ort: Basel
     vortragstitel: Menschenseele und Menschenschicksal im Verhältnis zur Weltentwicklung vom Gesichtspunkte der Geisteswissenschaft Anthroposophie
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19161209
     datum: 09.12.1916
@@ -17199,7 +17124,6 @@ lectures:
     jahr: "1917"
     ort: Stuttgart
     vortragstitel: Der Mensch als Geist- und Seelenwesen. Geisteswissenschaftliche Betrachtung im Hinblick auf unsere schicksaltragende Zeit
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19170227
     datum: 27.02.1917
@@ -17347,7 +17271,6 @@ lectures:
     jahr: "1917"
     ort: Berlin
     vortragstitel: Gesellschaftsauseinandersetzung Besprechung über Gesellschaftsfragen
-    abdruck: Zuordnung noch offen
   - id: 19170511a
     datum: 11.05.1917
     jahr: "1917"
@@ -17372,7 +17295,6 @@ lectures:
     jahr: "1917"
     ort: Stuttgart
     vortragstitel: Seelenunsterblichkeit, Schicksalskräfte und menschlicher Lebenslauf
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19170513
     datum: 13.05.1917
@@ -17385,7 +17307,6 @@ lectures:
     jahr: "1917"
     ort: Stuttgart
     vortragstitel: Menschenseele und Menschenleib in Natur- und Geisterkenntnis
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19170515
     datum: 15.05.1917
@@ -17398,7 +17319,6 @@ lectures:
     jahr: "1917"
     ort: München
     vortragstitel: Seelenunsterblichkeit, Schicksalskräfte und menschlicher Lebenslauf
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19170519
     datum: 19.05.1917
@@ -17417,14 +17337,12 @@ lectures:
     jahr: "1917"
     ort: München
     vortragstitel: Seelenrätsel und Weltenrätsel. Forschung und Anschauung im deutschen Geistesleben
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19170523
     datum: 23.05.1917
     jahr: "1917"
     ort: München
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19170529a
     datum: 29.05.1917
     jahr: "1917"
@@ -17439,37 +17357,31 @@ lectures:
     ort: Berlin
     vortragstitel: Über Gesellschaftsfragen
     anlass: Nachwort nach dem Mitglieder-Vortrag
-    abdruck: Zuordnung noch offen
   - id: 19170602a
     datum: 02.06.1917
     jahr: "1917"
     ort: Hamburg
     vortragstitel: Gesellschaftsfragen
-    abdruck: Zuordnung noch offen
   - id: 19170602b
     datum: 02.06.1917
     jahr: "1917"
     ort: Hamburg
     vortragstitel: Herman Grimm und die Veränderung der Zeit in der Gegenwart. Verkennung der Trinität als Krankheit, Unglück, Blindheit. Ahriman
-    abdruck: Zuordnung noch offen
   - id: 19170603a
     datum: 03.06.1917
     jahr: "1917"
     ort: Hamburg
     vortragstitel: Die seelische Entwicklung des einzelnen Menschen. Das Erleben des Geistigen in der nachatlantischen Zeit. Das Jüngerwerden der Menschheit
-    abdruck: Zuordnung noch offen
   - id: 19170603b
     datum: 03.06.1917
     jahr: "1917"
     ort: Hamburg
     vortragstitel: Gesellschaftsfragen
-    abdruck: Zuordnung noch offen
   - id: 19170604
     datum: 04.06.1917
     jahr: "1917"
     ort: Hamburg
     vortragstitel: Seelenunsterblichkeit, Schicksalskräfte und menschlicher Lebenslauf
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19170605a
     datum: 05.06.1917
@@ -17477,7 +17389,6 @@ lectures:
     ort: Berlin
     vortragstitel: Über Gesellschaftsfragen
     anlass: Nachwort nach dem Mitglieder-Vortrag
-    abdruck: Zuordnung noch offen
   - id: 19170605b
     datum: 05.06.1917
     jahr: "1917"
@@ -17491,40 +17402,34 @@ lectures:
     jahr: "1917"
     ort: Leipzig
     vortragstitel: Schwierigkeiten der Selbsterkenntnis. Die Entwicklung des Seelisch-Geistigen des Menschen in der nachatlantischen Zeit. Das Jüngerwerden der Menschheit. Über die Gegnerschaft
-    abdruck: Zuordnung noch offen
   - id: 19170611
     datum: 11.06.1917
     jahr: "1917"
     ort: Leipzig
     vortragstitel: Seelenunsterblichkeit, Schicksalskräfte und menschlicher Lebenslauf. Geisteswissenschaftliche Ergebnisse und deren Betrachtung im Hinblick auf unsere schicksaltragende Zeit
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19170612
     datum: 12.06.1917
     jahr: "1917"
     ort: Hannover
     vortragstitel: Die tieferen Entwicklungsimpulse der Menschheit. Die Entwicklung des Geistig Seelischen im Menschen in der nach atlantischen Zeit
-    abdruck: Zuordnung noch offen
   - id: 19170613
     datum: 13.06.1917
     jahr: "1917"
     ort: Hannover
     vortragstitel: Seelenunsterblichkeit, Schicksalskräfte und menschlicher Lebenslauf. Geisteswissenschaftliche Ergebnisse und deren Betrachtung im Hinblick auf unsere schicksaltragende Zeit
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19170616
     datum: 16.06.1917
     jahr: "1917"
     ort: Bremen
     vortragstitel: Seelenunsterblichkeit, Schicksalskräfte und menschlicher Lebenslauf. Geisteswissenschaftliche Ergebnisse und deren Betrachtung im Hinblick auf unsere schicksaltragende Zeit
-    abdruck: Zuordnung noch offen
     ga: 71a
   - id: 19170617
     datum: 17.06.1917
     jahr: "1917"
     ort: Bremen
     vortragstitel: Das Wirken Schellings. Das Jüngerwerden der Menschheit in den verschiedenen Epochen der nachatlantischen Zeit. Gegner der Anthroposophie
-    abdruck: Zuordnung noch offen
   - id: 19170619
     datum: 19.06.1917
     jahr: "1917"
@@ -18126,14 +18031,12 @@ lectures:
     jahr: "1918"
     ort: Nürnberg
     vortragstitel: Leib, Seele und Geist des Menschen. Ergebnisse aus den Forschungen der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180212
     datum: 12.02.1918
     jahr: "1918"
     ort: Nürnberg
     vortragstitel: Die Offenbarungen des Unbewußten im Seelenleben vom geisteswissenschaftlichen Standpunkt
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180214
     datum: 14.02.1918
@@ -18152,7 +18055,6 @@ lectures:
     jahr: "1918"
     ort: München
     vortragstitel: Der Mensch als Geist- und Seelenwesen. Forschungen vom Gesichtspunkte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180217a
     datum: 17.02.1918
@@ -18171,7 +18073,6 @@ lectures:
     jahr: "1918"
     ort: München
     vortragstitel: Die Offenbarungen aus dem Unbewußten
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180219
     datum: 19.02.1918
@@ -18202,7 +18103,6 @@ lectures:
     jahr: "1918"
     ort: Stuttgart
     vortragstitel: Der Mensch als Geist- und Seelenwesen. Forschungen vom Gesichtspunkte der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180226a
     datum: 26.02.1918
@@ -18216,7 +18116,6 @@ lectures:
     jahr: "1918"
     ort: Stuttgart
     vortragstitel: Die Offenbarungen des Unbewußten im Seelen leben vom geisteswissenschaftlichen Gesichtspunkte
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180228
     datum: 28.02.1918
@@ -18279,7 +18178,6 @@ lectures:
     jahr: "1918"
     ort: Berlin
     vortragstitel: Das Leben in der Kunst und die Kunst im Leben vom geisteswissenschaftlichen Gesichtspunkte
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180330
     datum: 30.03.1918
@@ -18350,14 +18248,12 @@ lectures:
     jahr: "1918"
     ort: Stuttgart
     vortragstitel: Der übersinnliche Mensch und die Fragen der Willensfreiheit und Unsterblichkeit nach Ergebnissen der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180425
     datum: 25.04.1918
     jahr: "1918"
     ort: Stuttgart
     vortragstitel: Die Rätsel des geschichtlichen Lebens der Menschheit nach Ergebnissen der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180426
     datum: 26.04.1918
@@ -18383,7 +18279,6 @@ lectures:
     jahr: "1918"
     ort: München
     vortragstitel: Der übersinnliche Mensch und die Fragen der Willensfreiheit und Seelenunsterblichkeit nach Ergebnissen der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180502
     datum: 02.05.1918
@@ -18396,7 +18291,6 @@ lectures:
     jahr: "1918"
     ort: München
     vortragstitel: Der Mensch und das geschichtliche und moralische Leben der Menschheit nach Ergebnissen der Geisteswissenschaft
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180504
     datum: 04.05.1918
@@ -18421,14 +18315,12 @@ lectures:
     jahr: "1918"
     ort: Leipzig
     vortragstitel: Der übersinnliche Mensch und die Fragen der Willensfreiheit und Seelenunsterblichkeit
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180512
     datum: 12.05.1918
     jahr: "1918"
     ort: Leipzig
     vortragstitel: Der Verkehr mit den Toten. Das Hereinwirken der Toten in die physische Welt. Kopf und Herz. Luziferische und ahrimanische Einflüsse in Vergangenheit und Gegenwart
-    abdruck: Zuordnung noch offen
   - id: 19180514
     datum: 14.05.1918
     jahr: "1918"
@@ -18450,33 +18342,28 @@ lectures:
     jahr: "1918"
     ort: Wien
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19180527
     datum: 27.05.1918
     jahr: "1918"
     ort: Wien
     vortragstitel: Wie kann man wissenschaftlich das übersinnliche Leben und Wesen der Menschenseele erkennen? Ergebnisse geistiger Wirklichkeitsforschung
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180528
     datum: 28.05.1918
     jahr: "1918"
     ort: Wien
     vortragstitel: Aphoristische Bemerkungen über die Beziehung der Anthroposophie zur Wissenschaft
-    abdruck: Zuordnung noch offen
   - id: 19180529
     datum: 29.05.1918
     jahr: "1918"
     ort: Wien
     vortragstitel: Das geschichtliche Leben der Menschheit im Lichte übersinnlicher Wirklichkeitsforschung
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180530
     datum: 30.05.1918
     jahr: "1918"
     ort: Wien
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19180601
     datum: 01.06.1918
     jahr: "1918"
@@ -18508,7 +18395,6 @@ lectures:
     jahr: "1918"
     ort: Prag
     vortragstitel: Wie kann man das übersinnliche Leben und Wesen der Menschenseele erkennen?
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180625
     datum: 25.06.1918
@@ -18531,7 +18417,6 @@ lectures:
     ort: Hamburg
     vortragstitel: Mitteleuropa zwischen West und Ost. Spiritueller Goetheanismus
     anlass: Schlußwort zum Vortrag von Frl. M. Scholl
-    abdruck: Zuordnung noch offen
   - id: 19180630b
     datum: 30.06.1918
     jahr: "1918"
@@ -18543,7 +18428,6 @@ lectures:
     jahr: "1918"
     ort: Hamburg
     vortragstitel: Die wissenschaftliche Erkenntnis des Übersinnlichen und die wahre Wirklichkeit des menschlichen Lebens
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19180703
     datum: 03.07.1918
@@ -18930,7 +18814,6 @@ lectures:
     jahr: "1918"
     ort: Basel
     vortragstitel: Sittliches, soziales und religiöses Leben im Lichte einer übersinnlichen Welterkenntnis
-    abdruck: Zuordnung noch offen
     ga: 71b
   - id: 19181109
     datum: 09.11.1918
@@ -19101,7 +18984,6 @@ lectures:
     jahr: "1918"
     ort: Dornach
     vortragstitel: "Einleitende Worte zur eurythmischen Aufführung von Szenen aus Goethes «Faust»: Klassische Walpurgisnacht"
-    abdruck: Zuordnung noch offen
   - id: 19181225b
     datum: 25.12.1918
     jahr: "1918"
@@ -19180,7 +19062,6 @@ lectures:
     jahr: "1919"
     ort: Dornach
     vortragstitel: Besprechung des Falles Englert. Mitgliederversammlung Bauverein
-    abdruck: Zuordnung noch offen
   - id: 19190114
     datum: 14.01.1919
     jahr: "1919"
@@ -19193,7 +19074,6 @@ lectures:
     jahr: "1919"
     ort: Dornach
     vortragstitel: Einleitende Worte zur Aufführung der Szene «Ägäisches Meer» aus «Faust» II. Teil vor Gästen (deutschen Internierten)
-    abdruck: Zuordnung noch offen
     ga: 85
   - id: 19190117
     datum: 17.01.1919
@@ -19214,7 +19094,6 @@ lectures:
     jahr: "1919"
     ort: Dornach
     vortragstitel: Ansprache vor der klassischen Walpurgisnacht, Faust
-    abdruck: Zuordnung noch offen
     ga: 85
   - id: 19190119b
     datum: 19.01.1919
@@ -19239,7 +19118,6 @@ lectures:
     jahr: "1919"
     ort: ""
     vortragstitel: Gespräch mit Boos und anderen
-    abdruck: Zuordnung noch offen
   - id: 19190125c
     datum: 25.01.1919
     jahr: "1919"
@@ -19445,7 +19323,6 @@ lectures:
     jahr: "1919"
     ort: Dornach
     vortragstitel: Einleitende Worte vor dem Mitglieder-Vortrag. Worte vor dem Vortrag
-    abdruck: Zuordnung noch offen
   - id: 19190301b
     datum: 01.03.1919
     jahr: "1919"
@@ -19469,7 +19346,6 @@ lectures:
     jahr: "1919"
     ort: Dornach
     vortragstitel: Worte nach dem Vortrag
-    abdruck: Zuordnung noch offen
   - id: 19190308
     datum: 08.03.1919
     jahr: "1919"
@@ -19502,7 +19378,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19190315
     datum: 15.03.1919
     jahr: "1919"
@@ -19545,7 +19420,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19190323b
     datum: 23.03.1919
     jahr: "1919"
@@ -19558,14 +19432,12 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung. 3. Öffentliche Dornacher Eurythmieaufführung
-    abdruck: Zuordnung noch offen
   - id: 19190328a
     datum: 28.03.1919
     jahr: "1919"
     ort: Dornach
     vortragstitel: Worte vor dem Vortrag
     anlass: Worte vor dem Vortrag
-    abdruck: Zuordnung noch offen
   - id: 19190328b
     datum: 28.03.1919
     jahr: "1919"
@@ -19718,7 +19590,6 @@ lectures:
     jahr: "1919"
     ort: Stuttgart
     vortragstitel: Komiteebesprechung. Komitee des Aufrufs "An das deutsche Volk und an die Kulturwelt"
-    abdruck: Zuordnung noch offen
   - id: 19190427b
     datum: 27.04.1919
     jahr: "1919"
@@ -19738,20 +19609,17 @@ lectures:
     ort: Stuttgart
     vortragstitel: Proletarische Forderungen und deren künftige praktische Verwirklichung I
     anlass: Vortrag für Arbeiter und Angestellte der Waldorf-Astoria-Zigarettenfabrik A.G.
-    abdruck: Zuordnung noch offen
   - id: 19190430a
     datum: 30.04.1919
     jahr: "1919"
     ort: Stuttgart
     vortragstitel: Einleitende Worte vor einer Aufführung eurythmischer Kunst für Arbeiter und Angestellte der Waldorf-Astoria-Zigarettenfabrik A.G.
-    abdruck: Zuordnung noch offen
   - id: 19190430b
     datum: 30.04.1919
     jahr: "1919"
     ort: Stuttgart
     vortragstitel: Proletarische Forderungen und deren künftige praktische Verwirklichung II
     anlass: Vortrag für Arbeiter und Angestellte der Waldorf-Astoria-Zigarettenfabrik A.G.
-    abdruck: Zuordnung noch offen
   - id: 19190501
     datum: 01.05.1919
     jahr: "1919"
@@ -19811,7 +19679,6 @@ lectures:
     ort: Stuttgart
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19190522
     datum: 22.05.1919
     jahr: "1919"
@@ -19845,7 +19712,6 @@ lectures:
     ort: Stuttgart
     vortragstitel: Beratung über einen zu gründenden Kulturrat
     anlass: Versammlung des Bundes zur Beratung über einen zu gründenden Kulturrat unter Vorsitz Dr. Carl Unger mit einer Einleitung von Rudolf Steiner (laut Notizbuch Nr. 226)
-    abdruck: Zuordnung noch offen
   - id: 19190530b
     datum: 30.05.1919
     jahr: "1919"
@@ -19886,7 +19752,6 @@ lectures:
     jahr: "1919"
     ort: Reutlingen
     vortragstitel: ""
-    abdruck: Zuordnung noch offen
   - id: 19190605
     datum: 05.06.1919
     jahr: "1919"
@@ -19900,7 +19765,6 @@ lectures:
     ort: Stuttgart
     vortragstitel: Über einen zu gründenden Kulturrat
     anlass: Versammlung des Bundes für Dreigliederung des sozialen Organismus. Beratung über einen zu gründenden Kulturrat
-    abdruck: Zuordnung noch offen
   - id: 19190607b
     datum: 07.06.1919
     jahr: "1919"
@@ -19971,7 +19835,6 @@ lectures:
     ort: Stuttgart
     vortragstitel: Versammlung des Bundes für Dreigliederung des sozialen Organismus. Beratung über einen zu gründenden Kulturrat
     anlass: Versammlung des Bundes für Dreigliederung des sozialen Organismus. Beratung über einen zu gründenden Kulturrat
-    abdruck: Zuordnung noch offen
   - id: 19190621b
     datum: 21.06.1919
     jahr: "1919"
@@ -20093,7 +19956,6 @@ lectures:
     ort: Mannheim
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19190728
     datum: 28.07.1919
     jahr: "1919"
@@ -20127,7 +19989,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19190810b
     datum: 10.08.1919
     jahr: "1919"
@@ -20641,7 +20502,6 @@ lectures:
     ort: Berlin
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19190918
     datum: 18.09.1919
     jahr: "1919"
@@ -20676,20 +20536,17 @@ lectures:
     ort: Dresden
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
     ga: 85
   - id: 19190921b
     datum: 21.09.1919
     jahr: "1919"
     ort: Dresden
     vortragstitel: Der Weg der inneren Schulung und die Gefahren des Okkultismus Spiritismus, Mediumschaft und anderes
-    abdruck: Zuordnung noch offen
   - id: 19190921c
     datum: 21.09.1919
     jahr: "1919"
     ort: Dresden
     vortragstitel: Das Jüngerwerden der Menschheit. Das Verhältnis zu den Toten. Westen, Mitte und Osten. Die Dreigliederung des sozialen Organismus
-    abdruck: Zuordnung noch offen
   - id: 19190924
     datum: 24.09.1919
     jahr: "1919"
@@ -20709,7 +20566,6 @@ lectures:
     ort: Stuttgart
     vortragstitel: Beratung über den zu gründenden Kulturrat
     anlass: Versammlung des Bundes für Dreigliederung des Zur Diskussion
-    abdruck: Zuordnung noch offen
   - id: 19190925c
     datum: 25.09.1919
     jahr: "1919"
@@ -20729,13 +20585,11 @@ lectures:
     jahr: "1919"
     ort: Stuttgart
     vortragstitel: Über "Techniker-Kammern"
-    abdruck: Zuordnung noch offen
   - id: 19190927
     datum: 27.09.1919
     jahr: "1919"
     ort: Stuttgart
     vortragstitel: Kulturrat-Sitzung
-    abdruck: Zuordnung noch offen
   - id: 19190928
     datum: 28.09.1919
     jahr: "1919"
@@ -20754,13 +20608,11 @@ lectures:
     jahr: "1919"
     ort: Dornach
     vortragstitel: Interne Besprechung über Dreigliederungsfragen
-    abdruck: Zuordnung noch offen
   - id: 19191004a
     datum: 04.10.1919
     jahr: "1919"
     ort: Dornach
     vortragstitel: Über Dreigliederungsbewegung. Über internationale Dreigliederungsbewegung
-    abdruck: Zuordnung noch offen
   - id: 19191004b
     datum: 04.10.1919
     jahr: "1919"
@@ -20785,7 +20637,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19191011b
     datum: 11.10.1919
     jahr: "1919"
@@ -20804,7 +20655,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19191012c
     datum: 12.10.1919
     jahr: "1919"
@@ -20861,6 +20711,7 @@ lectures:
     vortragstitel: Die soziale Frage als Geistes-, Rechts- und Wirtschaftsfrage
     reihe: Soziale Zukunft
     ga: 332a
+    ragkeep: 19191024_Zürich_Soziale_Zukunft_Die_soziale_Frage_als_Geistes-,_Rechts-_und_Wirtschaftsfrage.html
   - id: 19191025
     datum: 25.10.1919
     jahr: "1919"
@@ -20868,6 +20719,7 @@ lectures:
     vortragstitel: Das Wirtschaften auf assoziativer Grundlage. Die Umwandlung des Marktes. Preisgestaltung. Geld- und Steuerwesen. Kredit
     reihe: Soziale Zukunft
     ga: 332a
+    ragkeep: 19191025_Zürich_Soziale_Zukunft_Das_Wirtschaften_auf_assoziativer_Grundlage._Die_Umwandlung_des_Marktes._Preisgestaltung._Geld-_und_Steuerwesen._Kredit.html
   - id: 19191026
     datum: 26.10.1919
     jahr: "1919"
@@ -20875,6 +20727,7 @@ lectures:
     vortragstitel: "Rechtsfragen: Aufgabe und Grenze der Demokratie. Öffentliche Rechtsverhältnisse und Strafrechtspflege"
     reihe: Soziale Zukunft
     ga: 332a
+    ragkeep: 19191026_Zürich_Soziale_Zukunft_Rechtsfragen_Aufgabe_und_Grenze_der_Demokratie._Öffentliche_Rechtsverhältnisse_und_Strafrechtspflege.html
   - id: 19191027
     datum: 27.10.1919
     jahr: "1919"
@@ -20888,6 +20741,7 @@ lectures:
     vortragstitel: "Geistesfragen: Geisteswissenschaft Kunst - Wissenschaft - Religion. Erziehungswesen. Soziale Kunst"
     reihe: Soziale Zukunft
     ga: 332a
+    ragkeep: 19191028_Zürich_Soziale_Zukunft_Geistesfragen_Geisteswissenschaft_Kunst_-_Wissenschaft_-_Religion._Erziehungswesen._Soziale_Kunst.html
   - id: 19191029
     datum: 29.10.1919
     jahr: "1919"
@@ -20895,6 +20749,7 @@ lectures:
     vortragstitel: Die Zusammenwirkung des Geistes-, Rechts- und Wirtschaftslebens zum einheitlichen dreigegliederten sozialen Organismus
     reihe: Soziale Zukunft
     ga: 332a
+    ragkeep: 19191029_Zürich_Soziale_Zukunft_Die_Zusammenwirkung_des_Geistes-,_Rechts-_und_Wirtschaftslebens_zum_einheitlichen_dreigegliederten_sozialen_Organismus.html
   - id: 19191030
     datum: 30.10.1919
     jahr: "1919"
@@ -20902,13 +20757,13 @@ lectures:
     vortragstitel: Das nationale und internationale Leben im dreigliedrigen sozialen Organismus
     reihe: Soziale Zukunft
     ga: 332a
+    ragkeep: 19191030_Zürich_Soziale_Zukunft_Das_nationale_und_internationale_Leben_im_dreigliedrigen_sozialen_Organismus.html
   - id: 19191031
     datum: 31.10.1919
     jahr: "1919"
     ort: Zürich
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19191101
     datum: 01.11.1919
     jahr: "1919"
@@ -20921,7 +20776,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19191102b
     datum: 02.11.1919
     jahr: "1919"
@@ -20978,14 +20832,12 @@ lectures:
     ort: Dornach
     vortragstitel: Über Gesellschaftsangelegenheiten
     anlass: Nachwort nach dem Mitglieder-Vortrag
-    abdruck: Zuordnung noch offen
   - id: 19191115a
     datum: 15.11.1919
     jahr: "1919"
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19191115b
     datum: 15.11.1919
     jahr: "1919"
@@ -21032,7 +20884,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19191123b
     datum: 23.11.1919
     jahr: "1919"
@@ -21072,7 +20923,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19191129b
     datum: 29.11.1919
     jahr: "1919"
@@ -21086,7 +20936,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19191130b
     datum: 30.11.1919
     jahr: "1919"
@@ -21112,7 +20961,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19191207b
     datum: 07.12.1919
     jahr: "1919"
@@ -21384,7 +21232,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung und zum Paradeisspiel
-    abdruck: Zuordnung noch offen
   - id: 19200110b
     datum: 10.01.1920
     jahr: "1920"
@@ -21449,7 +21296,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200124b
     datum: 24.01.1920
     jahr: "1920"
@@ -21496,7 +21342,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200201b
     datum: 01.02.1920
     jahr: "1920"
@@ -21515,7 +21360,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200207b
     datum: 07.02.1920
     jahr: "1920"
@@ -21528,7 +21372,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200208b
     datum: 08.02.1920
     jahr: "1920"
@@ -21567,7 +21410,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200215b
     datum: 15.02.1920
     jahr: "1920"
@@ -21593,7 +21435,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200221b
     datum: 21.02.1920
     jahr: "1920"
@@ -21606,7 +21447,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200222b
     datum: 22.02.1920
     jahr: "1920"
@@ -21735,7 +21575,6 @@ lectures:
     ort: Stuttgart
     vortragstitel: Besprechung nach dem Vortrag des Herrn Dr. Müller «Methoden in der Mathematik»
     anlass: Besprechung nach dem Vortrag des Herrn Dr. Müller «Methoden in der Mathematik»
-    abdruck: Zuordnung noch offen
   - id: 19200309a
     datum: 09.03.1920
     jahr: "1920"
@@ -21791,7 +21630,6 @@ lectures:
     jahr: "1920"
     ort: Stuttgart
     vortragstitel: Versammlung vor der Gründung der Aktiengesellschaft «Der Kommende Tag»
-    abdruck: Zuordnung noch offen
   - id: 19200311e
     datum: 11.03.1920
     jahr: "1920"
@@ -21832,7 +21670,6 @@ lectures:
     ort: Stuttgart
     vortragstitel: ""
     anlass: Beantwortung dreier von Dr. Herberg gestellter Fragen
-    abdruck: Zuordnung noch offen
   - id: 19200313d
     datum: 13.03.1920
     jahr: "1920"
@@ -21971,7 +21808,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200327c
     datum: 27.03.1920
     jahr: "1920"
@@ -21993,7 +21829,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200328c
     datum: 28.03.1920
     jahr: "1920"
@@ -22120,7 +21955,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200405c
     datum: 05.04.1920
     jahr: "1920"
@@ -22185,7 +22019,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200410b
     datum: 10.04.1920
     jahr: "1920"
@@ -22324,14 +22157,12 @@ lectures:
     jahr: "1920"
     ort: Dornach
     vortragstitel: Führung durch das Goetheanum für die Besucher der «Schweizer Mustermesse»
-    abdruck: Zuordnung noch offen
   - id: 19200427b
     datum: 27.04.1920
     jahr: "1920"
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung für die Besucher der «Schweizer Mustermesse»
-    abdruck: Zuordnung noch offen
   - id: 19200428
     datum: 28.04.1920
     jahr: "1920"
@@ -22352,7 +22183,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200501b
     datum: 01.05.1920
     jahr: "1920"
@@ -22433,7 +22263,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200508b
     datum: 08.05.1920
     jahr: "1920"
@@ -22459,9 +22288,8 @@ lectures:
     datum: 09.05.1920
     jahr: "1920"
     ort: Dornach
-    vortragstitel: Gründungssitzung Verein Goetheanismus 
+    vortragstitel: Gründungssitzung Verein Goetheanismus
     reihe: Gründungssitzung
-    abdruck: Zuordnung noch offen
   - id: 19200510
     datum: 10.05.1920
     jahr: "1920"
@@ -22544,7 +22372,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200523b
     datum: 23.05.1920
     jahr: "1920"
@@ -22572,7 +22399,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung für den Evangelischen Lehrerverein von Baselland und Baselstadt
-    abdruck: Zuordnung noch offen
   - id: 19200530
     datum: 30.05.1920
     jahr: "1920"
@@ -22773,7 +22599,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200717b
     datum: 17.07.1920
     jahr: "1920"
@@ -22786,7 +22611,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200718b
     datum: 18.07.1920
     jahr: "1920"
@@ -22900,7 +22724,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200808b
     datum: 08.08.1920
     jahr: "1920"
@@ -22926,7 +22749,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200815b
     datum: 15.08.1920
     jahr: "1920"
@@ -22952,7 +22774,6 @@ lectures:
     ort: Dornach
     vortragstitel: Gesellschaft Gegnerisches
     anlass: nach dem Mitglieder-Vortrag
-    abdruck: Zuordnung noch offen
   - id: 19200821
     datum: 21.08.1920
     jahr: "1920"
@@ -22965,7 +22786,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200822b
     datum: 22.08.1920
     jahr: "1920"
@@ -22997,7 +22817,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200829b
     datum: 29.08.1920
     jahr: "1920"
@@ -23029,7 +22848,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200905
     datum: 05.09.1920
     jahr: "1920"
@@ -23068,7 +22886,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19200912b
     datum: 12.09.1920
     jahr: "1920"
@@ -23165,7 +22982,6 @@ lectures:
     jahr: "1920"
     ort: Dornach
     vortragstitel: Zusammenkunft zur Vorbereitung der anthroposophischen Hochschulkurse
-    abdruck: Zuordnung noch offen
   - id: 19200926a
     datum: 26.09.1920
     jahr: "1920"
@@ -23215,7 +23031,6 @@ lectures:
     jahr: "1920"
     ort: Dornach
     vortragstitel: Besprechung nach den Vorträgen von Herrn H. von Baravalle «Grundprobleme der Physik im Lichte anthroposophischer Erkenntnis»
-    abdruck: Zuordnung noch offen
   - id: 19200929a
     datum: 29.09.1920
     jahr: "1920"
@@ -23295,7 +23110,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19201002d
     datum: 02.10.1920
     jahr: "1920"
@@ -23334,7 +23148,6 @@ lectures:
     jahr: "1920"
     ort: Dornach
     vortragstitel: Besprechung nach den Vorträgen von Herrn Dr. E. Kolisko «Hypothesenfreie Chemie im Sinne der Geisteswissenschaft»
-    abdruck: Zuordnung noch offen
   - id: 19201006b
     datum: 06.10.1920
     jahr: "1920"
@@ -23401,7 +23214,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19201009d
     datum: 09.10.1920
     jahr: "1920"
@@ -23423,7 +23235,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19201010c
     datum: 10.10.1920
     jahr: "1920"
@@ -23457,14 +23268,12 @@ lectures:
     jahr: "1920"
     ort: Dornach
     vortragstitel: Einleitung zu den Mitteilungen über die «Futurum A.G.» und den «Kommenden Tag» von Herrn Arnold Ith und Herrn Dr. C. Unger
-    abdruck: Zuordnung noch offen
   - id: 19201013c
     datum: 13.10.1920
     jahr: "1920"
     ort: ""
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19201013d
     datum: 13.10.1920
     jahr: "1920"
@@ -23498,7 +23307,6 @@ lectures:
     ort: Dornach
     vortragstitel: Anregung zur Gründung eines Weltschulvereins
     anlass: Lehrerversammlung
-    abdruck: Zuordnung noch offen
   - id: 19201016c
     datum: 16.10.1920
     jahr: "1920"
@@ -23519,7 +23327,6 @@ lectures:
     ort: Dornach
     vortragstitel: Abschiedsworte Hochschulkurs
     anlass: Erster anthroposophischerHochschulkursus 26.Sept.-16.Okt., Rückblick auf die Kursvorträge
-    abdruck: Zuordnung noch offen
   - id: 19201017a
     datum: 17.10.1920
     jahr: "1920"
@@ -23606,7 +23413,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19201031b
     datum: 31.10.1920
     jahr: "1920"
@@ -23624,7 +23430,6 @@ lectures:
     jahr: "1920"
     ort: Dornach
     vortragstitel: Verwaltungsratssitzung Futurum AG
-    abdruck: Zuordnung noch offen
   - id: 19201108
     datum: 08.11.1920
     jahr: "1920"
@@ -23688,7 +23493,6 @@ lectures:
     jahr: "1920"
     ort: Stuttgart
     vortragstitel: Sitzung mit dem Verwaltungsrat des "Kommenden Tages"
-    abdruck: Zuordnung noch offen
   - id: 19201122a
     datum: 22.11.1920
     jahr: "1920"
@@ -23720,7 +23524,6 @@ lectures:
     jahr: "1920"
     ort: Dornach
     vortragstitel: Besprechung Futurum Sitzung mit dem Verwaltungsrat der AG
-    abdruck: Zuordnung noch offen
   - id: 19201127b
     datum: 27.11.1920
     jahr: "1920"
@@ -23757,7 +23560,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19201205b
     datum: 05.12.1920
     jahr: "1920"
@@ -23895,7 +23697,6 @@ lectures:
     jahr: "1920"
     ort: Olten
     vortragstitel: Einleitende Worte zur öffentlichen eurythmischen Vorführung (hauptsächlich Kindereurythmie)
-    abdruck: Zuordnung noch offen
   - id: 19201229b
     datum: 29.12.1920
     jahr: "1920"
@@ -23915,7 +23716,6 @@ lectures:
     jahr: "1921"
     ort: Stuttgart
     vortragstitel: Zusammenkunft mit Oberschlesiern
-    abdruck: Zuordnung noch offen
   - id: 19210101c
     datum: 01.01.1921
     jahr: "1921"
@@ -23969,7 +23769,6 @@ lectures:
     jahr: "1921"
     ort: Stuttgart
     vortragstitel: Aufsichtsratsitzung Kommender Tag AG
-    abdruck: Zuordnung noch offen
   - id: 19210105b
     datum: 05.01.1921
     jahr: "1921"
@@ -24170,7 +23969,6 @@ lectures:
     jahr: "1921"
     ort: Dornach
     vortragstitel: Verwaltungsratssitzung Futurum AG
-    abdruck: Zuordnung noch offen
   - id: 19210123b
     datum: 23.01.1921
     jahr: "1921"
@@ -24202,7 +24000,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210130b
     datum: 30.01.1921
     jahr: "1921"
@@ -24234,7 +24031,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210206b
     datum: 06.02.1921
     jahr: "1921"
@@ -24434,7 +24230,6 @@ lectures:
     jahr: "1921"
     ort: Hengelo (Holland)
     vortragstitel: Erziehungs-, Unterrichts- und praktische Lebensfragen vom Gesichtspunkte der anthroposophischen Geisteswissenschaft
-    abdruck: Zuordnung noch offen
   - id: 19210311
     datum: 11.03.1921
     jahr: "1921"
@@ -24552,7 +24347,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210327b
     datum: 27.03.1921
     jahr: "1921"
@@ -24565,7 +24359,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210328b
     datum: 28.03.1921
     jahr: "1921"
@@ -24597,7 +24390,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210403c
     datum: 03.04.1921
     jahr: "1921"
@@ -24833,7 +24625,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210417d
     datum: 17.04.1921
     jahr: "1921"
@@ -24853,7 +24644,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210418c
     datum: 18.04.1921
     jahr: "1921"
@@ -24897,7 +24687,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210501b
     datum: 01.05.1921
     jahr: "1921"
@@ -24937,7 +24726,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210508b
     datum: 08.05.1921
     jahr: "1921"
@@ -24970,7 +24758,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210516b
     datum: 16.05.1921
     jahr: "1921"
@@ -24982,7 +24769,6 @@ lectures:
     jahr: "1921"
     ort: Dornach
     vortragstitel: Verwaltungsratssitzung der Futurum AG
-    abdruck: Zuordnung noch offen
   - id: 19210521
     datum: 21.05.1921
     jahr: "1921"
@@ -25029,7 +24815,6 @@ lectures:
     jahr: "1921"
     ort: Dornach
     vortragstitel: Schlußwort zum Referat von Herrn Willy Storrer über einen Vortrag von Dr. Sztern in Zürich am 27. Mai «Plato, Goethe und die Anthroposophie»
-    abdruck: Zuordnung noch offen
   - id: 19210602
     datum: 02.06.1921
     jahr: "1921"
@@ -25076,7 +24861,6 @@ lectures:
     ort: Stuttgart-Cannstatt
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210612c
     datum: 12.06.1921
     jahr: "1921"
@@ -25212,7 +24996,6 @@ lectures:
     ort: Stuttgart
     vortragstitel: ""
     anlass: Erste ordentliche Generalversammlung der Aktiengesellschaft «Der Kommende Tag»
-    abdruck: Zuordnung noch offen
   - id: 19210619
     datum: 19.06.1921
     jahr: "1921"
@@ -25226,14 +25009,12 @@ lectures:
     jahr: "1921"
     ort: Dornach
     vortragstitel: Verwaltungsratssitzung Futurum AG
-    abdruck: Zuordnung noch offen
   - id: 19210620b
     datum: 20.06.1921
     jahr: "1921"
     ort: Dornach
     vortragstitel: ""
     anlass: Generalversammlung Futurum AG
-    abdruck: Zuordnung noch offen
   - id: 19210624
     datum: 24.06.1921
     jahr: "1921"
@@ -25304,7 +25085,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210703b
     datum: 03.07.1921
     jahr: "1921"
@@ -25329,7 +25109,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210710b
     datum: 10.07.1921
     jahr: "1921"
@@ -25341,7 +25120,6 @@ lectures:
     jahr: "1921"
     ort: Dornach
     vortragstitel: Ausführungen nach dem Vortrag von Herrm Stokar
-    abdruck: Zuordnung noch offen
   - id: 19210715
     datum: 15.07.1921
     jahr: "1921"
@@ -25360,7 +25138,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210717b
     datum: 17.07.1921
     jahr: "1921"
@@ -25372,7 +25149,6 @@ lectures:
     jahr: "1921"
     ort: Dornach
     vortragstitel: Diskussion nach dem Vortrag von Herrn Dr. Usteri über Botanik
-    abdruck: Zuordnung noch offen
   - id: 19210722
     datum: 22.07.1921
     jahr: "1921"
@@ -25391,7 +25167,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210724b
     datum: 24.07.1921
     jahr: "1921"
@@ -25439,7 +25214,6 @@ lectures:
     ort: Darmstadt
     vortragstitel: ""
     anlass: Vortrag von Herrn Dr. von Baravalle "Zum Verständnis des Michelson- Versuchs". Hochschulveranstaltung «Anthroposophie und Wissenschaft» 25.-30. Juli.
-    abdruck: Zuordnung noch offen
   - id: 19210729c
     datum: 29.07.1921
     jahr: "1921"
@@ -25486,7 +25260,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210807b
     datum: 07.08.1921
     jahr: "1921"
@@ -25530,7 +25303,6 @@ lectures:
     jahr: "1921"
     ort: Dornach
     vortragstitel: Diskussion nach dem Vortrag von Herrn Dr. W. J. Stein «Aphoristische Ausführungen über Goethe»
-    abdruck: Zuordnung noch offen
   - id: 19210819
     datum: 19.08.1921
     jahr: "1921"
@@ -25542,7 +25314,6 @@ lectures:
     jahr: "1921"
     ort: Dornach
     vortragstitel: Verwaltungsratssitzung Futurum
-    abdruck: Zuordnung noch offen
   - id: 19210820b
     datum: 20.08.1921
     jahr: "1921"
@@ -25568,7 +25339,6 @@ lectures:
     jahr: "1921"
     ort: ""
     vortragstitel: Aussprache über die weitere Arbeit in bezug auf einen zu gründenden Weltschulverein
-    abdruck: Zuordnung noch offen
   - id: 19210823
     datum: 23.08.1921
     jahr: "1921"
@@ -25631,28 +25401,28 @@ lectures:
     datum: 29.08.1921
     jahr: "1921"
     ort: Stuttgart
-    vortragstitel: "Erster Vortrag"
+    vortragstitel: Erster Vortrag
     reihe: Kulturausblicke der anthroposophischen Bewegung
     ga: 78
   - id: 19210830
     datum: 30.08.1921
     jahr: "1921"
     ort: Stuttgart
-    vortragstitel: "Zweiter Vortrag"
+    vortragstitel: Zweiter Vortrag
     reihe: Kulturausblicke der anthroposophischen Bewegung
     ga: 78
   - id: 19210831
     datum: 31.08.1921
     jahr: "1921"
     ort: Stuttgart
-    vortragstitel: "Dritter Vortrag"
+    vortragstitel: Dritter Vortrag
     reihe: Kulturausblicke der anthroposophischen Bewegung
     ga: 78
   - id: 19210901
     datum: 01.09.1921
     jahr: "1921"
     ort: Stuttgart
-    vortragstitel: "Vierter Vortrag"
+    vortragstitel: Vierter Vortrag
     reihe: Kulturausblicke der anthroposophischen Bewegung
     ga: 78
   - id: 19210902a
@@ -25665,14 +25435,14 @@ lectures:
     datum: 02.09.1921
     jahr: "1921"
     ort: Stuttgart
-    vortragstitel: "Fünfter Vortrag"
+    vortragstitel: Fünfter Vortrag
     reihe: Kulturausblicke der anthroposophischen Bewegung
     ga: 78
   - id: 19210903
     datum: 03.09.1921
     jahr: "1921"
     ort: Stuttgart
-    vortragstitel: "Sechster Vortrag"
+    vortragstitel: Sechster Vortrag
     reihe: Kulturausblicke der anthroposophischen Bewegung
     ga: 78
   - id: 19210904a
@@ -25681,7 +25451,6 @@ lectures:
     ort: Stuttgart
     vortragstitel: Ausführungen zur Mitglieder-Versammlung der Anthroposophischen Gesellschaft
     anlass: Ausführungen zur Mitglieder-Versammlung der Anthroposophischen Gesellschaft
-    abdruck: Zuordnung noch offen
     ga: 77b
   - id: 19210904b
     datum: 04.09.1921
@@ -25689,12 +25458,11 @@ lectures:
     ort: Stuttgart-Cannstatt
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19210905
     datum: 05.09.1921
     jahr: "1921"
     ort: Stuttgart
-    vortragstitel: "Siebter Vortrag"
+    vortragstitel: Siebter Vortrag
     reihe: Kulturausblicke der anthroposophischen Bewegung
     ga: 78
   - id: 19210906a
@@ -25708,7 +25476,7 @@ lectures:
     datum: 06.09.1921
     jahr: "1921"
     ort: Stuttgart
-    vortragstitel: "Achter Vortrag"
+    vortragstitel: Achter Vortrag
     reihe: Kulturausblicke der anthroposophischen Bewegung
     ga: 78
   - id: 19210907
@@ -25743,13 +25511,11 @@ lectures:
     jahr: "1921"
     ort: Berlin
     vortragstitel: Osten gegen Westen
-    abdruck: Zuordnung noch offen
   - id: 19210919
     datum: 19.09.1921
     jahr: "1921"
     ort: Stuttgart
     vortragstitel: Sitzung mit dem Aufsichtsrat der Kommenden Tag AG
-    abdruck: Zuordnung noch offen
   - id: 19210921a
     datum: 21.09.1921
     jahr: "1921"
@@ -25787,7 +25553,6 @@ lectures:
     ort: Dornach
     vortragstitel: Vortrag über Wirtschaftsfragen
     anlass: Vortrag über Wirtschaftsfragen für einen Basler Verein
-    abdruck: Zuordnung noch offen
   - id: 19210925b
     datum: 25.09.1921
     jahr: "1921"
@@ -26146,7 +25911,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19211023b
     datum: 23.10.1921
     jahr: "1921"
@@ -26202,7 +25966,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19211106b
     datum: 06.11.1921
     jahr: "1921"
@@ -26227,7 +25990,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19211113b
     datum: 13.11.1921
     jahr: "1921"
@@ -26338,7 +26100,6 @@ lectures:
     ort: Kristiania (Oslo)
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19211204
     datum: 04.12.1921
     jahr: "1921"
@@ -26351,7 +26112,6 @@ lectures:
     ort: Berlin
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19211207b
     datum: 07.12.1921
     jahr: "1921"
@@ -26364,7 +26124,6 @@ lectures:
     ort: Dornach
     vortragstitel: Der Fortgang der anthroposophischen Bewegung und die Tätigkeit der Gegner. Das Mysterium von Golgatha und das menschliche Ich-Erlebnis. Reisebericht
     anlass: Reisebericht
-    abdruck: Zuordnung noch offen
   - id: 19211212
     datum: 12.12.1921
     jahr: "1921"
@@ -26433,7 +26192,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung mit Beziehung auf Weihnachten
-    abdruck: Zuordnung noch offen
   - id: 19211225c
     datum: 25.12.1921
     jahr: "1921"
@@ -26522,7 +26280,6 @@ lectures:
     jahr: "1921"
     ort: Dornach
     vortragstitel: Einleitende Worte zur eurythmischen Aufführung von Szenen aus den Mysteriendramen
-    abdruck: Zuordnung noch offen
   - id: 19211231c
     datum: 31.12.1921
     jahr: "1921"
@@ -26586,7 +26343,6 @@ lectures:
     jahr: "1922"
     ort: Dornach
     vortragstitel: Einleitende Worte zur Aufführung des Paradeisspiels und des Christgeburtspiels
-    abdruck: Zuordnung noch offen
   - id: 19220105a
     datum: 05.01.1922
     jahr: "1922"
@@ -26655,7 +26411,6 @@ lectures:
     jahr: "1922"
     ort: Stuttgart
     vortragstitel: Aufsichtsratssitzung Kommender Tag AG
-    abdruck: Zuordnung noch offen
   - id: 19220114b
     datum: 14.01.1922
     jahr: "1922"
@@ -26760,14 +26515,12 @@ lectures:
     jahr: "1922"
     ort: Dornach
     vortragstitel: Sitzung Verwaltungsrat Futurum
-    abdruck: Zuordnung noch offen
   - id: 19220220b
     datum: 20.02.1922
     jahr: "1922"
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19220224
     datum: 24.02.1922
     jahr: "1922"
@@ -26889,7 +26642,6 @@ lectures:
     jahr: "1922"
     ort: Stuttgart
     vortragstitel: Aufsichtsratssitzung Kommender Tag AG
-    abdruck: Zuordnung noch offen
   - id: 19220318
     datum: 18.03.1922
     jahr: "1922"
@@ -26919,14 +26671,12 @@ lectures:
     jahr: "1922"
     ort: Dornach
     vortragstitel: Sitzung mit dem Verwaltungsrat der Futurum AG
-    abdruck: Zuordnung noch offen
   - id: 19220323b
     datum: 23.03.1922
     jahr: "1922"
     ort: Dornach
     vortragstitel: ""
     anlass: Generalversammlung Futurum AG
-    abdruck: Zuordnung noch offen
   - id: 19220323c
     datum: 23.03.1922
     jahr: "1922"
@@ -26977,7 +26727,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19220402b
     datum: 02.04.1922
     jahr: "1922"
@@ -27111,7 +26860,6 @@ lectures:
     jahr: "1922"
     ort: Dornach
     vortragstitel: Bericht über die Vortragsreise nach Holland und England
-    abdruck: Zuordnung noch offen
   - id: 19220505
     datum: 05.05.1922
     jahr: "1922"
@@ -27125,7 +26873,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19220506b
     datum: 06.05.1922
     jahr: "1922"
@@ -27139,7 +26886,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19220507b
     datum: 07.05.1922
     jahr: "1922"
@@ -27219,7 +26965,6 @@ lectures:
     jahr: "1922"
     ort: Elberfeld
     vortragstitel: Einweihung des Zweiges
-    abdruck: Zuordnung noch offen
   - id: 19220518b
     datum: 18.05.1922
     jahr: "1922"
@@ -27232,7 +26977,6 @@ lectures:
     jahr: "1922"
     ort: Berlin
     vortragstitel: Zur Charakteristik der Gegenwart
-    abdruck: Zuordnung noch offen
   - id: 19220521b
     datum: 21.05.1922
     jahr: "1922"
@@ -27383,7 +27127,6 @@ lectures:
     ort: Dornach
     vortragstitel: Der Wiener Kongreß als Wendepunkt der anthroposophischen Bewegung
     anlass: Bericht über den Wiener West-Ost-Kongreß
-    abdruck: Zuordnung noch offen
   - id: 19220620a
     datum: 20.06.1922
     jahr: "1922"
@@ -27785,7 +27528,6 @@ lectures:
     ort: Dornach
     vortragstitel: Über religiöse Erneuerung anlässlich des Besuches der Theologen Geyer, Rittelmeyer und Bock
     anlass: Theologen-Besuch
-    abdruck: Zuordnung noch offen
   - id: 19220803a
     datum: 03.08.1922
     jahr: "1922"
@@ -27891,7 +27633,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19220806c
     datum: 06.08.1922
     jahr: "1922"
@@ -27963,7 +27704,7 @@ lectures:
     ort: Oxford
     vortragstitel: Die Erforschung der übersinnlichen Welten. Die Wege der modernen Initiationserkenntnis. Imagination, Inspiration und Intuition
     anlass: Oxford Holiday Conferences «Spiritual Values in Education and Social Life»
-    ga: 214,267, GA 305
+    ga: 214,267
   - id: 19220821
     datum: 21.08.1922
     jahr: "1922"
@@ -28075,7 +27816,7 @@ lectures:
     ort: Dornach
     vortragstitel: Die drei Schritte der Anthroposophie
     reihe: Die Philosophie, Kosmologie und Religion in der Anthroposophie, Französischer Kurs (Semaine française)
-    anlass: 
+    anlass: null
     ga: 215
   - id: 19220907a
     datum: 07.09.1922
@@ -28143,7 +27884,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19220910c
     datum: 10.09.1922
     jahr: "1922"
@@ -28209,7 +27949,6 @@ lectures:
     ort: Dornach
     vortragstitel: Über das Mysteriendrama «Der Seelen Erwachen»
     anlass: Einleitende Worte zur Eurythmie-Aufführung.
-    abdruck: Zuordnung noch offen
   - id: 19220914b
     datum: 14.09.1922
     jahr: "1922"
@@ -28377,7 +28116,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19220924b
     datum: 24.09.1922
     jahr: "1922"
@@ -28849,7 +28587,6 @@ lectures:
     jahr: "1922"
     ort: Stuttgart
     vortragstitel: Sitzung mit dem Aufsichtsrat der Aktiengesellschaft "Der Kommende Tag"
-    abdruck: Zuordnung noch offen
   - id: 19221124a
     datum: 24.11.1922
     jahr: "1922"
@@ -28934,7 +28671,6 @@ lectures:
     jahr: "1922"
     ort: Stuttgart
     vortragstitel: Besprechung mit Religionslehrern
-    abdruck: Zuordnung noch offen
   - id: 19221209c
     datum: 09.12.1922
     jahr: "1922"
@@ -29025,7 +28761,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19221225b
     datum: 25.12.1922
     jahr: "1922"
@@ -29147,7 +28882,7 @@ lectures:
     ort: Dornach
     vortragstitel: Gehirn und Denken
     anlass: Einleitende Worten über den Brand des Goetheanums. Vortrag für die Arbeiter am Goetheanum
-    ga: 255b,259, GA 348
+    ga: 255b,259
   - id: 19230105b
     datum: 05.01.1923
     jahr: "1923"
@@ -29180,14 +28915,12 @@ lectures:
     jahr: "1923"
     ort: Dornach
     vortragstitel: Mitgliederversammlung
-    abdruck: Zuordnung noch offen
   - id: 19230107a
     datum: 07.01.1923
     jahr: "1923"
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19230107b
     datum: 07.01.1923
     jahr: "1923"
@@ -29236,7 +28969,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19230114b
     datum: 14.01.1923
     jahr: "1923"
@@ -29352,7 +29084,6 @@ lectures:
     jahr: "1923"
     ort: Stuttgart
     vortragstitel: Aussprache über eine Reorganisation der Anthroposophischen Gesellschaft
-    abdruck: Zuordnung noch offen
   - id: 19230130a
     datum: 30.01.1923
     jahr: "1923"
@@ -29609,7 +29340,6 @@ lectures:
     ort: Stuttgart
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19230227c
     datum: 27.02.1923
     jahr: "1923"
@@ -29830,7 +29560,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19230401b
     datum: 01.04.1923
     jahr: "1923"
@@ -29899,25 +29628,21 @@ lectures:
     jahr: "1923"
     ort: Zürich
     vortragstitel: Was wollte das Goetheanum und was soll Anthroposophie? (Zürich)
-    abdruck: Zuordnung noch offen
   - id: 19230411
     datum: 11.04.1923
     jahr: "1923"
     ort: Winterthur
     vortragstitel: Was wollte das Goetheanum und was soll Anthroposophie ? (Winterthur)
-    abdruck: Zuordnung noch offen
   - id: 19230412a
     datum: 12.04.1923
     jahr: "1923"
     ort: St. Gallen
     vortragstitel: Über Schicksalsbildung
-    abdruck: Zuordnung noch offen
   - id: 19230412b
     datum: 12.04.1923
     jahr: "1923"
     ort: St. Gallen
     vortragstitel: Was wollte das Goetheanum und was soll Anthroposophie ? (St. Gallen)
-    abdruck: Zuordnung noch offen
   - id: 19230413
     datum: 13.04.1923
     jahr: "1923"
@@ -29997,7 +29722,6 @@ lectures:
     jahr: "1923"
     ort: Dornach
     vortragstitel: Einleitende Worte zur Aufführung «Eurythmie als Erziehungsmittel»
-    abdruck: Zuordnung noch offen
   - id: 19230418d
     datum: 18.04.1923
     jahr: "1923"
@@ -30059,7 +29783,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19230421d
     datum: 21.04.1923
     jahr: "1923"
@@ -30113,7 +29836,6 @@ lectures:
     ort: Stuttgart
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19230425
     datum: 25.04.1923
     jahr: "1923"
@@ -30350,7 +30072,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19230603b
     datum: 03.06.1923
     jahr: "1923"
@@ -30362,7 +30083,6 @@ lectures:
     jahr: "1923"
     ort: Dornach
     vortragstitel: Ansprache zur Trauung von Joseph Polzer-Hoditz und Ilona Bögel
-    abdruck: Zuordnung noch offen
   - id: 19230606
     datum: 06.06.1923
     jahr: "1923"
@@ -30416,7 +30136,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19230611
     datum: 11.06.1923
     jahr: "1923"
@@ -30493,7 +30212,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19230617c
     datum: 17.06.1923
     jahr: "1923"
@@ -30594,7 +30312,6 @@ lectures:
     jahr: "1923"
     ort: Dornach
     vortragstitel: Mitglieder-Versammlung des Schulvereins
-    abdruck: Zuordnung noch offen
   - id: 19230701c
     datum: 01.07.1923
     jahr: "1923"
@@ -30672,7 +30389,6 @@ lectures:
     jahr: "1923"
     ort: Dornach
     vortragstitel: Einleitende Worte zur Eurythmieaufführung
-    abdruck: Zuordnung noch offen
   - id: 19230711a
     datum: 11.07.1923
     jahr: "1923"
@@ -30758,7 +30474,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19230718
     datum: 18.07.1923
     jahr: "1923"
@@ -30779,7 +30494,6 @@ lectures:
     ort: Dornach
     vortragstitel: Internationale Delegiertenversammlung der Anthroposophischen Gesellschaft
     anlass: Internationale Delegiertenversammlung der Anthroposophischen Gesellschaft (20.-23. Juli)
-    abdruck: Zuordnung noch offen
   - id: 19230720c
     datum: 20.07.1923
     jahr: "1923"
@@ -30827,7 +30541,6 @@ lectures:
     ort: Dornach
     vortragstitel: Abschlussworte zur Internationalen Delegiertenversammlung der Anthroposophischen Gesellschaft für den Wiederaufbau des Goetheanums
     anlass: Internationale Delegiertenversammlung der Anthroposophischen Gesellschaft
-    abdruck: Zuordnung noch offen
   - id: 19230722d
     datum: 22.07.1923
     jahr: "1923"
@@ -30855,7 +30568,6 @@ lectures:
     ort: Dornach
     vortragstitel: Über Angelegenheiten der Anthroposophischen Gesellschaft
     anlass: Besprechung mit einer Anzahl Delegierter. Internationale Delegiertenversammlung in Dornach vom 20. bis 23. Juli 1923
-    abdruck: Zuordnung noch offen
   - id: 19230725
     datum: 25.07.1923
     jahr: "1923"
@@ -30888,13 +30600,12 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19230729b
     datum: 29.07.1923
     jahr: "1923"
     ort: Dornach
     vortragstitel: Wachen, Traum und Schlaf des Menschen. Chaos und Kosmos. Das Schöne in der Kunst. Ikona und Madonna. Die Anthroposophische Gesellschaft
-    ga: 228,291, GA 259
+    ga: 228,291
   - id: 19230731
     datum: 31.07.1923
     jahr: "1923"
@@ -31198,7 +30909,7 @@ lectures:
     ort: Penmaenmawr (N.Wales)
     vortragstitel: Eurythmie, was sie ist und wie sie entstanden ist. Die Eurythmie
     anlass: International Summer School 18.-31. August
-    ga: 277a,279, GA 307
+    ga: 277a,279
   - id: 19230827a
     datum: 27.08.1923
     jahr: "1923"
@@ -31272,7 +30983,7 @@ lectures:
     jahr: "1923"
     ort: London
     vortragstitel: Schlafen und Wachen. Der Zusammenhang zwischen den Wesensgliedern des Menschen und den höheren Hierarchien. Die Beziehungen der Wesenheiten der Planetenkörper zueinander und zu den Menschen
-    ga: 228,259, GA 268
+    ga: 228,259
   - id: 19230902c
     datum: 02.09.1923
     jahr: "1923"
@@ -31557,7 +31268,6 @@ lectures:
     ort: St. Gallen
     vortragstitel: Einleitende Worte zur Eurythmie-Aufführung
     anlass: Einleitende Worte zur Eurythmie- Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19231023
     datum: 23.10.1923
     jahr: "1923"
@@ -31699,7 +31409,6 @@ lectures:
     jahr: "1923"
     ort: Haag
     vortragstitel: Erste Lehrerkonferenz mit Rudolf Steiner
-    abdruck: Zuordnung noch offen
   - id: 19231117b
     datum: 17.11.1923
     jahr: "1923"
@@ -31719,7 +31428,6 @@ lectures:
     jahr: "1923"
     ort: Haag
     vortragstitel: Vorstandssitzung mit holländischer Gesellschaft
-    abdruck: Zuordnung noch offen
   - id: 19231118b
     datum: 18.11.1923
     jahr: "1923"
@@ -31875,7 +31583,6 @@ lectures:
     jahr: "1923"
     ort: Schaffhausen
     vortragstitel: Einleitende Worte zur Aufführung der Weihnachtsspiele
-    abdruck: Zuordnung noch offen
   - id: 19231218
     datum: 18.12.1923
     jahr: "1923"
@@ -31915,7 +31622,7 @@ lectures:
     ort: Dornach
     vortragstitel: Das Wesen der Mysterien. Das Mysterienwesen vom 10. bis zum 15. Jahrhundert. Die Tragik der mittelalterlichen Forscher. Das menschliche Seelenstreben des Menschen während des Mittelalters. Das rosenkreuzerische Mysterienwesen
     anlass: Gründungsversammlung der Allgemeinen Anthroposophischen Gesellschaft 24. Dezember bis 1. Januar 1923/1924
-    ga: 232,259, GA 260a
+    ga: 232,259
   - id: 19231224a
     datum: 24.12.1923
     jahr: "1923"
@@ -32358,7 +32065,6 @@ lectures:
     jahr: "1924"
     ort: Dornach
     vortragstitel: Besprechung, Aussprach mit den Arbeitern am Goetheanumbau
-    abdruck: Zuordnung noch offen
   - id: 19240109b
     datum: 09.01.1924
     jahr: "1924"
@@ -32373,7 +32079,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19240111a
     datum: 11.01.1924
     jahr: "1924"
@@ -32399,7 +32104,6 @@ lectures:
     jahr: "1924"
     ort: Dornach
     vortragstitel: Besprechung, Aussprache mit den Arbeitern am Goetheanum, 2.Teil (siehe auch 9. und 16.1.1924)
-    abdruck: Zuordnung noch offen
   - id: 19240113
     datum: 13.01.1924
     jahr: "1924"
@@ -32412,7 +32116,6 @@ lectures:
     jahr: "1924"
     ort: Dornach
     vortragstitel: Besprechung, Aussprache mit den Arbeitern am Goetheanum, 3.Teil (siehe auch 9. und 12.1.1924)
-    abdruck: Zuordnung noch offen
   - id: 19240118
     datum: 18.01.1924
     jahr: "1924"
@@ -32467,7 +32170,6 @@ lectures:
     ort: Bern
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19240127
     datum: 27.01.1924
     jahr: "1924"
@@ -32522,7 +32224,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19240203b
     datum: 03.02.1924
     jahr: "1924"
@@ -32578,7 +32279,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19240210b
     datum: 10.02.1924
     jahr: "1924"
@@ -32925,7 +32625,6 @@ lectures:
     ort: Prag
     vortragstitel: Ansprache bei Mitgliederversammlung der Anthr. Gesellschaft der Tschechoslowakei
     anlass: Versammlung der Mitglieder der Anthroposophischen Gesellschaft in der Tschechoslowakei (Statutenentwurf)
-    abdruck: Zuordnung noch offen
   - id: 19240330b
     datum: 30.03.1924
     jahr: "1924"
@@ -33180,7 +32879,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur öffentlichen Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19240420c
     datum: 20.04.1924
     jahr: "1924"
@@ -33208,7 +32906,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19240421d
     datum: 21.04.1924
     jahr: "1924"
@@ -33222,7 +32919,7 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Osterkurs für Ärzte und Medizinstudierende 21. bis 25. April 1924 Kursus für Mediziner der Medizinischen Sektion der Freien Hochschule für Geisteswissenschaft
-    ga: 267,268 , GA 316
+    ga: 267,268
   - id: 19240422b
     datum: 22.04.1924
     jahr: "1924"
@@ -33371,7 +33068,6 @@ lectures:
     ort: Dornach
     vortragstitel: ""
     anlass: Einleitende Worte zur Eurythmie-Aufführung
-    abdruck: Zuordnung noch offen
   - id: 19240503b
     datum: 03.05.1924
     jahr: "1924"
@@ -33532,7 +33228,6 @@ lectures:
     ort: Paris
     vortragstitel: Erste Pariser Klassenstunde
     anlass: Vortrag für die erste Klasse der Freien Hochschule für Geisteswissenschaft
-    abdruck: Zuordnung noch offen
   - id: 19240526b
     datum: 26.05.1924
     jahr: "1924"
@@ -33545,14 +33240,12 @@ lectures:
     ort: Paris
     vortragstitel: Zweite Pariser Klassenstunde
     anlass: Vortrag für die erste Klasse der Freien Hochschule für Geisteswissenschaft
-    abdruck: Zuordnung noch offen
   - id: 19240527b
     datum: 27.05.1924
     jahr: "1924"
     ort: Paris
     vortragstitel: ""
     anlass: Für Ärzte
-    abdruck: Zuordnung noch offen
   - id: 19240529
     datum: 29.05.1924
     jahr: "1924"
@@ -33706,7 +33399,6 @@ lectures:
     ort: Breslau
     vortragstitel: Erste Breslauer Klassenstunde
     anlass: Vortrag für die erste Klasse der Freien Hochschule für Geisteswissenschaft
-    abdruck: Zuordnung noch offen
   - id: 19240612d
     datum: 12.06.1924
     jahr: "1924"
@@ -33736,7 +33428,6 @@ lectures:
     ort: Breslau
     vortragstitel: Zweite Breslauer Klassenstunde
     anlass: Vortrag für die erste Klasse der Freien Hochschule für Geisteswissenschaft
-    abdruck: Zuordnung noch offen
   - id: 19240613d
     datum: 13.06.1924
     jahr: "1924"
@@ -34616,7 +34307,6 @@ lectures:
     jahr: "1924"
     ort: Stuttgart
     vortragstitel: Zweite Besprechung mit ehemaligen Schülern der 12. Klasse. Zusammenkunft mit ehemaligen Schülern der 12. Klasse der Freien Waldorfschule
-    abdruck: Zuordnung noch offen
   - id: 19240903b
     datum: 03.09.1924
     jahr: "1924"
