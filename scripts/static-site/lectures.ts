@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import yaml from "js-yaml";
 import type { Agent, Book } from "./types";
+import { fileExists, readScalarFromManifest } from "./utils";
 
 interface LectureVerzeichnisEntry {
   id?: string | number;
@@ -85,6 +86,38 @@ function buildGaTitleByGa(booksById: Map<string, Book>): Map<string, string> {
     }
   }
   return map;
+}
+
+/**
+ * Lädt GA-Titel aus book-manifest.yaml in Buchordnern, auch wenn kein HTML existiert.
+ * Ergänzt fehlende Einträge in gaTitleByGa.
+ */
+function loadGaTitlesFromBookManifests(repoRoot: string): Map<string, string> {
+  const result = new Map<string, string>();
+  const sources = [
+    path.join(repoRoot, "books"),
+    path.join(repoRoot, "ragkeep-deutsche-klassik-books-de", "books"),
+  ];
+  for (const source of sources) {
+    if (!fs.existsSync(source)) continue;
+    const entries = fs.readdirSync(source, { withFileTypes: true });
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const dirName = entry.name;
+      const absBookDir = path.join(source, dirName);
+      const manifestPath = path.join(absBookDir, "book-manifest.yaml");
+      if (!fileExists(manifestPath)) continue;
+      const parts = dirName.split("#");
+      const gaRaw = String(parts[2] ?? "").trim().toLowerCase();
+      if (!gaRaw || !/^[0-9]+[a-z]?$/.test(gaRaw)) continue;
+      const title = readScalarFromManifest(absBookDir, "title").trim();
+      if (!title) continue;
+      if (!result.has(gaRaw)) {
+        result.set(gaRaw, title);
+      }
+    }
+  }
+  return result;
 }
 
 function loadLectureHtmlById(repoRoot: string): Map<string, string> {
@@ -203,6 +236,12 @@ function buildLectureCatalog(repoRoot: string, booksById: Map<string, Book>): Le
   const htmlById = loadLectureHtmlById(repoRoot);
   const summaryById = loadLectureSummariesById(repoRoot);
   const gaTitleByGa = buildGaTitleByGa(booksById);
+  const manifestGaTitles = loadGaTitlesFromBookManifests(repoRoot);
+  for (const [ga, title] of manifestGaTitles) {
+    if (!gaTitleByGa.has(ga)) {
+      gaTitleByGa.set(ga, title);
+    }
+  }
 
   for (const lecture of verzeichnis) {
     const id = String(lecture.id ?? "").trim().replace(/^lecture:/, "");

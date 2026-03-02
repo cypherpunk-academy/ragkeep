@@ -113,7 +113,7 @@ export function generateHomePage(outputDir: string, agents: Agent[]): void {
     "",
     `<div class="wrap">
       <header class="hero stack-16">
-        <h1 class="hero-title">Wähle deinen KI-Assistenten (Hallo Welt!)</h1>
+        <h1 class="hero-title">Wähle deinen KI-Assistenten</h1>
         <p class="hero-lede">Erkunde unsere kuratierte Sammlung spezialisierter KI-Agenten, jeweils mit eigener Perspektive, Stil und Wissensbasis.</p>
         <p class="meta meta-quiet">${agents.length} Assistenten · generiert: ${escapeHtml(generatedAt)}</p>
       </header>
