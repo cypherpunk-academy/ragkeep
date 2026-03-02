@@ -12,7 +12,9 @@ export interface Agent {
   description: string;
   writingStyle: string;
   primaryBooks: string[];
+  primaryLectures: string[];
   secondaryBooks: string[];
+  secondaryLectures: string[];
   concepts: string[];
   essays: string[];
   quotes: string[];

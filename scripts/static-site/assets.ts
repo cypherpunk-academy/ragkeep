@@ -253,6 +253,56 @@ const layoutCss = `
   padding-bottom: 8px;
 }
 
+.literature-tab-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.literature-tab {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.55rem 0.9rem;
+  background: var(--surface-soft);
+  color: var(--fg);
+  font: inherit;
+  cursor: pointer;
+}
+
+.literature-tab-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.lecture-filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.lecture-filter-group label {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.lecture-filter-group select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.45rem 0.6rem;
+  font: inherit;
+  background: var(--surface);
+  color: var(--fg);
+}
+
+.lecture-selection-heading {
+  margin: 0;
+}
+
 .content-card {
   padding: 1.4rem;
 }
@@ -287,6 +337,11 @@ const layoutCss = `
   gap: 12px;
 }
 
+.lecture-list {
+  display: grid;
+  gap: 12px;
+}
+
 .essay-card {
   display: block;
 }
@@ -296,6 +351,14 @@ const layoutCss = `
 }
 
 .essay-summary-details .toc-arrow {
+  display: none;
+}
+
+.lecture-summary-details .toc-summary-line {
+  padding-left: 0;
+}
+
+.lecture-summary-details .toc-arrow {
   display: none;
 }
 
@@ -394,6 +457,24 @@ const layoutCss = `
   padding: 12px;
 }
 
+.lecture-card {
+  gap: 8px;
+}
+
+.lecture-meta-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.lecture-open-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .file-link {
   display: inline-flex;
   width: 100%;
@@ -426,6 +507,10 @@ const layoutCss = `
   .agent-avatar {
     width: 88px;
     height: 88px;
+  }
+
+  .lecture-filters {
+    grid-template-columns: 1fr;
   }
 }
 `.trimStart();

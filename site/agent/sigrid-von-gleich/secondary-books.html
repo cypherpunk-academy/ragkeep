@@ -25,9 +25,14 @@
           </div>
         </div>
       </header>
-      <nav class="tab-row" aria-label="Assistenten-Bereiche"><a class="tab-link" href="index.html">Übersicht</a><a class="tab-link" href="books.html">Bücher</a><a class="tab-link tab-link-active" href="secondary-books.html">Sekundärliteratur</a><a class="tab-link" href="essays.html">Essays</a><a class="tab-link" href="concepts.html">Begriffe</a><a class="tab-link" href="quotes.html">Zitate</a><a class="tab-link" href="taxonomies.html">Taxonomien</a><a class="tab-link" href="conversations.html">Gespräche</a></nav>
+      <nav class="tab-row" aria-label="Assistenten-Bereiche"><a class="tab-link" href="index.html">Übersicht</a><a class="tab-link" href="books.html">Primärliteratur</a><a class="tab-link tab-link-active" href="secondary-books.html">Sekundärliteratur</a><a class="tab-link" href="essays.html">Essays</a><a class="tab-link" href="concepts.html">Begriffe</a><a class="tab-link" href="quotes.html">Zitate</a><a class="tab-link" href="taxonomies.html">Taxonomien</a><a class="tab-link" href="conversations.html">Gespräche</a></nav>
       <main class="site-card content-card">
-        <div class="stack-8"><h3>Sekundärliteratur</h3><div class="book-list"><a class="book-link" href="../../books/Rudolf_Steiner%23Fachwissenschaften_und_Anthroposophie%2373a/index.html">
+        <div class="stack-8"><h3>Sekundärliteratur</h3><div id="secondary-literature-root" class="stack-16">
+  <div class="literature-tab-row" role="tablist" aria-label="Bücher und Vorträge">
+    <button type="button" class="literature-tab literature-tab-active" role="tab" aria-selected="true" data-literature-tab data-target="secondary-books-panel">Bücher</button>
+    <button type="button" class="literature-tab" role="tab" aria-selected="false" data-literature-tab data-target="secondary-lectures-panel">Vorträge</button>
+  </div>
+  <section id="secondary-books-panel" data-literature-panel><div class="book-list"><a class="book-link" href="../../books/Rudolf_Steiner%23Fachwissenschaften_und_Anthroposophie%2373a/index.html">
       <strong>Fachwissenschaften und Anthroposophie</strong>
       <span>Rudolf Steiner</span>
       
@@ -72,9 +77,9 @@
       <span>Rudolf_Steiner</span>
       
     </a><a class="book-link" href="../../books/Rudolf_Steiner%23Der_menschliche_und_der_kosmische_Gedanke%23151/index.html">
-      <strong>Der_menschliche_und_der_kosmische_Gedanke</strong>
-      <span>Rudolf_Steiner</span>
-      <div class="meta-quiet">Zyklus_33</div>
+      <strong>Der menschliche und der kosmische Gedanke</strong>
+      <span>Rudolf Steiner</span>
+      
     </a><a class="book-link" href="../../books/Rudolf_Steiner%23Geisteswissenschaft_als_Erkenntnis_der_Grundimpulse_sozialer_Gestaltung%23199/index.html">
       <strong>Geisteswissenschaft als Erkenntnis der Grundimpulse sozialer Gestaltung</strong>
       <span>Rudolf Steiner</span>
@@ -179,7 +184,174 @@
       <strong>Code Version 2 0</strong>
       <span>Lawrence Lessig</span>
       
-    </a></div></div>
+    </a></div></section>
+  <section id="secondary-lectures-panel" data-literature-panel style="display:none"><section id="secondary-lecture-root" class="stack-16">
+  <div class="lecture-filters" data-lecture-filters data-default-from="" data-default-to="">
+  <div class="lecture-filter-group">
+    <label for="secondary-lecture-date-from">Datum von</label>
+    <select id="secondary-lecture-date-from" data-lecture-from>
+      <option value="">—</option>
+      
+    </select>
+  </div>
+  <div class="lecture-filter-group">
+    <label for="secondary-lecture-date-to">Datum bis</label>
+    <select id="secondary-lecture-date-to" data-lecture-to>
+      <option value="">—</option>
+      
+    </select>
+  </div>
+  <div class="lecture-filter-group">
+    <label for="secondary-lecture-zyklus">Zyklus</label>
+    <select id="secondary-lecture-zyklus" data-lecture-zyklus>
+      <option value="">—</option>
+      
+    </select>
+  </div>
+  <div class="lecture-filter-group">
+    <label for="secondary-lecture-ga">GA-Nummer</label>
+    <select id="secondary-lecture-ga" data-lecture-ga>
+      <option value="">—</option>
+      
+    </select>
+  </div>
+</div>
+  <h4 class="lecture-selection-heading" data-lecture-selection-heading>Vorträge</h4>
+  <p class="empty-state">Keine Vorträge in dieser Kategorie.</p>
+  <script>
+(function() {
+  var root = document.getElementById("secondary-lecture-root");
+  if (!root) return;
+  var filters = root.querySelector("[data-lecture-filters]");
+  if (!filters) return;
+  var fromEl = root.querySelector("[data-lecture-from]");
+  var toEl = root.querySelector("[data-lecture-to]");
+  var zyklusEl = root.querySelector("[data-lecture-zyklus]");
+  var gaEl = root.querySelector("[data-lecture-ga]");
+  var headingEl = root.querySelector("[data-lecture-selection-heading]");
+  var cards = root.querySelectorAll("[data-lecture-card]");
+  if (!fromEl || !toEl || !zyklusEl || !gaEl || !headingEl || !cards.length) return;
+
+  var defaultFrom = filters.getAttribute("data-default-from") || "";
+  var defaultTo = filters.getAttribute("data-default-to") || "";
+
+  function selectedText(sel) {
+    if (!sel || !sel.options || sel.selectedIndex < 0) return "";
+    return sel.options[sel.selectedIndex].text || "";
+  }
+
+  function showByDate() {
+    var fromVal = fromEl.value ? Number(fromEl.value) : null;
+    var toVal = toEl.value ? Number(toEl.value) : null;
+    cards.forEach(function(card) {
+      var dateValRaw = card.getAttribute("data-date-value");
+      var dateVal = dateValRaw ? Number(dateValRaw) : null;
+      var visible = true;
+      if (dateVal == null || Number.isNaN(dateVal)) {
+        visible = false;
+      } else {
+        if (fromVal != null && dateVal < fromVal) visible = false;
+        if (toVal != null && dateVal > toVal) visible = false;
+      }
+      card.style.display = visible ? "" : "none";
+    });
+    var fromLabel = selectedText(fromEl) || defaultFrom;
+    var toLabel = selectedText(toEl) || defaultTo;
+    headingEl.textContent = "Vorträge von " + fromLabel + " bis " + toLabel;
+  }
+
+  function showByExact(attr, value) {
+    cards.forEach(function(card) {
+      var visible = card.getAttribute(attr) === value;
+      card.style.display = visible ? "" : "none";
+    });
+  }
+
+  function showAll() {
+    cards.forEach(function(card) {
+      card.style.display = "";
+    });
+    headingEl.textContent = "Vorträge";
+  }
+
+  function apply() {
+    if (zyklusEl.value) {
+      showByExact("data-zyklus", zyklusEl.value);
+      headingEl.textContent = selectedText(zyklusEl) || "Vorträge";
+      return;
+    }
+    if (gaEl.value) {
+      showByExact("data-ga", gaEl.value);
+      headingEl.textContent = selectedText(gaEl) || "Vorträge";
+      return;
+    }
+    if (fromEl.value || toEl.value) {
+      showByDate();
+      return;
+    }
+    showAll();
+  }
+
+  fromEl.addEventListener("change", function() {
+    zyklusEl.value = "";
+    gaEl.value = "";
+    apply();
+  });
+  toEl.addEventListener("change", function() {
+    zyklusEl.value = "";
+    gaEl.value = "";
+    apply();
+  });
+  zyklusEl.addEventListener("change", function() {
+    if (zyklusEl.value) {
+      fromEl.value = "";
+      toEl.value = "";
+      gaEl.value = "";
+    }
+    apply();
+  });
+  gaEl.addEventListener("change", function() {
+    if (gaEl.value) {
+      fromEl.value = "";
+      toEl.value = "";
+      zyklusEl.value = "";
+    }
+    apply();
+  });
+
+  apply();
+})();
+</script>
+</section></section>
+  <script>
+(function() {
+  var root = document.getElementById("secondary-literature-root");
+  if (!root) return;
+  var buttons = root.querySelectorAll("[data-literature-tab]");
+  var panels = root.querySelectorAll("[data-literature-panel]");
+  if (!buttons.length || !panels.length) return;
+  function activate(target) {
+    buttons.forEach(function(btn) {
+      var active = btn.getAttribute("data-target") === target;
+      btn.classList.toggle("literature-tab-active", active);
+      btn.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    panels.forEach(function(panel) {
+      var active = panel.getAttribute("id") === target;
+      panel.style.display = active ? "" : "none";
+    });
+  }
+  buttons.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      var target = btn.getAttribute("data-target");
+      if (!target) return;
+      activate(target);
+    });
+  });
+  activate("secondary-books-panel");
+})();
+</script>
+</div></div>
       </main>
     </div>
     </div>

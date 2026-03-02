@@ -10,7 +10,9 @@ interface AssistantManifest {
   description?: string;
   "writing-style"?: string;
   "primary-books"?: string[];
+  "primary-lectures"?: string[];
   "secondary-books"?: string[];
+  "secondary-lectures"?: string[];
   concepts?: string[];
   essays?: string[];
   quotes?: string[];
@@ -50,7 +52,9 @@ function normalizeAgent(input: Partial<Agent> & { id: string }): Agent {
     description: (input.description ?? "").replace(/\s+/g, " ").trim(),
     writingStyle: (input.writingStyle ?? "").replace(/\s+/g, " ").trim(),
     primaryBooks: (input.primaryBooks ?? []).map(normalizeBookId),
+    primaryLectures: input.primaryLectures ?? [],
     secondaryBooks: (input.secondaryBooks ?? []).map(normalizeBookId),
+    secondaryLectures: input.secondaryLectures ?? [],
     concepts: input.concepts ?? [],
     essays: input.essays ?? [],
     quotes: input.quotes ?? [],
@@ -77,8 +81,11 @@ function mergeManifestFields(agent: Agent, manifestPath: string): Agent {
     writingStyle: manifest["writing-style"] ?? agent.writingStyle,
     primaryBooks:
       manifest["primary-books"]?.map(normalizeBookId) ?? agent.primaryBooks,
+    primaryLectures: toStringArray(manifest["primary-lectures"]) ?? agent.primaryLectures,
     secondaryBooks:
       manifest["secondary-books"]?.map(normalizeBookId) ?? agent.secondaryBooks,
+    secondaryLectures:
+      toStringArray(manifest["secondary-lectures"]) ?? agent.secondaryLectures,
     concepts: manifest.concepts ?? agent.concepts,
     essays: manifest.essays ?? agent.essays,
     quotes: toStringArray(manifest.quotes) ?? agent.quotes,
@@ -111,7 +118,9 @@ function readAssistantsFromJson(repoRoot: string): Agent[] {
           description: String(obj.description ?? ""),
           writingStyle: String(obj.writingStyle ?? ""),
           primaryBooks: toStringArray(obj.primaryBooks),
+          primaryLectures: toStringArray(obj.primaryLectures),
           secondaryBooks: toStringArray(obj.secondaryBooks),
+          secondaryLectures: toStringArray(obj.secondaryLectures),
           concepts: toStringArray(obj.concepts),
           essays: toStringArray(obj.essays),
           quotes: toStringArray(obj.quotes),
@@ -145,7 +154,9 @@ function readAssistantsFromManifests(repoRoot: string): Agent[] {
         description: "",
         writingStyle: "",
         primaryBooks: [],
+        primaryLectures: [],
         secondaryBooks: [],
+        secondaryLectures: [],
       }),
       manifestPath
     );

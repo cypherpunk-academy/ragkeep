@@ -4,6 +4,7 @@ import type { ConceptEntry } from "./concepts";
 import type { ChunkInfo } from "./chunkLookup";
 import { getConceptFileLabel } from "./concepts";
 import type { EssayData } from "./essays";
+import type { AgentLectureSets, LectureView } from "./lectures";
 import {
   escapeHtml,
   parseBookString,
@@ -27,7 +28,7 @@ const SECTION_META: Record<
   { label: string; fileName: string; heading: string }
 > = {
   overview: { label: "Übersicht", fileName: "index.html", heading: "Beschreibung" },
-  books: { label: "Bücher", fileName: "books.html", heading: "Primärliteratur" },
+  books: { label: "Primärliteratur", fileName: "books.html", heading: "Primärliteratur" },
   "secondary-books": {
     label: "Sekundärliteratur",
     fileName: "secondary-books.html",
@@ -138,6 +139,307 @@ function renderBookRows(bookIds: string[], availableBooks: Map<string, Book>): s
     </a>`;
   });
   return `<div class="book-list">${items.join("")}</div>`;
+}
+
+function renderLectureRows(lectures: LectureView[]): string {
+  if (lectures.length === 0) {
+    return `<p class="empty-state">Keine Vorträge in dieser Kategorie.</p>`;
+  }
+
+  const cards = lectures.map((lecture) => {
+    const date = escapeHtml(lecture.date || "Ohne Datum");
+    const id = escapeHtml(lecture.id);
+    const title = escapeHtml(lecture.title || "(Ohne Titel)");
+    const zyklusText =
+      lecture.zyklus != null
+        ? `Zyklus ${lecture.zyklus}${lecture.zyklusTitle ? `, ${escapeHtml(lecture.zyklusTitle)}` : ""}`
+        : "—";
+    const gaText = lecture.ga
+      ? `GA ${escapeHtml(lecture.ga)}${lecture.gaTitle ? `, ${escapeHtml(lecture.gaTitle)}` : ""}`
+      : "—";
+    const htmlLink = lecture.htmlPath
+      ? `<a class="lecture-open-link" href="../../${encodeURI(lecture.htmlPath)}" target="_blank" rel="noreferrer">Text öffnen</a>`
+      : `<span class="meta-quiet">Kein Text-Link verfügbar</span>`;
+    const summaryHtml = lecture.summary
+      ? `<details class="toc-details lecture-summary-details">
+    <summary class="toc-summary-line"><span class="toc-title-text">Zusammenfassung</span></summary>
+    <div class="toc-panel">
+      <div class="toc-excerpt">${renderSummaryHtml(lecture.summary)}</div>
+    </div>
+  </details>`
+      : "";
+    return `<article class="lecture-card book-link" data-lecture-card data-date-value="${lecture.dateValue ?? ""}" data-date-label="${date}" data-zyklus="${lecture.zyklus ?? ""}" data-ga="${escapeHtml(
+      lecture.ga.toLowerCase()
+    )}">
+  <strong>${title}</strong>
+  <div class="lecture-meta-row"><span>Datum: ${date}</span><span>ID: ${id}</span></div>
+  <div class="lecture-meta-row"><span>${zyklusText}</span><span>${gaText}</span></div>
+  <div class="lecture-meta-row">${htmlLink}</div>
+  ${summaryHtml}
+</article>`;
+  });
+
+  return `<div class="lecture-list">${cards.join("")}</div>`;
+}
+
+function renderLectureFilterPanel(scope: string, lectures: LectureView[]): string {
+  const datedRaw = lectures
+    .filter((lecture) => lecture.dateValue != null && lecture.date)
+    .sort((a, b) => (a.dateValue ?? 0) - (b.dateValue ?? 0));
+
+  const datedMap = new Map<number, string>();
+  for (const lecture of datedRaw) {
+    if (lecture.dateValue == null || !lecture.date) continue;
+    if (!datedMap.has(lecture.dateValue)) {
+      datedMap.set(lecture.dateValue, lecture.date);
+    }
+  }
+  const dated = Array.from(datedMap.entries()).map(([dateValue, date]) => ({
+    dateValue,
+    date,
+  }));
+
+  const fromOptions = dated
+    .map(
+      (lecture) =>
+        `<option value="${lecture.dateValue}">${escapeHtml(lecture.date)}</option>`
+    )
+    .join("");
+  const toOptions = fromOptions;
+
+  const zyklusMap = new Map<number, string>();
+  for (const lecture of lectures) {
+    if (lecture.zyklus == null) continue;
+    if (!zyklusMap.has(lecture.zyklus)) {
+      const title = lecture.zyklusTitle || "";
+      zyklusMap.set(lecture.zyklus, title);
+    }
+  }
+  const zyklusOptions = Array.from(zyklusMap.entries())
+    .sort((a, b) => a[0] - b[0])
+    .map(([zyklus, title]) => {
+      const label = title
+        ? `Zyklus ${zyklus}, ${title}`
+        : `Zyklus ${zyklus}`;
+      return `<option value="${zyklus}">${escapeHtml(label)}</option>`;
+    })
+    .join("");
+
+  const gaMap = new Map<string, string>();
+  for (const lecture of lectures) {
+    if (!lecture.ga) continue;
+    const key = lecture.ga.toLowerCase();
+    if (!gaMap.has(key)) {
+      gaMap.set(key, lecture.gaTitle);
+    }
+  }
+  const gaOptions = Array.from(gaMap.entries())
+    .sort((a, b) => a[0].localeCompare(b[0], "de"))
+    .map(([ga, title]) => {
+      const upperGa = ga.toUpperCase();
+      const label = title ? `GA ${upperGa}, ${title}` : `GA ${upperGa}`;
+      return `<option value="${escapeHtml(ga)}">${escapeHtml(label)}</option>`;
+    })
+    .join("");
+
+  const firstDate = dated[0]?.date ?? "";
+  const lastDate = dated[dated.length - 1]?.date ?? "";
+
+  const filters = `<div class="lecture-filters" data-lecture-filters data-default-from="${escapeHtml(
+    firstDate
+  )}" data-default-to="${escapeHtml(lastDate)}">
+  <div class="lecture-filter-group">
+    <label for="${scope}-lecture-date-from">Datum von</label>
+    <select id="${scope}-lecture-date-from" data-lecture-from>
+      <option value="">—</option>
+      ${fromOptions}
+    </select>
+  </div>
+  <div class="lecture-filter-group">
+    <label for="${scope}-lecture-date-to">Datum bis</label>
+    <select id="${scope}-lecture-date-to" data-lecture-to>
+      <option value="">—</option>
+      ${toOptions}
+    </select>
+  </div>
+  <div class="lecture-filter-group">
+    <label for="${scope}-lecture-zyklus">Zyklus</label>
+    <select id="${scope}-lecture-zyklus" data-lecture-zyklus>
+      <option value="">—</option>
+      ${zyklusOptions}
+    </select>
+  </div>
+  <div class="lecture-filter-group">
+    <label for="${scope}-lecture-ga">GA-Nummer</label>
+    <select id="${scope}-lecture-ga" data-lecture-ga>
+      <option value="">—</option>
+      ${gaOptions}
+    </select>
+  </div>
+</div>`;
+
+  const script = `<script>
+(function() {
+  var root = document.getElementById("${scope}-lecture-root");
+  if (!root) return;
+  var filters = root.querySelector("[data-lecture-filters]");
+  if (!filters) return;
+  var fromEl = root.querySelector("[data-lecture-from]");
+  var toEl = root.querySelector("[data-lecture-to]");
+  var zyklusEl = root.querySelector("[data-lecture-zyklus]");
+  var gaEl = root.querySelector("[data-lecture-ga]");
+  var headingEl = root.querySelector("[data-lecture-selection-heading]");
+  var cards = root.querySelectorAll("[data-lecture-card]");
+  if (!fromEl || !toEl || !zyklusEl || !gaEl || !headingEl || !cards.length) return;
+
+  var defaultFrom = filters.getAttribute("data-default-from") || "";
+  var defaultTo = filters.getAttribute("data-default-to") || "";
+
+  function selectedText(sel) {
+    if (!sel || !sel.options || sel.selectedIndex < 0) return "";
+    return sel.options[sel.selectedIndex].text || "";
+  }
+
+  function showByDate() {
+    var fromVal = fromEl.value ? Number(fromEl.value) : null;
+    var toVal = toEl.value ? Number(toEl.value) : null;
+    cards.forEach(function(card) {
+      var dateValRaw = card.getAttribute("data-date-value");
+      var dateVal = dateValRaw ? Number(dateValRaw) : null;
+      var visible = true;
+      if (dateVal == null || Number.isNaN(dateVal)) {
+        visible = false;
+      } else {
+        if (fromVal != null && dateVal < fromVal) visible = false;
+        if (toVal != null && dateVal > toVal) visible = false;
+      }
+      card.style.display = visible ? "" : "none";
+    });
+    var fromLabel = selectedText(fromEl) || defaultFrom;
+    var toLabel = selectedText(toEl) || defaultTo;
+    headingEl.textContent = "Vorträge von " + fromLabel + " bis " + toLabel;
+  }
+
+  function showByExact(attr, value) {
+    cards.forEach(function(card) {
+      var visible = card.getAttribute(attr) === value;
+      card.style.display = visible ? "" : "none";
+    });
+  }
+
+  function showAll() {
+    cards.forEach(function(card) {
+      card.style.display = "";
+    });
+    headingEl.textContent = "Vorträge";
+  }
+
+  function apply() {
+    if (zyklusEl.value) {
+      showByExact("data-zyklus", zyklusEl.value);
+      headingEl.textContent = selectedText(zyklusEl) || "Vorträge";
+      return;
+    }
+    if (gaEl.value) {
+      showByExact("data-ga", gaEl.value);
+      headingEl.textContent = selectedText(gaEl) || "Vorträge";
+      return;
+    }
+    if (fromEl.value || toEl.value) {
+      showByDate();
+      return;
+    }
+    showAll();
+  }
+
+  fromEl.addEventListener("change", function() {
+    zyklusEl.value = "";
+    gaEl.value = "";
+    apply();
+  });
+  toEl.addEventListener("change", function() {
+    zyklusEl.value = "";
+    gaEl.value = "";
+    apply();
+  });
+  zyklusEl.addEventListener("change", function() {
+    if (zyklusEl.value) {
+      fromEl.value = "";
+      toEl.value = "";
+      gaEl.value = "";
+    }
+    apply();
+  });
+  gaEl.addEventListener("change", function() {
+    if (gaEl.value) {
+      fromEl.value = "";
+      toEl.value = "";
+      zyklusEl.value = "";
+    }
+    apply();
+  });
+
+  apply();
+})();
+</script>`;
+
+  return `<section id="${scope}-lecture-root" class="stack-16">
+  ${filters}
+  <h4 class="lecture-selection-heading" data-lecture-selection-heading>Vorträge</h4>
+  ${renderLectureRows(lectures)}
+  ${script}
+</section>`;
+}
+
+function renderBooksAndLecturesContent(
+  scope: "primary" | "secondary",
+  bookIds: string[],
+  lectures: LectureView[],
+  availableBooks: Map<string, Book>
+): string {
+  const booksPanelId = `${scope}-books-panel`;
+  const lecturesPanelId = `${scope}-lectures-panel`;
+  const script = `<script>
+(function() {
+  var root = document.getElementById("${scope}-literature-root");
+  if (!root) return;
+  var buttons = root.querySelectorAll("[data-literature-tab]");
+  var panels = root.querySelectorAll("[data-literature-panel]");
+  if (!buttons.length || !panels.length) return;
+  function activate(target) {
+    buttons.forEach(function(btn) {
+      var active = btn.getAttribute("data-target") === target;
+      btn.classList.toggle("literature-tab-active", active);
+      btn.setAttribute("aria-selected", active ? "true" : "false");
+    });
+    panels.forEach(function(panel) {
+      var active = panel.getAttribute("id") === target;
+      panel.style.display = active ? "" : "none";
+    });
+  }
+  buttons.forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      var target = btn.getAttribute("data-target");
+      if (!target) return;
+      activate(target);
+    });
+  });
+  activate("${booksPanelId}");
+})();
+</script>`;
+
+  return `<div id="${scope}-literature-root" class="stack-16">
+  <div class="literature-tab-row" role="tablist" aria-label="Bücher und Vorträge">
+    <button type="button" class="literature-tab literature-tab-active" role="tab" aria-selected="true" data-literature-tab data-target="${booksPanelId}">Bücher</button>
+    <button type="button" class="literature-tab" role="tab" aria-selected="false" data-literature-tab data-target="${lecturesPanelId}">Vorträge</button>
+  </div>
+  <section id="${booksPanelId}" data-literature-panel>${renderBookRows(bookIds, availableBooks)}</section>
+  <section id="${lecturesPanelId}" data-literature-panel style="display:none">${renderLectureFilterPanel(
+    scope,
+    lectures
+  )}</section>
+  ${script}
+</div>`;
 }
 
 function renderFileRows(
@@ -328,7 +630,8 @@ function renderSectionContent(
   availableBooks: Map<string, Book>,
   essaysByAgent: Map<string, Map<string, EssayData>>,
   conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>,
-  conceptsChunkIndex: Map<string, ChunkInfo>
+  conceptsChunkIndex: Map<string, ChunkInfo>,
+  lecturesByAgent: Map<string, AgentLectureSets>
 ): string {
   if (section === "overview") {
     return `<div class="stack-24">
@@ -343,14 +646,22 @@ function renderSectionContent(
     </div>`;
   }
   if (section === "books") {
-    return `<div class="stack-8"><h3>${SECTION_META.books.heading}</h3>${renderBookRows(
+    const lectureSets = lecturesByAgent.get(agent.id);
+    const primaryLectures = lectureSets?.primaryLectures ?? [];
+    return `<div class="stack-8"><h3>${SECTION_META.books.heading}</h3>${renderBooksAndLecturesContent(
+      "primary",
       agent.primaryBooks,
+      primaryLectures,
       availableBooks
     )}</div>`;
   }
   if (section === "secondary-books") {
-    return `<div class="stack-8"><h3>${SECTION_META["secondary-books"].heading}</h3>${renderBookRows(
+    const lectureSets = lecturesByAgent.get(agent.id);
+    const secondaryLectures = lectureSets?.secondaryLectures ?? [];
+    return `<div class="stack-8"><h3>${SECTION_META["secondary-books"].heading}</h3>${renderBooksAndLecturesContent(
+      "secondary",
       agent.secondaryBooks,
+      secondaryLectures,
       availableBooks
     )}</div>`;
   }
@@ -406,6 +717,7 @@ function renderAgentPage(
   essaysByAgent: Map<string, Map<string, EssayData>>,
   conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>,
   conceptsChunkIndex: Map<string, ChunkInfo>,
+  lecturesByAgent: Map<string, AgentLectureSets>,
   section: AgentSection
 ): void {
   const sectionMeta = SECTION_META[section];
@@ -437,7 +749,8 @@ function renderAgentPage(
           availableBooks,
           essaysByAgent,
           conceptsByAgent,
-          conceptsChunkIndex
+          conceptsChunkIndex,
+          lecturesByAgent
         )}
       </main>
     </div>`
@@ -451,7 +764,8 @@ export function generateAgentPages(
   availableBooks: Map<string, Book>,
   essaysByAgent: Map<string, Map<string, EssayData>>,
   conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>,
-  conceptsChunkIndex: Map<string, ChunkInfo>
+  conceptsChunkIndex: Map<string, ChunkInfo>,
+  lecturesByAgent: Map<string, AgentLectureSets>
 ): void {
   const sections = Object.keys(SECTION_META) as AgentSection[];
   for (const agent of agents) {
@@ -463,6 +777,7 @@ export function generateAgentPages(
         essaysByAgent,
         conceptsByAgent,
         conceptsChunkIndex,
+        lecturesByAgent,
         section
       );
     }

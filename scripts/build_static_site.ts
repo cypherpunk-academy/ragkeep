@@ -18,6 +18,10 @@ import { writeSiteAssets } from "./static-site/assets";
 import { generateAgentPages, generateHomePage } from "./static-site/pages";
 import fs from "node:fs";
 import { ensureDir, writeTextFile } from "./static-site/utils";
+import {
+  collectLecturesByAgent,
+  copyLecturesHtmlToSite,
+} from "./static-site/lectures";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..");
@@ -60,6 +64,7 @@ async function main(): Promise<void> {
   }
 
   copyAssistantFiles(REPO_ROOT, OUTPUT_DIR, assistants);
+  copyLecturesHtmlToSite(REPO_ROOT, OUTPUT_DIR);
 
   const essaysByAgent = new Map<string, Map<string, EssayData>>();
   for (const agent of assistants) {
@@ -96,6 +101,7 @@ async function main(): Promise<void> {
     REPO_ROOT,
     booksById
   );
+  const lecturesByAgent = collectLecturesByAgent(REPO_ROOT, assistants, booksById);
 
   generateHomePage(OUTPUT_DIR, assistants);
   generateAgentPages(
@@ -104,7 +110,8 @@ async function main(): Promise<void> {
     booksById,
     essaysByAgent,
     conceptsByAgent,
-    chunkIndex
+    chunkIndex,
+    lecturesByAgent
   );
   generateEssayPages(OUTPUT_DIR, assistants, essaysByAgent);
 
