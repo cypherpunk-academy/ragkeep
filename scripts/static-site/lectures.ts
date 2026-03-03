@@ -316,7 +316,7 @@ function toLectureView(record: LectureCatalogRecord): LectureView {
     title: record.title,
     zyklus: record.zyklus,
     zyklusTitle: record.zyklusTitle,
-    ga: record.gaValues[0] ? record.gaValues[0].toUpperCase() : "",
+    ga: record.gaValues[0] ?? "",
     gaTitle: record.gaTitles[0] ?? "",
     htmlPath: record.htmlPath,
     summary: record.summary,

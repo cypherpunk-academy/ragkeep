@@ -17,4 +17,8 @@
   .agent-meta {
     border-top-color: #2a3243;
   }
+
+  .agent-meta-sep {
+    color: #8b92a0;
+  }
 }
