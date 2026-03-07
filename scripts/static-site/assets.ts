@@ -123,6 +123,95 @@ a {
 .meta-quiet {
   color: var(--muted);
 }
+
+/* Zitate-Seite: Schreibmaschinen-Font und Margins */
+.quote-text.typewriter-font {
+  font-family: "Special Elite", "Courier Prime", "Courier New", monospace;
+  font-size: 1.425rem;
+  line-height: 1.6;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  padding: 1.5rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  border: none;
+  background: #f5f4f0;
+}
+
+.quotes-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.quotes-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.quotes-search-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  background: var(--surface);
+  color: var(--fg);
+}
+
+.quotes-source-select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  background: var(--surface);
+  color: var(--fg);
+}
+
+.quotes-container {
+  margin-top: 1rem;
+}
+
+.quotes-group {
+  margin-bottom: 1.5rem;
+}
+
+.quotes-source-title {
+  font-family: var(--font-header);
+  font-weight: 400;
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.quotes-chapter {
+  margin-top: 1rem;
+}
+
+.quotes-chapter-title {
+  font-family: var(--font-header);
+  font-weight: 400;
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.quote-block {
+  margin-bottom: 1rem;
+}
+
+.quote-para-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.quote-para-link:hover {
+  text-decoration: underline;
+}
 `.trimStart();
 
 const layoutCss = `
@@ -764,14 +853,14 @@ nav.toc details[open] .toc-arrow-closed { display: none !important; }
 
 html[data-theme="dark"] {
   --book-bg: #0f1117;
-  --book-fg: #e9ecf3;
+  --book-fg: #d9e2f6;
   --book-quote: #76b2f7;
   --book-italics: #fec8d2;
   --book-p-num: #909090;
-  --book-muted: rgba(233, 236, 243, 0.72);
-  --book-border: rgba(233, 236, 243, 0.3);
+  --book-muted: rgba(217, 226, 246, 0.72);
+  --book-border: rgba(217, 226, 246, 0.3);
   --reader-control-bg: rgba(255, 255, 255, 0.06);
-  --reader-control-border: rgba(233, 236, 243, 0.3);
+  --reader-control-border: rgba(217, 226, 246, 0.3);
 }
 
 html[data-size="l"] .book-main { font-size: 1.28rem; }

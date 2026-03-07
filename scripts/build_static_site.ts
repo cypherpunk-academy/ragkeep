@@ -22,6 +22,7 @@ import {
   collectLecturesByAgent,
   copyLecturesHtmlToSite,
 } from "./static-site/lectures";
+import { collectQuotesForAgent } from "./static-site/quotes";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = path.resolve(__dirname, "..");
@@ -103,6 +104,14 @@ async function main(): Promise<void> {
   );
   const lecturesByAgent = collectLecturesByAgent(REPO_ROOT, assistants, booksById);
 
+  const quotesByAgent = new Map<string, ReturnType<typeof collectQuotesForAgent>>();
+  for (const agent of assistants) {
+    quotesByAgent.set(
+      agent.id,
+      collectQuotesForAgent(agent, booksById, lecturesByAgent, REPO_ROOT)
+    );
+  }
+
   generateHomePage(OUTPUT_DIR, assistants);
   generateAgentPages(
     OUTPUT_DIR,
@@ -111,7 +120,8 @@ async function main(): Promise<void> {
     essaysByAgent,
     conceptsByAgent,
     chunkIndex,
-    lecturesByAgent
+    lecturesByAgent,
+    quotesByAgent
   );
   generateEssayPages(OUTPUT_DIR, assistants, essaysByAgent);
 

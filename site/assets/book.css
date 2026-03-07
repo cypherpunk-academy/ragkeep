@@ -223,14 +223,14 @@ nav.toc details[open] .toc-arrow-closed { display: none !important; }
 
 html[data-theme="dark"] {
   --book-bg: #0f1117;
-  --book-fg: #b0b7c8;
+  --book-fg: #d9e2f6;
   --book-quote: #76b2f7;
   --book-italics: #fec8d2;
   --book-p-num: #909090;
-  --book-muted: rgba(233, 236, 243, 0.72);
-  --book-border: rgba(233, 236, 243, 0.3);
+  --book-muted: rgba(217, 226, 246, 0.72);
+  --book-border: rgba(217, 226, 246, 0.3);
   --reader-control-bg: rgba(255, 255, 255, 0.06);
-  --reader-control-border: rgba(233, 236, 243, 0.3);
+  --reader-control-border: rgba(217, 226, 246, 0.3);
 }
 
 html[data-size="l"] .book-main { font-size: 1.28rem; }

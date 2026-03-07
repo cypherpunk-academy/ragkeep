@@ -27,13 +27,10 @@
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  display: block;
 }
 
 .agent-media {
-  flex-shrink: 0;
   height: 270px;
   position: relative;
   background: linear-gradient(180deg, #bae6fd 0%, #0e7490 100%);
@@ -77,29 +74,16 @@
 }
 
 .agent-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
   padding: 21px;
 }
 
-.agent-body.stack-8 .agent-meta {
-  margin-top: auto;
-}
-
 .agent-meta {
-  display: block;
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
   font-size: 0.8rem;
   border-top: 1px solid #f3f4f6;
   padding-top: 9px;
-}
-
-.agent-meta-sep {
-  color: #b8bfc9;
-  margin: 0 0.4em;
-  font-weight: 300;
 }
 
 .agent-header {

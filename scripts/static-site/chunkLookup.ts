@@ -51,7 +51,7 @@ function buildBookIdToDirMap(repoRoot: string): Map<string, string> {
 /**
  * Ermittelt den Kapitel-Dateinamen (NN-segment_id.html) und den chapterIndex.
  */
-function findChapterFile(
+export function findChapterFile(
   absHtmlDir: string,
   segmentId: string
 ): { chapterIndex: number; fileName: string } | null {
