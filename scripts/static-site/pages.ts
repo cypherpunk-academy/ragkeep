@@ -54,7 +54,12 @@ const SECTION_META: Record<
   },
 };
 
+const ASSET_VERSION =
+  (typeof process !== "undefined" && process.env?.GITHUB_SHA?.slice(0, 7)) ||
+  `t${Date.now().toString(36)}`;
+
 function pageShell(title: string, relAssetPrefix: string, content: string): string {
+  const v = ASSET_VERSION;
   return `<!doctype html>
 <html lang="de">
   <head>
@@ -64,9 +69,9 @@ function pageShell(title: string, relAssetPrefix: string, content: string): stri
     <meta name="color-scheme" content="light dark" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400&family=Special+Elite&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="${relAssetPrefix}assets/styles.css" />
-    <link rel="stylesheet" href="${relAssetPrefix}assets/layout.css" />
-    <link rel="stylesheet" href="${relAssetPrefix}assets/dark.css" />
+    <link rel="stylesheet" href="${relAssetPrefix}assets/styles.css?v=${v}" />
+    <link rel="stylesheet" href="${relAssetPrefix}assets/layout.css?v=${v}" />
+    <link rel="stylesheet" href="${relAssetPrefix}assets/dark.css?v=${v}" />
   </head>
   <body>
     <div class="site-shell">
