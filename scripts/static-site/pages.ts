@@ -164,7 +164,7 @@ function renderLectureRows(lectures: LectureView[]): string {
       ? `GA ${escapeHtml(lecture.ga)}${lecture.gaTitle ? `, ${escapeHtml(lecture.gaTitle)}` : ""}`
       : "—";
     const htmlLink = lecture.htmlPath
-      ? `<a class="lecture-open-link" href="../../${encodeURI(lecture.htmlPath)}" target="_blank" rel="noreferrer">Text öffnen</a>`
+      ? `<a class="lecture-open-link" href="../../${encodeURI(lecture.htmlPath)}" target="_blank" rel="noreferrer" aria-label="Vortragstext öffnen">📖</a>`
       : `<span class="meta-quiet">Kein Text-Link verfügbar</span>`;
     const summaryHtml = lecture.summary
       ? `<details class="toc-details lecture-summary-details">

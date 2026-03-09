@@ -567,6 +567,10 @@ const layoutCss = `
   display: none !important;
 }
 
+.book-list .book-link strong {
+  font-size: 1.2em;
+}
+
 .book-link {
   display: grid;
   grid-template-columns: 1fr;
@@ -588,8 +592,15 @@ const layoutCss = `
 
 .lecture-open-link {
   color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration: none;
+  font-size: 1.65em;
+  opacity: 0.7;
+  transition: opacity 140ms ease;
+  line-height: 1;
+}
+
+.lecture-open-link:hover {
+  opacity: 1;
 }
 
 .file-link {
