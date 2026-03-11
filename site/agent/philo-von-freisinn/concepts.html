@@ -7,9 +7,9 @@
     <meta name="color-scheme" content="light dark" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400&family=Special+Elite&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../../assets/styles.css?v=tmmjbd9o4" />
-    <link rel="stylesheet" href="../../assets/layout.css?v=tmmjbd9o4" />
-    <link rel="stylesheet" href="../../assets/dark.css?v=tmmjbd9o4" />
+    <link rel="stylesheet" href="../../assets/styles.css?v=tmmkma54q" />
+    <link rel="stylesheet" href="../../assets/layout.css?v=tmmkma54q" />
+    <link rel="stylesheet" href="../../assets/dark.css?v=tmmkma54q" />
   </head>
   <body>
     <div class="site-shell">
@@ -17,11 +17,174 @@
       <a class="back-link" href="../../index.html">← Zurück zur Liste</a>
       <header class="agent-header site-card">
         <div class="agent-avatar"><img src="../../assistants/philo-von-freisinn/assets/avatar.png" alt="Philo von Freisinn" /></div>
-        <div class="stack-8">
+        <div class="stack-8 agent-header-main">
           <h1>Philo von Freisinn</h1>
-          <div class="stack-8">
+          <div class="agent-header-meta">
             <span class="pill pill-accent">Collection: philo-von-freisinn</span>
             <span class="pill pill-muted">21 Bücher insgesamt</span>
+            <div class="monitoring-wrapper" data-monitoring data-collection="philo-von-freisinn" data-ragrun-url="http://localhost:8000/api/v1">
+  <button type="button" class="monitoring-toggle" data-monitoring-toggle title="Monitoring öffnen" aria-label="Monitoring öffnen">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+    Statistik
+  </button>
+  <div class="monitoring-panel" data-monitoring-panel hidden>
+    <div class="monitoring-loading" data-monitoring-loading>Lade …</div>
+    <div class="monitoring-content" data-monitoring-content hidden>
+      <div class="monitoring-grid">
+        <div class="monitoring-tile" data-monitoring-chunks>
+          <h4>Chunks</h4>
+          <div class="monitoring-tile-body" data-chunks-body></div>
+        </div>
+        <div class="monitoring-tile" data-monitoring-events>
+          <h4>Events</h4>
+          <div class="monitoring-tile-body" data-events-body></div>
+        </div>
+      </div>
+      <div class="monitoring-log">
+        <h4>Log</h4>
+        <div class="monitoring-log-body" data-log-body></div>
+      </div>
+    </div>
+    <div class="monitoring-error" data-monitoring-error hidden></div>
+  </div>
+</div>
+<script>
+(function(){
+  var wrapper = document.querySelector("[data-monitoring]");
+  if (!wrapper) return;
+  var toggle = wrapper.querySelector("[data-monitoring-toggle]");
+  var panel = wrapper.querySelector("[data-monitoring-panel]");
+  var loading = wrapper.querySelector("[data-monitoring-loading]");
+  var content = wrapper.querySelector("[data-monitoring-content]");
+  var errorEl = wrapper.querySelector("[data-monitoring-error]");
+  var collection = wrapper.getAttribute("data-collection");
+  var baseUrl = wrapper.getAttribute("data-ragrun-url");
+  var loaded = false;
+
+  function show(el, v) { if (el) el.hidden = !v; }
+  function setText(el, t) { if (el) el.textContent = t; }
+  function esc(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+  if (toggle) toggle.addEventListener("click", function() {
+    var open = !panel.hidden;
+    panel.hidden = open;
+    wrapper.classList.toggle("monitoring-open", !open);
+    toggle.classList.toggle("monitoring-toggle-active", !open);
+    toggle.setAttribute("title", open ? "Monitoring öffnen" : "Monitoring schließen");
+    toggle.setAttribute("aria-label", open ? "Monitoring öffnen" : "Monitoring schließen");
+    if (!open && !loaded) load();
+  });
+
+  function load() {
+    loaded = true;
+    show(loading, true);
+    show(content, false);
+    show(errorEl, false);
+    if (!baseUrl) {
+      setText(errorEl, "RAGRUN_URL nicht konfiguriert.");
+      show(loading, false);
+      show(errorEl, true);
+      return;
+    }
+    var chunksUrl = baseUrl + "/rag/monitoring/chunks?collection=" + encodeURIComponent(collection);
+    var eventsUrl = baseUrl + "/rag/monitoring/events?collection=" + encodeURIComponent(collection) + "&limit=50";
+    Promise.all([
+      fetch(chunksUrl).then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); }),
+      fetch(eventsUrl).then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+    ]).then(function(res) {
+      renderChunks(wrapper, res[0]);
+      renderEvents(wrapper, res[1]);
+      renderLog(wrapper, res[1].log);
+      show(loading, false);
+      show(content, true);
+    }).catch(function(err) {
+      setText(errorEl, "Monitoring nicht verfügbar (" + (err.message || err) + "). Ist ragrun erreichbar?");
+      show(loading, false);
+      show(errorEl, true);
+    });
+  }
+
+  function barHtml(label, count, max, title) {
+    var pct = max > 0 ? Math.round((count / max) * 100) : 0;
+    var t = title != null ? title : String(count);
+    return "<div class=\"monitoring-bar-row\" title=\"" + esc(t) + "\"><span class=\"monitoring-bar-label\">" + esc(label) + "</span><div class=\"monitoring-bar-track\"><div class=\"monitoring-bar-fill\" style=\"width:" + pct + "%\"></div></div><span class=\"monitoring-bar-value\">" + count + "</span></div>";
+  }
+
+  function bookBarHtml(book, maxChunks, maxUsage, sortBy) {
+    var label = (book.book_title || "") + " [" + (book.chunk_type || "") + "]";
+    var displayCount = sortBy === "usage" ? (book.usage_count || 0) : book.count;
+    var max = sortBy === "usage" ? maxUsage : maxChunks;
+    var pct = max > 0 ? Math.round((displayCount / max) * 100) : 0;
+    var usageStr = (book.usage_count || 0) + " (" + (book.usage_pct || 0) + "%)";
+    var title = book.count + " Chunks, " + (book.usage_count || 0) + " Verwendungen (" + (book.usage_pct || 0) + "%)";
+    return "<div class=\"monitoring-bar-row monitoring-bar-row-book\" title=\"" + esc(title) + "\"><span class=\"monitoring-bar-label\">" + esc(label) + "</span><div class=\"monitoring-bar-track\"><div class=\"monitoring-bar-fill\" style=\"width:" + pct + "%\"></div></div><span class=\"monitoring-bar-value\">" + book.count + "</span><span class=\"monitoring-bar-usage\">" + usageStr + "</span></div>";
+  }
+
+  function renderChunks(w, data) {
+    var body = w.querySelector("[data-chunks-body]");
+    if (!body) return;
+    if (!data || !data.chunk_types || data.chunk_types.length === 0) {
+      body.innerHTML = "<p class=\"empty-state\">Keine Chunk-Daten.</p>";
+      return;
+    }
+    var max = Math.max.apply(null, data.chunk_types.map(function(x){ return x.count; }));
+    var html = "<div class=\"monitoring-bars\">" + data.chunk_types.map(function(x){ return barHtml(x.chunk_type, x.count, max); }).join("") + "</div>";
+    if (data.books && data.books.length > 0) {
+      var books = data.books.slice();
+      var sortBy = "chunks";
+      var bookMaxChunks = Math.max.apply(null, books.map(function(x){ return x.count; }));
+      var bookMaxUsage = Math.max.apply(null, books.map(function(x){ return x.usage_count || 0; }));
+      function renderBooks() {
+        var sorted = books.slice();
+        if (sortBy === "usage") sorted.sort(function(a,b){ return (b.usage_count||0) - (a.usage_count||0); });
+        else if (sortBy === "name") sorted.sort(function(a,b){ return String(a.book_title||"").localeCompare(b.book_title||""); });
+        else sorted.sort(function(a,b){ return b.count - a.count; });
+        return sorted.map(function(x){ return bookBarHtml(x, bookMaxChunks, bookMaxUsage, sortBy); }).join("");
+      }
+      html += "<h5 style=\"margin:0.75rem 0 0.35rem;font-size:0.82rem;color:var(--muted)\">Bücher</h5>";
+      html += "<div class=\"monitoring-sort-row\"><label for=\"monitoring-sort\">Sortierung:</label><select id=\"monitoring-sort\" data-monitoring-sort><option value=\"chunks\">Chunks</option><option value=\"usage\">Verwendungen</option><option value=\"name\">Name</option></select></div>";
+      html += "<div class=\"monitoring-books-scroll\" data-monitoring-books><div class=\"monitoring-bars\">" + renderBooks() + "</div></div>";
+    }
+    body.innerHTML = html;
+    if (data.books && data.books.length > 0) {
+      var sortEl = body.querySelector("[data-monitoring-sort]");
+      var booksEl = body.querySelector("[data-monitoring-books]");
+      if (sortEl && booksEl) {
+        sortEl.addEventListener("change", function() {
+          sortBy = sortEl.value;
+          booksEl.innerHTML = "<div class=\"monitoring-bars\">" + renderBooks() + "</div>";
+        });
+      }
+    }
+  }
+
+  function renderEvents(w, data) {
+    var body = w.querySelector("[data-events-body]");
+    if (!body) return;
+    if (!data || !data.volume || data.volume.length === 0) {
+      body.innerHTML = "<p class=\"empty-state\">Keine Event-Daten.</p>";
+      return;
+    }
+    var max = Math.max.apply(null, data.volume.map(function(x){ return x.event_count; }));
+    body.innerHTML = "<div class=\"monitoring-bars\">" + data.volume.map(function(x){ return barHtml(x.endpoint, x.event_count, max); }).join("") + "</div>";
+  }
+
+  function renderLog(w, log) {
+    var body = w.querySelector("[data-log-body]");
+    if (!body) return;
+    if (!log || log.length === 0) {
+      body.innerHTML = "<p class=\"empty-state\">Kein Log.</p>";
+      return;
+    }
+    body.innerHTML = "<table class=\"monitoring-log-table\"><thead><tr><th>Zeit</th><th>Endpoint</th><th>Chunks</th><th>Concept</th><th>Typ</th></tr></thead><tbody>" + log.map(function(row){
+      var t = (row.created_at || "").replace("T", " ").slice(0, 19);
+      var chunkCell = row.chunk_count != null ? row.chunk_count : "—";
+      var conceptCell = (row.concept || "").slice(0, 40) + ((row.concept || "").length > 40 ? "…" : "");
+      return "<tr><td>" + esc(t) + "</td><td>" + esc(row.endpoint || "") + "</td><td>" + chunkCell + "</td><td title=\"" + esc(row.concept || "") + "\">" + esc(conceptCell) + "</td><td>" + esc(row.source || "") + "</td></tr>";
+    }).join("") + "</tbody></table>";
+  }
+})();
+</script>
           </div>
         </div>
       </header>
@@ -127,20 +290,20 @@
     <summary class="toc-summary-line">
       <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
       <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
-      <span class="toc-title-text">Geist</span>
+      <span class="toc-title-text">Sinn</span>
     </summary>
     <div class="toc-panel">
-      <div class="toc-excerpt"><p>Im Denken Rudolf Steiners erscheint der Geist nicht als ein abstraktes Prinzip, sondern als die unmittelbar erfahrbare, schöpferische Tätigkeit des Menschen selbst. Er offenbart sich in der denkenden und handelnden Individualität. Die beiden Ausgangspunkte alles geistigen Strebens sind Beobachtung und Denken. Während die Beobachtung die äußere Welt erschließt, ist das Denken die innere Kraft, durch die der Mensch diese Welt nicht nur passiv aufnimmt, sondern aktiv begreift und gestaltet. Dieses Denken ist keine bloße Gehirnfunktion oder ein Abbild äußerer Tatsachen. Es ist eine intuitive, aus der ideellen Sphäre schöpfende Tätigkeit. Im reinen, begrifflichen Denken handelt der Mensch aus sich selbst heraus und erfasst zugleich sein eigenes Wesen als geistiges. Hierin liegt die Quelle wahrer Freiheit: Der Mensch handelt nicht aus äußerem Zwang oder innerer Triebhaftigkeit, sondern aus der Einsicht der praktischen Vernunft. Die Seele verwächst im Gedanken mit der Wirklichkeit und erfährt ihn als tragenden Lebensinhalt. Die Geschichte der Philosophie wird als ein Ringen um die Anerkennung dieses geistigen Prinzips verstanden. Gegenüber einer rein naturwissenschaftlichen Betrachtungsweise, die nur Gesetzmäßigkeiten erfasst, betont der Geistbegriff die Sphäre der Werte – des Rechtlichen, Sittlichen, Ästhetischen und Wahren. Diese Werte strömen als geistige Welt durch die Geschichte und verleihen dem menschlichen Wollen und Handeln erst Bedeutung. Die wahre Erkenntnis ist daher kein passives Abbilden, sondern ein Hervorbringen aus dieser geistigen Tätigkeit des Ich. Aus dieser geistigen Verfasstheit des Menschen folgen unmittelbare soziale Konsequenzen. Der Geistbereich des sozialen Lebens – das kulturell-geistige Leben mit Erziehung, Wissenschaft und Kunst – muss in völliger Freiheit und Selbstverwaltung wirken können, unabhängig von staatlicher Lenkung und wirtschaftlichen Interessen. Nur so kann die freie Individualität, in der sich der Geist offenbart, zur treibenden Kraft einer menschenwür Der Geist ist somit die treibende Kraft für eine menschenwürdige Zukunft, die in der freien Individualität ihren Ursprung und ihr Ziel hat.</p></div>
+      <div class="toc-excerpt"><p>Sinn</p><p>Im Verständnis Rudolf Steiners bezeichnet „Sinn“ nicht eine bloß subjektive oder persönliche Bedeutung, sondern den objektiven geistigen Gehalt, der in den Erscheinungen der Welt wirksam ist und durch das menschliche Denken erfasst werden kann. Wahre Erkenntnis besteht demnach nicht im Registrieren subjektiver Eindrücke, sondern im Aufsuchen dieses objektiven Sinnes im Phänomen.</p><p>Die Grundlage hierfür bildet eine bestimmte Auffassung von Wirklichkeit. Die volle Wirklichkeit eines Dinges ergibt sich erst aus dem Zusammenhang zwischen der sinnlichen Wahrnehmung und dem begreifenden Denken. Die Wahrnehmung liefert für sich genommen ein zusammenhangloses Chaos; der bloße Begriff bleibt abstrakt. Erst die denkende Beobachtung, die beide Faktoren in ihrem gesetzmäßigen Zusammenhang erfasst, ergibt die konkrete Wirklichkeit. In diesem Prozess hört der übliche Gegensatz von subjektiv und objektiv auf. Das Denken ist nicht ein rein innerliches, subjektives Vermögen, sondern dasjenige Organ, durch das die in der Natur selbst tätigen Gesetzmäßigkeiten und Ideen im menschlichen Bewusstsein zur Erscheinung kommen. Wenn die objektive Ideenwelt im Subjekt auflebt, lebt im Geist des Menschen das, was in der Natur wirkt.</p><p>Damit erhält das Denken eine weltvollendende Funktion. Es ist das letzte Glied in der Reihe der Naturprozesse. Für ein rein sinnliches Wesen existierte nur die Außenseite der Natur; erst im menschlichen Geist kommt ihre wahre, innere Gestalt zur Erscheinung. Die Wissenschaft wird so zu einer Auseinandersetzung der Natur mit sich selbst im menschlichen Bewusstsein.</p><p>Folglich ist Sinn die in der Erscheinung verborgene, aber durch das Denken zugängliche geistige Gesetzmäßigkeit, die die Einzelphänomene in einen größeren, ideellen Weltzusammenhang stellt.</p></div>
       
     </div>
   </details><details class="toc-details concept-accordion-item">
     <summary class="toc-summary-line">
       <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
       <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
-      <span class="toc-title-text">Wirklichkeit</span>
+      <span class="toc-title-text">Geist</span>
     </summary>
     <div class="toc-panel">
-      <div class="toc-excerpt"><p>(nach Rudolf Steiner) Im Verständnis Rudolf Steiners ist Wirklichkeit kein fertig vorgefundenes, äußeres Ding, sondern ein Ergebnis aktiver Erkenntnishandlung. Sie entsteht erst dort, wo zwei ursprünglich getrennte Elemente im Bewusstsein zur Deckung gebracht werden: die sinnliche Wahrnehmung aus der Außenwelt und der begreifende Gedanke aus der inneren Aktivität des Ich. Eine bloße, ungedachte Wahrnehmung bleibt ein halbes Fragment, ein unvollständiges Stück. Das erkennende Denken fügt das entscheidende zweite Teil hinzu, indem es die dem Wahrgenommenen immanenten Gesetze und Ideen auffindet. Daher ist das Denken nicht, wie ein naiver Realismus oder ein kritischer Idealismus annimmt, ein passiver Spiegel der Welt. Es ist vielmehr das Organ, mit dem sich die Welt in uns erst zur vollen Wirklichkeit offenbart. Die Dinge existieren zwar unabhängig von uns, aber sie treten uns zunächst nur als Wahrnehmung entgegen; ihren anderen, gesetzmäßigen Teil findet das Ich kraft seines eigenen Innern. Diese Vereinigung ist ein freier Akt. Das Ich versetzt sich durch Selbstbestimmung in Tätigkeit, um das unmittelbar Gegebene mit der dazugehörigen Denkform zu verbinden. Wo diese Synthese gelingt, ist die Erkenntnisbefriedigung erreicht: das Ich hat die beiden in der Welt unzertrennlichen Elemente für sich vereint und ist damit wieder bei der Wirklichkeit angelangt. Folglich kann von prinzipiellen Erkenntnisgrenzen nicht gesprochen werden; was hindert, sind nur zufällige, individuelle Schranken. Wirklichkeit ist somit die durch geistige Tätigkeit errungene und stets zu erneuernde Einheit von Idee und Erscheinung, von Innen und Außen.</p></div>
+      <div class="toc-excerpt"><p>Geist (nach Rudolf Steiner)</p><p>Der Geist ist für Rudolf Steiner die wirkende und erfahrbare Realität, die sich dem Menschen vor allem im eigenen Denken offenbart. Im reinen, selbsttätigen Denken vollzieht der Mensch die Tätigkeit des Geistes unmittelbar. Wahre Erkenntnis besteht dabei nicht im passiven Abbilden einer äußeren Welt, sondern im aktiven Hervorbringen der begrifflichen Welt durch das Denken. Der Gedanke kann als eigenes Erzeugnis der Seele gefühlt werden. Entscheidend ist, dass das Denken Subjektives und Objektives zugleich umspannt; in der Verbindung von sinnlicher Wahrnehmung mit dem durchdringenden Begriff wird die volle Wirklichkeit vermittelt. Der Inhalt des Begriffes wird dabei nicht subjektiv erdacht, sondern aus der Wirklichkeit genommen. Goethes Methode des „gegenständlichen Denkens“, bei dem Anschauen und Denken eine innige Einheit bilden, gilt hier als Musterbeispiel geistigen Schauens.</p><p>Dieses geistige Prinzip wirkt nicht nur im Einzelnen, sondern entfaltet sich als ein umfassender „Geistorganismus“ in den Kultursystemen, im Erleben und Schaffen der Völker und Zeiten. Die einzelne Menschenseele ist in diesen größeren geistigen Lebenszusammenhang eingebettet und empfängt von ihm wesentliche Impulse für ihr Tun und Schaffen. Damit stellt der Geist ein selbständiges, höheres Prinzip gegenüber dem bloßen Naturdasein dar. Die Natur als äußere Wirklichkeit wird erst dadurch anerkannt, dass sie vom Geistigen in der Seele erlebt wird; das Natürliche ist somit ein Untergebiet innerhalb des allgemeinen, geistig durchdrungenen Seelenerlebens.</p><p>In der geschichtlichen Entwicklung des Gedankenlebens durchläuft das Verhältnis der Seele zum Geist verschiedene Epochen: von der ersten Wahrnehmung des Gedankens als etwas Äußerem bis hin zu dem Punkt, wo die Seele ihn als ihr eigenes Erzeugnis fühlt und schließlich nach seiner Beziehung zur Außenwelt fragt. Das philosophische Ringen der Gegenwart kreist um die Frage, wie ein Weltbild gestaltet werden kann, in in dem die wahre Wesenheit der selbstbewussten Seele zugleich mit dem naturwissenschaftlichen Weltbild sicher verankert ist. Der Geist erweist sich so als die ordnende und sinnstiftende Kraft, die den Menschen aus der bloßen Naturbetrachtung herausführt und ihn in einen schöpferischen Weltenzusammenhang stellt.</p></div>
       
     </div>
   </details><details class="toc-details concept-accordion-item">
@@ -150,17 +313,17 @@
       <span class="toc-title-text">Sozialer Organismus</span>
     </summary>
     <div class="toc-panel">
-      <div class="toc-excerpt"><p>Der Begriff „sozialer Organismus“ bezeichnet nach Rudolf Steiner die Gesellschaft als einen lebendigen, sich selbst regulierenden Gesamtorganismus, der aus dem freien Zusammenwirken der Menschen entsteht. Seine Gesundheit und Zukunftsfähigkeit hängen von einer bewussten Dreigliederung in drei selbständige, aber zusammenwirkende Lebensgebiete ab. Das erste Glied ist das Geistesleben, zu dem insbesondere Erziehung, Bildung und Kultur gehören. Es muss in völliger Freiheit und Selbstverwaltung aus seinen eigenen Impulsen heraus gestaltet werden können, ohne staatliche oder wirtschaftliche Einmischung. Sein Leitprinzip ist die Freiheit. Das zweite Glied ist das Rechtsleben oder der politische Staat. Seine Aufgabe ist die Regelung aller Beziehungen zwischen einander gleichgestellten Menschen. Es muss demokratisch aufgebaut sein und sein Leitprinzip ist die Gleichheit. Das dritte Glied ist das Wirtschaftsleben. Es soll sich ausschließlich auf die Bereiche der Gütererzeugung, -verteilung und des -verbrauchs konzentrieren. Sein organisierendes Prinzip soll die Brüderlichkeit oder Solidarität sein, die sich insbesondere in frei gebildeten wirtschaftlichen Assoziationen verwirklicht. Die pathologische Entwicklung der modernen Gesellschaft besteht nach Steiner gerade in der Vermischung und zentralistischen Vereinheitlichung dieser drei Bereiche, etwa wenn wirtschaftliche Interessen das Bildungswesen bestimmen oder der Staat in geistige Belange eingreift. Gesundheit entsteht erst durch die bewusste Trennung und Verselbständigung dieser Funktionen bei gleichzeitiger freier Zusammenarbeit. Die Einheit des gesamten Organismus ergibt sich nicht durch eine abstrakte Zentralgewalt, sondern lebendig aus dem Nebeneinander- und Zusammenwirken der selbständigen Glieder sowie daraus, dass jeder Mensch mit seinen unterschiedlichen Interessen allen drei Bereichen angehört. Nur in dieser dreigegliederten Struktur können die Ideale der Freiheit, Gleichheit und Brüderlichkeit ihren spezifischen Wirklichkeitswert entfalten und zu einer fruchtbaren sozialen Gestaltung führen.</p></div>
+      <div class="toc-excerpt"><p>Sozialer Organismus</p><p>Der Begriff „Sozialer Organismus“ bezeichnet bei Rudolf Steiner die Auffassung, dass eine menschliche Gemeinschaft als ein lebendiges, gegliedertes Ganzes zu verstehen ist. Ein gesunder Gesellschaftskörper gliedert sich in drei wesentliche, eigenständige Lebensbereiche: das geistig-kulturelle Leben, das rechtsstaatliche (politische) Leben und das wirtschaftliche Leben. Diese drei Gebiete müssen jeweils ihre eigene Autonomie und Selbstverwaltung besitzen, um gesund zu funktionieren. Im gesunden sozialen Organismus wirken sie in freier Wechselwirkung zusammen.</p><p>Das Geistesleben – umfassend Wissenschaft, Kunst, Religion und Erziehung – muss dabei „auf sich selbst gestellt“ wirken und aus dem freien Zusammenwirken schöpferischer Persönlichkeiten erwachsen. Es befruchtet die anderen Bereiche durch technische und organisatorische Ideen. Das politische Staatsgebiet regelt auf der Grundlage des Rechtsbewusstseins alle Beziehungen, in denen die Menschen einander gleich sind. Das Wirtschaftsleben hat sich ausschließlich mit Gütererzeugung, -verteilung und -verbrauch auf assoziativer Grundlage zu befassen.</p><p>Soziale Krisen und Krankheiten entstehen nach dieser Auffassung, wenn ein Bereich die anderen beherrscht oder die Gebiete ineinander verquickt sind. Die neuere Zeit fordere ein bewusstes Sich-Einstellen des Menschen in diesen gegliederten Gesellschaftsorganismus. Nur wenn das Bewusstsein von diesen drei Seiten her orientiert ist, kann es dem sozialen Leben eine gesunde Gestaltung geben. Das Ziel ist somit eine freie, befruchtende Zusammenarbeit selbstverwalteter Glieder, die den Einzelnen zum verantwortlichen Mitarbeiter am Ganzen macht. Der dreigegliederte soziale Organismus wird so zur notwendigen Lebensform für die Verwirklichung einer freien und zugleich verantwortlichen menschlichen Gemeinschaft.</p></div>
       
     </div>
   </details><details class="toc-details concept-accordion-item">
     <summary class="toc-summary-line">
       <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
       <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
-      <span class="toc-title-text">Leben</span>
+      <span class="toc-title-text">Wirklichkeit</span>
     </summary>
     <div class="toc-panel">
-      <div class="toc-excerpt"><p>– In der Philosophie Rudolf Steiners bezeichnet dieser Begriff vor allem den Bereich der Wirklichkeit, in dem sich menschliche Freiheit verwirklicht. Das Leben ist der konkrete Schauplatz, auf dem das denkend erfasste Ich handelnd tätig wird. Es ist der Stoff, den der Mensch nach eigenen, durch Intuition erfassten Ideen gestalten kann. Eine freie Handlung liegt dabei genau dann vor, wenn der Mensch nicht äußerem Zwang oder fremden Prinzipien folgt, sondern nur sich selbst gehorcht – das heißt, den aus seinem eigenen Wesen intuitiv hervorgebrachten sittlichen Impulsen. Dieses tätige Leben ist wesentlich durch das Denken geprägt, das nicht als abstrakter Mechanismus, sondern als lebendige, schöpferische Aktivität der Seele verstanden wird. Die menschliche Innenpersönlichkeit besitzt ein eigenes, selbsttätiges Seelenleben, aus dem heraus sie die Welt begreift und gestaltet. Diese individuelle Selbstbestimmung bildet zugleich die Grundlage für ein gesundes soziales Zusammenleben. Der soziale Organismus wird als ein lebendiges Ganzes begriffen, das nicht durch äußere Zwangsordnungen, sondern aus der freien Initiative und dem vernunftgeleiteten Zusammenwirken der Individuen erwächst. Geschichte und Kultur sind demnach der Bereich, in dem sich große Ideen durch das Handeln der Menschen verwirklichen. Somit ist das Leben bei Steiner der Ort, an dem der Geist des Menschen wirksam wird: als Raum der freien Selbsterkenntnis, der verantwortlichen Tat und der sich stetig entwickelnden, vernünftigen Gemeinschaft.</p></div>
+      <div class="toc-excerpt"><p>Wirklichkeit (nach Rudolf Steiner)</p><p>Die Wirklichkeit ist nicht ein bloßes, fertiges Gegenüber, das der Mensch einfach vorfindet. Sie ergibt sich vielmehr aus dem notwendigen Zusammenhang von zwei Elementen: der Wahrnehmung und des Denkens.</p><p>Die uns unmittelbar gegebene Welt ist zunächst eine Welt der Erscheinungen, also der Wahrnehmungen. Diese Erscheinungen sind nicht unwirklich, sondern die Art und Weise, wie sich die Wirklichkeit dem Menschen zunächst darbietet. Für sich allein betrachtet, bleiben sie jedoch ein zusammenhangloses Chaos. Der entscheidende Schritt zur vollen Wirklichkeit geschieht, wenn der Mensch diese Erscheinungen mit seinem Denken durchdringt. Das Denken ist dabei nicht ein bloß subjektives Werkzeug, das eine fremde Welt abbildet, sondern ein Prinzip, das beide Seiten der Wirklichkeit umspannt.</p><p>Indem wir denken, verbinden wir uns mit den ordnenden Gesetzen und Ideen, die der sinnlichen Erscheinungswelt zugrunde liegen. Die wahre Wirklichkeit ist daher die lebendige Einheit von Erscheinung (Wahrnehmung) und ihrem gesetzmäßigen, ideellen Zusammenhang (Begriff). Dieser Zusammenhang wird nicht willkürlich erdacht, sondern im Denken gefunden und unmittelbar erlebt – Steiner spricht hier von einem intuitiven Denkerlebnis.</p><p>Dieser Prozess überwindet die Illusion, dass die wahrgenommenen Dinge isolierte, in sich geschlossene Einzelwesen seien. Das Denken gliedert die individuelle Existenz vielmehr in das Leben des Kosmos ein. Die Wirklichkeit ist somit ein Werdendes, das seine volle Gestalt erst in der aktiven Begegnung mit dem erkennenden menschlichen Geist annimmt. Sie ist kein Jenseitiges, das hinter den Erscheinungen liegt, sondern offenbart sich vollständig in deren durchdachter, begrifflicher Durchdringung.</p></div>
       
     </div>
   </details><details class="toc-details concept-accordion-item">
@@ -170,7 +333,7 @@
       <span class="toc-title-text">Vorstellung</span>
     </summary>
     <div class="toc-panel">
-      <div class="toc-excerpt"><p>Im Denken Rudolf Steiners bezeichnet die Vorstellung das geistige Ergebnis eines aktiven Erkenntnisprozesses. Sie entsteht nicht passiv, sondern dadurch, dass eine äußere Wahrnehmung durch das Denken durchdrungen und in einen sinnvollen Zusammenhang gebracht wird. Das Denken fügt die wahrgenommene Gegebenheit in begriffliche Formen ein. Eine Vorstellung ist somit eine bewusste Synthese aus einem äußeren Eindruck und einer inneren, begrifflichen Tätigkeit des Ich. Steiner grenzt diesen aktiven Begriff der Vorstellung deutlich von anderen philosophischen Positionen ab, insbesondere von der Auffassung, Vorstellungen seien lediglich subjektive, von der Realität abgetrennte innere Bilder. Seiner Analyse zufolge bleibt in einem rein subjektivistischen Weltbild, das nur von Empfindungen und deren seelischer Verarbeitung ausgeht, tatsächlich nichts als solche isolierten Vorstellungen übrig. Dem stellt er seinen Ansatz entgegen: Die Vorstellung ist der Ort, an dem sich für das erkennende Bewusstsein die Welt erst eigentlich erschließt, weil hier die ursprünglich getrennten Elemente der Wirklichkeit – die Wahrnehmung und der Begriff – in freier Tätigkeit vereint werden. Diese Vereinigung ist nicht nur für das Erkennen, sondern auch für das Handeln von zentraler Bedeutung. Eine Vorstellung kann, mit einem Bezug auf eine konkrete Wahrnehmungssituation, zum Motiv des Wollens werden. Sie wirkt dann auf die individuelle charakterologische Anlage des Menschen und bestimmt ihn in einer bestimmten Richtung zum Handeln. Damit ist die Vorstellung eine entscheidende Grundlage für ein freies, aus Einsicht geborenes Urteil und für verantwortliches Handeln in der Gemeinschaft. Sie repräsentiert den Punkt, an dem die innere geistige Tätigkeit des Menschen fruchtbar in die Gestaltung der äußeren Wirklichkeit eingreift.</p></div>
+      <div class="toc-excerpt"><p>Vorstellung</p><p>Im erkenntnistheoretischen Denken Rudolf Steiners nimmt die Vorstellung eine zentrale Vermittlerrolle ein. Sie entsteht dort, wo die beiden grundlegenden Elemente der Wirklichkeit im menschlichen Bewusstsein zusammentreten: die einzelne, konkrete Wahrnehmung und der allgemeine, ideelle Begriff. Für sich genommen bleibt die Wahrnehmung ein zusammenhangloses Chaos, der Begriff eine leere Abstraktion. Erst im erkennenden Akt verbindet das denkende Ich beide zu einer sinnvollen Einheit – und diese Synthese ist die Vorstellung.</p><p>Damit ist die Vorstellung das Medium, in dem sich die objektive Welt der Gesetzmäßigkeiten und die subjektive Welt des unmittelbaren Erlebens durchdringen. Sie überwindet die für die menschliche Organisation typische Trennung: Der Schnitt zwischen Wahrnehmung und Denken ist nicht in den Dingen selbst begründet, sondern entsteht erst, wo der Betrachtende den Dingen gegenübertritt. Die Vorstellung hebt diese künstliche Trennung im Erkenntnisprozess wieder auf und führt zur „vollen Wirklichkeit“, die stets der gesetzmäßige Zusammenhang beider Faktoren ist.</p><p>Im praktischen Leben wird die Vorstellung zum entscheidenden Bindeglied für das Handeln. Ein allgemeiner moralischer Begriff (wie „du sollst Gutes tun“) bleibt für die konkrete Tat wirkungslos, solange er nicht in eine spezifische Vorstellung übersetzt wird – das heißt, in eine konkrete geistige Verknüpfung dieses Begriffs mit einem wahrgenommenen situation. Diese produktive Fähigkeit, aus Ideen konkrete Handlungsbilder zu schaffen, bezeichnet Steiner als moralische Phantasie. Sie ist die Quelle sittlichen Handelns, denn erst die vorstellende Vergegenwärtigung macht ein Motiv zum unmittelbaren Bestimmungsgrund des Willens.</p><p>So erweist sich die Vorstellung als das dynamische Element, in dem Erkenntnis vollendet und freie Tat vorbereitet wird.</p></div>
       
     </div>
   </details><details class="toc-details concept-accordion-item">
@@ -180,7 +343,7 @@
       <span class="toc-title-text">Kraft</span>
     </summary>
     <div class="toc-panel">
-      <div class="toc-excerpt"><p>(nach Rudolf Steiner) Im Verständnis Rudolf Steiners bezeichnet „Kraft“ nicht einen äußerlich wirkenden, mechanischen Impuls, wie ihn ein materialistisches Weltbild annimmt. Eine solche Auffassung, die alles Geschehen auf „rein mechanische Notwendigkeit“ zurückführt, verkennt nach Steiner das Wesentliche: Echte Kraft ist etwas im Bewusstsein unmittelbar Erlebbares. Sie zeigt sich primär in der eigenen Denktätigkeit, in der „Selbsttätigkeit der menschlichen Innenpersönlichkeit“. Auf der höchsten Stufe des individuellen Lebens wird diese Kraft als „reines Denken“ wirksam, das aus intuitiver Schau schöpft. Dieses Denken ist nicht passiv, sondern die aktive „Triebfeder unseres Handelns“. Indem der Mensch aus solcher Intuition handelt, tritt er aus der Rolle des bloßen Beobachters heraus und stellt sich tätig zur Welt. Die Kraft ist somit das bewegende Moment, das den Menschen aus der Selbstbeobachtung in ein gestaltendes Verhältnis zur Wirklichkeit führt. Diese innere, geistige Kraft entfaltet sich auch im sozialen Zusammenleben. Ein gesunder sozialer Organismus gliedert sich nach Steiner in verschiedene Gebiete, in denen jeweils spezifische „Entwicklungskräfte“ und „organisatorische Ideen und Kräfte“ wirken. Im freien Geistesleben, im Rechtsleben und im Wirtschaftsleben kommen unterschiedliche Impulse zur Geltung, die zusammenwirken müssen. Ein bewusstes „Sichhineinstellen“ des Menschen in diese gegliederte Ordnung ist daher eine zentrale Forderung der Zeit. Zusammenfassend ist Kraft bei Steiner also weder eine hypothetische Rechengröße noch ein bloß metaphysisches Prinzip, sondern die im Denken und Wollen erfahrene, lebendige Triebkraft des Geistes, die den Einzelnen wie die Gesellschaft gestaltend durchdringt.</p></div>
+      <div class="toc-excerpt"><p>Kraft</p><p>Im Denken Rudolf Steiners, das sich stark auf Goethes naturwissenschaftliche Methode stützt, ist „Kraft“ kein hypothetisches, hinter den Erscheinungen verborgenes Ding. Sie ist vielmehr die gesetzmäßige Einheit, die sich in der fortschreitenden Erfahrung selbst offenbart. Am deutlichsten zeigt sie sich im Übergang, im Werden und in der Metamorphose. So muss etwa eine regelmäßige Kristallform nicht als starres Ding, sondern als Wirkung einer übersinnlichen, gestaltenden Kraft aufgefasst werden, die im Prozess der Verfestigung sichtbar wird.</p><p>Die höchste und eigenständigste Form von Kraft im menschlichen Bereich ist das reine, begriffliche Denken. Auf der Stufe des individuellen Lebens, wo der Mensch aus reiner Intuition schöpft – also ohne Bezug auf einen bestimmten Wahrnehmungsinhalt –, wird dieses Denken selbst zur unmittelbaren Triebfeder des Handelns. Wenn wir aus solchen Intuitionen handeln, ist die treibende Kraft unseres Wollens das reine Denken selbst, das in diesem Zusammenhang auch als praktische Vernunft bezeichnet werden kann. Diese moralische Triebfeder ist ein unmittelbar aus der Intuition fließender Antrieb; sie ist kein von außen auferlegtes Gebot, sondern eine im erkennenden Ich selbst entspringende Kraft.</p><p>Damit ist die Kraft bei Steiner primär ein wirkendes und gesetzmäßiges Prinzip, das sich sowohl in der natürlichen Metamorphose beobachten als auch im menschlichen Denken als Quelle ethischer Selbstbestimmung erkennen lässt.</p></div>
       
     </div>
   </details><details class="toc-details concept-accordion-item">

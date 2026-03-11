@@ -48,6 +48,20 @@ function writeMetaFiles(outputDir: string): void {
   writeTextFile(path.join(outputDir, "robots.txt"), "User-agent: *\nAllow: /\n");
 }
 
+function copyFavicon(
+  repoRoot: string,
+  outputDir: string,
+  assistants: { avatarUrl?: string }[]
+): void {
+  const agentWithAvatar = assistants.find((a) => a.avatarUrl);
+  if (!agentWithAvatar?.avatarUrl) return;
+  const relPath = agentWithAvatar.avatarUrl.replace(/^assistants\//, "");
+  const sourcePath = path.join(repoRoot, "assistants", relPath);
+  if (!fs.existsSync(sourcePath)) return;
+  fs.copyFileSync(sourcePath, path.join(outputDir, "favicon.png"));
+  fs.copyFileSync(sourcePath, path.join(outputDir, "favicon.ico"));
+}
+
 async function main(): Promise<void> {
   cleanSiteOutput(OUTPUT_DIR);
   writeSiteAssets(OUTPUT_DIR);
@@ -65,6 +79,7 @@ async function main(): Promise<void> {
   }
 
   copyAssistantFiles(REPO_ROOT, OUTPUT_DIR, assistants);
+  copyFavicon(REPO_ROOT, OUTPUT_DIR, assistants);
   copyLecturesHtmlToSite(REPO_ROOT, OUTPUT_DIR);
 
   const essaysByAgent = new Map<string, Map<string, EssayData>>();
