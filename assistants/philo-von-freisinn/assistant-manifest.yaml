@@ -17,7 +17,7 @@ primary-books:
   - Rudolf_Steiner#Die_Kernpunkte_der_sozialen_Frage#23
   - Rudolf_Steiner#Aufsätze_über_die_Dreigliederung_des_sozialen_Organismus_und_zur_Zeitlage#24
 primary-lectures:
-  - Zyklus 33
+  - Zyklus 33, Der menschliche und der kosmische Gedanke, 4 Vorträge
 secondary-books:
   - Rudolf_Steiner#Methodische_Grundlagen_der_Anthroposophie#30
   - Rudolf_Steiner#Gesammelte_Aufsätze_zur_Kultur-_und_Zeitgeschichte#31
@@ -34,27 +34,40 @@ secondary-books:
   - Julian_Assange#Various_Interviews_and_Articles#1
   - Lawrence_Lessig#Code_Version_2_0#1
 secondary-lectures:
-  - GA 73a
-  - GA 76
-  - GA 79
-  - GA 82
-  - GA 201
-  - GA 199
-  - GA 328
-  - GA 329
-  - GA 330
-  - GA 331
-  - GA 332a
-  - GA 334
-  - GA 335
-  - GA 337a
-  - GA 337b
-  - GA 339
-  - GA 340
-  - GA 341
-  - GA 293
-  - GA 294
-  - GA 295
+  - GA 73a, Fachwissenschaften und Anthroposophie
+  - GA 76, Die befruchtende Wirkung der Anthroposophie auf die Fachwissenschaften
+  - GA 79, Die Wirklichkeit der höheren Welten
+  - GA 82, Damit der Mensch ganz Mensch werde. Die Bedeutung der Anthroposophie
+    im Geistesleben der Gegenwart
+  - GA 201, Entsprechungen zwischen Mikrokosmos und Makrokosmos. Der Mensch —
+    eine Hieroglyphe des Weltenalls. Der Mensch in seinem Zusammenhang mit dem
+    Kosmos Band I
+  - GA 199, Geisteswissenschaft als Erkenntnis der Grundimpulse sozialer
+    Gestaltung
+  - GA 328, Die soziale Frage
+  - GA 329, Die Befreiung des Menschenwesens als Grundlage für eine soziale
+    Neugestaltung. Altes Denken und neues soziales Wollen
+  - GA 330, Neugestaltung des sozialen Organismus
+  - GA 331, Betriebsräte und Sozialisierung
+  - GA 332a, Soziale Zukunft
+  - GA 334, Vom Einheitsstaat zum dreigliedrigen sozialen Organismus
+  - GA 335, Die Krisis der Gegenwart und der Weg zu gesundem Denken
+  - GA 337a, Soziale Ideen. Soziale Wirklichkeit. Soziale Praxis. Band I.
+    Diskussionsabende des Schweizer Bundes für Dreigliederung des sozialen
+    Organismus
+  - GA 337b, Soziale Ideen. Soziale Wirklichkeit. Soziale Praxis. Band II.
+    Diskussionsabende des Schweizer Bundes für Dreigliederung des sozialen
+    Organismus
+  - GA 339, Anthroposophie soziale Dreigliederung und Redekunst.
+    Orientierungskurs für die öffentliche Wirksamkeit mit besonderem Hinblick
+    auf die Schweiz
+  - GA 340, Nationalökonomischer Kurs. Aufgaben einer neuen
+    Wirtschaftswissenschaft Band I
+  - GA 341, Nationalökonomisches Seminar. Aufgaben einer neuen
+    Wirtschaftswissenschaft Band II
+  - GA 293, Allgemeine Menschenkunde als Grundlage der Pädagogik
+  - GA 294, Erziehungskunst. Methodisch-Didaktisches
+  - GA 295, Erziehungskunst. Seminarbesprechungen und Lehrplanvorträge
 concepts:
   - concepts.jsonl
   - individualismus-concepts.jsonl
