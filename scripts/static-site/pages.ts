@@ -62,171 +62,202 @@ const RAGRUN_BASE: string =
   (typeof process !== "undefined" && process.env?.RAGRUN_URL) || "";
 
 function renderMonitoringWidget(agent: Agent): string {
-  const collection = escapeHtml(agent.ragCollection);
-  const ragrunUrl = escapeHtml(RAGRUN_BASE.replace(/\/$/, "") + "/api/v1");
-  return `<div class="monitoring-wrapper" data-monitoring data-collection="${collection}" data-ragrun-url="${ragrunUrl}">
-  <button type="button" class="monitoring-toggle" data-monitoring-toggle title="Monitoring öffnen" aria-label="Monitoring öffnen">
+  return `<a class="monitoring-toggle" href="statistik.html" title="Statistik öffnen" aria-label="Statistik öffnen">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
     Statistik
-  </button>
-  <div class="monitoring-panel" data-monitoring-panel hidden>
-    <div class="monitoring-loading" data-monitoring-loading>Lade …</div>
-    <div class="monitoring-content" data-monitoring-content hidden>
-      <div class="monitoring-grid">
-        <div class="monitoring-tile" data-monitoring-chunks>
-          <h4>Chunks</h4>
-          <div class="monitoring-tile-body" data-chunks-body></div>
-        </div>
-        <div class="monitoring-tile" data-monitoring-events>
-          <h4>Events</h4>
-          <div class="monitoring-tile-body" data-events-body></div>
-        </div>
-      </div>
-      <div class="monitoring-log">
-        <h4>Log</h4>
-        <div class="monitoring-log-body" data-log-body></div>
-      </div>
-    </div>
-    <div class="monitoring-error" data-monitoring-error hidden></div>
-  </div>
-</div>
-<script>
+  </a>`;
+}
+
+function renderStatistikPage(agent: Agent): string {
+  const collection = escapeHtml(agent.ragCollection);
+  const ragrunUrl = escapeHtml(RAGRUN_BASE.replace(/\/$/, "") + "/api/v1");
+  const agentName = escapeHtml(agent.name);
+
+  const script = `<script>
 (function(){
-  var wrapper = document.querySelector("[data-monitoring]");
+  var wrapper = document.getElementById("stat-wrapper");
   if (!wrapper) return;
-  var toggle = wrapper.querySelector("[data-monitoring-toggle]");
-  var panel = wrapper.querySelector("[data-monitoring-panel]");
-  var loading = wrapper.querySelector("[data-monitoring-loading]");
-  var content = wrapper.querySelector("[data-monitoring-content]");
-  var errorEl = wrapper.querySelector("[data-monitoring-error]");
   var collection = wrapper.getAttribute("data-collection");
   var baseUrl = wrapper.getAttribute("data-ragrun-url");
-  var loaded = false;
+  var statusEl = document.getElementById("stat-status");
+  var contentEl = document.getElementById("stat-content");
+  var reloadBtn = document.getElementById("stat-reload");
 
-  function show(el, v) { if (el) el.hidden = !v; }
-  function setText(el, t) { if (el) el.textContent = t; }
   function esc(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  function fmtDate(s) {
+    if (!s) return "—";
+    var str = String(s).slice(0, 10);
+    var parts = str.split("-");
+    if (parts.length !== 3) return str;
+    var months = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+    var day = parseInt(parts[2], 10);
+    var month = months[parseInt(parts[1], 10) - 1];
+    var year = parts[0];
+    return (isNaN(day) || !month ? str : day + ". " + month + " " + year);
+  }
 
-  if (toggle) toggle.addEventListener("click", function() {
-    var open = !panel.hidden;
-    panel.hidden = open;
-    wrapper.classList.toggle("monitoring-open", !open);
-    toggle.classList.toggle("monitoring-toggle-active", !open);
-    toggle.setAttribute("title", open ? "Monitoring öffnen" : "Monitoring schließen");
-    toggle.setAttribute("aria-label", open ? "Monitoring öffnen" : "Monitoring schließen");
-    if (!open && !loaded) load();
-  });
+  function setStatus(msg, isError) {
+    if (!statusEl) return;
+    statusEl.textContent = msg;
+    statusEl.className = isError ? "stat-status stat-status-error" : "stat-status";
+    statusEl.hidden = !msg;
+  }
+
+  function renderChunksTypeTable(types) {
+    if (!types || types.length === 0) return "<p class=\\"empty-state\\">Keine Chunk-Daten.</p>";
+    var visible = types.filter(function(t){ return t.count > 0; });
+    if (visible.length === 0) return "<p class=\\"empty-state\\">Keine Chunks vorhanden.</p>";
+    var header = "<tr><th></th>" + visible.map(function(t){ return "<th>" + esc(t.chunk_type) + "</th>"; }).join("") + "</tr>";
+    var rowChunks = "<tr><td>Chunks</td>" + visible.map(function(t){ return "<td>" + t.count + "</td>"; }).join("") + "</tr>";
+    var rowMb = "<tr><td>Text (MB)</td>" + visible.map(function(t){ return "<td>" + (t.text_mb != null ? t.text_mb.toFixed(2) + " MB" : "—") + "</td>"; }).join("") + "</tr>";
+    var rowOldest = "<tr><td>Ältester Eintrag</td>" + visible.map(function(t){ return "<td>" + fmtDate(t.oldest) + "</td>"; }).join("") + "</tr>";
+    var rowNewest = "<tr><td>Neuester Eintrag</td>" + visible.map(function(t){ return "<td>" + fmtDate(t.newest) + "</td>"; }).join("") + "</tr>";
+    return "<div class=\\"stat-table-wrap\\"><table class=\\"stat-table\\"><thead>" + header + "</thead><tbody>" + rowChunks + rowMb + rowOldest + rowNewest + "</tbody></table></div>";
+  }
+
+  function renderBooksTable(books) {
+    if (!books || books.length === 0) return "<p class=\\"empty-state\\">Keine Bücher/Vorträge.</p>";
+    var data = books.slice();
+    var sortBy = "chunks";
+    var sortDir = "desc";
+
+    function sortTh(c, a, b) {
+      var cmp;
+      if (c === "name") cmp = String(a.book_title||"").localeCompare(String(b.book_title||""), "de");
+      else if (c === "chunk_type") cmp = String(a.chunk_type||"").localeCompare(String(b.chunk_type||""), "de");
+      else if (c === "events") cmp = (a.usage_count||0) - (b.usage_count||0);
+      else if (c === "pct") cmp = (a.usage_pct||0) - (b.usage_pct||0);
+      else cmp = a.count - b.count;
+      return sortDir === "asc" ? cmp : -cmp;
+    }
+
+    function sortedRows() {
+      var sorted = data.slice();
+      sorted.sort(function(a,b){ return sortTh(sortBy, a, b); });
+      return sorted.map(function(b){
+        return "<tr><td>" + esc(b.book_title||"") + "</td><td>" + esc(b.chunk_type||"") + "</td><td>" + b.count + "</td><td>" + (b.usage_count||0) + "</td><td>" + (b.usage_pct != null ? b.usage_pct + "%" : "—") + "</td></tr>";
+      }).join("");
+    }
+
+    function thWithSort(label, col) {
+      var ascActive = sortBy === col && sortDir === "asc" ? " stat-sort-active" : "";
+      var descActive = sortBy === col && sortDir === "desc" ? " stat-sort-active" : "";
+      return "<th><span class=\\"stat-th-label\\">" + esc(label) + "</span> <button class=\\"stat-sort-btn" + ascActive + "\\" data-col=\\"" + col + "\\" data-dir=\\"asc\\" aria-label=\\"Aufsteigend sortieren\\">↑</button><button class=\\"stat-sort-btn" + descActive + "\\" data-col=\\"" + col + "\\" data-dir=\\"desc\\" aria-label=\\"Absteigend sortieren\\">↓</button></th>";
+    }
+
+    var tableId = "stat-books-table";
+    var tbodyId = "stat-books-tbody";
+    var header = "<tr>" + thWithSort("Buch / Vortragstitel", "name") + thWithSort("chunk_type", "chunk_type") + thWithSort("Anzahl chunks", "chunks") + thWithSort("Anzahl events", "events") + thWithSort("%", "pct") + "</tr>";
+    var html = "<div class=\\"stat-table-wrap\\"><table class=\\"stat-table\\" id=\\"" + tableId + "\\"><thead>" + header + "</thead><tbody id=\\"" + tbodyId + "\\">" + sortedRows() + "</tbody></table></div>";
+
+    setTimeout(function(){
+      var table = document.getElementById(tableId);
+      var tbody = document.getElementById(tbodyId);
+      if (!table || !tbody) return;
+      table.addEventListener("click", function(ev){
+        var btn = ev.target && ev.target.closest && ev.target.closest(".stat-sort-btn");
+        if (!btn) return;
+        sortBy = btn.getAttribute("data-col");
+        sortDir = btn.getAttribute("data-dir");
+        tbody.innerHTML = sortedRows();
+        var btns = table.querySelectorAll(".stat-sort-btn");
+        if (btns) for (var i = 0; i < btns.length; i++) {
+          var b = btns[i];
+          var isActive = b.getAttribute("data-col") === sortBy && b.getAttribute("data-dir") === sortDir;
+          b.classList.toggle("stat-sort-active", isActive);
+        }
+      });
+    }, 0);
+
+    return html;
+  }
+
+  function renderEventsSection(volume) {
+    if (!volume || volume.length === 0) return "<p class=\\"empty-state\\">Keine Event-Daten.</p>";
+    var max = Math.max.apply(null, volume.map(function(x){ return x.event_count; }));
+    return "<div class=\\"stat-events-bars\\">" + volume.map(function(x){
+      var pct = max > 0 ? Math.round((x.event_count / max) * 100) : 0;
+      return "<div class=\\"stat-bar-row\\"><span class=\\"stat-bar-label\\">" + esc(x.endpoint) + "</span><div class=\\"stat-bar-track\\"><div class=\\"stat-bar-fill\\" style=\\"width:" + pct + "%\\"></div></div><span class=\\"stat-bar-value\\">" + x.event_count + "</span></div>";
+    }).join("") + "</div>";
+  }
+
+  function renderLogTable(log) {
+    if (!log || log.length === 0) return "<p class=\\"empty-state\\">Kein Log.</p>";
+    return "<div class=\\"stat-table-wrap\\"><table class=\\"stat-table monitoring-log-table\\"><thead><tr><th>Zeit</th><th>Endpoint</th><th>Chunks</th><th>Concept</th><th>Typ</th></tr></thead><tbody>" + log.map(function(row){
+      var t = (row.created_at || "").replace("T", " ").slice(0, 19);
+      var chunkCell = row.chunk_count != null ? row.chunk_count : "—";
+      var conceptCell = (row.concept || "").slice(0, 50) + ((row.concept || "").length > 50 ? "…" : "");
+      return "<tr><td>" + esc(t) + "</td><td>" + esc(row.endpoint || "") + "</td><td>" + chunkCell + "</td><td title=\\"" + esc(row.concept || "") + "\\">" + esc(conceptCell) + "</td><td>" + esc(row.source || "") + "</td></tr>";
+    }).join("") + "</tbody></table></div>";
+  }
 
   function load() {
-    loaded = true;
-    show(loading, true);
-    show(content, false);
-    show(errorEl, false);
+    if (contentEl) contentEl.innerHTML = "";
+    setStatus("Lade …", false);
     if (!baseUrl) {
-      setText(errorEl, "RAGRUN_URL nicht konfiguriert.");
-      show(loading, false);
-      show(errorEl, true);
+      setStatus("RAGRUN_URL nicht konfiguriert.", true);
       return;
     }
     var chunksUrl = baseUrl + "/rag/monitoring/chunks?collection=" + encodeURIComponent(collection);
     var eventsUrl = baseUrl + "/rag/monitoring/events?collection=" + encodeURIComponent(collection) + "&limit=50";
     Promise.all([
-      fetch(chunksUrl).then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); }),
-      fetch(eventsUrl).then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+      fetch(chunksUrl).then(function(r){ return r.ok ? r.json() : Promise.reject("HTTP " + r.status); }),
+      fetch(eventsUrl).then(function(r){ return r.ok ? r.json() : Promise.reject("HTTP " + r.status); })
     ]).then(function(res) {
-      renderChunks(wrapper, res[0]);
-      renderEvents(wrapper, res[1]);
-      renderLog(wrapper, res[1].log);
-      show(loading, false);
-      show(content, true);
+      var chunksData = res[0];
+      var eventsData = res[1];
+      setStatus("", false);
+      if (!contentEl) return;
+      contentEl.innerHTML =
+        "<section class=\\"stat-section\\">" +
+          "<h2 class=\\"stat-heading\\">Chunks</h2>" +
+          renderChunksTypeTable(chunksData.chunk_types) +
+          renderBooksTable(chunksData.books) +
+        "</section>" +
+        "<section class=\\"stat-section\\">" +
+          "<h2 class=\\"stat-heading\\">Events</h2>" +
+          renderEventsSection(eventsData.volume) +
+          "<h4 style=\\"margin:1.5rem 0 0.5rem;font-size:0.9rem;color:var(--muted)\\">Log</h4>" +
+          renderLogTable(eventsData.log) +
+        "</section>";
     }).catch(function(err) {
-      setText(errorEl, "Monitoring nicht verfügbar (" + (err.message || err) + "). Ist ragrun erreichbar?");
-      show(loading, false);
-      show(errorEl, true);
+      setStatus("Statistik nicht verfügbar (" + (err.message || err) + "). Ist ragrun erreichbar?", true);
     });
   }
 
-  function barHtml(label, count, max, title) {
-    var pct = max > 0 ? Math.round((count / max) * 100) : 0;
-    var t = title != null ? title : String(count);
-    return "<div class=\\"monitoring-bar-row\\" title=\\"" + esc(t) + "\\"><span class=\\"monitoring-bar-label\\">" + esc(label) + "</span><div class=\\"monitoring-bar-track\\"><div class=\\"monitoring-bar-fill\\" style=\\"width:" + pct + "%\\"></div></div><span class=\\"monitoring-bar-value\\">" + count + "</span></div>";
-  }
-
-  function bookBarHtml(book, maxChunks, maxUsage, sortBy) {
-    var label = (book.book_title || "") + " [" + (book.chunk_type || "") + "]";
-    var displayCount = sortBy === "usage" ? (book.usage_count || 0) : book.count;
-    var max = sortBy === "usage" ? maxUsage : maxChunks;
-    var pct = max > 0 ? Math.round((displayCount / max) * 100) : 0;
-    var usageStr = (book.usage_count || 0) + " (" + (book.usage_pct || 0) + "%)";
-    var title = book.count + " Chunks, " + (book.usage_count || 0) + " Verwendungen (" + (book.usage_pct || 0) + "%)";
-    return "<div class=\\"monitoring-bar-row monitoring-bar-row-book\\" title=\\"" + esc(title) + "\\"><span class=\\"monitoring-bar-label\\">" + esc(label) + "</span><div class=\\"monitoring-bar-track\\"><div class=\\"monitoring-bar-fill\\" style=\\"width:" + pct + "%\\"></div></div><span class=\\"monitoring-bar-value\\">" + book.count + "</span><span class=\\"monitoring-bar-usage\\">" + usageStr + "</span></div>";
-  }
-
-  function renderChunks(w, data) {
-    var body = w.querySelector("[data-chunks-body]");
-    if (!body) return;
-    if (!data || !data.chunk_types || data.chunk_types.length === 0) {
-      body.innerHTML = "<p class=\\"empty-state\\">Keine Chunk-Daten.</p>";
-      return;
-    }
-    var max = Math.max.apply(null, data.chunk_types.map(function(x){ return x.count; }));
-    var html = "<div class=\\"monitoring-bars\\">" + data.chunk_types.map(function(x){ return barHtml(x.chunk_type, x.count, max); }).join("") + "</div>";
-    if (data.books && data.books.length > 0) {
-      var books = data.books.slice();
-      var sortBy = "chunks";
-      var bookMaxChunks = Math.max.apply(null, books.map(function(x){ return x.count; }));
-      var bookMaxUsage = Math.max.apply(null, books.map(function(x){ return x.usage_count || 0; }));
-      function renderBooks() {
-        var sorted = books.slice();
-        if (sortBy === "usage") sorted.sort(function(a,b){ return (b.usage_count||0) - (a.usage_count||0); });
-        else if (sortBy === "name") sorted.sort(function(a,b){ return String(a.book_title||"").localeCompare(b.book_title||""); });
-        else sorted.sort(function(a,b){ return b.count - a.count; });
-        return sorted.map(function(x){ return bookBarHtml(x, bookMaxChunks, bookMaxUsage, sortBy); }).join("");
-      }
-      html += "<h5 style=\\"margin:0.75rem 0 0.35rem;font-size:0.82rem;color:var(--muted)\\">Bücher</h5>";
-      html += "<div class=\\"monitoring-sort-row\\"><label for=\\"monitoring-sort\\">Sortierung:</label><select id=\\"monitoring-sort\\" data-monitoring-sort><option value=\\"chunks\\">Chunks</option><option value=\\"usage\\">Verwendungen</option><option value=\\"name\\">Name</option></select></div>";
-      html += "<div class=\\"monitoring-books-scroll\\" data-monitoring-books><div class=\\"monitoring-bars\\">" + renderBooks() + "</div></div>";
-    }
-    body.innerHTML = html;
-    if (data.books && data.books.length > 0) {
-      var sortEl = body.querySelector("[data-monitoring-sort]");
-      var booksEl = body.querySelector("[data-monitoring-books]");
-      if (sortEl && booksEl) {
-        sortEl.addEventListener("change", function() {
-          sortBy = sortEl.value;
-          booksEl.innerHTML = "<div class=\\"monitoring-bars\\">" + renderBooks() + "</div>";
-        });
-      }
-    }
-  }
-
-  function renderEvents(w, data) {
-    var body = w.querySelector("[data-events-body]");
-    if (!body) return;
-    if (!data || !data.volume || data.volume.length === 0) {
-      body.innerHTML = "<p class=\\"empty-state\\">Keine Event-Daten.</p>";
-      return;
-    }
-    var max = Math.max.apply(null, data.volume.map(function(x){ return x.event_count; }));
-    body.innerHTML = "<div class=\\"monitoring-bars\\">" + data.volume.map(function(x){ return barHtml(x.endpoint, x.event_count, max); }).join("") + "</div>";
-  }
-
-  function renderLog(w, log) {
-    var body = w.querySelector("[data-log-body]");
-    if (!body) return;
-    if (!log || log.length === 0) {
-      body.innerHTML = "<p class=\\"empty-state\\">Kein Log.</p>";
-      return;
-    }
-    body.innerHTML = "<table class=\\"monitoring-log-table\\"><thead><tr><th>Zeit</th><th>Endpoint</th><th>Chunks</th><th>Concept</th><th>Typ</th></tr></thead><tbody>" + log.map(function(row){
-      var t = (row.created_at || "").replace("T", " ").slice(0, 19);
-      var chunkCell = row.chunk_count != null ? row.chunk_count : "—";
-      var conceptCell = (row.concept || "").slice(0, 40) + ((row.concept || "").length > 40 ? "…" : "");
-      return "<tr><td>" + esc(t) + "</td><td>" + esc(row.endpoint || "") + "</td><td>" + chunkCell + "</td><td title=\\"" + esc(row.concept || "") + "\\">" + esc(conceptCell) + "</td><td>" + esc(row.source || "") + "</td></tr>";
-    }).join("") + "</tbody></table>";
-  }
+  if (reloadBtn) reloadBtn.addEventListener("click", load);
+  load();
 })();
 </script>`;
+
+  return pageShell(
+    `${agent.name} – Statistik`,
+    "../../",
+    `<div class="wrap stack-16">
+      <div class="stat-page-header">
+        <a class="back-link" href="index.html">← Zurück zur Übersicht</a>
+        <button type="button" class="stat-reload-btn" id="stat-reload" aria-label="Neu laden">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          Neu laden
+        </button>
+      </div>
+      <header class="agent-header site-card">
+        <div class="agent-avatar">${agent.avatarUrl ? `<img src="../../${escapeHtml(agent.avatarUrl)}" alt="${agentName}" />` : ""}</div>
+        <div class="stack-8 agent-header-main">
+          <h1>${agentName}</h1>
+          <p class="stat-subtitle">Chunk- und Event-Statistik</p>
+          <div class="agent-header-meta">
+            <span class="pill pill-accent">Collection: ${collection}</span>
+          </div>
+        </div>
+      </header>
+      <div id="stat-wrapper" data-collection="${collection}" data-ragrun-url="${ragrunUrl}">
+        <p id="stat-status" class="stat-status">Lade …</p>
+        <div id="stat-content"></div>
+      </div>
+    </div>
+${script}`
+  );
 }
 
 function pageShell(title: string, relAssetPrefix: string, content: string): string {
@@ -335,7 +366,7 @@ function renderLectureRows(lectures: LectureView[]): string {
       ? `GA ${escapeHtml(lecture.ga)}${lecture.gaTitle ? `, ${escapeHtml(lecture.gaTitle)}` : ""}`
       : "—";
     const htmlLink = lecture.htmlPath
-      ? `<a class="lecture-open-link" href="../../${encodeURI(lecture.htmlPath)}" target="_blank" rel="noreferrer" aria-label="Vortragstext öffnen">📖</a>`
+      ? `<a class="lecture-open-link" href="../../${encodeURI(lecture.htmlPath)}" target="_blank" rel="noreferrer" aria-label="Vortragstext öffnen">📖 Vortragstext</a>`
       : `<span class="meta-quiet">Kein Text-Link verfügbar</span>`;
     const summaryHtml = lecture.summary
       ? `<details class="toc-details lecture-summary-details">
@@ -1055,6 +1086,12 @@ function renderAgentPage(
   writeTextFile(path.join(agentDir, sectionMeta.fileName), html);
 }
 
+function renderAgentStatistikPage(outputDir: string, agent: Agent): void {
+  const agentDir = path.join(outputDir, "agent", encodeURIComponent(agent.id));
+  const html = renderStatistikPage(agent);
+  writeTextFile(path.join(agentDir, "statistik.html"), html);
+}
+
 export function generateAgentPages(
   outputDir: string,
   agents: Agent[],
@@ -1080,5 +1117,6 @@ export function generateAgentPages(
         section
       );
     }
+    renderAgentStatistikPage(outputDir, agent);
   }
 }

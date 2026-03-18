@@ -291,13 +291,13 @@ function resolveSelectionEntry(entry: string, catalog: LectureCatalog): string[]
   const trimmed = String(entry).trim();
   if (!trimmed) return [];
 
-  const zyklusMatch = trimmed.match(/^Zyklus\s+(\d+)$/i);
+  const zyklusMatch = trimmed.match(/^Zyklus\s+(\d+)(?:[,\s].*)?$/i);
   if (zyklusMatch) {
     const zyklus = Number(zyklusMatch[1]);
     return catalog.idsByZyklus.get(zyklus) ?? [];
   }
 
-  const gaMatch = trimmed.match(/^GA\s+([0-9]+[a-z]?)$/i);
+  const gaMatch = trimmed.match(/^GA\s+([0-9]+[a-z]?)(?:[,\s].*)?$/i);
   if (gaMatch) {
     const ga = gaMatch[1].toLowerCase();
     return catalog.idsByGa.get(ga) ?? [];

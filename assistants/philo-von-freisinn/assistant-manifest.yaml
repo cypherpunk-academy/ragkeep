@@ -32,7 +32,6 @@ secondary-books:
   - Julian_Assange#Cypherpunks
   - Julian_Assange#Julian_Assange_in_his_own_words
   - Julian_Assange#Various_Interviews_and_Articles#1
-  - Lawrence_Lessig#Code_Version_2_0#1
 secondary-lectures:
   - GA 73a, Fachwissenschaften und Anthroposophie
   - GA 76, Die befruchtende Wirkung der Anthroposophie auf die Fachwissenschaften
@@ -68,6 +67,9 @@ secondary-lectures:
   - GA 293, Allgemeine Menschenkunde als Grundlage der Pädagogik
   - GA 294, Erziehungskunst. Methodisch-Didaktisches
   - GA 295, Erziehungskunst. Seminarbesprechungen und Lehrplanvorträge
+augmentation-types:
+  - summaries
+  - quotes
 concepts:
   - concepts.jsonl
   - individualismus-concepts.jsonl
@@ -80,4 +82,4 @@ essays:
   - gedankenfehler-zufriedenheit-ist-wenn-bed-rfnisse-erf-llt-sind.essay
   - ich-bekomme-angst-weil-ich-in-gefahr-bin.essay
   - manchmal-hilft-es-zu-luegen.essay
-last-updated: 2026-03-05T11:58:45.796Z
+last-updated: 2026-03-16T16:32:47.071Z

@@ -70,7 +70,7 @@ export function collectConcepts(
   agent: Agent
 ): Map<string, ConceptEntry[]> {
   const result = new Map<string, ConceptEntry[]>();
-  const conceptsDir = path.join(repoRoot, "assistants", agent.id, "concepts");
+  const conceptsDir = path.join(repoRoot, "assistants", agent.id, "concepts", "chunks");
 
   for (const conceptFile of agent.concepts) {
     if (!conceptFile.endsWith(".jsonl")) continue;

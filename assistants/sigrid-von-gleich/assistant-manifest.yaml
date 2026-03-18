@@ -52,4 +52,7 @@ secondary-books:
   - Julian_Assange#Julian_Assange_in_his_own_words
   - Julian_Assange#Various_Interviews_and_Articles#1
   - Lawrence_Lessig#Code_Version_2_0#1
+augmentation-types:
+  - summaries
+  - quotes
 last-updated: 2026-01-14T21:47:11.986Z

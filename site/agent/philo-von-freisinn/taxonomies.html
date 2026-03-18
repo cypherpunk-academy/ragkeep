@@ -7,9 +7,9 @@
     <meta name="color-scheme" content="light dark" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400&family=Special+Elite&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../../assets/styles.css?v=tmmkma54q" />
-    <link rel="stylesheet" href="../../assets/layout.css?v=tmmkma54q" />
-    <link rel="stylesheet" href="../../assets/dark.css?v=tmmkma54q" />
+    <link rel="stylesheet" href="../../assets/styles.css?v=tmmvxd71q" />
+    <link rel="stylesheet" href="../../assets/layout.css?v=tmmvxd71q" />
+    <link rel="stylesheet" href="../../assets/dark.css?v=tmmvxd71q" />
   </head>
   <body>
     <div class="site-shell">
@@ -22,169 +22,10 @@
           <div class="agent-header-meta">
             <span class="pill pill-accent">Collection: philo-von-freisinn</span>
             <span class="pill pill-muted">21 Bücher insgesamt</span>
-            <div class="monitoring-wrapper" data-monitoring data-collection="philo-von-freisinn" data-ragrun-url="http://localhost:8000/api/v1">
-  <button type="button" class="monitoring-toggle" data-monitoring-toggle title="Monitoring öffnen" aria-label="Monitoring öffnen">
+            <a class="monitoring-toggle" href="statistik.html" title="Statistik öffnen" aria-label="Statistik öffnen">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
     Statistik
-  </button>
-  <div class="monitoring-panel" data-monitoring-panel hidden>
-    <div class="monitoring-loading" data-monitoring-loading>Lade …</div>
-    <div class="monitoring-content" data-monitoring-content hidden>
-      <div class="monitoring-grid">
-        <div class="monitoring-tile" data-monitoring-chunks>
-          <h4>Chunks</h4>
-          <div class="monitoring-tile-body" data-chunks-body></div>
-        </div>
-        <div class="monitoring-tile" data-monitoring-events>
-          <h4>Events</h4>
-          <div class="monitoring-tile-body" data-events-body></div>
-        </div>
-      </div>
-      <div class="monitoring-log">
-        <h4>Log</h4>
-        <div class="monitoring-log-body" data-log-body></div>
-      </div>
-    </div>
-    <div class="monitoring-error" data-monitoring-error hidden></div>
-  </div>
-</div>
-<script>
-(function(){
-  var wrapper = document.querySelector("[data-monitoring]");
-  if (!wrapper) return;
-  var toggle = wrapper.querySelector("[data-monitoring-toggle]");
-  var panel = wrapper.querySelector("[data-monitoring-panel]");
-  var loading = wrapper.querySelector("[data-monitoring-loading]");
-  var content = wrapper.querySelector("[data-monitoring-content]");
-  var errorEl = wrapper.querySelector("[data-monitoring-error]");
-  var collection = wrapper.getAttribute("data-collection");
-  var baseUrl = wrapper.getAttribute("data-ragrun-url");
-  var loaded = false;
-
-  function show(el, v) { if (el) el.hidden = !v; }
-  function setText(el, t) { if (el) el.textContent = t; }
-  function esc(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
-
-  if (toggle) toggle.addEventListener("click", function() {
-    var open = !panel.hidden;
-    panel.hidden = open;
-    wrapper.classList.toggle("monitoring-open", !open);
-    toggle.classList.toggle("monitoring-toggle-active", !open);
-    toggle.setAttribute("title", open ? "Monitoring öffnen" : "Monitoring schließen");
-    toggle.setAttribute("aria-label", open ? "Monitoring öffnen" : "Monitoring schließen");
-    if (!open && !loaded) load();
-  });
-
-  function load() {
-    loaded = true;
-    show(loading, true);
-    show(content, false);
-    show(errorEl, false);
-    if (!baseUrl) {
-      setText(errorEl, "RAGRUN_URL nicht konfiguriert.");
-      show(loading, false);
-      show(errorEl, true);
-      return;
-    }
-    var chunksUrl = baseUrl + "/rag/monitoring/chunks?collection=" + encodeURIComponent(collection);
-    var eventsUrl = baseUrl + "/rag/monitoring/events?collection=" + encodeURIComponent(collection) + "&limit=50";
-    Promise.all([
-      fetch(chunksUrl).then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); }),
-      fetch(eventsUrl).then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
-    ]).then(function(res) {
-      renderChunks(wrapper, res[0]);
-      renderEvents(wrapper, res[1]);
-      renderLog(wrapper, res[1].log);
-      show(loading, false);
-      show(content, true);
-    }).catch(function(err) {
-      setText(errorEl, "Monitoring nicht verfügbar (" + (err.message || err) + "). Ist ragrun erreichbar?");
-      show(loading, false);
-      show(errorEl, true);
-    });
-  }
-
-  function barHtml(label, count, max, title) {
-    var pct = max > 0 ? Math.round((count / max) * 100) : 0;
-    var t = title != null ? title : String(count);
-    return "<div class=\"monitoring-bar-row\" title=\"" + esc(t) + "\"><span class=\"monitoring-bar-label\">" + esc(label) + "</span><div class=\"monitoring-bar-track\"><div class=\"monitoring-bar-fill\" style=\"width:" + pct + "%\"></div></div><span class=\"monitoring-bar-value\">" + count + "</span></div>";
-  }
-
-  function bookBarHtml(book, maxChunks, maxUsage, sortBy) {
-    var label = (book.book_title || "") + " [" + (book.chunk_type || "") + "]";
-    var displayCount = sortBy === "usage" ? (book.usage_count || 0) : book.count;
-    var max = sortBy === "usage" ? maxUsage : maxChunks;
-    var pct = max > 0 ? Math.round((displayCount / max) * 100) : 0;
-    var usageStr = (book.usage_count || 0) + " (" + (book.usage_pct || 0) + "%)";
-    var title = book.count + " Chunks, " + (book.usage_count || 0) + " Verwendungen (" + (book.usage_pct || 0) + "%)";
-    return "<div class=\"monitoring-bar-row monitoring-bar-row-book\" title=\"" + esc(title) + "\"><span class=\"monitoring-bar-label\">" + esc(label) + "</span><div class=\"monitoring-bar-track\"><div class=\"monitoring-bar-fill\" style=\"width:" + pct + "%\"></div></div><span class=\"monitoring-bar-value\">" + book.count + "</span><span class=\"monitoring-bar-usage\">" + usageStr + "</span></div>";
-  }
-
-  function renderChunks(w, data) {
-    var body = w.querySelector("[data-chunks-body]");
-    if (!body) return;
-    if (!data || !data.chunk_types || data.chunk_types.length === 0) {
-      body.innerHTML = "<p class=\"empty-state\">Keine Chunk-Daten.</p>";
-      return;
-    }
-    var max = Math.max.apply(null, data.chunk_types.map(function(x){ return x.count; }));
-    var html = "<div class=\"monitoring-bars\">" + data.chunk_types.map(function(x){ return barHtml(x.chunk_type, x.count, max); }).join("") + "</div>";
-    if (data.books && data.books.length > 0) {
-      var books = data.books.slice();
-      var sortBy = "chunks";
-      var bookMaxChunks = Math.max.apply(null, books.map(function(x){ return x.count; }));
-      var bookMaxUsage = Math.max.apply(null, books.map(function(x){ return x.usage_count || 0; }));
-      function renderBooks() {
-        var sorted = books.slice();
-        if (sortBy === "usage") sorted.sort(function(a,b){ return (b.usage_count||0) - (a.usage_count||0); });
-        else if (sortBy === "name") sorted.sort(function(a,b){ return String(a.book_title||"").localeCompare(b.book_title||""); });
-        else sorted.sort(function(a,b){ return b.count - a.count; });
-        return sorted.map(function(x){ return bookBarHtml(x, bookMaxChunks, bookMaxUsage, sortBy); }).join("");
-      }
-      html += "<h5 style=\"margin:0.75rem 0 0.35rem;font-size:0.82rem;color:var(--muted)\">Bücher</h5>";
-      html += "<div class=\"monitoring-sort-row\"><label for=\"monitoring-sort\">Sortierung:</label><select id=\"monitoring-sort\" data-monitoring-sort><option value=\"chunks\">Chunks</option><option value=\"usage\">Verwendungen</option><option value=\"name\">Name</option></select></div>";
-      html += "<div class=\"monitoring-books-scroll\" data-monitoring-books><div class=\"monitoring-bars\">" + renderBooks() + "</div></div>";
-    }
-    body.innerHTML = html;
-    if (data.books && data.books.length > 0) {
-      var sortEl = body.querySelector("[data-monitoring-sort]");
-      var booksEl = body.querySelector("[data-monitoring-books]");
-      if (sortEl && booksEl) {
-        sortEl.addEventListener("change", function() {
-          sortBy = sortEl.value;
-          booksEl.innerHTML = "<div class=\"monitoring-bars\">" + renderBooks() + "</div>";
-        });
-      }
-    }
-  }
-
-  function renderEvents(w, data) {
-    var body = w.querySelector("[data-events-body]");
-    if (!body) return;
-    if (!data || !data.volume || data.volume.length === 0) {
-      body.innerHTML = "<p class=\"empty-state\">Keine Event-Daten.</p>";
-      return;
-    }
-    var max = Math.max.apply(null, data.volume.map(function(x){ return x.event_count; }));
-    body.innerHTML = "<div class=\"monitoring-bars\">" + data.volume.map(function(x){ return barHtml(x.endpoint, x.event_count, max); }).join("") + "</div>";
-  }
-
-  function renderLog(w, log) {
-    var body = w.querySelector("[data-log-body]");
-    if (!body) return;
-    if (!log || log.length === 0) {
-      body.innerHTML = "<p class=\"empty-state\">Kein Log.</p>";
-      return;
-    }
-    body.innerHTML = "<table class=\"monitoring-log-table\"><thead><tr><th>Zeit</th><th>Endpoint</th><th>Chunks</th><th>Concept</th><th>Typ</th></tr></thead><tbody>" + log.map(function(row){
-      var t = (row.created_at || "").replace("T", " ").slice(0, 19);
-      var chunkCell = row.chunk_count != null ? row.chunk_count : "—";
-      var conceptCell = (row.concept || "").slice(0, 40) + ((row.concept || "").length > 40 ? "…" : "");
-      return "<tr><td>" + esc(t) + "</td><td>" + esc(row.endpoint || "") + "</td><td>" + chunkCell + "</td><td title=\"" + esc(row.concept || "") + "\">" + esc(conceptCell) + "</td><td>" + esc(row.source || "") + "</td></tr>";
-    }).join("") + "</tbody></table>";
-  }
-})();
-</script>
+  </a>
           </div>
         </div>
       </header>

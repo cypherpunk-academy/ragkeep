@@ -319,7 +319,7 @@ function main() {
     }
 
     const titleFormatted = titleToGaListFormat(rawTitle);
-    const entry = `???Rudolf_Steiner#${titleFormatted}#${gaNum}`;
+    const entry = `Rudolf_Steiner#${titleFormatted}#${gaNum}`;
     toAdd.push({ gaNum, rawTitle, entry });
 
     const pct =

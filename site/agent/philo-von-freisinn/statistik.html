@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Philo von Freisinn – Statistik</title>
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400&family=Special+Elite&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/styles.css?v=tmmvxd71q" />
+    <link rel="stylesheet" href="../../assets/layout.css?v=tmmvxd71q" />
+    <link rel="stylesheet" href="../../assets/dark.css?v=tmmvxd71q" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="wrap stack-16">
+      <div class="stat-page-header">
+        <a class="back-link" href="index.html">← Zurück zur Übersicht</a>
+        <button type="button" class="stat-reload-btn" id="stat-reload" aria-label="Neu laden">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          Neu laden
+        </button>
+      </div>
+      <header class="agent-header site-card">
+        <div class="agent-avatar"><img src="../../assistants/philo-von-freisinn/assets/avatar.png" alt="Philo von Freisinn" /></div>
+        <div class="stack-8 agent-header-main">
+          <h1>Philo von Freisinn</h1>
+          <p class="stat-subtitle">Chunk- und Event-Statistik</p>
+          <div class="agent-header-meta">
+            <span class="pill pill-accent">Collection: philo-von-freisinn</span>
+          </div>
+        </div>
+      </header>
+      <div id="stat-wrapper" data-collection="philo-von-freisinn" data-ragrun-url="http://localhost:8000/api/v1">
+        <p id="stat-status" class="stat-status">Lade …</p>
+        <div id="stat-content"></div>
+      </div>
+    </div>
+<script>
+(function(){
+  var wrapper = document.getElementById("stat-wrapper");
+  if (!wrapper) return;
+  var collection = wrapper.getAttribute("data-collection");
+  var baseUrl = wrapper.getAttribute("data-ragrun-url");
+  var statusEl = document.getElementById("stat-status");
+  var contentEl = document.getElementById("stat-content");
+  var reloadBtn = document.getElementById("stat-reload");
+
+  function esc(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  function fmtDate(s) {
+    if (!s) return "—";
+    var str = String(s).slice(0, 10);
+    var parts = str.split("-");
+    if (parts.length !== 3) return str;
+    var months = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+    var day = parseInt(parts[2], 10);
+    var month = months[parseInt(parts[1], 10) - 1];
+    var year = parts[0];
+    return (isNaN(day) || !month ? str : day + ". " + month + " " + year);
+  }
+
+  function setStatus(msg, isError) {
+    if (!statusEl) return;
+    statusEl.textContent = msg;
+    statusEl.className = isError ? "stat-status stat-status-error" : "stat-status";
+    statusEl.hidden = !msg;
+  }
+
+  function renderChunksTypeTable(types) {
+    if (!types || types.length === 0) return "<p class=\"empty-state\">Keine Chunk-Daten.</p>";
+    var visible = types.filter(function(t){ return t.count > 0; });
+    if (visible.length === 0) return "<p class=\"empty-state\">Keine Chunks vorhanden.</p>";
+    var header = "<tr><th></th>" + visible.map(function(t){ return "<th>" + esc(t.chunk_type) + "</th>"; }).join("") + "</tr>";
+    var rowChunks = "<tr><td>Chunks</td>" + visible.map(function(t){ return "<td>" + t.count + "</td>"; }).join("") + "</tr>";
+    var rowMb = "<tr><td>Text (MB)</td>" + visible.map(function(t){ return "<td>" + (t.text_mb != null ? t.text_mb.toFixed(2) + " MB" : "—") + "</td>"; }).join("") + "</tr>";
+    var rowOldest = "<tr><td>Ältester Eintrag</td>" + visible.map(function(t){ return "<td>" + fmtDate(t.oldest) + "</td>"; }).join("") + "</tr>";
+    var rowNewest = "<tr><td>Neuester Eintrag</td>" + visible.map(function(t){ return "<td>" + fmtDate(t.newest) + "</td>"; }).join("") + "</tr>";
+    return "<div class=\"stat-table-wrap\"><table class=\"stat-table\"><thead>" + header + "</thead><tbody>" + rowChunks + rowMb + rowOldest + rowNewest + "</tbody></table></div>";
+  }
+
+  function renderBooksTable(books) {
+    if (!books || books.length === 0) return "<p class=\"empty-state\">Keine Bücher/Vorträge.</p>";
+    var data = books.slice();
+    var sortBy = "chunks";
+    var sortDir = "desc";
+
+    function sortTh(c, a, b) {
+      var cmp;
+      if (c === "name") cmp = String(a.book_title||"").localeCompare(String(b.book_title||""), "de");
+      else if (c === "chunk_type") cmp = String(a.chunk_type||"").localeCompare(String(b.chunk_type||""), "de");
+      else if (c === "events") cmp = (a.usage_count||0) - (b.usage_count||0);
+      else if (c === "pct") cmp = (a.usage_pct||0) - (b.usage_pct||0);
+      else cmp = a.count - b.count;
+      return sortDir === "asc" ? cmp : -cmp;
+    }
+
+    function sortedRows() {
+      var sorted = data.slice();
+      sorted.sort(function(a,b){ return sortTh(sortBy, a, b); });
+      return sorted.map(function(b){
+        return "<tr><td>" + esc(b.book_title||"") + "</td><td>" + esc(b.chunk_type||"") + "</td><td>" + b.count + "</td><td>" + (b.usage_count||0) + "</td><td>" + (b.usage_pct != null ? b.usage_pct + "%" : "—") + "</td></tr>";
+      }).join("");
+    }
+
+    function thWithSort(label, col) {
+      var ascActive = sortBy === col && sortDir === "asc" ? " stat-sort-active" : "";
+      var descActive = sortBy === col && sortDir === "desc" ? " stat-sort-active" : "";
+      return "<th><span class=\"stat-th-label\">" + esc(label) + "</span> <button class=\"stat-sort-btn" + ascActive + "\" data-col=\"" + col + "\" data-dir=\"asc\" aria-label=\"Aufsteigend sortieren\">↑</button><button class=\"stat-sort-btn" + descActive + "\" data-col=\"" + col + "\" data-dir=\"desc\" aria-label=\"Absteigend sortieren\">↓</button></th>";
+    }
+
+    var tableId = "stat-books-table";
+    var tbodyId = "stat-books-tbody";
+    var header = "<tr>" + thWithSort("Buch / Vortragstitel", "name") + thWithSort("chunk_type", "chunk_type") + thWithSort("Anzahl chunks", "chunks") + thWithSort("Anzahl events", "events") + thWithSort("%", "pct") + "</tr>";
+    var html = "<div class=\"stat-table-wrap\"><table class=\"stat-table\" id=\"" + tableId + "\"><thead>" + header + "</thead><tbody id=\"" + tbodyId + "\">" + sortedRows() + "</tbody></table></div>";
+
+    setTimeout(function(){
+      var table = document.getElementById(tableId);
+      var tbody = document.getElementById(tbodyId);
+      if (!table || !tbody) return;
+      table.addEventListener("click", function(ev){
+        var btn = ev.target && ev.target.closest && ev.target.closest(".stat-sort-btn");
+        if (!btn) return;
+        sortBy = btn.getAttribute("data-col");
+        sortDir = btn.getAttribute("data-dir");
+        tbody.innerHTML = sortedRows();
+        var btns = table.querySelectorAll(".stat-sort-btn");
+        if (btns) for (var i = 0; i < btns.length; i++) {
+          var b = btns[i];
+          var isActive = b.getAttribute("data-col") === sortBy && b.getAttribute("data-dir") === sortDir;
+          b.classList.toggle("stat-sort-active", isActive);
+        }
+      });
+    }, 0);
+
+    return html;
+  }
+
+  function renderEventsSection(volume) {
+    if (!volume || volume.length === 0) return "<p class=\"empty-state\">Keine Event-Daten.</p>";
+    var max = Math.max.apply(null, volume.map(function(x){ return x.event_count; }));
+    return "<div class=\"stat-events-bars\">" + volume.map(function(x){
+      var pct = max > 0 ? Math.round((x.event_count / max) * 100) : 0;
+      return "<div class=\"stat-bar-row\"><span class=\"stat-bar-label\">" + esc(x.endpoint) + "</span><div class=\"stat-bar-track\"><div class=\"stat-bar-fill\" style=\"width:" + pct + "%\"></div></div><span class=\"stat-bar-value\">" + x.event_count + "</span></div>";
+    }).join("") + "</div>";
+  }
+
+  function renderLogTable(log) {
+    if (!log || log.length === 0) return "<p class=\"empty-state\">Kein Log.</p>";
+    return "<div class=\"stat-table-wrap\"><table class=\"stat-table monitoring-log-table\"><thead><tr><th>Zeit</th><th>Endpoint</th><th>Chunks</th><th>Concept</th><th>Typ</th></tr></thead><tbody>" + log.map(function(row){
+      var t = (row.created_at || "").replace("T", " ").slice(0, 19);
+      var chunkCell = row.chunk_count != null ? row.chunk_count : "—";
+      var conceptCell = (row.concept || "").slice(0, 50) + ((row.concept || "").length > 50 ? "…" : "");
+      return "<tr><td>" + esc(t) + "</td><td>" + esc(row.endpoint || "") + "</td><td>" + chunkCell + "</td><td title=\"" + esc(row.concept || "") + "\">" + esc(conceptCell) + "</td><td>" + esc(row.source || "") + "</td></tr>";
+    }).join("") + "</tbody></table></div>";
+  }
+
+  function load() {
+    if (contentEl) contentEl.innerHTML = "";
+    setStatus("Lade …", false);
+    if (!baseUrl) {
+      setStatus("RAGRUN_URL nicht konfiguriert.", true);
+      return;
+    }
+    var chunksUrl = baseUrl + "/rag/monitoring/chunks?collection=" + encodeURIComponent(collection);
+    var eventsUrl = baseUrl + "/rag/monitoring/events?collection=" + encodeURIComponent(collection) + "&limit=50";
+    Promise.all([
+      fetch(chunksUrl).then(function(r){ return r.ok ? r.json() : Promise.reject("HTTP " + r.status); }),
+      fetch(eventsUrl).then(function(r){ return r.ok ? r.json() : Promise.reject("HTTP " + r.status); })
+    ]).then(function(res) {
+      var chunksData = res[0];
+      var eventsData = res[1];
+      setStatus("", false);
+      if (!contentEl) return;
+      contentEl.innerHTML =
+        "<section class=\"stat-section\">" +
+          "<h2 class=\"stat-heading\">Chunks</h2>" +
+          renderChunksTypeTable(chunksData.chunk_types) +
+          renderBooksTable(chunksData.books) +
+        "</section>" +
+        "<section class=\"stat-section\">" +
+          "<h2 class=\"stat-heading\">Events</h2>" +
+          renderEventsSection(eventsData.volume) +
+          "<h4 style=\"margin:1.5rem 0 0.5rem;font-size:0.9rem;color:var(--muted)\">Log</h4>" +
+          renderLogTable(eventsData.log) +
+        "</section>";
+    }).catch(function(err) {
+      setStatus("Statistik nicht verfügbar (" + (err.message || err) + "). Ist ragrun erreichbar?", true);
+    });
+  }
+
+  if (reloadBtn) reloadBtn.addEventListener("click", load);
+  load();
+})();
+</script>
+    </div>
+  </body>
+</html>

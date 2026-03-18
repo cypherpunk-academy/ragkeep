@@ -591,16 +591,14 @@ const layoutCss = `
 }
 
 .lecture-open-link {
-  color: var(--accent);
+  color: var(--fg);
   text-decoration: none;
-  font-size: 1.65em;
-  opacity: 0.7;
-  transition: opacity 140ms ease;
+  font-size: 1rem;
   line-height: 1;
 }
 
 .lecture-open-link:hover {
-  opacity: 1;
+  text-decoration: underline;
 }
 
 .file-link {
@@ -656,6 +654,7 @@ const layoutCss = `
   font-size: 0.82rem;
   cursor: pointer;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
+  text-decoration: none;
 }
 
 .monitoring-toggle:hover {
@@ -800,6 +799,187 @@ const layoutCss = `
 .monitoring-log-table th {
   color: var(--muted);
   font-weight: 500;
+}
+
+/* ── Statistik-Seite ─────────────────────────────────────────── */
+
+.stat-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.stat-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0.25rem 0 0;
+}
+
+.stat-reload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.stat-reload-btn:hover {
+  background: var(--surface);
+  color: var(--fg);
+  border-color: #c7d2fe;
+}
+
+h2.stat-heading {
+  font-family: var(--font-header);
+  font-weight: 400;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.stat-section {
+  margin-bottom: 2.5rem;
+}
+
+.stat-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.stat-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.stat-table th,
+.stat-table td {
+  padding: 0.45rem 0.65rem;
+  text-align: right;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.stat-table th {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.8rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.stat-table td:first-child,
+.stat-table th:first-child {
+  text-align: left;
+}
+
+/* Bücher-Tabelle: Titel-Spalte flexibel mit Ellipsis, Rest kompakt */
+#stat-books-table {
+  table-layout: fixed;
+}
+
+#stat-books-table th:first-child,
+#stat-books-table td:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#stat-books-table th:nth-child(2),
+#stat-books-table td:nth-child(2) { width: 8rem; }
+#stat-books-table th:nth-child(3),
+#stat-books-table td:nth-child(3) { width: 6rem; }
+#stat-books-table th:nth-child(4),
+#stat-books-table td:nth-child(4) { width: 6rem; }
+#stat-books-table th:nth-child(5),
+#stat-books-table td:nth-child(5) { width: 4rem; }
+
+.stat-table tbody tr:hover {
+  background: var(--surface-soft);
+}
+
+.stat-sort-btn {
+  margin-left: 0.2rem;
+  padding: 0 0.2rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  color: var(--muted);
+}
+
+.stat-sort-btn:hover {
+  color: var(--fg);
+}
+
+.stat-sort-btn.stat-sort-active {
+  font-weight: 700;
+  color: var(--fg);
+}
+
+#stat-books-table thead th {
+  white-space: nowrap;
+}
+
+.stat-events-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 600px;
+}
+
+.stat-bar-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 3rem;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.88rem;
+}
+
+.stat-bar-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--fg);
+}
+
+.stat-bar-track {
+  height: 10px;
+  background: var(--surface-soft);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 5px;
+  transition: width 0.25s;
+}
+
+.stat-bar-value {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  text-align: right;
+}
+
+.stat-status {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+.stat-status-error {
+  color: #b91c1c;
 }
 
 @media (max-width: 760px) {
