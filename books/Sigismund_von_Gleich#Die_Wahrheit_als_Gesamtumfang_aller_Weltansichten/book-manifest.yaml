@@ -7,7 +7,7 @@ book-id: 908fc041-096e-4440-8593-b3267b712bf5
 first-author-page: 6
 last-author-page: 309
 auto-replacements:
-  "\"": "“"
+  '"': “
 journal:
   pages: 304
   chapters: 14
@@ -15,3 +15,12 @@ journal:
   lines: 12616
   words: 123454
   footnotes: 0
+chunks: 600
+multi-paragraph-chunks: 134
+single-paragraph-chunks: 175
+large-paragraph-chunks: 291
+average: 1465
+p01_length: 320
+p05_length: 715
+p95_length: 2287
+p99_length: 2533

@@ -131,24 +131,64 @@ function renderStatistikPage(agent: Agent): string {
       return sortDir === "asc" ? cmp : -cmp;
     }
 
-    function sortedRows() {
+    function groupedRows() {
       var sorted = data.slice();
       sorted.sort(function(a,b){ return sortTh(sortBy, a, b); });
-      return sorted.map(function(b){
-        return "<tr><td>" + esc(b.book_title||"") + "</td><td>" + esc(b.chunk_type||"") + "</td><td>" + b.count + "</td><td>" + (b.usage_count||0) + "</td><td>" + (b.usage_pct != null ? b.usage_pct + "%" : "—") + "</td></tr>";
+      var groupsByTitle = Object.create(null);
+      var order = [];
+      for (var i = 0; i < sorted.length; i++) {
+        var row = sorted[i];
+        var title = row.book_title || "";
+        if (!groupsByTitle[title]) {
+          groupsByTitle[title] = [];
+          order.push(title);
+        }
+        groupsByTitle[title].push(row);
+      }
+      function sum(rows, key) {
+        return rows.reduce(function(acc, row){ return acc + (row[key] || 0); }, 0);
+      }
+      function groupCmp(aTitle, bTitle) {
+        var aRows = groupsByTitle[aTitle];
+        var bRows = groupsByTitle[bTitle];
+        var cmp;
+        if (sortBy === "name") cmp = String(aTitle).localeCompare(String(bTitle), "de");
+        else if (sortBy === "events") cmp = sum(aRows, "usage_count") - sum(bRows, "usage_count");
+        else if (sortBy === "pct") cmp = sum(aRows, "usage_pct") - sum(bRows, "usage_pct");
+        else if (sortBy === "chunk_type") cmp = String(aTitle).localeCompare(String(bTitle), "de");
+        else cmp = sum(aRows, "count") - sum(bRows, "count");
+        if (cmp === 0) {
+          cmp = String(aTitle).localeCompare(String(bTitle), "de");
+        }
+        return sortDir === "asc" ? cmp : -cmp;
+      }
+      var sortedTitles = order.slice().sort(groupCmp);
+      return sortedTitles.map(function(title){
+        var rows = groupsByTitle[title];
+        rows = rows.slice().sort(function(a, b){
+          return String(a.chunk_type || "").localeCompare(String(b.chunk_type || ""), "de");
+        });
+        return rows.map(function(b, idx){
+          var rowClass = idx === 0 ? "stat-book-group-start" : "";
+          if (idx === rows.length - 1) rowClass = (rowClass ? rowClass + " " : "") + "stat-book-group-end";
+          var titleCell = idx === 0
+            ? "<td rowspan=\\"" + rows.length + "\\" class=\\"stat-book-title-cell\\">" + esc(title) + "</td>"
+            : "";
+          return "<tr class=\\"" + rowClass + "\\">" + titleCell + "<td>" + esc(b.chunk_type||"") + "</td><td>" + b.count + "</td><td>" + (b.usage_count||0) + "</td><td>" + (b.usage_pct != null ? b.usage_pct + "%" : "—") + "</td></tr>";
+        }).join("");
       }).join("");
     }
 
     function thWithSort(label, col) {
       var ascActive = sortBy === col && sortDir === "asc" ? " stat-sort-active" : "";
       var descActive = sortBy === col && sortDir === "desc" ? " stat-sort-active" : "";
-      return "<th><span class=\\"stat-th-label\\">" + esc(label) + "</span> <button class=\\"stat-sort-btn" + ascActive + "\\" data-col=\\"" + col + "\\" data-dir=\\"asc\\" aria-label=\\"Aufsteigend sortieren\\">↑</button><button class=\\"stat-sort-btn" + descActive + "\\" data-col=\\"" + col + "\\" data-dir=\\"desc\\" aria-label=\\"Absteigend sortieren\\">↓</button></th>";
+      return "<th><span class=\\"stat-th-content\\"><span class=\\"stat-th-label\\">" + esc(label) + "</span><span class=\\"stat-sort-stack\\"><button class=\\"stat-sort-btn" + ascActive + "\\" data-col=\\"" + col + "\\" data-dir=\\"asc\\" aria-label=\\"Aufsteigend sortieren\\">↑</button><button class=\\"stat-sort-btn" + descActive + "\\" data-col=\\"" + col + "\\" data-dir=\\"desc\\" aria-label=\\"Absteigend sortieren\\">↓</button></span></span></th>";
     }
 
     var tableId = "stat-books-table";
     var tbodyId = "stat-books-tbody";
     var header = "<tr>" + thWithSort("Buch / Vortragstitel", "name") + thWithSort("chunk_type", "chunk_type") + thWithSort("Anzahl chunks", "chunks") + thWithSort("Anzahl events", "events") + thWithSort("%", "pct") + "</tr>";
-    var html = "<div class=\\"stat-table-wrap\\"><table class=\\"stat-table\\" id=\\"" + tableId + "\\"><thead>" + header + "</thead><tbody id=\\"" + tbodyId + "\\">" + sortedRows() + "</tbody></table></div>";
+    var html = "<div class=\\"stat-table-wrap\\"><table class=\\"stat-table\\" id=\\"" + tableId + "\\"><thead>" + header + "</thead><tbody id=\\"" + tbodyId + "\\">" + groupedRows() + "</tbody></table></div>";
 
     setTimeout(function(){
       var table = document.getElementById(tableId);
@@ -159,7 +199,7 @@ function renderStatistikPage(agent: Agent): string {
         if (!btn) return;
         sortBy = btn.getAttribute("data-col");
         sortDir = btn.getAttribute("data-dir");
-        tbody.innerHTML = sortedRows();
+        tbody.innerHTML = groupedRows();
         var btns = table.querySelectorAll(".stat-sort-btn");
         if (btns) for (var i = 0; i < btns.length; i++) {
           var b = btns[i];

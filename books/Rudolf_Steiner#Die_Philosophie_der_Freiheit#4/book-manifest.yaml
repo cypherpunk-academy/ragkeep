@@ -9,17 +9,17 @@ first-author-page: 7
 last-author-page: 271
 quotation-mark-open: «
 quotation-mark-close: »
-internal-page-references:
-external-page-references:
-chunks: 331
-multi-paragraph-chunks: 116
-single-paragraph-chunks: 73
-large-paragraph-chunks: 142
-average: 1305
-p01_length: 178
-p05_length: 271
-p95_length: 2225
-p99_length: 2656
+internal-page-references: null
+external-page-references: null
+chunks: 302
+multi-paragraph-chunks: 106
+single-paragraph-chunks: 76
+large-paragraph-chunks: 120
+average: 1442
+p01_length: 207
+p05_length: 596
+p95_length: 2300
+p99_length: 2769
 journal:
   pages: 282
   chapters: 18

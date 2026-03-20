@@ -19,7 +19,15 @@ journal:
   lines: 10142
   words: 81221
   footnotes: 1
-known-issues: 
-  - Einrückung von Zitaten verursacht fehlerhafte Erkennung von Absatzstarts wie bei "eurer Tugend! Eure schenkende Liebe und eure Erkenntnis"
-
-  
+known-issues:
+  - Einrückung von Zitaten verursacht fehlerhafte Erkennung von Absatzstarts wie
+    bei "eurer Tugend! Eure schenkende Liebe und eure Erkenntnis"
+chunks: 380
+multi-paragraph-chunks: 94
+single-paragraph-chunks: 66
+large-paragraph-chunks: 220
+average: 1423
+p01_length: 194
+p05_length: 526
+p95_length: 2242
+p99_length: 2576

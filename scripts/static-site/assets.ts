@@ -877,6 +877,20 @@ h2.stat-heading {
   border-bottom: 2px solid var(--border);
 }
 
+.stat-th-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.stat-sort-stack {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
 .stat-table td:first-child,
 .stat-table th:first-child {
   text-align: left;
@@ -908,12 +922,15 @@ h2.stat-heading {
 }
 
 .stat-sort-btn {
-  margin-left: 0.2rem;
-  padding: 0 0.2rem;
+  margin: 0;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
   border: none;
   background: transparent;
   cursor: pointer;
   font: inherit;
+  line-height: 1;
   color: var(--muted);
 }
 
@@ -928,6 +945,15 @@ h2.stat-heading {
 
 #stat-books-table thead th {
   white-space: nowrap;
+}
+
+#stat-books-table tbody td {
+  border-bottom: none;
+}
+
+#stat-books-table tbody tr.stat-book-group-end td,
+#stat-books-table tbody td.stat-book-title-cell {
+  border-bottom: 1px solid var(--border);
 }
 
 .stat-events-bars {

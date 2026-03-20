@@ -8,8 +8,8 @@ chunks: 34
 multi-paragraph-chunks: 32
 single-paragraph-chunks: 2
 large-paragraph-chunks: 0
-average: 1138
+average: 1110
 p01_length: 65
 p05_length: 161
 p95_length: 1623
-p99_length: 1958
+p99_length: 1849

@@ -4,3 +4,12 @@ book-id: 668db14e-8432-4852-a3be-4efc174b42fe
 book-index: 1
 book-type: allgemeiner-buchtext-mit-toc
 language: de
+chunks: 79
+multi-paragraph-chunks: 41
+single-paragraph-chunks: 22
+large-paragraph-chunks: 16
+average: 1496
+p01_length: 303
+p05_length: 769
+p95_length: 2227
+p99_length: 2556
