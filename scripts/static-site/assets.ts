@@ -610,8 +610,13 @@ const layoutCss = `
   padding: 12px;
 }
 
+.talk-excerpt {
+  margin: 0.5rem 0 0;
+  line-height: 1.45;
+}
+
 .quote-card,
-.conversation-card,
+.talk-card,
 .taxonomy-item {
   border: 1px solid var(--border);
   background: #fff;
@@ -1095,6 +1100,17 @@ body.book-body { margin: 0; }
 .book-title { font-size: clamp(2rem, 4vw, 2.8rem); }
 .book-chapter-title { font-size: clamp(1.55rem, 3.2vw, 2.15rem); }
 .book-subheading { font-size: clamp(1.2rem, 2.4vw, 1.55rem); margin-top: 2rem; }
+
+.talk-prose { margin-top: 1.25rem; }
+.talk-prose .talk-turn {
+  font-family: var(--font-header);
+  font-weight: 500;
+  font-size: clamp(1.05rem, 2.1vw, 1.3rem);
+  margin: 1.65rem 0 0.65rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid rgba(127, 127, 127, 0.22);
+}
+.talk-intro { margin-bottom: 0.35rem; }
 
 .book-paragraph { margin: 0 0 1.05rem; }
 .book-paragraph-text { margin: 0; }

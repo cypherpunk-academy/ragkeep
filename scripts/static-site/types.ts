@@ -1,10 +1,3 @@
-export interface Conversation {
-  id: string;
-  title: string;
-  date: string;
-  snippet: string;
-}
-
 export interface Agent {
   id: string;
   name: string;
@@ -19,7 +12,10 @@ export interface Agent {
   essays: string[];
   quotes: string[];
   taxonomies: string[];
-  conversations: Conversation[];
+  /** JSONL-Dateinamen unter assistants/<id>/typologies/chunks/ (wie bei concepts) */
+  typologies: string[];
+  /** Dateinamen unter assistants/<id>/talks/ (z. B. *.md), analog chunk_type „talk“. */
+  talks: string[];
   avatarUrl?: string;
   coverUrl?: string;
 }

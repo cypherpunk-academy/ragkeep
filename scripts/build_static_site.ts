@@ -11,9 +11,11 @@ import {
 import { buildChunkIndex } from "./static-site/chunkLookup";
 import {
   collectConcepts,
+  collectTypologies,
   type ConceptEntry,
 } from "./static-site/concepts";
 import { collectEssays, generateEssayPages, type EssayData } from "./static-site/essays";
+import { collectTalks, generateTalkPages, type TalkData } from "./static-site/talks";
 import { writeSiteAssets } from "./static-site/assets";
 import { generateAgentPages, generateHomePage } from "./static-site/pages";
 import fs from "node:fs";
@@ -89,7 +91,15 @@ async function main(): Promise<void> {
     }
   }
 
+  const talksByAgent = new Map<string, Map<string, TalkData>>();
+  for (const agent of assistants) {
+    if (agent.talks.length > 0) {
+      talksByAgent.set(agent.id, collectTalks(REPO_ROOT, agent));
+    }
+  }
+
   const conceptsByAgent = new Map<string, Map<string, ConceptEntry[]>>();
+  const typologiesByAgent = new Map<string, Map<string, ConceptEntry[]>>();
   const chunkIdsByCollection = new Map<string, Set<string>>();
   for (const agent of assistants) {
     if (agent.concepts.length > 0) {
@@ -102,6 +112,24 @@ async function main(): Promise<void> {
       }
       for (const fileConcepts of concepts.values()) {
         for (const entry of fileConcepts) {
+          if (entry.references) {
+            for (const ref of entry.references) {
+              collSet.add(ref.chunk_id);
+            }
+          }
+        }
+      }
+    }
+    if (agent.typologies.length > 0) {
+      const typologies = collectTypologies(REPO_ROOT, agent);
+      typologiesByAgent.set(agent.id, typologies);
+      let collSet = chunkIdsByCollection.get(agent.ragCollection);
+      if (!collSet) {
+        collSet = new Set<string>();
+        chunkIdsByCollection.set(agent.ragCollection, collSet);
+      }
+      for (const fileEntries of typologies.values()) {
+        for (const entry of fileEntries) {
           if (entry.references) {
             for (const ref of entry.references) {
               collSet.add(ref.chunk_id);
@@ -133,12 +161,15 @@ async function main(): Promise<void> {
     assistants,
     booksById,
     essaysByAgent,
+    talksByAgent,
     conceptsByAgent,
     chunkIndex,
+    typologiesByAgent,
     lecturesByAgent,
     quotesByAgent
   );
   generateEssayPages(OUTPUT_DIR, assistants, essaysByAgent);
+  generateTalkPages(OUTPUT_DIR, assistants, talksByAgent);
 
   // eslint-disable-next-line no-console
   console.log(

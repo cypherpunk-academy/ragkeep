@@ -95,3 +95,31 @@ export function getConceptFileLabel(fileName: string, agentName: string): string
   }
   return fileName;
 }
+
+export function getTypologyFileLabel(fileName: string, agentName: string): string {
+  if (fileName === "typologies.jsonl") {
+    return agentName;
+  }
+  const match = fileName.match(/^(.+)-typologies\.jsonl$/);
+  if (match) {
+    const name = match[1] ?? "";
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  }
+  return fileName;
+}
+
+export function collectTypologies(repoRoot: string, agent: Agent): Map<string, ConceptEntry[]> {
+  const result = new Map<string, ConceptEntry[]>();
+  const typologiesDir = path.join(repoRoot, "assistants", agent.id, "typologies", "chunks");
+
+  for (const typologyFile of agent.typologies) {
+    if (!typologyFile.endsWith(".jsonl")) continue;
+    const filePath = path.join(typologiesDir, typologyFile);
+    const entries = parseConceptsJsonl(filePath);
+    if (entries.length > 0) {
+      result.set(typologyFile, entries);
+    }
+  }
+
+  return result;
+}

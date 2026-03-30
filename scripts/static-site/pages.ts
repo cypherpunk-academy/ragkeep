@@ -1,9 +1,10 @@
 import path from "node:path";
-import type { Agent, Book, Conversation } from "./types";
+import type { Agent, Book } from "./types";
 import type { ConceptEntry } from "./concepts";
 import type { ChunkInfo } from "./chunkLookup";
-import { getConceptFileLabel } from "./concepts";
+import { getConceptFileLabel, getTypologyFileLabel } from "./concepts";
 import type { EssayData } from "./essays";
+import type { TalkData } from "./talks";
 import type { AgentLectureSets, LectureView } from "./lectures";
 import type { QuotesData } from "./quotes";
 import {
@@ -18,11 +19,11 @@ type AgentSection =
   | "overview"
   | "books"
   | "secondary-books"
+  | "talks"
   | "essays"
   | "concepts"
   | "quotes"
-  | "taxonomies"
-  | "conversations";
+  | "taxonomies";
 
 const SECTION_META: Record<
   AgentSection,
@@ -35,22 +36,22 @@ const SECTION_META: Record<
     fileName: "secondary-books.html",
     heading: "Sekundärliteratur",
   },
+  talks: {
+    label: "Talks",
+    fileName: "talks.html",
+    heading: "Talks",
+  },
   essays: { label: "Essays", fileName: "essays.html", heading: "Verfügbare Essays" },
+  quotes: { label: "Zitate", fileName: "quotes.html", heading: "Zitate" },
   concepts: {
     label: "Begriffe",
     fileName: "concepts.html",
     heading: "Die häufigsten Begriffe der Bücher",
   },
-  quotes: { label: "Zitate", fileName: "quotes.html", heading: "Zitate" },
   taxonomies: {
-    label: "Taxonomien",
+    label: "Ordnungen",
     fileName: "taxonomies.html",
-    heading: "Wissens-Taxonomien",
-  },
-  conversations: {
-    label: "Gespräche",
-    fileName: "conversations.html",
-    heading: "Gespeicherte Gespräche",
+    heading: "Typologien und Ordnungen",
   },
 };
 
@@ -864,31 +865,37 @@ function renderQuotesSection(quotesData: QuotesData | undefined): string {
 </div>`;
 }
 
-function renderConceptsRows(
+function renderJsonlConceptAccordions(
   agent: Agent,
-  conceptsByFile: Map<string, ConceptEntry[]>,
+  entriesByFile: Map<string, ConceptEntry[]>,
   chunkIndex: Map<string, ChunkInfo>,
-  agentBookIds: Set<string>
+  agentBookIds: Set<string>,
+  options: {
+    emptyMessage: string;
+    dropdownId: string;
+    panelSelectorClass: string;
+    panelDataAttr: string;
+    selectAriaLabel: string;
+    getFileLabel: (fileName: string, agentName: string) => string;
+  }
 ): string {
-  const files = Array.from(conceptsByFile.keys());
-  if (files.length === 0) return `<p class="empty-state">Keine Begriffe verfügbar.</p>`;
+  const files = Array.from(entriesByFile.keys());
+  if (files.length === 0) return `<p class="empty-state">${options.emptyMessage}</p>`;
 
   const dropdownOptions = files
     .map(
       (f) =>
         `<option value="${escapeHtml(f)}">${escapeHtml(
-          getConceptFileLabel(f, agent.name)
+          options.getFileLabel(f, agent.name)
         )}</option>`
     )
     .join("");
 
   const accordionPanels = files.map((fileName) => {
-    const entries = conceptsByFile.get(fileName) ?? [];
+    const entries = entriesByFile.get(fileName) ?? [];
     const items = entries
       .map((entry) => {
-        const title = entry.segmentTitle
-          ? entry.segmentTitle.charAt(0).toUpperCase() + entry.segmentTitle.slice(1)
-          : "(Ohne Titel)";
+        const title = entry.segmentTitle ? entry.segmentTitle : "(Ohne Titel)";
         const titleHtml = renderInlineWithEmphasis(title);
         const textHtml = renderSummaryHtml(entry.text);
         let refsHtml = "";
@@ -937,27 +944,29 @@ function renderConceptsRows(
       .join("");
     const displayStyle = files.indexOf(fileName) === 0 ? "" : "display:none";
     const styleAttr = displayStyle ? ` style="${displayStyle}"` : "";
-    return `<div class="concepts-panel" data-concepts-file="${escapeHtml(fileName)}"${styleAttr}>${items}</div>`;
+    return `<div class="${options.panelSelectorClass}" ${options.panelDataAttr}="${escapeHtml(fileName)}"${styleAttr}>${items}</div>`;
   });
 
+  const ddId = escapeHtml(options.dropdownId);
   const script = `
 <script>
 (function(){
-  var sel = document.getElementById("conceptsDropdown");
-  var panels = document.querySelectorAll(".concepts-panel");
+  var sel = document.getElementById("${ddId}");
+  var panels = document.querySelectorAll(".${options.panelSelectorClass}");
   if (!sel || !panels.length) return;
   sel.addEventListener("change", function(){
     var v = sel.value;
+    var attr = "${escapeHtml(options.panelDataAttr)}";
     panels.forEach(function(p){
-      p.style.display = (p.getAttribute("data-concepts-file") === v) ? "" : "none";
+      p.style.display = (p.getAttribute(attr) === v) ? "" : "none";
     });
   });
 })();
 </script>`;
 
   return `<div class="concepts-section stack-8">
-  <label for="conceptsDropdown" class="concepts-dropdown-label">Quelle:</label>
-  <select id="conceptsDropdown" class="concepts-dropdown" aria-label="Begriffsquelle wählen">
+  <label for="${ddId}" class="concepts-dropdown-label">Quelle:</label>
+  <select id="${ddId}" class="concepts-dropdown" aria-label="${escapeHtml(options.selectAriaLabel)}">
     ${dropdownOptions}
   </select>
   <div class="concepts-accordions stack-16">
@@ -967,24 +976,75 @@ function renderConceptsRows(
 </div>`;
 }
 
+function renderConceptsRows(
+  agent: Agent,
+  conceptsByFile: Map<string, ConceptEntry[]>,
+  chunkIndex: Map<string, ChunkInfo>,
+  agentBookIds: Set<string>
+): string {
+  return renderJsonlConceptAccordions(agent, conceptsByFile, chunkIndex, agentBookIds, {
+    emptyMessage: "Keine Begriffe verfügbar.",
+    dropdownId: "conceptsDropdown",
+    panelSelectorClass: "concepts-panel",
+    panelDataAttr: "data-concepts-file",
+    selectAriaLabel: "Begriffsquelle wählen",
+    getFileLabel: getConceptFileLabel,
+  });
+}
+
+function renderTypologiesRows(
+  agent: Agent,
+  typologiesByFile: Map<string, ConceptEntry[]>,
+  chunkIndex: Map<string, ChunkInfo>,
+  agentBookIds: Set<string>
+): string {
+  return renderJsonlConceptAccordions(agent, typologiesByFile, chunkIndex, agentBookIds, {
+    emptyMessage: "Keine Ordnungen verfügbar.",
+    dropdownId: "typologiesDropdown",
+    panelSelectorClass: "typologies-panel",
+    panelDataAttr: "data-typologies-file",
+    selectAriaLabel: "Ordnungsquelle wählen",
+    getFileLabel: getTypologyFileLabel,
+  });
+}
+
 function renderTaxonomies(taxonomies: string[]): string {
-  if (taxonomies.length === 0) return `<p class="empty-state">Keine Taxonomien verfügbar.</p>`;
+  if (taxonomies.length === 0) return `<p class="empty-state">Keine Ordnungen verfügbar.</p>`;
   return `<div class="stack-8">${taxonomies
     .map((tax) => `<div class="taxonomy-item">${escapeHtml(tax).replace(/&gt;/g, " &rarr; ")}</div>`)
     .join("")}</div>`;
 }
 
-function renderConversations(conversations: Conversation[]): string {
-  if (conversations.length === 0) return `<p class="empty-state">Keine Gespräche gefunden.</p>`;
-  return `<div class="stack-16">${conversations
-    .map(
-      (conv) => `<article class="conversation-card stack-8">
-      <div><strong>${escapeHtml(conv.title)}</strong></div>
-      <div class="meta-quiet">${escapeHtml(conv.date)}</div>
-      <p>${escapeHtml(conv.snippet)}</p>
-    </article>`
-    )
-    .join("")}</div>`;
+function renderTalkRows(
+  talkFiles: string[],
+  talksData: Map<string, TalkData>
+): string {
+  if (talkFiles.length === 0) {
+    return `<p class="empty-state">Keine Talks verfügbar.</p>`;
+  }
+
+  const items = talkFiles
+    .filter((f) => f.endsWith(".md"))
+    .map((file) => {
+      const slug = file.replace(/\.md$/, "");
+      const talk = talksData.get(slug);
+      const title = escapeHtml(talk?.title ?? slug);
+      const talkUrl = `talks/${encodeURIComponent(slug)}.html`;
+      const excerpt = talk?.excerpt;
+
+      if (excerpt) {
+        return `<div class="talk-card book-link">
+  <a href="${talkUrl}" style="text-decoration: none; color: inherit;"><strong>${title}</strong></a>
+  <p class="meta-quiet talk-excerpt">${escapeHtml(excerpt)}</p>
+</div>`;
+      }
+
+      return `<a class="book-link" href="${talkUrl}">
+  <strong>${title}</strong>
+</a>`;
+    });
+
+  return `<div class="book-list">${items.join("")}</div>`;
 }
 
 function renderSectionContent(
@@ -992,8 +1052,10 @@ function renderSectionContent(
   agent: Agent,
   availableBooks: Map<string, Book>,
   essaysByAgent: Map<string, Map<string, EssayData>>,
+  talksByAgent: Map<string, Map<string, TalkData>>,
   conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>,
   conceptsChunkIndex: Map<string, ChunkInfo>,
+  typologiesByAgent: Map<string, Map<string, ConceptEntry[]>>,
   lecturesByAgent: Map<string, AgentLectureSets>,
   quotesByAgent: Map<string, QuotesData>
 ): string {
@@ -1029,6 +1091,13 @@ function renderSectionContent(
       availableBooks
     )}</div>`;
   }
+  if (section === "talks") {
+    const talksData = talksByAgent.get(agent.id) ?? new Map();
+    return `<div class="stack-8"><h3>${SECTION_META.talks.heading}</h3>${renderTalkRows(
+      agent.talks,
+      talksData
+    )}</div>`;
+  }
   if (section === "essays") {
     const essaysData = essaysByAgent.get(agent.id) ?? new Map();
     return `<div class="stack-8"><h3>${SECTION_META.essays.heading}</h3>${renderEssayRows(
@@ -1057,13 +1126,25 @@ function renderSectionContent(
     )}</div>`;
   }
   if (section === "taxonomies") {
-    return `<div class="stack-8"><h3>${SECTION_META.taxonomies.heading}</h3>${renderTaxonomies(
-      agent.taxonomies
-    )}</div>`;
+    const typologiesData = typologiesByAgent.get(agent.id) ?? new Map();
+    const chunkIndex = conceptsChunkIndex ?? new Map();
+    const agentBookIds = new Set([...agent.primaryBooks, ...agent.secondaryBooks]);
+    if (typologiesData.size > 0) {
+      return `<div class="stack-8"><h3>${SECTION_META.taxonomies.heading}</h3>${renderTypologiesRows(
+        agent,
+        typologiesData,
+        chunkIndex,
+        agentBookIds
+      )}</div>`;
+    }
+    if (agent.taxonomies.length > 0) {
+      return `<div class="stack-8"><h3>${SECTION_META.taxonomies.heading}</h3>${renderTaxonomies(
+        agent.taxonomies
+      )}</div>`;
+    }
+    return `<div class="stack-8"><h3>${SECTION_META.taxonomies.heading}</h3><p class="empty-state">Keine Ordnungen verfügbar.</p></div>`;
   }
-  return `<div class="stack-8"><h3>${SECTION_META.conversations.heading}</h3>${renderConversations(
-    agent.conversations
-  )}</div>`;
+  return `<div class="stack-8"><p class="empty-state">Kein Inhalt für diesen Bereich.</p></div>`;
 }
 
 function renderTabRow(section: AgentSection): string {
@@ -1080,8 +1161,10 @@ function renderAgentPage(
   agent: Agent,
   availableBooks: Map<string, Book>,
   essaysByAgent: Map<string, Map<string, EssayData>>,
+  talksByAgent: Map<string, Map<string, TalkData>>,
   conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>,
   conceptsChunkIndex: Map<string, ChunkInfo>,
+  typologiesByAgent: Map<string, Map<string, ConceptEntry[]>>,
   lecturesByAgent: Map<string, AgentLectureSets>,
   quotesByAgent: Map<string, QuotesData>,
   section: AgentSection
@@ -1115,8 +1198,10 @@ function renderAgentPage(
           agent,
           availableBooks,
           essaysByAgent,
+          talksByAgent,
           conceptsByAgent,
           conceptsChunkIndex,
+          typologiesByAgent,
           lecturesByAgent,
           quotesByAgent
         )}
@@ -1137,8 +1222,10 @@ export function generateAgentPages(
   agents: Agent[],
   availableBooks: Map<string, Book>,
   essaysByAgent: Map<string, Map<string, EssayData>>,
+  talksByAgent: Map<string, Map<string, TalkData>>,
   conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>,
   conceptsChunkIndex: Map<string, ChunkInfo>,
+  typologiesByAgent: Map<string, Map<string, ConceptEntry[]>>,
   lecturesByAgent: Map<string, AgentLectureSets>,
   quotesByAgent: Map<string, QuotesData>
 ): void {
@@ -1150,8 +1237,10 @@ export function generateAgentPages(
         agent,
         availableBooks,
         essaysByAgent,
+        talksByAgent,
         conceptsByAgent,
         conceptsChunkIndex,
+        typologiesByAgent,
         lecturesByAgent,
         quotesByAgent,
         section

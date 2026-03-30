@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import yaml from "js-yaml";
-import type { Agent, Conversation } from "./types";
+import type { Agent } from "./types";
 import { fileExists, normalizeBookId } from "./utils";
 
 interface AssistantManifest {
@@ -17,7 +17,8 @@ interface AssistantManifest {
   essays?: string[];
   quotes?: string[];
   taxonomies?: string[];
-  conversations?: Conversation[];
+  typologies?: string[];
+  talks?: string[];
   "cover-image"?: string;
   "avatar-image"?: string;
 }
@@ -25,22 +26,6 @@ interface AssistantManifest {
 function toStringArray(value: unknown): string[] {
   if (!Array.isArray(value)) return [];
   return value.map((item) => String(item)).filter(Boolean);
-}
-
-function toConversationArray(value: unknown): Conversation[] {
-  if (!Array.isArray(value)) return [];
-  return value
-    .map((item, idx) => {
-      if (!item || typeof item !== "object") return null;
-      const obj = item as Record<string, unknown>;
-      return {
-        id: String(obj.id ?? `conversation-${idx + 1}`),
-        title: String(obj.title ?? `Gespräch ${idx + 1}`),
-        date: String(obj.date ?? ""),
-        snippet: String(obj.snippet ?? ""),
-      };
-    })
-    .filter((item): item is Conversation => item !== null);
 }
 
 function normalizeAgent(input: Partial<Agent> & { id: string }): Agent {
@@ -59,7 +44,8 @@ function normalizeAgent(input: Partial<Agent> & { id: string }): Agent {
     essays: input.essays ?? [],
     quotes: input.quotes ?? [],
     taxonomies: input.taxonomies ?? [],
-    conversations: input.conversations ?? [],
+    typologies: input.typologies ?? [],
+    talks: input.talks ?? [],
     avatarUrl: input.avatarUrl,
     coverUrl: input.coverUrl,
   };
@@ -90,8 +76,14 @@ function mergeManifestFields(agent: Agent, manifestPath: string): Agent {
     essays: manifest.essays ?? agent.essays,
     quotes: toStringArray(manifest.quotes) ?? agent.quotes,
     taxonomies: toStringArray(manifest.taxonomies) ?? agent.taxonomies,
-    conversations:
-      toConversationArray(manifest.conversations) ?? agent.conversations,
+    typologies:
+      manifest.typologies !== undefined
+        ? toStringArray(manifest.typologies)
+        : agent.typologies,
+    talks:
+      manifest.talks !== undefined
+        ? toStringArray(manifest.talks)
+        : agent.talks,
     coverUrl: coverImage ? `assistants/${agent.id}/${coverImage}` : agent.coverUrl,
     avatarUrl: avatarImage
       ? `assistants/${agent.id}/${avatarImage}`
@@ -125,7 +117,8 @@ function readAssistantsFromJson(repoRoot: string): Agent[] {
           essays: toStringArray(obj.essays),
           quotes: toStringArray(obj.quotes),
           taxonomies: toStringArray(obj.taxonomies),
-          conversations: toConversationArray(obj.conversations),
+          typologies: toStringArray(obj.typologies),
+          talks: toStringArray(obj.talks),
           avatarUrl: obj.avatarUrl ? String(obj.avatarUrl) : undefined,
           coverUrl: obj.coverUrl ? String(obj.coverUrl) : undefined,
         });
@@ -181,7 +174,7 @@ export function loadAssistants(repoRoot: string): Agent[] {
 }
 
 export function copyAssistantFiles(repoRoot: string, outputDir: string, agents: Agent[]): void {
-  const foldersToCopy = ["assets", "essays", "concepts", "taxonomies", "conversations"];
+  const foldersToCopy = ["assets", "essays", "concepts", "typologies", "taxonomies", "talks"];
   for (const agent of agents) {
     for (const folderName of foldersToCopy) {
       const source = path.join(repoRoot, "assistants", agent.id, folderName);

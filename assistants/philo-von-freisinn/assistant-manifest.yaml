@@ -32,6 +32,7 @@ secondary-books:
   - Julian_Assange#Cypherpunks
   - Julian_Assange#Julian_Assange_in_his_own_words
   - Julian_Assange#Various_Interviews_and_Articles#1
+  - Sigismund_von_Gleich#Die_Wahrheit_als_Gesamtumfang_aller_Weltansichten
 secondary-lectures:
   - GA 73a, Fachwissenschaften und Anthroposophie
   - GA 76, Die befruchtende Wirkung der Anthroposophie auf die Fachwissenschaften
@@ -74,12 +75,18 @@ concepts:
   - concepts.jsonl
   - individualismus-concepts.jsonl
   - mathematismus-concepts.jsonl
+typologies:
+  - typologies.jsonl
 essays:
-  - allgemeiner-gedankenfehler-ich-kann-gegen-andere-gewinnen.essay
-  - allgemeiner-gedankenfehler-wir-brauchen-hierarchien-um-unser-zusammenleben-zu-ordnen.essay
-  - es-ist-besser-fehler-zu-vermeiden-als-sie-zu-machen.essay
-  - gedankenfehler-kinder-muessen-erzogen-werden.essay
-  - gedankenfehler-zufriedenheit-ist-wenn-bed-rfnisse-erf-llt-sind.essay
-  - ich-bekomme-angst-weil-ich-in-gefahr-bin.essay
-  - manchmal-hilft-es-zu-luegen.essay
-last-updated: 2026-03-19T10:45:18.414Z
+  - 3gl-faehigkeit-als-werden-inneres-erkennen-und-gemeinsames-tun.essay
+  - 3gl-freiheit-und-qualitaet-des-denkens.essay
+  - ggf-01-kinder-muessen-erzogen-werden.essay
+  - ggf-02-es-ist-besser-fehler-zu-vermeiden-als-sie-zu-machen.essay
+  - ggf-04-ich-bekomme-angst-weil-ich-in-gefahr-bin.essay
+  - ggf-07-ich-kann-gegen-andere-gewinnen.essay
+talks:
+  - 3gl_arbeit_als_ware_und_der_dreigliederige_ausgleich.md
+  - 3gl_der_soziale_organismus_und_der_mensch_eine_analogie.md
+  - 3gl_faehigkeitenhierarchie_statt_strukturhierarchie.md
+  - 3gl_ideologieparadox_zu_ende_denken_philosophie_der_freiheit.md
+last-updated: 2026-03-30T10:43:17.713Z
