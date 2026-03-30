@@ -85,6 +85,12 @@ function renderStatistikPage(agent: Agent): string {
   var reloadBtn = document.getElementById("stat-reload");
 
   function esc(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  /** Anzeigename für chunk_type (API-Werte bleiben unverändert). */
+  function chunkTypeLabel(ct) {
+    var s = String(ct || "");
+    if (s === "begriff_list") return "begriff";
+    return s;
+  }
   function fmtDate(s) {
     if (!s) return "—";
     var str = String(s).slice(0, 10);
@@ -108,7 +114,7 @@ function renderStatistikPage(agent: Agent): string {
     if (!types || types.length === 0) return "<p class=\\"empty-state\\">Keine Chunk-Daten.</p>";
     var visible = types.filter(function(t){ return t.count > 0; });
     if (visible.length === 0) return "<p class=\\"empty-state\\">Keine Chunks vorhanden.</p>";
-    var header = "<tr><th></th>" + visible.map(function(t){ return "<th>" + esc(t.chunk_type) + "</th>"; }).join("") + "</tr>";
+    var header = "<tr><th></th>" + visible.map(function(t){ return "<th>" + esc(chunkTypeLabel(t.chunk_type)) + "</th>"; }).join("") + "</tr>";
     var rowChunks = "<tr><td>Chunks</td>" + visible.map(function(t){ return "<td>" + t.count + "</td>"; }).join("") + "</tr>";
     var rowMb = "<tr><td>Text (MB)</td>" + visible.map(function(t){ return "<td>" + (t.text_mb != null ? t.text_mb.toFixed(2) + " MB" : "—") + "</td>"; }).join("") + "</tr>";
     var rowOldest = "<tr><td>Ältester Eintrag</td>" + visible.map(function(t){ return "<td>" + fmtDate(t.oldest) + "</td>"; }).join("") + "</tr>";
@@ -175,7 +181,7 @@ function renderStatistikPage(agent: Agent): string {
           var titleCell = idx === 0
             ? "<td rowspan=\\"" + rows.length + "\\" class=\\"stat-book-title-cell\\">" + esc(title) + "</td>"
             : "";
-          return "<tr class=\\"" + rowClass + "\\">" + titleCell + "<td>" + esc(b.chunk_type||"") + "</td><td>" + b.count + "</td><td>" + (b.usage_count||0) + "</td><td>" + (b.usage_pct != null ? b.usage_pct + "%" : "—") + "</td></tr>";
+          return "<tr class=\\"" + rowClass + "\\">" + titleCell + "<td>" + esc(chunkTypeLabel(b.chunk_type||"")) + "</td><td>" + b.count + "</td><td>" + (b.usage_count||0) + "</td><td>" + (b.usage_pct != null ? b.usage_pct + "%" : "—") + "</td></tr>";
         }).join("");
       }).join("");
     }

@@ -7,9 +7,9 @@
     <meta name="color-scheme" content="light dark" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400&family=Special+Elite&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../../assets/styles.css?v=tmnd28nfh" />
-    <link rel="stylesheet" href="../../assets/layout.css?v=tmnd28nfh" />
-    <link rel="stylesheet" href="../../assets/dark.css?v=tmnd28nfh" />
+    <link rel="stylesheet" href="../../assets/styles.css?v=tmnd43n47" />
+    <link rel="stylesheet" href="../../assets/layout.css?v=tmnd43n47" />
+    <link rel="stylesheet" href="../../assets/dark.css?v=tmnd43n47" />
   </head>
   <body>
     <div class="site-shell">
@@ -47,6 +47,12 @@
   var reloadBtn = document.getElementById("stat-reload");
 
   function esc(s) { return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+  /** Anzeigename für chunk_type (API-Werte bleiben unverändert). */
+  function chunkTypeLabel(ct) {
+    var s = String(ct || "");
+    if (s === "begriff_list") return "begriff";
+    return s;
+  }
   function fmtDate(s) {
     if (!s) return "—";
     var str = String(s).slice(0, 10);
@@ -70,7 +76,7 @@
     if (!types || types.length === 0) return "<p class=\"empty-state\">Keine Chunk-Daten.</p>";
     var visible = types.filter(function(t){ return t.count > 0; });
     if (visible.length === 0) return "<p class=\"empty-state\">Keine Chunks vorhanden.</p>";
-    var header = "<tr><th></th>" + visible.map(function(t){ return "<th>" + esc(t.chunk_type) + "</th>"; }).join("") + "</tr>";
+    var header = "<tr><th></th>" + visible.map(function(t){ return "<th>" + esc(chunkTypeLabel(t.chunk_type)) + "</th>"; }).join("") + "</tr>";
     var rowChunks = "<tr><td>Chunks</td>" + visible.map(function(t){ return "<td>" + t.count + "</td>"; }).join("") + "</tr>";
     var rowMb = "<tr><td>Text (MB)</td>" + visible.map(function(t){ return "<td>" + (t.text_mb != null ? t.text_mb.toFixed(2) + " MB" : "—") + "</td>"; }).join("") + "</tr>";
     var rowOldest = "<tr><td>Ältester Eintrag</td>" + visible.map(function(t){ return "<td>" + fmtDate(t.oldest) + "</td>"; }).join("") + "</tr>";
@@ -137,7 +143,7 @@
           var titleCell = idx === 0
             ? "<td rowspan=\"" + rows.length + "\" class=\"stat-book-title-cell\">" + esc(title) + "</td>"
             : "";
-          return "<tr class=\"" + rowClass + "\">" + titleCell + "<td>" + esc(b.chunk_type||"") + "</td><td>" + b.count + "</td><td>" + (b.usage_count||0) + "</td><td>" + (b.usage_pct != null ? b.usage_pct + "%" : "—") + "</td></tr>";
+          return "<tr class=\"" + rowClass + "\">" + titleCell + "<td>" + esc(chunkTypeLabel(b.chunk_type||"")) + "</td><td>" + b.count + "</td><td>" + (b.usage_count||0) + "</td><td>" + (b.usage_pct != null ? b.usage_pct + "%" : "—") + "</td></tr>";
         }).join("");
       }).join("");
     }
