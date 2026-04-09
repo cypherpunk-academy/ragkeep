@@ -2,7 +2,7 @@
 action_id: socratic-dialog
 ---
 
-# Ich habe wieder zwei Zitate von Steiner über
+# Die freie Schule als Gelenk zwischen Geistesleben, Recht und Wirtschaft
 
 ## Mensch
 

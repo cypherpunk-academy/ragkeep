@@ -56,6 +56,356 @@ body.book-body { margin: 0; }
   border-bottom: 1px solid rgba(127, 127, 127, 0.22);
 }
 .talk-intro { margin-bottom: 0.35rem; }
+/* ── Talk Quellen ────────────────────────────────────── */
+.talk-sources-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin: 0.75rem 0 1.5rem;
+}
+.talk-sources-stack .talk-sources {
+  margin: 0;
+}
+.talk-sources {
+  font-family: "Special Elite", serif;
+  font-size: 1rem;
+  margin: 0.75rem 0 1.5rem;
+  border-left: 2px solid var(--accent, #8b7355);
+  padding-left: 0.85rem;
+}
+.talk-sources > summary {
+  cursor: pointer;
+  color: color-mix(in srgb, var(--text) 45%, transparent);
+  list-style: none;
+  user-select: none;
+  padding: 0.15rem 0;
+}
+.talk-sources > summary::marker,
+.talk-sources > summary::-webkit-details-marker { display: none; }
+.talk-sources-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.2rem;
+}
+.talk-sources-summary-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.28rem;
+  min-width: 0;
+}
+.talk-sources-summary-top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 0.35rem;
+  min-width: 0;
+}
+.talk-sources-summary-top::before {
+  content: "▸ ";
+  flex-shrink: 0;
+  opacity: 0.55;
+  font-size: 0.8em;
+  line-height: 1.2;
+  align-self: flex-start;
+  margin-top: 0.18em;
+}
+.talk-sources[open] > .talk-sources-summary .talk-sources-summary-top::before {
+  content: "▾ ";
+}
+/* Aufgeklappt: Thumbnail + Textspalte in der Summary ausblenden — nur ▾ zum Zuklappen */
+.talk-sources[open] > .talk-sources-summary .talk-sources-summary-item {
+  display: none;
+}
+.talk-sources[open] > .talk-sources-summary .talk-sources-summary-inner {
+  gap: 0;
+}
+.talk-sources[open] > .talk-sources-summary .talk-sources-summary-top {
+  gap: 0;
+  min-height: 1.15rem;
+}
+.talk-sources-summary-text-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.22rem;
+  min-width: 0;
+  flex: 1;
+}
+.talk-sources-summary-chapter-line {
+  display: block;
+  padding-left: 0;
+  line-height: 1.35;
+}
+.talk-sources-summary-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.45rem;
+  min-width: 0;
+  flex: 1;
+}
+.talk-sources-summary-meta {
+  min-width: 0;
+  line-height: 1.35;
+}
+.talk-sources-summary-title {
+  font-size: 0.72em;
+  color: color-mix(in srgb, var(--text) 52%, transparent);
+}
+.talk-sources-summary-sep {
+  opacity: 0.55;
+  font-size: 0.85em;
+}
+.talk-sources-summary-chapter {
+  font-size: 0.78em;
+  color: color-mix(in srgb, var(--text) 42%, transparent);
+  letter-spacing: 0.04em;
+}
+.talk-sources-summary-gap {
+  opacity: 0.45;
+  font-size: 0.85em;
+}
+/* Expanded block */
+.talk-source-block {
+  margin-top: 0.75rem;
+  padding: 0.7rem 0.8rem;
+  background: color-mix(in srgb, var(--bg) 90%, var(--text) 10%);
+  border-radius: 5px;
+}
+.talk-source-block + .talk-source-block { margin-top: 0.45rem; }
+/* Cover (Bild oder Placeholder) + Spalte mit Titel, Kurztext, Trefferqualität */
+.talk-source-main {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+.talk-source-cover-wrap {
+  flex: 0 0 auto;
+}
+.talk-source-cover-link {
+  display: block;
+  line-height: 0;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 3px;
+}
+.talk-source-cover-link:focus-visible {
+  outline: 2px solid var(--book-focus, rgba(120, 170, 255, 0.55));
+  outline-offset: 2px;
+}
+.talk-source-cover-img {
+  display: block;
+  border-radius: 3px;
+  object-fit: contain;
+}
+.talk-source-cover-img--thumb {
+  height: 40px;
+  width: auto;
+  max-width: 34px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  vertical-align: middle;
+}
+.talk-source-cover-img--expanded {
+  height: 220px;
+  width: auto;
+  max-width: 176px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
+}
+/* Book cover placeholder */
+.talk-source-cover {
+  flex: 0 0 auto;
+  width: 98px;
+  min-height: 140px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.35rem 0.28rem;
+  overflow: hidden;
+}
+.talk-source-cover--placeholder {
+  width: 98px;
+  min-height: 140px;
+}
+.talk-source-cover--thumb-placeholder {
+  width: 30px;
+  min-height: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+.talk-source-cover--expanded {
+  width: 154px;
+  min-height: 220px;
+  height: 220px;
+}
+.talk-source-cover--expanded.talk-source-cover--placeholder {
+  min-height: 220px;
+  height: 220px;
+}
+.talk-source-cover-author {
+  font-size: 0.45rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.2;
+  word-break: break-word;
+}
+.talk-source-cover-title {
+  font-size: 0.5rem;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.25;
+  word-break: break-word;
+  font-weight: 600;
+}
+.talk-source-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+/* Book title + chapter */
+.talk-source-info {
+  flex: 1;
+  min-width: 0;
+}
+.talk-source-book-title {
+  display: block;
+  color: color-mix(in srgb, var(--text) 55%, transparent);
+  text-decoration: none;
+  line-height: 1.35;
+}
+a.talk-source-book-title:hover { color: var(--link, #6b8fa3); text-decoration: underline; }
+.talk-source-chapter {
+  margin-top: 0.2rem;
+  color: color-mix(in srgb, var(--text) 38%, transparent);
+  font-size: 0.88em;
+  letter-spacing: 0.03em;
+}
+.talk-source-chapter--lead {
+  margin-top: 0;
+  font-size: 0.95em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: color-mix(in srgb, var(--text) 48%, transparent);
+}
+.talk-source-chapter-row {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+}
+.talk-source-chapter-row .talk-source-chapter--lead {
+  flex: 1;
+  min-width: 0;
+}
+.talk-source-out-link {
+  flex-shrink: 0;
+  font-size: 0.85em;
+  text-decoration: none;
+  color: var(--link, #6b8fa3);
+  line-height: 1;
+}
+.talk-source-out-link:hover {
+  text-decoration: underline;
+}
+.talk-source-book-title--plain {
+  margin-top: 0.35rem;
+  font-size: 0.82em;
+  color: color-mix(in srgb, var(--text) 55%, transparent);
+  line-height: 1.35;
+}
+.talk-source-author {
+  margin-top: 0.2rem;
+  font-size: 0.8em;
+  color: color-mix(in srgb, var(--text) 40%, transparent);
+  letter-spacing: 0.02em;
+}
+.talk-source-book-title--compact {
+  margin-top: 0.35rem;
+  font-size: 0.82em;
+}
+/* Anriss: gesamter Text ist Link zum Buchabschnitt */
+.talk-source-text-wrap {
+  margin-top: 0.35rem;
+}
+/* Kurztext (Anriss) */
+.talk-source-text {
+  margin: 0;
+  color: color-mix(in srgb, var(--text) 42%, transparent);
+  font-style: italic;
+  font-size: 0.78em;
+  border: none;
+  padding: 0;
+  line-height: 1.45;
+}
+a.talk-source-anriss-link {
+  color: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  display: block;
+  border-radius: 3px;
+  transition: color 0.12s ease;
+}
+a.talk-source-anriss-link:hover {
+  color: var(--link, #6b8fa3);
+  text-decoration: underline;
+}
+a.talk-source-anriss-link:focus-visible {
+  outline: 2px solid var(--book-focus, rgba(120, 170, 255, 0.55));
+  outline-offset: 2px;
+}
+/* Trefferqualität */
+.talk-source-quality {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 0.15rem;
+}
+.talk-source-quality-head {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+}
+.talk-source-quality-heading {
+  font-size: 0.65em;
+  font-family: var(--font-header, "Lato", sans-serif);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--text) 40%, transparent);
+}
+.talk-source-quality-track {
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--text) 12%, transparent);
+  overflow: hidden;
+}
+.talk-source-quality-bar {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--accent, #8b7355);
+  opacity: 0.85;
+  max-width: 100%;
+}
+.talk-source-quality-label {
+  flex-shrink: 0;
+  font-size: 0.72em;
+  color: color-mix(in srgb, var(--text) 38%, transparent);
+}
+.talk-source-quality-missing {
+  font-size: 0.72em;
+  color: color-mix(in srgb, var(--text) 32%, transparent);
+}
 
 .book-paragraph { margin: 0 0 1.05rem; }
 .book-paragraph-text { margin: 0; }

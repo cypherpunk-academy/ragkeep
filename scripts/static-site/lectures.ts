@@ -352,6 +352,14 @@ export function collectLecturesByAgent(
   return result;
 }
 
+/** Anzahl der im Verzeichnis aufgelösten, eindeutigen Vorträge (Primär + Sekundär). */
+export function countDistinctLectureViews(sets: AgentLectureSets): number {
+  const ids = new Set<string>();
+  for (const v of sets.primaryLectures) ids.add(v.id);
+  for (const v of sets.secondaryLectures) ids.add(v.id);
+  return ids.size;
+}
+
 export function copyLecturesHtmlToSite(repoRoot: string, outputDir: string): void {
   const source = path.join(repoRoot, "lectures", "html");
   if (!fs.existsSync(source)) return;

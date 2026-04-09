@@ -5,7 +5,11 @@ import type { ChunkInfo } from "./chunkLookup";
 import { getConceptFileLabel, getTypologyFileLabel } from "./concepts";
 import type { EssayData } from "./essays";
 import type { TalkData } from "./talks";
-import type { AgentLectureSets, LectureView } from "./lectures";
+import {
+  type AgentLectureSets,
+  countDistinctLectureViews,
+  type LectureView,
+} from "./lectures";
 import type { QuotesData } from "./quotes";
 import {
   escapeHtml,
@@ -37,9 +41,9 @@ const SECTION_META: Record<
     heading: "Sekundärliteratur",
   },
   talks: {
-    label: "Talks",
+    label: "Gespräche",
     fileName: "talks.html",
-    heading: "Talks",
+    heading: "Gespräche",
   },
   essays: { label: "Essays", fileName: "essays.html", heading: "Verfügbare Essays" },
   quotes: { label: "Zitate", fileName: "quotes.html", heading: "Zitate" },
@@ -330,11 +334,18 @@ function pageShell(title: string, relAssetPrefix: string, content: string): stri
 </html>`;
 }
 
-function renderAgentCard(agent: Agent): string {
+function renderAgentCard(
+  agent: Agent,
+  lectureSets: AgentLectureSets | undefined
+): string {
   const name = escapeHtml(agent.name);
   const ragCollection = escapeHtml(agent.ragCollection);
   const description = escapeHtml(agent.description);
   const totalBooks = agent.primaryBooks.length + agent.secondaryBooks.length;
+  const totalLectures = lectureSets
+    ? countDistinctLectureViews(lectureSets)
+    : 0;
+  const talks = agent.talks.length;
   const essays = agent.essays.length;
   const target = `agent/${encodeURIComponent(agent.id)}/index.html`;
   const imgUrl = agent.coverUrl || agent.avatarUrl;
@@ -354,15 +365,25 @@ function renderAgentCard(agent: Agent): string {
       <p>${description}</p>
       <div class="agent-meta">
         <span>${totalBooks} Bücher</span>
+        <span>${totalLectures} Vorträge</span>
+        <span>${talks} Gespräche</span>
         <span>${essays} Essays</span>
       </div>
     </div>
   </a>`;
 }
 
-export function generateHomePage(outputDir: string, agents: Agent[]): void {
+export function generateHomePage(
+  outputDir: string,
+  agents: Agent[],
+  lecturesByAgent: Map<string, AgentLectureSets>
+): void {
   const generatedAt = new Date().toISOString();
-  const cards = agents.map(renderAgentCard).join("\n");
+  const cards = agents
+    .map((agent) =>
+      renderAgentCard(agent, lecturesByAgent.get(agent.id))
+    )
+    .join("\n");
   const html = pageShell(
     "AI Agent Registry",
     "",
@@ -1026,7 +1047,7 @@ function renderTalkRows(
   talksData: Map<string, TalkData>
 ): string {
   if (talkFiles.length === 0) {
-    return `<p class="empty-state">Keine Talks verfügbar.</p>`;
+    return `<p class="empty-state">Keine Gespräche verfügbar.</p>`;
   }
 
   const items = talkFiles
