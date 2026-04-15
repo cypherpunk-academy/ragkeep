@@ -145,3 +145,5 @@ wird automatisch das MCP-Tool aufgerufen mit:
 - `ragrun` API muss laufen (Standard: `http://localhost:8000/api/v1`)
 - MCP-Server `user-ragprep-essay` muss in Cursor konfiguriert sein
 - Die entsprechenden Prompt-Dateien müssen in `assistants/sigrid-von-gleich/prompts/essays/` vorhanden sein
+
+Hello World!
