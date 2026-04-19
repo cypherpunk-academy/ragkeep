@@ -459,18 +459,6 @@ const layoutCss = `
   gap: 12px;
 }
 
-.essay-card {
-  display: block;
-}
-
-.essay-summary-details .toc-summary-line {
-  padding-left: 0;
-}
-
-.essay-summary-details .toc-arrow {
-  display: none;
-}
-
 .lecture-summary-details .toc-summary-line {
   padding-left: 0;
 }
@@ -1269,6 +1257,25 @@ body.book-body { margin: 0; }
   max-width: 176px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
 }
+/* Generisches Vortrags-Cover (inline SVG) */
+.talk-lecture-cover-svg {
+  display: block;
+  flex-shrink: 0;
+}
+.talk-lecture-cover-svg--thumb {
+  height: 40px;
+  width: auto;
+  max-width: 34px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+.talk-lecture-cover-svg--expanded {
+  height: 220px;
+  width: auto;
+  max-width: 176px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 5px;
+}
 /* Book cover placeholder */
 .talk-source-cover {
   flex: 0 0 auto;
@@ -1380,33 +1387,111 @@ a.talk-source-book-title:hover { color: var(--link, #6b8fa3); text-decoration: u
   color: color-mix(in srgb, var(--text) 40%, transparent);
   letter-spacing: 0.02em;
 }
+.talk-source-type {
+  margin-top: 0.12rem;
+  font-size: 0.72em;
+  font-style: italic;
+  color: color-mix(in srgb, var(--text) 34%, transparent);
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+}
 .talk-source-book-title--compact {
   margin-top: 0.35rem;
   font-size: 0.82em;
 }
-/* Anriss: gesamter Text ist Link zum Buchabschnitt */
-.talk-source-text-wrap {
-  margin-top: 0.35rem;
+/* Literatur (Buch, Sekundärliteratur, …): Typewriter wie Zitat, aber klein & links */
+.talk-source-block--book-family .talk-source-info,
+.talk-source-block--book-family .talk-source-quality {
+  text-align: left;
 }
-/* Kurztext (Anriss) */
+.talk-source-block--book-family .talk-source-chapter--lead,
+.talk-source-block--book-family .talk-source-book-title--plain,
+.talk-source-block--book-family .talk-source-author,
+.talk-source-block--book-family .talk-source-type {
+  font-family: "Special Elite", "Courier Prime", "Courier New", monospace;
+  text-align: left;
+}
+.talk-source-block--book-family .talk-source-chapter--lead {
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.talk-source-block--book-family .talk-source-book-title--plain {
+  font-size: 0.88rem;
+}
+.talk-source-block--book-family .talk-source-author {
+  font-size: 0.82rem;
+}
+.talk-source-block--book-family .talk-source-type {
+  font-size: 0.76rem;
+}
+.talk-source-block--book-family .talk-source-quality-heading,
+.talk-source-block--book-family .talk-source-quality-label,
+.talk-source-block--book-family .talk-source-quality-missing {
+  font-family: "Special Elite", "Courier Prime", "Courier New", monospace;
+}
+/* Anriss: wie quotes.html — .quote-text.typewriter-font (styles.css) */
+.talk-source-text-wrap {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.talk-source-block--book-family .talk-source-text-wrap {
+  text-align: left;
+}
 .talk-source-text {
-  margin: 0;
-  color: color-mix(in srgb, var(--text) 42%, transparent);
-  font-style: italic;
-  font-size: 0.78em;
+  margin: 0.5rem auto 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  font-family: "Special Elite", "Courier Prime", "Courier New", monospace;
+  font-size: 1.425rem;
+  line-height: 1.6;
+  font-style: normal;
+  color: var(--book-fg);
+  background: #f5f4f0;
   border: none;
-  padding: 0;
-  line-height: 1.45;
+  border-radius: 6px;
+  text-align: center;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.talk-source-text--book {
+  margin: 0.5rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  text-align: left;
+  padding: 1rem 1.15rem;
+}
+html[data-theme="dark"] .talk-source-text {
+  background: color-mix(in srgb, var(--book-fg) 10%, var(--book-bg) 90%);
 }
 a.talk-source-anriss-link {
   color: inherit;
-  font-style: inherit;
+  font-family: inherit;
+  font-style: normal;
   font-size: inherit;
   line-height: inherit;
   text-decoration: none;
   display: block;
-  border-radius: 3px;
-  transition: color 0.12s ease;
+  border-radius: 6px;
+  transition: color 0.12s ease, background 0.12s ease;
+  text-align: center;
+}
+.talk-source-text--book a.talk-source-anriss-link {
+  text-align: left;
+}
+.talk-source-text--book .talk-concept-body-para {
+  margin: 0 0 0.65em;
+  text-align: left;
+  white-space: pre-wrap;
+}
+.talk-source-text--book .talk-concept-body-para:last-child {
+  margin-bottom: 0;
+}
+/* Kapitelzusammenfassung (chapter_summary): Fließtext kursiv */
+.talk-source-text--summary,
+.talk-source-text--summary a.talk-source-anriss-link {
+  font-style: italic;
 }
 a.talk-source-anriss-link:hover {
   color: var(--link, #6b8fa3);

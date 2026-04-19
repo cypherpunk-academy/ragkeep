@@ -1,0 +1,10 @@
+# MITTEILUNG vor dem Abendvortrag über «Physiologisch-Therapeutisches auf Grundlage der Geisteswissenschaft» anlässlich des ersten anthroposophischen Hochschulkurses Dornach, 9. Oktober 1920
+<!-- Mathematismus: prediction 10 (0:1:0:0:0:1:2) -->
+<!-- Individualismus: prediction -1 (error) -->
+
+1| Rudolf Steiner: Meine sehr verehrten Anwesenden! Es ist der Wunsch ausgesprochen worden, dass von mir noch einmal eine Art Vortrag gehalten werden solle über die Dreigliederung des sozialen Organismus. Und da wir ja an Veranstaltungen eine reichliche Anzahl haben, so wird es sich kaum anders machen lassen, als dass ich morgen abends versuche, diesen gewünschten Vortrag über die Dreigliederung des sozialen Organismus zu halten. Aber da dieser Wunsch, der vielfach geäußert worden ist, hervorgegangen ist aus der Unbefriedigtheit, die geblieben ist aus den verschiedenen Diskussionen heraus, die gepflogen worden sind bisher über diese Dreigliederung, so möchte ich Sie bitten, Ihre Wünsche, Ihre Fragen diesbezüglich zu formulieren, damit gerade dasjenige berücksichtigt und besprochen werden kann, was als unklar empfunden wird. So werde ich den Vortrag morgen Abend so einrichten können, dass gerade dasjenige vorkommt, was von verschiedenen Seiten gewünscht wird zu wissen. Deshalb werden diejenigen verehrten Anwesenden gebeten, welche irgendwie etwas nach der einen oder anderen Richtung über die Dreigliederung des sozialen Organismus, namentlich über das Wirtschaftsleben in demselben, zu hören wünschen, ihre Fragen oder Wünsche auf einen Zettel zu schreiben und morgen früh zwischen 9 und ½ 10 Uhr am Eingang zum Westportal des Goetheanum abzugeben. Es wird jemand dort sein, der diese Fragen entgegennimmt. Also, ich bitte dann diejenigen, die etwas zu fragen haben und die etwas wünschen, das in diesen ihren Fragen anzubringen.
+
+
+---
+ragkeep: lectures/rudolf-steiner-ga-vortrag-verzeichnis.yaml#id=19201009d
+---

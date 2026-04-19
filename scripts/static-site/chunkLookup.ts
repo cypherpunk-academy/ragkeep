@@ -4,10 +4,18 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { fileExists, readScalarFromManifest } from "./utils";
+import {
+  fileExists,
+  parseAuthorAndTitle,
+  readScalarFromManifest,
+  stripQuoteErklaerungSection,
+} from "./utils";
 import type { Book } from "./types";
 
 const PARAGRAPH_MARKER_REGEX = /^(\d+)\|/;
+
+/** Ort/Datum für generisches Vortrags-Cover (inline SVG, kein assets/covers/*.svg). */
+export type LectureCoverMeta = { ort: string; datum: string };
 
 export interface ChunkInfo {
   author: string;
@@ -22,6 +30,68 @@ export interface ChunkInfo {
   bookId: string | null;
   paragraphTag: string | null;
   chapterFileName: string | null;
+  /** Gesetzt bei source_id lecture:… — statt Buchcover-SVG generisches Vortragsbild */
+  lectureCover: LectureCoverMeta | null;
+}
+
+const DE_MONTHS = [
+  "Januar",
+  "Februar",
+  "März",
+  "April",
+  "Mai",
+  "Juni",
+  "Juli",
+  "August",
+  "September",
+  "Oktober",
+  "November",
+  "Dezember",
+];
+
+/** Ort und Datum für Vortrags-Cover aus lecture:YYYYMMDD… und segment_title. */
+export function parseLectureCoverMeta(sourceId: string, segmentTitle: string): LectureCoverMeta {
+  let datum = "";
+  const rest = sourceId.startsWith("lecture:") ? sourceId.slice("lecture:".length) : "";
+  const dm = rest.match(/^(\d{8})/);
+  if (dm) {
+    const y = dm[1]!.slice(0, 4);
+    const mo = dm[1]!.slice(4, 6);
+    const d = dm[1]!.slice(6, 8);
+    const mi = parseInt(mo, 10) - 1;
+    if (mi >= 0 && mi < 12 && d) {
+      datum = `${parseInt(d, 10)}. ${DE_MONTHS[mi]} ${y}`;
+    }
+  }
+
+  let ort = "";
+  const seg = segmentTitle.trim();
+  const triple = seg.match(/,\s*([^,]+),\s*(\d{1,2}\.\s*.+?\s+\d{4})\s*$/);
+  if (triple) {
+    ort = triple[1]!.trim();
+    datum = triple[2]!.trim();
+  } else {
+    const parts = seg.split(",").map((s) => s.trim()).filter(Boolean);
+    if (parts.length >= 2) {
+      const last = parts[parts.length - 1] ?? "";
+      const prev = parts[parts.length - 2] ?? "";
+      if (/^\d{1,2}\.\s*.+?\s+\d{4}$/.test(last)) {
+        datum = last;
+        let o = prev;
+        if (o.length > 18) {
+          const w = o.match(/([A-Za-zäöüÄÖÜß][A-Za-zäöüÄÖÜß-]*)\s*$/);
+          if (w?.[1]) o = w[1];
+        }
+        ort = o;
+      }
+    }
+    if (!datum) {
+      const endDate = seg.match(/(\d{1,2}\.\s*.+?\s+\d{4})\s*$/);
+      if (endDate?.[1]) datum = endDate[1].trim();
+    }
+  }
+
+  return { ort, datum };
 }
 
 /**
@@ -44,6 +114,40 @@ function buildBookIdToDirMap(repoRoot: string): Map<string, string> {
       const bookId = readScalarFromManifest(absBookDir, "book-id");
       if (bookId) map.set(bookId, dirName);
       map.set(dirName, dirName);
+    }
+  }
+  return map;
+}
+
+/** Normalisierter Manifest-Titel → bookDir (für lecture:-Quellen mit source_title). */
+function normalizeBookTitleKey(title: string): string {
+  return String(title || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, " ");
+}
+
+function buildCanonicalTitleToBookDirMap(repoRoot: string): Map<string, string> {
+  const map = new Map<string, string>();
+  const bases = [
+    path.join(repoRoot, "books"),
+    path.join(repoRoot, "ragkeep-deutsche-klassik-books-de", "books"),
+  ];
+  for (const base of bases) {
+    if (!fs.existsSync(base)) continue;
+    const entries = fs.readdirSync(base, { withFileTypes: true });
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      const dirName = entry.name;
+      const absBookDir = path.join(base, dirName);
+      let title = readScalarFromManifest(absBookDir, "title").trim();
+      if (!title) {
+        title = parseAuthorAndTitle(dirName).title;
+      }
+      const key = normalizeBookTitleKey(title);
+      if (key && !map.has(key)) {
+        map.set(key, dirName);
+      }
     }
   }
   return map;
@@ -196,11 +300,37 @@ function findBookChunksJsonlFiles(repoRoot: string): string[] {
     const entries = fs.readdirSync(base, { withFileTypes: true });
     for (const entry of entries) {
       if (!entry.isDirectory()) continue;
-      const jp = path.join(base, entry.name, "results", "rag-chunks", "book-chunks.jsonl");
+      const ragDir = path.join(base, entry.name, "results", "rag-chunks");
+      const jp = path.join(ragDir, "book-chunks.jsonl");
       if (fs.existsSync(jp)) out.push(jp);
+      const jq = path.join(ragDir, "quotes-chunks.jsonl");
+      if (fs.existsSync(jq)) out.push(jq);
     }
   }
   return out;
+}
+
+/** Vortrags-Chunks unter lectures/chunks/*.jsonl (source_id z. B. lecture:19190616). */
+function findLectureChunksJsonlFiles(repoRoot: string): string[] {
+  const dir = path.join(repoRoot, "lectures", "chunks");
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir, { withFileTypes: true })
+    .filter((e) => e.isFile() && e.name.endsWith(".jsonl"))
+    .map((e) => path.join(dir, e.name));
+}
+
+/**
+ * RAG-Quote-Chunks enthalten nach dem Zitat `\n\nErklärung:\n\n…`; für UI nur den Zitatteil.
+ */
+function chunkTextForDisplay(meta: Record<string, unknown>, sourceId: string, rawText: string | null): string {
+  const t = String(rawText ?? "").trim();
+  const ct = String(meta.chunk_type ?? "").trim().toLowerCase();
+  const st = String(meta.source_type ?? "").trim().toLowerCase();
+  if (ct === "quote" || st === "quote" || /:quotes$/i.test(sourceId)) {
+    return stripQuoteErklaerungSection(t);
+  }
+  return t;
 }
 
 function assembleChunkInfosFromMatchRows(
@@ -208,14 +338,30 @@ function assembleChunkInfosFromMatchRows(
   bySegment: Map<string, RawChunkInfo[]>,
   repoRoot: string,
   booksById: Map<string, Book>,
-  bookIdToDir: Map<string, string>
+  bookIdToDir: Map<string, string>,
+  titleToBookDir: Map<string, string>,
 ): Map<string, ChunkInfo> {
   const result = new Map<string, ChunkInfo>();
   for (const r of rows) {
     const meta = (r.metadata ?? {}) as Record<string, unknown>;
-    const bookDir =
+    let bookDir =
       bookIdToDir.get(r.source_id) ??
       (r.source_id.includes("#") ? r.source_id : null);
+    if (!bookDir && r.source_id.startsWith("lecture:")) {
+      const st = String(meta.source_title ?? "").trim();
+      if (st) {
+        const fromTitle = titleToBookDir.get(normalizeBookTitleKey(st));
+        if (fromTitle) bookDir = fromTitle;
+      }
+    }
+    if (!bookDir) {
+      const quotesMatch = r.source_id.match(
+        /^([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}):quotes$/i
+      );
+      if (quotesMatch?.[1]) {
+        bookDir = bookIdToDir.get(quotesMatch[1]) ?? null;
+      }
+    }
     if (!bookDir) continue;
 
     const book = booksById.get(bookDir);
@@ -261,6 +407,10 @@ function assembleChunkInfosFromMatchRows(
       ? readScalarFromManifest(absBookDirForManifest, "book-id").trim()
       : "";
 
+    const lectureCover = r.source_id.startsWith("lecture:")
+      ? parseLectureCoverMeta(r.source_id, String(meta.segment_title ?? ""))
+      : null;
+
     result.set(r.chunk_id, {
       author: String(meta.author ?? "").trim(),
       source_title: String(
@@ -269,12 +419,13 @@ function assembleChunkInfosFromMatchRows(
       source_type: String(meta.source_type ?? meta.chunk_type ?? "").trim(),
       segment_id: segmentId,
       segment_title: String(meta.segment_title ?? "").trim(),
-      text: String(r.text ?? "").trim(),
+      text: chunkTextForDisplay(meta, r.source_id, r.text),
       source_index: raw.source_index,
       bookDir,
       bookId: bookIdFromManifest || null,
       paragraphTag,
       chapterFileName,
+      lectureCover,
     });
   }
   return result;
@@ -287,10 +438,11 @@ function buildChunkIndexFromBookJsonl(
   wantedIds: Set<string>,
   repoRoot: string,
   booksById: Map<string, Book>,
-  bookIdToDir: Map<string, string>
+  bookIdToDir: Map<string, string>,
+  titleToBookDir: Map<string, string>,
 ): Map<string, ChunkInfo> {
   if (wantedIds.size === 0) return new Map();
-  const jsonlFiles = findBookChunksJsonlFiles(repoRoot);
+  const jsonlFiles = [...findBookChunksJsonlFiles(repoRoot), ...findLectureChunksJsonlFiles(repoRoot)];
   const segmentKeys = new Set<string>();
   const primaryById = new Map<string, MatchRow>();
 
@@ -372,12 +524,19 @@ function buildChunkIndexFromBookJsonl(
     }
   }
 
-  return assembleChunkInfosFromMatchRows(primaryRows, bySegment, repoRoot, booksById, bookIdToDir);
+  return assembleChunkInfosFromMatchRows(
+    primaryRows,
+    bySegment,
+    repoRoot,
+    booksById,
+    bookIdToDir,
+    titleToBookDir,
+  );
 }
 
 /**
  * Lädt Chunks aus Postgres und baut den Index.
- * Ohne DSN oder bei Verbindungsfehler: Fallback auf lokale book-chunks.jsonl.
+ * Erfordert eine gesetzte DSN (RAGRUN_POSTGRES_DSN, DATABASE_URL oder POSTGRES_URL) und eine erreichbare DB.
  */
 export async function buildChunkIndex(
   chunkIdsByCollection: Map<string, Set<string>>,
@@ -402,17 +561,16 @@ export async function buildChunkIndex(
   for (const c of allChunkIds) allWantedIds.add(c.chunk_id);
 
   const bookIdToDir = buildBookIdToDirMap(repoRoot);
+  const titleToBookDir = buildCanonicalTitleToBookDirMap(repoRoot);
 
   const dbUrl =
     process.env.RAGRUN_POSTGRES_DSN ??
     process.env.DATABASE_URL ??
     process.env.POSTGRES_URL;
   if (!dbUrl || String(dbUrl).trim() === "") {
-    // eslint-disable-next-line no-console
-    console.warn(
-      "Hinweis: RAGRUN_POSTGRES_DSN nicht gesetzt – Chunk-Metadaten werden aus lokalen book-chunks.jsonl gelesen (falls vorhanden)."
+    throw new Error(
+      "Chunk index requires Postgres: set RAGRUN_POSTGRES_DSN, DATABASE_URL, or POSTGRES_URL."
     );
-    return buildChunkIndexFromBookJsonl(allWantedIds, repoRoot, booksById, bookIdToDir);
   }
 
   const { Client } = await import("pg");
@@ -421,13 +579,14 @@ export async function buildChunkIndex(
   try {
     await client.connect();
   } catch (err) {
-    // eslint-disable-next-line no-console
-    console.warn(
-      "Hinweis: Keine DB-Verbindung – Fallback auf book-chunks.jsonl:",
-      err instanceof Error ? err.message : String(err)
+    try {
+      await client.end();
+    } catch {
+      /* ignore */
+    }
+    throw new Error(
+      `Could not connect to Postgres for chunk index: ${err instanceof Error ? err.message : String(err)}`
     );
-    await client.end();
-    return buildChunkIndexFromBookJsonl(allWantedIds, repoRoot, booksById, bookIdToDir);
   }
 
   try {
@@ -515,7 +674,14 @@ export async function buildChunkIndex(
       text: r.text,
     }));
 
-    return assembleChunkInfosFromMatchRows(matchRows, bySegment, repoRoot, booksById, bookIdToDir);
+    return assembleChunkInfosFromMatchRows(
+      matchRows,
+      bySegment,
+      repoRoot,
+      booksById,
+      bookIdToDir,
+      titleToBookDir,
+    );
   } finally {
     await client.end();
   }

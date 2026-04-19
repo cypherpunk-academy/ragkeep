@@ -2,7 +2,7 @@
 
 Dieses Dokument beschreibt die **Essay-Pipeline** über **ragkeep**, **ragprep** und **ragrun**, damit sie nach einem Abbau oder in einer neuen Umgebung **wieder zusammengesetzt** werden kann. Es sind **keine vollständigen Quellen**, sondern **Orientierung, Pfade und typische Code-/CLI-Muster** (Fragmente).
 
-Verwandt: `plans/ESSAYS_AUS_RAG_STACK_ENTFERNEN.md` (was abgebaut wird) — hier der **Gegenentwurf: alles wieder verbinden**.
+Verwandt: `plans/ESSAYS_AUS_RAG_STACK_ENTFERNEN.md` — dort ist der Abbau inkl. **Essay-MCP** und **`essay:*`-CLI** vorgesehen; dieses Dokument ist der **Gegenentwurf** (Wiederaufbau aus Archiv und Git-Historie).
 
 ---
 
@@ -11,7 +11,7 @@ Verwandt: `plans/ESSAYS_AUS_RAG_STACK_ENTFERNEN.md` (was abgebaut wird) — hier
 | Repo | Funktion für Essays |
 |------|---------------------|
 | **ragkeep** | Quelle der Wahrheit für `.essay`-Dateien, Essay-Prompts unter `assistants/…/prompts/essays/`, `essays:` im `assistant-manifest.yaml`, statische Site (Tabs, Detail-HTML), optional Soul-Moods (nur inhaltlich/Stil, nicht identisch mit Chunk-Pipeline). |
-| **ragprep** | CLI und **MCP** zum Anlegen/Bearbeiten von `.essay`, Erzeugung von `essays.jsonl`, **Upload** zur Vektordatenbank via ragrun; verwendet feste UUIDv5-Namespace-IDs für Essay-Chunks. |
+| **ragprep** | CLI und (historisch) **stdio-MCP** zum Anlegen/Bearbeiten von `.essay`, Erzeugung von `essays.jsonl`, **Upload** zur Vektordatenbank via ragrun; feste UUIDv5-Namespace-IDs für Essay-Chunks. Nach vollständigem Abbau müssten MCP/CLI wieder eingeführt werden. |
 | **ragrun** | HTTP-APIs (**Graphs**) für Essay-Erstellung, -Teilgenerierung, Feintuning, Evaluation; liest Prompts und `.essay`-Pfade typischerweise **aus dem ragkeep-Arbeitsbaum** (konfigurierter `assistants`‑Pfad). |
 
 ---

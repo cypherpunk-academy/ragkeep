@@ -23,7 +23,6 @@ interface AssistantManifest {
   'primary-books'?: string[];
   'secondary-books'?: string[];
   concepts?: string[];
-  essays?: string[];
   talks?: string[];
   'cover-image'?: string;
   'avatar-image'?: string;
@@ -38,7 +37,6 @@ interface Agent {
   primaryBooks: string[];
   secondaryBooks: string[];
   concepts: string[];
-  essays: string[];
   talks: string[];
   avatarUrl?: string;
   coverUrl?: string;
@@ -142,7 +140,6 @@ function loadAssistants(): Agent[] {
       primaryBooks,
       secondaryBooks,
       concepts: manifest.concepts ?? [],
-      essays: manifest.essays ?? [],
       talks: Array.isArray(manifest.talks)
         ? manifest.talks.map((t) => String(t))
         : [],

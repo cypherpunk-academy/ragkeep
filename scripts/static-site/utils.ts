@@ -30,6 +30,18 @@ export function escapeHtml(value: string): string {
     .replace(/'/g, "&#39;");
 }
 
+/** Marker wie in quotes-chunks: Zitat, dann Abschnitt „Erklärung:“. */
+const QUOTE_ERKLAERUNG_MARKER = "\n\nErklärung:";
+
+/** Nur der Zitatteil vor `\n\nErklärung:\n\n…` (RAG-Quote-Chunks). */
+export function stripQuoteErklaerungSection(fullText: string): string {
+  const text = String(fullText ?? "").trim();
+  if (!text) return "";
+  const idx = text.indexOf(QUOTE_ERKLAERUNG_MARKER);
+  if (idx >= 0) return text.slice(0, idx).trim();
+  return text;
+}
+
 export function parseAuthorAndTitle(dirName: string): { author: string; title: string } {
   const parts = dirName.split("#");
   const authorRaw = parts[0] ?? "";

@@ -14,7 +14,6 @@ interface AssistantManifest {
   "secondary-books"?: string[];
   "secondary-lectures"?: string[];
   concepts?: string[];
-  essays?: string[];
   quotes?: string[];
   taxonomies?: string[];
   typologies?: string[];
@@ -41,7 +40,6 @@ function normalizeAgent(input: Partial<Agent> & { id: string }): Agent {
     secondaryBooks: (input.secondaryBooks ?? []).map(normalizeBookId),
     secondaryLectures: input.secondaryLectures ?? [],
     concepts: input.concepts ?? [],
-    essays: input.essays ?? [],
     quotes: input.quotes ?? [],
     taxonomies: input.taxonomies ?? [],
     typologies: input.typologies ?? [],
@@ -73,7 +71,6 @@ function mergeManifestFields(agent: Agent, manifestPath: string): Agent {
     secondaryLectures:
       toStringArray(manifest["secondary-lectures"]) ?? agent.secondaryLectures,
     concepts: manifest.concepts ?? agent.concepts,
-    essays: manifest.essays ?? agent.essays,
     quotes: toStringArray(manifest.quotes) ?? agent.quotes,
     taxonomies: toStringArray(manifest.taxonomies) ?? agent.taxonomies,
     typologies:
@@ -114,7 +111,6 @@ function readAssistantsFromJson(repoRoot: string): Agent[] {
           secondaryBooks: toStringArray(obj.secondaryBooks),
           secondaryLectures: toStringArray(obj.secondaryLectures),
           concepts: toStringArray(obj.concepts),
-          essays: toStringArray(obj.essays),
           quotes: toStringArray(obj.quotes),
           taxonomies: toStringArray(obj.taxonomies),
           typologies: toStringArray(obj.typologies),
@@ -174,7 +170,7 @@ export function loadAssistants(repoRoot: string): Agent[] {
 }
 
 export function copyAssistantFiles(repoRoot: string, outputDir: string, agents: Agent[]): void {
-  const foldersToCopy = ["assets", "essays", "concepts", "typologies", "taxonomies", "talks"];
+  const foldersToCopy = ["assets", "concepts", "typologies", "taxonomies", "talks"];
   for (const agent of agents) {
     for (const folderName of foldersToCopy) {
       const source = path.join(repoRoot, "assistants", agent.id, folderName);

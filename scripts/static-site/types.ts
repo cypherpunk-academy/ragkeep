@@ -9,7 +9,6 @@ export interface Agent {
   secondaryBooks: string[];
   secondaryLectures: string[];
   concepts: string[];
-  essays: string[];
   quotes: string[];
   taxonomies: string[];
   /** JSONL-Dateinamen unter assistants/<id>/typologies/chunks/ (wie bei concepts) */

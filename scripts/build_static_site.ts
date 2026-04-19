@@ -14,8 +14,12 @@ import {
   collectTypologies,
   type ConceptEntry,
 } from "./static-site/concepts";
-import { collectEssays, generateEssayPages, type EssayData } from "./static-site/essays";
-import { collectTalks, generateTalkPages, type TalkData } from "./static-site/talks";
+import {
+  collectTalks,
+  extractTalkChunkIds,
+  generateTalkPages,
+  type TalkData,
+} from "./static-site/talks";
 import { writeSiteAssets } from "./static-site/assets";
 import { generateAgentPages, generateHomePage } from "./static-site/pages";
 import fs from "node:fs";
@@ -50,6 +54,15 @@ function writeMetaFiles(outputDir: string): void {
   writeTextFile(path.join(outputDir, "robots.txt"), "User-agent: *\nAllow: /\n");
 }
 
+/** Buchcover-SVGs (assets/covers/*.svg) → site/assets/covers/ für Talk- und Reader-Referenzen. */
+function copyBookCoverSvgs(repoRoot: string, outputDir: string): void {
+  const src = path.join(repoRoot, "assets", "covers");
+  if (!fs.existsSync(src)) return;
+  const dest = path.join(outputDir, "assets", "covers");
+  ensureDir(dest);
+  fs.cpSync(src, dest, { recursive: true });
+}
+
 function copyFavicon(
   repoRoot: string,
   outputDir: string,
@@ -67,6 +80,7 @@ function copyFavicon(
 async function main(): Promise<void> {
   cleanSiteOutput(OUTPUT_DIR);
   writeSiteAssets(OUTPUT_DIR);
+  copyBookCoverSvgs(REPO_ROOT, OUTPUT_DIR);
   writeMetaFiles(OUTPUT_DIR);
 
   const assistants = loadAssistants(REPO_ROOT);
@@ -84,13 +98,6 @@ async function main(): Promise<void> {
   copyFavicon(REPO_ROOT, OUTPUT_DIR, assistants);
   copyLecturesHtmlToSite(REPO_ROOT, OUTPUT_DIR);
 
-  const essaysByAgent = new Map<string, Map<string, EssayData>>();
-  for (const agent of assistants) {
-    if (agent.essays.length > 0) {
-      essaysByAgent.set(agent.id, collectEssays(REPO_ROOT, agent));
-    }
-  }
-
   const talksByAgent = new Map<string, Map<string, TalkData>>();
   for (const agent of assistants) {
     if (agent.talks.length > 0) {
@@ -101,6 +108,7 @@ async function main(): Promise<void> {
   const conceptsByAgent = new Map<string, Map<string, ConceptEntry[]>>();
   const typologiesByAgent = new Map<string, Map<string, ConceptEntry[]>>();
   const chunkIdsByCollection = new Map<string, Set<string>>();
+
   for (const agent of assistants) {
     if (agent.concepts.length > 0) {
       const concepts = collectConcepts(REPO_ROOT, agent);
@@ -140,6 +148,21 @@ async function main(): Promise<void> {
     }
   }
 
+  for (const agent of assistants) {
+    const talks = talksByAgent.get(agent.id);
+    if (!talks || talks.size === 0) continue;
+    let collSet = chunkIdsByCollection.get(agent.ragCollection);
+    if (!collSet) {
+      collSet = new Set<string>();
+      chunkIdsByCollection.set(agent.ragCollection, collSet);
+    }
+    for (const talk of talks.values()) {
+      for (const cid of extractTalkChunkIds(talk.body)) {
+        collSet.add(cid);
+      }
+    }
+  }
+
   const chunkIndex = await buildChunkIndex(
     chunkIdsByCollection,
     REPO_ROOT,
@@ -155,12 +178,11 @@ async function main(): Promise<void> {
     );
   }
 
-  generateHomePage(OUTPUT_DIR, assistants);
+  generateHomePage(OUTPUT_DIR, assistants, lecturesByAgent);
   generateAgentPages(
     OUTPUT_DIR,
     assistants,
     booksById,
-    essaysByAgent,
     talksByAgent,
     conceptsByAgent,
     chunkIndex,
@@ -168,8 +190,7 @@ async function main(): Promise<void> {
     lecturesByAgent,
     quotesByAgent
   );
-  generateEssayPages(OUTPUT_DIR, assistants, essaysByAgent);
-  generateTalkPages(OUTPUT_DIR, assistants, talksByAgent);
+  generateTalkPages(OUTPUT_DIR, assistants, talksByAgent, chunkIndex);
 
   // eslint-disable-next-line no-console
   console.log(

@@ -3,6 +3,9 @@ import path from "node:path";
 import type { Agent, Book } from "./types";
 import type { AgentLectureSets, LectureView } from "./lectures";
 import { findChapterFile } from "./chunkLookup";
+import { stripQuoteErklaerungSection } from "./utils";
+
+export type QuoteKind = "author" | "foreign" | "assistant";
 
 export interface QuoteEntry {
   text: string;
@@ -11,11 +14,12 @@ export interface QuoteEntry {
   segmentId: string;
   segmentTitle: string;
   paragraphUrl: string | null;
+  quoteKind: QuoteKind;
+  /** Zitierter Autor – nur bei Fremdzitaten befüllt. */
+  author?: string;
 }
 
 const PARAGRAPH_NUMBER_REGEX = /^(\d+)\|/;
-
-const ERKLAERUNG_MARKER = "\n\nErklärung:";
 
 /**
  * Formatiert segment_id (kebab-case) zu lesbarem Titel (Title Case).
@@ -38,19 +42,6 @@ function parseParagraphNumber(raw: string | undefined): string | null {
   if (!s) return null;
   const m = s.match(PARAGRAPH_NUMBER_REGEX);
   return m ? m[1] ?? null : null;
-}
-
-/**
- * Extrahiert nur den Zitat-Teil (vor "Erklärung:").
- */
-function extractQuoteText(fullText: string): string {
-  const text = String(fullText ?? "").trim();
-  if (!text) return "";
-  const idx = text.indexOf(ERKLAERUNG_MARKER);
-  if (idx >= 0) {
-    return text.slice(0, idx).trim();
-  }
-  return text;
 }
 
 function loadBookQuotes(
@@ -77,14 +68,21 @@ function loadBookQuotes(
     try {
       const parsed = JSON.parse(line) as {
         text?: string;
-        metadata?: { segment_id?: string; paragraph_number?: string };
+        metadata?: {
+          segment_id?: string;
+          paragraph_number?: string;
+          quote_kind?: string;
+          author?: string;
+        };
       };
-      const text = extractQuoteText(String(parsed.text ?? ""));
+      const text = stripQuoteErklaerungSection(String(parsed.text ?? ""));
       if (!text) continue;
 
       const segmentId = String(parsed.metadata?.segment_id ?? "").trim();
       const segmentTitle = formatSegmentTitle(segmentId);
       const paragraphNum = parseParagraphNumber(parsed.metadata?.paragraph_number);
+      const quoteKind = (parsed.metadata?.quote_kind as QuoteKind | undefined) ?? "author";
+      const author = parsed.metadata?.author?.trim() || undefined;
 
       let paragraphUrl: string | null = null;
       if (paragraphNum && segmentId) {
@@ -101,6 +99,8 @@ function loadBookQuotes(
         segmentId: segmentId || "unknown",
         segmentTitle,
         paragraphUrl,
+        quoteKind,
+        author,
       });
     } catch {
       // skip malformed lines
@@ -141,14 +141,21 @@ function loadLectureQuotes(
     try {
       const parsed = JSON.parse(line) as {
         text?: string;
-        metadata?: { segment_id?: string; paragraph_number?: string };
+        metadata?: {
+          segment_id?: string;
+          paragraph_number?: string;
+          quote_kind?: string;
+          author?: string;
+        };
       };
-      const text = extractQuoteText(String(parsed.text ?? ""));
+      const text = stripQuoteErklaerungSection(String(parsed.text ?? ""));
       if (!text) continue;
 
       const segmentId = String(parsed.metadata?.segment_id ?? "").trim();
       const segmentTitle = formatSegmentTitle(segmentId);
       const paragraphNum = parseParagraphNumber(parsed.metadata?.paragraph_number);
+      const quoteKind = (parsed.metadata?.quote_kind as QuoteKind | undefined) ?? "author";
+      const author = parsed.metadata?.author?.trim() || undefined;
 
       let paragraphUrl: string | null = null;
       if (paragraphNum && lecture.htmlPath) {
@@ -162,6 +169,68 @@ function loadLectureQuotes(
         segmentId: segmentId || "unknown",
         segmentTitle,
         paragraphUrl,
+        quoteKind,
+        author,
+      });
+    } catch {
+      // skip malformed lines
+    }
+  }
+  return entries;
+}
+
+function loadAssistantQuotes(
+  agent: Agent,
+  repoRoot: string,
+  sourcesMap: Map<string, string>
+): QuoteEntry[] {
+  const jsonlPath = path.join(
+    repoRoot,
+    "assistants",
+    agent.id,
+    "quotes",
+    "quotes.jsonl"
+  );
+  if (!fs.existsSync(jsonlPath)) return [];
+
+  const lines = fs
+    .readFileSync(jsonlPath, "utf8")
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+
+  const fallbackSourceId = `assistant:${agent.id}:quotes`;
+
+  const entries: QuoteEntry[] = [];
+  for (const line of lines) {
+    try {
+      const parsed = JSON.parse(line) as {
+        text?: string;
+        metadata?: {
+          quote_kind?: string;
+          source_id?: string;
+          source_title?: string;
+        };
+      };
+      const text = stripQuoteErklaerungSection(String(parsed.text ?? ""));
+      if (!text) continue;
+
+      const quoteKind = (parsed.metadata?.quote_kind as QuoteKind | undefined) ?? "assistant";
+      const sourceId = String(parsed.metadata?.source_id ?? fallbackSourceId).trim();
+      const sourceTitle = String(parsed.metadata?.source_title ?? agent.name).trim();
+
+      if (!sourcesMap.has(sourceId)) {
+        sourcesMap.set(sourceId, sourceTitle);
+      }
+
+      entries.push({
+        text,
+        sourceId,
+        sourceTitle,
+        segmentId: "assistant-quotes",
+        segmentTitle: agent.name,
+        paragraphUrl: null,
+        quoteKind,
       });
     } catch {
       // skip malformed lines
@@ -176,7 +245,7 @@ export interface QuotesData {
 }
 
 /**
- * Sammelt alle Zitate für einen Agenten aus Büchern und Vorträgen.
+ * Sammelt alle Zitate für einen Agenten aus Büchern, Vorträgen und Assistenten-Quotes.
  */
 export function collectQuotesForAgent(
   agent: Agent,
@@ -227,6 +296,10 @@ export function collectQuotesForAgent(
       quotes.push(...lectureQuotes);
     }
   }
+
+  // Assistant-eigene Zitate (sourcesMap wird inline befüllt)
+  const assistantQuotes = loadAssistantQuotes(agent, repoRoot, sourcesMap);
+  quotes.push(...assistantQuotes);
 
   const sources = Array.from(sourcesMap.entries()).map(([id, title]) => ({
     id,

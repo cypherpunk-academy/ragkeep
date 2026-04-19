@@ -3,7 +3,6 @@ import type { Agent, Book } from "./types";
 import type { ConceptEntry } from "./concepts";
 import type { ChunkInfo } from "./chunkLookup";
 import { getConceptFileLabel, getTypologyFileLabel } from "./concepts";
-import type { EssayData } from "./essays";
 import type { TalkData } from "./talks";
 import {
   type AgentLectureSets,
@@ -24,7 +23,6 @@ type AgentSection =
   | "books"
   | "secondary-books"
   | "talks"
-  | "essays"
   | "concepts"
   | "quotes"
   | "taxonomies";
@@ -45,7 +43,6 @@ const SECTION_META: Record<
     fileName: "talks.html",
     heading: "Gespräche",
   },
-  essays: { label: "Essays", fileName: "essays.html", heading: "Verfügbare Essays" },
   quotes: { label: "Zitate", fileName: "quotes.html", heading: "Zitate" },
   concepts: {
     label: "Begriffe",
@@ -346,7 +343,6 @@ function renderAgentCard(
     ? countDistinctLectureViews(lectureSets)
     : 0;
   const talks = agent.talks.length;
-  const essays = agent.essays.length;
   const target = `agent/${encodeURIComponent(agent.id)}/index.html`;
   const imgUrl = agent.coverUrl || agent.avatarUrl;
   const imgHtml = imgUrl
@@ -367,7 +363,6 @@ function renderAgentCard(
         <span>${totalBooks} Bücher</span>
         <span>${totalLectures} Vorträge</span>
         <span>${talks} Gespräche</span>
-        <span>${essays} Essays</span>
       </div>
     </div>
   </a>`;
@@ -734,42 +729,6 @@ function renderFileRows(
     .join("")}</div>`;
 }
 
-function renderEssayRows(
-  essayFiles: string[],
-  essaysData: Map<string, EssayData>
-): string {
-  if (essayFiles.length === 0) return `<p class="empty-state">Keine Essays verfügbar.</p>`;
-
-  const items = essayFiles
-    .filter((f) => f.endsWith(".essay"))
-    .map((file) => {
-      const slug = file.replace(/\.essay$/, "");
-      const essay = essaysData.get(slug);
-      const title = escapeHtml(essay?.topic ?? slug);
-      const essayUrl = `essays/${encodeURIComponent(slug)}.html`;
-      const summary = essay?.summary;
-
-      if (summary) {
-        const summaryHtml = renderSummaryHtml(summary);
-        return `<div class="essay-card book-link">
-  <a href="${essayUrl}" style="text-decoration: none; color: inherit;"><strong>${title}</strong></a>
-  <details class="toc-details essay-summary-details">
-    <summary class="toc-summary-line"><span class="toc-title-text">Zusammenfassung</span></summary>
-    <div class="toc-panel">
-      <div class="toc-excerpt">${summaryHtml}</div>
-    </div>
-  </details>
-</div>`;
-      }
-
-      return `<a class="book-link" href="${essayUrl}">
-  <strong>${title}</strong>
-</a>`;
-    });
-
-  return `<div class="book-list">${items.join("")}</div>`;
-}
-
 function renderQuotesSection(quotesData: QuotesData | undefined): string {
   if (!quotesData || quotesData.quotes.length === 0) {
     return `<p class="empty-state">Keine Zitate verfügbar.</p>`;
@@ -777,24 +736,27 @@ function renderQuotesSection(quotesData: QuotesData | undefined): string {
 
   const { quotes, sources } = quotesData;
 
-  const dropdownOptions =
-    '<option value="">Alle</option>' +
-    sources
-      .map(
-        (s) =>
-          `<option value="${escapeHtml(s.id)}">${escapeHtml(s.title)}</option>`
-      )
-      .join("");
-
+  // Group quotes: sourceId → segmentId → quote list
+  // Also track kind per source (first quote wins)
   const bySource = new Map<
     string,
-    Map<string, { text: string; segmentTitle: string; paragraphUrl: string | null }[]>
+    Map<string, { text: string; segmentTitle: string; paragraphUrl: string | null; quoteKind: string; author?: string }[]>
   >();
+  const kindBySource = new Map<string, string>();
+  const authorsByKind: Record<string, Set<string>> = {};
+
   for (const q of quotes) {
     let sourceMap = bySource.get(q.sourceId);
     if (!sourceMap) {
       sourceMap = new Map();
       bySource.set(q.sourceId, sourceMap);
+    }
+    if (!kindBySource.has(q.sourceId)) {
+      kindBySource.set(q.sourceId, q.quoteKind);
+    }
+    if (q.author) {
+      if (!authorsByKind[q.quoteKind]) authorsByKind[q.quoteKind] = new Set();
+      authorsByKind[q.quoteKind]!.add(q.author);
     }
     let segmentList = sourceMap.get(q.segmentId);
     if (!segmentList) {
@@ -805,13 +767,43 @@ function renderQuotesSection(quotesData: QuotesData | undefined): string {
       text: q.text,
       segmentTitle: q.segmentTitle,
       paragraphUrl: q.paragraphUrl,
+      quoteKind: q.quoteKind,
+      author: q.author,
     });
   }
+
+  // Build sourcesByKind for dynamic dropdown
+  const sourcesByKind: Record<string, { id: string; title: string }[]> = {};
+  for (const [srcId, kind] of kindBySource) {
+    if (!sourcesByKind[kind]) sourcesByKind[kind] = [];
+    const title = sources.find((s) => s.id === srcId)?.title ?? srcId;
+    sourcesByKind[kind].push({ id: srcId, title });
+  }
+
+  const allSourcesJson = JSON.stringify(
+    sources.map((s) => ({ id: s.id, title: s.title }))
+  );
+  const sourcesByKindJson = JSON.stringify(sourcesByKind);
+  const authorsByKindJson = JSON.stringify(
+    Object.fromEntries(
+      Object.entries(authorsByKind).map(([k, v]) => [k, Array.from(v).sort()])
+    )
+  );
+
+  const allSourcesDropdown =
+    '<option value="">Alle</option>' +
+    sources
+      .map(
+        (s) =>
+          `<option value="${escapeHtml(s.id)}">${escapeHtml(s.title)}</option>`
+      )
+      .join("");
 
   const groupsHtml: string[] = [];
   for (const [sourceId, segmentMap] of bySource) {
     const sourceTitle =
       sources.find((s) => s.id === sourceId)?.title ?? sourceId;
+    const groupKind = kindBySource.get(sourceId) ?? "author";
     const chaptersHtml: string[] = [];
     for (const [segmentId, segmentQuotes] of segmentMap) {
       const segmentTitle =
@@ -822,7 +814,8 @@ function renderQuotesSection(quotesData: QuotesData | undefined): string {
             q.paragraphUrl
               ? ` <a href="${escapeHtml(q.paragraphUrl)}" class="quote-para-link" title="Zum Absatz im Buch/Vortrag">Zum Absatz →</a>`
               : "";
-          return `<div class="quote-block" data-quote><pre class="quote-text typewriter-font">${escapeHtml(
+          const authorAttr = q.author ? ` data-author="${escapeHtml(q.author)}"` : "";
+          return `<div class="quote-block" data-quote data-quote-kind="${escapeHtml(q.quoteKind)}"${authorAttr}><pre class="quote-text typewriter-font">${escapeHtml(
             q.text
           )}</pre>${linkHtml}</div>`;
         })
@@ -835,7 +828,7 @@ function renderQuotesSection(quotesData: QuotesData | undefined): string {
       );
     }
     groupsHtml.push(
-      `<div class="quotes-group" data-source-id="${escapeHtml(sourceId)}">
+      `<div class="quotes-group" data-source-id="${escapeHtml(sourceId)}" data-quote-kind="${escapeHtml(groupKind)}">
   <h4 class="quotes-source-title">${escapeHtml(sourceTitle)}</h4>
   ${chaptersHtml.join("")}
 </div>`
@@ -846,25 +839,67 @@ function renderQuotesSection(quotesData: QuotesData | undefined): string {
 <script>
 (function(){
   var searchEl = document.getElementById("quotesSearch");
+  var kindEl = document.getElementById("quotesKind");
+  var authorEl = document.getElementById("quotesAuthor");
   var sourceEl = document.getElementById("quotesSource");
   var container = document.getElementById("quotesContainer");
-  if (!searchEl || !sourceEl || !container) return;
+  if (!searchEl || !kindEl || !authorEl || !sourceEl || !container) return;
+
+  var allSources = ${allSourcesJson};
+  var sourcesByKind = ${sourcesByKindJson};
+  var authorsByKind = ${authorsByKindJson};
 
   var groups = container.querySelectorAll(".quotes-group");
-  var quoteEls = container.querySelectorAll("[data-quote]");
+
+  function updateAuthorDropdown(kindVal) {
+    var authors = kindVal ? (authorsByKind[kindVal] || []) : [];
+    var show = authors.length > 0;
+    authorEl.style.display = show ? "" : "none";
+    if (!show) { authorEl.value = ""; return; }
+    var currentAuthor = (authorEl.value || "").trim();
+    var html = '<option value="">Alle</option>';
+    for (var i = 0; i < authors.length; i++) {
+      var a = authors[i];
+      var label = a.replace(/_/g, ' ');
+      var sel = a === currentAuthor ? ' selected' : '';
+      html += '<option value="' + a + '"' + sel + '>' + label + '</option>';
+    }
+    authorEl.innerHTML = html;
+    var stillValid = authors.indexOf(currentAuthor) >= 0;
+    if (currentAuthor && !stillValid) authorEl.value = "";
+  }
+
+  function updateSourceDropdown(kindVal) {
+    var currentSource = (sourceEl.value || "").trim();
+    var sources = kindVal ? (sourcesByKind[kindVal] || []) : allSources;
+    var html = '<option value="">Alle</option>';
+    for (var i = 0; i < sources.length; i++) {
+      var s = sources[i];
+      var sel = s.id === currentSource ? ' selected' : '';
+      html += '<option value="' + s.id + '"' + sel + '>' + s.title + '</option>';
+    }
+    sourceEl.innerHTML = html;
+    var stillValid = sources.some(function(s) { return s.id === currentSource; });
+    if (currentSource && !stillValid) sourceEl.value = "";
+  }
 
   function apply() {
     var term = (searchEl.value || "").trim().toLowerCase();
+    var kindVal = (kindEl.value || "").trim();
+    var authorVal = (authorEl.value || "").trim();
     var sourceVal = (sourceEl.value || "").trim();
 
     groups.forEach(function(g) {
       var matchSource = !sourceVal || g.getAttribute("data-source-id") === sourceVal;
+      var matchKind = !kindVal || g.getAttribute("data-quote-kind") === kindVal;
       var quotesInGroup = g.querySelectorAll("[data-quote]");
       var anyVisible = false;
       quotesInGroup.forEach(function(q) {
         var text = (q.textContent || "").toLowerCase();
         var matchSearch = !term || text.indexOf(term) >= 0;
-        var show = matchSource && matchSearch;
+        var matchQuoteKind = !kindVal || q.getAttribute("data-quote-kind") === kindVal;
+        var matchAuthor = !authorVal || q.getAttribute("data-author") === authorVal;
+        var show = matchSource && matchKind && matchSearch && matchQuoteKind && matchAuthor;
         q.style.display = show ? "" : "none";
         if (show) anyVisible = true;
       });
@@ -874,15 +909,34 @@ function renderQuotesSection(quotesData: QuotesData | undefined): string {
 
   searchEl.addEventListener("input", apply);
   searchEl.addEventListener("change", apply);
+  kindEl.addEventListener("change", function() {
+    var kindVal = (kindEl.value || "").trim();
+    updateAuthorDropdown(kindVal);
+    updateSourceDropdown(kindVal);
+    apply();
+  });
+  authorEl.addEventListener("change", apply);
   sourceEl.addEventListener("change", apply);
 })();
 </script>`;
 
+  // Autorendropdown startet leer – wird per JS dynamisch befüllt wenn ein Typ gewählt ist.
+  const authorDropdownOptions = '<option value="">Alle</option>';
+
   return `<div class="quotes-section stack-8">
   <div class="quotes-filters stack-8">
     <input type="text" id="quotesSearch" class="quotes-search-input" placeholder="Zitate durchsuchen..." aria-label="Zitate durchsuchen" />
+    <select id="quotesKind" class="quotes-kind-select" aria-label="Typ wählen">
+      <option value="">Alle Typen</option>
+      <option value="author">Autorenzitate</option>
+      <option value="foreign">Fremdzitate</option>
+      <option value="assistant">Assistentenzitate</option>
+    </select>
+    <select id="quotesAuthor" class="quotes-author-select" aria-label="Autor wählen" style="display:none">
+      ${authorDropdownOptions}
+    </select>
     <select id="quotesSource" class="quotes-source-select" aria-label="Quelle wählen">
-      ${dropdownOptions}
+      ${allSourcesDropdown}
     </select>
   </div>
   <div id="quotesContainer" class="quotes-container stack-16">
@@ -1078,7 +1132,6 @@ function renderSectionContent(
   section: AgentSection,
   agent: Agent,
   availableBooks: Map<string, Book>,
-  essaysByAgent: Map<string, Map<string, EssayData>>,
   talksByAgent: Map<string, Map<string, TalkData>>,
   conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>,
   conceptsChunkIndex: Map<string, ChunkInfo>,
@@ -1123,13 +1176,6 @@ function renderSectionContent(
     return `<div class="stack-8"><h3>${SECTION_META.talks.heading}</h3>${renderTalkRows(
       agent.talks,
       talksData
-    )}</div>`;
-  }
-  if (section === "essays") {
-    const essaysData = essaysByAgent.get(agent.id) ?? new Map();
-    return `<div class="stack-8"><h3>${SECTION_META.essays.heading}</h3>${renderEssayRows(
-      agent.essays,
-      essaysData
     )}</div>`;
   }
   if (section === "concepts") {
@@ -1187,7 +1233,6 @@ function renderAgentPage(
   outputDir: string,
   agent: Agent,
   availableBooks: Map<string, Book>,
-  essaysByAgent: Map<string, Map<string, EssayData>>,
   talksByAgent: Map<string, Map<string, TalkData>>,
   conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>,
   conceptsChunkIndex: Map<string, ChunkInfo>,
@@ -1224,7 +1269,6 @@ function renderAgentPage(
           section,
           agent,
           availableBooks,
-          essaysByAgent,
           talksByAgent,
           conceptsByAgent,
           conceptsChunkIndex,
@@ -1248,7 +1292,6 @@ export function generateAgentPages(
   outputDir: string,
   agents: Agent[],
   availableBooks: Map<string, Book>,
-  essaysByAgent: Map<string, Map<string, EssayData>>,
   talksByAgent: Map<string, Map<string, TalkData>>,
   conceptsByAgent: Map<string, Map<string, ConceptEntry[]>>,
   conceptsChunkIndex: Map<string, ChunkInfo>,
@@ -1263,7 +1306,6 @@ export function generateAgentPages(
         outputDir,
         agent,
         availableBooks,
-        essaysByAgent,
         talksByAgent,
         conceptsByAgent,
         conceptsChunkIndex,

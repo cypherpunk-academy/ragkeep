@@ -242,18 +242,6 @@
   gap: 12px;
 }
 
-.essay-card {
-  display: block;
-}
-
-.essay-summary-details .toc-summary-line {
-  padding-left: 0;
-}
-
-.essay-summary-details .toc-arrow {
-  display: none;
-}
-
 .lecture-summary-details .toc-summary-line {
   padding-left: 0;
 }

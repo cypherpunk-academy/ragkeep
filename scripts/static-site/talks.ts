@@ -1,8 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { Agent } from "./types";
-import type { ChunkInfo } from "./chunkLookup";
-import { escapeHtml, fileExists, writeTextFile } from "./utils";
+import type { ChunkInfo, LectureCoverMeta } from "./chunkLookup";
+import { escapeHtml, fileExists, stripQuoteErklaerungSection, writeTextFile } from "./utils";
 
 export interface TalkData {
   slug: string;
@@ -22,6 +22,39 @@ export interface TalkCitation {
   relevance?: number;
   /** Optional: book-id (UUID) aus book-manifest; nützlich wenn kein Chunk-Index (z. B. ohne DB) */
   book_id?: string;
+  /** Optional: chunk source_type (book, quote, lecture, …) wenn kein Chunk-Index */
+  source_type?: string;
+}
+
+/**
+ * Literatur-/Buch-Typen (source_type / chunk_type) → deutsches UI-Label.
+ * Fehlende Keys in dieser Tabelle, die trotzdem zur Buch-Familie gehören, erhalten {@link TALK_BOOK_TYPE_DEFAULT_LABEL}.
+ */
+export const TALK_BOOK_TYPE_LABELS: Readonly<Record<string, string>> = {
+  book: "Buch",
+  secondary_book: "Sekundärliteratur",
+};
+
+export const TALK_BOOK_TYPE_DEFAULT_LABEL = "Buch";
+
+/** Alle Werte, die wie „Buch“-Literatur gestylt werden (Typewriter, links, kleiner als Zitat-Kasten). */
+export const TALK_BOOK_FAMILY_SOURCE_TYPES: ReadonlySet<string> = new Set(
+  Object.keys(TALK_BOOK_TYPE_LABELS)
+);
+
+export function isTalkBookFamilySourceType(raw: string): boolean {
+  const k = String(raw || "")
+    .trim()
+    .toLowerCase();
+  return k !== "" && TALK_BOOK_FAMILY_SOURCE_TYPES.has(k);
+}
+
+export function formatTalkBookTypeLabel(raw: string): string {
+  const k = String(raw || "")
+    .trim()
+    .toLowerCase();
+  if (!k) return TALK_BOOK_TYPE_DEFAULT_LABEL;
+  return TALK_BOOK_TYPE_LABELS[k] ?? TALK_BOOK_TYPE_DEFAULT_LABEL;
 }
 
 /**
@@ -147,7 +180,7 @@ function _snippetForCitation(
 ): string {
   const fromCitation = c.text != null && String(c.text).trim() !== "";
   const raw = fromCitation ? String(c.text) : info?.text != null ? String(info.text) : "";
-  const s = _normChunkBody(raw);
+  const s = _normChunkBody(stripQuoteErklaerungSection(raw));
   if (!s) return "";
   if (s.length <= maxLen) return s;
   return `${s.slice(0, Math.max(0, maxLen - 1)).trimEnd()}…`;
@@ -165,6 +198,42 @@ function _coverAssetHref(bookId: string): string {
   return `../../../assets/covers/${encodeURIComponent(bookId)}.svg`;
 }
 
+/** Generisches Vortrags-Cover (kein externes SVG); Rednerpult, Ort, Datum. */
+function _lectureCoverInlineSvg(lc: LectureCoverMeta, size: CoverSize): string {
+  const ortRaw = lc.ort.trim() || "—";
+  const datumRaw = lc.datum.trim() || "—";
+  const ortDisp = ortRaw.length > 46 ? `${ortRaw.slice(0, 44)}…` : ortRaw;
+  const ort = escapeHtml(ortDisp);
+  const datum = escapeHtml(datumRaw);
+
+  if (size === "thumb") {
+    return (
+      `<svg class="talk-lecture-cover-svg talk-lecture-cover-svg--thumb" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">` +
+      `<rect width="40" height="40" rx="3" fill="#2a231f"/>` +
+      `<polygon points="20,8 32,30 8,30" fill="#6b5344" stroke="#8a735a" stroke-width="0.8"/>` +
+      `<rect x="14" y="28" width="12" height="6" rx="1" fill="#4a3d32"/>` +
+      `</svg>`
+    );
+  }
+
+  const a11y = escapeHtml(`Vortrag · ${ortRaw} · ${datumRaw}`);
+  return (
+    `<svg class="talk-lecture-cover-svg talk-lecture-cover-svg--expanded" viewBox="0 0 176 220" width="154" height="220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${a11y}">` +
+    `<rect width="176" height="220" rx="6" fill="#2c2620"/>` +
+    `<text x="88" y="22" text-anchor="middle" fill="#8a7a68" font-size="11" font-family="system-ui,Segoe UI,sans-serif">Vortrag</text>` +
+    `<g transform="translate(0,28)">` +
+    `<ellipse cx="88" cy="158" rx="44" ry="9" fill="#120f0d" opacity="0.45"/>` +
+    `<path d="M52 148 L124 148 L118 88 L58 88 Z" fill="#5c4638" stroke="#7a6555" stroke-width="1.2"/>` +
+    `<rect x="62" y="148" width="52" height="14" rx="2" fill="#4a3a30"/>` +
+    `<rect x="72" y="58" width="32" height="32" rx="3" fill="#7a6352" stroke="#9a8570" stroke-width="1"/>` +
+    `<polygon points="88,42 104,58 72,58" fill="#8b7355"/>` +
+    `</g>` +
+    `<text x="88" y="188" text-anchor="middle" fill="#d4c4b0" font-size="11" font-family="system-ui,Segoe UI,sans-serif">${ort}</text>` +
+    `<text x="88" y="208" text-anchor="middle" fill="#a89880" font-size="10" font-family="system-ui,Segoe UI,sans-serif">${datum}</text>` +
+    `</svg>`
+  );
+}
+
 function _bookIdForCover(c: TalkCitation, info: ChunkInfo | undefined): string | null {
   return (c.book_id?.trim() || info?.bookId || "").trim() || null;
 }
@@ -176,10 +245,12 @@ function _renderTalkCover(
   c: TalkCitation,
   info: ChunkInfo | undefined,
   size: CoverSize,
-  linkHref?: string
+  linkHref?: string,
+  displaySourceTitle?: string
 ): string {
   const bookId = _bookIdForCover(c, info);
-  const coverBg = _coverColor(c.source_title);
+  const titleForCover = displaySourceTitle ?? c.source_title ?? info?.source_title ?? "";
+  const coverBg = _coverColor(titleForCover);
   const author = info?.author || "";
 
   const wrapInner = (inner: string): string => {
@@ -190,6 +261,10 @@ function _renderTalkCover(
       `</div>`
     );
   };
+
+  if (info?.lectureCover) {
+    return wrapInner(_lectureCoverInlineSvg(info.lectureCover, size));
+  }
 
   if (size === "thumb") {
     if (!bookId) {
@@ -206,7 +281,7 @@ function _renderTalkCover(
   const placeholder =
     `<div class="talk-source-cover talk-source-cover--placeholder talk-source-cover--expanded" style="background:${coverBg}" aria-hidden="true">` +
     `<span class="talk-source-cover-author">${escapeHtml(author)}</span>` +
-    `<span class="talk-source-cover-title">${escapeHtml(c.source_title)}</span>` +
+    `<span class="talk-source-cover-title">${escapeHtml(titleForCover)}</span>` +
     `</div>`;
 
   if (!bookId) {
@@ -220,10 +295,15 @@ function _renderTalkCover(
 }
 
 /** Zugeklappt: Pfeil + [Thumbnail | Spalte mit Titel, darunter Kapitel] — Kapitel nur unter dem Titel, rechts neben dem Bild. */
-function _renderSummaryCollapsed(c: TalkCitation, info: ChunkInfo | undefined): string {
+function _renderSummaryCollapsed(
+  c: TalkCitation,
+  info: ChunkInfo | undefined,
+  sourceTypeKey: string
+): string {
   const segTitle = c.segment_title || info?.segment_title || "";
-  const thumb = _renderTalkCover(c, info, "thumb");
-  const titleSmall = `<span class="talk-sources-summary-title">${escapeHtml(c.source_title)}</span>`;
+  const displayTitle = formatTalkSourceTitleForDisplay(c.source_title || "", info?.source_title, sourceTypeKey);
+  const thumb = _renderTalkCover(c, info, "thumb", undefined, displayTitle);
+  const titleSmall = `<span class="talk-sources-summary-title">${escapeHtml(displayTitle)}</span>`;
   const chapterPart = segTitle
     ? `<span class="talk-sources-summary-chapter-line"><span class="talk-sources-summary-chapter">${formatTalkRichInlineHtml(segTitle)}</span></span>`
     : "";
@@ -239,6 +319,98 @@ function _renderSummaryCollapsed(c: TalkCitation, info: ChunkInfo | undefined): 
   return `<span class="talk-sources-summary-inner">${topRow}</span>`;
 }
 
+/** Kurzlabel für Metadaten-Feld source_type / chunk_type (UI Deutsch). */
+function formatTalkSourceTypeLabel(raw: string): string {
+  const k = String(raw || "")
+    .trim()
+    .toLowerCase();
+  if (!k) return "";
+  if (isTalkBookFamilySourceType(k)) return formatTalkBookTypeLabel(k);
+  const map: Record<string, string> = {
+    quote: "Zitat",
+    lecture: "Vortrag",
+    concept: "Begriff",
+    concepts: "Begriff",
+    typology: "Typologie",
+    typologies: "Typologie",
+    summary: "Zusammenfassung",
+    chapter_summary: "Zusammenfassung",
+    interview: "Interview",
+    article: "Artikel",
+    essay: "Essay",
+    talk: "Gespräch",
+  };
+  return map[k] ?? k;
+}
+
+/** Kapitel-/Buch-Zusammenfassung (RAG chunk_type / source_type). */
+function isTalkChapterSummarySourceType(raw: string): boolean {
+  const k = String(raw || "")
+    .trim()
+    .toLowerCase();
+  return k === "chapter_summary" || k === "summary";
+}
+
+const LIST_OF_CONCEPTS_SOURCE_TITLE = /^liste von begriffen$/i;
+
+export function isTalkConceptSourceType(raw: string): boolean {
+  const k = String(raw || "")
+    .trim()
+    .toLowerCase();
+  return k === "concept" || k === "concepts";
+}
+
+/** Titelzeile in Quellen: Sammel-„Liste von Begriffen“ → „Begriff“. */
+export function formatTalkSourceTitleForDisplay(
+  citationTitle: string,
+  indexTitle: string | undefined,
+  sourceTypeKey: string
+): string {
+  const raw = String(citationTitle || indexTitle || "").trim();
+  if (isTalkConceptSourceType(sourceTypeKey)) {
+    if (!raw || LIST_OF_CONCEPTS_SOURCE_TITLE.test(raw)) return "Begriff";
+    return raw;
+  }
+  return raw;
+}
+
+/** Layout wie Buch (Typewriter, links): Primär-/Sekundärliteratur und Begriffs-Chunks. */
+function isTalkBookLikeLayoutSourceType(raw: string): boolean {
+  return isTalkBookFamilySourceType(raw) || isTalkConceptSourceType(raw);
+}
+
+function _rawChunkTextForCitation(c: TalkCitation, info: ChunkInfo | undefined): string {
+  const fromCitation = c.text != null && String(c.text).trim() !== "";
+  return fromCitation ? String(c.text) : info?.text != null ? String(info.text) : "";
+}
+
+/** Voller Konzepttext mit Absätzen; kein Kürzen, keine Whitespace-Kollabierung. */
+function formatTalkConceptBodyHtml(raw: string): string {
+  let body = stripQuoteErklaerungSection(String(raw || ""));
+  body = body.replace(/^\d+\|\s*/, "").trimEnd();
+  if (!body) return "";
+  const paras = body.split(/\n\s*\n+/).map((p) => p.trim()).filter(Boolean);
+  if (paras.length === 0) return "";
+  return paras.map((p) => `<p class="talk-concept-body-para">${formatTalkRichInlineHtml(p)}</p>`).join("");
+}
+
+/** Normalisierter source_type / chunk_type (lowercase) für Lookup & CSS-Modifikator. */
+function _citationRawSourceTypeKey(c: TalkCitation, info: ChunkInfo | undefined): string {
+  const fromCitation = c.source_type?.trim();
+  if (fromCitation) return fromCitation.toLowerCase();
+  const fromChunk = info?.source_type?.trim();
+  if (fromChunk) return fromChunk.toLowerCase();
+  if (info?.lectureCover) return "lecture";
+  return "";
+}
+
+/** Anzeige-Typ: aus Zitation, Chunk-Metadaten oder Vortrag über lectureCover. */
+function _citationSourceTypeLabel(c: TalkCitation, info: ChunkInfo | undefined): string {
+  const k = _citationRawSourceTypeKey(c, info);
+  if (!k) return "";
+  return formatTalkSourceTypeLabel(k);
+}
+
 /** Relevanz als 0–1 und Balkenbreite 0–100; fehlend → null. */
 function _relevanceScore01(rel: number | undefined): { score: number; label: string } | null {
   if (rel == null || !Number.isFinite(rel)) return null;
@@ -250,16 +422,32 @@ function _relevanceScore01(rel: number | undefined): { score: number; label: str
 }
 
 /** Pro Quelle ein <details>; nur die gewählte Quelle klappt auf. */
-function renderQuellenDetails(citations: TalkCitation[], chunkIndex?: Map<string, ChunkInfo>): string {
+export function renderQuellenDetails(citations: TalkCitation[], chunkIndex?: Map<string, ChunkInfo>): string {
   if (citations.length === 0) return "";
 
-  const items = citations.map((c) => {
+  // Hide stale references: if chunkIndex is available and a chunk_id is not found, the chunk no longer exists.
+  const activeCitations = chunkIndex
+    ? citations.filter((c) => !c.chunk_id || chunkIndex.has(c.chunk_id))
+    : citations;
+
+  if (activeCitations.length === 0) return "";
+
+  const items = activeCitations.map((c) => {
     const link = _resolveLink(c, chunkIndex);
     const info = c.chunk_id ? chunkIndex?.get(c.chunk_id) : undefined;
+    const sourceTypeKey = _citationRawSourceTypeKey(c, info);
+    const displaySourceTitle = formatTalkSourceTitleForDisplay(
+      c.source_title || "",
+      info?.source_title,
+      sourceTypeKey
+    );
     const segTitle = c.segment_title || info?.segment_title || "";
-    const summary = _renderSummaryCollapsed(c, info);
+    const summary = _renderSummaryCollapsed(c, info, sourceTypeKey);
 
-    const cover = _renderTalkCover(c, info, "expanded");
+    const cover = _renderTalkCover(c, info, "expanded", undefined, displaySourceTitle);
+
+    const bookLikeLayout = isTalkBookLikeLayoutSourceType(sourceTypeKey);
+    const blockMod = bookLikeLayout ? " talk-source-block--book-family" : "";
 
     const chapterRow = segTitle
       ? `<div class="talk-source-chapter talk-source-chapter--lead">${formatTalkRichInlineHtml(segTitle)}</div>`
@@ -269,18 +457,36 @@ function renderQuellenDetails(citations: TalkCitation[], chunkIndex?: Map<string
     const authorEl = author
       ? `<div class="talk-source-author">${escapeHtml(author)}</div>`
       : "";
-    const titlePlain = `<div class="talk-source-book-title talk-source-book-title--plain">${escapeHtml(c.source_title)}</div>`;
-    const bookInfo = `<div class="talk-source-info">${chapterRow}${authorEl}${titlePlain}</div>`;
+    const typeLabel = _citationSourceTypeLabel(c, info);
+    const typeEl = typeLabel
+      ? `<div class="talk-source-type">${escapeHtml(typeLabel)}</div>`
+      : "";
+    const titlePlain = `<div class="talk-source-book-title talk-source-book-title--plain">${escapeHtml(displaySourceTitle)}</div>`;
+    const bookInfo = `<div class="talk-source-info">${chapterRow}${authorEl}${typeEl}${titlePlain}</div>`;
 
-    const expandedSnippet = _snippetForCitation(c, info, 900);
+    const conceptLike = isTalkConceptSourceType(sourceTypeKey);
+    const expandedSnippet = conceptLike ? "" : _snippetForCitation(c, info, 900);
+    const summaryStyle = isTalkChapterSummarySourceType(sourceTypeKey);
+    const textQuoteClass = [
+      "talk-source-text",
+      bookLikeLayout ? "talk-source-text--book" : "",
+      summaryStyle ? "talk-source-text--summary" : "",
+    ]
+      .filter(Boolean)
+      .join(" ");
     let anrissBlock = "";
-    if (expandedSnippet && link) {
+    if (conceptLike) {
+      const conceptInner = formatTalkConceptBodyHtml(_rawChunkTextForCitation(c, info));
+      if (conceptInner) {
+        anrissBlock = `<blockquote class="${textQuoteClass}">${conceptInner}</blockquote>`;
+      }
+    } else if (expandedSnippet && link) {
       anrissBlock =
-        `<blockquote class="talk-source-text">` +
+        `<blockquote class="${textQuoteClass}">` +
         `<a href="${escapeHtml(link)}" class="talk-source-anriss-link" title="Zum Buchabschnitt">${formatTalkRichInlineHtml(expandedSnippet)}</a>` +
         `</blockquote>`;
     } else if (expandedSnippet) {
-      anrissBlock = `<blockquote class="talk-source-text">${formatTalkRichInlineHtml(expandedSnippet)}</blockquote>`;
+      anrissBlock = `<blockquote class="${textQuoteClass}">${formatTalkRichInlineHtml(expandedSnippet)}</blockquote>`;
     } else if (link) {
       const fallbackHtml = segTitle.trim()
         ? formatTalkRichInlineHtml(segTitle)
@@ -288,7 +494,7 @@ function renderQuellenDetails(citations: TalkCitation[], chunkIndex?: Map<string
           ? escapeHtml(c.source_title)
           : escapeHtml("Zum Buchabschnitt");
       anrissBlock =
-        `<blockquote class="talk-source-text">` +
+        `<blockquote class="${textQuoteClass}">` +
         `<a href="${escapeHtml(link)}" class="talk-source-anriss-link" title="Zum Buchabschnitt">${fallbackHtml}</a>` +
         `</blockquote>`;
     }
@@ -310,7 +516,7 @@ function renderQuellenDetails(citations: TalkCitation[], chunkIndex?: Map<string
         `</div></div>`;
 
     const block =
-      `<div class="talk-source-block">` +
+      `<div class="talk-source-block${blockMod}">` +
       `<div class="talk-source-main">${cover}<div class="talk-source-body">${bookInfo}${qualEl}${textEl}</div></div>` +
       `</div>`;
 

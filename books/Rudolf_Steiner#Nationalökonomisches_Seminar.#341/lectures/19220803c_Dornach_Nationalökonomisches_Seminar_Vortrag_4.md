@@ -1,0 +1,152 @@
+# VIERTE SEMINARBESPRECHUNG Dornach, 3. August 1922
+<!-- Mathematismus: prediction 60 (8:9:3:5:6:4:5) !reference -->
+<!-- Individualismus: prediction 0 (0:0:0:1:1:0) -->
+
+1| Frage: Kann man noch von Wert sprechen, wenn ein Ding seinen Zweck erfüllt hat? Wie verhält es sich, wenn das Ding neu in den volkswirtschaftlichen Prozess hineinkommt? – Bedeutet der Abbruch eines Hauses Entwertung durch menschliche Arbeit? Hat diese Entwertung irgendeinen Sinn oder nicht? – Kann man nur dann von Entwertung durch menschliche Arbeit sprechen, wenn neue Werte nicht geschaffen werden?
+
+2| Rudolf Steiner: Sprechen Sie sich darüber aus! Es werden sich Themen ergeben, zum Beispiel Steinkohle – Braunkohle. Es könnte jemand auf die Idee kommen, dass die Steinkohle einfach als Substanz ein wertvolleres Objekt wäre als die Braunkohle. Aber er würde dann seine These zu verteidigen haben. Das andere wäre die etwas gewagte These, dass mechanische Arbeit in der Regel nicht verteuernd wirkt. Da werden die verehrten Anwesenden dies oder das einzuwenden haben. Dann ist die Frage der Werterteilung und Entwertung nicht damit erschöpft, dass man Ausnahmeerscheinungen anführt, wie die U-Boote, sondern es würde sich darum handeln, dass man doch im kontinuierlichen Prozess des Volkswirtschaftslebens wirtschaftlich notwendige Entwertungen eben durch Arbeit herbeiführen muss. Verschiedene Zwischenfragen.
+
+3| Rudolf Steiner: Es handelt sich darum, ob man – auch ganz im wirtschaftlichen Sinne – von Wertung und Entwertung durch Arbeit sprechen kann oder nicht. Wenn Maschinen entwertet werden, so würde das volkswirtschaftlich Verbrauch sein. Es handelt sich nicht darum, ob das Ziel einer Arbeit die Entwertung ist, sondern ob im wirtschaftlichen Prozess Entwertungen notwendig sind, die nur durch Arbeit geleistet werden können. X: Die Entwertung von Werten durch Arbeit kommt zu dem Zweck vor, nachträglich höhere Werte an den Platz zu stellen (Zwischenwerte).
+
+4| Rudolf Steiner: Dieses Beispiel kann angeführt werden. Es ist aber nicht absolut einwandfrei. Ein viel einfacheres Beispiel ist ein ganz alltägliches: Wenn Sie Zwirn durch Arbeit auf eine Spule aufwinden, so haben Sie damit ein Produkt hergestellt. Es entsteht dadurch, dass Arbeit geleistet wird, eben dieses Zwirnspulen. Wenn ich die Arbeit weiter fortsetze, so muss ich wiederum entspulen. Da sind tatsächlich Arbeiten notwendig. Bei Zwischenverrichtungen ist es notwendig, dass im Prozess erzeugte Arbeiten wiederum aufgelöst werden.
+
+5| Frage: Würde dasselbe beim Umlagern von Produkten vorliegen?
+
+6| Rudolf Steiner: Es würde mindestens stattfinden, wenn Sie eine Bahn in eine andere Lage bringen. Da müssen Sie den ersten Wert entwerten, um dem zweiten den richtigen Wert zu geben. Wenn Sie hier eine Bahn haben, und Sie wollen sie hierher legen, dann haben Sie durch Umlagerung eine solche Entwertung vorgenommen. Und solche Dinge finden sich schon überall. Das würden Entwertungen sein, die notwendig werden und zu deren Verrichtung Arbeit notwendig ist. Man bemerkt sie nur gewöhnlich nicht. Sie sind aber überall vorhanden. Sie brauchen nur den Kohlenschaufler zu nehmen, der die Kohlen für die Lokomotive anschaufelt. Der Heizer muss sie wieder entschaufeln. Sie können, wenn Sie bloß die Begriffe festhalten wollen, sagen: Das ist ein fortlaufender Prozess. – Das würde aber nicht genügen. Sie müssten berechnen, da hier der fortlaufende Prozess nicht unmittelbar geleistet werden kann, was der fortlaufende Prozess kosten würde, wenn ich überall die Kohle vorbereitet hätte, im Gegensatz zu dem, was es kostet, wenn ich immer einen Teilprozess ausführe und ihn wieder zerstören muss.
+
+7| Frage: Verpackungsindustrie würde auch ein Beispiel sein?
+
+8| Rudolf Steiner: Ja gewiss. Ein ganz eklatantes Beispiel, wo Sie wirklich den Begriff der Verwertung nicht anführen können und auch nicht den des bloßen Verbrauchs durch Abnutzen, wie beim Schleifen von Rasiermessern. Da wird ein Wertprodukt zerstört, und das ist eine notwendige wirtschaftliche Arbeit. Der Verbrauch besteht nur im Stumpfwerden. Aber um es ganz zu entwerten, ist Arbeit notwendig.
+
+9| Frage: Altes Eisen sammeln – verkaufen – umschmelzen – wieder verwenden kann man das Umschmelzen auch eine Umwertung nennen?
+
+10| Rudolf Steiner: Das ist gleichbedeutend mit dem Verwerten von Abfall. Das würde man nicht eine Entwertung nennen können. Bemerkung: Der eine Prozess ist aber abgeschlossen!
+
+11| Rudolf Steiner: Ja, und dann entdecke ich, dass ich das, was da wie ein Naturprodukt vorliegt, neu verwerten kann. Es muss das Kriterium vorliegen, dass die menschliche Arbeit notwendig ist, um einen Entwertungsprozess herbeizuführen.
+
+12| Das Einschmelzen beim Eisen ist nicht eigentlich ein Abbauprozess. Gewiss, die Dinge können zweifelhaft sein. Man kann etwas so und so auffassen. Es könnte auch als Entwertungsprodukt aufgefasst werden.
+
+13| Frage: Entwertung durch den Krieg – Granaten gedreht – einfach verpulvert?
+
+14| Rudolf Steiner: Für den, der nicht der Sieger ist, ist das eine Entwertung.
+
+15| Frage: Kann man überhaupt das, was an Kriegsausrüstungen geschieht, als Werteschaffung im wirtschaftlichen Sinn ansprechen?
+
+16| Rudolf Steiner: Das kann erst volkswirtschaftlich werden in seinen Folgen. Wertebildend ist die Kriegsindustrie nicht, solange sie bloß auf Vorrat geht. Da ist sie eigentlich eine Arbeit, die eine – man kann nur nicht sagen: eine notwendige – Zerstörungsarbeit ist. Bemerkung: Was verbraucht wird über den normalen Bedarf hinaus, Kriegsutensilien und so weiter, ergibt zum Beispiel nach Beendigung des Krieges ein Manko.
+
+17| Rudolf Steiner: Es ist ins Auge zu fassen, dass der abnorme Verbrauch, der da eintritt, eine gewisse Verwandtschaft hat mit dem Verbrauch der Rentiers in einer wirtschaftlichen Gemeinschaft. Dieser Verbrauch ist gegeben. Wenn man ihn durchaus rechtfertigen will – heute wird man ihn bekämpfen –, so gibt es natürlich für alle Dinge eine gewisse Rechtfertigung. Der Verbrauch der Rentiers ist zu rechtfertigen, wenn die Bodenproduktion einen größeren Ertrag liefert, als normalerweise aufgebraucht werden kann von der anderen Bevölkerung. Zur Herstellung des wirtschaftlichen Gleichgewichts ist unter Umständen der Verbrauch der Rentiers gut. Und von diesem Gesichtspunkt aus gibt es eine volkswirtschaftliche Rechtfertigung der Wehrmacht. Diese Rechtfertigung liegt darin, dass die Leute sagen: Die Dinge sind da, und man kann sie herstellen. Es wäre kein wirtschaftliches Gleichgewicht, es müssten so und so viele arbeitslos bleiben, wenn eben nicht die Wehrmacht konsumieren würde, ohne dass sie eigentlich produziert. Denn sie produziert eigentlich nichts.
+
+18| Frage: Ist Wehrmacht nicht ähnlich zu betrachten wie beizen des Weizens oder Ähnliches?
+
+19| Rudolf Steiner: Diese Anschauung ist da: in der Schule von Rodbertus. Die Verteidigung wird unter die produktiven Faktoren gerechnet. Es handelt sich dabei darum, ob man sich eine Volkswirtschaft denkt unter gewissen Voraussetzungen oder ohne diese Voraussetzungen oder mit anderen Voraussetzungen. Wenn man sich also vorstellen würde, dass die Verteidigung durch eine Wehrmacht nicht notwendig wäre, so würde sie entfallen. Aber die Feuerlöschmaschine kann nicht entfallen, weil die einem notwendigen Verbrauch entspricht wie das Frühstück. Wer die Wehrmacht für absolut notwendig hält, der muss sie für einen notwendigen Verbrauch ansehen. Aber da beginnt die Möglichkeit der Diskussion über die Verbrauchsfrage. Man kennt Menschen, die das Merkwürdigste für absolut unentbehrliche Gebrauchsdinge halten. Da spielen in die Bewertung die Begriffe des Gebrauchs hinein. Und die sind labil.
+
+20| Frage: Mechanische Arbeit, zum Beispiel Wasserkräfte durch Turbinen, erspart menschliche Arbeit. Erfolgt die Bewertung so, als ob die mechanische Arbeit durch menschliche Arbeit geleistet würde?
+
+21| Rudolf Steiner: Denken Sie sich die Waage, die ungleicharmige Hebelarme hat, so habe ich an einem Hebelarm eine große Last, und ich muss dann am anderen das Gewicht verschieben. So kann ich mit einem ganz kleinen Gewicht hier rein durch die Lage ein ganz großes im Gleichgewicht halten. So ist es mit der volkswirtschaftlichen Verteilung bei solchen Dingen, wie Sie sie «mechanische Arbeitsleistung» genannt haben. Die Arbeit, die geleistet werden muss, wird nur in dem Verhältnis kleiner – wie hier bei der Waage. Aber ein gewisses Quantum, das gegeben ist, von wirklich aufgebrachter Arbeit, werden Sie immer finden, auch bei mechanischen Arbeitsleistungen. Sie können sich nicht ohne Weiteres durch die Natur etwas besorgen lassen. Wenn Sie bloß einen Stein auf etwas legen wollen, damit er Arbeit leiste, müssen Sie ihn zum mindesten holen. Sie müssen immer eine kleine menschliche Arbeit aufwenden. Die Dinge gehören aber überhaupt nicht in die Volkswirtschaft hinein, wo durch die Umstände das Verhältnis von aufgewandter Arbeit zu der Leistung funktionell bedingt wird.
+
+22| Frage: Die mechanische Arbeit an sich verteuert doch nicht die Produkte?
+
+23| Rudolf Steiner: Wenn Sie die Arbeit im ganzen Zusammenhang betrachten, dann müssen Sie überall eine Quote rechnen.
+
+24| Frage: Wie stellt sich die entwertende Arbeit in den volkswirtschaftlichen Prozess hinein?
+
+25| Rudolf Steiner: Wenn Sie einen fortlaufenden volkswirtschaftlichen Prozess haben, in dem Sie entwerten müssen – nehmen Sie an, Sie haben einen so großen Rasierladen, dass Sie einen besonderen Arbeiter anstellen müssen für das Schleifen der Messer –, so müssen Sie natürlich die Arbeit dieses Arbeiters in einer anderen Weise bilanzieren, als Sie die Arbeit der Rasierenden bilanzieren. Gewiss, es ist äußerlich angesehen auch eine Arbeit, aber im volkswirtschaftlichen Prozess steht sie anders drin, nämlich negativ.
+
+26| Frage: Was geschieht denn bei der Entwertungsarbeit? Das ist ja eine Schenkung, weil ihr kein Gegenwert entspricht.
+
+27| Rudolf Steiner: Nur die Vorzeichen des Wertes ändern sich. Es ist überall dasselbe. Haben Sie eine Wertentstehung, die Sie im fortlaufenden volkswirtschaftlichen Prozess als positiv (+) bezeichnen, dann müssen Sie die Entwertung negativ (-) bezeichnen, während, wenn nichts geschieht, Sie null einsetzen. Bemerkung: Wenn eine neue Maschine einen Prozess ersetzt, so wird das Produkt billiger, einfach weil Arbeit gespart wird. Ob wertebildende oder entwertende Arbeit, das ist ganz gleichgültig.
+
+28| Rudolf Steiner: Ja, die Sache ist so, dass Sie immer im Effekt dasselbe herausbringen können. Dafür bleibt es immer noch eine Gliederung in Wertebildung und Entwertung. Es ist selbstverständlich, dass sich, wenn Sie daraus eine Summe ziehen, eine positive Summe ergibt, wenn eine Maschine überhaupt noch gebraucht werden soll.... Was sich fragt, ist lediglich dieses, ob man nötig hat, Arbeiten aufzuwenden für Auflösungen, also für Entwertungen von Werten, die schon zustande gekommen waren im volkswirtschaftlichen Prozess. Frage nicht notiert.
+
+29| Rudolf Steiner: Es wird notwendig sein, damit keine unklaren Begriffe bleiben, einzugehen auf jene Tasse Tee, deren Austrinken eine wirtschaftliche Arbeit sein soll.
+
+30| Einwand: Ich kann das nicht als Arbeit gelten lassen. Das Kriterium von Arbeit fehlt. Weitere Bemerkung: Wenn man Nahrung zu sich nimmt, dann schafft man doch erst in sich die Werte, die imstande sind, weitere Arbeit zu liefern, genau so wie wenn man Maschinen schafft, die Werte bilden sollen.
+
+31| Rudolf Steiner: Es ist aber nicht möglich, dasjenige, was im Menschen geschieht, in die Volkswirtschaft einzurechnen. Das würde dazu führen, dass man die marxistische Theorie herausbekäme.
+
+32| Dagegen muss der Herr etwas anderes gedacht haben. Sie haben doch irgendwie im Kopf, dass das Austrinken einer Tasse Tee einen wirtschaftlichen Wert liefern könnte, also wirtschaftlich Arbeit ist. Bemerkung: Wenn ein geistiger Arbeiter unterstützt wird mit wirtschaftlichen Werten, so wird der vorläufige Erfolg sein, dass er essen kann und geistig regsam oder frisch wird. Die Folge wird zunächst innerhalb seiner Persönlichkeit bleiben; aber es bleibt nicht dabei. Die Folgen strahlen hinaus in den wirtschaftlichen Prozess. Das wären die vom Subjekt ausgehenden Folgen.
+
+33| Rudolf Steiner: Die sind aber nicht in den volkswirtschaftlichen Prozess ohne Weiteres hineinzukriegen, wenn nicht etwas hinzutritt. Denn Sie können nicht das Austrinken der Tasse Tee als produktiv ansehen. Die Tasse Tee würde nur dann wirtschaftlich in Frage kommen, wenn Sie etwas produzieren wollten, Sie würden außer Ihrer gewöhnlichen Nahrung noch eine Tasse Tee trinken und dadurch mehr arbeiten können, als Sie ohne die Tasse Tee gearbeitet haben. Da würde es sich darum handeln, ob man das als eine volkswirtschaftliche Leistung auffassen könnte. Bemerkung: Dadurch dass ich Tee konsumiere, kann in den Kolonien Tee gepflückt werden. Ich entwerte eigentlich, indem ich die Möglichkeit wieder schaffe, dass neue wirtschaftliche Werte erzeugt werden.
+
+34| Rudolf Steiner: Wollen Sie im positiven Sinn die volkswirtschaftlichen Werte feststellen, so kommen Sie auf ein anderes Niveau, wenn Sie die Frage erörtern, inwiefern der Konsum notwendig ist, um den volkswirtschaftlichen Prozess fortzuführen. Das ist eine Frage, die eigentlich mit der Volkswirtschaft als solcher nichts zu tun hat. Bemerkung: Ich möchte die Entwertung, die darin besteht, dass die Tasse Tee getrunken wird, damit man wieder Arbeit leisten kann, auf dieselbe Stufe stellen wie das Beispiel vom Arzt und Schuhmacher. Der Teepflücker wendet Arbeit auf. Ich trinke den Tee. Der Teepflücker dient dazu, mich wieder in die Lage zu setzen, Arbeit zu leisten.
+
+35| Rudolf Steiner: Wenn wir die Frage so stellen, dann wird beim Teepflücken aus dem Naturprodukt Tee ein wirtschaftlicher Wert. Das ist die Entstehung eines wirtschaftlichen Wertes. Wird aber beim Austrinken des Tees im selben Sinn ein wirtschaftlicher Wert entstehen oder vergehen? X: Er wird vergehen, wird entwertet. Y: Ich möchte sagen, er wird umgewertet.
+
+36| Rudolf Steiner: Diese Umsetzung kann man eigentlich nicht vollziehen; denn dann müssten Sie jeden Konsom, jeden Verbrauch bloß als einen Umsatz bezeichnen. Bemerkung: Umsatz in Energie.
+
+37| Rudolf Steiner: Dann kommen wir aus dem volkswirtschaftlichen Gebiet heraus und in das naturwissenschaftliche hinein. Da schalten Sie einen Naturprozess ein, der nicht mehr zum volkswirtschaftlichen gehört.
+
+38| Nehmen Sie den Prozess des Teetrinkens! Sie trinken den Tee aus. Nun haben Sie diesen Wert, der da erzeugt worden ist, verschwinden lassen aus dem volkswirtschaftlichen Prozess. Das ist gar keine Frage. Jetzt werden Sie meinetwillen durch den Tee sogar gestärkt – ich will diese Voraussetzung machen -, verrichten eine volkswirtschaftliche Arbeit. Diese als solche ist noch kein Wert, sondern ist ein Wert, wenn Sie sie auf ein Naturprodukt anwenden. Und nun beginnt erst wiederum die volkswirtschaftliche Wertbildung in dem Moment, wo Sie an das Naturprodukt herantreten. Die Frage entsteht gar nicht bei der Wertbildung, ob Sie nun kräftiger geworden sind oder nicht, sondern die Wertbildung beginnt erst nach Ihrem Kräftigerwerden. Also, was in Ihnen vorgeht durch das Teetrinken, ist, auch wenn Sie ein Athlet werden durch das Teetrinken, nicht das, was Sie in den volkswirtschaftlichen Prozess hineintragen.
+
+39| Dieser Naturprozess muss so ausgeschaltet werden wie der Wert von Grund und Boden. Natürlich können Sie ihn einschalten, dann ist es ein Analogon, wie wenn Sie in die volkswirtschaftlichen Prozesse, ohne dass menschliche Arbeit dazu verwendet wird, Regenwürmer einschalten würden. Wenn die Regenwürmer durch den Acker gehen, so machen sie den Acker fruchtbar. Das können Sie nicht in den volkswirtschaftlichen Prozess einschalten. Versuchen Sie es nur einmal, dies in den weiteren Ergebnissen zu verfolgen. Sie werden auch sehen: würde man es als wertebildend ansehen, wenn Sie durch den Verbrauch stärker werden, dann würde man in eine volkswirtschaftliche Ordnung hineinkommen, wo die Arbeit für sich allein schon wertebildend wäre. Sie ist das erst in Verbindung mit der Natur oder dem menschlichen Geist.
+
+40| Es ist nicht möglich, Volkswirtschaftliches herauszubekommen, wenn man im Menschen oder in der Natur liegende Prozesse mit in die Volkswirtschaft hineinnimmt.
+
+41| Frage: Wie will man die Schenkung da betrachten?
+
+42| Rudolf Steiner: Ich darf bei der Schenkung von einer Entwertung sprechen, weil ich, solange ich bloß menschliche Fähigkeiten im Auge habe, für die ich die Schenkung verwenden kann, noch nicht von Volkswirtschaft spreche. Zuerst, wenn ich ein Stipendium gebe, lasse ich diesen Wert verschwinden im volkswirtschaftlichen Prozess, bis er wieder heraufkommt. Bemerkung: Man sieht beinahe, wie die Schenkung weiter wirkt.
+
+43| Rudolf Steiner: Was weiter wirkt, hängt sehr stark von solchen Faktoren ab, die sich überhaupt jedem Rechnungsansatz absolut entziehen. Sonst müssten Sie zum Beispiel Fleiß volkswirtschaftlich einsetzen. Fleiß würde aber volkswirtschaftlich ein fiktiver Wert sein, nicht nur ein fiktiver, sondern sogar ein unmöglicher Wert.
+
+44| Ich würde im moralischen Sinn, wenn ich, sagen wir, eine Werkstatt hätte, meine Arbeiter tadeln, wenn sie faul sind; volkswirtschaftlich werde ich sie erst tadeln, wenn sie mir nichts hervorbringen. Volkswirtschaftlich geht mich nur das an, was sie hervorbringen. Moralisch geht mich an, ob sie fleißig oder faul sind.
+
+45| Frage: Von Arbeit könnte man erst sprechen in einer arbeitsteiligen Wirtschaft?
+
+46| Rudolf Steiner: Erst wenn in der Arbeit die Gegenseitigkeit füreinander beginnt, kann man von volkswirtschaftlicher Arbeit sprechen.
+
+47| Frage: Könnte man in der primitiven Wirtschaft von Arbeit sprechen?
+
+48| Rudolf Steiner: Dann könnte man davon sprechen, wenn man ins Auge fasst, dass der Vater eine gewisse Arbeit tut, dass er konsumiert und auch seine Frau, seine Söhne, seine Töchter konsumieren, die Töchter wieder andere Arbeit verrichten und so weiter, also füreinander arbeiten, dann erst.
+
+49| Frage: Also wie kommt man überhaupt zu einem Begriff der Arbeit?
+
+50| Rudolf Steiner: Ein Begriff der Arbeit ist sehr leicht zu bilden im volkswirtschaftlichen Sinn. Er liegt dann vor, wenn man ein Naturprodukt vor sich hat, das durch menschliche Tätigkeit verändert worden ist mit dem Zweck, konsumiert zu werden.
+
+51| Frage: Ob es konsumiert wird, ist gleichgültig?
+
+52| Rudolf Steiner: Es muss wenigstens konsumfähig gemacht werden, denn dann hat es den Wert.
+
+53| Frage: Muss man auch dann immer auf das Naturprodukt oder das Objekt schauen, wenn ein Wert entsteht durch geistige Organisation von Arbeit, oder muss man nachsehen, ob ein Objekt da ist, auf das die organisierte Arbeit verwendet worden ist?
+
+54| Rudolf Steiner: Da können Sie nicht auf ein Objekt schauen, denn es ist unter Umständen in dem Zusammenhang, mit dem Sie es zu tun haben, ein bleibendes Objekt nicht da. Der Geist kann aufgewendet werden lediglich auf Einteilung, Gliederung der Arbeit. Dann hat man es unter Umständen mit keinem Objekt zu tun.
+
+55| Frage: Dann fällt es nicht in den Begriff der Arbeit hinein?
+
+56| Rudolf Steiner: Das ist ein sekundärer Begriff. Arbeit ist jene menschliche Tätigkeit, die aufgewendet wird, um ein Naturprodukt konsumfähig zu machen. Das ist im volkswirtschaftlichen Sinn die Arbeit. Diese müssen Sie jetzt als einen Endbegriff auffassen. Nun kann der Geist darüberkommen und diese Arbeit gliedern. Aber im Verlauf kann sich dasjenige, was Sie nun fassen wollen als einen zusammenhängenden wirtschaftlichen Prozess, einfach entfernen vom Naturprodukt. Es kann in bloßer Gliederung, in bloßer Einteilung der Arbeit bestehen.
+
+57| Frage: Wenn aber die Entwertung durch Arbeit dazukommt?
+
+58| Rudolf Steiner: Entwertung ist nur für den Wert negativ. In Bezug auf das Konsumfähigmachen gehen Sie nicht zurück. Sie gehen nur zurück in Bezug auf die Werterteilung. Bemerkung: In Bezug auf das Konsumfähigmachen ist eben doch ein Rückgang von einem höheren Prozess zu einem niedrigeren vorhanden.
+
+59| Rudolf Steiner: Sie wickeln zuerst die Spule auf. Dazu ist Arbeit nötig. Da haben Sie einen Wert gebildet. Und jetzt wickeln Sie die Spule ab. Da zerstören Sie den Wert. Wenn Sie aber die Sache betrachten, so werden Sie finden, dass ein konsumfähiges Produkt bis zu der Zerstörung entstanden ist, und nachher ist das Endziel der Arbeit wieder ein konsumfähiges Produkt. Bei der Arbeit handelt es sich darum, ein naturgegebenes Ding konsumfähig zu machen. Sie haben eben nur einen Unterkonsum eingeschaltet. Sie brauchen so und so viele solcher Vorgänge, um sie von anderen Vorgängen konsumieren zu lassen. Bei diesem Konsumieren, wo die Entwertung stattfinden muss, wird eine notwendige Arbeit geleistet. Bemerkung: Nutzlose Arbeit muss eben als Arbeit bezeichnet werden, weil deren Produkt bis zur Konsumfähigkeit gebracht worden ist.
+
+60| Rudolf Steiner: Wenn Sie den Begriff der volkswirtschaftlichen Arbeit haben wollen, so müssen Sie ihn so definieren, aber es ist der Begriff der volkswirtschaftlichen Arbeit noch nicht ein Wert. Es ist nur die Arbeit definiert. Es handelt sich durchaus nicht in der Volkswirtschaft darum, volkswirtschaftliche Arbeiten anzubringen, sondern Werte zu erzeugen. X: Der Unterrichtende verrichtet auch Arbeit.
+
+61| Rudolf Steiner: Das ist die Frage. Das ist tatsächlich nicht so einfach zu beantworten. X: Ich meine die freie geistige Tätigkeit.
+
+62| Rudolf Steiner: Diese gehört in das Gebiet der Entwertung, aber nicht der Entwertung durch Arbeit. X: Aber in die Zukunft hinein ist er der Produzierende. Zu diesem Zweck leistet er Arbeit.
+
+63| Rudolf Steiner: Da bekommen wir die Möglichkeit, immer weiter den Begriff der Arbeit zu verfolgen. Man muss natürlich den Unterricht im höchsten Maß als einen volkswirtschaftlichen Wert bezeichnen, aber es fragt sich, ob man, wenn man anfängt den Begriff der Arbeit im volkswirtschaftlichen Prozess sich vorzustellen, dann von diesem Begriff noch irgendetwas festhalten kann, wenn man den Unterricht Arbeit nennt. Arbeit wird natürlich schon verrichtet, indem der Unterrichtende spricht, herumgeht, sich abnutzt. Es wird eine Art von Arbeit verrichtet. Aber die ist nicht das, was in den volkswirtschaftlichen Prozess einfließt. In diesen fließt seine organisierende Tätigkeit ein, die nicht einmal in Zusammenhang ist mit dem, was er als Arbeit verrichtet. Daher ist die Arbeit als Unterricht eine so verschiedene. Ein Zappelfritz kann viel Arbeit verrichten durch Zappeln. Ein anderer kann viel Arbeit verrichten auch durch Durchhauen. Der aber, der mit gewissem ruhigem Takt den Unterricht erteilt, wird auch eine Arbeit verrichten. Aber die ist es nicht, die in den volkswirtschaftlichen Prozess hineingeht, sondern es ist seine freie geistige Wirksamkeit. Bemerkung: Auch bei der Arbeitsleistung strengt sich der eine viel an und erreicht wenig, der andere strengt sich wenig an und erreicht viel.
+
+64| Rudolf Steiner: Da haben wir auch schon relativ sich befreiende Arbeit. Wir haben auf der einen Seite tatsächlich an das Objekt gebundene Arbeit. Die wird immer freier vom Objekt. Bei der freien Geistigkeit ist sie ganz losgelöst vom Objekt. Und das, was der Betreffende «arbeitet», ist irrelevant. Die Arbeit des Lehrers ist für den volkswirtschaftlichen Prozess nicht das, was für ihn im volkswirtschaftlichen Prozess weiter in Betracht kommt. Seine Kapazität, seine Bildung, alles andere kommt volkswirtschaftlich in Betracht, nur nicht was er als Arbeit verrichtet.
+
+65| Frage: Warum ist die freie geistige Tätigkeit entwertend?
+
+66| Rudolf Steiner: Sie ist entwertend in dem Sinn, dass sie dasjenige, was auf der einen Seite an Werten gebildet wird, wiederum aufhebt. Die Römer haben eine sehr feine instinktive Volkswirtschaft gehabt - nur war das für einen anderen Volkscharakter passend, indem sie nicht allein von Brot gesprochen haben, sondern von Brot und Spielen. Und sie haben beides, Brot und Spiele, eingerechnet in dasjenige, was in den sozialen Organismus hineinkommen soll von ihrem Standpunkt aus. Sie sagten sich: Ganz genau wie, wenn ich einen Laib Brot erzeuge, er wiederum verschwinden muss – er muss wirklich verschwinden, so muss dasjenige, was an Arbeit für die Broterzeugung da ist, tatsächlich im sozialen Prozess wiederum verschwinden durch das, was an Arbeit verwendet wird, um das Spiel zu verrichten. Es ist ein gegenseitiges Aufzehren, wie überall, wo Organismus ist, ein wechselseitiges Auf- und Abbauen ist. So auch hier. Sie können also tatsächlich sehen, wie die geistige Betätigung, die auf der anderen Seite geleistet wird, nicht den Prozess fortsetzt, sondern ihn zurückführt. Deshalb habe ich es immer als Kreislauf gezeichnet. Natur, Arbeit, Kapital. – Natur, Arbeit, Kapital kehrt wiederum in sich zurück und der ganze Prozess ist aufgehoben, wenn es wiederum zu der Natur zurückgekommen ist.
+
+67| Frage: Kann man auch die privatwirtschaftliche Arbeit miteinbegreifen in den volkswirtschaftlichen Begriff?
+
+68| Rudolf Steiner: Muss man auch! Innerhalb der Privatwirtschaft ganz gewiss.
+
+69| Einwand: Ich meine: ich kann die Privatarbeit nicht in den Begriff der Volkswirtschaft einbeziehen.
+
+70| Rudolf Steiner: Das rührt davon her, dass hier eine Undeutlichkeit im Wort ist. Es liegt die Undeutlichkeit vor, dass man Volkswirtschaft schon eine Zusammenfassung von Privatwirtschaften nennt. Man müsste einen übergeordneten Begriff haben.
+
+71| Frage: Ist Arbeit nur die Tätigkeit, die auf ein ganz bestimmtes Objekt zu richten ist, um es konsumfähig zu machen?
+
+72| Rudolf Steiner: Das ist der Fall. Man hat die Aufgabe, im Volkswirtschaftlichen nicht einfach, ich möchte sagen, abstrakt philosophische Definitionen zu bilden. Das ist unter Umständen etwas, was man sich zum philosophischen Zeitvertreib oder zur Trainierung gut auferlegen kann. Aber in der Volkswirtschaft handelt es sich nicht darum, richtige Begriffe zu bilden, sondern Begriffe, die man anwenden kann. Gerade solche Leute, wie der Nationalökonom Lorenz von Stein, haben wunderbar scharfsinnige Begriffe gebildet; aber eine ganze Menge – kann man sagen – interessiert nur den Wirtschaftsphilosophen. Sie haben keine volkswirtschaftliche Anwendung.
+
+
+---
+ragkeep: lectures/rudolf-steiner-ga-vortrag-verzeichnis.yaml#id=19220803c
+---
