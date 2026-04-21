@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400&display=swap");
 
 :root {
-  --book-bg: #ffffff;
-  --book-fg: #0b1220;
+  --book-bg: #d5e7ff;
+  --book-fg: #c5d5f9;
+  --book-header: #e2edf9;
   --book-quote: #3015b4;
   --book-italics: #9b0909;
   --book-p-num: #666666;
@@ -41,9 +42,10 @@ body.book-body { margin: 0; }
   margin: 0 0 1rem;
   letter-spacing: -0.01em;
 }
+h1, h2, h3, h4, h5, h6 { color: var(--book-header); }
 
-.book-title { font-size: clamp(2rem, 4vw, 2.8rem); }
-.book-chapter-title { font-size: clamp(1.55rem, 3.2vw, 2.15rem); }
+.book-title { font-size: clamp(1.11rem, 2.21vw, 1.55rem); }
+.book-chapter-title { font-size: clamp(1.47rem, 3.04vw, 2.04rem); }
 .book-subheading { font-size: clamp(1.2rem, 2.4vw, 1.55rem); margin-top: 2rem; }
 
 .book-paragraph { margin: 0 0 1.05rem; }
@@ -223,7 +225,8 @@ nav.toc details[open] .toc-arrow-closed { display: none !important; }
 
 html[data-theme="dark"] {
   --book-bg: #0f1117;
-  --book-fg: #e9ecf3;
+  --book-fg: #c5d5f9;
+  --book-header: #e2edf9;
   --book-quote: #76b2f7;
   --book-italics: #fec8d2;
   --book-p-num: #909090;
@@ -235,6 +238,8 @@ html[data-theme="dark"] {
 
 html[data-size="l"] .book-main { font-size: 1.28rem; }
 html[data-size="xl"] .book-main { font-size: 1.42rem; }
+html[data-size="xxl"] .book-main { font-size: 1.56rem; }
+html[data-size="xxxl"] .book-main { font-size: 1.7rem; }
 
 @media (max-width: 640px) {
   .book-main { padding: 52px 14px 46px; }

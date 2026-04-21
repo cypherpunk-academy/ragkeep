@@ -2,6 +2,8 @@
   var d = document.documentElement;
   var themeBtn = document.getElementById("themeToggle");
   var sizeBtn = document.getElementById("sizeToggle");
+  var sizeOrder = ["base", "l", "xl", "xxl", "xxxl"];
+  var sizeLabels = { base: "A", l: "A+", xl: "A++", xxl: "A+++", xxxl: "A++++" };
 
   function getTheme(){ return d.getAttribute("data-theme") || "default"; }
   function setTheme(t){
@@ -24,7 +26,8 @@
   function updateSize(){
     if (!sizeBtn) return;
     var s = getSize();
-    sizeBtn.textContent = (s === "base") ? "A" : (s === "l" ? "A+" : "A++");
+    if (sizeOrder.indexOf(s) === -1) s = "base";
+    sizeBtn.textContent = sizeLabels[s] || "A";
     sizeBtn.setAttribute("aria-pressed", String(s !== "base"));
   }
   try {
@@ -42,7 +45,9 @@
   if (sizeBtn) {
     sizeBtn.addEventListener("click", function(){
       var s = getSize();
-      var next = (s === "base") ? "l" : (s === "l" ? "xl" : "base");
+      var idx = sizeOrder.indexOf(s);
+      if (idx === -1) idx = 0;
+      var next = sizeOrder[(idx + 1) % sizeOrder.length];
       setSize(next);
     });
   }

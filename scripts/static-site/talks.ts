@@ -82,9 +82,12 @@ function talkPlainExcerptFromBody(body: string, maxLen: number): string {
 
 function renderTalkItalicLine(text: string): string {
   const t = String(text || "");
-  const parts = t.split(/(\*[^*]+\*)/g);
+  const parts = t.split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
   return parts
     .map((p) => {
+      if (p.startsWith("**") && p.endsWith("**") && p.length > 4) {
+        return `<strong>${escapeHtml(p.slice(2, -2))}</strong>`;
+      }
       if (p.startsWith("*") && p.endsWith("*") && p.length > 2) {
         return `<em>${escapeHtml(p.slice(1, -1))}</em>`;
       }
@@ -302,14 +305,22 @@ function _renderSummaryCollapsed(
 ): string {
   const segTitle = c.segment_title || info?.segment_title || "";
   const displayTitle = formatTalkSourceTitleForDisplay(c.source_title || "", info?.source_title, sourceTypeKey);
+  const isBookType = isTalkBookFamilySourceType(sourceTypeKey);
   const thumb = _renderTalkCover(c, info, "thumb", undefined, displayTitle);
-  const titleSmall = `<span class="talk-sources-summary-title">${escapeHtml(displayTitle)}</span>`;
+  const typeLabel = formatTalkSourceTypeLabel(sourceTypeKey);
+  const typeClass = isBookType ? " talk-sources-summary-type--book" : "";
+  const titleClass = isBookType ? " talk-sources-summary-title--book" : "";
+  const chapterClass = isBookType ? " talk-sources-summary-chapter--book" : "";
+  const typeSmall = typeLabel
+    ? `<span class="talk-sources-summary-type${typeClass}">${escapeHtml(typeLabel)}</span>`
+    : "";
+  const titleSmall = `<span class="talk-sources-summary-title${titleClass}">${escapeHtml(displayTitle)}</span>`;
   const chapterPart = segTitle
-    ? `<span class="talk-sources-summary-chapter-line"><span class="talk-sources-summary-chapter">${formatTalkRichInlineHtml(segTitle)}</span></span>`
+    ? `<span class="talk-sources-summary-chapter-line"><span class="talk-sources-summary-chapter${chapterClass}">${formatTalkRichInlineHtml(segTitle)}</span></span>`
     : "";
   const textStack =
     `<span class="talk-sources-summary-text-stack">` +
-    `<span class="talk-sources-summary-meta">${titleSmall}</span>` +
+    `<span class="talk-sources-summary-meta">${typeSmall}${titleSmall}</span>` +
     chapterPart +
     `</span>`;
   const topRow =
@@ -404,13 +415,6 @@ function _citationRawSourceTypeKey(c: TalkCitation, info: ChunkInfo | undefined)
   return "";
 }
 
-/** Anzeige-Typ: aus Zitation, Chunk-Metadaten oder Vortrag über lectureCover. */
-function _citationSourceTypeLabel(c: TalkCitation, info: ChunkInfo | undefined): string {
-  const k = _citationRawSourceTypeKey(c, info);
-  if (!k) return "";
-  return formatTalkSourceTypeLabel(k);
-}
-
 /** Relevanz als 0–1 und Balkenbreite 0–100; fehlend → null. */
 function _relevanceScore01(rel: number | undefined): { score: number; label: string } | null {
   if (rel == null || !Number.isFinite(rel)) return null;
@@ -457,12 +461,8 @@ export function renderQuellenDetails(citations: TalkCitation[], chunkIndex?: Map
     const authorEl = author
       ? `<div class="talk-source-author">${escapeHtml(author)}</div>`
       : "";
-    const typeLabel = _citationSourceTypeLabel(c, info);
-    const typeEl = typeLabel
-      ? `<div class="talk-source-type">${escapeHtml(typeLabel)}</div>`
-      : "";
     const titlePlain = `<div class="talk-source-book-title talk-source-book-title--plain">${escapeHtml(displaySourceTitle)}</div>`;
-    const bookInfo = `<div class="talk-source-info">${chapterRow}${authorEl}${typeEl}${titlePlain}</div>`;
+    const bookInfo = `<div class="talk-source-info">${chapterRow}${authorEl}${titlePlain}</div>`;
 
     const conceptLike = isTalkConceptSourceType(sourceTypeKey);
     const expandedSnippet = conceptLike ? "" : _snippetForCitation(c, info, 900);
@@ -676,7 +676,7 @@ function talkDetailPageHtml(talk: TalkData, agentName: string, chunkIndex?: Map<
 <main class="book-main">
   <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
   <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
-  <p class="meta-quiet"><a href="../talks.html" class="back-link">← ${agentEscaped} · Talks</a></p>
+  <p class="meta-quiet"><a href="../talks.html" class="back-link">← ${agentEscaped} · Gespräche</a></p>
   <h1 class="book-title">${title}</h1>
   <article class="talk-prose">${bodyHtml}</article>
 </main>

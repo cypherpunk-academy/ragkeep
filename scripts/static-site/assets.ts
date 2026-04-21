@@ -1044,8 +1044,11 @@ const bookCss = `
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400&display=swap");
 
 :root {
-  --book-bg: #ffffff;
-  --book-fg: #0b1220;
+  --book-bg: #d5e7ff;
+  --book-fg: #000000;
+  --book-header: #000000;
+  --book-back-link: #e8f0ff;
+  --talk-book-meta: #6c6ce7;
   --book-quote: #3015b4;
   --book-italics: #9b0909;
   --book-p-num: #666666;
@@ -1084,16 +1087,17 @@ body.book-body { margin: 0; }
   margin: 0 0 1rem;
   letter-spacing: -0.01em;
 }
+h1, h2, h3, h4, h5, h6 { color: var(--book-header); }
 
-.book-title { font-size: clamp(2rem, 4vw, 2.8rem); }
-.book-chapter-title { font-size: clamp(1.55rem, 3.2vw, 2.15rem); }
+.book-title { font-size: clamp(1.11rem, 2.21vw, 1.55rem); }
+.book-chapter-title { font-size: clamp(1.47rem, 3.04vw, 2.04rem); }
 .book-subheading { font-size: clamp(1.2rem, 2.4vw, 1.55rem); margin-top: 2rem; }
 
 .talk-prose { margin-top: 1.25rem; }
 .talk-prose .talk-turn {
   font-family: var(--font-header);
   font-weight: 500;
-  font-size: clamp(1.05rem, 2.1vw, 1.3rem);
+  font-size: clamp(1rem, 2vw, 1.24rem);
   margin: 1.65rem 0 0.65rem;
   padding-bottom: 0.2rem;
   border-bottom: 1px solid rgba(127, 127, 127, 0.22);
@@ -1191,12 +1195,28 @@ body.book-body { margin: 0; }
   flex: 1;
 }
 .talk-sources-summary-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.05rem;
   min-width: 0;
   line-height: 1.35;
+}
+.talk-sources-summary-type {
+  font-size: 0.68em;
+  font-style: italic;
+  letter-spacing: 0.03em;
+  color: color-mix(in srgb, var(--text) 38%, transparent);
+}
+.talk-sources-summary-type--book {
+  color: var(--talk-book-meta);
 }
 .talk-sources-summary-title {
   font-size: 0.72em;
   color: color-mix(in srgb, var(--text) 52%, transparent);
+}
+.talk-sources-summary-title--book {
+  color: var(--talk-book-meta);
 }
 .talk-sources-summary-sep {
   opacity: 0.55;
@@ -1206,6 +1226,9 @@ body.book-body { margin: 0; }
   font-size: 0.78em;
   color: color-mix(in srgb, var(--text) 42%, transparent);
   letter-spacing: 0.04em;
+}
+.talk-sources-summary-chapter--book {
+  color: var(--book-header);
 }
 .talk-sources-summary-gap {
   opacity: 0.45;
@@ -1553,6 +1576,13 @@ a.talk-source-anriss-link:focus-visible {
 
 q { color: var(--book-quote); }
 i, em { color: var(--book-italics); font-style: italic; }
+.back-link {
+  color: var(--book-back-link);
+  text-decoration: none;
+}
+.back-link:hover {
+  text-decoration: underline;
+}
 
 .p-num {
   color: var(--book-p-num);
@@ -1724,7 +1754,9 @@ nav.toc details[open] .toc-arrow-closed { display: none !important; }
 
 html[data-theme="dark"] {
   --book-bg: #0f1117;
-  --book-fg: #d9e2f6;
+  --book-fg: #c5d5f9;
+  --book-header: #e2edf9;
+  --book-back-link: #e8f0ff;
   --book-quote: #76b2f7;
   --book-italics: #fec8d2;
   --book-p-num: #909090;
@@ -1736,6 +1768,8 @@ html[data-theme="dark"] {
 
 html[data-size="l"] .book-main { font-size: 1.28rem; }
 html[data-size="xl"] .book-main { font-size: 1.42rem; }
+html[data-size="xxl"] .book-main { font-size: 1.56rem; }
+html[data-size="xxxl"] .book-main { font-size: 1.7rem; }
 
 @media (max-width: 640px) {
   .book-main { padding: 52px 14px 46px; }
@@ -1748,6 +1782,8 @@ const readerJs = `
   var d = document.documentElement;
   var themeBtn = document.getElementById("themeToggle");
   var sizeBtn = document.getElementById("sizeToggle");
+  var sizeOrder = ["base", "l", "xl", "xxl", "xxxl"];
+  var sizeLabels = { base: "A", l: "A+", xl: "A++", xxl: "A+++", xxxl: "A++++" };
 
   function getTheme(){ return d.getAttribute("data-theme") || "default"; }
   function setTheme(t){
@@ -1770,7 +1806,8 @@ const readerJs = `
   function updateSize(){
     if (!sizeBtn) return;
     var s = getSize();
-    sizeBtn.textContent = (s === "base") ? "A" : (s === "l" ? "A+" : "A++");
+    if (sizeOrder.indexOf(s) === -1) s = "base";
+    sizeBtn.textContent = sizeLabels[s] || "A";
     sizeBtn.setAttribute("aria-pressed", String(s !== "base"));
   }
   try {
@@ -1788,7 +1825,9 @@ const readerJs = `
   if (sizeBtn) {
     sizeBtn.addEventListener("click", function(){
       var s = getSize();
-      var next = (s === "base") ? "l" : (s === "l" ? "xl" : "base");
+      var idx = sizeOrder.indexOf(s);
+      if (idx === -1) idx = 0;
+      var next = sizeOrder[(idx + 1) % sizeOrder.length];
       setSize(next);
     });
   }
