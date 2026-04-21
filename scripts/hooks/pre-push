@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# pre-push hook: build static site locally and deploy to gh-pages
+# Wird automatisch per `npm ci` installiert (prepare script in package.json)
+
+set -euo pipefail
+
+REMOTE="$1"
+MAIN_BRANCH_PATTERN="^refs/heads/(main|master)$"
+
+# Prüfen ob wir auf main/master pushen
+pushing_to_main=false
+while IFS=' ' read -r local_ref local_sha remote_ref remote_sha; do
+  if [[ "$remote_ref" =~ $MAIN_BRANCH_PATTERN ]]; then
+    pushing_to_main=true
+  fi
+done
+
+if [ "$pushing_to_main" = false ]; then
+  exit 0
+fi
+
+REPO_ROOT=$(git rev-parse --show-toplevel)
+REMOTE_URL=$(git remote get-url "$REMOTE")
+
+echo "▶ Building static site..."
+cd "$REPO_ROOT"
+npm run build:pages
+echo "✓ Build erfolgreich"
+
+echo "▶ Deploy zu gh-pages..."
+DEPLOY_MSG="deploy: $(git log -1 --format='%h %s')"
+
+TMP=$(mktemp -d)
+trap 'rm -rf "$TMP"' EXIT
+
+cp -r "$REPO_ROOT/site/." "$TMP/"
+cd "$TMP"
+git init -q
+git add -A
+git commit -q -m "$DEPLOY_MSG"
+git push -q "$REMOTE_URL" HEAD:gh-pages --force
+
+echo "✓ Deployed zu gh-pages"

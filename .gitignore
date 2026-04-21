@@ -47,7 +47,7 @@ __pycache__/
 
 tmp
 .build/
-site/data/
+site/
 *.log
 
 # Node dependencies
