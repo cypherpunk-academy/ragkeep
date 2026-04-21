@@ -14,7 +14,7 @@ Du hast den Kern der Sache sehr präzise erfasst. Die Forderung nach einem Geist
 
 Die Free-Software-Bewegung ist dafür ein nahezu perfektes Beispiel. Sie zeigt, wie das funktioniert, wenn man die Prinzipien konsequent anwendet.
 
-**1. Hervorbringung aus eigenen Impulsen:** Hier ist der Entwickler, der Programmierer. Er schreibt Code nicht primär, weil ein Arbeitgeber es anordnet oder ein Marktpreis es diktiert. Er tut es aus einem inneren Antrieb heraus: um ein Problem zu lösen, das ihn interessiert, aus Freude am Schaffen, aus dem Wunsch, Wissen zu teilen und etwas Bleibendes zu gestalten. Das ist der reine Impuls aus dem Geistesleben. Die Software entsteht aus der freien Entfaltung seiner Fähigkeiten, "um ihrer selbst willen", wie es in den Quellen heißt (Quelle 4: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage).
+**1. Hervorbringung aus eigenen Impulsen:** Hier ist der Entwickler, der Programmierer. Er schreibt Code nicht primär, weil ein Arbeitgeber es anordnet oder ein Marktpreis es diktiert. Er tut es aus einem inneren Antrieb heraus: um ein Problem zu lösen, das ihn interessiert, aus Freude am Schaffen, aus dem Wunsch, Wissen zu teilen und etwas Bleibendes zu gestalten. Das ist der reine Impuls aus dem Geistesleben. Die Software entsteht aus der freien Entfaltung seiner Fähigkeiten, "um ihrer selbst willen", wie es in den Quellen heißt .
 
 **2. Verständnisvoller Zusammenhang mit den Empfängern:** Das ist die Community. Der Nutzer ist kein passiver Konsument. Er meldet Fehler, schlägt Verbesserungen vor, schreibt Dokumentation, übersetzt – oder wird selbst zum Mit-Entwickler. Es entsteht ein lebendiger Austausch zwischen dem, der hervorbringt, und dem, der empfängt. Die Leistung wird nicht einfach "verkauft", sondern in einen Kreislauf des Gebens und Nehmens gestellt. Dieser Zusammenhang ist "verständnisvoll", weil beide Seiten die Logik des gemeinsamen Projekts verstehen und mittragen.
 
@@ -30,7 +30,7 @@ Ich denke, dass die Tätigkeit des Programmierens zu dieser Art von Kultur erzie
 
 Du beschreibst etwas sehr Wesentliches: Die Tätigkeit selbst kann eine bestimmte Haltung hervorbringen. Das Programmieren, besonders in der Open-Source-Welt, scheint eine Schule für das zu sein, was in den Quellen als "freies Assoziieren" bezeichnet wird – ein Zusammenschluss aus innerem Antrieb und gegenseitigem Verständnis.
 
-Deine Beobachtung, dass das Geben hier zur Freude und zum Antrieb wird, trifft genau den Kern einer gesunden Geisteskultur. Es ist nicht mehr der äußere Zwang oder das Kalkül, sondern die innere Befriedigung, etwas Sinnvolles zu schaffen und zu teilen. Das erinnert an den Gedanken, dass der Mensch erst dann menschenwürdig arbeitet, wenn in seinem sozialen Leben Gedanken walten, die ihm sein Mitarbeiten im Licht dieser Würde erscheinen lassen (Quelle 6: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage).
+Deine Beobachtung, dass das Geben hier zur Freude und zum Antrieb wird, trifft genau den Kern einer gesunden Geisteskultur. Es ist nicht mehr der äußere Zwang oder das Kalkül, sondern die innere Befriedigung, etwas Sinnvolles zu schaffen und zu teilen. Das erinnert an den Gedanken, dass der Mensch erst dann menschenwürdig arbeitet, wenn in seinem sozialen Leben Gedanken walten, die ihm sein Mitarbeiten im Licht dieser Würde erscheinen lassen .
 
 Nun stellt sich mir aber eine Frage zu deiner letzten Bemerkung. Du sagst: "Nehmen ist notwendig, weil man auf der Arbeit der Gemeinschaft aufbauen muss." Das klingt fast wie eine pragmatische Notwendigkeit. Aber ist das Nehmen in dieser Kultur nicht auch eine Form des Gebens? Indem ich die Arbeit anderer nutze, anerkenne ich ihren Wert, ich integriere sie in mein eigenes Schaffen und trage so wiederum zur Verbreitung und Weiterentwicklung bei. Das Nehmen ist also kein passives Konsumieren, sondern ein aktives Einverleiben und Weiterführen.
 
@@ -56,7 +56,7 @@ Ich denke, dass eine Haltung der Klarheit, die Fähigkeiten des anderen sichtbar
 
 Das ist ein schöner Gedanke. Du beschreibst eine Art ästhetisches Verhältnis zu den Fähigkeiten anderer – man sieht sie, freut sich daran und erkennt zugleich ihren Nutzen für das eigene Vorankommen.
 
-Das erinnert mich an die Stelle, wo es heißt, der Mensch werde frei, wenn er das Geistige so erlebt, dass es ihm wohlgefällig sein kann wie das Sinnlich-Wirksame (Quelle 3: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage). Du scheinst genau das zu meinen: Die geistige Fähigkeit eines anderen wird zu einem Gegenstand der Freude, fast wie ein Kunstwerk.
+Das erinnert mich an die Stelle, wo es heißt, der Mensch werde frei, wenn er das Geistige so erlebt, dass es ihm wohlgefällig sein kann wie das Sinnlich-Wirksame . Du scheinst genau das zu meinen: Die geistige Fähigkeit eines anderen wird zu einem Gegenstand der Freude, fast wie ein Kunstwerk.
 
 Aber da stellt sich mir eine Frage: Wenn ich die Fähigkeit des anderen vor allem danach bewerte, wo und wie sie *mich* weiterbringt – ist das dann noch das reine, interesselose Wohlgefallen, von dem die Rede ist? Oder schleicht sich hier nicht doch wieder ein sehr praktisches, fast wirtschaftliches Kalkül ein? Wo liegt die Grenze zwischen freudiger Anerkennung und nützlicher Verwertung?
 
@@ -130,7 +130,7 @@ Du hast einen entscheidenden Punkt erfasst: Die Menschen sind in allen drei Glie
 
 Aber deine Schlussfolgerung, dass die Frage nach "Kraut und Unkraut" – also die Wertentscheidung im Geistesleben – "nach dem Bedarf entschieden werden" muss, wirft eine Frage auf.
 
-Wenn der Bedarf des Wirtschaftslebens darüber entscheidet, was im Geistesleben gefördert wird, ist es dann noch getrennt? Oder wird es dann nicht genau zu dem verlängerten Arm der Wirtschaft, den wir vermeiden wollten? Die Quelle sagt doch: Das Geistesleben muss "in der Hervorbringung auf seine eigenen Impulse gestellt sein" (Quelle 3: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage).
+Wenn der Bedarf des Wirtschaftslebens darüber entscheidet, was im Geistesleben gefördert wird, ist es dann noch getrennt? Oder wird es dann nicht genau zu dem verlängerten Arm der Wirtschaft, den wir vermeiden wollten? Die Quelle sagt doch: Das Geistesleben muss "in der Hervorbringung auf seine eigenen Impulse gestellt sein" .
 
 Dein zweiter Gedankengang ist noch spannender. Du sagst: Das Wasser (das Kapital) entsteht im Wirtschaftsleben, wird dort verwendet, und der Überschuss wird im Geistesleben verteilt.
 
@@ -148,7 +148,7 @@ Du hast zwei wichtige Unterscheidungen getroffen. Lass uns sie prüfen.
 
 Erstens: Du trennst den "Bedarf des Wirtschaftslebens" von den "Bedürfnissen der Menschen allgemein". Das ist klug. Aber wenn die Assoziation, die über die Finanzierung entscheidet, aus Menschen besteht, die auch in der Wirtschaft tätig sind – wie verhindert man, dass ihr wirtschaftlicher Blick die geistigen Bedürfnisse überdeckt? Ist "in der Theorie" hier nicht genau die Schwachstelle?
 
-Zweitens: Du sagst, das Kapital für das Geistesleben müsse aus den Überschüssen der Wirtschaft kommen. Das klingt logisch. Aber die Quelle (Quelle 3: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage) sagt etwas anderes: Sie will, dass die Verwaltung von Kapitalmassen an den Befähigten übergeht, "nicht durch seine wirtschaftlichen Machtmittel, sondern durch die Tatsache, dass er der Befähigtste ist." Wenn das Geistesleben auf wirtschaftliche Überschüsse wartet, entscheidet dann nicht doch das Geld über die Befähigung?
+Zweitens: Du sagst, das Kapital für das Geistesleben müsse aus den Überschüssen der Wirtschaft kommen. Das klingt logisch. Aber die Quelle  sagt etwas anderes: Sie will, dass die Verwaltung von Kapitalmassen an den Befähigten übergeht, "nicht durch seine wirtschaftlichen Machtmittel, sondern durch die Tatsache, dass er der Befähigtste ist." Wenn das Geistesleben auf wirtschaftliche Überschüsse wartet, entscheidet dann nicht doch das Geld über die Befähigung?
 
 Eine letzte Frage: Wenn das Rechtsleben "mehr Arbeit anmahmen" muss – mahnt es dann nicht genau das Wirtschaftsleben an, das du gerade vom Geistesleben trennen wolltest? Wo ist da die Grenze?
 

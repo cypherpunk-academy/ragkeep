@@ -22,14 +22,14 @@ Nun zu deinem Punkt: Informationen.
 **1. Informationsungleichgewicht als Systemerzeugnis.**
 In einem vermischten System – dem Einheitsstaat – ist Geheimhaltung kein Betriebsunfall, sondern ein strukturelles Erfordernis. Warum? Weil Macht auf Kontrolle von Prozessen beruht, die nicht ihr eigenes Gebiet sind. Ein Wirtschaftsministerium, das Industriezweige lenkt, muss verhandeln, Absprachen treffen, Interessen ausbalancieren. Diese Verhandlungen sind per Definition nicht für die Öffentlichkeit bestimmt, weil sie nicht auf dem Prinzip der Gleichheit (Rechtsleben) oder der freien geistigen Auseinandersetzung (Geistesleben) beruhen, sondern auf Machtkalkül. Die daraus resultierende Intransparenz ist kein Zufall, sie ist das notwendige Schmiermittel des Systems.
 
-Die Quellen (Quelle 1: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage) und (Quelle 4: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage) zeigen das klar: Einzelmaßnahmen gegen Valuta-Zerrüttung sind sinnlos, solange das "Wesen des Wirtschaftens dasselbe bleibt". Dieses Wesen ist das vermischte System. Die Intransparenz ist ein Symptom dieses Wesens.
+Die Quellen  und  zeigen das klar: Einzelmaßnahmen gegen Valuta-Zerrüttung sind sinnlos, solange das "Wesen des Wirtschaftens dasselbe bleibt". Dieses Wesen ist das vermischte System. Die Intransparenz ist ein Symptom dieses Wesens.
 
 **2. Wirkungstheorie der Information: Was verändert welches Wissen?**
 Du sagst: Transparenz über wirtschaftliche Abläufe und Firmen-Politik-Beziehungen. Das ist eine bestimmte Art von Information. Sie zielt auf das **Rechtsleben**. Sie macht sichtbar, wo das Gleichheitsprinzip verletzt wird – wo also politische Entscheidungen nicht für alle gleich gelten, sondern für bestimmte wirtschaftliche Interessen getroffen werden.
 
 Diese Information allein befreit das Geistesleben nicht. Sie schafft die Voraussetzung dafür. Ein freies Geistesleben braucht nicht nur Zugang zu Fakten über Korruption. Es braucht die Freiheit, aus diesen Fakten eigene Schlüsse zu ziehen, sie zu interpretieren, daraus neue Ideen, Technologien, soziale Impulse zu entwickeln – ohne dass der Staat oder ein Wirtschaftskonzern diese Gedankenlinie unterdrücken oder kanalisieren kann.
 
-Das Zitat (Quelle 16: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage) ist hier entscheidend: "Für ein in dieser Art gestaltetes Wirtschaftsleben gibt es kein Parlamentarisieren. Es gibt nur das fachkundige und fachtüchtige Stehen in einem Betriebszweig..." Das bedeutet: Im eigentlichen Wirtschaftsleben (dem dritten Glied) geht es um sachliche Notwendigkeiten, die in Assoziationen verhandelt werden. Die Information, die dort zirkuliert, ist sachbezogen: Bedarf, Kapazitäten, Qualität. Nicht: politischer Einfluss.
+Das Zitat  ist hier entscheidend: "Für ein in dieser Art gestaltetes Wirtschaftsleben gibt es kein Parlamentarisieren. Es gibt nur das fachkundige und fachtüchtige Stehen in einem Betriebszweig..." Das bedeutet: Im eigentlichen Wirtschaftsleben (dem dritten Glied) geht es um sachliche Notwendigkeiten, die in Assoziationen verhandelt werden. Die Information, die dort zirkuliert, ist sachbezogen: Bedarf, Kapazitäten, Qualität. Nicht: politischer Einfluss.
 
 Die Information, die du forderst – Beziehungen zwischen Firmen und Politik – ist die Information, die das **vermischte** System sichtbar macht. Ihre Veröffentlichung ist der erste Schritt zur Trennung. Sie zeigt: Hier greift ein Bereich in einen anderen ein und verzerrt dessen Prinzip.
 
@@ -127,7 +127,7 @@ Das ist der Punkt, an dem die theoretische Trennung in der Praxis kollabiert. Es
 *   Sie nutzt es, um wirtschaftliche Vorteile zu erlangen (Wirtschaftsleben).
 *   Sie kann dieses Wissen und den daraus resultierenden Reichtum einsetzen, um politischen Einfluss zu kaufen (Rechtsleben).
 
-Die Quelle (Quelle 10: Nationalökonomischer Kurs.) spricht indirekt davon: Es geht um die Frage, ob "persönlich fähigere Leute" oder solche, die durch "andere Zusammenhänge" (wie Titel, Beziehungen) in das Wirtschaftsleben eingreifen. Geheime Verfahren sind ein solcher "anderer Zusammenhang". Sie schaffen eine undurchdringliche Barriere, hinter der sich alles Mögliche verbergen kann – Genialität oder Inkompetenz, echte Innovation oder bloße Ausbeutung einer Position.
+Die Quelle  spricht indirekt davon: Es geht um die Frage, ob "persönlich fähigere Leute" oder solche, die durch "andere Zusammenhänge" (wie Titel, Beziehungen) in das Wirtschaftsleben eingreifen. Geheime Verfahren sind ein solcher "anderer Zusammenhang". Sie schaffen eine undurchdringliche Barriere, hinter der sich alles Mögliche verbergen kann – Genialität oder Inkompetenz, echte Innovation oder bloße Ausbeutung einer Position.
 
 **3. Die strukturelle Lösung liegt nicht in einer Instanz, sondern in einem Verfahren.**
 Dein zweiter Gedankengang geht in die richtige Richtung: "Jeder ist auch im Geistesleben." Das ist entscheidend.

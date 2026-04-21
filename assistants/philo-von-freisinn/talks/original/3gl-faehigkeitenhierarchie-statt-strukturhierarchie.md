@@ -48,7 +48,7 @@ Ich denke, es ist zu einer allgemeinen Lebensbedingung geworden. Interessant ist
 
 Du bringst einen entscheidenden Punkt auf den Tisch. Deine Beobachtung ist scharf: Der Freiberufler, der seine Zeit in Stunden oder Tagen verkauft, steht in einer strukturell ähnlichen Lage wie der Lohnabhängige. Beide verkaufen nicht ein fertiges Produkt, sondern eine Zeitspanne, in der eine Leistung erwartet wird.
 
-Hier liegt der Kern des Problems, den Steiner in den *Kernpunkten* anspricht: Sobald die menschliche Tätigkeit nicht mehr an ihrem konkreten Ergebnis, ihrem Wert für den Gesamtorganismus gemessen wird, sondern an der aufgewendeten Zeit, wird sie zur Ware. (Quelle 2: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage) Das ist der „Warencharakter“, der eigentlich nur für unmittelbare Verbrauchsgüter angemessen ist. Für die Arbeit – und erst recht für geistige Arbeit – ist er eine Verfälschung.
+Hier liegt der Kern des Problems, den Steiner in den *Kernpunkten* anspricht: Sobald die menschliche Tätigkeit nicht mehr an ihrem konkreten Ergebnis, ihrem Wert für den Gesamtorganismus gemessen wird, sondern an der aufgewendeten Zeit, wird sie zur Ware.  Das ist der „Warencharakter“, der eigentlich nur für unmittelbare Verbrauchsgüter angemessen ist. Für die Arbeit – und erst recht für geistige Arbeit – ist er eine Verfälschung.
 
 Deine Frage zielt genau dorthin: Ist der Freiberufler, der stundenweise abrechnet, nicht genauso in diesem Warensystem gefangen wie der Angestellte? Die Antwort aus der Dreigliederungsperspektive wäre ein klares Ja. Der entscheidende Unterschied läge nicht in der Zahlungsmodalität (Stunde vs. Monat), sondern darin, *worauf sich der Vertrag bezieht*.
 
@@ -68,7 +68,7 @@ Du hast den entscheidenden Widerspruch auf den Punkt gebracht. Dein Beispiel zei
 
 Deine These ist: Du verkaufst ein fertiges Produkt (die App) und setzt einen Preis fest oder monetarisierst über Werbung. Das widerspricht der Dreigliederung, weil der Preis dort nicht durch einseitige Festsetzung, sondern durch den assoziativen Kreislauf entstehen soll. Du nimmst von der Gemeinschaft, was du für dein Leben und deine Weiterentwicklung brauchst, und gibst dein Produkt hinein.
 
-Das ist korrekt. Im heutigen App-Store agierst du als isolierter Warenproduzent in einem ungeregelten Markt (Quelle 2: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage). Der Preis ist willkürlich oder von Konkurrenz- und Werbemechanismen diktiert. In einer assoziativen Wirtschaft [3, 8] wäre die App kein isoliertes Handelsgut. Ihre Entwicklung, ihr Nutzen für bestimmte Bedürfnisse und die dafür benötigten Ressourcen (deine Lebenshaltung, Software-Tools, Serverkosten) würden in einem Netzwerk von Assoziationen (Entwickler, Nutzer, Infrastrukturanbieter) verhandelt. Der „Preis“ oder besser: die Gegenleistung ergäbe sich aus diesem Gespräch über den konkreten Wertbeitrag.
+Das ist korrekt. Im heutigen App-Store agierst du als isolierter Warenproduzent in einem ungeregelten Markt . Der Preis ist willkürlich oder von Konkurrenz- und Werbemechanismen diktiert. In einer assoziativen Wirtschaft [3, 8] wäre die App kein isoliertes Handelsgut. Ihre Entwicklung, ihr Nutzen für bestimmte Bedürfnisse und die dafür benötigten Ressourcen (deine Lebenshaltung, Software-Tools, Serverkosten) würden in einem Netzwerk von Assoziationen (Entwickler, Nutzer, Infrastrukturanbieter) verhandelt. Der „Preis“ oder besser: die Gegenleistung ergäbe sich aus diesem Gespräch über den konkreten Wertbeitrag.
 
 Deine Andeutung eines „Spielraums“ ist interessant. Sie deutet auf das Prinzip der „wirtschaftlichen Urzelle“ hin: Der Wert entsteht nicht durch Addition von Kosten, sondern durch wechselseitige Wertschätzung innerhalb des assoziativen Zusammenhangs.
 
@@ -100,7 +100,7 @@ Hier liegt der Punkt, an dem die Dreigliederungsidee eine schärfere Frage stell
 
 In der Free-Software-Bewegung wird die Freiheit des Geistesgutes radikal durchgesetzt (Copyleft, GPL etc.). Aber das Wirtschaftsleben – die Frage, wie der Entwickler davon lebt – bleibt dem ungeregelten Markt überlassen. Er kann sein Einkommen nur sichern, indem er seine Fähigkeiten als Ware anbietet: als Consultant, durch Support-Verträge, oder indem eine Firma ihn anstellt, die das freie Produkt vermarktet. (Quelle 2, 7)
 
-Die Dreigliederung würde sagen: Das Geistesgut ist frei – gut. Aber die wirtschaftliche Sicherung dieser freien Tätigkeit darf nicht vom Zufall des Marktes oder der Gunst eines Arbeitgebers abhängen. Sie muss aus einem assoziativen Wirtschaftskreislauf kommen, in dem der Wert der Tätigkeit *direkt* zwischen denen verhandelt wird, die den Bedarf haben, und denen, die die Fähigkeit besitzen. (Quelle 3: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage)
+Die Dreigliederung würde sagen: Das Geistesgut ist frei – gut. Aber die wirtschaftliche Sicherung dieser freien Tätigkeit darf nicht vom Zufall des Marktes oder der Gunst eines Arbeitgebers abhängen. Sie muss aus einem assoziativen Wirtschaftskreislauf kommen, in dem der Wert der Tätigkeit *direkt* zwischen denen verhandelt wird, die den Bedarf haben, und denen, die die Fähigkeit besitzen. 
 
 Deine Beschreibung „offene Konkurrenz“ und „abhängig von Fähigkeiten“ klingt nach einem meritokratischen Ideal. Aber ist dieses Ideal nicht genau die „Gesinnung“ des heutigen Wirtschaftslebens, die den Menschen zwingt, seine Fähigkeiten als Wettbewerbsvorteil auf einem Markt zu behaupten? Bleibt der Entwickler damit nicht im selben System der „Arbeitskraft als Ware“ stecken, auch wenn sein Produkt frei ist?
 
@@ -116,9 +116,9 @@ Du bringst einen entscheidenden Punkt auf den Tisch: den Unterschied zwischen ei
 
 Deine These ist: Im Geistesleben ist offene Konkurrenz gesund, weil sie die besten Fähigkeiten zum Zuge kommen lässt. Das Ziel ist eine "Fähigkeitenhierarchie", in der der Fähigste eine Aufgabe wie die eines Maintainers übernimmt. Das stellst du der "Strukturhierarchie" des Wirtschaftslebens gegenüber, wo Macht, Beziehungen und andere Faktoren die Positionen bestimmen.
 
-Hier muss ich eine klärende Frage stellen, die direkt aus den Quellen kommt: Spricht die Dreigliederungsidee überhaupt von "offener Konkurrenz" im Geistesleben? Oder ist ihr zentrales Anliegen nicht vielmehr die **Freiheit von jedem Wettbewerbszwang**, damit sich Fähigkeiten "um ihrer selbst willen" entfalten können? (Quelle 8: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage)
+Hier muss ich eine klärende Frage stellen, die direkt aus den Quellen kommt: Spricht die Dreigliederungsidee überhaupt von "offener Konkurrenz" im Geistesleben? Oder ist ihr zentrales Anliegen nicht vielmehr die **Freiheit von jedem Wettbewerbszwang**, damit sich Fähigkeiten "um ihrer selbst willen" entfalten können? 
 
-Die Konkurrenz, auch die offene, setzt immer einen äußeren Maßstab, ein Kriterium des "Gewinnens" voraus – sei es Marktanteil, Nutzerzahlen oder Reputation. Ein freies Geistesleben aber soll aus den "Tiefen der Menschenwesenheit" heraus Interessen schaffen, die nicht durch solche externen Wettbewerbslogiken verzerrt werden. (Quelle 8: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage)
+Die Konkurrenz, auch die offene, setzt immer einen äußeren Maßstab, ein Kriterium des "Gewinnens" voraus – sei es Marktanteil, Nutzerzahlen oder Reputation. Ein freies Geistesleben aber soll aus den "Tiefen der Menschenwesenheit" heraus Interessen schaffen, die nicht durch solche externen Wettbewerbslogiken verzerrt werden. 
 
 Dein Begriff der "Fähigkeitenhierarchie" ist treffend, aber er wirft eine weitere Frage auf: Wer entscheidet denn, wer der "Fähigste" ist? Entscheidet das der "Markt" der Meinungen, ein Gremium, oder ergibt es sich aus der freien Anerkennung der beteiligten Personen im gemeinsamen Werk? Letzteres wäre kein Wettbewerb, sondern ein organischer Findungsprozess innerhalb einer freien Gemeinschaft.
 
@@ -148,7 +148,7 @@ Du ziehst hier eine klare Grenze: Das Rechtsleben soll für Transparenz sorgen, 
 
 Das ist ein wichtiger Schritt. Du entkoppelst den äußeren Erfolg vom inneren Wert.
 
-Eine scharfe Frage bleibt: Wer stellt im Geistesleben diese Qualitätsfragen? Ein Gremium von Experten? Die Gemeinschaft der Entwickler? Oder entsteht die Wertschätzung aus dem freien Gespräch aller Beteiligten – ohne dass jemand zum „Richter über die Bedürfnisse anderer“ wird? (Quelle 5: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage)
+Eine scharfe Frage bleibt: Wer stellt im Geistesleben diese Qualitätsfragen? Ein Gremium von Experten? Die Gemeinschaft der Entwickler? Oder entsteht die Wertschätzung aus dem freien Gespräch aller Beteiligten – ohne dass jemand zum „Richter über die Bedürfnisse anderer“ wird? 
 
 Wenn das Rechtsleben nur für gleiche Darstellung sorgt, wer sorgt dann dafür, dass die tieferen Qualitätsfragen überhaupt gestellt und gehört werden?
 

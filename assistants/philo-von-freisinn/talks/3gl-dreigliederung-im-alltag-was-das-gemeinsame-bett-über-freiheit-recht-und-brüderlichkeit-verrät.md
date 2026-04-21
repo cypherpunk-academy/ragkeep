@@ -117,7 +117,7 @@ Ich denke, es ist ein reines Verhandeln, oder Schauen, was am besten geht. Wenn 
 
 Du beschreibst es als ein "reines Verhandeln". Das klingt nach einem Austausch von Positionen, bei dem man sich auf einen Kompromiss einigt – "was am besten geht".
 
-Aber ist das wirklich das, was im Wirtschaftsleben geschieht? Die Quelle (Quelle 4: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage) spricht von Assoziationen, die "auf der Grundlage der Dreigliederungsidee ruhen". Sie entstehen nicht durch Verhandeln von Standpunkten, sondern durch ein gemeinsames Erkennen der realen Bedürfnisse und der realen Möglichkeiten.
+Aber ist das wirklich das, was im Wirtschaftsleben geschieht? Die Quelle  spricht von Assoziationen, die "auf der Grundlage der Dreigliederungsidee ruhen". Sie entstehen nicht durch Verhandeln von Standpunkten, sondern durch ein gemeinsames Erkennen der realen Bedürfnisse und der realen Möglichkeiten.
 
 Meine Frage wäre also: Verhandelst du mit deiner Frau über eure *Ideen* für das Bett – oder erkundet ihr gemeinsam, was das Bett für euch beide *tatsächlich leisten* muss?
 

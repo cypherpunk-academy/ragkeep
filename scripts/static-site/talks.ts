@@ -14,6 +14,8 @@ export interface TalkData {
 }
 
 export interface TalkCitation {
+  /** 1-based reference number stored in the markdown (used for [N] bracket citations). */
+  index?: number;
   source_title: string;
   segment_title?: string;
   text?: string;
@@ -136,6 +138,7 @@ function formatTalkRichInlineHtml(raw: string): string {
 }
 
 const QUELLEN_REGEX = /<!--\s*quellen\s*\n([\s\S]*?)\n\s*-->/;
+const USAGE_REGEX = /<!--\s*usage\s*(\{[\s\S]*?\})\s*-->/gi;
 
 /** Extrahiert optional einen <!-- quellen [...] --> Block aus dem Segment-Text. */
 function parseQuellenBlock(segText: string): { citations: TalkCitation[]; cleanText: string } {
@@ -157,7 +160,7 @@ function _resolveLink(c: TalkCitation, chunkIndex?: Map<string, ChunkInfo>): str
   if (c.link) return c.link;
   if (!c.chunk_id || !chunkIndex) return undefined;
   const info = chunkIndex.get(c.chunk_id);
-  if (!info) return undefined;
+  if (!info || !info.bookDir) return undefined;
   // Talk pages are 3 levels deep: site/agent/{agent}/talks/{slug}.html
   const base = `../../../books/${encodeURIComponent(info.bookDir)}`;
   if (info.chapterFileName) {
@@ -301,7 +304,8 @@ function _renderTalkCover(
 function _renderSummaryCollapsed(
   c: TalkCitation,
   info: ChunkInfo | undefined,
-  sourceTypeKey: string
+  sourceTypeKey: string,
+  referenceNumber: number
 ): string {
   const segTitle = c.segment_title || info?.segment_title || "";
   const displayTitle = formatTalkSourceTitleForDisplay(c.source_title || "", info?.source_title, sourceTypeKey);
@@ -325,6 +329,7 @@ function _renderSummaryCollapsed(
     `</span>`;
   const topRow =
     `<span class="talk-sources-summary-top">` +
+    `<span class="talk-sources-ref-number">[${referenceNumber}]</span>` +
     `<span class="talk-sources-summary-item">${thumb}${textStack}</span>` +
     `</span>`;
   return `<span class="talk-sources-summary-inner">${topRow}</span>`;
@@ -336,12 +341,11 @@ function formatTalkSourceTypeLabel(raw: string): string {
     .trim()
     .toLowerCase();
   if (!k) return "";
+  if (k === "concept" || k === "concepts" || k === "begriff" || k === "begriffe") return "";
   if (isTalkBookFamilySourceType(k)) return formatTalkBookTypeLabel(k);
   const map: Record<string, string> = {
     quote: "Zitat",
     lecture: "Vortrag",
-    concept: "Begriff",
-    concepts: "Begriff",
     typology: "Typologie",
     typologies: "Typologie",
     summary: "Zusammenfassung",
@@ -368,7 +372,7 @@ export function isTalkConceptSourceType(raw: string): boolean {
   const k = String(raw || "")
     .trim()
     .toLowerCase();
-  return k === "concept" || k === "concepts";
+  return k === "concept" || k === "concepts" || k === "begriff" || k === "begriffe";
 }
 
 /** Titelzeile in Quellen: Sammel-„Liste von Begriffen“ → „Begriff“. */
@@ -411,8 +415,43 @@ function _citationRawSourceTypeKey(c: TalkCitation, info: ChunkInfo | undefined)
   if (fromCitation) return fromCitation.toLowerCase();
   const fromChunk = info?.source_type?.trim();
   if (fromChunk) return fromChunk.toLowerCase();
+  const fromTitle = (c.source_title || info?.source_title || "").trim();
+  if (LIST_OF_CONCEPTS_SOURCE_TITLE.test(fromTitle)) return "concept";
   if (info?.lectureCover) return "lecture";
   return "";
+}
+
+interface TalkUsageMeta {
+  prompt_tokens?: number;
+  completion_tokens?: number;
+  total_tokens?: number;
+  model?: string;
+  cost_usd?: number;
+  cost_eur?: number;
+}
+
+function formatUsageMetaHtml(usage: TalkUsageMeta): string {
+  const bits: string[] = [];
+  if (Number.isFinite(usage.total_tokens)) bits.push(`Gesamt: ${Number(usage.total_tokens).toLocaleString("de-DE")}`);
+  if (usage.model && String(usage.model).trim() !== "") bits.push(`Modell: ${escapeHtml(String(usage.model))}`);
+  if (Number.isFinite(usage.cost_eur)) bits.push(`EUR: ${Number(usage.cost_eur).toLocaleString("de-DE", { minimumFractionDigits: 2, maximumFractionDigits: 6 })}`);
+  if (bits.length === 0) return "";
+  return `<p class="talk-usage-meta">${bits.join(" · ")}</p>`;
+}
+
+function extractUsageMeta(text: string): { cleanText: string; usageHtml: string } {
+  let usageHtml = "";
+  const cleanText = String(text || "").replace(USAGE_REGEX, (_, json: string) => {
+    try {
+      const parsed = JSON.parse(json) as TalkUsageMeta;
+      const html = formatUsageMetaHtml(parsed);
+      if (!usageHtml && html) usageHtml = html;
+    } catch {
+      // ignore malformed usage payload
+    }
+    return "";
+  });
+  return { cleanText: cleanText.trim(), usageHtml };
 }
 
 /** Relevanz als 0–1 und Balkenbreite 0–100; fehlend → null. */
@@ -429,14 +468,16 @@ function _relevanceScore01(rel: number | undefined): { score: number; label: str
 export function renderQuellenDetails(citations: TalkCitation[], chunkIndex?: Map<string, ChunkInfo>): string {
   if (citations.length === 0) return "";
 
-  // Hide stale references: if chunkIndex is available and a chunk_id is not found, the chunk no longer exists.
+  // Hide stale references only when they have no explicit index (i.e. not text-cited).
+  // Text-cited refs (index present) must always be shown, even if the chunk is no longer in the index.
   const activeCitations = chunkIndex
-    ? citations.filter((c) => !c.chunk_id || chunkIndex.has(c.chunk_id))
+    ? citations.filter((c) => c.index != null || !c.chunk_id || chunkIndex.has(c.chunk_id))
     : citations;
 
   if (activeCitations.length === 0) return "";
 
-  const items = activeCitations.map((c) => {
+  const items = activeCitations.map((c, arrayIndex) => {
+    const referenceNumber = c.index ?? (arrayIndex + 1);
     const link = _resolveLink(c, chunkIndex);
     const info = c.chunk_id ? chunkIndex?.get(c.chunk_id) : undefined;
     const sourceTypeKey = _citationRawSourceTypeKey(c, info);
@@ -446,7 +487,7 @@ export function renderQuellenDetails(citations: TalkCitation[], chunkIndex?: Map
       sourceTypeKey
     );
     const segTitle = c.segment_title || info?.segment_title || "";
-    const summary = _renderSummaryCollapsed(c, info, sourceTypeKey);
+    const summary = _renderSummaryCollapsed(c, info, sourceTypeKey, referenceNumber);
 
     const cover = _renderTalkCover(c, info, "expanded", undefined, displaySourceTitle);
 
@@ -566,9 +607,12 @@ export function renderTalkBodyHtml(body: string, chunkIndex?: Map<string, ChunkI
     const isHuman = ["mensch", "user"].includes(heading.toLowerCase());
     if (!isHuman) {
       const { citations, cleanText } = parseQuellenBlock(rawRest);
-      const paragraphs = renderTalkParagraphs(cleanText);
+      const usage = extractUsageMeta(cleanText);
+      const paragraphs = renderTalkParagraphs(usage.cleanText);
       const quellen = renderQuellenDetails(citations, chunkIndex);
-      out.push(`<h2 class="talk-turn">${escapeHtml(heading)}</h2>${paragraphs}${quellen ? `\n${quellen}` : ""}`);
+      out.push(
+        `<h2 class="talk-turn">${escapeHtml(heading)}</h2>${paragraphs}${usage.usageHtml}${quellen ? `\n${quellen}` : ""}`
+      );
     } else {
       out.push(
         `<h2 class="talk-turn">${escapeHtml(heading)}</h2>${renderTalkParagraphs(rawRest)}`

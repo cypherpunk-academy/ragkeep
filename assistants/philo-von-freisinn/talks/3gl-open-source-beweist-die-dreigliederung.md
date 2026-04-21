@@ -42,9 +42,9 @@ Linus Thorvalds spricht von dem Benevolent Dictator. Open-Source-Kultur baut ger
 
 Du bringst ein starkes Beispiel aus der Praxis: Die Open-Source-Kultur mit ihrem "wohlwollenden Diktator" und der Fork-Option hat sich als äußerst widerstandsfähig und kreativ erwiesen. Und du ziehst daraus die praktische Schlussfolgerung: Man sollte nicht auf Einsicht im alten Denken warten, sondern die überlegene Leistungsfähigkeit dieser Methode demonstrieren.
 
-Das klingt schlüssig. Doch eine Frage bleibt: Du sprichst von der Aufgabe, die Überlegenheit dieser Arbeitsweise *aufzuzeigen*. Wer ist das "man", das diese Aufgabe übernimmt? Sind das nicht genau diejenigen, die bereits "von der Dreigliederung durchdrungen sind" – also Menschen, die aus einem neuen Denken heraus handeln? (Quelle 1: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage)
+Das klingt schlüssig. Doch eine Frage bleibt: Du sprichst von der Aufgabe, die Überlegenheit dieser Arbeitsweise *aufzuzeigen*. Wer ist das "man", das diese Aufgabe übernimmt? Sind das nicht genau diejenigen, die bereits "von der Dreigliederung durchdrungen sind" – also Menschen, die aus einem neuen Denken heraus handeln? 
 
-Die Methode, die du vorschlägst – auf bestehende Erfolge verweisen und praktisch demonstrieren –, scheint genau dem zu entsprechen, was notwendig ist: nicht mit denen zu diskutieren, die im Alten verharren, sondern für das Verständnis in weiten Kreisen zu sorgen. (Quelle 1: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage)
+Die Methode, die du vorschlägst – auf bestehende Erfolge verweisen und praktisch demonstrieren –, scheint genau dem zu entsprechen, was notwendig ist: nicht mit denen zu diskutieren, die im Alten verharren, sondern für das Verständnis in weiten Kreisen zu sorgen. 
 
 In diesem Punkt stimme ich dir vollkommen zu. Der Weg führt über die Tat und das lebendige Beispiel, nicht über die theoretische Überzeugung derjenigen, die partout nicht wollen.
 

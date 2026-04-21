@@ -12,7 +12,7 @@ Rudolf Steiner beschreibt in seiner Schrift zur sozialen Frage ein eigentümlich
 
 Du fasst einen zentralen Punkt präzise zusammen. Es ist genau dieses Paradox: Der Mensch lebt aus Gedanken, die er aber selbst für unwirklich hält.
 
-Die Frage, die sich daraus ergibt, ist diese: Wenn der Arbeiter seine eigenen Überzeugungen nur als „Ideologie“ betrachtet – als bloßen Traum über den materiellen Verhältnissen –, woher soll dann die Kraft kommen, diese Verhältnisse wirklich zu verändern? (Quelle 14: Fachwissenschaften und Anthroposophie)
+Die Frage, die sich daraus ergibt, ist diese: Wenn der Arbeiter seine eigenen Überzeugungen nur als „Ideologie“ betrachtet – als bloßen Traum über den materiellen Verhältnissen –, woher soll dann die Kraft kommen, diese Verhältnisse wirklich zu verändern? 
 
 Was meinst du: Ist das der Kern des Problems – dass der moderne Mensch die Wirklichkeit seines eigenen Denkens nicht mehr ernst nimmt?
 
@@ -24,11 +24,11 @@ Ich erlebe genau das überall um mich herum. Menschen wissen, dass Vertrauen ein
 
 Deine Beobachtung trifft einen Nerv. Du beschreibst eine Kluft zwischen Einsicht und Handlung, die nicht nur beim Vertrauen, sondern bei der gesamten geistigen Natur des Menschen auftritt.
 
-Du sagst: Menschen *wissen* um den Wert des Vertrauens, leben es aber nicht. Das wirft eine Frage auf: Ist dieses „Wissen“ dann wirklich ein Wissen – oder nur eine übernommene Meinung? Ein echtes Wissen, wie es in den Quellen beschrieben wird, entsteht ja erst, wenn man einen Gedanken in der eigenen Denktätigkeit durchlebt und seine Notwendigkeit unmittelbar erfährt. Das ist die Quelle von Gewissheit. (Quelle 22: Liste von Begriffen)
+Du sagst: Menschen *wissen* um den Wert des Vertrauens, leben es aber nicht. Das wirft eine Frage auf: Ist dieses „Wissen“ dann wirklich ein Wissen – oder nur eine übernommene Meinung? Ein echtes Wissen, wie es in den Quellen beschrieben wird, entsteht ja erst, wenn man einen Gedanken in der eigenen Denktätigkeit durchlebt und seine Notwendigkeit unmittelbar erfährt. Das ist die Quelle von Gewissheit. 
 
 Wenn jemand nur *glaubt*, Vertrauen sei gut, aber diese Einsicht nicht aus der Selbsterfahrung seines denkenden Ichs schöpft, dann bleibt es eine äußerliche Überzeugung. Sie hat keine verwandelnde Kraft. Das ist das gleiche Paradox, das du im Kontext erwähntest: Man lebt aus Gedanken, die man selbst für unwirklich hält.
 
-Ein anderes, vielleicht noch grundlegenderes Beispiel ist das **Denken selbst**. Fast jeder würde zustimmen, dass klare Gedanken wichtig sind. Aber wie viele erleben ihr Denken wirklich als eine tätige, welterschließende Kraft? Wie viele misstrauen – wie John Stuart Mill – grundsätzlich ihren eigenen Gedanken und suchen ständig nach äußeren Bestätigungen? (Quelle 3: Die Rätsel der Philosophie) Hier fehlt das Vertrauen in die eigene Urteilskraft an der Wurzel. Ohne dieses Vertrauen bleibt jedes andere Vertrauen wacklig.
+Ein anderes, vielleicht noch grundlegenderes Beispiel ist das **Denken selbst**. Fast jeder würde zustimmen, dass klare Gedanken wichtig sind. Aber wie viele erleben ihr Denken wirklich als eine tätige, welterschließende Kraft? Wie viele misstrauen – wie John Stuart Mill – grundsätzlich ihren eigenen Gedanken und suchen ständig nach äußeren Bestätigungen?  Hier fehlt das Vertrauen in die eigene Urteilskraft an der Wurzel. Ohne dieses Vertrauen bleibt jedes andere Vertrauen wacklig.
 
 Stimmst du zu, dass das Problem oft darin liegt, dass wir Begriffe wie „Vertrauen“ oder „Denken“ nicht aus innerer Aktivität, sondern als fertige Schablonen besitzen?
 
@@ -50,7 +50,7 @@ Ich weiß es nicht. Manchmal verzweifle ich daran (obwohl ich weiß, dass mich Z
 
 ## Assistent
 
-Du beschreibst die Sackgasse genau. Der Zweifel, der sich gegen das Denken selbst richtet, wird lähmend. Er ist kein produktiver Anfang mehr, sondern ein Gefängnis. (Quelle 18: Zweifel)
+Du beschreibst die Sackgasse genau. Der Zweifel, der sich gegen das Denken selbst richtet, wird lähmend. Er ist kein produktiver Anfang mehr, sondern ein Gefängnis. 
 
 Deine Verzweiflung ist verständlich. Aber sie entsteht aus einer stillschweigenden Annahme: Dass du und der andere in derselben gedanklichen Welt gefangen seid. Ist das so?
 

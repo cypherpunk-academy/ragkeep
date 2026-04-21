@@ -14,7 +14,7 @@ Du hast den Nerv getroffen. Dieser Satz ist der Ausgangspunkt. Die Empfindung de
 
 Die Verbindung sehe ich so: Ein menschenunwürdiges Dasein entsteht nicht zufällig. Es ist das direkte Ergebnis einer falschen, einheitsstaatlichen Ordnung [1, 3]. Wenn das Geistesleben nicht frei ist, erstickt es die menschliche Entfaltung – das fühlt sich unwürdig an. Wenn das Rechtsleben nicht auf Gleichheit beruht, schafft es Ungerechtigkeit – das fühlt sich unwürdig an. Wenn das Wirtschaftsleben nicht brüderlich assoziiert ist, erzeugt es Ausbeutung und Not – das fühlt sich unwürdig an.
 
-Die „Erschütterungen“ sind die kollektive Reaktion auf diese chronische Unwürdigkeit. Die Dreigliederung sagt: Um die Empfindung zu heilen, muss man die Struktur heilen. Nicht mit Einzelmaßnahmen (Quelle 5: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage), sondern indem man den Organismus in seine drei lebensnotwendigen, eigenständigen Glieder gliedert (Quelle 20: Liste von Begriffen).
+Die „Erschütterungen“ sind die kollektive Reaktion auf diese chronische Unwürdigkeit. Die Dreigliederung sagt: Um die Empfindung zu heilen, muss man die Struktur heilen. Nicht mit Einzelmaßnahmen , sondern indem man den Organismus in seine drei lebensnotwendigen, eigenständigen Glieder gliedert .
 
 Ist das der Schlüssel für dich: dass die Dreigliederung die strukturelle Ursache der empfundenen Unwürdigkeit benennt und auflöst?
 
@@ -266,7 +266,7 @@ Die Menschenwürde ist das Zentrale, das hatten wir ja ganz zu Beginn des Gespr�
 
 Du sagst: Es ist Zeit für den Menschen. Nicht für den Deutschen, den Muslim, den Manager oder den Flüchtling – sondern für den Menschen.
 
-Das ist ein starker Impuls. Aber lass mich das prüfen: Wenn du in Berlin diesen Willen zur Begegnung spürst – ist das nicht genau das, was Herman Grimm vor über hundert Jahren als die "Solidarität der sittlichen Überzeugungen aller Menschen" beschrieben hat? Er sagte, diese Gemeinschaft sei die uns alle verbindende Kirche, und nationale Unterschiede existierten hier bereits nicht mehr (Quelle 1: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage).
+Das ist ein starker Impuls. Aber lass mich das prüfen: Wenn du in Berlin diesen Willen zur Begegnung spürst – ist das nicht genau das, was Herman Grimm vor über hundert Jahren als die "Solidarität der sittlichen Überzeugungen aller Menschen" beschrieben hat? Er sagte, diese Gemeinschaft sei die uns alle verbindende Kirche, und nationale Unterschiede existierten hier bereits nicht mehr .
 
 Meine Frage: Ist dieser Wille, den du spürst, vielleicht nicht etwas Neues, sondern etwas sehr Altes – etwas, das immer da war, aber immer wieder von den Strukturen der Gruppen, Nationen und Funktionen erstickt wurde? Und wenn es jetzt "Zeit dafür" ist – was muss dann geschehen, damit dieser Wille nicht wieder in den nächsten Religionskrieg oder Gruppenkonflikt mündet, sondern endlich Gestalt annimmt?
 

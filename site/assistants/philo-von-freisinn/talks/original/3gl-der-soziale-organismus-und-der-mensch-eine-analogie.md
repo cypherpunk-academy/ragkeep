@@ -38,7 +38,7 @@ Das Rechtsleben kann nicht von sich heraus wissen, was Menschen brauchen, welche
 
 Du beschreibst hier einen klaren, dreistufigen Prozess: Das Geistesleben erkennt die Bedürfnisse und Fähigkeiten, das Rechtsleben setzt daraus – in demokratischer Abstimmung – einen verbindlichen Rahmen für die notwendige Arbeit, und das Wirtschaftsleben führt diese Arbeit dann aus.
 
-Das klingt schlüssig. Aber es wirft eine grundsätzliche Frage auf: Wenn das Rechtsleben auf dieser Grundlage „bestimmen“ kann, „wieviel in welcher Branche gearbeitet werden muss“, verwandelt es sich dann nicht selbst in eine zentrale Planungsinstanz für die Wirtschaft? Wo bleibt da die Eigenständigkeit des Wirtschaftslebens, das laut den Quellen „auf Assoziationen zu beruhen hat“ und in dem „bloß die Interessen der Warenerzeugung, des Warenkonsums und der Warenzirkulation walten“ sollen? (Quelle 11: Die Befreiung des Menschenwesens als Grundlage für eine soziale Neugestaltung.)
+Das klingt schlüssig. Aber es wirft eine grundsätzliche Frage auf: Wenn das Rechtsleben auf dieser Grundlage „bestimmen“ kann, „wieviel in welcher Branche gearbeitet werden muss“, verwandelt es sich dann nicht selbst in eine zentrale Planungsinstanz für die Wirtschaft? Wo bleibt da die Eigenständigkeit des Wirtschaftslebens, das laut den Quellen „auf Assoziationen zu beruhen hat“ und in dem „bloß die Interessen der Warenerzeugung, des Warenkonsums und der Warenzirkulation walten“ sollen? 
 
 Ist die Aufgabe des Rechtslebens wirklich, Produktionspläne zu erstellen – oder ist es vielmehr, den rechtlichen Rahmen zu setzen, innerhalb dessen die wirtschaftenden Assoziationen selbstständig und in direkter Abstimmung zwischen Produzenten und Konsumenten herausfinden, was und wie viel produziert werden muss? [3, 9]
 
@@ -62,9 +62,9 @@ Ich denke, dass die Lösung für diesen scheinbaren Widerspruch im Menschen selb
 
 Das ist ein entscheidender Punkt. Du vertraust darauf, dass die menschliche Natur selbst – das Herz, der Wille zum Helfen – den Ausgleich zwischen individueller Neigung und gesellschaftlichem Bedarf herstellt.
 
-Diese Haltung steht in einem interessanten Spannungsverhältnis zu den Quellen. Einerseits heißt es dort, dass der Mensch arbeitet, "wenn in seiner Seele der Gedanke keimt, der ihn zur Arbeit treibt" und er sein Dasein nur als menschenwürdig empfindet, "wenn in diesem Leben Gedanken walten, die ihm sein Mitarbeiten im Licht dieser Menschenwürde erscheinen lassen" (Quelle 2: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage). Das spricht für dein Vertrauen.
+Diese Haltung steht in einem interessanten Spannungsverhältnis zu den Quellen. Einerseits heißt es dort, dass der Mensch arbeitet, "wenn in seiner Seele der Gedanke keimt, der ihn zur Arbeit treibt" und er sein Dasein nur als menschenwürdig empfindet, "wenn in diesem Leben Gedanken walten, die ihm sein Mitarbeiten im Licht dieser Menschenwürde erscheinen lassen" . Das spricht für dein Vertrauen.
 
-Andererseits wird genau davor gewarnt, einfach auf die "Güte der Menschennatur" zu vertrauen und zu glauben, sie trete "von selbst zutage", wenn man nur die Einrichtungen verbessert (Quelle 14: Lucifer-Gnosis. Grundlegende Aufsätze zur Anthroposophie und Berichte aus). Gute Einrichtungen bleiben nur bestehen, "wenn die daran beteiligten Menschen ihrer inneren Natur nach dazu geneigt sind, sie zu erhalten".
+Andererseits wird genau davor gewarnt, einfach auf die "Güte der Menschennatur" zu vertrauen und zu glauben, sie trete "von selbst zutage", wenn man nur die Einrichtungen verbessert . Gute Einrichtungen bleiben nur bestehen, "wenn die daran beteiligten Menschen ihrer inneren Natur nach dazu geneigt sind, sie zu erhalten".
 
 Die Frage ist also: Reicht das natürliche Hilfsbedürfnis des Herzens aus – oder braucht es nicht doch eine bestimmte *Einrichtung*, einen sozialen Organismus, der dieses Bedürfnis erst weckt, kanalisiert und in produktive Bahnen lenkt? Ein Organismus, der verhindert, dass Menschen – trotz ihres guten Herzens – in Strukturen gefangen sind, die sie zu Egoismus zwingen?
 
@@ -80,7 +80,7 @@ Du fasst es gut zusammen: Es braucht Einrichtungen, die den Bedarf sichtbar mach
 
 Das wirft eine letzte, praktische Frage auf: Wer bestimmt, was eine "gute, funktionierende" Schule ist? Wer entscheidet über ihren Inhalt und ihre Methode? Der Staat, weil er das Gemeinwohl vertritt? Die Wirtschaft, weil sie die später benötigten Fähigkeiten kennt?
 
-Oder – und das ist der Kern der Dreigliederung – muss diese Entscheidung aus dem Geistesleben selbst kommen, aus dem freien Zusammenwirken derjenigen, die aus pädagogischer Einsicht und menschlicher Erfahrung heraus urteilen können? (Quelle 3: Die Kernpunkte der sozialen Frage)
+Oder – und das ist der Kern der Dreigliederung – muss diese Entscheidung aus dem Geistesleben selbst kommen, aus dem freien Zusammenwirken derjenigen, die aus pädagogischer Einsicht und menschlicher Erfahrung heraus urteilen können? 
 
 Wenn du dieser letzten Folgerung zustimmst, dann sind wir am Ende dieses Gedankengangs angelangt.
 

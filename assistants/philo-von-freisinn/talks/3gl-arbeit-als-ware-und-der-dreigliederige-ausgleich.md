@@ -10,7 +10,7 @@ Du bringst zwei Aussagen, die beide auf denselben Kern zielen: die Verwandlung d
 
 Deine erste Aussage beschreibt die Tatsache: Im kapitalistischen System wird alles zur Ware, auch die Arbeitskraft – und das wird als unwürdig empfunden. Die zweite Aussage stellt die entscheidende Frage: Warum *muss* das so sein? Liegt es in der Natur des Wirtschaftslebens selbst, dass es alles, was es berührt, zur Ware macht?
 
-Hier möchte ich nachhaken. Steiner sagt an einer Stelle: *"Das wirtschaftliche Glied des sozialen Organismus hat auch, wenn man es genauer betrachtet, die Tendenz in sich, den Menschen zu verbrauchen"* (Quelle 11: Die soziale Frage). Das klingt, als bestätige er deine zweite Aussage. Aber ist das die ganze Wahrheit? Bedeutet "Tendenz" hier ein unausweichliches Naturgesetz – oder eine Richtung, die korrigiert werden kann und muss?
+Hier möchte ich nachhaken. Steiner sagt an einer Stelle: *"Das wirtschaftliche Glied des sozialen Organismus hat auch, wenn man es genauer betrachtet, die Tendenz in sich, den Menschen zu verbrauchen"* . Das klingt, als bestätige er deine zweite Aussage. Aber ist das die ganze Wahrheit? Bedeutet "Tendenz" hier ein unausweichliches Naturgesetz – oder eine Richtung, die korrigiert werden kann und muss?
 
 ## User
 
@@ -120,7 +120,7 @@ Hier liegt eine entscheidende Frage: Kann das Rechtsleben – das auf Gleichheit
 
 Und wenn die Assoziation selbst entscheidet, wer das Geld bekommt – entscheidet sie dann nicht über etwas, das ihr nach der Dreigliederungsidee gar nicht gehört? Ein "Überschuss" wäre ja per Definition etwas, das über den vereinbarten Leistungsausgleich hinausgeht, also kein legitimer Teil des Wirtschaftskreislaufs mehr ist.
 
-Steiner sagt dazu: *"Alle 'Rechte' sind ausgeübt von dem der Wirtschaftsorganisation gleichstehenden, auf Gleichheit aller Menschen vor dem Gesetz beruhenden politischen Organismus. Alle geistigen Leistungen, einschließlich der technischen Ideen, sind in die freie, individuelle Verwaltung eines dritten gleichstehenden geistigen Organismus zu stellen."* (Quelle 8: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage)
+Steiner sagt dazu: *"Alle 'Rechte' sind ausgeübt von dem der Wirtschaftsorganisation gleichstehenden, auf Gleichheit aller Menschen vor dem Gesetz beruhenden politischen Organismus. Alle geistigen Leistungen, einschließlich der technischen Ideen, sind in die freie, individuelle Verwaltung eines dritten gleichstehenden geistigen Organismus zu stellen."* 
 
 Die Frage ist also: Wer hat überhaupt die *Legitimation*, über einen solchen "Rest" zu verfügen? Ist das nicht bereits ein Zeichen dafür, dass die Assoziation ihre primäre Aufgabe – die kalkulierte Preisbildung ohne Überschuss – noch nicht vollständig erfüllt?
 

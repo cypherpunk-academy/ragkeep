@@ -347,7 +347,7 @@ Du bringst jetzt einen entscheidenden Schritt: Das Rechtsleben holt sich seine M
 
 Aber da ist ein Haken. Du sagst: "Überschüssig ist, was über den Bedarf für Betriebserhalt und Wachstum hinausgeht." Wer bestimmt denn diesen Bedarf? Ist das nicht die ureigenste Aufgabe der wirtschaftenden Menschen in ihren Assoziationen? Die müssen doch selbst am besten wissen, wie viel Kapital sie für ihre Pläne brauchen.
 
-Wenn jetzt das Rechtsleben – selbst mit den besten Kriterien aus dem Geistesleben – diesen Bedarf festlegt und das "Übrige" abschöpft, ist es dann nicht der Herr über die Wirtschaft? Steht dann nicht genau das politische Prinzip wieder zwischen den wirtschaftenden Menschen und ihre Initiative, von dem die Quelle (Quelle 1: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage) spricht?
+Wenn jetzt das Rechtsleben – selbst mit den besten Kriterien aus dem Geistesleben – diesen Bedarf festlegt und das "Übrige" abschöpft, ist es dann nicht der Herr über die Wirtschaft? Steht dann nicht genau das politische Prinzip wieder zwischen den wirtschaftenden Menschen und ihre Initiative, von dem die Quelle  spricht?
 
 Ist die Lösung nicht eher, dass die Assoziationen selbst aus ihrem freien Urteil heraus entscheiden, was sie behalten und was sie als Schenkung an das Geistesleben weitergeben – und das Rechtsleben schützt nur diesen freien Raum?
 
@@ -445,7 +445,7 @@ Aber da ist eine Frage, die mich umtreibt. Du sprichst von "neuen Bankiers". Ein
 
 Wenn diese "neuen Bankiers" nun entscheiden, wohin das überschüssige Geld fließt – nämlich "an die richtige Stelle" –, wer entscheidet dann, was die richtige Stelle ist? Sind es ihre eigenen, freien Einsichten? Oder folgen sie einem von außen vorgegebenen Plan?
 
-Die Quelle (Quelle 2: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage) sagt etwas Entscheidendes: Die Übertragung von Produktionsmitteln (und damit auch von Kapital) soll nicht durch wirtschaftliche Machtmittel erfolgen, sondern "durch die Tatsache, dass er der Befähigtste ist". Das lässt sich aber nur verwirklichen, "wenn die Übertragung nach Gesichtspunkten erfolgt, die mit den wirtschaftlichen Machtmitteln nichts zu tun haben."
+Die Quelle  sagt etwas Entscheidendes: Die Übertragung von Produktionsmitteln (und damit auch von Kapital) soll nicht durch wirtschaftliche Machtmittel erfolgen, sondern "durch die Tatsache, dass er der Befähigtste ist". Das lässt sich aber nur verwirklichen, "wenn die Übertragung nach Gesichtspunkten erfolgt, die mit den wirtschaftlichen Machtmitteln nichts zu tun haben."
 
 Wenn deine neuen Bankiers nun mit dem überschüssigen Geld hantieren – also mit dem reinen Wirtschaftsmittel schlechthin –, wie können sie dann sicherstellen, dass ihre Entscheidung "nichts mit den wirtschaftlichen Machtmitteln zu tun hat"? Werden sie nicht unweigerlich zu einer neuen Art von Kapitalverwaltern, die aus ihrer Position heraus Macht ausüben?
 

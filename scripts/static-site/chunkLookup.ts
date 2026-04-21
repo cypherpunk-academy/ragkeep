@@ -362,9 +362,9 @@ function assembleChunkInfosFromMatchRows(
         bookDir = bookIdToDir.get(quotesMatch[1]) ?? null;
       }
     }
-    if (!bookDir) continue;
-
-    const book = booksById.get(bookDir);
+    // Non-book chunks (e.g. Begriff/concept, typology) have no bookDir but their text is
+    // still needed for display. Include them with empty link fields.
+    const book = bookDir ? booksById.get(bookDir) : undefined;
     const absHtmlDir = book?.absHtmlDir;
     const segmentId = String(meta.segment_id ?? "").trim();
     const raw: RawChunkInfo = {
@@ -394,7 +394,7 @@ function assembleChunkInfosFromMatchRows(
     }
 
     let absBookDirForManifest = book?.absBookDir ?? "";
-    if (!absBookDirForManifest || !fileExists(path.join(absBookDirForManifest, "book-manifest.yaml"))) {
+    if (bookDir && (!absBookDirForManifest || !fileExists(path.join(absBookDirForManifest, "book-manifest.yaml")))) {
       const p1 = path.join(repoRoot, "books", bookDir);
       if (fileExists(path.join(p1, "book-manifest.yaml"))) absBookDirForManifest = p1;
       else {
@@ -421,7 +421,7 @@ function assembleChunkInfosFromMatchRows(
       segment_title: String(meta.segment_title ?? "").trim(),
       text: chunkTextForDisplay(meta, r.source_id, r.text),
       source_index: raw.source_index,
-      bookDir,
+      bookDir: bookDir ?? "",
       bookId: bookIdFromManifest || null,
       paragraphTag,
       chapterFileName,

@@ -58,7 +58,7 @@ Du hast einen entscheidenden Punkt getroffen: Die Freiheit entfaltet sich *inner
 
 Du sagst: Der Chirurg muss die Gesetze kennen, aber dann aus seinen Fähigkeiten heraus handeln. Der Richter muss die Gesetze als Hintergrund nehmen, um die individuelle moralische Entwicklung zu beurteilen. Das klingt, als ob das Gesetz den Raum absteckt, und die individuelle Fähigkeit dann in diesem Raum frei agiert.
 
-Hier ist meine Frage, um das noch schärfer zu fassen: Woher nimmt der Chirurg oder der Richter in dem Moment der Entscheidung eigentlich den *Inhalt* dessen, was er tut? Aus dem Gesetz allein offenbar nicht – das gibt nur den Rahmen. Kommt der Inhalt dann aus seiner eigenen, freien moralischen Fantasie, wie es in Quelle (Quelle 4: Die Philosophie der Freiheit) heißt? Oder ist es etwas anderes?
+Hier ist meine Frage, um das noch schärfer zu fassen: Woher nimmt der Chirurg oder der Richter in dem Moment der Entscheidung eigentlich den *Inhalt* dessen, was er tut? Aus dem Gesetz allein offenbar nicht – das gibt nur den Rahmen. Kommt der Inhalt dann aus seiner eigenen, freien moralischen Fantasie, wie es in Quelle  heißt? Oder ist es etwas anderes?
 
 <!-- quellen
 [

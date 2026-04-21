@@ -1044,7 +1044,7 @@ const bookCss = `
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400&display=swap");
 
 :root {
-  --book-bg: #d5e7ff;
+  --book-bg: #eef5ff;
   --book-fg: #000000;
   --book-header: #000000;
   --book-back-link: #e8f0ff;
@@ -1150,6 +1150,14 @@ h1, h2, h3, h4, h5, h6 { color: var(--book-header); }
   gap: 0.35rem;
   min-width: 0;
 }
+.talk-sources-ref-number {
+  flex-shrink: 0;
+  opacity: 0.72;
+  font-size: 0.72em;
+  line-height: 1.25;
+  align-self: flex-start;
+  margin-top: 0.02em;
+}
 .talk-sources-summary-top::before {
   content: "▸ ";
   flex-shrink: 0;
@@ -1203,16 +1211,16 @@ h1, h2, h3, h4, h5, h6 { color: var(--book-header); }
   line-height: 1.35;
 }
 .talk-sources-summary-type {
-  font-size: 0.68em;
+  font-size: 0.58em;
   font-style: italic;
   letter-spacing: 0.03em;
-  color: color-mix(in srgb, var(--text) 38%, transparent);
+  color: #000000;
 }
 .talk-sources-summary-type--book {
-  color: var(--talk-book-meta);
+  color: #000000;
 }
 .talk-sources-summary-title {
-  font-size: 0.72em;
+  font-size: 0.58em;
   color: color-mix(in srgb, var(--text) 52%, transparent);
 }
 .talk-sources-summary-title--book {
@@ -1233,6 +1241,13 @@ h1, h2, h3, h4, h5, h6 { color: var(--book-header); }
 .talk-sources-summary-gap {
   opacity: 0.45;
   font-size: 0.85em;
+}
+.talk-usage-meta {
+  margin: 0.35rem 0 0.6rem;
+  font-family: var(--font-header);
+  font-size: 0.58em;
+  color: #9ca3af;
+  line-height: 1.35;
 }
 /* Expanded block */
 .talk-source-block {
@@ -1810,6 +1825,31 @@ const readerJs = `
     sizeBtn.textContent = sizeLabels[s] || "A";
     sizeBtn.setAttribute("aria-pressed", String(s !== "base"));
   }
+  function applyReferenceNumbers(){
+    var refs = d.querySelectorAll(".talk-sources-stack > .talk-sources");
+    for (var i = 0; i < refs.length; i++) {
+      var summaryTop = refs[i].querySelector(":scope > summary .talk-sources-summary-top");
+      if (!summaryTop) continue;
+      if (summaryTop.querySelector(".talk-sources-ref-number")) continue;
+      var refEl = document.createElement("span");
+      refEl.className = "talk-sources-ref-number";
+      refEl.textContent = "[" + (i + 1) + "]";
+      summaryTop.insertBefore(refEl, summaryTop.firstChild);
+    }
+  }
+  function hideConceptTypeLabels(){
+    var metas = d.querySelectorAll(".talk-sources-summary-meta");
+    for (var i = 0; i < metas.length; i++) {
+      var typeEl = metas[i].querySelector(".talk-sources-summary-type");
+      if (!typeEl) continue;
+      var titleEl = metas[i].querySelector(".talk-sources-summary-title");
+      var typeText = (typeEl.textContent || "").trim().toLowerCase();
+      var titleText = titleEl ? (titleEl.textContent || "").trim().toLowerCase() : "";
+      var isConceptType = typeText === "begriff" || typeText === "concept" || typeText === "concepts";
+      var isConceptTitle = titleText === "begriff";
+      if (isConceptType || isConceptTitle) typeEl.remove();
+    }
+  }
   try {
     var savedTheme = localStorage.getItem("readerTheme");
     if (savedTheme) d.setAttribute("data-theme", savedTheme);
@@ -1833,6 +1873,8 @@ const readerJs = `
   }
   updateTheme();
   updateSize();
+  hideConceptTypeLabels();
+  applyReferenceNumbers();
 })();
 `.trimStart();
 
