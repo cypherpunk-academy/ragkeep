@@ -5,11 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VORREDE ZUR NEUAUSGABE</title>
   <link rel="stylesheet" href="../../assets/book.css" />
+  <style>
+    .book-cover-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .book-cover-wrap .book-link-cover-img {
+      display: block;
+      width: auto;
+      height: 232px;
+      max-width: 184px;
+      border-radius: 6px;
+      object-fit: contain;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+    }
+  </style>
 </head>
 <body class="book-body">
 <main class="book-main">
   <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
   <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <div class="book-cover-wrap">
+    <img class="book-link-cover-img" src="../../assets/covers/4b8e4c2a-3f1b-4d2e-9c4a-8e4f4b2c3a1d.svg" alt="" loading="lazy" decoding="async" />
+  </div>
   <h1 class="book-title">VORREDE ZUR NEUAUSGABE</h1>
   <nav class="toc book-toc">
     <ul class="book-toc-list">

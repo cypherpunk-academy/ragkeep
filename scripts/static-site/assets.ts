@@ -561,9 +561,43 @@ const layoutCss = `
 
 .book-link {
   display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  padding: 12px;
+  align-items: start;
+}
+
+.book-link-media {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 92px;
+  min-width: 92px;
+}
+
+.book-link-cover-img {
+  display: block;
+  width: auto;
+  height: 116px;
+  max-width: 92px;
+  border-radius: 3px;
+  object-fit: contain;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.book-link-cover-placeholder {
+  display: block;
+  width: 92px;
+  height: 116px;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+}
+
+.book-link-body {
+  display: grid;
   grid-template-columns: 1fr;
   gap: 4px;
-  padding: 12px;
+  min-width: 0;
 }
 
 .lecture-card {
@@ -1214,10 +1248,10 @@ h1, h2, h3, h4, h5, h6 { color: var(--book-header); }
   font-size: 0.58em;
   font-style: italic;
   letter-spacing: 0.03em;
-  color: #000000;
+  color: color-mix(in srgb, var(--book-header) 78%, transparent);
 }
 .talk-sources-summary-type--book {
-  color: #000000;
+  color: color-mix(in srgb, var(--book-header) 78%, transparent);
 }
 .talk-sources-summary-title {
   font-size: 0.58em;

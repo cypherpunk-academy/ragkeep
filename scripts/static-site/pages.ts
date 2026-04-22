@@ -3,7 +3,8 @@ import type { Agent, Book } from "./types";
 import type { ConceptEntry } from "./concepts";
 import type { ChunkInfo } from "./chunkLookup";
 import { getConceptFileLabel, getTypologyFileLabel } from "./concepts";
-import type { TalkData } from "./talks";
+import type { TalkData, TalkCitation } from "./talks";
+import { renderQuellenDetails } from "./talks";
 import {
   type AgentLectureSets,
   countDistinctLectureViews,
@@ -13,6 +14,7 @@ import type { QuotesData } from "./quotes";
 import {
   escapeHtml,
   parseBookString,
+  readScalarFromManifest,
   renderInlineWithEmphasis,
   renderSummaryHtml,
   writeTextFile,
@@ -322,6 +324,7 @@ function pageShell(title: string, relAssetPrefix: string, content: string): stri
     <link rel="stylesheet" href="${relAssetPrefix}assets/styles.css?v=${v}" />
     <link rel="stylesheet" href="${relAssetPrefix}assets/layout.css?v=${v}" />
     <link rel="stylesheet" href="${relAssetPrefix}assets/dark.css?v=${v}" />
+    <link rel="stylesheet" href="${relAssetPrefix}assets/book.css?v=${v}" />
   </head>
   <body>
     <div class="site-shell">
@@ -397,16 +400,33 @@ export function generateHomePage(
 
 function renderBookRows(bookIds: string[], availableBooks: Map<string, Book>): string {
   if (bookIds.length === 0) return `<p class="empty-state">Keine Bücher in dieser Kategorie.</p>`;
+
+  const coverColor = (title: string): string => {
+    let h = 0;
+    for (let i = 0; i < title.length; i++) h = (h * 31 + title.charCodeAt(i)) >>> 0;
+    return `hsl(${h % 360}, 28%, 32%)`;
+  };
+
   const items = bookIds.map((bookId) => {
     const known = availableBooks.get(bookId);
     const parsed = parseBookString(bookId);
     const title = escapeHtml(known?.title || parsed.title || bookId);
     const author = escapeHtml(known?.author || parsed.author || "Unbekannt");
     const subtitle = known?.subtitle ? `<div class="meta-quiet">${escapeHtml(known.subtitle)}</div>` : "";
+    const bookIdFromManifest = known ? readScalarFromManifest(known.absBookDir, "book-id").trim() : "";
+    const coverSrc = bookIdFromManifest
+      ? `../../assets/covers/${encodeURIComponent(bookIdFromManifest)}.svg`
+      : "";
+    const media = coverSrc
+      ? `<img class="book-link-cover-img" src="${escapeHtml(coverSrc)}" alt="" loading="lazy" decoding="async" />`
+      : `<span class="book-link-cover-placeholder" style="background:${coverColor(known?.title || parsed.title || bookId)}" aria-hidden="true"></span>`;
     return `<a class="book-link" href="../../books/${encodeURIComponent(bookId)}/index.html">
-      <strong>${title}</strong>
-      <span>${author}</span>
-      ${subtitle}
+      <span class="book-link-media">${media}</span>
+      <span class="book-link-body">
+        <strong>${title}</strong>
+        <span>${author}</span>
+        ${subtitle}
+      </span>
     </a>`;
   });
   return `<div class="book-list">${items.join("")}</div>`;
@@ -946,6 +966,7 @@ function renderQuotesSection(quotesData: QuotesData | undefined): string {
 </div>`;
 }
 
+
 function renderJsonlConceptAccordions(
   agent: Agent,
   entriesByFile: Map<string, ConceptEntry[]>,
@@ -975,40 +996,29 @@ function renderJsonlConceptAccordions(
   const accordionPanels = files.map((fileName) => {
     const entries = entriesByFile.get(fileName) ?? [];
     const items = entries
-      .map((entry) => {
-        const title = entry.segmentTitle ? entry.segmentTitle : "(Ohne Titel)";
+      .map((entry, entryIndex) => {
+        if (entryIndex >= 8) {
+          // #region agent log
+          fetch('http://127.0.0.1:7480/ingest/f96b38f1-0577-4277-afab-70a8601f20d7',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'89067e'},body:JSON.stringify({sessionId:'89067e',runId:'initial',hypothesisId:'H1',location:'pages.ts:980',message:'concept accordion item near transition',data:{entryIndex,segmentTitle:entry.segmentTitle || '',hasReferences:Boolean(entry.references?.length),referencesCount:entry.references?.length ?? 0},timestamp:Date.now()})}).catch(()=>{});
+          // #endregion
+        }
+        const titleFromText = entry.text.match(/^\*\*(.+?)\*\*/)?.[1];
+        const title = titleFromText ?? entry.segmentTitle ?? "(Ohne Titel)";
         const titleHtml = renderInlineWithEmphasis(title);
         const textHtml = renderSummaryHtml(entry.text);
         let refsHtml = "";
         if (entry.references && entry.references.length > 0) {
-          const refLines: string[] = [];
-          for (const ref of entry.references) {
-            const chunk = chunkIndex.get(ref.chunk_id);
-            if (!chunk) continue;
-            if (chunk.source_type !== "book" && chunk.source_type !== "secondary_book") continue;
-            if (!agentBookIds.has(chunk.bookDir)) continue;
-            const href =
-              chunk.chapterFileName && chunk.paragraphTag
-                ? `../../books/${encodeURIComponent(chunk.bookDir)}/chapters/${encodeURIComponent(chunk.chapterFileName)}#${chunk.paragraphTag}`
-                : chunk.chapterFileName
-                  ? `../../books/${encodeURIComponent(chunk.bookDir)}/chapters/${encodeURIComponent(chunk.chapterFileName)}`
-                  : `../../books/${encodeURIComponent(chunk.bookDir)}/index.html`;
-            const label = `${escapeHtml(chunk.author)} – ${escapeHtml(chunk.source_title)}`;
-            const excerpt = chunk.text.length > 200 ? `${chunk.text.slice(0, 200)}…` : chunk.text;
-            const hoverParts = [
-              chunk.author,
-              chunk.source_title,
-              chunk.segment_title || "(Kapitel)",
-              excerpt,
-            ].filter(Boolean);
-            const titleAttr = escapeHtml(hoverParts.join(" · "));
-            refLines.push(
-              `<a href="${href}" class="concept-ref" title="${titleAttr}">${label}</a>`
-            );
-          }
-          if (refLines.length > 0) {
-            refsHtml = `<div class="concept-refs">${refLines.join(" · ")}</div>`;
-          }
+          const citations: TalkCitation[] = entry.references
+            .filter((ref) => {
+              const chunk = chunkIndex.get(ref.chunk_id);
+              return chunk && agentBookIds.has(chunk.bookDir);
+            })
+            .map((ref) => ({
+              chunk_id: ref.chunk_id,
+              relevance: ref.relevance,
+              source_title: chunkIndex.get(ref.chunk_id)?.source_title ?? "",
+            }));
+          refsHtml = renderQuellenDetails(citations, chunkIndex, { rootPath: "../.." });
         }
         return `<details class="toc-details concept-accordion-item">
     <summary class="toc-summary-line">

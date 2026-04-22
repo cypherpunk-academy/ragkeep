@@ -111,6 +111,7 @@ function formatTalkRichInlineHtml(raw: string): string {
     .replace(/&#39;/g, "'");
 
   const out: string[] = [];
+  const tagStack: Array<"i" | "em"> = [];
   let i = 0;
   while (i < decoded.length) {
     if (decoded[i] !== "<") {
@@ -124,15 +125,35 @@ function formatTalkRichInlineHtml(raw: string): string {
     const open = rest.match(/^<(i|em)\b[^>]*>/i);
     const close = rest.match(/^<\/(i|em)\s*>/i);
     if (open) {
-      out.push(`<${open[1].toLowerCase()}>`);
+      const tag = open[1].toLowerCase() as "i" | "em";
+      tagStack.push(tag);
+      out.push(`<${tag}>`);
       i += open[0].length;
     } else if (close) {
-      out.push(`</${close[1].toLowerCase()}>`);
+      const tag = close[1].toLowerCase() as "i" | "em";
+      // Only emit closing tags that match a previously opened inline tag.
+      const idx = tagStack.lastIndexOf(tag);
+      if (idx !== -1) {
+        while (tagStack.length - 1 > idx) {
+          const popped = tagStack.pop()!;
+          out.push(`</${popped}>`);
+        }
+        tagStack.pop();
+        out.push(`</${tag}>`);
+      }
       i += close[0].length;
     } else {
       out.push("&lt;");
       i += 1;
     }
+  }
+  if (tagStack.length > 0) {
+    // #region agent log
+    fetch('http://127.0.0.1:7480/ingest/f96b38f1-0577-4277-afab-70a8601f20d7',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'89067e'},body:JSON.stringify({sessionId:'89067e',runId:'post-fix',hypothesisId:'H5',location:'talks.ts:formatTalkRichInlineHtml',message:'auto-closing unbalanced inline tags',data:{remainingOpenTags:[...tagStack],inputPreview:decoded.slice(0,160)},timestamp:Date.now()})}).catch(()=>{});
+    // #endregion
+  }
+  while (tagStack.length > 0) {
+    out.push(`</${tagStack.pop()!}>`);
   }
   return out.join("");
 }
@@ -156,13 +177,12 @@ function parseQuellenBlock(segText: string): { citations: TalkCitation[]; cleanT
   return { citations, cleanText };
 }
 
-function _resolveLink(c: TalkCitation, chunkIndex?: Map<string, ChunkInfo>): string | undefined {
+function _resolveLink(c: TalkCitation, chunkIndex?: Map<string, ChunkInfo>, rootPath = "../../.."): string | undefined {
   if (c.link) return c.link;
   if (!c.chunk_id || !chunkIndex) return undefined;
   const info = chunkIndex.get(c.chunk_id);
   if (!info || !info.bookDir) return undefined;
-  // Talk pages are 3 levels deep: site/agent/{agent}/talks/{slug}.html
-  const base = `../../../books/${encodeURIComponent(info.bookDir)}`;
+  const base = `${rootPath}/books/${encodeURIComponent(info.bookDir)}`;
   if (info.chapterFileName) {
     const anchor = info.paragraphTag ? `#${info.paragraphTag}` : "";
     return `${base}/chapters/${encodeURIComponent(info.chapterFileName)}${anchor}`;
@@ -200,8 +220,8 @@ function _coverColor(title: string): string {
   return `hsl(${hue}, 28%, 32%)`;
 }
 
-function _coverAssetHref(bookId: string): string {
-  return `../../../assets/covers/${encodeURIComponent(bookId)}.svg`;
+function _coverAssetHref(bookId: string, rootPath = "../../.."): string {
+  return `${rootPath}/assets/covers/${encodeURIComponent(bookId)}.svg`;
 }
 
 /** Generisches Vortrags-Cover (kein externes SVG); Rednerpult, Ort, Datum. */
@@ -252,19 +272,23 @@ function _renderTalkCover(
   info: ChunkInfo | undefined,
   size: CoverSize,
   linkHref?: string,
-  displaySourceTitle?: string
+  displaySourceTitle?: string,
+  rootPath = "../../..",
+  options?: { inlineWrapper?: boolean }
 ): string {
   const bookId = _bookIdForCover(c, info);
   const titleForCover = displaySourceTitle ?? c.source_title ?? info?.source_title ?? "";
   const coverBg = _coverColor(titleForCover);
   const author = info?.author || "";
+  const inlineWrapper = options?.inlineWrapper === true;
+  const wrapperTag = inlineWrapper ? "span" : "div";
 
   const wrapInner = (inner: string): string => {
-    if (!linkHref) return `<div class="talk-source-cover-wrap">${inner}</div>`;
+    if (!linkHref) return `<${wrapperTag} class="talk-source-cover-wrap">${inner}</${wrapperTag}>`;
     return (
-      `<div class="talk-source-cover-wrap">` +
+      `<${wrapperTag} class="talk-source-cover-wrap">` +
       `<a class="talk-source-cover-link" href="${escapeHtml(linkHref)}">${inner}</a>` +
-      `</div>`
+      `</${wrapperTag}>`
     );
   };
 
@@ -274,11 +298,14 @@ function _renderTalkCover(
 
   if (size === "thumb") {
     if (!bookId) {
+      // #region agent log
+      fetch('http://127.0.0.1:7480/ingest/f96b38f1-0577-4277-afab-70a8601f20d7',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'89067e'},body:JSON.stringify({sessionId:'89067e',runId:'initial',hypothesisId:'H3',location:'talks.ts:276',message:'thumb cover fallback without bookId',data:{size,hasBookId:Boolean(bookId),sourceTitle:c.source_title || '',chunkId:c.chunk_id || ''},timestamp:Date.now()})}).catch(()=>{});
+      // #endregion
       const ph =
-        `<div class="talk-source-cover talk-source-cover--thumb-placeholder" style="background:${coverBg}" aria-hidden="true"></div>`;
+        `<span class="talk-source-cover talk-source-cover--thumb-placeholder" style="background:${coverBg}" aria-hidden="true"></span>`;
       return wrapInner(ph);
     }
-    const src = escapeHtml(_coverAssetHref(bookId));
+    const src = escapeHtml(_coverAssetHref(bookId, rootPath));
     const img =
       `<img class="talk-source-cover-img talk-source-cover-img--thumb" src="${src}" alt="" decoding="async" loading="lazy" />`;
     return wrapInner(img);
@@ -294,7 +321,7 @@ function _renderTalkCover(
     return wrapInner(placeholder);
   }
 
-  const src = escapeHtml(_coverAssetHref(bookId));
+  const src = escapeHtml(_coverAssetHref(bookId, rootPath));
   const img =
     `<img class="talk-source-cover-img talk-source-cover-img--expanded" src="${src}" height="220" alt="" decoding="async" loading="lazy" />`;
   return wrapInner(img);
@@ -305,12 +332,16 @@ function _renderSummaryCollapsed(
   c: TalkCitation,
   info: ChunkInfo | undefined,
   sourceTypeKey: string,
-  referenceNumber: number
+  referenceNumber: number,
+  rootPath = "../../.."
 ): string {
   const segTitle = c.segment_title || info?.segment_title || "";
   const displayTitle = formatTalkSourceTitleForDisplay(c.source_title || "", info?.source_title, sourceTypeKey);
   const isBookType = isTalkBookFamilySourceType(sourceTypeKey);
-  const thumb = _renderTalkCover(c, info, "thumb", undefined, displayTitle);
+  const thumb = _renderTalkCover(c, info, "thumb", undefined, displayTitle, rootPath);
+  // #region agent log
+  fetch('http://127.0.0.1:7480/ingest/f96b38f1-0577-4277-afab-70a8601f20d7',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'89067e'},body:JSON.stringify({sessionId:'89067e',runId:'initial',hypothesisId:'H2',location:'talks.ts:315',message:'render summary collapsed diagnostics',data:{referenceNumber,hasInfo:Boolean(info),hasBookId:Boolean(_bookIdForCover(c, info)),displayTitle,segTitle,thumbHasDiv:thumb.includes('<div'),sourceTypeKey},timestamp:Date.now()})}).catch(()=>{});
+  // #endregion
   const typeLabel = formatTalkSourceTypeLabel(sourceTypeKey);
   const typeClass = isBookType ? " talk-sources-summary-type--book" : "";
   const titleClass = isBookType ? " talk-sources-summary-title--book" : "";
@@ -330,7 +361,7 @@ function _renderSummaryCollapsed(
   const topRow =
     `<span class="talk-sources-summary-top">` +
     `<span class="talk-sources-ref-number">[${referenceNumber}]</span>` +
-    `<span class="talk-sources-summary-item">${thumb}${textStack}</span>` +
+    `<span class="talk-sources-summary-item">${_renderTalkCover(c, info, "thumb", undefined, displayTitle, rootPath, { inlineWrapper: true })}${textStack}</span>` +
     `</span>`;
   return `<span class="talk-sources-summary-inner">${topRow}</span>`;
 }
@@ -465,8 +496,14 @@ function _relevanceScore01(rel: number | undefined): { score: number; label: str
 }
 
 /** Pro Quelle ein <details>; nur die gewählte Quelle klappt auf. */
-export function renderQuellenDetails(citations: TalkCitation[], chunkIndex?: Map<string, ChunkInfo>): string {
+export function renderQuellenDetails(
+  citations: TalkCitation[],
+  chunkIndex?: Map<string, ChunkInfo>,
+  options?: { rootPath?: string }
+): string {
   if (citations.length === 0) return "";
+
+  const rootPath = options?.rootPath ?? "../../..";
 
   // Hide stale references only when they have no explicit index (i.e. not text-cited).
   // Text-cited refs (index present) must always be shown, even if the chunk is no longer in the index.
@@ -478,7 +515,7 @@ export function renderQuellenDetails(citations: TalkCitation[], chunkIndex?: Map
 
   const items = activeCitations.map((c, arrayIndex) => {
     const referenceNumber = c.index ?? (arrayIndex + 1);
-    const link = _resolveLink(c, chunkIndex);
+    const link = _resolveLink(c, chunkIndex, rootPath);
     const info = c.chunk_id ? chunkIndex?.get(c.chunk_id) : undefined;
     const sourceTypeKey = _citationRawSourceTypeKey(c, info);
     const displaySourceTitle = formatTalkSourceTitleForDisplay(
@@ -487,9 +524,9 @@ export function renderQuellenDetails(citations: TalkCitation[], chunkIndex?: Map
       sourceTypeKey
     );
     const segTitle = c.segment_title || info?.segment_title || "";
-    const summary = _renderSummaryCollapsed(c, info, sourceTypeKey, referenceNumber);
+    const summary = _renderSummaryCollapsed(c, info, sourceTypeKey, referenceNumber, rootPath);
 
-    const cover = _renderTalkCover(c, info, "expanded", undefined, displaySourceTitle);
+    const cover = _renderTalkCover(c, info, "expanded", undefined, displaySourceTitle, rootPath);
 
     const bookLikeLayout = isTalkBookLikeLayoutSourceType(sourceTypeKey);
     const blockMod = bookLikeLayout ? " talk-source-block--book-family" : "";

@@ -6,6 +6,9 @@ Länge: ca. {min_words}–{target_words} Wörter (darf in Ausnahmefällen bis ~{
 
 Schreibe einen vollständigen, zusammenhängenden und abgerundeten Text.
 Keine Meta-Referenzen (kein „Kontext“, keine Quellenangaben im Fließtext).
+Keine Erwähungen des Autors der Bücher (Rudolf Steiner)
+Beginne IMMER mit exakt diesem Muster:
+**{concept}** – <direkte Begriffserklärung>
 Schließe sauber mit einem klaren Schlusssatz.
 
 Korrekturhinweise (falls vorhanden):
