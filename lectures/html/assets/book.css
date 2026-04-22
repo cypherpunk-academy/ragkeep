@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400&display=swap");
 
 :root {
-  --book-bg: #d5e7ff;
-  --book-fg: #c5d5f9;
-  --book-header: #e2edf9;
+  --book-bg: #eef5ff;
+  --book-fg: #000000;
+  --book-header: #000000;
+  --book-back-link: #e8f0ff;
+  --talk-book-meta: #6c6ce7;
   --book-quote: #3015b4;
   --book-italics: #9b0909;
   --book-p-num: #666666;
@@ -227,13 +229,14 @@ html[data-theme="dark"] {
   --book-bg: #0f1117;
   --book-fg: #c5d5f9;
   --book-header: #e2edf9;
+  --book-back-link: #e8f0ff;
   --book-quote: #76b2f7;
   --book-italics: #fec8d2;
   --book-p-num: #909090;
-  --book-muted: rgba(233, 236, 243, 0.72);
-  --book-border: rgba(233, 236, 243, 0.3);
+  --book-muted: rgba(217, 226, 246, 0.72);
+  --book-border: rgba(217, 226, 246, 0.3);
   --reader-control-bg: rgba(255, 255, 255, 0.06);
-  --reader-control-border: rgba(233, 236, 243, 0.3);
+  --reader-control-border: rgba(217, 226, 246, 0.3);
 }
 
 html[data-size="l"] .book-main { font-size: 1.28rem; }
