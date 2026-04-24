@@ -336,7 +336,8 @@ function pageShell(title: string, relAssetPrefix: string, content: string): stri
 
 function renderAgentCard(
   agent: Agent,
-  lectureSets: AgentLectureSets | undefined
+  lectureSets: AgentLectureSets | undefined,
+  talkCount?: number
 ): string {
   const name = escapeHtml(agent.name);
   const ragCollection = escapeHtml(agent.ragCollection);
@@ -345,7 +346,7 @@ function renderAgentCard(
   const totalLectures = lectureSets
     ? countDistinctLectureViews(lectureSets)
     : 0;
-  const talks = agent.talks.length;
+  const talks = talkCount ?? agent.talks.length;
   const target = `agent/${encodeURIComponent(agent.id)}/index.html`;
   const imgUrl = agent.coverUrl || agent.avatarUrl;
   const imgHtml = imgUrl
@@ -374,12 +375,13 @@ function renderAgentCard(
 export function generateHomePage(
   outputDir: string,
   agents: Agent[],
-  lecturesByAgent: Map<string, AgentLectureSets>
+  lecturesByAgent: Map<string, AgentLectureSets>,
+  talksByAgent?: Map<string, Map<string, TalkData>>
 ): void {
   const generatedAt = new Date().toISOString();
   const cards = agents
     .map((agent) =>
-      renderAgentCard(agent, lecturesByAgent.get(agent.id))
+      renderAgentCard(agent, lecturesByAgent.get(agent.id), talksByAgent?.get(agent.id)?.size)
     )
     .join("\n");
   const html = pageShell(
@@ -742,7 +744,7 @@ function renderFileRows(
   return `<div class="file-list">${files
     .map(
       (file) =>
-        `<a class="file-link" href="${relFolderPrefix}/${encodeURIComponent(file)}" target="_blank" rel="noreferrer"><span>${escapeHtml(
+        `<a class="file-link" href="${relFolderPrefix}/${encodeURIComponent(file)}" rel="noreferrer"><span>${escapeHtml(
           file
         )}</span><span class="meta-quiet">Öffnen</span></a>`
     )
@@ -996,12 +998,7 @@ function renderJsonlConceptAccordions(
   const accordionPanels = files.map((fileName) => {
     const entries = entriesByFile.get(fileName) ?? [];
     const items = entries
-      .map((entry, entryIndex) => {
-        if (entryIndex >= 8) {
-          // #region agent log
-          fetch('http://127.0.0.1:7480/ingest/f96b38f1-0577-4277-afab-70a8601f20d7',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'89067e'},body:JSON.stringify({sessionId:'89067e',runId:'initial',hypothesisId:'H1',location:'pages.ts:980',message:'concept accordion item near transition',data:{entryIndex,segmentTitle:entry.segmentTitle || '',hasReferences:Boolean(entry.references?.length),referencesCount:entry.references?.length ?? 0},timestamp:Date.now()})}).catch(()=>{});
-          // #endregion
-        }
+      .map((entry) => {
         const titleFromText = entry.text.match(/^\*\*(.+?)\*\*/)?.[1];
         const title = titleFromText ?? entry.segmentTitle ?? "(Ohne Titel)";
         const titleHtml = renderInlineWithEmphasis(title);
@@ -1183,8 +1180,11 @@ function renderSectionContent(
   }
   if (section === "talks") {
     const talksData = talksByAgent.get(agent.id) ?? new Map();
+    const talkFiles = talksData.size > 0
+      ? [...talksData.keys()].map((s) => `${s}.md`)
+      : agent.talks;
     return `<div class="stack-8"><h3>${SECTION_META.talks.heading}</h3>${renderTalkRows(
-      agent.talks,
+      talkFiles,
       talksData
     )}</div>`;
   }

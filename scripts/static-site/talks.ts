@@ -147,11 +147,6 @@ function formatTalkRichInlineHtml(raw: string): string {
       i += 1;
     }
   }
-  if (tagStack.length > 0) {
-    // #region agent log
-    fetch('http://127.0.0.1:7480/ingest/f96b38f1-0577-4277-afab-70a8601f20d7',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'89067e'},body:JSON.stringify({sessionId:'89067e',runId:'post-fix',hypothesisId:'H5',location:'talks.ts:formatTalkRichInlineHtml',message:'auto-closing unbalanced inline tags',data:{remainingOpenTags:[...tagStack],inputPreview:decoded.slice(0,160)},timestamp:Date.now()})}).catch(()=>{});
-    // #endregion
-  }
   while (tagStack.length > 0) {
     out.push(`</${tagStack.pop()!}>`);
   }
@@ -298,9 +293,6 @@ function _renderTalkCover(
 
   if (size === "thumb") {
     if (!bookId) {
-      // #region agent log
-      fetch('http://127.0.0.1:7480/ingest/f96b38f1-0577-4277-afab-70a8601f20d7',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'89067e'},body:JSON.stringify({sessionId:'89067e',runId:'initial',hypothesisId:'H3',location:'talks.ts:276',message:'thumb cover fallback without bookId',data:{size,hasBookId:Boolean(bookId),sourceTitle:c.source_title || '',chunkId:c.chunk_id || ''},timestamp:Date.now()})}).catch(()=>{});
-      // #endregion
       const ph =
         `<span class="talk-source-cover talk-source-cover--thumb-placeholder" style="background:${coverBg}" aria-hidden="true"></span>`;
       return wrapInner(ph);
@@ -339,9 +331,6 @@ function _renderSummaryCollapsed(
   const displayTitle = formatTalkSourceTitleForDisplay(c.source_title || "", info?.source_title, sourceTypeKey);
   const isBookType = isTalkBookFamilySourceType(sourceTypeKey);
   const thumb = _renderTalkCover(c, info, "thumb", undefined, displayTitle, rootPath);
-  // #region agent log
-  fetch('http://127.0.0.1:7480/ingest/f96b38f1-0577-4277-afab-70a8601f20d7',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'89067e'},body:JSON.stringify({sessionId:'89067e',runId:'initial',hypothesisId:'H2',location:'talks.ts:315',message:'render summary collapsed diagnostics',data:{referenceNumber,hasInfo:Boolean(info),hasBookId:Boolean(_bookIdForCover(c, info)),displayTitle,segTitle,thumbHasDiv:thumb.includes('<div'),sourceTypeKey},timestamp:Date.now()})}).catch(()=>{});
-  // #endregion
   const typeLabel = formatTalkSourceTypeLabel(sourceTypeKey);
   const typeClass = isBookType ? " talk-sources-summary-type--book" : "";
   const titleClass = isBookType ? " talk-sources-summary-title--book" : "";
@@ -736,6 +725,123 @@ export function collectTalks(
     if (data) result.set(data.slug, data);
   }
   return result;
+}
+
+// ---------------------------------------------------------------------------
+// DB-based talk collection (rag_talks + rag_turns)
+// ---------------------------------------------------------------------------
+
+function _slugToDisplayName(slug: string): string {
+  return slug
+    .split("-")
+    .map((w) => (w ? w.charAt(0).toUpperCase() + w.slice(1) : w))
+    .join(" ");
+}
+
+interface _DbTurnRow {
+  slug: string;
+  title: string;
+  turn_index: number;
+  user_message: string;
+  assistant_message: string;
+  assistant_personality: string | null;
+  is_relay: boolean;
+  references: unknown[] | null;
+  chunk_index_map: unknown[] | null;
+  usage: Record<string, unknown> | null;
+}
+
+function _reconstructBodyFromDbRows(rows: _DbTurnRow[], agentName: string): string {
+  const parts: string[] = [];
+  for (const row of rows) {
+    if (!row.is_relay) {
+      parts.push(`## Mensch\n\n${row.user_message}`);
+    }
+    const speakerLabel = row.assistant_personality
+      ? _slugToDisplayName(row.assistant_personality)
+      : agentName;
+    let assistantText = row.assistant_message;
+    if (Array.isArray(row.references) && row.references.length > 0) {
+      assistantText += `\n<!-- quellen\n${JSON.stringify(row.references, null, 2)}\n-->`;
+    }
+    if (Array.isArray(row.chunk_index_map) && row.chunk_index_map.length > 0) {
+      assistantText += `\n<!-- chunk_index_map\n${JSON.stringify(row.chunk_index_map, null, 2)}\n-->`;
+    }
+    if (row.usage && typeof row.usage === "object") {
+      assistantText += `\n<!-- usage ${JSON.stringify(row.usage)} -->`;
+    }
+    parts.push(`## ${speakerLabel}\n\n${assistantText}`);
+  }
+  return parts.join("\n\n");
+}
+
+/**
+ * Reads talks for a collection from rag_talks + rag_turns.
+ * Returns an empty map (never throws) if no DB is configured or the collection has no talks.
+ */
+export async function collectTalksFromDb(
+  collection: string,
+  agentName: string
+): Promise<Map<string, TalkData>> {
+  const raw =
+    process.env["RAGRUN_POSTGRES_DSN"] ??
+    process.env["DATABASE_URL"] ??
+    process.env["POSTGRES_URL"] ??
+    "";
+  if (!raw.trim()) return new Map();
+
+  // Strip SQLAlchemy driver specifier (postgresql+psycopg:// → postgresql://)
+  const dbUrl = raw.replace(/^postgresql\+[^:]+:\/\//, "postgresql://");
+
+  // @ts-ignore – @types/pg not installed
+  const { Client } = await import("pg");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const client: any = new Client({ connectionString: dbUrl });
+  await client.connect();
+
+  try {
+    const result = await client.query(
+      `SELECT rt.slug, rt.title,
+              rtu.turn_index, rtu.user_message, rtu.assistant_message,
+              rtu.assistant_personality, rtu.is_relay,
+              rtu."references", rtu.chunk_index_map, rtu.usage
+       FROM rag_talks rt
+       JOIN rag_turns rtu ON rtu.talk_id = rt.talk_id
+       WHERE rt.collection = $1
+         AND rt.publishing_status = 'published'
+       ORDER BY rt.created_at, rt.slug, rtu.turn_index`,
+      [collection]
+    );
+
+    const bySlug = new Map<string, _DbTurnRow[]>();
+    const titleBySlug = new Map<string, string>();
+    for (const row of result.rows as _DbTurnRow[]) {
+      if (!bySlug.has(row.slug)) {
+        bySlug.set(row.slug, []);
+        titleBySlug.set(row.slug, row.title);
+      }
+      bySlug.get(row.slug)!.push(row);
+    }
+
+    const talkMap = new Map<string, TalkData>();
+    for (const [slug, rows] of bySlug) {
+      const title = titleBySlug.get(slug) ?? slug;
+      const body = _reconstructBodyFromDbRows(rows, agentName);
+      const excerpt = talkPlainExcerptFromBody(body, 220);
+      const bodyHtml = renderTalkBodyHtml(body);
+      const chunkIds = extractTalkChunkIds(body);
+      talkMap.set(slug, { slug, title, excerpt, bodyHtml, body, chunkIds });
+    }
+
+    return talkMap;
+  } catch (err) {
+    process.stderr.write(
+      `[collectTalksFromDb] Error loading talks for collection "${collection}": ${err instanceof Error ? err.message : String(err)}\n`
+    );
+    return new Map();
+  } finally {
+    try { await client.end(); } catch { /* ignore */ }
+  }
 }
 
 function talkDetailPageHtml(talk: TalkData, agentName: string, chunkIndex?: Map<string, ChunkInfo>): string {

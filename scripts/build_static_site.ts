@@ -16,6 +16,7 @@ import {
 } from "./static-site/concepts";
 import {
   collectTalks,
+  collectTalksFromDb,
   extractTalkChunkIds,
   generateTalkPages,
   type TalkData,
@@ -98,9 +99,18 @@ async function main(): Promise<void> {
   copyFavicon(REPO_ROOT, OUTPUT_DIR, assistants);
   copyLecturesHtmlToSite(REPO_ROOT, OUTPUT_DIR);
 
+  const hasDb = Boolean(
+    process.env["RAGRUN_POSTGRES_DSN"] ??
+    process.env["DATABASE_URL"] ??
+    process.env["POSTGRES_URL"]
+  );
+
   const talksByAgent = new Map<string, Map<string, TalkData>>();
   for (const agent of assistants) {
-    if (agent.talks.length > 0) {
+    if (hasDb) {
+      const dbTalks = await collectTalksFromDb(agent.ragCollection, agent.name);
+      if (dbTalks.size > 0) talksByAgent.set(agent.id, dbTalks);
+    } else if (agent.talks.length > 0) {
       talksByAgent.set(agent.id, collectTalks(REPO_ROOT, agent));
     }
   }
@@ -178,7 +188,7 @@ async function main(): Promise<void> {
     );
   }
 
-  generateHomePage(OUTPUT_DIR, assistants, lecturesByAgent);
+  generateHomePage(OUTPUT_DIR, assistants, lecturesByAgent, talksByAgent);
   generateAgentPages(
     OUTPUT_DIR,
     assistants,

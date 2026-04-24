@@ -1,5 +1,6 @@
 name: Philo von Freisinn
-rag-collection: philo-von-freisinn
+rag-collection: philo-von-freisinn-v2
+assistant-id: 1e3d0f4f-8e71-4f78-8f46-b1d31e607a1c
 description: Auf der Grundlage der Philosophie der Freiheit und Werken, die in
   der Arbeit von Rudolf Steiner damit in engem Zusammenhang stehen, entwickelt
   Philo von Freisinn eine mathematistisch-individualistische Weltanschauung.
@@ -73,27 +74,6 @@ augmentation-types:
   - quotes
 concepts:
   - concepts.jsonl
-  - individualismus-concepts.jsonl
-  - mathematismus-concepts.jsonl
 typologies:
   - typologies.jsonl
-talks:
-  - 3gl-arbeit-als-ware-und-der-dreigliederige-ausgleich.md
-  - 3gl-der-soziale-organismus-und-der-mensch-eine-analogie.md
-  - 3gl-faehigkeitenhierarchie-statt-strukturhierarchie.md
-  - 3gl-ideologieparadox-zu-ende-denken-philosophie-der-freiheit.md
-  - 3gl-dreigliederung-in-der-praxis-vom-rechtsprinzip-zur-assoziativen-wirtschaft-und-freiem-geistesleben.md
-  - 3gl-wer-die-fähigkeit-hat-entscheidet.md
-  - 3gl-open-source-beweist-die-dreigliederung.md
-  - 3gl-dreigliederung-im-alltag-was-das-gemeinsame-bett-über-freiheit-recht-und-brüderlichkeit-verrät.md
-  - 3gl-freiheit-im-schaffen-vertrauen-im-schenken-und-wer-schuetzt-den-raum.md
-  - 3gl-was-ist-maechtiger-als-wenn-sich-zwei-menschen-in-die-augen-schauen.md
-  - 3gl-arbeit-preis-wuerde.md
-  - 3gl-freiheit-im-augenblick-intuition-fehler-grenzen-des-anderen.md
-  - 3gl-HANDWERKER-was-bekommt-man-fuer-geistesarbeit-und-wer-zahlt-dafuer.md
-  - 3gl-CYPHERPUNK-was-bekommt-man-fuer-geistesarbeit-und-wer-zahlt-dafuer.md
-  - 3gl-AKTIVIST-was-bekommt-man-fuer-geistesarbeit-und-wer-zahlt-dafuer.md
-  - 3gl-was-bekommt-man-fuer-geistesarbeit-und-wer-zahlt-dafuer.md
-  - 3gl-wer-darf-geheimnisse-haben-dreigliederung-transparenz-architektur-der-macht.md
-  - 3gl-was-mit-einem-gegenstand-gemacht-wird-bestimmt-welches-recht-fuer-ihn-gilt.md
-last-updated: 2026-04-15T11:00:08.406Z
+last-updated: 2026-04-24T17:12:44.306Z
