@@ -1103,6 +1103,22 @@ function renderTaxonomies(taxonomies: string[]): string {
     .join("")}</div>`;
 }
 
+const TALK_STATUS_COLORS: Record<string, string> = {
+  draft:     "background:#e5e7eb;color:#374151",
+  staged:    "background:#fef3c7;color:#92400e",
+  published: "background:#d1fae5;color:#065f46",
+  personal:  "background:#dbeafe;color:#1e40af",
+  peers:     "background:#ede9fe;color:#5b21b6",
+  candidate: "background:#fce7f3;color:#9d174d",
+  archive:   "background:#f3f4f6;color:#6b7280",
+  bug:       "background:#fee2e2;color:#991b1b",
+};
+
+function statusBadge(status: string): string {
+  const style = TALK_STATUS_COLORS[status] ?? "background:#e5e7eb;color:#374151";
+  return `<span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;${style}">${escapeHtml(status)}</span>`;
+}
+
 function renderTalkRows(
   talkFiles: string[],
   talksData: Map<string, TalkData>
@@ -1119,20 +1135,58 @@ function renderTalkRows(
       const title = escapeHtml(talk?.title ?? slug);
       const talkUrl = `talks/${encodeURIComponent(slug)}.html`;
       const excerpt = talk?.excerpt;
+      const status = talk?.publishingStatus ?? "published";
+      const badge = statusBadge(status);
 
       if (excerpt) {
-        return `<div class="talk-card book-link">
-  <a href="${talkUrl}" style="text-decoration: none; color: inherit;"><strong>${title}</strong></a>
+        return `<div class="talk-card book-link" data-status="${escapeHtml(status)}">
+  <div><a href="${talkUrl}" style="text-decoration:none;color:inherit;"><strong>${title}</strong></a>${badge}</div>
   <p class="meta-quiet talk-excerpt">${escapeHtml(excerpt)}</p>
 </div>`;
       }
 
-      return `<a class="book-link" href="${talkUrl}">
-  <strong>${title}</strong>
-</a>`;
+      return `<div class="talk-card book-link" data-status="${escapeHtml(status)}">
+  <a href="${talkUrl}" style="text-decoration:none;color:inherit;"><strong>${title}</strong></a>${badge}
+</div>`;
     });
 
-  return `<div class="book-list">${items.join("")}</div>`;
+  const filterDropdown = `<div style="position:relative;display:inline-block;margin-bottom:12px">
+  <button class="talk-filter-toggle" style="font-size:0.8rem;padding:4px 10px;border:1px solid var(--border,#e5e7eb);border-radius:6px;background:var(--surface,#fff);cursor:pointer;color:var(--fg,#111827)">Filter ▾</button>
+  <div class="talk-filter-dropdown" style="display:none;position:absolute;top:100%;left:0;margin-top:4px;background:var(--surface,#fff);border:1px solid var(--border,#e5e7eb);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);padding:10px 14px;z-index:100;min-width:160px;flex-direction:column;gap:6px;font-size:0.82rem">
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="draft" checked> Draft</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="staged" checked> Staged</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="published" checked> Published</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="personal"> Personal</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="peers"> Peers</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="candidate"> Candidate</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="archive"> Archive</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="bug"> Bug</label>
+  </div>
+</div>`;
+
+  const script = `<script>(function(){
+  var s = document.currentScript;
+  var wrap = s.previousElementSibling;
+  var btn = wrap.querySelector('.talk-filter-toggle');
+  var dd = wrap.querySelector('.talk-filter-dropdown');
+  function applyFilter(){
+    var list = s.nextElementSibling;
+    if (!list) return;
+    var checked = Array.from(dd.querySelectorAll('input:checked')).map(function(el){return el.value;});
+    list.querySelectorAll('.talk-card[data-status]').forEach(function(card){
+      card.style.display = checked.includes(card.dataset.status) ? '' : 'none';
+    });
+  }
+  function openDd(){ dd.style.display = 'flex'; }
+  function closeDd(){ dd.style.display = 'none'; }
+  btn.addEventListener('click', function(e){ e.stopPropagation(); dd.style.display === 'none' ? openDd() : closeDd(); });
+  dd.addEventListener('change', applyFilter);
+  dd.addEventListener('click', function(e){ e.stopPropagation(); });
+  document.addEventListener('click', closeDd);
+  document.addEventListener('DOMContentLoaded', applyFilter);
+})();<\/script>`;
+
+  return `${filterDropdown}${script}<div class="book-list">${items.join("")}</div>`;
 }
 
 function renderSectionContent(

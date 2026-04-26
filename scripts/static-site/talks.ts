@@ -11,6 +11,7 @@ export interface TalkData {
   bodyHtml: string;
   body: string;
   chunkIds: string[];
+  publishingStatus: string;
 }
 
 export interface TalkCitation {
@@ -706,7 +707,7 @@ export function parseTalkFile(talkPath: string): TalkData | null {
     const excerpt = talkPlainExcerptFromBody(body, 220);
     const bodyHtml = renderTalkBodyHtml(body);
     const chunkIds = extractTalkChunkIds(body);
-    return { slug, title, excerpt, bodyHtml, body, chunkIds };
+    return { slug, title, excerpt, bodyHtml, body, chunkIds, publishingStatus: 'published' };
   } catch {
     return null;
   }
@@ -741,6 +742,7 @@ function _slugToDisplayName(slug: string): string {
 interface _DbTurnRow {
   slug: string;
   title: string;
+  publishing_status: string | null;
   turn_index: number;
   user_message: string;
   assistant_message: string;
@@ -801,24 +803,25 @@ export async function collectTalksFromDb(
 
   try {
     const result = await client.query(
-      `SELECT rt.slug, rt.title,
+      `SELECT rt.slug, rt.title, rt.publishing_status,
               rtu.turn_index, rtu.user_message, rtu.assistant_message,
               rtu.assistant_personality, rtu.is_relay,
               rtu."references", rtu.chunk_index_map, rtu.usage
        FROM rag_talks rt
        JOIN rag_turns rtu ON rtu.talk_id = rt.talk_id
        WHERE rt.collection = $1
-         AND rt.publishing_status = 'published'
        ORDER BY rt.created_at, rt.slug, rtu.turn_index`,
       [collection]
     );
 
     const bySlug = new Map<string, _DbTurnRow[]>();
     const titleBySlug = new Map<string, string>();
+    const statusBySlug = new Map<string, string>();
     for (const row of result.rows as _DbTurnRow[]) {
       if (!bySlug.has(row.slug)) {
         bySlug.set(row.slug, []);
         titleBySlug.set(row.slug, row.title);
+        statusBySlug.set(row.slug, row.publishing_status ?? 'draft');
       }
       bySlug.get(row.slug)!.push(row);
     }
@@ -826,11 +829,12 @@ export async function collectTalksFromDb(
     const talkMap = new Map<string, TalkData>();
     for (const [slug, rows] of bySlug) {
       const title = titleBySlug.get(slug) ?? slug;
+      const publishingStatus = statusBySlug.get(slug) ?? 'draft';
       const body = _reconstructBodyFromDbRows(rows, agentName);
       const excerpt = talkPlainExcerptFromBody(body, 220);
       const bodyHtml = renderTalkBodyHtml(body);
       const chunkIds = extractTalkChunkIds(body);
-      talkMap.set(slug, { slug, title, excerpt, bodyHtml, body, chunkIds });
+      talkMap.set(slug, { slug, title, excerpt, bodyHtml, body, chunkIds, publishingStatus });
     }
 
     return talkMap;
