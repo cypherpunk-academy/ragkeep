@@ -6,12 +6,12 @@ book-type: allgemeiner-buchtext-mit-toc
 language: en
 quotation-mark-open: “
 quotation-mark-close: ”
-chunks: 379
+chunks: 377
 multi-paragraph-chunks: 354
-single-paragraph-chunks: 22
+single-paragraph-chunks: 20
 large-paragraph-chunks: 3
-average: 1241
-p01_length: 181
-p05_length: 1005
+average: 1248
+p01_length: 456
+p05_length: 1006
 p95_length: 1756
 p99_length: 1979

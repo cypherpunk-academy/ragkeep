@@ -805,8 +805,19 @@ export async function collectTalksFromDb(
     const result = await client.query(
       `SELECT rt.slug, rt.title, rt.publishing_status,
               rtu.turn_index, rtu.user_message, rtu.assistant_message,
-              rtu.assistant_personality, rtu.is_relay,
-              rtu."references", rtu.chunk_index_map, rtu.usage
+              rtu.assistant_personality, rtu.is_relay, rtu.chunk_index_map, rtu.usage,
+              COALESCE(
+                (SELECT json_agg(
+                   json_build_object(
+                     'chunk_id',      rr.chunk_id,
+                     'relevance',     rr.relevance,
+                     'source_title',  rr.source_title,
+                     'segment_title', rr.segment_title
+                   ) ORDER BY rr.ref_index
+                 )
+                 FROM rag_references rr WHERE rr.turn_id = rtu.turn_id),
+                '[]'::json
+              ) AS references
        FROM rag_talks rt
        JOIN rag_turns rtu ON rtu.talk_id = rt.talk_id
        WHERE rt.collection = $1

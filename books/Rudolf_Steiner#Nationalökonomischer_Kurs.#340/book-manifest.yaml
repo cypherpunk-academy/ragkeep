@@ -14,12 +14,12 @@ journal:
   lines: 7118
   words: 70043
   footnotes: 1
-chunks: 310
+chunks: 309
 multi-paragraph-chunks: 95
-single-paragraph-chunks: 142
+single-paragraph-chunks: 141
 large-paragraph-chunks: 73
-average: 1466
-p01_length: 273
-p05_length: 585
+average: 1471
+p01_length: 314
+p05_length: 617
 p95_length: 2308
 p99_length: 2529

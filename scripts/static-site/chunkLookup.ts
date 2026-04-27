@@ -1,5 +1,5 @@
 /**
- * Chunk-Lookup-Service: Metadaten aus Postgres (rag_chunks) oder – ohne DSN bzw. bei
+ * Chunk-Lookup-Service: Metadaten aus Postgres (vector_chunks, Qdrant-Spiegel) oder – ohne DSN bzw. bei
  * Verbindungsfehler – aus lokalen book-chunks.jsonl unter books/.../results/rag-chunks/.
  */
 import fs from "node:fs";
@@ -597,7 +597,7 @@ export async function buildChunkIndex(
 
     const res = await client.query(
       `SELECT collection, chunk_id, source_id, metadata, text
-       FROM rag_chunks
+       FROM vector_chunks
        WHERE ${conditions}`,
       params
     );
@@ -626,7 +626,7 @@ export async function buildChunkIndex(
       for (const segId of segIds) {
         const segRes = await client.query(
           `SELECT collection, chunk_id, source_id, metadata, text
-           FROM rag_chunks
+           FROM vector_chunks
            WHERE source_id = $1 AND metadata->>'segment_id' = $2`,
           [srcId, segId]
         );

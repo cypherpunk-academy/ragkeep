@@ -65,12 +65,12 @@ erase-line-markers:
   - text: WIKILEAK
     position-in-line: centered
     position-on-page: first-line
-chunks: 140
+chunks: 139
 multi-paragraph-chunks: 80
-single-paragraph-chunks: 14
+single-paragraph-chunks: 13
 large-paragraph-chunks: 46
-average: 1301
-p01_length: 170
-p05_length: 601
-p95_length: 1926
+average: 1310
+p01_length: 197
+p05_length: 660
+p95_length: 1953
 p99_length: 2182

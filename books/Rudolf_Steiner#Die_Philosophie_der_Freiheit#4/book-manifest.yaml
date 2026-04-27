@@ -11,13 +11,13 @@ quotation-mark-open: «
 quotation-mark-close: »
 internal-page-references: null
 external-page-references: null
-chunks: 302
+chunks: 301
 multi-paragraph-chunks: 106
-single-paragraph-chunks: 76
+single-paragraph-chunks: 75
 large-paragraph-chunks: 120
-average: 1442
-p01_length: 207
-p05_length: 596
+average: 1447
+p01_length: 234
+p05_length: 602
 p95_length: 2300
 p99_length: 2769
 journal:

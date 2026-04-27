@@ -46,6 +46,7 @@ __pycache__/
 *.pyo
 
 tmp
+**/.tmp/
 .build/
 site/
 *.log
