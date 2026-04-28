@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Few More Lessons from Fetchmail</title>
+  <link rel="stylesheet" href="../../../assets/book.css" />
+</head>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <article class="book-chapter" data-chapter="9" id="c-9">
+    <h1 class="book-chapter-title" id="c-9-title" data-slug="a-few-more-lessons-from-fetchmail">A Few More Lessons from Fetchmail</h1>
+    <section class="book-paragraph" id="p-9-1">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-9-1">1|</a>
+        <span class="book-sentence" id="s-9-1-1-p0">Be­fo­re we go back to ge­ne­ral soft­ware-en­gi­nee­ring is­su­es, there are a coup­le more spe­ci­fic les­sons from the fetchmail ex­pe­ri­ence to pon­der.</span>
+        
+        <span class="book-sentence" id="s-9-1-2-p0">Non­tech­ni­cal re­a­ders can safe­ly skip this sec­tion.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-9-2">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-9-2">2|</a>
+        <span class="book-sentence" id="s-9-2-1-p0">The rc (con­trol) file syn­tax in­clu­des op­tio­nal `noise' key­words that are ent­i­re­ly igno­red by the par­ser.</span>
+        
+        <span class="book-sentence" id="s-9-2-2-p0">The Eng­lish-like syn­tax they allow is con­sider­ab­ly more re­a­da­ble than the tra­di­tio­nal terse key­word-value pairs you get when you strip them all out.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-9-3">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-9-3">3|</a>
+        <span class="book-sentence" id="s-9-3-1-p0">These star­ted out as a late-night ex­pe­ri­ment when I no­ti­ced how much the rc file de­cla­ra­ti­ons were be­gin­ning to re­sem­ble an im­pe­ra­ti­ve mi­ni­lan­gua­ge.</span>
+        
+        <span class="book-sentence" id="s-9-3-2-p0">(This is also why I chan­ged the ori­gi­nal pop­cli­ent „ser­ver“ key­word to „poll“).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-9-4">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-9-4">4|</a>
+        <span class="book-sentence" id="s-9-4-1-p0">It see­med to me that try­ing to make that im­pe­ra­ti­ve mi­ni­lan­gua­ge more like Eng­lish might make it ea­sier to use.</span>
+        
+        <span class="book-sentence" id="s-9-4-2-p0">Now, alt­hough I'm a con­vin­ced par­ti­san of the „make it a lan­gua­ge“ school of de­sign as ex­em­pli­fied by Emacs and HTML and many da­ta­ba­se en­gi­nes, I am not nor­mal­ly a big fan of „Eng­lish-like“ syn­ta­xes.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-9-5">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-9-5">5|</a>
+        <span class="book-sentence" id="s-9-5-1-p0">Tra­di­tio­nal­ly pro­gramm­ers have ten­ded to favor con­trol syn­ta­xes that are very pre­cise and com­pact and have no red­un­dan­cy at all.</span>
+        
+        <span class="book-sentence" id="s-9-5-2-p0">This is a cul­tu­ral le­ga­cy from when com­pu­ting re­sour­ces were ex­pen­si­ve, so par­sing sta­ges had to be as cheap and sim­ple as pos­si­ble.</span>
+        
+        <span class="book-sentence" id="s-9-5-3-p0">Eng­lish, with about 50% red­un­dan­cy, loo­ked like a very in­ap­pro­pria­te model then.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-9-6">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-9-6">6|</a>
+        <span class="book-sentence" id="s-9-6-1-p0">This is not my re­a­son for nor­mal­ly avo­iding Eng­lish-like syn­ta­xes; I men­ti­on it here only to de­mo­lish it.</span>
+        
+        <span class="book-sentence" id="s-9-6-2-p0">With cheap cy­cles and core, ter­sen­ess should not be an end in its­elf.</span>
+        
+        <span class="book-sentence" id="s-9-6-3-p0">No­wa­days it's more im­portant for a lan­gua­ge to be con­ve­ni­ent for hu­mans than to be cheap for the com­pu­ter.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-9-7">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-9-7">7|</a>
+        <span class="book-sentence" id="s-9-7-1-p0">There re­main, howe­ver, good re­a­sons to be wary.</span>
+        
+        <span class="book-sentence" id="s-9-7-2-p0">One is the com­ple­xi­ty cost of the par­sing stage—you don't want to raise that to the point where it's a si­gni­fi­cant sour­ce of bugs and user con­fu­si­on in its­elf.</span>
+        
+        <span class="book-sentence" id="s-9-7-3-p0">Ano­ther is that try­ing to make a lan­gua­ge syn­tax Eng­lish-like often de­man­ds that the „Eng­lish“ it speaks be bent se­rious­ly out of shape, so much so that the su­per­fi­ci­al re­sem­blan­ce to na­tu­ral lan­gua­ge is as con­fu­sing as a tra­di­tio­nal syn­tax would have been.</span>
+        
+        <span class="book-sentence" id="s-9-7-4-p0">(You see this bad ef­fect in a lot of so-cal­led „fourth ge­ne­ra­ti­on“ and com­mer­ci­al da­ta­ba­se-query lan­gua­ges.)</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-9-8">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-9-8">8|</a>
+        <span class="book-sentence" id="s-9-8-1-p0">The fetchmail con­trol syn­tax seems to avoid these pro­blems be­cau­se the lan­gua­ge do­main is ex­tre­me­ly re­stric­ted.</span>
+        
+        <span class="book-sentence" id="s-9-8-2-p0">It's now­he­re near a ge­ne­ral-pur­po­se lan­gua­ge; the things it says sim­ply are not very com­pli­ca­ted, so there's litt­le po­ten­ti­al for con­fu­si­on in mo­ving men­tal­ly bet­ween a tiny sub­set of Eng­lish and the ac­tu­al con­trol lan­gua­ge.</span>
+        
+        <span class="book-sentence" id="s-9-8-3-p0">I think there may be a broa­der les­son here:</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-9-1" data-slug="16-when-your-language-is-nowhere-near-turing-complete-syntactic-sugar-can-be-your-friend">16. When your language is nowhere near Turing-complete, syntactic sugar can be your friend.</h2>
+    <section class="book-paragraph" id="p-9-9">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-9-9">9|</a>
+        <span class="book-sentence" id="s-9-9-1-p0">Ano­ther les­son is about se­cu­ri­ty by ob­scu­ri­ty.</span>
+        
+        <span class="book-sentence" id="s-9-9-2-p0">Some fetchmail users asked me to chan­ge the soft­ware to store pass­words en­cryp­ted in the rc file, so sno­o­pers wouldn't be able to ca­sual­ly see them.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-9-10">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-9-10">10|</a>
+        <span class="book-sentence" id="s-9-10-1-p0">I didn't do it, be­cau­se this doesn't ac­tual­ly add pro­tec­tion.</span>
+        
+        <span class="book-sentence" id="s-9-10-2-p0">An­yo­ne who's ac­qui­red per­mis­si­ons to read your rc file will be able to run fetchmail as you any­way—and if it's your pass­word they're after, they'd be able to rip the ne­cessa­ry de­co­der out of the fetchmail code its­elf to get it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-9-11">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-9-11">11|</a>
+        <span class="book-sentence" id="s-9-11-1-p0">All.fetchmail­rc pass­word en­cryp­ti­on would have done is give a false sense of se­cu­ri­ty to peop­le who don't think very hard.</span>
+        
+        <span class="book-sentence" id="s-9-11-2-p0">The ge­ne­ral rule here is:</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-9-2" data-slug="17-a-security-system-is-only-as-secure-as-its-secret-beware-of-pseudo-secrets">17. A security system is only as secure as its secret. Beware of pseudo-secrets.</h2>
+  </article>
+  <nav class="chapter-nav book-chapter-nav">
+    <a class="nav-btn prev" href="08-fetchmail-grows-up.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="10-necessary-preconditions-for-the-bazaar-style.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
+</main>
+  <script src="../../../assets/reader.js" defer></script>
+</body>
+</html>

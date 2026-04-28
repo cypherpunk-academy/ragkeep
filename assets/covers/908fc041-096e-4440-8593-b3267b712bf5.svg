@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="630" viewBox="0 0 400 630">
+  <rect width="400" height="189" fill="#2d2d2d" />
+  <rect y="189" width="400" height="378" fill="#f7f3ed" />
+  <rect y="567" width="400" height="63" fill="#2d2d2d" />
+  <line x1="0" y1="189" x2="400" y2="189" stroke="#c4b8a8" stroke-width="1" />
+  <line x1="0" y1="191" x2="400" y2="191" stroke="#c4b8a8" stroke-width="0.5" opacity="0.85" />
+
+  <path d="M 200 18.72 L 236 28.37 L 262.35 54.72 L 272 90.72 L 262.35 126.72 L 236 153.07 L 200 162.72 L 164 153.07 L 137.65 126.72 L 128 90.72 L 137.65 54.72 L 164 28.37 Z" fill="none" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="200" y1="90.72" x2="200" y2="18.72" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="200" y1="90.72" x2="236" y2="28.37" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="200" y1="90.72" x2="262.35" y2="54.72" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="200" y1="90.72" x2="272" y2="90.72" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="200" y1="90.72" x2="262.35" y2="126.72" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="200" y1="90.72" x2="236" y2="153.07" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="200" y1="90.72" x2="200" y2="162.72" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="200" y1="90.72" x2="164" y2="153.07" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="200" y1="90.72" x2="137.65" y2="126.72" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="200" y1="90.72" x2="128" y2="90.72" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="200" y1="90.72" x2="137.65" y2="54.72" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="200" y1="90.72" x2="164" y2="28.37" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="200" cy="90.72" r="3.5" fill="#ffffff"/>
+
+  <text text-anchor="middle" fill="#2d2d2d" font-family="Georgia, 'Times New Roman', serif" font-size="21" font-weight="500"><tspan x="200" y="227">Die Wahrheit als</tspan><tspan x="200" dy="26">Gesamtumfang aller</tspan><tspan x="200" dy="26">Weltansichten</tspan></text>
+  
+  <path d="M 200 359 l 7 7 l -7 7 l -7 -7 Z" fill="none" stroke="#2d2d2d" stroke-width="1.1" />
+  <path d="M 200 362 l 4 4 l -4 4 l -4 -4 Z" fill="#2d2d2d" />
+
+  <text x="200" y="603.5" text-anchor="middle" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="11.5" letter-spacing="0.12em">SIGISMUND VON GLEICH</text>
+</svg>

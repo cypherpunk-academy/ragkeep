@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="630" viewBox="0 0 400 630">
+  <rect width="400" height="189" fill="#2d2d2d" />
+  <rect y="189" width="400" height="378" fill="#f7f3ed" />
+  <rect y="567" width="400" height="63" fill="#2d2d2d" />
+  <line x1="0" y1="189" x2="400" y2="189" stroke="#c4b8a8" stroke-width="1" />
+  <line x1="0" y1="191" x2="400" y2="191" stroke="#c4b8a8" stroke-width="0.5" opacity="0.85" />
+
+  <path d="M 200 15.72 L 264.95 128.22 L 135.05 128.22 Z" fill="none" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="200" y1="15.72" x2="200.00" y2="128.22" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="264.95" y1="128.22" x2="167.53" y2="71.97" stroke="#ffffff" stroke-width="0.55" />
+  <line x1="135.05" y1="128.22" x2="232.47" y2="71.97" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="200" cy="15.72" r="2.2" fill="#ffffff"/>
+  <circle cx="264.95" cy="128.22" r="2.2" fill="#ffffff"/>
+  <circle cx="135.05" cy="128.22" r="2.2" fill="#ffffff"/>
+  <circle cx="200" cy="90.72" r="3.5" fill="#ffffff"/>
+
+  <text text-anchor="middle" fill="#2d2d2d" font-family="Georgia, 'Times New Roman', serif" font-size="21" font-weight="500"><tspan x="200" y="227">Aufsätze über die</tspan><tspan x="200" dy="26">Dreigliederung des</tspan><tspan x="200" dy="26">sozialen Organismus</tspan></text>
+  
+  <path d="M 200 359 l 7 7 l -7 7 l -7 -7 Z" fill="none" stroke="#2d2d2d" stroke-width="1.1" />
+  <path d="M 200 362 l 4 4 l -4 4 l -4 -4 Z" fill="#2d2d2d" />
+
+  <text x="200" y="603.5" text-anchor="middle" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="11.5" letter-spacing="0.12em">RUDOLF STEINER</text>
+</svg>

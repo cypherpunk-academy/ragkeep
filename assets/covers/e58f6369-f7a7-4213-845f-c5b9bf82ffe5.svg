@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="630" viewBox="0 0 400 630">
+  <rect width="400" height="189" fill="#2d2d2d" />
+  <rect y="189" width="400" height="378" fill="#f7f3ed" />
+  <rect y="567" width="400" height="63" fill="#2d2d2d" />
+  <line x1="0" y1="189" x2="400" y2="189" stroke="#c4b8a8" stroke-width="1" />
+  <line x1="0" y1="191" x2="400" y2="191" stroke="#c4b8a8" stroke-width="0.5" opacity="0.85" />
+
+  <circle cx="170" cy="90.72" r="52" fill="none" stroke="#ffffff" stroke-width="0.55"/>
+  <circle cx="230" cy="90.72" r="52" fill="none" stroke="#ffffff" stroke-width="0.55"/>
+  <circle cx="200" cy="90.72" r="3.5" fill="#ffffff"/>
+
+  <text text-anchor="middle" fill="#2d2d2d" font-family="Georgia, 'Times New Roman', serif" font-size="21" font-weight="500"><tspan x="200" y="227">Wahrheit und</tspan><tspan x="200" dy="26">Wissenschaft</tspan></text>
+  <line x1="70" y1="291" x2="330" y2="291" stroke="#6b6b6b" stroke-width="0.6" />
+  <text text-anchor="middle" fill="#6b6b6b" font-family="Georgia, 'Times New Roman', serif" font-size="11.5"><tspan x="200" y="307">Vorspiel zu einer «Philosophie der</tspan><tspan x="200" dy="14">Freiheit»</tspan></text>
+  <path d="M 200 357 l 7 7 l -7 7 l -7 -7 Z" fill="none" stroke="#2d2d2d" stroke-width="1.1" />
+  <path d="M 200 360 l 4 4 l -4 4 l -4 -4 Z" fill="#2d2d2d" />
+
+  <text x="200" y="603.5" text-anchor="middle" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="11.5" letter-spacing="0.12em">RUDOLF STEINER</text>
+</svg>
