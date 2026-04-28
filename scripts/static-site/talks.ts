@@ -513,6 +513,7 @@ export function renderQuellenDetails(
       info?.source_title,
       sourceTypeKey
     );
+    const typeLabel = formatTalkSourceTypeLabel(sourceTypeKey);
     const segTitle = c.segment_title || info?.segment_title || "";
     const summary = _renderSummaryCollapsed(c, info, sourceTypeKey, referenceNumber, rootPath);
 
@@ -521,16 +522,18 @@ export function renderQuellenDetails(
     const bookLikeLayout = isTalkBookLikeLayoutSourceType(sourceTypeKey);
     const blockMod = bookLikeLayout ? " talk-source-block--book-family" : "";
 
-    const chapterRow = segTitle
-      ? `<div class="talk-source-chapter talk-source-chapter--lead">${formatTalkRichInlineHtml(segTitle)}</div>`
+    const typeEl = typeLabel
+      ? `<div class="talk-source-type talk-source-type--lead">${escapeHtml(typeLabel)}</div>`
       : "";
-
     const author = info?.author || "";
     const authorEl = author
       ? `<div class="talk-source-author">${escapeHtml(author)}</div>`
       : "";
     const titlePlain = `<div class="talk-source-book-title talk-source-book-title--plain">${escapeHtml(displaySourceTitle)}</div>`;
-    const bookInfo = `<div class="talk-source-info">${chapterRow}${authorEl}${titlePlain}</div>`;
+    const chapterRow = segTitle
+      ? `<div class="talk-source-chapter talk-source-chapter--lead">${formatTalkRichInlineHtml(segTitle)}</div>`
+      : "";
+    const bookInfo = `<div class="talk-source-info">${typeEl}${authorEl}${titlePlain}${chapterRow}</div>`;
 
     const conceptLike = isTalkConceptSourceType(sourceTypeKey);
     const expandedSnippet = conceptLike ? "" : _snippetForCitation(c, info, 900);
@@ -740,6 +743,7 @@ function _slugToDisplayName(slug: string): string {
 }
 
 interface _DbTurnRow {
+  talk_id: string;
   slug: string;
   title: string;
   publishing_status: string | null;
@@ -765,9 +769,6 @@ function _reconstructBodyFromDbRows(rows: _DbTurnRow[], agentName: string): stri
     let assistantText = row.assistant_message;
     if (Array.isArray(row.references) && row.references.length > 0) {
       assistantText += `\n<!-- quellen\n${JSON.stringify(row.references, null, 2)}\n-->`;
-    }
-    if (Array.isArray(row.chunk_index_map) && row.chunk_index_map.length > 0) {
-      assistantText += `\n<!-- chunk_index_map\n${JSON.stringify(row.chunk_index_map, null, 2)}\n-->`;
     }
     if (row.usage && typeof row.usage === "object") {
       assistantText += `\n<!-- usage ${JSON.stringify(row.usage)} -->`;
@@ -803,7 +804,7 @@ export async function collectTalksFromDb(
 
   try {
     const result = await client.query(
-      `SELECT rt.slug, rt.title, rt.publishing_status,
+      `SELECT rt.talk_id, rt.slug, rt.title, rt.publishing_status,
               rtu.turn_index, rtu.user_message, rtu.assistant_message,
               rtu.assistant_personality, rtu.is_relay, rtu.chunk_index_map, rtu.usage,
               COALESCE(

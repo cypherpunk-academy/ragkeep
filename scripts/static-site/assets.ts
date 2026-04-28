@@ -1254,8 +1254,8 @@ h1, h2, h3, h4, h5, h6 { color: var(--book-header); }
   color: color-mix(in srgb, var(--book-header) 78%, transparent);
 }
 .talk-sources-summary-title {
-  font-size: 0.58em;
-  color: color-mix(in srgb, var(--text) 52%, transparent);
+  font-size: 0.78em;
+  color: var(--talk-book-meta);
 }
 .talk-sources-summary-title--book {
   color: var(--talk-book-meta);
@@ -1265,12 +1265,12 @@ h1, h2, h3, h4, h5, h6 { color: var(--book-header); }
   font-size: 0.85em;
 }
 .talk-sources-summary-chapter {
-  font-size: 0.78em;
-  color: color-mix(in srgb, var(--text) 42%, transparent);
+  font-size: 0.58em;
+  color: color-mix(in srgb, var(--text) 52%, transparent);
   letter-spacing: 0.04em;
 }
 .talk-sources-summary-chapter--book {
-  color: var(--book-header);
+  color: color-mix(in srgb, var(--text) 52%, transparent);
 }
 .talk-sources-summary-gap {
   opacity: 0.45;
@@ -1466,6 +1466,9 @@ a.talk-source-book-title:hover { color: var(--link, #6b8fa3); text-decoration: u
   color: color-mix(in srgb, var(--text) 34%, transparent);
   letter-spacing: 0.03em;
   line-height: 1.3;
+}
+.talk-source-type--lead {
+  margin-top: 0;
 }
 .talk-source-book-title--compact {
   margin-top: 0.35rem;

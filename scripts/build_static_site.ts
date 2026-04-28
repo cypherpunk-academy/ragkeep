@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { lookup } from "node:dns/promises";
+import { execSync } from "node:child_process";
 import { copyAssistantFiles, loadAssistants } from "./static-site/assistants";
 import {
   buildBookLookup,
@@ -36,6 +38,63 @@ const REPO_ROOT = path.resolve(__dirname, "..");
 const OUTPUT_DIR = path.join(REPO_ROOT, "site");
 
 const KEEP_IN_SITE = ["data"];
+function _extractDockerMappedPostgresPort(): number | null {
+  try {
+    const out = execSync("docker port ragrun-postgres 5432/tcp", {
+      encoding: "utf-8",
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+    const m = out.match(/:(\d+)\s*$/m);
+    if (!m) return null;
+    const p = Number(m[1]);
+    return Number.isFinite(p) && p > 0 ? p : null;
+  } catch {
+    return null;
+  }
+}
+
+async function normalizePostgresEnvForHost(): Promise<void> {
+  const candidates = ["RAGRUN_POSTGRES_DSN", "DATABASE_URL", "POSTGRES_URL"] as const;
+  const key = candidates.find((k) => {
+    const v = process.env[k];
+    return typeof v === "string" && v.trim() !== "";
+  });
+  if (!key) return;
+  const raw = process.env[key]!;
+  const pgUrl = raw.replace(/^postgresql\+[^:]+:\/\//, "postgresql://");
+  let url: URL;
+  try {
+    url = new URL(pgUrl);
+  } catch {
+    return;
+  }
+  if (url.hostname !== "postgres") return;
+
+  let postgresResolvable = true;
+  try {
+    await lookup("postgres");
+  } catch {
+    postgresResolvable = false;
+  }
+  if (postgresResolvable) {
+    return;
+  }
+
+  const mappedPort = _extractDockerMappedPostgresPort();
+  url.hostname = "localhost";
+  if (mappedPort) {
+    url.port = String(mappedPort);
+  }
+  const normalizedPg = url.toString();
+  const normalizedWithDriver = raw.includes("postgresql+")
+    ? normalizedPg.replace(/^postgresql:\/\//, "postgresql+psycopg://")
+    : normalizedPg;
+
+  process.env[key] = normalizedWithDriver;
+  process.env.POSTGRES_URL = normalizedPg;
+  process.env.DATABASE_URL = normalizedPg;
+  process.env.RAGRUN_POSTGRES_DSN = normalizedWithDriver;
+}
 
 function cleanSiteOutput(outputDir: string): void {
   if (!fs.existsSync(outputDir)) {
@@ -79,6 +138,7 @@ function copyFavicon(
 }
 
 async function main(): Promise<void> {
+  await normalizePostgresEnvForHost();
   cleanSiteOutput(OUTPUT_DIR);
   writeSiteAssets(OUTPUT_DIR);
   copyBookCoverSvgs(REPO_ROOT, OUTPUT_DIR);

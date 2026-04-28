@@ -17,8 +17,8 @@
   "scripts": {
     "prepare": "git config core.hooksPath scripts/hooks || true",
     "push": "bash ./scripts/publish_to_hf.sh",
-    "build:pages": "npm run build:registry && node --import tsx ./scripts/build_static_site.ts",
-    "build:registry": "node --import tsx ./scripts/build_agent_registry.ts",
+    "build:pages": "npm run build:registry && node --env-file ../ragrun/.env --import tsx ./scripts/build_static_site.ts",
+    "build:registry": "node --env-file ../ragrun/.env --import tsx ./scripts/build_agent_registry.ts",
     "serve": "npx http-server site -o -c-1",
     "dev": "RAGRUN_URL=http://localhost:8000 npm run build:pages && npm run serve"
   },
