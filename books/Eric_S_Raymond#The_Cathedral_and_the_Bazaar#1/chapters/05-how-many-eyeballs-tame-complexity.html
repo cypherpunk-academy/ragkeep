@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How Many Eyeballs Tame Complexity</title>
+  <link rel="stylesheet" href="../../../assets/book.css" />
+</head>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <article class="book-chapter" data-chapter="5" id="c-5">
+    <h1 class="book-chapter-title" id="c-5-title" data-slug="how-many-eyeballs-tame-complexity">How Many Eyeballs Tame Complexity</h1>
+    <section class="book-paragraph" id="p-5-1">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-1">1|</a>
+        <span class="book-sentence" id="s-5-1-1-p0">It's one thing to ob­ser­ve in the large that the ba­zaar style great­ly ac­ce­le­ra­tes de­bug­ging and code evo­lu­ti­on.</span>
+        
+        <span class="book-sentence" id="s-5-1-2-p0">It's ano­ther to un­der­stand ex­act­ly how and why it does so at the micro-level of day-to-day de­ve­l­oper and tes­ter be­ha­vi­or.</span>
+        
+        <span class="book-sentence" id="s-5-1-3-p0">In this sec­tion (writ­ten three years after the ori­gi­nal paper, using in­sights by de­ve­l­o­pers who read it and re-ex­ami­ned their own be­ha­vi­or) we'll take a hard look at the ac­tu­al me­cha­nisms.</span>
+        
+        <span class="book-sentence" id="s-5-1-4-p0">Non-tech­ni­cal­ly in­cli­ned re­a­ders can safe­ly skip to the next sec­tion.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-2">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-2">2|</a>
+        <span class="book-sentence" id="s-5-2-1-p0">One key to un­der­stan­ding is to rea­li­ze ex­act­ly why it is that the kind of bug re­port non–sour­ce-aware users nor­mal­ly turn in tends not to be very use­ful.</span>
+        
+        <span class="book-sentence" id="s-5-2-2-p0">Non–sour­ce-aware users tend to re­port only sur­face sym­ptoms; they take their en­vi­ron­ment for gran­ted, so they (a) omit cri­ti­cal back­ground data, and (b) sel­dom in­clu­de a re­lia­ble re­ci­pe for re­pro­du­cing the bug.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-3">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-3">3|</a>
+        <span class="book-sentence" id="s-5-3-1-p0">The un­der­ly­ing pro­blem here is a mis­match bet­ween the tes­ter's and the de­ve­l­oper's men­tal mo­dels of the pro­gram; the tes­ter, on the outs­ide loo­king in, and the de­ve­l­oper on the in­si­de loo­king out.</span>
+        
+        <span class="book-sentence" id="s-5-3-2-p0">In clo­sed-sour­ce de­ve­lop­ment they're both stuck in these roles, and tend to talk past each other and find each other de­eply frus­tra­ting.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-4">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-4">4|</a>
+        <span class="book-sentence" id="s-5-4-1-p0">Open-sour­ce de­ve­lop­ment breaks this bind, ma­king it far ea­sier for tes­ter and de­ve­l­oper to de­ve­lop a sha­red re­pre­sen­ta­ti­on groun­ded in the ac­tu­al sour­ce code and to com­mu­ni­ca­te ef­fec­tive­ly about it.</span>
+        
+        <span class="book-sentence" id="s-5-4-2-p0">Prac­tical­ly, there is a huge dif­fe­rence in le­ver­age for the de­ve­l­oper bet­ween the kind of bug re­port that just re­ports ex­ter­nal­ly-vi­si­ble sym­ptoms and the kind that hooks di­rect­ly to the de­ve­l­oper's sour­ce-code–based men­tal re­pre­sen­ta­ti­on of the pro­gram.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-5">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-5">5|</a>
+        <span class="book-sentence" id="s-5-5-1-p0">Most bugs, most of the time, are ea­si­ly nai­led given even an in­com­ple­te but sug­ges­ti­ve cha­rac­te­riza­t­i­on of their error con­di­ti­ons at sour­ce-code level.</span>
+        
+        <span class="book-sentence" id="s-5-5-2-p0">When so­meo­ne among your beta-tes­ters can point out, "there's a boun­da­ry pro­blem in line nnn", or even just "under con­di­ti­ons X, Y, and Z, this va­ria­ble rolls over", a quick look at the of­fen­ding code often suf­fices to pin down the exact mode of failu­re and ge­ne­ra­te a fix.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-6">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-6">6|</a>
+        <span class="book-sentence" id="s-5-6-1-p0">Thus, sour­ce-code awa­ren­ess by both par­ties great­ly en­han­ces both good com­mu­ni­ca­ti­on and the syn­er­gy bet­ween what a beta-tes­ter re­ports and what the core de­ve­l­oper(s) know.</span>
+        
+        <span class="book-sentence" id="s-5-6-2-p0">In turn, this means that the core de­ve­l­o­pers' time tends to be well con­ser­ved, even with many col­la­bo­ra­tors.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-7">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-7">7|</a>
+        <span class="book-sentence" id="s-5-7-1-p0">Ano­ther cha­rac­te­ris­tic of the open-sour­ce me­thod that con­ser­ves de­ve­l­oper time is the com­mu­ni­ca­ti­on struc­tu­re of ty­pi­cal open-sour­ce pro­jects.</span>
+        
+        <span class="book-sentence" id="s-5-7-2-p0">Above I used the term "core de­ve­l­oper"; this re­flects a dis­tinc­tion bet­ween the pro­ject core (ty­pi­cal­ly quite small; a sin­gle core de­ve­l­oper is com­mon, and one to three is ty­pi­cal) and the pro­ject halo of beta-tes­ters and avail­able cont­ri­bu­tors (which often num­bers in the hund­reds).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-8">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-8">8|</a>
+        <span class="book-sentence" id="s-5-8-1-p0">The fun­da­men­tal pro­blem that tra­di­tio­nal soft­ware-de­ve­lop­ment or­ga­niza­t­i­on ad­dres­ses is Brook's Law: "Ad­ding more pro­gramm­ers to a late pro­ject makes it later." More ge­ne­ral­ly, Brooks's Law pre­dicts that the com­ple­xi­ty and com­mu­ni­ca­ti­on costs of a pro­ject rise with the squa­re of the num­ber of de­ve­l­o­pers, while work done only rises li­ne­ar­ly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-9">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-9">9|</a>
+        <span class="book-sentence" id="s-5-9-1-p0">Brooks's Law is foun­ded on ex­pe­ri­ence that bugs tend stron­gly to clus­ter at the in­ter­faces bet­ween code writ­ten by dif­fe­rent peop­le, and that com­mu­ni­ca­ti­ons/co­or­di­na­ti­on over­head on a pro­ject tends to rise with the num­ber of in­ter­faces bet­ween human beings.</span>
+        
+        <span class="book-sentence" id="s-5-9-2-p0">Thus, pro­blems scale with the num­ber of com­mu­ni­ca­ti­ons paths bet­ween de­ve­l­o­pers, which sca­les as the squa­re of the num­ber of de­ve­l­o­pers (more pre­cise­ly, ac­cor­ding to the for­mu­la N*(N – 1)/2 where N is the num­ber of de­ve­l­o­pers).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-10">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-10">10|</a>
+        <span class="book-sentence" id="s-5-10-1-p0">The Brooks's Law ana­ly­sis (and the re­sul­ting fear of large num­bers in de­ve­lop­ment groups) rests on a hi­d­den as­sump­ti­on: that the com­mu­ni­ca­ti­ons struc­tu­re of the pro­ject is ne­ces­sa­ri­ly a com­ple­te graph, that ever­y­bo­dy talks to ever­y­bo­dy else.</span>
+        
+        <span class="book-sentence" id="s-5-10-2-p0">But on open-sour­ce pro­jects, the halo de­ve­l­o­pers work on what are in ef­fect se­pa­ra­ble par­al­lel sub­tasks and in­ter­act with each other very litt­le; code chan­ges and bug re­ports stream through the core group, and only wi­t­hin that small core group do we pay the full Brook­si­an over­head.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-11">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-11">11|</a>
+        <span class="book-sentence" id="s-5-11-1-p0">There are still more re­a­sons that sour­ce-code–level bug re­porting tends to be very ef­fi­ci­ent.</span>
+        
+        <span class="book-sentence" id="s-5-11-2-p0">They cen­ter around the fact that a sin­gle error can often have mul­ti­ple pos­si­ble sym­ptoms, ma­ni­fes­ting dif­fer­ent­ly de­pen­ding on de­tails of the user's usage pat­tern and en­vi­ron­ment.</span>
+        
+        <span class="book-sentence" id="s-5-11-3-p0">Such er­rors tend to be ex­act­ly the sort of com­plex and subt­le bugs (such as dy­na­mic-me­mo­ry-ma­nage­ment er­rors or non­de­ter­mi­nis­tic in­ter­rupt-win­dow ar­ti­facts) that are har­dest to re­pro­du­ce at will or to pin down by sta­tic ana­ly­sis, and which do the most to crea­te long-term pro­blems in soft­ware.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-12">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-12">12|</a>
+        <span class="book-sentence" id="s-5-12-1-p0">A tes­ter who sends in a ten­ta­ti­ve sour­ce-code–level cha­rac­te­riza­t­i­on of such a multi-sym­ptom bug (e.g. "It looks to me like there's a win­dow in the si­gnal hand­ling near line 1250" or "Where are you ze­ro­ing that buf­fer?") may give a de­ve­l­oper, other­wi­se too close to the code to see it, the cri­ti­cal clue to a half-dozen dis­pa­ra­te sym­ptoms.</span>
+        
+        <span class="book-sentence" id="s-5-12-2-p0">In cases like this, it may be hard or even im­pos­si­ble to know which ex­ter­nal­ly-vi­si­ble mis­be­ha­vi­or was cau­sed by pre­cise­ly which bug—but with fre­quent re­lea­ses, it's un­ne­cessa­ry to know.</span>
+        
+        <span class="book-sentence" id="s-5-12-3-p0">Other col­la­bo­ra­tors will be li­kely to find out quick­ly whe­ther their bug has been fixed or not.</span>
+        
+        <span class="book-sentence" id="s-5-12-4-p0">In many cases, sour­ce-level bug re­ports will cause mis­be­ha­vi­ors to drop out wi­thout ever ha­ving been at­tri­bu­ted to any spe­ci­fic fix.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-13">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-13">13|</a>
+        <span class="book-sentence" id="s-5-13-1-p0">Com­plex multi-sym­ptom er­rors also tend to have mul­ti­ple trace paths from sur­face sym­ptoms back to the ac­tu­al bug.</span>
+        
+        <span class="book-sentence" id="s-5-13-2-p0">Which of the trace paths a given de­ve­l­oper or tes­ter can chase may de­pend on subt­le­ties of that per­son's en­vi­ron­ment, and may well chan­ge in a not ob­vious­ly de­ter­mi­nis­tic way over time.</span>
+        
+        <span class="book-sentence" id="s-5-13-3-p0">In ef­fect, each de­ve­l­oper and tes­ter sam­ples a semi-ran­dom set of the pro­gram's state space when loo­king for the etio­lo­gy of a sym­ptom.</span>
+        
+        <span class="book-sentence" id="s-5-13-4-p0">The more subt­le and com­plex the bug, the less li­kely that skill will be able to gua­ran­tee the re­le­van­ce of that samp­le.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-14">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-14">14|</a>
+        <span class="book-sentence" id="s-5-14-1-p0">For sim­ple and ea­si­ly re­pro­du­ci­b­le bugs, then, the ac­cent will be on the "semi" ra­ther than the "ran­dom"; de­bug­ging skill and in­ti­ma­cy with the code and its ar­chi­tec­tu­re will mat­ter a lot.</span>
+        
+        <span class="book-sentence" id="s-5-14-2-p0">But for com­plex bugs, the ac­cent will be on the "ran­dom".</span>
+        
+        <span class="book-sentence" id="s-5-14-3-p0">Under these cir­cum­stan­ces many peop­le run­ning tra­ces will be much more ef­fec­tive than a few peop­le run­ning tra­ces se­quen­ti­al­ly—even if the few have a much hig­her aver­age skill level.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-5-15">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-5-15">15|</a>
+        <span class="book-sentence" id="s-5-15-1-p0">This ef­fect will be great­ly am­pli­fied if the dif­fi­cul­ty of fol­lo­wing trace paths from dif­fe­rent sur­face sym­ptoms back to a bug va­ries si­gni­fi­cant­ly in a way that can't be pre­dic­ted by loo­king at the sym­ptoms.</span>
+        
+        <span class="book-sentence" id="s-5-15-2-p0">A sin­gle de­ve­l­oper sam­pling those paths se­quen­ti­al­ly will be as li­kely to pick a dif­fi­cult trace path on the first try as an easy one.</span>
+        
+        <span class="book-sentence" id="s-5-15-3-p0">On the other hand, sup­po­se many peop­le are try­ing trace paths in par­al­lel while doing rapid re­lea­ses.</span>
+        
+        <span class="book-sentence" id="s-5-15-4-p0">Then it is li­kely one of them will find the ea­siest path im­me­dia­te­ly, and nail the bug in a much shor­ter time.</span>
+        
+        <span class="book-sentence" id="s-5-15-5-p0">The pro­ject main­tai­ner will see that, ship a new re­lease, and the other peop­le run­ning tra­ces on the same bug will be able to stop be­fo­re ha­ving spent too much time on their more dif­fi­cult tra­ces.</span>
+        
+      </p>
+    </section>
+  </article>
+  <nav class="chapter-nav book-chapter-nav">
+    <a class="nav-btn prev" href="04-release-early-release-often.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="06-when-is-a-rose-not-a-rose.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
+</main>
+  <script src="../../../assets/reader.js" defer></script>
+</body>
+</html>

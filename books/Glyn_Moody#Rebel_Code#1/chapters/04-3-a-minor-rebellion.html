@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3 - A Minor Rebellion</title>
+  <link rel="stylesheet" href="../../../assets/book.css" />
+</head>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <article class="book-chapter" data-chapter="4" id="c-4">
+    <h1 class="book-chapter-title" id="c-4-title" data-slug="3-a-minor-rebellion">3 - A Minor Rebellion</h1>
+    <section class="book-paragraph" id="p-4-1">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-1-1-p0">WHEN LINUS EN­COUN­TE­RED UNIX in the fall of 1990, Ri­chard Stall­man’s great GNU pro­ject, begun six years be­fo­re, was al­most com­ple­te.</span>
+        
+        <span class="book-sentence" id="s-4-1-2-p0">The one cru­ci­al ele­ment that was still lacking, the ker­nel, was under de­ve­lop­ment in the form of the GNU Hurd—the heart of Stall­man’s ope­ra­ting sys­tem.</span>
+        
+        <span class="book-sentence" id="s-4-1-3-p0">For Stall­man, this delay was re­g­ret­ta­ble but not se­rious; it was more im­portant that most ele­ments of his free Unix-like sys­tem were now avail­able and that the mis­sing piece of the puz­zle was on its way.</span>
+        
+        <span class="book-sentence" id="s-4-1-4-p0">This was cold com­fort for Linus, who wan­ted to run his own copy of Unix im­me­dia­te­ly, not in a few years’ time when the GNU Hurd was fi­nis­hed.</span>
+        
+        <span class="book-sentence" id="s-4-1-5-p0">The more he and Lars Wir­ze­ni­us lear­ned about Unix, the more they liked it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-2">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-2-1-p0">Wir­ze­ni­us re­calls the ex­ci­te­ment he and Linus sha­red as they ex­plo­red this new world: “We spent a num­ber of eve­nings while we tal­ked about the ex­er­ci­ses for the cour­se du­ring that fall, and we had mar­ve­lous sim­ple con­tests for stuff like im­ple­men­ting a cer­tain ex­er­cise in the most ele­gant pos­si­ble way, or in some cases the shor­test pos­si­ble way”—clas­sic coder games.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-3">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-3-1-p0">But their gro­wing frus­tra­ti­on with ha­ving to wait in line for the Unix (the only com­pu­ter that ran Unix at Hel­sin­ki Uni­ver­si­ty sup­por­ted just six­teen users at a time) led them to con­tem­pla­te des­pe­ra­te mea­su­res.</span>
+        
+        <span class="book-sentence" id="s-4-3-2-p0">“One of the things that we dis­cus­sed [was that] we might need to ac­tual­ly write the Unix our­sel­ves be­cau­se the com­mer­ci­al ones were re­al­ly ex­pen­si­ve,” Wir­ze­ni­us says, but adds, “that was a joke, es­pe­cial­ly from my side; I’m not quite as good a pro­gram­mer as Linus is.</span>
+        
+        <span class="book-sentence" id="s-4-3-3-p0">It’s not so­me­thing you de­ci­de–‘this week I will write an ope­ra­ting sys­tem.’” The jest pro­ved truer than eit­her could have ima­gi­ned.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-4">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-4-1-p0">For­t­u­n­a­te­ly, in ad­di­ti­on to whet­ting his ap­pe­ti­te for Unix, Linus’s stu­dies that fall pro­vi­ded him with a way to ac­qui­re it.</span>
+        
+        <span class="book-sentence" id="s-4-4-2-p0">He re­calls that “one of the cour­se books was Ope­ra­ting Sys­tems: De­sign and Im­ple­men­ta­ti­on.” The book came with its own il­lus­tra­ti­ve soft­ware, which was unusu­al.</span>
+        
+        <span class="book-sentence" id="s-4-4-3-p0">Cal­led Minix, it had been writ­ten to teach stu­dents how an ope­ra­ting sys­tem worked through ex­ami­ning its sour­ce code.</span>
+        
+        <span class="book-sentence" id="s-4-4-4-p0">Linus found that Minix was es­sen­ti­al­ly a Unix-like sys­tem that ran on a PC.</span>
+        
+        <span class="book-sentence" id="s-4-4-5-p0">He could not know then that not only would it pro­vi­de him with the scaf­fol­ding for buil­ding his own PC-based Unix ker­nel, Linux, but it would also fo­res­ha­dow many of the tech­ni­ques and even much of the de­ve­lop­ment his­to­ry of that sys­tem.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-5">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-5-1-p0">Minix was writ­ten by the same An­d­rew Ta­nen­baum who had re­buf­fed Ri­chard Stall­man’s over­tu­res in 1984 when Stall­man was se­ar­ching for a com­pi­ler and who pro­vo­ked Stall­man into wri­ting GCC.</span>
+        
+        <span class="book-sentence" id="s-4-5-2-p0">De­s­pi­te this in­au­s­pi­cious start, Ta­nen­baum says Stall­man had later sug­gested to him that Minix could pro­vi­de the mis­sing ker­nel of the other­wi­se com­ple­te GNU sys­tem.</span>
+        
+        <span class="book-sentence" id="s-4-5-3-p0">“He ap­proa­ched me a coup­le of times,” Ta­nen­baum says, “but he had all these con­di­ti­ons; it’s got to be this, and it’s got to be that.</span>
+        
+        <span class="book-sentence" id="s-4-5-4-p0">I said ‘whoa, whoa, whoa.’ He’s kind of an ab­ra­si­ve per­son [and] it didn’t re­al­ly turn me on.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-6">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-6-1-p0">Stall­man, for his part, says he has no re­collec­tion of the idea be­cau­se it was so long ago, but ack­now­led­ges that the dis­cus­sions could have taken place.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-7">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-7-1-p0">Had Ta­nen­baum said yes to Stall­man’s pro­po­sal, the his­to­ry of com­pu­ting would have been very dif­fe­rent.</span>
+        
+        <span class="book-sentence" id="s-4-7-2-p0">Linus em­pha­si­zed later that “if the GNU ker­nel had been ready”— for ex­amp­le, through a form of Minix–when he was cas­ting around for his own copy of Unix, “I’d not have bo­the­red to even start my [Linux] pro­ject.” But Ta­nen­baum said no, and ins­tead of nip­ping Linux in the bud, Minix play­ed a fun­da­men­tal role in hel­ping it ger­mi­na­te and flower.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-8">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-8-1-p0">After his stu­dies at MIT as an un­der­gra­dua­te, and at the Uni­ver­si­ty of Ca­li­for­nia at Ber­ke­ley as a gra­dua­te stu­dent, Ta­nen­baum joi­ned the com­pu­ter sci­ence fa­cul­ty at the Free Uni­ver­si­ty of Ams­ter­dam in 1971; he be­ca­me a pro­fes­sor there in 1980.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-9">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-9-1-p0">In 1979, ten years after Unix was first crea­ted, Ver­si­on 7 of the sys­tem was re­leased by AT&#x26;T. Ver­si­on 7 was of note for se­veral re­a­sons; for ex­amp­le, it was the first Unix to be por­ted to (trans­la­ted for use on) an Intel pro­ces­sor, the 8086, a slight­ly more power­ful ver­si­on of the 8088 chip later used in the first IBM PC.</span>
+        
+        <span class="book-sentence" id="s-4-9-2-p0">Xenix, as it was cal­led, was the joint pro­ject of two com­pa­nies.</span>
+        
+        <span class="book-sentence" id="s-4-9-3-p0">One was The Santa Cruz Ope­ra­ti­on, bet­ter known today as SCO (and later the owner of Unix).</span>
+        
+        <span class="book-sentence" id="s-4-9-4-p0">The other was Mi­cro­soft.</span>
+        
+        <span class="book-sentence" id="s-4-9-5-p0">It is litt­le known today that one year be­fo­re Mi­cro­soft had laun­ched MS-DOS in 1981, it had al­re­a­dy brought out a PC ver­si­on of Unix.</span>
+        
+        <span class="book-sentence" id="s-4-9-6-p0">But the exis­tence of Xenix, never a po­pu­lar pro­duct, makes the cur­rent chal­len­ge from sys­tems based around Linux pi­quant, to say the least.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-10">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-10-1-p0">Ta­nen­baum was more af­fec­ted by ano­ther si­gni­fi­cant chan­ge from Ver­si­on 6.</span>
+        
+        <span class="book-sentence" id="s-4-10-2-p0">“The li­cen­se said fair­ly cle­ar­ly [that] the sour­ce code shall not be made avail­able to stu­dents,” Ta­nen­baum re­calls.</span>
+        
+        <span class="book-sentence" id="s-4-10-3-p0">“Pe­ri­od.</span>
+        
+        <span class="book-sentence" id="s-4-10-4-p0">Not­hing.</span>
+        
+        <span class="book-sentence" id="s-4-10-5-p0">None.</span>
+        
+        <span class="book-sentence" id="s-4-10-6-p0">Zero.” Ver­si­on 7 re­pre­sen­ted the sym­bo­lic clo­sing of Unix in­si­de the black box of pro­prieta­ry soft­ware—a sad end to what had long been the ul­ti­ma­te stu­dent ha­cker’s sys­tem.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-11">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-11-1-p0">From an edu­ca­tio­nal view­point, the ban on dis­cus­sing Unix’s sour­ce code was un­sa­tis­fac­to­ry.</span>
+        
+        <span class="book-sentence" id="s-4-11-2-p0">“Bet­ween 1979 and 1984 I stop­ped teaching prac­tical Unix at all and went back to theo­ry,” Ta­nen­baum says.</span>
+        
+        <span class="book-sentence" id="s-4-11-3-p0">He rea­li­zed that the only way to make so­me­thing com­pa­ra­ble avail­able to his stu­dents “was to write an ope­ra­ting sys­tem on my own that would be sys­tem-call com­pa­ti­ble with Unix”—that is, working in ex­act­ly the same way—“but which was my own code, not using any AT&#x26;T code at all.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-12">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-12-1-p0">When Ta­nen­baum began Minix in 1984—just as Stall­man star­ted work on GNU—he de­ci­ded that it would be com­pa­ti­ble with Unix, but also that, as he puts it, “while I was at it, let’s de­sign it right.” This of­fers an in­te­res­ting con­trast to Stall­man’s ap­proach, where the em­pha­sis was on the free avail­a­bi­li­ty of what he wrote, not on how he wrote it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-13">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-13-1-p0">Ta­nen­baum’s “de­si­gning it right” in this con­text meant in part using a mi­cro­ker­nel–alt­hough as Ta­nen­baum is quick to point out, “I de­ci­ded to make a mi­cro­ker­nel long be­fo­re any­bo­dy had heard of mi­cro­ker­nels.” In fact, he says, “I think Minix may have been the first.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-14">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-14-1-p0">Ass a re­sult, “the basic ker­nel is very, very sim­ple,” alt­hough this did not mean that com­ple­ting Minix was easy: “It was thousands and thousands of hours [to get it working]; it’s not a tri­vi­al mat­ter,” Ta­nen­baum ex­plains.</span>
+        
+        <span class="book-sentence" id="s-4-14-2-p0">He wrote Minix at home in the eve­nings.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-15">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-15-1-p0">Wri­ting a new ope­ra­ting sys­tem is dif­fi­cult, one re­a­son Stall­man se­ar­ched for an exis­ting mi­cro­ker­nel sys­tem that he could use.</span>
+        
+        <span class="book-sentence" id="s-4-15-2-p0">Ta­nen­baum re­calls that “de­bug­ging any ker­nel on flaky hard­ware which you don’t re­al­ly un­der­stand well is hor­ri­b­le.</span>
+        
+        <span class="book-sentence" id="s-4-15-3-p0">I al­most gave up the pro­ject a coup­le of times.</span>
+        
+        <span class="book-sentence" id="s-4-15-4-p0">I had bugs that I just couldn’t find.” The dif­fi­cul­ty was cau­sed in part be­cau­se the hard­ware he was working with had un­do­cu­men­ted fea­tures and stran­ge bugs that de­pen­ded on the tem­pe­ra­tu­re of some of the chips.</span>
+        
+        <span class="book-sentence" id="s-4-15-5-p0">Ta­nen­baum would have de­fi­ni­tive­ly aban­do­ned the ent­i­re ef­fort had not a chan­ce re­mark by one of his stu­dents ex­plai­ned the pro­blem.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-16">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-16-1-p0">Even­tual­ly, in 1986, after two years’ hard work, he had a sys­tem that was ready for others to use.</span>
+        
+        <span class="book-sentence" id="s-4-16-2-p0">“I put out a note on the Net say­ing I was doing this, and then I got some peop­le to help me.” Things re­al­ly chan­ged when Ta­nen­baum crea­ted a new Use­net news­group to go with the soft­ware, which was re­leased with the book he had writ­ten to ex­plain his sys­tem to stu­dents.</span>
+        
+        <span class="book-sentence" id="s-4-16-3-p0">“The book and the soft­ware came out to­ge­ther, it was ’87,” Ta­nen­baum re­calls.</span>
+        
+        <span class="book-sentence" id="s-4-16-4-p0">“At that point, the news­group star­ted and went crazy–it was like 40,000 peop­le wi­t­hin a month.</span>
+        
+        <span class="book-sentence" id="s-4-16-5-p0">It had at least the same en­thu­si­asm that Linux has now,” he notes.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-17">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-17-1-p0">What had begun as a per­so­nal pro­ject “to make it pos­si­ble to teach stu­dents how ope­ra­ting sys­tems work, and to il­lus­tra­te it by a sim­ple and strai­ght­for­ward ex­amp­le,” as Ta­nen­baum puts it, had tap­ped into so­me­thing much big­ger and hi­t­her­to un­sus­pec­ted in the com­pu­ter com­mu­ni­ty.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-18">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-18-1-p0">Minix was an in­stant suc­cess, Ta­nen­baum says, be­cau­se it was “Unix with sour­ce code for the PC, which re­qui­red mi­ni­mal hard­ware and had a book de­scri­bing how it worked.</span>
+        
+        <span class="book-sentence" id="s-4-18-2-p0">No­bo­dy had done any­thing like that be­fo­re.</span>
+        
+        <span class="book-sentence" id="s-4-18-3-p0">It wasn’t free, but al­most–$59, $69–but that was like four­teen discs or so­me­thing, which was al­most the ma­nu­fac­tu­ring cost.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-19">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-19-1-p0">There was ano­ther re­a­son the ha­cker com­mu­ni­ty took up Minix with such ala­cri­ty: “Alt­hough I said it 10,000 times, ‘this is an edu­ca­tio­nal sys­tem,’ many peop­le saw it as the an­s­wer to their [pro­gramming] pray­ers.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-20">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-20-1-p0">From the be­gin­ning, Ta­nen­baum says, “in the news­group I was get­ting two hund­red mes­sa­ges a day, and there were two hund­red emails a day as­king for ad­just­ments, say­ing ‘I want this, I need that.’”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-21">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-21-1-p0">Ta­nen­baum re­fu­sed to give in to their de­man­ds.</span>
+        
+        <span class="book-sentence" id="s-4-21-2-p0">“I was af­raid the sys­tem code would get hai­ri­er and hai­ri­er and big­ger and big­ger,” he says.</span>
+        
+        <span class="book-sentence" id="s-4-21-3-p0">“It wouldn’t run on this mi­ni­mal hard­ware, which I wan­ted for the stu­dents, and it would be too hard to ex­plain.</span>
+        
+        <span class="book-sentence" id="s-4-21-4-p0">I didn’t want a 10,000-page lis­ting at the back [of the ac­com­pany­ing book].”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-22">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-22-1-p0">Ta­nen­baum did make some chan­ges, howe­ver.</span>
+        
+        <span class="book-sentence" id="s-4-22-2-p0">“The basic cri­te­ria were [that] if there was a huge amount of yel­ling for it, and [it] was re­la­tive­ly sim­ple to do and didn’t muck up the struc­tu­re of the sys­tem much, then to do it,” he ex­plains.</span>
+        
+        <span class="book-sentence" id="s-4-22-3-p0">“If there wasn’t much de­mand, or it was re­al­ly hairy, and it chan­ged the sys­tem ra­di­cal­ly, don’t do it.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-23">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-23-1-p0">Ass a re­sult, Minix did evol­ve, alt­hough more slow­ly than many of its users wan­ted.</span>
+        
+        <span class="book-sentence" id="s-4-23-2-p0">“There was a whole bunch of new re­lea­ses,” Ta­nen­baum says.</span>
+        
+        <span class="book-sentence" id="s-4-23-3-p0">“There wasn’t a ca­len­dar in the sense that it must be every six months; there was cer­tain new stuff and at some point I said, ‘Gee, there’s en­ough new stuff that war­rants a new ver­si­on.</span>
+        
+        <span class="book-sentence" id="s-4-23-4-p0">It’s sta­ble and it’s been tested by a lot of peop­le on the Net; it’s a working ver­si­on.’ Then at that point it was worth put­ting up a new ver­si­on on the flop­py disk.” Minix was also por­ted to chips other than the 8088 found in the ori­gi­nal PC, in­clu­ding the Intel 80386 pro­ces­sor.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-24">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-24-1-p0">The ar­ri­val of the 80386 chip, and the gra­du­al fall in price of sys­tems using it, pro­ved a key de­ve­lop­ment for Linus.</span>
+        
+        <span class="book-sentence" id="s-4-24-2-p0">“The 386 was a lot bet­ter than any of the pre­vious chips,” he re­cal­led later.</span>
+        
+        <span class="book-sentence" id="s-4-24-3-p0">Mo­re­o­ver, Linus says, “from the Ta­nen­baum book I knew that you could get Unix for a PC.</span>
+        
+        <span class="book-sentence" id="s-4-24-4-p0">So that’s when I ac­tual­ly broke down and got a PC,”–so­me­thing he had been loath to do be­fo­re.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-25">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-25-1-p0">Be­cau­se of the way the Fin­nish uni­ver­si­ty edu­ca­ti­on sys­tem is fun­ded, Linus was in luck.</span>
+        
+        <span class="book-sentence" id="s-4-25-2-p0">Says Wir­ze­ni­us, “The Fin­nish go­vern­ment gives money to stu­dents and also backs stu­dent loans that the stu­dents take from banks.</span>
+        
+        <span class="book-sentence" id="s-4-25-3-p0">The money is sup­po­sed to be used for food and hou­sing, but also for stuff nee­ded for stu­dies.</span>
+        
+        <span class="book-sentence" id="s-4-25-4-p0">Linus ma­na­ged to get a stu­dent loan, which he could use for buy­ing the com­pu­ter since he was li­ving with his mo­ther–so he didn’t have to spend as much money on li­ving.” The debt was fi­nal­ly paid off in No­vem­ber 1992.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-26">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-26-1-p0">Linus added other re­cent­ly ac­qui­red funds.</span>
+        
+        <span class="book-sentence" id="s-4-26-2-p0">“I had Christ­mas money,” he says.</span>
+        
+        <span class="book-sentence" id="s-4-26-3-p0">“I re­mem­ber the first non­ho­li­day day of the New Year I went to buy a PC.” That was 5 Ja­nu­a­ry 1991.</span>
+        
+        <span class="book-sentence" id="s-4-26-4-p0">In 1996, he still re­cal­led the ma­chi­ne’s spe­ci­fi­ca­ti­on: “386, DX33, 4 Megs of RAM, no co-pro­ces­sor; 40 Megs hard disk.” This is un­be­liev­a­b­ly puny by today’s stan­dards, but aside from the hard disk, which Linus ack­now­led­ged was “not very large,” these specs were re­spec­ta­ble for the time—es­pe­cial­ly for run­ning Minix.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-27">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-27-1-p0">In his first pu­blis­hed in­ter­view, with <em>Linux News</em>, “a sum­ma­ry of the go­ings-on of the Linux com­mu­ni­ty” put to­ge­ther in­iti­al­ly by Wir­ze­ni­us, and which ran for six months from the fall of 1992, Linus ex­plai­ned what hap­pe­n­ed next.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-28">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-28-1-p0">While I got my ma­chi­ne on Ja­nu­a­ry 5th 1991, I was forced to run DOS on it for a coup­le of months while wait­ing for the Minix disks.” He pas­sed the time in an unusu­al way: “Jan-Feb was spent about 70–30 play­ing [the com­pu­ter game] ‘Prin­ce of Per­sia’ and get­ting ac­quain­ted with the ma­chi­ne.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-29">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-29-1-p0">In re­tro­s­pect, it seems ex­tra­or­di­na­ry that Linus’s main ac­tivi­ty be­fo­re wri­ting Linux was play­ing “Prin­ce of Per­sia” for two months, even if it had been named Best Com­pu­ter Game, Ac­tion Game of the Year and Game of the De­ca­de.</span>
+        
+        <span class="book-sentence" id="s-4-29-2-p0">Wha­te­ver the re­a­son, Linus was not com­ple­te­ly lost in the blo­cky if ef­fec­tive gra­phics of the sul­tan’s dun­ge­ons as he fought off the mi­ni­ons of the evil Grand Vi­zier Jaf­f­ar.</span>
+        
+        <span class="book-sentence" id="s-4-29-3-p0">By his own cal­cu­la­ti­on, du­ring this pe­ri­od Linus was spen­ding around a third of his time “get­ting ac­quain­ted with the ma­chi­ne,” pres­u­m­a­b­ly in a ty­pi­cal­ly tho­rough man­ner.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-30">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-30-1-p0">Wir­ze­ni­us says that at this time Linus “star­ted play­ing around with pro­gramming tools for MS-DOS on a PC.</span>
+        
+        <span class="book-sentence" id="s-4-30-2-p0">At some point he had an as­sem­bler for wri­ting as­sem­bly lan­gua­ge pro­grams” just as he had done on his grand­fa­ther’s Vic-20.</span>
+        
+        <span class="book-sentence" id="s-4-30-3-p0">The be­ne­fits of as­sem­bly lan­gua­ge pro­gramming in­clu­de fas­ter pro­grams and di­rect con­trol of the hard­ware.</span>
+        
+        <span class="book-sentence" id="s-4-30-4-p0">Doubt­less the abili­ty to ex­plo­re the 386 chip in this way was the main re­a­son Linus em­ploy­ed it, not as a de­mons­tra­ti­on of ha­cker pro­wess; he had been pro­gramming in as­sem­bly lan­gua­ge since his early teens and had not­hing to prove there.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-31">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-31-1-p0">Wir­ze­ni­us re­calls one of those first DOS as­sem­bler pro­grams.</span>
+        
+        <span class="book-sentence" id="s-4-31-2-p0">“I re­mem­ber him being very proud over a short piece of code that im­ple­ments a sub­rou­ti­ne that did not­hing ex­cept cal­cu­la­te the length of a se­quence of cha­rac­ters.</span>
+        
+        <span class="book-sentence" id="s-4-31-3-p0">It wasn’t the task that was com­pli­ca­ted, it was the fact that he had writ­ten ever­y­thing for him­s­elf ” that made Linus so plea­sed.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-32">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-32-1-p0">But as Wir­ze­ni­us said in a speech he made at the 1998 Linux Expo, “when Linus de­ci­des to learn so­me­thing, he re­al­ly learns it, and very quick­ly.” Just be­cau­se these first steps were small cer­tain­ly did not mean that they were doo­med to stay that way.</span>
+        
+        <span class="book-sentence" id="s-4-32-2-p0">Al­re­a­dy his next as­sem­bly lan­gua­ge pro­gram was more so­phis­ti­ca­ted than the ear­lier sub­rou­ti­ne; it in­ves­ti­ga­ted one of the key fea­tures of the 386: task-swit­ching.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-33">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-33-1-p0">The abili­ty of the Intel 80386 chip to switch bet­ween tasks meant that it could hand­le more than one task, or user, than once (by jum­ping quick­ly bet­ween them).</span>
+        
+        <span class="book-sentence" id="s-4-33-2-p0">Task-swit­ching lay at the heart of mul­ti­tas­king, which in turn was one of the key ca­pa­bi­li­ties of Unix.</span>
+        
+        <span class="book-sentence" id="s-4-33-3-p0">Linus may not have been aware then that al­most im­per­cep­ti­bly his ex­pe­ri­ments were mo­ving in the di­rec­tion of crea­ting the ker­nel of a Unix-like sys­tem.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-34">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-34-1-p0">Linus de­scri­bes his first ex­pe­ri­ments in this area on the 386 this way: “I was tes­ting the task-swit­ching ca­pa­bi­li­ties, so what I did was I just made two pro­ces­ses and made them write to the screen and had a timer that swit­ched tasks.</span>
+        
+        <span class="book-sentence" id="s-4-34-2-p0">One pro­cess wrote ‘A,’ the other wrote ‘B,’ so I saw ‘AAA­ABBBB’ and so on.” Later, Linus would write of this task-swit­cher, “Gods I was proud over that”; but this was still hard­ly an ope­ra­ting sys­tem ker­nel, let alone one that was Unix-com­pa­ti­ble.</span>
+        
+        <span class="book-sentence" id="s-4-34-3-p0">Linus was, howe­ver, get­ting clo­ser–at least to the rea­liza­t­i­on of what might be pos­si­ble.</span>
+        
+        <span class="book-sentence" id="s-4-34-4-p0">The final leap for­ward came after Minix tur­ned up.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-35">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-35-1-p0">That his­to­ric mo­ment is me­mo­ria­li­zed in his first pos­ting to the news­group comp.os.minix, which had been set up at the time of Minix’s launch.</span>
+        
+        <span class="book-sentence" id="s-4-35-2-p0">Linus had doubt­less been rea­ding this for some while be­fo­re—“I read a lot of news­groups then”—but not until Fri­day, 29 March 1991, did he sum­mon up the cou­ra­ge to make his first pos­ting there.</span>
+        
+        <span class="book-sentence" id="s-4-35-3-p0">It be­gins:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-36">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-36-1-p0">Hello ever­y­bo­dy,</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-37">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-37-1-p0">I’ve had minix for a week now, and have up­graded to 386-minix (nice), and duly down­loa­ded gcc for minix.</span>
+        
+        <span class="book-sentence" id="s-4-37-2-p0">Yes, it works–but...</span>
+        
+        <span class="book-sentence" id="s-4-37-3-p0">op­ti­mi­zing isn’t working, gi­ving an error mes­sa­ge of “floa­ting point stack ex­cee­ded” or so­me­thing.</span>
+        
+        <span class="book-sentence" id="s-4-37-4-p0">Is this nor­mal?</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-38">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-38-1-p0">and con­clu­des with the cu­rious si­gna­tu­re</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-39">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-39-1-p0">adv­T­HANKSance, Linus Tor­valds tor­<a href="mailto:valds@cc.hel">valds@cc.hel</a>­sin­ki.fi</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-40">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-40-1-p0">Se­veral in­te­res­ting points stand out in this pos­ting.</span>
+        
+        <span class="book-sentence" id="s-4-40-2-p0">First, Linus had in­stal­led 386-Minix.</span>
+        
+        <span class="book-sentence" id="s-4-40-3-p0">This was a se­ries of patches (chan­ges and ad­di­ti­ons) to the ori­gi­nal Minix code “to make it usa­ble on a 386 so that you could ac­tual­ly take ad­van­ta­ge of 32 bits, be­cau­se the ori­gi­nal Minix was 16 bits,” as Linus ex­plains.</span>
+        
+        <span class="book-sentence" id="s-4-40-4-p0">These patches con­sti­tu­ted the port writ­ten by the Aus­tra­li­an, Bruce Evans; he re­mem­bers that he had to fight to get them ac­cep­ted, so con­ser­va­ti­ve was Ta­nen­baum when it came to en­lar­ging his teaching sys­tem.</span>
+        
+        <span class="book-sentence" id="s-4-40-5-p0">Evans was soon to be­co­me the first per­son to pro­vi­de Linus with help and ad­vice as he wrote Linux.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-41">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-41-1-p0">Linus was al­re­a­dy using the C com­pi­ler GCC, which shows that he was wri­ting or about to write in C—the com­pu­ter lan­gua­ge most wi­de­ly used by pro­fes­sio­nal pro­gramm­ers and, like as­sem­bler, re­qui­ring con­siderable skill.</span>
+        
+        <span class="book-sentence" id="s-4-41-2-p0">These C pro­grams, com­bi­ned with the sim­ple as­sem­bly lan­gua­ge ex­pe­ri­ments he had been con­duc­ting, would even­tual­ly be­co­me the basis of Linux.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-42">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-42-1-p0">Linus’s first pos­ting to comp.os.minix is in­te­res­ting, but his se­cond is ex­tra­or­di­na­ry.</span>
+        
+        <span class="book-sentence" id="s-4-42-2-p0">By his own ad­mis­si­on he had had Minix for just a week; and yet two days later—on 1 April 1991—in re­s­pon­se to a po­li­te ques­ti­on from so­meo­ne ha­ving pro­blems with 386-Minix, Linus re­plies as if he were some kind of Minix wi­zard for whom such ques­ti­ons are so tri­vi­al as to be al­most in­sul­ting.</span>
+        
+        <span class="book-sentence" id="s-4-42-3-p0">He wrote:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-43">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-43-1-p0">RTFSC (Read the F**ing Sour­ce Code:-)–It is hea­vi­ly com­men­ted and the so­lu­ti­on should be ob­vious</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-44">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-44-1-p0">but then miti­ga­tes this brus­quen­ess by ad­ding</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-45">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-45-1-p0">(take that with a grain of salt, it cer­tain­ly stum­ped me for a while:-).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-46">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-46-1-p0">Even though the first part is meant pres­u­m­a­b­ly as a joke, its tone of exag­ge­ra­ted self-con­fi­dence is cha­rac­te­ris­tic; in pu­blic Linus fre­quent­ly de­fla­tes some ex­pres­si­on of ap­pa­rent ar­ro­gan­ce with a self-depre­ca­ting and ho­nest hu­mi­li­ty.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-47">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-47-1-p0">The ex­pla­na­ti­on for this con­fu­sing be­ha­vi­or is not hard to find.</span>
+        
+        <span class="book-sentence" id="s-4-47-2-p0">Like many gif­ted in­tel­lec­tu­als, Linus as a young man la­cked self-con­fi­dence; for ex­amp­le, at uni­ver­si­ty, he says, “I was re­al­ly so shy I didn’t want to speak in clas­ses.</span>
+        
+        <span class="book-sentence" id="s-4-47-3-p0">Even just as a stu­dent I didn’t want to raise my hand and say any­thing.” Per­haps as a Minix new­bie, pos­ting for just the se­cond time to comp.os.minix, Linus was si­mi­lar­ly over­com­pen­sa­ting with his co­ar­se reply.</span>
+        
+        <span class="book-sentence" id="s-4-47-4-p0">Wha­te­ver the re­a­son, it is in­te­res­ting to see dis­play­ed here a be­ha­vi­or that in va­rious and often more subt­le forms would be re­pea­ted in other pu­blic fo­rums, though less as time went on; as Linux grew more ob­vious­ly suc­cess­ful, Linus grew more self-con­fi­dent.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-48">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-48-1-p0">His third pos­ting to the Minix news­group, ano­ther reply to a fel­low Minix user’s query writ­ten a week after the 1 April out­burst was more mo­dera­te: “I’m ra­ther new to 386-Minix mys­elf,” he be­gins mo­dest­ly, “but have tried porting some stuff and have a few com­ments.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-49">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-49-1-p0">The de­man­ds of his uni­ver­si­ty stu­dies may have been re­s­pon­si­ble for the ne­ar­ly three months that pass until Linus’s next major pos­ting to the news­group.</span>
+        
+        <span class="book-sentence" id="s-4-49-2-p0">Ass Wir­ze­ni­us re­calls, de­s­pi­te the gro­wing fa­sci­na­ti­on his pro­gramming pro­ject held for him, “Linus did ac­tual­ly spend en­ough time at the uni­ver­si­ty to pass his cour­ses.” This was not be­cau­se of what his teachers might other­wi­se have done: “The uni­ver­si­ty its­elf doesn’t pe­nali­ze you if you don’t pass your cour­ses,” Wir­ze­ni­us ex­plains.</span>
+        
+        <span class="book-sentence" id="s-4-49-3-p0">“It just means if you want to gra­dua­te then you have to take those cour­ses later.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-50">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-50-1-p0">Linus nee­ded to pass his exams be­cau­se of the stu­dent loan he had taken out to buy his PC.</span>
+        
+        <span class="book-sentence" id="s-4-50-2-p0">Ass Wir­ze­ni­us notes, “If you don’t get en­ough [aca­de­mic] credits for a year then you won’t get sup­port from the go­vern­ment for the next year.</span>
+        
+        <span class="book-sentence" id="s-4-50-3-p0">If you don’t get en­ough credits du­ring two years or so then you have to start pay­ing back the loan, which is quite a bit of money if you aren’t working.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-51">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-51-1-p0">For­t­u­n­a­te­ly, Linus had en­ough na­tu­ral abili­ty to pass the re­qui­red exams and still have time for se­rious hacking.</span>
+        
+        <span class="book-sentence" id="s-4-51-2-p0">In April, at the same time he began ex­plo­ring Minix, he de­ci­ded to turn his sim­ple task-swit­ching pro­gram, where one pro­cess wrote “A” and ano­ther wrote “B,” into a ter­mi­nal emu­la­tor that would allow him to read Use­net news­groups on the uni­ver­si­ty sys­tem from his be­droom when he used his PC hoo­ked up to a modem.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-52">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-52-1-p0">Linus’s de­scrip­ti­on of his work makes it sound dis­ar­mingly sim­ple: “I chan­ged those two pro­ces­ses to work like a ter­mi­nal emu­la­ti­on pa­cka­ge.</span>
+        
+        <span class="book-sentence" id="s-4-52-2-p0">You have one pro­cess that is rea­ding from the key­board and sen­ding to the modem, and the other is rea­ding from the modem and sen­ding to the screen.” To do this, he had to write va­rious dri­vers.</span>
+        
+        <span class="book-sentence" id="s-4-52-3-p0">These are small soft­ware pro­grams that act as me­dia­tors bet­ween pe­ri­pherals such as key­boards and screens and the cen­tral soft­ware that is doing most of the cal­cu­la­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-53">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-53-1-p0">Ass Linus said in the Oc­to­ber 1992 in­ter­view, “Linux stop­ped for quite a while at the ter­mi­nal emu­la­tor stage; I play­ed around with Minix, and used my pro­gram to read news from the uni­ver­si­ty ma­chi­ne.” But later on, he de­ci­ded to ex­tend it fur­ther.</span>
+        
+        <span class="book-sentence" id="s-4-53-2-p0">“I wan­ted to down­load stuff,” he says.</span>
+        
+        <span class="book-sentence" id="s-4-53-3-p0">This meant in­ter­fa­c­ing his mo­di­fied task-swit­ching soft­ware to a disk drive: “So I had to write a disk dri­ver,” Linus re­calls.</span>
+        
+        <span class="book-sentence" id="s-4-53-4-p0">Theo­re­ti­cal­ly, this ma­neu­ver was strai­ght­for­ward, but, just as they had when Ta­nen­baum was wri­ting Minix, “pro­blems with bad do­cu­men­ta­ti­on star­ted to crop up,” Linus said later.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-54">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-54-1-p0">Linus noted in a Use­net pos­ting in 1992, “The PC may be the most used ar­chi­tec­tu­re in the world right now, but that doesn’t mean the docs are any bet­ter.” It was the Minix ha­cker Bruce Evans who hel­ped him out at this cri­ti­cal time by ex­plai­ning some un­do­cu­men­ted fea­ture of the hard­ware that Linus was using.</span>
+        
+        <span class="book-sentence" id="s-4-54-2-p0">“He was re­al­ly one of the peop­le who I tal­ked a lot with,” Linus says.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-55">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-55-1-p0">When he had sor­ted out the disk dri­ver, Linus nee­ded a way of rea­ding and wri­ting files on the disk that was now ac­ces­si­ble.</span>
+        
+        <span class="book-sentence" id="s-4-55-2-p0">This re­qui­red what is cal­led a file sys­tem, a set of rules about how data is or­ga­ni­zed on the disk.</span>
+        
+        <span class="book-sentence" id="s-4-55-3-p0">Linus sat down and wrote one, ba­sing it on the Minix file sys­tem he had been using for se­veral months.</span>
+        
+        <span class="book-sentence" id="s-4-55-4-p0">This was “in order to be able to write files and read files to upload them,” he ex­plains.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-56">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-56-1-p0">“I star­ted out try­ing to make a file sys­tem, and used the Minix [file sys­tem] for sim­ple prac­tical re­a­sons; that way I al­re­a­dy had a file lay­out I could test things on,” he noted in the Linux News in­ter­view.</span>
+        
+        <span class="book-sentence" id="s-4-56-2-p0">The “file lay­out” re­fer­red to the pre-exis­ting Minix in­stal­la­ti­on on his PC: He could test his new file sys­tem code by try­ing to read and write to it.</span>
+        
+        <span class="book-sentence" id="s-4-56-3-p0">Linus may have used the Minix file sys­tem “for sim­ple prac­tical re­a­sons,” but being able to learn from the Minix sour­ce code in Ta­nen­baum’s book was ob­vious­ly ano­ther major be­ne­fit of ad­op­ting this ap­proach.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-57">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-57-1-p0">Ass Linus re­mem­be­red in the 1992 pos­ting, just as “the worst part is star­ting off,” so the more basic fea­tures he added to his sys­tem the ea­sier it got: “Hairy co­ding still, but I had some de­vices, and de­bug­ging was ea­sier.</span>
+        
+        <span class="book-sentence" id="s-4-57-2-p0">I star­ted using C at this stage, and it cer­tain­ly speeds up de­ve­lop­ment.” Mo­re­o­ver, “this is also when I start to get se­rious about my me­ga­lo­ma­ni­ac ideas to make ‘a bet­ter Minix than Minix.’”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-58">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-58-1-p0">Linus was using Minix as a kind of scaf­fol­ding for his work on what be­ca­me Linux.</span>
+        
+        <span class="book-sentence" id="s-4-58-2-p0">But there was a draw­back to this ap­proach.</span>
+        
+        <span class="book-sentence" id="s-4-58-3-p0">Ass Linus re­calls, “I es­sen­ti­al­ly had to re­boot the ma­chi­ne just to read news with my fancy news­re­a­der, and that was very in­con­ve­ni­ent” be­cau­se it took time and meant that Linus lost Minix’s other ca­pa­bi­li­ties.</span>
+        
+        <span class="book-sentence" id="s-4-58-4-p0">He con­ti­nues, “I de­ci­ded hey, I could try to make all the other fea­tures of Minix avail­able” from wi­t­hin the “fancy news­re­a­der” he had writ­ten.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-59">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-59-1-p0">Linus says this evo­lu­ti­on “was re­al­ly very gra­du­al.</span>
+        
+        <span class="book-sentence" id="s-4-59-2-p0">At some point I just no­ti­ced that hey, this is very close to being po­ten­ti­al­ly use­ful ins­tead of [nee­ding] Minix.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-60">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-60-1-p0">It was much more than just “po­ten­ti­al­ly use­ful”: “Es­sen­ti­al­ly when you have task-swit­ching, you have a file sys­tem, you have de­vice dri­vers–that’s Unix,” he ex­plains.</span>
+        
+        <span class="book-sentence" id="s-4-60-2-p0">Linux–or ra­ther some dis­tant an­ces­tor of Linux–had been born.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-61">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-61-1-p0">When uni­ver­si­ty ho­li­days began, Linus was able to de­vo­te him­s­elf fully to his pro­ject, which doubt­less aided the sub­se­quent rapid de­ve­lop­ment of Linux.</span>
+        
+        <span class="book-sentence" id="s-4-61-2-p0">Ass Wir­ze­ni­us ex­plains, the ho­li­days ran “in theo­ry June, July, Au­gust, and in prac­tice from the midd­le of May to the midd­le of Sep­tem­ber.” Linus re­calls that “the first sum­mer I was doing [co­ding] full-time.</span>
+        
+        <span class="book-sentence" id="s-4-61-3-p0">I did not­hing else, seven days a week, ten hours a day.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-62">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-62-1-p0">Ass Linus wrote later in a short his­to­ry of Linux he put to­ge­ther in 1992, the con­se­quence of these sustai­ned bouts of pro­gramming was that “by July 3rd I had star­ted to think about ac­tu­al user-level things: Some of the de­vice dri­vers were ready, and the hard disk ac­tual­ly worked.</span>
+        
+        <span class="book-sentence" id="s-4-62-2-p0">Not too much else.” The shift of in­te­rest is evi­dent from his next pos­ting to the comp.os.minix news­group, on 3 July, where he asked about so­me­thing cal­led Posix for “a pro­ject”–Linux, in other words.</span>
+        
+        <span class="book-sentence" id="s-4-62-3-p0">He wrote:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-63">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-63-1-p0">Hello net­lan­ders,</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-64">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-64-1-p0">Due to a pro­ject I’m working on (in minix), I’m in­te­rested in the posix stan­dard de­fi­ni­ti­on.</span>
+        
+        <span class="book-sentence" id="s-4-64-2-p0">Could some­bo­dy plea­se point me to a (pre­fe­r­a­b­ly) ma­chine­rea­da­ble for­mat of the la­test posix rules?</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-65">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-65-1-p0">Posix is a stan­dard that de­fi­nes how pro­grams run on Unix–what Linus re­fer­red to as “ac­tu­al user-level things,” ra­ther than sys­tem­le­vel–and de­fi­nes a kind of ge­ne­ral Unix com­pa­ti­bi­li­ty.</span>
+        
+        <span class="book-sentence" id="s-4-65-2-p0">Posix was drawn up to ad­dress the pro­blem of the high­ly frag­men­ted Unix mar­ket that exis­ted at that time where pro­grams run­ning on one fla­vor of Unix could not run on ano­ther.</span>
+        
+        <span class="book-sentence" id="s-4-65-3-p0">When an ope­ra­ting sys­tem fol­lows the Posix spe­ci­fi­ca­ti­ons it can run any Posix-com­p­li­ant ap­p­li­ca­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-66">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-66-1-p0">Linus ex­plains, “I wan­ted to know what the stan­dards said about all the in­ter­faces”–the ways pro­grams in­ter­act with the ker­nel–“be­cau­se I didn’t want to port all the pro­grams.</span>
+        
+        <span class="book-sentence" id="s-4-66-2-p0">Every time that I had a pro­blem porting a pro­gram to Linux, I chan­ged Linux so that it would port.</span>
+        
+        <span class="book-sentence" id="s-4-66-3-p0">I never por­ted pro­grams, but I por­ted the ker­nel to work with the pro­grams.” This was the ap­proach that Ri­chard Stall­man had ad­op­ted for his GNU pro­ject, and with the same be­ne­fit of ready ac­cess to a large base of exis­ting Unix ap­p­li­ca­ti­ons.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-67">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-67-1-p0">Un­for­t­u­n­a­te­ly, as Linus re­calls, “One of the peop­le who re­spon­ded to my ori­gi­nal query about the Posix stan­dards said ‘Sorry, they aren’t avail­able elec­tro­ni­cal­ly, you have to buy them.’ That es­sen­ti­al­ly meant that OK, I couldn’t af­ford them.” But Linus had ano­ther idea: “We had SunOS at the Uni­ver­si­ty.” SunOS was an early ver­si­on of Sun’s va­rie­ty of Unix that later be­ca­me So­la­ris.</span>
+        
+        <span class="book-sentence" id="s-4-67-2-p0">“So I used SunOS ma­nu­al pages to find out the in­ter­faces for stuff.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-68">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-68-1-p0">What began as a se­cond best “ac­tual­ly tur­ned out to be a lucky move,” Linus says, “be­cau­se the SunOS in­ter­face was kind of what Unix be­ca­me a year or two later.” This would not be the first time that a move dic­ta­ted more by chan­ce or cir­cum­stan­ces pro­ved to be a bles­sing in dis­gui­se for the fu­ture growth of Linux.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-69">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-69-1-p0">But Linus’s re­quest for in­for­ma­ti­on about Posix tur­ned out to have even more im­portant con­se­quen­ces.</span>
+        
+        <span class="book-sentence" id="s-4-69-2-p0">“The same per­son who told me that the stan­dards weren’t avail­able also told me his area of in­te­rest was ker­nels and ope­ra­ting sys­tems,” Linus says of a mem­ber of the Hel­sin­ki Uni­ver­si­ty staff cal­led Ari Lemm­ke.</span>
+        
+        <span class="book-sentence" id="s-4-69-3-p0">“[Lemm­ke] had this small area on ftp.funet.fi”–an In­ter­net ser­ver at the uni­ver­si­ty where files were stored for vi­si­tors to down­load using the stan­dard File Trans­fer Pro­to­col (FTP).</span>
+        
+        <span class="book-sentence" id="s-4-69-4-p0">“It was cal­led nic.funet.fi at that point, and he said that ‘hey, I’m put­ting a di­rec­to­ry aside for you.’ So he crea­ted the /pub/os/linux di­rec­to­ry,” Linus re­calls.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-70">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-70-1-p0">“Linux was my working name,” Linus con­ti­nues, “so in that sense he didn’t re­al­ly name it, but I never wan­ted to re­lease it as Linux.” He says he was af­raid that “if I ac­tual­ly used it as the of­fi­ci­al one peop­le would think that I am ego­ma­ni­ac, and wouldn’t take it se­rious­ly.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-71">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-71-1-p0">Linus had ori­gi­nal­ly plan­ned to call his slow­ly evol­ving soft­ware so­me­thing else.</span>
+        
+        <span class="book-sentence" id="s-4-71-2-p0">In mo­ments of de­pres­si­on, he so­me­ti­mes felt like cal­ling it “Bug­gix” to re­flect what see­med its ho­pe­l­ess­ly buggy na­tu­re, he re­vea­led in a 1995 FAQ entry.</span>
+        
+        <span class="book-sentence" id="s-4-71-3-p0">But most of the time he had ano­ther name for it.</span>
+        
+        <span class="book-sentence" id="s-4-71-4-p0">“I chose this very bad name: Freax–free + freak + x. Sick, I know,” Linus ack­now­led­ges.</span>
+        
+        <span class="book-sentence" id="s-4-71-5-p0">“Lucki­ly, this Ari Lemm­ke didn’t like it at all, so he used this working name ins­tead.</span>
+        
+        <span class="book-sentence" id="s-4-71-6-p0">And after that he never chan­ged it.” Linux had now been chris­tened as well as born.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-72">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-72-1-p0">At first, there was not­hing in this Linux sub­di­rec­to­ry on the uni­ver­si­ty ser­ver; Linus wasn’t wil­ling to re­lease his young and fra­gi­le ker­nel to the pu­blic for a while.</span>
+        
+        <span class="book-sentence" id="s-4-72-2-p0">In the 1992 in­ter­view with Wir­ze­ni­us, he said, “I wasn’t re­al­ly ready for a re­lease yet, so the di­rec­to­ry con­tai­ned just a RE­AD­ME for about a month (‘this di­rec­to­ry is for the fre­e­ly dis­tri­bu­ta­ble Minix clone’ or so­me­thing like that),” he said.</span>
+        
+        <span class="book-sentence" id="s-4-72-3-p0">At this stage, Linus is still thin­king of Linux as a Minix clone, not­hing grand like Unix.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-73">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-73-1-p0">Though un­wil­ling to re­lease Linux, he was ready to men­ti­on its exis­tence.</span>
+        
+        <span class="book-sentence" id="s-4-73-2-p0">On Sun­day, 25 Au­gust 1991, under the sub­ject line “What would you most like to see in minix?” he wrote in the comp.os.minix news­group:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-74">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-74-1-p0">Hello ever­y­bo­dy out there using minix—</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-75">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-75-1-p0">I’m doing a (free) ope­ra­ting sys­tem (just a hobby, won’t be big and pro­fes­sio­nal like gnu) for 386(486) AT clo­nes.</span>
+        
+        <span class="book-sentence" id="s-4-75-2-p0">This has been brewing since April, and is star­ting to get ready.</span>
+        
+        <span class="book-sentence" id="s-4-75-3-p0">I’d like any feed­back on things peop­le like/dis­li­ke in minix, as my OS re­sem­bles it so­mew­hat (same phy­si­cal lay­out of the file-sys­tem (due to prac­tical re­a­sons) among other things).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-76">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-76-1-p0">...</span>
+        
+        <span class="book-sentence" id="s-4-76-2-p0">I’ll get so­me­thing prac­tical wi­t­hin a few months, and I’d like to know what fea­tures most peop­le would want.</span>
+        
+        <span class="book-sentence" id="s-4-76-3-p0">Any sug­ges­ti­ons are wel­co­me, but I won’t pro­mi­se I’ll im­ple­ment them:-)</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-77">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-77-1-p0">Linus (tor­valds@kruu­na.hel­sin­ki.fi) Re­s­pon­se to this pos­ting was im­me­dia­te.</span>
+        
+        <span class="book-sentence" id="s-4-77-2-p0">A fel­low Finn wrote less than four hours later, “Tell us more!” and asked: “What dif­fi­cul­ties will there be in porting?” A Minix user from Aus­tria said: “I am very in­te­rested in this OS.</span>
+        
+        <span class="book-sentence" id="s-4-77-3-p0">I have al­re­a­dy thought of wri­ting my own OS, but de­ci­ded I wouldn’t have the time to write ever­y­thing from scratch.</span>
+        
+        <span class="book-sentence" id="s-4-77-4-p0">But I guess I could find the time to help rai­sing a baby OS:-)”–a port­ent of the huge wave of ha­cker ta­lent that Linux would soon ride.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-78">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-78-1-p0">In reply to the ques­ti­on about porting, Linus was pes­si­mis­tic: “Sim­ply, I’d say that porting is im­pos­si­ble.</span>
+        
+        <span class="book-sentence" id="s-4-78-2-p0">It’s most­ly in C, but most peop­le wouldn’t call what I write C. It uses every con­ceiva­ble fea­ture of the 386 I could find, as it was also a pro­ject to teach me about the 386.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-79">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-79-1-p0">In con­clu­si­on, Linus de­tai­led the cur­rent state of his pro­ject: “To make things re­al­ly clear–yes, I can run gcc on it, and bash, and most of the gnu uti­li­ties, but it’s not very de­bug­ged.</span>
+        
+        <span class="book-sentence" id="s-4-79-2-p0">It doesn’t even sup­port flop­py disks yet.</span>
+        
+        <span class="book-sentence" id="s-4-79-3-p0">It won’t be ready for dis­tri­bu­ti­on for a coup­le of months.</span>
+        
+        <span class="book-sentence" id="s-4-79-4-p0">Even then it pro­bab­ly won’t be able to do much more than minix, and much less in some re­spects.</span>
+        
+        <span class="book-sentence" id="s-4-79-5-p0">It will be free though.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-80">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-80-1-p0">In his 1992 his­to­ry, Linus re­calls that from this first men­ti­on of his “hobby” he got “a few mails as­king to be beta-tes­ters for Linux.” A coup­le of weeks later, in Sep­tem­ber 1991, he had pul­led to­ge­ther the first of­fi­ci­al Linux, which he dub­bed ver­si­on 0.01.</span>
+        
+        <span class="book-sentence" id="s-4-80-2-p0">No­nethe­l­ess, Linus was still not happy with the pro­duct of this sustai­ned bout of co­ding.</span>
+        
+        <span class="book-sentence" id="s-4-80-3-p0">“It wasn’t pret­ty; I wasn’t too proud of it,” he said, and de­ci­ded not to an­noun­ce it in comp.os.minix.</span>
+        
+        <span class="book-sentence" id="s-4-80-4-p0">Ins­tead, he re­calls, “I put to­ge­ther a list of all the peop­le who had re­ac­ted to my [25 Au­gust] pos­ting by e-mail.” And then as soon as he had uploa­ded Linux 0.01 to the /pub/os/linux di­rec­to­ry that had been crea­ted by Ari Lemm­ke, “I sent them an e-mail and said that ‘hey, now you can go and look at this.’ I don’t think that this list was more than maybe ten to fif­teen” peop­le.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-81">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-81-1-p0">The only re­a­son he pos­ted this first, un­sa­tis­fac­to­ry ver­si­on he says, was that “I felt that be­cau­se I had this site, I had to upload so­me­thing to it.” He uploa­ded just the sour­ce code.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-82">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-82-1-p0">Token ge­stu­re or not, the sour­ces came with sur­pri­sin­gly full re­lease notes–some 1,800 words.</span>
+        
+        <span class="book-sentence" id="s-4-82-2-p0">These em­pha­si­zed that “this ver­si­on is meant most­ly for rea­ding”–ha­cker’s fare, that is, buil­ding on a tra­di­ti­on of code le­gi­bi­li­ty that had lar­ge­ly begun with the crea­ti­on of C, as Den­nis Rit­chie had noted in his 1979 his­to­ry of Unix.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-83">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-83-1-p0">And high­ly re­a­da­ble the code is, too.</span>
+        
+        <span class="book-sentence" id="s-4-83-2-p0">Ass well as being well laid out with ample use of space and in­den­ta­ti­on to de­linea­te the un­der­ly­ing struc­tu­re, it is also fully com­men­ted, so­me­thing that many other­wi­se fine ha­ckers omit.</span>
+        
+        <span class="book-sentence" id="s-4-83-3-p0">Some of the an­no­ta­ti­ons are re­mar­ka­b­ly chir­py, and they con­vey well the gro­wing ex­ci­te­ment that Linus ob­vious­ly felt as the ker­nel began to take shape be­ne­ath his fin­gers:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-84">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-84-1-p0">This is GOOD CODE!</span>
+        
+        <span class="book-sentence" id="s-4-84-2-p0">Yeah, yeah, it’s ugly, but I can­not find how to do this cor­rect­ly and this seems to work...</span>
+        
+        <span class="book-sentence" id="s-4-84-3-p0">Most of this was trial and error...</span>
+        
+        <span class="book-sentence" id="s-4-84-4-p0">Urghh.</span>
+        
+        <span class="book-sentence" id="s-4-84-5-p0">Let’s hope this is bug-free, ’cause this one I don’t want to debug:-) I’m grum­py.</span>
+        
+        <span class="book-sentence" id="s-4-84-6-p0">I just love not ha­ving a ma­nu­al.</span>
+        
+        <span class="book-sentence" id="s-4-84-7-p0">Well, that cer­tain­ly wasn’t fun:-(.</span>
+        
+        <span class="book-sentence" id="s-4-84-8-p0">Hope­ful­ly it works...</span>
+        
+        <span class="book-sentence" id="s-4-84-9-p0">This is how REAL pro­gramm­ers do it.</span>
+        
+        <span class="book-sentence" id="s-4-84-10-p0">For those with more me­mo­ry than 8 Mb–tough luck.</span>
+        
+        <span class="book-sentence" id="s-4-84-11-p0">I’ve not got it, why should you:-) The sour­ce is here.</span>
+        
+        <span class="book-sentence" id="s-4-84-12-p0">Chan­ge it.</span>
+        
+        <span class="book-sentence" id="s-4-84-13-p0">(Se­rious­ly–it shouldn’t be too dif­fi­cult.</span>
+        
+        <span class="book-sentence" id="s-4-84-14-p0">Most­ly chan­ge some con­stants etc.</span>
+        
+        <span class="book-sentence" id="s-4-84-15-p0">I left it at 8Mb, as my ma­chi­ne even can­not be ex­ten­ded past that (ok, but it was cheap:-)</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-85">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-85-1-p0">In the ac­com­pany­ing notes Linus war­ned: “Though I will help in any way I can to get it working on your ma­chi­ne (mail me), it isn’t re­al­ly sup­por­ted.</span>
+        
+        <span class="book-sentence" id="s-4-85-2-p0">Chan­ges are fre­quent, and the first ‘pro­duc­tion’ ver­si­on will pro­bab­ly dif­fer wild­ly from this pre-alpha-re­lease.” Fre­quent chan­ges would be a hall­mark of Linux throughout its his­to­ry.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-86">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-86-1-p0">Linus also poin­ted out so­me­thing that would have been ob­vious to any ha­cker of the time, but which has be­co­me ob­scu­red as Linux has be­co­me more wi­de­ly known.</span>
+        
+        <span class="book-sentence" id="s-4-86-2-p0">“Sadly,” he wri­tes, “a ker­nel”–which is what Linux is and al­ways has been–“by its­elf gets you now­he­re.</span>
+        
+        <span class="book-sentence" id="s-4-86-3-p0">To get a working sys­tem you need a shell, com­pi­lers, a li­bra­ry, etc.” He then poin­ted out that “most of the tools used with linux are GNU soft­ware and are under the GNU co­py­left,” an early in­di­ca­ti­on of the sym­bio­sis of the two sys­tems.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-87">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-87-1-p0">And yet it is stran­ge that Linus did not adopt Stall­man’s Ge­ne­ral Pu­blic Li­cen­se, co­py­left, for his own ker­nel.</span>
+        
+        <span class="book-sentence" id="s-4-87-2-p0">Ins­tead, he wrote</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-88">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-88-1-p0">This ker­nel is © 1991 Linus Tor­valds, but all or part of it may be re­dis­tri­bu­ted pro­vi­ded you do the fol­lo­wing: —Full sour­ce must be avail­able (and free), if not with the dis­tri­bu­ti­on then at least on as­king for it.</span>
+        
+        <span class="book-sentence" id="s-4-88-2-p0">—Co­py­right no­ti­ces must be in­tact.</span>
+        
+        <span class="book-sentence" id="s-4-88-3-p0">(In fact, if you dis­tri­bu­te only parts of it you may have to add co­py­rights, as there aren’t ©’s in all files.) Small par­ti­al ex­cer­pts may be co­pied wi­thout bo­the­ring with co­py­rights.</span>
+        
+        <span class="book-sentence" id="s-4-88-4-p0">—You may not dis­tri­bu­te this for a fee, not even “hand­ling” costs.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-89">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-89-1-p0">The last clau­se meant that peop­le could not char­ge for the work in­vol­ved in ma­king flop­pies with the ker­nel (just 72K when com­pres­sed) on them, a clear brake on Linux’s wider dis­tri­bu­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-90">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-90-1-p0">In the 1992 in­ter­view with Linux News, Linus ex­plai­ned why he had cho­sen this li­cen­se.</span>
+        
+        <span class="book-sentence" id="s-4-90-2-p0">Share­ware, where the soft­ware is dis­tri­bu­ted free but you must pay if you de­ci­de to use the pro­gram, was never an op­ti­on for him: “I ge­ne­ral­ly dis­li­ke share­ware.</span>
+        
+        <span class="book-sentence" id="s-4-90-3-p0">I feel guil­ty about not pay­ing, so I don’t use it, but on the other hand it is ir­ri­ta­ting to know that it’s there.</span>
+        
+        <span class="book-sentence" id="s-4-90-4-p0">Il­lo­gi­cal, but that’s how I feel.” The first form of the li­cen­se, he said, “was pro­bab­ly an over­re­ac­tion to the dis­li­ke I felt against the way Minix had been set up; I thought (and still do) that Minix would have been bet­ter off had it been fre­e­ly avail­able by FTP or si­mi­lar.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-91">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-91-1-p0">The rest of the re­lease notes for 0.01 are main­ly tech­ni­cal, but con­tain two in­te­res­ting state­ments.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-92">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-92-1-p0">The gui­ding line when im­ple­men­ting linux was: get it working fast.</span>
+        
+        <span class="book-sentence" id="s-4-92-2-p0">“Get it working fast” would be­co­me one of the fun­da­men­tal prin­ci­ples of Linux de­ve­lop­ment and would dis­tin­gu­ish it from other, more ca­re­ful, slo­wer ap­proa­ches.</span>
+        
+        <span class="book-sentence" id="s-4-92-3-p0">Linus also noted that “this isn’t yet the ‘mo­ther of all ope­ra­ting sys­tems,’ and an­yo­ne who hoped for that will have to wait for the first real re­lease (1.0), and even then you might not want to chan­ge from minix.” Litt­le did Linus sus­pect that Linux 1.0 would be ano­ther two and a half years away, but that by then few would he­si­ta­te about ma­king the switch.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-93">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-93-1-p0">Linus si­gned off his re­lease notes for 0.01 with a phra­se that had be­co­me Ri­chard Stall­man’s trade­mark fa­re­well: “Happy hacking.” The re­sults of Linus’s own happy hacking soon show­ed them­sel­ves in Linux 0.02.</span>
+        
+        <span class="book-sentence" id="s-4-93-2-p0">This time Linus had no qualms about tel­ling the world.</span>
+        
+        <span class="book-sentence" id="s-4-93-3-p0">On Sa­tur­day, 5 Oc­to­ber 1991, he sent a pos­ting to comp.os.minix that began</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-94">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-94-1-p0">Do you pine for the nice days of minix -1.1, when men were men and wrote their own de­vice dri­vers?</span>
+        
+        <span class="book-sentence" id="s-4-94-2-p0">Are you wi­thout a nice pro­ject and just dying to cut your teeth on a OS you can try to mo­di­fy for your needs?</span>
+        
+        <span class="book-sentence" id="s-4-94-3-p0">Are you fin­ding it frus­tra­ting when ever­y­thing works on minix?</span>
+        
+        <span class="book-sentence" id="s-4-94-4-p0">No more all-nigh­ters to get a nifty pro­gram working?</span>
+        
+        <span class="book-sentence" id="s-4-94-5-p0">Then this post might be just for you:-)</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-95">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-95-1-p0">Ass I men­tio­ned a month(?) ago, I’m working on a free ver­si­on of a minix-look-alike for AT-386 com­pu­ters.</span>
+        
+        <span class="book-sentence" id="s-4-95-2-p0">It has fi­nal­ly re­ached the stage where it’s even usa­ble (though may not be de­pen­ding on what you want), and I am wil­ling to put out the sour­ces for wider dis­tri­bu­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-96">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-96-1-p0">A later pa­ra­graph in the same pos­ting gives us some in­sight into how Linus re­gar­ded Linux in the con­text of the other, bet­ter-es­ta­blis­hed Unix ker­nels, the GNU Hurd and Minix:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-97">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-97-1-p0">I can (well, al­most) hear you as­king your­sel­ves “Why?”.</span>
+        
+        <span class="book-sentence" id="s-4-97-2-p0">Hurd will be out in a year (or two, or next month, who knows), and I’ve al­re­a­dy got minix.</span>
+        
+        <span class="book-sentence" id="s-4-97-3-p0">This is a pro­gram for ha­ckers by a ha­cker.</span>
+        
+        <span class="book-sentence" id="s-4-97-4-p0">I’ve en­joy­ed doing it, and some­bo­dy might enjoy loo­king at it and even mo­di­fy­ing it for their own needs.</span>
+        
+        <span class="book-sentence" id="s-4-97-5-p0">It is still small en­ough to un­der­stand, use and mo­di­fy, and I’m loo­king for­ward to any com­ments you might have.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-98">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-98-1-p0">Linus was be­gin­ning to see that bet­ween the fi­nis­hed but es­sen­ti­al­ly fro­zen Minix pro­gram, and the pro­mi­sing but still in­com­ple­te GNU, there was a niche for his “pro­gram for ha­ckers by a ha­cker.” Linux might be crude now, but it worked–just–which meant that it could be im­pro­ved, whe­re­as the Hurd re­mai­ned a tan­ta­li­zing pro­mi­se.</span>
+        
+        <span class="book-sentence" id="s-4-98-2-p0">Just as im­portant, Linus, un­li­ke Ta­nen­baum, was so­li­cit­ing ideas for im­pro­ve­ment and wel­co­med other peop­le’s own ef­forts in this di­rec­tion.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-99">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-99-1-p0">Linus says that “the se­cond ver­si­on was much clo­ser to what I re­al­ly wan­ted.</span>
+        
+        <span class="book-sentence" id="s-4-99-2-p0">I don’t know how many peop­le got it–pro­bab­ly ten, twen­ty, this kind of size.</span>
+        
+        <span class="book-sentence" id="s-4-99-3-p0">There was some dis­cus­sion on the news­group about de­sign, goals, and what the ker­nel should sup­port.” Things were still pret­ty small-scale, but gro­wing.</span>
+        
+        <span class="book-sentence" id="s-4-99-4-p0">In the 1992 Linux News in­ter­view, Linus said of the pre­ce­ding ver­si­on (0.01): “I don’t think more than about five [to] ten peop­le ever loo­ked at it.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-100">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-100-1-p0">Ass a re­sult, he told Linux News, “Heady with my un­ex­pec­ted suc­cess, I cal­led the next ver­si­on 0.10.” Linus re­calls that “things ac­tual­ly star­ted to work pret­ty well.” Ver­si­on 0.11 came out some time in early De­cem­ber.</span>
+        
+        <span class="book-sentence" id="s-4-100-2-p0">“It’s still not as com­pre­hen­si­ve as 386-minix,” Linus wrote in a pos­ting to comp.os.minix on 19 De­cem­ber 1991, “but bet­ter in some re­spect.” This pos­ting in­clu­ded some in­te­res­ting com­ments from him on the pre­sent state of Linux and its fu­ture de­ve­lop­ment: “/I/ think it’s bet­ter than minix, but I’m a bit pre­ju­di­ced.</span>
+        
+        <span class="book-sentence" id="s-4-100-3-p0">It will never be the kind of pro­fes­sio­nal OS that Hurd will be (in the next cen­tu­ry or so:), but it’s a nice learning tool (even more so than minix, IMHO), and it was/is fun working on it.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-101">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-101-1-p0">The launch date of the GNU Hurd is now re­ce­ding fast into the “next cen­tu­ry or so,” and Linux is even a bet­ter learning tool than Minix.</span>
+        
+        <span class="book-sentence" id="s-4-101-2-p0">But the main thing is that Linux “was/is fun,” the ul­ti­ma­te ha­cker ju­s­ti­fi­ca­ti­on for any kind of pro­ject.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-102">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-102-1-p0">The 19 De­cem­ber pos­ting also in­clu­ded a copy of Linus’s “.plan.” This is a file that is sent when a user is “fin­ge­red” over the net­work (using a pro­gram cal­led “fin­ger”), and was an im­portant way for peop­le to ob­tain in­for­ma­ti­on about Linux wi­thout nee­ding to sort through hund­reds of news­group pos­tings.</span>
+        
+        <span class="book-sentence" id="s-4-102-2-p0">Linus’s plan at that time was hea­ded “Free UNIX for the 386–co­m­ing up 4QR 91 or 1QR 92”.</span>
+        
+        <span class="book-sentence" id="s-4-102-3-p0">It be­gins: “The cur­rent ver­si­on of linux is 0.11–it has most things a unix ker­nel needs”–pro­bab­ly the first time Linus had pu­bli­cly pit­ched Linux as a pro­ject to crea­te a Unix-like ker­nel ra­ther than just a de­ve­lop­ment from Minix.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-103">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-103-1-p0">The plan also noted that two other sites were now car­ry­ing the Linux soft­ware, one in Ger­ma­ny, and one in Ri­chard Stall­man’s home town, Bos­ton, at MIT.</span>
+        
+        <span class="book-sentence" id="s-4-103-2-p0">This was run by Ted Ts’o (pro­noun­ced “cho”), whose name ap­pears at the bot­tom of the same in­for­ma­ti­on page (using his email name tytso) as so­meo­ne who was working on new fea­tures for the im­mi­nent Linux 0.12.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-104">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-104-1-p0">Alt­hough ba­re­ly vi­si­ble, this was an ex­tre­me­ly si­gni­fi­cant de­ve­lop­ment; it meant that al­re­a­dy other ha­ckers were cont­ri­bu­ting to the Linux pro­ject.</span>
+        
+        <span class="book-sentence" id="s-4-104-2-p0">This same 19 De­cem­ber pos­ting to comp.os.minix also spoke of “peop­le” who were working on dri­vers for SCSI to allow ano­ther kind of hard disk sys­tem to be ac­ces­sed by Linux.</span>
+        
+        <span class="book-sentence" id="s-4-104-3-p0">“Peop­le” meant not Linus, ano­ther in­di­ca­ti­on that others were in­vol­ved.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-105">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-105-1-p0">This is con­fir­med by a mes­sa­ge pos­ted the next day from Drew Eck­hardt, who was the per­son wri­ting those SCSI dri­vers, and who had al­re­a­dy cont­ri­bu­ted to ver­si­on 0.11.</span>
+        
+        <span class="book-sentence" id="s-4-105-2-p0">His pos­ting was in re­s­pon­se to a ge­ne­ral en­qui­ry about Linux, which said in part,</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-106">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-106-1-p0">Could so­meo­ne plea­se in­form me about [Linux]?</span>
+        
+        <span class="book-sentence" id="s-4-106-2-p0">It’s maybe best to fol­low up to this ar­ti­cle, as I think that there are a lot of po­ten­ti­al in­te­rested peop­le rea­ding this group.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-107">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-107-1-p0">It is striking that Eck­hardt an­s­wers ra­ther than Linus, and in great de­tail, an in­di­ca­ti­on that at least one other per­son al­re­a­dy knew en­ough to act in this ca­pa­ci­ty, and that he uses the pro­noun “we” when tal­king about Linux.</span>
+        
+        <span class="book-sentence" id="s-4-107-2-p0">What had once been one ha­cker’s “hobby” was turning into a com­mu­ni­ty.</span>
+        
+        <span class="book-sentence" id="s-4-107-3-p0">Mo­re­o­ver, even at this early stage, Linus was pre­pa­red to lis­ten to that com­mu­ni­ty’s needs.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-108">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-108-1-p0">Some of the first users of Linux wan­ted so­me­thing cal­led Vir­tu­al Me­mo­ry (VM), which is the abili­ty to use hard disk space as if it were or­di­na­ry RAM; this was a stan­dard fea­ture of Unix, and a big help at a time when me­mo­ry chips were ex­pen­si­ve.</span>
+        
+        <span class="book-sentence" id="s-4-108-2-p0">Linus wasn’t in­te­rested in this fea­ture, pro­bab­ly be­cau­se he had just about en­ough RAM, and his own hard disk was so small.</span>
+        
+        <span class="book-sentence" id="s-4-108-3-p0">But over that Christ­mas he no­nethe­l­ess sat down and wrote the code to add Vir­tu­al Me­mo­ry to the Linux ker­nel and re­leased it as ver­si­on 0.11+VM.</span>
+        
+        <span class="book-sentence" id="s-4-108-4-p0">Wir­ze­ni­us re­calls that Linus “just de­ci­ded, now it’s Christ­mas, it’s bo­ring, it’s fa­mi­ly and I need to hack.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-109">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-109-1-p0">In the early his­to­ry of Linux, which he wrote in 1992, Linus re­cal­led that 0.11+VM “was avail­able only to a small num­ber of peop­le that wan­ted to test it out; I’m still sur­pri­sed it worked as well as it did,” and mo­dest­ly omit­ted to men­ti­on that he had writ­ten this code in just a coup­le of days.</span>
+        
+        <span class="book-sentence" id="s-4-109-2-p0">Vir­tu­al Me­mo­ry then be­ca­me a stan­dard part of the ker­nel from the next ver­si­on.</span>
+        
+        <span class="book-sentence" id="s-4-109-3-p0">What had begun as a small pri­va­te re­quest had tur­ned into a pu­blic be­ne­fit.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-110">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-110-1-p0">It seems both ap­pro­pria­te and yet as­to­nis­hing that ver­si­on 0.12 of Linux should ap­pe­ar on 5 Ja­nu­a­ry 1992, one year to the day from that pi­vo­tal mo­ment when, as Linus put it, “I ac­tual­ly broke down and got a PC.” Ap­pro­pria­te, be­cau­se the PC thus ce­le­bra­ted its first bir­th­day with what Linus later cal­led “the ker­nel that ‘made it’: that’s when linux star­ted to spre­ad a lot fas­ter.” As­to­nis­hing, be­cau­se in that time Linus had gone from a stu­dent who knew litt­le about C pro­gramming, and not­hing about wri­ting for the Intel ar­chi­tec­tu­re, to the lea­der of a ra­pidly gro­wing group of ha­ckers who were con­struc­ting a fully func­tio­nal Unix ker­nel for the PC from the ground up.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-111">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-111-1-p0">The re­lease notes for 0.12 dis­play well Linus’s gro­wing sense of achie­ve­ment; they are full of a kind of ex­hil­ara­ti­on, a sense that maybe, just maybe, he was on the brink of so­me­thing big.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-112">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-112-1-p0">They begin with a plea, writ­ten ent­i­re­ly in ca­pi­tals, not to in­stall Linux un­less the user knows what he or she is doing: “If you are sure you know what you are doing, con­ti­nue.</span>
+        
+        <span class="book-sentence" id="s-4-112-2-p0">Other­wi­se, panic.</span>
+        
+        <span class="book-sentence" id="s-4-112-3-p0">Or write me for ex­pla­na­ti­ons.</span>
+        
+        <span class="book-sentence" id="s-4-112-4-p0">Or do any­thing but in­stall Linux.–It’s very sim­ple, but if you don’t know what you are doing you’ll pro­bab­ly be sorry.</span>
+        
+        <span class="book-sentence" id="s-4-112-5-p0">I’d ra­ther an­s­wer a few un­ne­cessa­ry mails than get mail say­ing, ‘you kil­led my hard disk, bas­tard.</span>
+        
+        <span class="book-sentence" id="s-4-112-6-p0">I’m going to find you, and you’ll be sorry when I do.’”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-113">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-113-1-p0">Linus has said that “ear­lier re­lea­ses were very much only for ha­ckers,” im­ply­ing that ver­si­on 0.12 was sui­ta­ble for a wider au­di­ence.</span>
+        
+        <span class="book-sentence" id="s-4-113-2-p0">This may well be true, but the in­stal­la­ti­on in­struc­tions still in­clu­de such steps as the fol­lo­wing: “Boot up linux again, fdisk to make sure you now have the new par­ti­ti­on, and use mkfs to make a file­sys­tem on one of the par­ti­ti­ons fdisk re­ports.</span>
+        
+        <span class="book-sentence" id="s-4-113-3-p0">Write ‘mkfs -c /dev/hdX nnn’ where X is the de­vice num­ber re­por­ted by linux fdisk, and nnn is the size–also re­por­ted by fdisk.</span>
+        
+        <span class="book-sentence" id="s-4-113-4-p0">nnn is the size in /blocks/, ie ki­lo­bytes.</span>
+        
+        <span class="book-sentence" id="s-4-113-5-p0">You should be able to use the size info to de­ter­mi­ne which par­ti­ti­on is re­pre­sen­ted by which de­vice name.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-114">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-114-1-p0">This in­di­ca­tes the gulf that se­pa­ra­ted Linux from Win­dows 3.1, say, re­leased just a coup­le of months later.</span>
+        
+        <span class="book-sentence" id="s-4-114-2-p0">Ass well as im­portant im­pro­ve­ments to its code, Ver­si­on 0.12 brought with it a re­vi­sed li­cen­se.</span>
+        
+        <span class="book-sentence" id="s-4-114-3-p0">Linus ex­plains why: Fair­ly early, there were peop­le who hap­pe­n­ed to live in the same area and wan­ted to make Linux avail­able to others who were in­te­rested.</span>
+        
+        <span class="book-sentence" id="s-4-114-4-p0">But the ori­gi­nal li­cen­se didn’t even allow co­py­ing fees.</span>
+        
+        <span class="book-sentence" id="s-4-114-5-p0">So you couldn’t even just sell the dis­ket­tes for more than the price of the dis­ket­te.</span>
+        
+        <span class="book-sentence" id="s-4-114-6-p0">So it didn’t make sense, some­bo­dy ob­vious­ly had to do a lot of work be­cau­se co­py­ing dis­ket­tes is bo­ring, it takes time, and very few peop­le have ac­cess to these au­to­ma­ted co­pi­ers.</span>
+        
+        <span class="book-sentence" id="s-4-114-7-p0">So there were peop­le as­king me to allow some kind of co­py­ing fee–even just a small one.</span>
+        
+        <span class="book-sentence" id="s-4-114-8-p0">Not be­cau­se they wan­ted to make money, but be­cau­se they didn’t want to lose money on ma­king Linux avail­able to others, and hel­ping others.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-115">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-115-1-p0">In the end he de­ci­ded to adopt Ri­chard Stall­man’s GNU Ge­ne­ral Pu­blic Li­cen­se (GPL).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-116">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-116-1-p0">In 1996, Linus ad­mit­ted that “I wasn’t re­al­ly a GPL fan.</span>
+        
+        <span class="book-sentence" id="s-4-116-2-p0">It was too much la­wye­re­se, and it’s a bit too strict in my opi­ni­on.” But he also con­ce­ded that “on the other hand, the GPL has worked very well.</span>
+        
+        <span class="book-sentence" id="s-4-116-3-p0">I can’t say I’m un­hap­py.” In re­tro­s­pect, the chan­ge to the GPL pro­ved to be a key move, par­ti­cu­lar­ly con­cerning the later com­mer­cia­liza­t­i­on of Linux.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-117">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-117-1-p0">The re­lease of ver­si­on 0.12 was per­haps the turning point for Linux.</span>
+        
+        <span class="book-sentence" id="s-4-117-2-p0">Be­fo­re that, it was so­me­thing of a cu­rio­si­ty: in­te­res­ting, but neit­her par­ti­cu­lar­ly use­ful nor ob­vious­ly im­portant.</span>
+        
+        <span class="book-sentence" id="s-4-117-3-p0">With 0.12, many more peop­le star­ted to take note.</span>
+        
+        <span class="book-sentence" id="s-4-117-4-p0">A new mai­ling list, Linux-ac­tivists, al­re­a­dy had 196 mem­bers by 13 Ja­nu­a­ry.</span>
+        
+        <span class="book-sentence" id="s-4-117-5-p0">Linus had no­ti­ced a dif­fe­rence in the comp.os.minix news­group: “Wi­t­hin two weeks [of the re­lease of Linux 0.12] there was a lot more dis­cus­sion [about it],” he says.</span>
+        
+        <span class="book-sentence" id="s-4-117-6-p0">“There were ob­vious­ly peop­le who were re­al­ly using Linux for what they had used Minix for be­fo­re, most­ly Minix peop­le be­cau­se that was where all the dis­cus­sion had been, on the Minix news­groups.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-118">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-118-1-p0">Ob­vious­ly, many Minix users were try­ing Linux and tal­king about it, but not ever­yo­ne was de­ligh­ted by the gro­wing vo­lu­me of Linux dis­cus­sions on comp.os.minix.</span>
+        
+        <span class="book-sentence" id="s-4-118-2-p0">One wrote:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-119">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-119-1-p0">I re­al­ly don’t wish to flame, but it’s star­ting to annoy me that 50% of the ar­ti­cles I read in this news­group are about Linux.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-120">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-120-1-p0">On the same day that this not un­ju­s­ti­fied plaint was pos­ted, Linus was re­porting an amu­sing ac­ci­dent on his ma­chi­ne.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-121">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-121-1-p0">He had been try­ing to con­nect with the uni­ver­si­ty’s com­pu­ter, but by mis­ta­ke in­struc­ted his ter­mi­nal emu­la­tor pro­gram to dial his hard disk.</span>
+        
+        <span class="book-sentence" id="s-4-121-2-p0">Con­tra­ry to ap­pearan­ces, this was an easy thing to do, thanks to what Peter Salus had cal­led “per­haps the most in­no­va­ti­ve thing that [Unix’s crea­tor] ever thought of,” which was that ever­y­thing is a file for Unix and hence for Linux.</span>
+        
+        <span class="book-sentence" id="s-4-121-3-p0">This means no con­cep­tu­al dif­fe­rence exists bet­ween sen­ding data to a modem or to a disk drive.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-122">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-122-1-p0">This slip wiped out the Minix sys­tem that Linus had kept along­s­ide the stea­di­ly gro­wing Linux.</span>
+        
+        <span class="book-sentence" id="s-4-122-2-p0">In­iti­al­ly, Minix had for­med an in­dis­pensa­ble scaf­fol­ding for the de­ve­lop­ment of Linux; but since Linux could now func­tion wi­thout the crutch of Minix, there was no re­a­son to re-in­stall Minix after this mis­hap.</span>
+        
+        <span class="book-sentence" id="s-4-122-3-p0">Per­haps that com­mand to dial his hard disk had been not so much an ac­ci­dent as a Freu­di­an slip on Linus’s part, a sym­bo­lic cut­ting free from an older-ge­ne­ra­ti­on pro­gram.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-123">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-123-1-p0">By a re­mar­ka­ble co­in­ci­dence, the final rup­tu­re bet­ween the worlds of Minix and Linux was brought about just two weeks later, when An­d­rew Ta­nen­baum pos­ted to comp.os.minix what would be­co­me one of the most fa­mous mes­sa­ges in Use­net his­to­ry.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-124">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-124-1-p0">It bore the pro­vo­ca­ti­ve sub­ject line “Linux is ob­so­le­te,” and began:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-125">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-125-1-p0">I was in the U.S. for a coup­le of weeks, so I haven’t com­men­ted much on LINUX (not that I would have said much had I been around), but for what it is worth, I have a coup­le of com­ments now.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-126">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-126-1-p0">Ass most of you know, for me MINIX is a hobby, so­me­thing that I do in the eve­ning when I get bored wri­ting books and there are no major wars, re­vo­lu­ti­ons, or se­na­te hea­rings being te­le­vi­sed live on CNN.</span>
+        
+        <span class="book-sentence" id="s-4-126-2-p0">My real job is a pro­fes­sor and re­se­ar­cher in the area of ope­ra­ting sys­tems.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-127">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-127-1-p0">Ass a re­sult of my oc­cupa­ti­on, I think I know a bit about where ope­ra­ting sys­tems are going in the next de­ca­de or so.</span>
+        
+        <span class="book-sentence" id="s-4-127-2-p0">Two as­pects stand out.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-128">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-128-1-p0">Ta­nen­baum went on to focus on two areas, the issue of mi­cro­ker­nels ver­sus mo­no­li­thic ker­nels and por­ta­bi­li­ty, in a ty­pi­cal­ly po­lis­hed and well-argued prose that be­trays its aca­de­mic roots.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-129">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-129-1-p0">On the issue of ker­nel de­sign, Ta­nen­baum said:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-130">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-130-1-p0">While I could go into a long story here about the re­la­ti­ve me­rits of the two de­signs, suf­fice it to say that among the peop­le who ac­tual­ly de­sign ope­ra­ting sys­tems, the de­ba­te is es­sen­ti­al­ly over.</span>
+        
+        <span class="book-sentence" id="s-4-130-2-p0">Mi­cro­ker­nels have won.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-131">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-131-1-p0">He then took a ra­ther more poin­ted jab at Linus’s crea­ti­on:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-132">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-132-1-p0">LINUX is a mo­no­li­thic style sys­tem.</span>
+        
+        <span class="book-sentence" id="s-4-132-2-p0">This is a giant step back into the 1970s. That is like ta­king an exis­ting, working C pro­gram and re­wri­ting it in BASIC.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-133">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-133-1-p0">This was a real in­sult to any ha­cker, as Ta­nen­baum must have known.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-134">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-134-1-p0">Ass far as por­ta­bi­li­ty is con­cer­ned, Ta­nen­baum began with a witty com­pres­sed his­to­ry of chip de­sign, and con­clu­ded:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-135">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-135-1-p0">I think it is a groß error to de­sign an OS for any spe­ci­fic ar­chi­tec­tu­re, since that is not going to be around all that long.</span>
+        
+        <span class="book-sentence" id="s-4-135-2-p0">MINIX was de­si­gned to be re­a­son­ab­ly por­ta­ble, and has been por­ted from the Intel line to the 680x0 (Atari, Amiga, Mac­in­tosh), SPARC, and NS32016.</span>
+        
+        <span class="book-sentence" id="s-4-135-3-p0">LINUX is tied fair­ly clo­se­ly to the 80x86. Not the way to go.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-136">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-136-1-p0">Con­tra­ry to his ex­pec­ta­ti­ons, the Intel fa­mi­ly of chips is cur­rent­ly going so stron­gly that most others have dwind­led in im­port­an­ce; but apart from this, Ta­nen­baum was cor­rect that Linux at the time was “fair­ly clo­se­ly tied” to the Intel ar­chi­tec­tu­re, but sim­ply be­cau­se it had grown out of ex­pe­ri­ments to un­der­stand a chip from that fa­mi­ly.</span>
+        
+        <span class="book-sentence" id="s-4-136-2-p0">Ass later events would show, Linux was by no means doo­med to be an Intel-only sys­tem.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-137">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-137-1-p0">Linus could not igno­re Ta­nen­baum’s com­ments.</span>
+        
+        <span class="book-sentence" id="s-4-137-2-p0">Linus had de­vo­ted an in­cre­a­sing pro­por­ti­on of his life to Linux over the last nine months, and the ra­pidly gro­wing com­mu­ni­ty of Linux users and coders was doubt­less a cause of ju­s­ti­fia­ble pride.</span>
+        
+        <span class="book-sentence" id="s-4-137-3-p0">Now here was some fusty old aca­de­mic co­m­ing along and tra­shing it all.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-138">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-138-1-p0">Wir­ze­ni­us notes that “Linus has this big ego; if so­meo­ne says so­me­thing that hurts his pride then he will re­ta­lia­te.” In this case it took Linus just ele­ven hours to re­ta­lia­te, his words po­si­tive­ly bub­b­ling with rage.</span>
+        
+        <span class="book-sentence" id="s-4-138-2-p0">You can al­most see him rol­ling up his me­ta­pho­ri­cal shirt-slee­ves in pre­pa­ra­ti­on for the fight:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-139">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-139-1-p0">Well, with a sub­ject like this, I’m af­raid I’ll have to reply.</span>
+        
+        <span class="book-sentence" id="s-4-139-2-p0">Apo­lo­gies to minix-users who have heard en­ough about linux any­way.</span>
+        
+        <span class="book-sentence" id="s-4-139-3-p0">I’d like to be able to just ‘igno­re the bait,’ but...</span>
+        
+        <span class="book-sentence" id="s-4-139-4-p0">Time for some se­rious fla­me­fes­ting!</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-140">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-140-1-p0">He be­gins with a ge­ne­ral si­des­wi­pe at the qua­li­ty of Minix: “linux beats the pants off minix in al­most all areas,” and adds a ra­ther low blow by ad­ding, “not to men­ti­on the fact that most of the good code for PC minix seems to have been writ­ten by Bruce Evans.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-141">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-141-1-p0">He is in­cen­s­ed by Ta­nen­baum’s com­ments that Minix is a hobby and throws some in­te­res­ting light on the in­iti­al mo­ti­va­ti­on for wri­ting Linux in the first place:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-142">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-142-1-p0">Look at who makes money off minix, and who gives linux out for free.</span>
+        
+        <span class="book-sentence" id="s-4-142-2-p0">Then talk about hob­bies.</span>
+        
+        <span class="book-sentence" id="s-4-142-3-p0">Make minix fre­e­ly avail­able, and one of my big­gest gri­pes with it will disap­pe­ar.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-143">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-143-1-p0">Linus then re­turns to kno­cking Minix.</span>
+        
+        <span class="book-sentence" id="s-4-143-2-p0">Re­fer­ring to Ta­nen­baum’s com­ments that his real job is being a pro­fes­sor and re­se­ar­cher, Linus com­ments,</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-144">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-144-1-p0">That’s one hell of a good ex­cu­se for some of the brain da­mages of minix.</span>
+        
+        <span class="book-sentence" id="s-4-144-2-p0">I can only hope (and as­su­me) that Amoeba doesn’t suck like minix does.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-145">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-145-1-p0">(The ope­ra­ting sys­tem Amoeba is Ta­nen­baum’s main re­se­arch pro­ject and hence his “real job.”)</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-146">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-146-1-p0">Aside from the venom, it is sur­pri­sing that some­bo­dy who star­ted using Minix only nine months pre­vious­ly now has no qualms about cal­ling it “brain-da­ma­ged” to its crea­tor, a man, mo­re­o­ver, who is not only a high­ly re­spec­ted pro­fes­sor in the area of ope­ra­ting sys­tems but aut­hor of <em>Ope­ra­ting Sys­tems: De­sign and Im­ple­men­ta­ti­on</em>, which, by his own ad­mis­si­on, Linus had stu­di­ed in­ten­si­ve­ly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-147">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-147-1-p0">Just as he had done nine months be­fo­re the April Fool’s Day let­ter, Linus al­most im­me­dia­te­ly starts to back­track on his at­tack: “PS.</span>
+        
+        <span class="book-sentence" id="s-4-147-2-p0">I apo­lo­gi­ze for so­me­ti­mes soun­ding too harsh: minix is nice en­ough if you have not­hing else.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-148">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-148-1-p0">Amoeba might be nice if you have 5–10 spare 386’s lying around, but I cer­tain­ly don’t. I don’t usual­ly get into fla­mes, but I’m tou­chy when it comes to linux:)”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-149">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-149-1-p0">The next day, per­haps ha­ving slept on it, he is even more cont­ri­te:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-150">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-150-1-p0">I wrote:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-151">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-151-1-p0">Well, with a sub­ject like this, I’m af­raid I’ll have to reply.</span>
+        
+        <span class="book-sentence" id="s-4-151-2-p0">And reply I did, with com­ple­te aban­don, and no thought for good taste and ne­ti­quet­te.</span>
+        
+        <span class="book-sentence" id="s-4-151-3-p0">Apo­lo­gies to [An­d­rew Ta­nen­baum], and thanks to John Nall for a fri­end­ly “that’s not how it’s done” let­ter.</span>
+        
+        <span class="book-sentence" id="s-4-151-4-p0">I over­re­ac­ted, and am now com­po­sing a (much less acer­bic) per­so­nal let­ter to [An­d­rew Ta­nen­baum].</span>
+        
+        <span class="book-sentence" id="s-4-151-5-p0">Hope no­bo­dy was tur­ned away from linux due to it being (a) pos­si­bly ob­so­le­te (I still think that’s not the case, alt­hough some of the cri­ti­cisms are valid) and (b) writ­ten by a ho­thead:-)</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-152">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-152-1-p0">Linus “my first, and hope­ful­ly last fla­me­fest” Tor­valds</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-153">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-153-1-p0">It was by no means his “last fla­me­fest,” but the tone of the dis­cus­sion was now more mo­dera­te as he and Ta­nen­baum argued some of the more tech­ni­cal points at stake.</span>
+        
+        <span class="book-sentence" id="s-4-153-2-p0">This drew in se­veral other peop­le and cal­led forth the fol­lo­wing wise words that ne­at­ly sum­ma­ri­ze the si­tua­ti­on from an in­de­pen­dent stand­point:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-154">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-154-1-p0">Many if not most of the soft­ware we use is pro­bab­ly ob­so­le­te ac­cor­ding to the la­test de­sign cri­te­ria.</span>
+        
+        <span class="book-sentence" id="s-4-154-2-p0">Most users could pro­bab­ly care less if the in­ter­nals of the ope­ra­ting sys­tem they use is ob­so­le­te.</span>
+        
+        <span class="book-sentence" id="s-4-154-3-p0">They are right­ly more in­te­rested in its per­for­mance and ca­pa­bi­li­ties at the user level.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-155">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-155-1-p0">I would ge­ne­ral­ly agree that mi­cro­ker­nels are pro­bab­ly the wave of the fu­ture.</span>
+        
+        <span class="book-sentence" id="s-4-155-2-p0">Howe­ver, it is in my opi­ni­on ea­sier to im­ple­ment a mo­no­li­thic ker­nel.</span>
+        
+        <span class="book-sentence" id="s-4-155-3-p0">It is also ea­sier for it to turn into a mess in a hurry as it is mo­di­fied.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-156">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-156-1-p0">Re­gards,</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-157">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-157-1-p0">Ken</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-158">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-158-1-p0">“Ken” is Ken Thomp­son, the in­ven­tor of Unix.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-159">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-159-1-p0">Bet­ween Linus and Ta­nen­baum, the tone be­ca­me al­most play­ful.</span>
+        
+        <span class="book-sentence" id="s-4-159-2-p0">Pi­cking up again on the two main the­mes, ker­nel de­sign and por­ta­bi­li­ty, Ta­nen­baum wrote, “I still main­tain the point that de­si­gning a mo­no­li­thic ker­nel in 1991 is a fun­da­men­tal error.</span>
+        
+        <span class="book-sentence" id="s-4-159-3-p0">Be thank­ful you are not my stu­dent.</span>
+        
+        <span class="book-sentence" id="s-4-159-4-p0">You would not get a high grade for such a de­sign:-)” Ass for por­ta­bi­li­ty, he said, “Wri­ting a new OS only for the 386 in 1991 gets you your se­cond ‘F’ for this term.</span>
+        
+        <span class="book-sentence" id="s-4-159-5-p0">But if you do real well on the final exam, you can still pass the cour­se.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-160">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-160-1-p0">To which Linus re­plied in good humor:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-161">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-161-1-p0">Well, I pro­bab­ly won’t get too good gra­des even wi­thout you: I had an ar­gu­ment (com­ple­te­ly un­re­la­ted–not even per­tai­ning to OS’s) with the per­son here at the uni­ver­si­ty that teaches OS de­sign.</span>
+        
+        <span class="book-sentence" id="s-4-161-2-p0">I won­der when I’ll learn:)</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-162">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-162-1-p0">Short­ly after the “Linux is ob­so­le­te” fla­me­fest, Linus stop­ped pos­ting al­most al­to­ge­ther in the comp.os.minix news­group, not be­cau­se he might have felt it in­ap­pro­pria­te to con­ti­nue to pedd­le Linux there, and not even be­cau­se he was of­fen­ded by Ta­nen­baum.</span>
+        
+        <span class="book-sentence" id="s-4-162-2-p0">It was sim­ply that he had his own news­group now: alt.os.linux.</span>
+        
+        <span class="book-sentence" id="s-4-162-3-p0">This was in the “un­of­fi­ci­al” alt Use­net hier­ar­chy, but in due cour­se it would turn into the “of­fi­ci­al” comp.os.linux, fully the equal of Ta­nen­baum’s comp.os.minix.</span>
+        
+        <span class="book-sentence" id="s-4-162-4-p0">Not­hing could sym­bo­li­ze more ne­at­ly the sense that, ha­ving re­bel­led against the old lion, as all young lions must, Linus had left to form his own pride.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-163">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-163-1-p0">Later, in his 1992 Linux News in­ter­view, he said: “I have to admit to a very un­be­co­m­ing (but un­der­stan­da­ble, I hope) fee­ling of glee when I saw that [comp.os.]linux had fi­nal­ly more re­a­ders than [comp.os.] minix.” More re­a­ders, that is, than a news­group that had once been read avid­ly by 40,000 peop­le.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-164">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-164-1-p0">And yet Linus re­ta­ins a soft spot for Minix and the comp.os.minix news­group.</span>
+        
+        <span class="book-sentence" id="s-4-164-2-p0">Ass late as July 1999, he was still rea­ding and even pos­ting there.</span>
+        
+        <span class="book-sentence" id="s-4-164-3-p0">Some­bo­dy was as­king about GCC for Minix, which was where it had all begun in that first mes­sa­ge of 29 March 1991: “How did Linus get the GCC li­bra­ry to work with MINIX, and add sup­port to his own sys­tem calls and the like?” the wri­ter asked.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-165">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-165-1-p0">It seems Linus couldn’t re­sist re­spon­ding to this siren call from the past.</span>
+        
+        <span class="book-sentence" id="s-4-165-2-p0">His an­s­wer spools back time as he de­scri­bes in a few sen­ten­ces how it all began.</span>
+        
+        <span class="book-sentence" id="s-4-165-3-p0">He con­clu­des:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-166">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-166-1-p0">Much of this work has to be avail­able still.</span>
+        
+        <span class="book-sentence" id="s-4-166-2-p0">I made my 1.40 port [of GCC] avail­able, but I have to admit that I don’t know where it ended up.</span>
+        
+        <span class="book-sentence" id="s-4-166-3-p0">It’s been eight years...</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-4-167">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-4-167-1-p0">It is hard not to de­tect in these words a hint of a nost­al­gia for those faroff, heady days of youth when, star­ting alone and working from not­hing, he built, bit by bit, the pro­gram that bears his name; when he plan­ted the seed of what would grow into the ker­nel of a com­ple­te ope­ra­ting sys­tem used by tens of mil­li­ons of peop­le, and began a mo­ve­ment whose ra­mi­fi­ca­ti­ons con­ti­nue to spre­ad.</span>
+        
+      </p>
+    </section>
+  </article>
+  <nav class="chapter-nav book-chapter-nav">
+    <a class="nav-btn prev" href="03-2-the-new-gnu-thing.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="05-4-factor-x.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
+</main>
+  <script src="../../../assets/reader.js" defer></script>
+</body>
+</html>

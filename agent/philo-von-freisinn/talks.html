@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Philo von Freisinn – Gespräche</title>
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400&family=Special+Elite&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/styles.css?v=tmomo2g6h" />
+    <link rel="stylesheet" href="../../assets/layout.css?v=tmomo2g6h" />
+    <link rel="stylesheet" href="../../assets/dark.css?v=tmomo2g6h" />
+    <link rel="stylesheet" href="../../assets/book.css?v=tmomo2g6h" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <div class="wrap stack-16">
+      <a class="back-link" href="../../index.html">← Zurück zur Liste</a>
+      <header class="agent-header site-card">
+        <div class="agent-avatar"><img src="../../assistants/philo-von-freisinn/assets/avatar.png" alt="Philo von Freisinn" /></div>
+        <div class="stack-8 agent-header-main">
+          <h1>Philo von Freisinn</h1>
+          <div class="agent-header-meta">
+            <span class="pill pill-accent">Collection: philo-von-freisinn-v2</span>
+            <span class="pill pill-muted">21 Bücher insgesamt</span>
+            <a class="monitoring-toggle" href="statistik.html" title="Statistik öffnen" aria-label="Statistik öffnen">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+    Statistik
+  </a>
+          </div>
+        </div>
+      </header>
+      <nav class="tab-row" aria-label="Assistenten-Bereiche"><a class="tab-link" href="index.html">Übersicht</a><a class="tab-link" href="books.html">Primärliteratur</a><a class="tab-link" href="secondary-books.html">Sekundärliteratur</a><a class="tab-link tab-link-active" href="talks.html">Gespräche</a><a class="tab-link" href="quotes.html">Zitate</a><a class="tab-link" href="concepts.html">Begriffe</a><a class="tab-link" href="taxonomies.html">Ordnungen</a></nav>
+      <main class="site-card content-card">
+        <div class="stack-8"><h3>Gespräche</h3><div style="position:relative;display:inline-block;margin-bottom:12px">
+  <button class="talk-filter-toggle" style="font-size:0.8rem;padding:4px 10px;border:1px solid var(--border,#e5e7eb);border-radius:6px;background:var(--surface,#fff);cursor:pointer;color:var(--fg,#111827)">Filter ▾</button>
+  <div class="talk-filter-dropdown" style="display:none;position:absolute;top:100%;left:0;margin-top:4px;background:var(--surface,#fff);border:1px solid var(--border,#e5e7eb);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);padding:10px 14px;z-index:100;min-width:160px;flex-direction:column;gap:6px;font-size:0.82rem">
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="draft" checked> Draft</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="staged" checked> Staged</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="published" checked> Published</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="personal"> Personal</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="peers"> Peers</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="candidate"> Candidate</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="archive"> Archive</label>
+    <label style="display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" value="bug"> Bug</label>
+  </div>
+</div><script>(function(){
+  var s = document.currentScript;
+  var wrap = s.previousElementSibling;
+  var btn = wrap.querySelector('.talk-filter-toggle');
+  var dd = wrap.querySelector('.talk-filter-dropdown');
+  function applyFilter(){
+    var list = s.nextElementSibling;
+    if (!list) return;
+    var checked = Array.from(dd.querySelectorAll('input:checked')).map(function(el){return el.value;});
+    list.querySelectorAll('.talk-card[data-status]').forEach(function(card){
+      card.style.display = checked.includes(card.dataset.status) ? '' : 'none';
+    });
+  }
+  function openDd(){ dd.style.display = 'flex'; }
+  function closeDd(){ dd.style.display = 'none'; }
+  btn.addEventListener('click', function(e){ e.stopPropagation(); dd.style.display === 'none' ? openDd() : closeDd(); });
+  dd.addEventListener('change', applyFilter);
+  dd.addEventListener('click', function(e){ e.stopPropagation(); });
+  document.addEventListener('click', closeDd);
+  document.addEventListener('DOMContentLoaded', applyFilter);
+})();</script><div class="book-list"><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-arbeit-preis-wuerde.html" style="text-decoration:none;color:inherit;"><strong>Arbeit, Preis, Menschenwürde</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Folgenden Text Steiners finde ich gegen Ende hin schwer vorzustellen. Wie geht das, dass die Arbeit vom Rechtsleben aus verwaltet wird, ich meine die Frage, wie und das Maß hängt an den Fähigkeiten des Menschen. Und die…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-AKTIVIST-was-bekommt-man-fuer-geistesarbeit-und-wer-zahlt-dafuer.html" style="text-decoration:none;color:inherit;"><strong>Was bekommt man für Geistesarbeit – und wer zahlt dafür?</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Steiner schreibt: &quot;Auf dem Gebiet des Geisteslebens wird die Möglichkeit entstehen, dass dessen Hervorbringer von den Erträgnissen ihrer Leistungen auch leben. Was jemand für sich im Gebiet des Geisteslebens treibt, wird…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-CYPHERPUNK-was-bekommt-man-fuer-geistesarbeit-und-wer-zahlt-dafuer.html" style="text-decoration:none;color:inherit;"><strong>Das Unsichtbare finanziert niemand</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Steiner schreibt: &quot;Auf dem Gebiet des Geisteslebens wird die Möglichkeit entstehen, dass dessen Hervorbringer von den Erträgnissen ihrer Leistungen auch leben. Was jemand für sich im Gebiet des Geisteslebens treibt, wird…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-HANDWERKER-was-bekommt-man-fuer-geistesarbeit-und-wer-zahlt-dafuer.html" style="text-decoration:none;color:inherit;"><strong>Diffuse Abhängigkeit braucht konkrete Verantwortung</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Steiner schreibt: &quot;Auf dem Gebiet des Geisteslebens wird die Möglichkeit entstehen, dass dessen Hervorbringer von den Erträgnissen ihrer Leistungen auch leben. Was jemand für sich im Gebiet des Geisteslebens treibt, wird…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-arbeit-als-ware-und-der-dreigliederige-ausgleich.html" style="text-decoration:none;color:inherit;"><strong>Arbeit als Ware und der dreigliederige Ausgleich: Geistesleben, Assoziation und Rechtsleben im sozialen Organismus</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Ich habe zwei Aussagen von Rudolf Steiner, über die ich mit dir sprechen will. Es geht um Arbeit als Ware und wie das den sozialen Organismus korrumpiert: 1) Die moderne kapitalistische Wirtschaftsordnung kennt im Grunde…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-der-soziale-organismus-und-der-mensch-eine-analogie.html" style="text-decoration:none;color:inherit;"><strong>Die freie Schule als Gelenk zwischen Geistesleben, Recht und Wirtschaft</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Ich habe wieder zwei Zitate von Steiner über Der gesellschaftliche Organismus - der menschliche Organismus: 1) Das Wirtschaftsglied steht im sozialen Organismus wie das Kopfsystem, von dem die individuellen Begabungen be…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-dreigliederung-im-alltag-was-das-gemeinsame-bett-%C3%BCber-freiheit-recht-und-br%C3%BCderlichkeit-verr%C3%A4t.html" style="text-decoration:none;color:inherit;"><strong>Dreigliederung im Alltag: Was das gemeinsame Bett über Freiheit, Recht und Brüderlichkeit verrät</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Ich frage mich, ob die Dreigliederungsidee auch in zwischenmenschlichen Beziehungen relevant ist. Jeder ist ja immer in allen drei Gliedern. Wie ist das wenn ich in freier Weise, aus meiner Fantasie heraus, ein Bett baue…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-dreigliederung-in-der-praxis-vom-rechtsprinzip-zur-assoziativen-wirtschaft-und-freiem-geistesleben.html" style="text-decoration:none;color:inherit;"><strong>Dreigliederung in der Praxis: Vom Rechtsprinzip zur assoziativen Wirtschaft und freiem Geistesleben</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Ich habe wiederum ein Zitat von Rudolf Steiner zur Dreigliederungsidee: Es geht um die Vermischung von Wirtschafts- und Rechtsleben. Wo würdest du in folgendem Text die Hauptpunkte sehen? Tragen die Menschen diejenigen I…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-faehigkeitenhierarchie-statt-strukturhierarchie.html" style="text-decoration:none;color:inherit;"><strong>Fähigkeitenhierarchie statt Strukturhierarchie – und wer die Fragen stellt, entscheidet das Geistesleben</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Folgendes sagt Steiner in den Kernpunkten der sozialen Frage. Ist der Satz eher nur in der Zeit von 1919 wertvoll, oder findest du darin etwas, was für heute 2026 wertvoll ist? Zitat: &quot;Der Proletarier ist durch seine Leb…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-freiheit-im-augenblick-intuition-fehler-grenzen-des-anderen.html" style="text-decoration:none;color:inherit;"><strong>Freiheit im Augenblick – Intuition, Fehler und die Grenzen des anderen</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Der folgende Text von Rudolf Steiner gilt für alle Fälle, in denen Menschen ihre Fähigkeiten einsetzen und Talente entwickeln, oder? Da brauchen sie Freiheit! Er meint: Für das Geistesleben, mit dem auch die Entwicklung…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-freiheit-im-schaffen-vertrauen-im-schenken-und-wer-schuetzt-den-raum.html" style="text-decoration:none;color:inherit;"><strong>Freiheit im Schaffen, Vertrauen im Schenken – und wer schützt den Raum?</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Folgende Aussage von Rudolf Steiner ist für mich sehr bedeutsam, es geht darum, dass Menschen am besten frei sind, wenn sie geistig arbeiten und dass sie aber gleichzeitig verstehen, was die Menschen brauchen, wo sie ste…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-ideologieparadox-zu-ende-denken-philosophie-der-freiheit.html" style="text-decoration:none;color:inherit;"><strong>Ideologieparadox, zu Ende denken und die Philosophie der Freiheit</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Rudolf Steiner beschreibt in seiner Schrift zur sozialen Frage ein eigentümliches Paradoxon in der Bewusstseinslage des modernen Proletariats: Der Arbeiter baut sein inneres Leben faktisch auf Gedanken auf – auf Ideen, Ü…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-open-source-beweist-die-dreigliederung.html" style="text-decoration:none;color:inherit;"><strong>Open Source beweist die Dreigliederung</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Für das Geistesleben, mit dem auch die Entwicklung der anderen individuellen Fähigkeiten im Menschenleben durch unübersehbar viele Fäden zusammenhängt, ergibt sich nur eine gesunde Entwicklungsmöglichkeit, wenn es in der…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-was-bekommt-man-fuer-geistesarbeit-und-wer-zahlt-dafuer.html" style="text-decoration:none;color:inherit;"><strong>Wer das Geistesleben braucht, muss es auch tragen</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Steiner schreibt: &quot;Auf dem Gebiet des Geisteslebens wird die Möglichkeit entstehen, dass dessen Hervorbringer von den Erträgnissen ihrer Leistungen auch leben. Was jemand für sich im Gebiet des Geisteslebens treibt, wird…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-was-ist-maechtiger-als-wenn-sich-zwei-menschen-in-die-augen-schauen.html" style="text-decoration:none;color:inherit;"><strong>Was ist mächtiger, als wenn sich zwei Menschen in die Augen schauen?</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Ich habe wieder einen Satz von Rudolf Steiner, der sehr stark ist, auch aus der Dreigliederungsidee, mit der Frage, wie man das verbinden kann mit den anderen Kerngedanken der Dreigliederungsidee: auf dem Vorhandensein d…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-wer-darf-geheimnisse-haben-dreigliederung-transparenz-architektur-der-macht.html" style="text-decoration:none;color:inherit;"><strong>Julian, die Dreigliederung funktioniert nur wirklich gut, die</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Julian, die Dreigliederung funktioniert nur wirklich gut, die Freiheit im Geistesleben, wenn Informationen über wirtschaftliche Abläufe, Beziehungen von Firmen und Politik transparent werden. Siehst du das auch so? von F…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-wer-die-f%C3%A4higkeit-hat-entscheidet.html" style="text-decoration:none;color:inherit;"><strong>Wer die Fähigkeit hat, entscheidet – Dreigliederung im Licht der Open-Source-Kultur</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Für das Geistesleben, mit dem auch die Entwicklung der anderen individuellen Fähigkeiten im Menschenleben durch unübersehbar viele Fäden zusammenhängt, ergibt sich nur eine gesunde Entwicklungsmöglichkeit, wenn es in der…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/3gl-was-mit-einem-gegenstand-gemacht-wird-bestimmt-welches-recht-fuer-ihn-gilt.html" style="text-decoration:none;color:inherit;"><strong>Was mit einem Gegenstand gemacht wird, bestimmt, welches Recht für ihn gilt.</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Steiner sagte: &quot;Die Rechtseinrichtungen werden dafür sorgen, dass ein Produktionsbetrieb nur so lange mit einer Person oder Personengruppe verbunden bleibt, als sich diese Verbindung aus den individuellen Fähigkeiten die…</p>
+</div><div class="talk-card book-link" data-status="published">
+  <div><a href="talks/erklare-mir-bitte-die-moralische-intuition-im-vergleich.html" style="text-decoration:none;color:inherit;"><strong>Erkläre mir bitte die moralische Intuition im Vergleich</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#d1fae5;color:#065f46">published</span></div>
+  <p class="meta-quiet talk-excerpt">Schmidt Erkläre mir bitte die moralische Intuition im Vergleich zu normalem Denken von Freisinn Intuition und normales Denken Um den Unterschied zu verstehen, muss man zunächst klären, was unter „normalem Denken“ zu vers…</p>
+</div><div class="talk-card book-link" data-status="staged">
+  <div><a href="talks/was-sagst-du-zu-folgendem-satz-steiner-unterscheidet.html" style="text-decoration:none;color:inherit;"><strong>Was sagst du zu Folgendem Satz: Steiner unterscheidet</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#fef3c7;color:#92400e">staged</span></div>
+  <p class="meta-quiet talk-excerpt">Schmidt Was sagst du zu Folgendem Satz: Steiner unterscheidet hier nicht zwischen zwei verschiedenen Arten von Gedankengebilden, sondern zwischen zwei Stufen ein und derselben Sache. Ein Begriff ist das ideelle Gegenstüc…</p>
+</div><div class="talk-card book-link" data-status="staged">
+  <div><a href="talks/was-ist-der-unterschied-zwischen-begriff-und-idee.html" style="text-decoration:none;color:inherit;"><strong>Was ist der Unterschied zwischen Begriff und Idee?</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#fef3c7;color:#92400e">staged</span></div>
+  <p class="meta-quiet talk-excerpt">Schmidt Was ist der Unterschied zwischen Begriff und Idee? von Freisinn Eine gute Frage. Du nennst zwei Wörter, die im alltäglichen Reden oft durcheinandergeworfen werden. Aber du fragst nach dem Unterschied – also vermu…</p>
+</div><div class="talk-card book-link" data-status="staged">
+  <div><a href="talks/wann-wurde-die-philosophie-der-freiheit-geschrieben.html" style="text-decoration:none;color:inherit;"><strong>Wann wurde die Philosophie der Freiheit geschrieben?</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#fef3c7;color:#92400e">staged</span></div>
+  <p class="meta-quiet talk-excerpt">Schmidt Wann wurde die Philosophie der Freiheit geschrieben? von Freisinn Die „Philosophie der Freiheit“ wurde erstmals 1894 veröffentlicht. Darauf weist Rudolf Steiner selbst hin, wenn er von seiner „zum ersten Mal im J…</p>
+</div><div class="talk-card book-link" data-status="draft">
+  <div><a href="talks/ich-habe-einen-satz-von-steiner-den-du.html" style="text-decoration:none;color:inherit;"><strong>Ich habe einen Satz von Steiner, den du</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#e5e7eb;color:#374151">draft</span></div>
+  <p class="meta-quiet talk-excerpt">Schmidt Ich habe einen Satz von Steiner, den du auch in deinen Quellen hast, von dem ich gerne wüsste wie man ihn verbinden kann mit dem Krieg, den Israel und USA gegen Iran angezettelt haben. Hier ist er: von Freisinn I…</p>
+</div><div class="talk-card book-link" data-status="draft">
+  <div><a href="talks/wie-siehst-du-den-unterschied-zwischen-moralischer-technik.html" style="text-decoration:none;color:inherit;"><strong>Wie siehst du den Unterschied zwischen moralischer Technik</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#e5e7eb;color:#374151">draft</span></div>
+  <p class="meta-quiet talk-excerpt">Schmidt Wie siehst du den Unterschied zwischen moralischer Technik und moralischer Fantasie, und reinen Intuitionen? von Freisinn Gute Frage. Du berührst damit den Kern dessen, was sittlich produktives Handeln von bloßer…</p>
+</div><div class="talk-card book-link" data-status="draft">
+  <div><a href="talks/was-kannst-du-mir-uber-moralische-fantasie-und.html" style="text-decoration:none;color:inherit;"><strong>Was kannst du mir über moralische Fantasie und</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#e5e7eb;color:#374151">draft</span></div>
+  <p class="meta-quiet talk-excerpt">Schmidt Was kannst du mir über moralische Fantasie und moralische Intuition und moralische Technik sagen? von Freisinn Gerne. Lass uns diese drei Begriffe klar und getrennt voneinander betrachten. Sie beschreiben untersc…</p>
+</div><div class="talk-card book-link" data-status="staged">
+  <div><a href="talks/spioza-ist-der-ausgangspunkt-dieses-gedankenfehlers-dass-man.html" style="text-decoration:none;color:inherit;"><strong>Spioza ist der Ausgangspunkt dieses Gedankenfehlers, dass man</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#fef3c7;color:#92400e">staged</span></div>
+  <p class="meta-quiet talk-excerpt">Schmidt Spioza ist der Ausgangspunkt dieses Gedankenfehlers, dass man sein eigenes Denken nicht erkennen kann. von Freisinn Du sprichst einen wichtigen Punkt an. Der ausgewählte Abschnitt [1] zeigt, dass Spinoza die Frei…</p>
+</div><div class="talk-card book-link" data-status="staged">
+  <div><a href="talks/bitte-erklare-den-absatz.html" style="text-decoration:none;color:inherit;"><strong>Bitte erkläre den Absatz</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#fef3c7;color:#92400e">staged</span></div>
+  <p class="meta-quiet talk-excerpt">Schmidt Bitte erkläre den Absatz von Freisinn Gerne. Der ausgewählte Abschnitt [1] beginnt mit einem Zitat von Johannes Volkelt, der einen Grundsatz für den Beginn des Philosophierens aufstellt: Unser Wissen erstreckt si…</p>
+</div><div class="talk-card book-link" data-status="staged">
+  <div><a href="talks/bitte-beschreibe-die-ansicht-berkeleys-in-diesem-absatz.html" style="text-decoration:none;color:inherit;"><strong>Bitte beschreibe die Ansicht Berkeleys in diesem Absatz</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#fef3c7;color:#92400e">staged</span></div>
+  <p class="meta-quiet talk-excerpt">Schmidt Bitte beschreibe die Ansicht Berkeleys in diesem Absatz von Freisinn Aus dem ausgewählten Abschnitt [1] und den ergänzenden Quellen [2][3][4] lässt sich Berkeleys Ansicht klar beschreiben. Berkeley behauptet, das…</p>
+</div><div class="talk-card book-link" data-status="draft">
+  <div><a href="talks/deine-unterscheidung-zwischen-freundschaft-und-symbiose-ist-ein.html" style="text-decoration:none;color:inherit;"><strong>Deine Unterscheidung zwischen Freundschaft und Symbiose ist ein</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#e5e7eb;color:#374151">draft</span></div>
+  <p class="meta-quiet talk-excerpt">Schmidt Deine Unterscheidung zwischen Freundschaft und Symbiose ist ein klarer Gedanke. Lass uns das mit den Quellen durchdenken. von Freisinn Gut, dass du diesen Faden aufnimmst. Die Unterscheidung zwischen Freundschaft…</p>
+</div><div class="talk-card book-link" data-status="draft">
+  <div><a href="talks/was-hat-es-mit-den-spezifischen-sinnesenergien-von.html" style="text-decoration:none;color:inherit;"><strong>Was hat es mit den spezifischen Sinnesenergien von</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#e5e7eb;color:#374151">draft</span></div>
+  <p class="meta-quiet talk-excerpt">Schmidt Was hat es mit den spezifischen Sinnesenergien von J. Müller auf sich? Kannst du da mehr ins Detail gehen? von Freisinn Gerne gehe ich auf die spezifischen Sinnesenergien von Johannes Müller ein. Du hast mit dein…</p>
+</div><div class="talk-card book-link" data-status="draft">
+  <div><a href="talks/art-mass-und-zeit-der-arbeit-sollen-im.html" style="text-decoration:none;color:inherit;"><strong>Verwalten oder Sichtbarmachen — Über Arbeit, Kapital und die neue Bank</strong></a><span style="display:inline-block;font-size:0.65rem;font-weight:600;padding:1px 7px;border-radius:999px;vertical-align:middle;margin-left:8px;background:#e5e7eb;color:#374151">draft</span></div>
+  <p class="meta-quiet talk-excerpt">Schmidt Art, Maß und Zeit der Arbeit sollen im Rechtsleben festgelegt werden. Das ist in der heutigen vielfältigen, sich schnell verändernden Arbeitslandschaft schwer vorstellbar. Was ist mit diesen drei Dingen genau gem…</p>
+</div></div></div>
+      </main>
+    </div>
+    </div>
+  </body>
+</html>

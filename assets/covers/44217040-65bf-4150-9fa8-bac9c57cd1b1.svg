@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="630" viewBox="0 0 400 630">
+  <rect width="400" height="189" fill="#2d2d2d" />
+  <rect y="189" width="400" height="378" fill="#f7f3ed" />
+  <rect y="567" width="400" height="63" fill="#2d2d2d" />
+  <line x1="0" y1="189" x2="400" y2="189" stroke="#c4b8a8" stroke-width="1" />
+  <line x1="0" y1="191" x2="400" y2="191" stroke="#c4b8a8" stroke-width="0.5" opacity="0.85" />
+
+  <circle cx="200" cy="90.72" r="24" fill="none" stroke="#ffffff" stroke-width="0.55"/>
+  <circle cx="200" cy="90.72" r="48" fill="none" stroke="#ffffff" stroke-width="0.55"/>
+  <circle cx="200" cy="90.72" r="72" fill="none" stroke="#ffffff" stroke-width="0.55"/>
+  <line x1="200" y1="90.72" x2="200" y2="18.72" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="200" cy="66.72" r="1.8" fill="#ffffff"/>
+  <circle cx="200" cy="42.72" r="1.8" fill="#ffffff"/>
+  <circle cx="200" cy="18.72" r="1.8" fill="#ffffff"/>
+  <line x1="200" y1="90.72" x2="236" y2="28.37" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="212" cy="69.94" r="1.8" fill="#ffffff"/>
+  <circle cx="224" cy="49.15" r="1.8" fill="#ffffff"/>
+  <circle cx="236" cy="28.37" r="1.8" fill="#ffffff"/>
+  <line x1="200" y1="90.72" x2="262.35" y2="54.72" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="220.78" cy="78.72" r="1.8" fill="#ffffff"/>
+  <circle cx="241.57" cy="66.72" r="1.8" fill="#ffffff"/>
+  <circle cx="262.35" cy="54.72" r="1.8" fill="#ffffff"/>
+  <line x1="200" y1="90.72" x2="272" y2="90.72" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="224" cy="90.72" r="1.8" fill="#ffffff"/>
+  <circle cx="248" cy="90.72" r="1.8" fill="#ffffff"/>
+  <circle cx="272" cy="90.72" r="1.8" fill="#ffffff"/>
+  <line x1="200" y1="90.72" x2="262.35" y2="126.72" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="220.78" cy="102.72" r="1.8" fill="#ffffff"/>
+  <circle cx="241.57" cy="114.72" r="1.8" fill="#ffffff"/>
+  <circle cx="262.35" cy="126.72" r="1.8" fill="#ffffff"/>
+  <line x1="200" y1="90.72" x2="236" y2="153.07" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="212" cy="111.5" r="1.8" fill="#ffffff"/>
+  <circle cx="224" cy="132.29" r="1.8" fill="#ffffff"/>
+  <circle cx="236" cy="153.07" r="1.8" fill="#ffffff"/>
+  <line x1="200" y1="90.72" x2="200" y2="162.72" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="200" cy="114.72" r="1.8" fill="#ffffff"/>
+  <circle cx="200" cy="138.72" r="1.8" fill="#ffffff"/>
+  <circle cx="200" cy="162.72" r="1.8" fill="#ffffff"/>
+  <line x1="200" y1="90.72" x2="164" y2="153.07" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="188" cy="111.5" r="1.8" fill="#ffffff"/>
+  <circle cx="176" cy="132.29" r="1.8" fill="#ffffff"/>
+  <circle cx="164" cy="153.07" r="1.8" fill="#ffffff"/>
+  <line x1="200" y1="90.72" x2="137.65" y2="126.72" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="179.22" cy="102.72" r="1.8" fill="#ffffff"/>
+  <circle cx="158.43" cy="114.72" r="1.8" fill="#ffffff"/>
+  <circle cx="137.65" cy="126.72" r="1.8" fill="#ffffff"/>
+  <line x1="200" y1="90.72" x2="128" y2="90.72" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="176" cy="90.72" r="1.8" fill="#ffffff"/>
+  <circle cx="152" cy="90.72" r="1.8" fill="#ffffff"/>
+  <circle cx="128" cy="90.72" r="1.8" fill="#ffffff"/>
+  <line x1="200" y1="90.72" x2="137.65" y2="54.72" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="179.22" cy="78.72" r="1.8" fill="#ffffff"/>
+  <circle cx="158.43" cy="66.72" r="1.8" fill="#ffffff"/>
+  <circle cx="137.65" cy="54.72" r="1.8" fill="#ffffff"/>
+  <line x1="200" y1="90.72" x2="164" y2="28.37" stroke="#ffffff" stroke-width="0.55" />
+  <circle cx="188" cy="69.94" r="1.8" fill="#ffffff"/>
+  <circle cx="176" cy="49.15" r="1.8" fill="#ffffff"/>
+  <circle cx="164" cy="28.37" r="1.8" fill="#ffffff"/>
+  <circle cx="200" cy="90.72" r="3.5" fill="#ffffff"/>
+
+  <text text-anchor="middle" fill="#2d2d2d" font-family="Georgia, 'Times New Roman', serif" font-size="21" font-weight="500"><tspan x="200" y="227">Grundlinien einer</tspan><tspan x="200" dy="26">Erkenntnistheorie der</tspan><tspan x="200" dy="26">Goetheschen</tspan><tspan x="200" dy="26">Weltanschauung</tspan></text>
+  <line x1="70" y1="343" x2="330" y2="343" stroke="#6b6b6b" stroke-width="0.6" />
+  <text text-anchor="middle" fill="#6b6b6b" font-family="Georgia, 'Times New Roman', serif" font-size="11.5"><tspan x="200" y="359">mit besonderer Rücksicht auf Schiller</tspan></text>
+  <path d="M 200 395 l 7 7 l -7 7 l -7 -7 Z" fill="none" stroke="#2d2d2d" stroke-width="1.1" />
+  <path d="M 200 398 l 4 4 l -4 4 l -4 -4 Z" fill="#2d2d2d" />
+
+  <text x="200" y="603.5" text-anchor="middle" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="11.5" letter-spacing="0.12em">RUDOLF STEINER</text>
+</svg>
