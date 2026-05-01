@@ -735,6 +735,57 @@ export function collectTalks(
 // DB-based talk collection (rag_talks + rag_turns)
 // ---------------------------------------------------------------------------
 
+function _talksPostgresUrl(): string | null {
+  const raw =
+    process.env["RAGRUN_POSTGRES_DSN"] ??
+    process.env["DATABASE_URL"] ??
+    process.env["POSTGRES_URL"] ??
+    "";
+  if (!raw.trim()) return null;
+  return raw.replace(/^postgresql\+[^:]+:\/\//, "postgresql://");
+}
+
+/**
+ * Overwrites `TalkData.title` from `rag_talks.title` for each slug (same `collection`
+ * as in the assistant manifest). Use when talks body comes from committed `.md` files
+ * but the canonical title was updated in the database.
+ */
+export async function enrichTalkFileTitlesFromDb(
+  collection: string,
+  talks: Map<string, TalkData>
+): Promise<void> {
+  const dbUrl = _talksPostgresUrl();
+  if (!dbUrl || talks.size === 0) return;
+
+  const slugs = [...talks.keys()];
+  // @ts-ignore – @types/pg not installed
+  const { Client } = await import("pg");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const client: any = new Client({ connectionString: dbUrl });
+
+  try {
+    await client.connect();
+    const result = await client.query(
+      `SELECT slug, title FROM rag_talks WHERE collection = $1 AND slug = ANY($2::text[])`,
+      [collection, slugs]
+    );
+    for (const row of result.rows as { slug: string; title: string }[]) {
+      const slug = String(row.slug ?? "");
+      const title = String(row.title ?? "").trim();
+      const existing = talks.get(slug);
+      if (existing && title) {
+        talks.set(slug, { ...existing, title });
+      }
+    }
+  } catch (err) {
+    process.stderr.write(
+      `[enrichTalkFileTitlesFromDb] ${err instanceof Error ? err.message : String(err)}\n`
+    );
+  } finally {
+    try { await client.end(); } catch { /* ignore */ }
+  }
+}
+
 interface _DbTurnRow {
   talk_id: string;
   slug: string;
@@ -779,15 +830,8 @@ export async function collectTalksFromDb(
   collection: string,
   agentName: string
 ): Promise<Map<string, TalkData>> {
-  const raw =
-    process.env["RAGRUN_POSTGRES_DSN"] ??
-    process.env["DATABASE_URL"] ??
-    process.env["POSTGRES_URL"] ??
-    "";
-  if (!raw.trim()) return new Map();
-
-  // Strip SQLAlchemy driver specifier (postgresql+psycopg:// → postgresql://)
-  const dbUrl = raw.replace(/^postgresql\+[^:]+:\/\//, "postgresql://");
+  const dbUrl = _talksPostgresUrl();
+  if (!dbUrl) return new Map();
 
   // @ts-ignore – @types/pg not installed
   const { Client } = await import("pg");

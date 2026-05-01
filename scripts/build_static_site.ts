@@ -19,6 +19,7 @@ import {
 import {
   collectTalks,
   collectTalksFromDb,
+  enrichTalkFileTitlesFromDb,
   extractTalkChunkIds,
   generateTalkPages,
   type TalkData,
@@ -169,9 +170,17 @@ async function main(): Promise<void> {
   for (const agent of assistants) {
     if (hasDb) {
       const dbTalks = await collectTalksFromDb(agent.ragCollection, agent.name);
-      if (dbTalks.size > 0) talksByAgent.set(agent.id, dbTalks);
-    } else if (agent.talks.length > 0) {
-      talksByAgent.set(agent.id, collectTalks(REPO_ROOT, agent));
+      if (dbTalks.size > 0) {
+        talksByAgent.set(agent.id, dbTalks);
+        continue;
+      }
+    }
+    if (agent.talks.length > 0) {
+      const fileTalks = collectTalks(REPO_ROOT, agent);
+      if (hasDb) {
+        await enrichTalkFileTitlesFromDb(agent.ragCollection, fileTalks);
+      }
+      talksByAgent.set(agent.id, fileTalks);
     }
   }
 
