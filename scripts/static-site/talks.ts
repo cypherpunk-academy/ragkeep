@@ -735,18 +735,12 @@ export function collectTalks(
 // DB-based talk collection (rag_talks + rag_turns)
 // ---------------------------------------------------------------------------
 
-function _slugToDisplayName(slug: string): string {
-  return slug
-    .split("-")
-    .map((w) => (w ? w.charAt(0).toUpperCase() + w.slice(1) : w))
-    .join(" ");
-}
-
 interface _DbTurnRow {
   talk_id: string;
   slug: string;
   title: string;
   publishing_status: string | null;
+  mensch_name: string;
   turn_index: number;
   user_message: string;
   assistant_message: string;
@@ -758,14 +752,13 @@ interface _DbTurnRow {
 }
 
 function _reconstructBodyFromDbRows(rows: _DbTurnRow[], agentName: string): string {
+  const userHeading = rows[0]?.mensch_name?.trim() || "Mensch";
   const parts: string[] = [];
   for (const row of rows) {
     if (!row.is_relay) {
-      parts.push(`## Mensch\n\n${row.user_message}`);
+      parts.push(`## ${userHeading}\n\n${row.user_message}`);
     }
-    const speakerLabel = row.assistant_personality
-      ? _slugToDisplayName(row.assistant_personality)
-      : agentName;
+    const speakerLabel = agentName;
     let assistantText = row.assistant_message;
     if (Array.isArray(row.references) && row.references.length > 0) {
       assistantText += `\n<!-- quellen\n${JSON.stringify(row.references, null, 2)}\n-->`;
@@ -804,7 +797,7 @@ export async function collectTalksFromDb(
 
   try {
     const result = await client.query(
-      `SELECT rt.talk_id, rt.slug, rt.title, rt.publishing_status,
+      `SELECT rt.talk_id, rt.slug, rt.title, rt.publishing_status, rt.mensch_name,
               rtu.turn_index, rtu.user_message, rtu.assistant_message,
               rtu.assistant_personality, rtu.is_relay, rtu.chunk_index_map, rtu.usage,
               COALESCE(
