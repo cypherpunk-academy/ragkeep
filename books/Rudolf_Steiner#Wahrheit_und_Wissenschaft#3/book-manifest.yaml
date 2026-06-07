@@ -1,6 +1,7 @@
 author: Rudolf Steiner
 title: Wahrheit und Wissenschaft
 subtitle: Vorspiel zu einer «Philosophie der Freiheit»
+year: 1925
 book-index: 3
 book-id: e58f6369-f7a7-4213-845f-c5b9bf82ffe5
 book-type: rudolf-steiner-ga-werk
@@ -14,12 +15,12 @@ journal:
   lines: 2510
   words: 19732
   footnotes: 31
-chunks: 88
-multi-paragraph-chunks: 28
-single-paragraph-chunks: 19
-large-paragraph-chunks: 41
-average: 1486
-p01_length: 293
-p05_length: 647
-p95_length: 2150
-p99_length: 2912
+chunks: 135
+multi-paragraph-chunks: 31
+single-paragraph-chunks: 23
+large-paragraph-chunks: 81
+average: 935
+p01_length: 225
+p05_length: 385
+p95_length: 1498
+p99_length: 1740

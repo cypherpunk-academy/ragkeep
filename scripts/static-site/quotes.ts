@@ -278,7 +278,7 @@ export function collectQuotesForAgent(
       ...lectureSets.secondaryLectures,
     ];
     for (const lecture of allLectures) {
-      const sourceId = `lecture:${lecture.id}`;
+      const sourceId = lecture.uuid || `lecture:${lecture.id}`;
       const sourceTitle = lecture.zyklusTitle
         ? `${lecture.zyklusTitle}, ${lecture.title}`
         : lecture.title;

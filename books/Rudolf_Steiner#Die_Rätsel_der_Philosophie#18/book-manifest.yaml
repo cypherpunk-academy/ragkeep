@@ -2,6 +2,7 @@ author: Rudolf Steiner
 title: Die Rätsel der Philosophie
 subtitle: in ihrer Geschichte als Umriss dargestellt
 book-index: 18
+year: 1918
 book-type: rudolf-steiner-ga-werk
 language: de
 book-id: d64fa532-6040-4fc2-9c43-ed4e5368bb92
@@ -24,12 +25,12 @@ journal:
     words: 182829
     deepseek-guessed: 127
     taken-from-tesseract: 768
-chunks: 766
-multi-paragraph-chunks: 89
-single-paragraph-chunks: 159
-large-paragraph-chunks: 518
-average: 1434
-p01_length: 319
-p05_length: 756
-p95_length: 2229
-p99_length: 2497
+chunks: 1041
+multi-paragraph-chunks: 50
+single-paragraph-chunks: 170
+large-paragraph-chunks: 821
+average: 1012
+p01_length: 261
+p05_length: 531
+p95_length: 1587
+p99_length: 1727

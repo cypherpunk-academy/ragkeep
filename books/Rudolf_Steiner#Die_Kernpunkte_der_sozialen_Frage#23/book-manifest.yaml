@@ -1,6 +1,7 @@
 author: Rudolf Steiner
 title: Die Kernpunkte der sozialen Frage
 subtitle: in den Lebensnotwendigkeiten der Gegenwart und Zukunft
+year: 1920
 book-index: 23
 book-type: rudolf-steiner-ga-werk
 language: de
@@ -14,12 +15,12 @@ journal:
   lines: 4716
   words: 37251
   footnotes: 8
-chunks: 170
-multi-paragraph-chunks: 47
-single-paragraph-chunks: 54
-large-paragraph-chunks: 69
-average: 1522
-p01_length: 257
-p05_length: 860
-p95_length: 2250
-p99_length: 2480
+chunks: 261
+multi-paragraph-chunks: 29
+single-paragraph-chunks: 57
+large-paragraph-chunks: 175
+average: 979
+p01_length: 304
+p05_length: 579
+p95_length: 1507
+p99_length: 1651

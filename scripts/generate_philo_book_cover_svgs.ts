@@ -1,8 +1,24 @@
 #!/usr/bin/env node
 /**
- * Generiert SVG-Buchcover (Stil: dunkler Kopf mit Diagramm, cremefarbener Rumpf, Autor unten)
- * aus book-manifest.yaml für alle primary/secondary-books von philo-von-freisinn.
- * Ausgabe: site/assets/covers/{book-id}.svg
+ * Generiert SVG-Buchcover (Stil: weißer Textblock oben, Vollbild unten).
+ *
+ * Parameter: image, title, subtitle, year, author
+ *
+ * Einzelcover:
+ *   npx tsx scripts/generate_philo_book_cover_svgs.ts \
+ *     --title "Die Rätsel der Philosophie" \
+ *     --subtitle "in ihrer Geschichte als Umriss dargestellt" \
+ *     --year 1918 \
+ *     --author "Rudolf Steiner" \
+ *     --image books/.../cover.jpg \
+ *     --output assets/covers/{book-id}.svg
+ *
+ * Batch (philo-von-freisinn primary/secondary-books):
+ *   npx tsx scripts/generate_philo_book_cover_svgs.ts --batch --image-dir assets/cover-images
+ *
+ * Bildauflösung für iPad (Retina):
+ *   Cover 2048×3072 px (2:3) → Bildbereich ~65 % Höhe → mindestens 2048×1300 px.
+ *   Für kleinere Vorschau reicht 1200×780 px (Default-Canvas 1200×1800).
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -15,27 +31,40 @@ const ASSISTANT_MANIFEST = path.join(
   REPO_ROOT,
   "assistants/philo-von-freisinn/assistant-manifest.yaml"
 );
-const OUT_DIR = path.join(REPO_ROOT, "assets/covers");
+const DEFAULT_OUT_DIR = path.join(REPO_ROOT, "assets/covers");
 
-const W = 400;
-const H = 630;
-const TOP_H = Math.round(H * 0.3);
-const BOT_H = Math.round(H * 0.1);
-const MID_Y = TOP_H;
-const MID_H = H - TOP_H - BOT_H;
+/** 2:3 — scharf auf iPad; upload_covers konvertiert SVG→PNG in dieser Größe. */
+const W = 1200;
+const H = 1800;
+const TOP_RATIO = 0.35;
+const TOP_H = Math.round(H * TOP_RATIO);
+const IMAGE_H = H - TOP_H;
 
-const BG_DARK = "#2d2d2d";
-const BG_CREAM = "#f7f3ed";
-const SUBTITLE_MUTED = "#6b6b6b";
-const STROKE_WHITE = "#ffffff";
+const MARGIN_X = 72;
+const MARGIN_TOP = 80;
 
-function fnv1a32(s: string): number {
-  let h = 2166136261;
-  for (let i = 0; i < s.length; i++) {
-    h ^= s.charCodeAt(i);
-    h = Math.imul(h, 16777619);
-  }
-  return h >>> 0;
+const BG_WHITE = "#ffffff";
+const TEXT_DARK = "#2a2a2a";
+const TEXT_MUTED = "#8a8a8a";
+const TEXT_LIGHT = "#b0b0b0";
+
+const FONT =
+  "system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif";
+
+/** Empfohlene Mindestgröße für das Cover-Foto (Breite × Höhe). */
+export const RECOMMENDED_IMAGE_SIZE = {
+  /** Für iPad Retina (12,9″ Pro, volle Cover-Höhe). */
+  retina: { width: 2048, height: 1300 },
+  /** Für Default-Canvas 1200×1800. */
+  standard: { width: 1200, height: 780 },
+} as const;
+
+export interface CoverParams {
+  image: string;
+  title: string;
+  subtitle?: string;
+  year?: string | number;
+  author: string;
 }
 
 function escapeXml(s: string): string {
@@ -46,29 +75,14 @@ function escapeXml(s: string): string {
     .replace(/"/g, "&quot;");
 }
 
-interface BookManifest {
-  author?: string;
-  title?: string;
-  subtitle?: string;
-  "book-id"?: string;
-}
-
-function loadYaml<T>(p: string): T | null {
-  if (!fs.existsSync(p)) return null;
-  try {
-    return yaml.load(fs.readFileSync(p, "utf8")) as T;
-  } catch {
-    return null;
-  }
-}
-
 function normalizeWs(s: string): string {
   return s.trim().replace(/\s+/g, " ");
 }
 
-/** Zeilenumbruch für schmale Cover-Breite (Titel / Untertitel). */
+/** Zeilenumbruch für linksbündigen Titel. */
 function wrapLines(text: string, maxChars: number, maxLines: number): string[] {
   const t = normalizeWs(text);
+  if (!t) return [];
   const words = t.split(/\s+/).filter(Boolean);
   const lines: string[] = [];
   let line = "";
@@ -87,13 +101,111 @@ function wrapLines(text: string, maxChars: number, maxLines: number): string[] {
     }
   }
   if (line && lines.length < maxLines) lines.push(line);
-  if (lines.length === 0 && t) lines.push(t.slice(0, maxChars));
+  if (lines.length === 0) lines.push(t.slice(0, maxChars));
   return lines;
 }
 
-/**
- * Explizites subtitle-Feld; sonst Titel nach erstem „. “ teilen (z. B. „Lucifer-Gnosis. Grundlegende …“).
- */
+function imageToDataUri(imagePath: string): string {
+  const abs = path.resolve(imagePath);
+  if (!fs.existsSync(abs)) {
+    throw new Error(`Bild nicht gefunden: ${abs}`);
+  }
+  const ext = path.extname(abs).slice(1).toLowerCase();
+  const mime =
+    ext === "jpg" || ext === "jpeg"
+      ? "jpeg"
+      : ext === "webp"
+        ? "webp"
+        : ext === "svg"
+          ? "svg+xml"
+          : "png";
+  const b64 = fs.readFileSync(abs).toString("base64");
+  return `data:image/${mime};base64,${b64}`;
+}
+
+function leftAlignedTspans(
+  lines: string[],
+  x: number,
+  firstY: number,
+  lineHeight: number
+): string {
+  return lines
+    .map((ln, i) =>
+      i === 0
+        ? `<tspan x="${x}" y="${firstY}">${escapeXml(ln)}</tspan>`
+        : `<tspan x="${x}" dy="${lineHeight}">${escapeXml(ln)}</tspan>`
+    )
+    .join("");
+}
+
+/** Baut das Cover-SVG aus den übergebenen Parametern. */
+export function buildCoverSvg(params: CoverParams): string {
+  const title = normalizeWs(params.title) || "Ohne Titel";
+  const subtitle = normalizeWs(params.subtitle ?? "");
+  const author = normalizeWs(params.author) || "Unbekannt";
+  const year = params.year != null && String(params.year).trim() ? String(params.year).trim() : "";
+  const imageHref = imageToDataUri(params.image);
+
+  const titleLines = wrapLines(title, 16, 4);
+  const titleFontSize = titleLines.length >= 3 ? 78 : titleLines.length === 2 ? 88 : 96;
+  const titleLineHeight = titleFontSize * 1.08;
+  const titleFirstY = MARGIN_TOP + titleFontSize;
+
+  const subtitleLines = subtitle ? wrapLines(subtitle, 28, 3) : [];
+  const subtitleFontSize = 40;
+  const subtitleLineHeight = subtitleFontSize * 1.22;
+  const subtitleFirstY =
+    titleFirstY + (titleLines.length - 1) * titleLineHeight + titleLineHeight + 24;
+
+  const metaY = TOP_H - 56;
+  const authorX = W - MARGIN_X;
+
+  const titleBlock =
+    titleLines.length > 0
+      ? `<text fill="${TEXT_DARK}" font-family="${FONT}" font-size="${titleFontSize}" font-weight="600" letter-spacing="-0.02em">${leftAlignedTspans(titleLines, MARGIN_X, titleFirstY, titleLineHeight)}</text>`
+      : "";
+
+  const subtitleBlock =
+    subtitleLines.length > 0
+      ? `<text fill="${TEXT_MUTED}" font-family="${FONT}" font-size="${subtitleFontSize}" font-weight="400">${leftAlignedTspans(subtitleLines, MARGIN_X, subtitleFirstY, subtitleLineHeight)}</text>`
+      : "";
+
+  const yearBlock = year
+    ? `<text x="${MARGIN_X}" y="${metaY}" fill="${TEXT_LIGHT}" font-family="${FONT}" font-size="24" font-weight="400">${escapeXml(year)}</text>`
+    : "";
+
+  const authorBlock = `<text x="${authorX}" y="${metaY}" text-anchor="end" fill="${TEXT_MUTED}" font-family="${FONT}" font-size="26" font-weight="400">${escapeXml(author)}</text>`;
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+  <rect width="${W}" height="${TOP_H}" fill="${BG_WHITE}" />
+  ${titleBlock}
+  ${subtitleBlock}
+  ${yearBlock}
+  ${authorBlock}
+  <image x="0" y="${TOP_H}" width="${W}" height="${IMAGE_H}" href="${imageHref}" preserveAspectRatio="xMidYMid slice" />
+</svg>
+`;
+}
+
+interface BookManifest {
+  author?: string;
+  title?: string;
+  subtitle?: string;
+  year?: string | number;
+  "book-id"?: string;
+  "cover-image"?: string;
+}
+
+function loadYaml<T>(p: string): T | null {
+  if (!fs.existsSync(p)) return null;
+  try {
+    return yaml.load(fs.readFileSync(p, "utf8")) as T;
+  } catch {
+    return null;
+  }
+}
+
 function resolveTitleAndSubtitle(m: BookManifest): { title: string; subtitle: string } {
   const fullTitle = normalizeWs(String(m.title ?? ""));
   const explicit = normalizeWs(String(m.subtitle ?? ""));
@@ -107,136 +219,46 @@ function resolveTitleAndSubtitle(m: BookManifest): { title: string; subtitle: st
   return { title: fullTitle || "Ohne Titel", subtitle: "" };
 }
 
-function diagramFromSeed(seed: string): {
-  circles: number;
-  spokes: number;
-  rot: number;
-  dotMask: number;
-} {
-  const h = fnv1a32(seed);
-  const circles = 2 + (h % 3);
-  const spokes = 6 + ((h >>> 8) % 7);
-  const rot = ((h >>> 16) % 360) * (Math.PI / 180);
-  const dotMask = h >>> 20;
-  return { circles, spokes, rot, dotMask };
-}
-
-function buildDiagramSvg(cx: number, cy: number, seed: string): string {
-  const { circles, spokes, rot, dotMask } = diagramFromSeed(seed);
-  const maxR = 78;
-  const parts: string[] = [];
-
-  for (let c = 1; c <= circles; c++) {
-    const r = (maxR * c) / circles;
-    parts.push(
-      `<circle cx="${cx}" cy="${cy}" r="${r.toFixed(2)}" fill="none" stroke="${STROKE_WHITE}" stroke-width="0.55" />`
-    );
-  }
-
-  for (let s = 0; s < spokes; s++) {
-    const a = rot + (s * 2 * Math.PI) / spokes;
-    const x2 = cx + maxR * Math.cos(a);
-    const y2 = cy + maxR * Math.sin(a);
-    parts.push(
-      `<line x1="${cx}" y1="${cy}" x2="${x2.toFixed(2)}" y2="${y2.toFixed(2)}" stroke="${STROKE_WHITE}" stroke-width="0.55" />`
-    );
-  }
-
-  for (let s = 0; s < spokes; s++) {
-    const a = rot + (s * 2 * Math.PI) / spokes;
-    for (let c = 1; c <= circles; c++) {
-      const r = (maxR * c) / circles;
-      const bit = (dotMask >> ((s * circles + c) % 24)) & 1;
-      if (!bit) continue;
-      const px = cx + r * Math.cos(a);
-      const py = cy + r * Math.sin(a);
-      parts.push(`<circle cx="${px.toFixed(2)}" cy="${py.toFixed(2)}" r="2.2" fill="${STROKE_WHITE}" />`);
+function parseArgs(argv: string[]): Record<string, string | boolean> {
+  const out: Record<string, string | boolean> = {};
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
+    if (!a.startsWith("--")) continue;
+    const key = a.slice(2);
+    const next = argv[i + 1];
+    if (!next || next.startsWith("--")) {
+      out[key] = true;
+    } else {
+      out[key] = next;
+      i++;
     }
   }
-
-  parts.push(`<circle cx="${cx}" cy="${cy}" r="3.5" fill="${STROKE_WHITE}" />`);
-
-  return parts.join("\n    ");
+  return out;
 }
 
-function buildCoverSvg(m: BookManifest): string {
-  const author = String(m.author ?? "").trim() || "Unbekannt";
-  const { title, subtitle } = resolveTitleAndSubtitle(m);
-
-  const titleLines = wrapLines(title, 22, 4);
-  const titleFirstY = MID_Y + 38;
-  const lineHeight = 26;
-  const titleEndY = titleFirstY + (titleLines.length - 1) * lineHeight + lineHeight;
-
-  const authorDisplay = author.toUpperCase();
-
-  const cx = W / 2;
-  const cy = TOP_H * 0.48;
-
-  const titleTspans = titleLines
-    .map((ln, i) =>
-      i === 0
-        ? `<tspan x="${cx}" y="${titleFirstY}">${escapeXml(ln)}</tspan>`
-        : `<tspan x="${cx}" dy="${lineHeight}">${escapeXml(ln)}</tspan>`
-    )
-    .join("");
-
-  const subSepY = titleEndY + 12;
-  const subLineHeight = 14;
-  const subtitleLines = subtitle
-    ? wrapLines(subtitle, 38, 6)
-    : [];
-  const subtitleTextY = subSepY + 16;
-  const subtitleBlockEndY =
-    subtitleLines.length > 0
-      ? subtitleTextY + (subtitleLines.length - 1) * subLineHeight + subLineHeight
-      : subSepY;
-
-  const subtitleTspans =
-    subtitleLines.length > 0
-      ? subtitleLines
-          .map((ln, i) =>
-            i === 0
-              ? `<tspan x="${cx}" y="${subtitleTextY}">${escapeXml(ln)}</tspan>`
-              : `<tspan x="${cx}" dy="${subLineHeight}">${escapeXml(ln)}</tspan>`
-          )
-          .join("")
-      : "";
-
-  const subtitleBlock =
-    subtitleLines.length > 0
-      ? `
-    <line x1="70" y1="${subSepY}" x2="${W - 70}" y2="${subSepY}" stroke="${SUBTITLE_MUTED}" stroke-width="0.6" />
-    <text text-anchor="middle" fill="${SUBTITLE_MUTED}" font-family="Georgia, 'Times New Roman', serif" font-size="11.5">${subtitleTspans}</text>`
-      : "";
-
-  const diamondY =
-    subtitleLines.length > 0 ? subtitleBlockEndY + 22 : titleEndY + 28;
-  const diagram = buildDiagramSvg(cx, cy, title + "|" + author);
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
-  <rect width="${W}" height="${TOP_H}" fill="${BG_DARK}" />
-  <rect y="${TOP_H}" width="${W}" height="${MID_H}" fill="${BG_CREAM}" />
-  <rect y="${H - BOT_H}" width="${W}" height="${BOT_H}" fill="${BG_DARK}" />
-
-  <line x1="0" y1="${TOP_H}" x2="${W}" y2="${TOP_H}" stroke="#c4b8a8" stroke-width="1" />
-  <line x1="0" y1="${TOP_H + 2}" x2="${W}" y2="${TOP_H + 2}" stroke="#c4b8a8" stroke-width="0.5" opacity="0.85" />
-
-  ${diagram}
-
-  <text text-anchor="middle" fill="${BG_DARK}" font-family="Georgia, 'Times New Roman', serif" font-size="21" font-weight="500">${titleTspans}</text>
-  ${subtitleBlock}
-
-  <path d="M ${cx} ${diamondY} l 7 7 l -7 7 l -7 -7 Z" fill="none" stroke="${BG_DARK}" stroke-width="1.1" />
-  <path d="M ${cx} ${diamondY + 3} l 4 4 l -4 4 l -4 -4 Z" fill="${BG_DARK}" />
-
-  <text x="${cx}" y="${H - BOT_H / 2 + 5}" text-anchor="middle" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="11.5" letter-spacing="0.12em">${escapeXml(authorDisplay)}</text>
-</svg>
-`;
+function resolveImagePath(
+  bookDirId: string,
+  m: BookManifest,
+  imageDir?: string,
+  defaultImage?: string
+): string | null {
+  if (m["cover-image"]) {
+    const p = path.isAbsolute(m["cover-image"])
+      ? m["cover-image"]
+      : path.join(REPO_ROOT, "books", bookDirId, m["cover-image"]);
+    if (fs.existsSync(p)) return p;
+  }
+  if (imageDir && m["book-id"]) {
+    for (const ext of ["jpg", "jpeg", "png", "webp"]) {
+      const p = path.join(imageDir, `${m["book-id"]}.${ext}`);
+      if (fs.existsSync(p)) return p;
+    }
+  }
+  if (defaultImage && fs.existsSync(defaultImage)) return defaultImage;
+  return null;
 }
 
-async function main(): Promise<void> {
+async function runBatch(imageDir?: string, defaultImage?: string): Promise<void> {
   const assistant = loadYaml<{
     "primary-books"?: string[];
     "secondary-books"?: string[];
@@ -251,7 +273,7 @@ async function main(): Promise<void> {
     ...(assistant["secondary-books"] ?? []),
   ];
 
-  fs.mkdirSync(OUT_DIR, { recursive: true });
+  fs.mkdirSync(DEFAULT_OUT_DIR, { recursive: true });
 
   for (const bookDirId of ids) {
     const manifestPath = path.join(REPO_ROOT, "books", bookDirId, "book-manifest.yaml");
@@ -260,11 +282,85 @@ async function main(): Promise<void> {
       console.warn(`Überspringe (kein Manifest/book-id): ${bookDirId}`);
       continue;
     }
-    const svg = buildCoverSvg(m);
-    const outPath = path.join(OUT_DIR, `${m["book-id"]}.svg`);
+
+    const imagePath = resolveImagePath(bookDirId, m, imageDir, defaultImage);
+    if (!imagePath) {
+      console.warn(`Überspringe (kein Bild): ${bookDirId}`);
+      continue;
+    }
+
+    const { title, subtitle } = resolveTitleAndSubtitle(m);
+    const svg = buildCoverSvg({
+      image: imagePath,
+      title,
+      subtitle,
+      year: m.year,
+      author: String(m.author ?? "").trim() || "Unbekannt",
+    });
+    const outPath = path.join(DEFAULT_OUT_DIR, `${m["book-id"]}.svg`);
     fs.writeFileSync(outPath, svg, "utf8");
-    console.log(`OK ${m["book-id"]}  (${m.title ?? bookDirId})`);
+    console.log(`OK ${m["book-id"]}  (${title})`);
   }
+}
+
+async function runSingle(args: Record<string, string | boolean>): Promise<void> {
+  const title = String(args.title ?? "");
+  const author = String(args.author ?? "");
+  const image = String(args.image ?? "");
+  const output = String(args.output ?? "");
+
+  if (!title || !author || !image || !output) {
+    console.error(
+      "Einzelmodus: --title, --author, --image und --output sind Pflicht.\n" +
+        "Optional: --subtitle, --year"
+    );
+    process.exit(1);
+  }
+
+  const svg = buildCoverSvg({
+    image,
+    title,
+    subtitle: args.subtitle ? String(args.subtitle) : undefined,
+    year: args.year ? String(args.year) : undefined,
+    author,
+  });
+
+  const outPath = path.isAbsolute(output) ? output : path.join(REPO_ROOT, output);
+  fs.mkdirSync(path.dirname(outPath), { recursive: true });
+  fs.writeFileSync(outPath, svg, "utf8");
+  console.log(`OK ${outPath}`);
+}
+
+async function main(): Promise<void> {
+  const args = parseArgs(process.argv.slice(2));
+
+  if (args.batch) {
+    const imageDir = args["image-dir"]
+      ? path.isAbsolute(String(args["image-dir"]))
+        ? String(args["image-dir"])
+        : path.join(REPO_ROOT, String(args["image-dir"]))
+      : undefined;
+    const defaultImage = args["default-image"]
+      ? path.isAbsolute(String(args["default-image"]))
+        ? String(args["default-image"])
+        : path.join(REPO_ROOT, String(args["default-image"]))
+      : undefined;
+    await runBatch(imageDir, defaultImage);
+    return;
+  }
+
+  if (args.title || args.image || args.output) {
+    await runSingle(args);
+    return;
+  }
+
+  // Kein Modus angegeben → Batch mit Hinweis
+  console.log(
+    "Cover-Generator\n" +
+      "  Einzelcover: --title --author --image --output [--subtitle] [--year]\n" +
+      "  Batch:       --batch [--image-dir assets/cover-images] [--default-image path]\n" +
+      `\nEmpfohlene Bildgröße (Retina-iPad): ${RECOMMENDED_IMAGE_SIZE.retina.width}×${RECOMMENDED_IMAGE_SIZE.retina.height} px`
+  );
 }
 
 main().catch((e) => {

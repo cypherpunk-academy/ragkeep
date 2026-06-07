@@ -1,5 +1,6 @@
 author: Rudolf Steiner
 title: Goethes Weltanschauung
+year: 1921
 book-index: 6
 book-type: rudolf-steiner-ga-werk
 language: de
@@ -23,12 +24,12 @@ journal:
     words: 60214
     deepseek-guessed: 65
     taken-from-tesseract: 248
-chunks: 235
-multi-paragraph-chunks: 10
-single-paragraph-chunks: 43
-large-paragraph-chunks: 182
-average: 1462
-p01_length: 401
-p05_length: 886
-p95_length: 2202
-p99_length: 2386
+chunks: 361
+multi-paragraph-chunks: 5
+single-paragraph-chunks: 28
+large-paragraph-chunks: 328
+average: 902
+p01_length: 318
+p05_length: 544
+p95_length: 1331
+p99_length: 1509

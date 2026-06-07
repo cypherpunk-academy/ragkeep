@@ -1,6 +1,7 @@
 author: Rudolf Steiner
 title: Die Philosophie der Freiheit
 subtitle: Grundzüge einer modernen Weltanschauung
+year: 1918
 book-index: 4
 book-type: rudolf-steiner-ga-werk
 language: de
@@ -11,15 +12,15 @@ quotation-mark-open: «
 quotation-mark-close: »
 internal-page-references: null
 external-page-references: null
-chunks: 301
-multi-paragraph-chunks: 106
-single-paragraph-chunks: 75
-large-paragraph-chunks: 120
-average: 1447
-p01_length: 234
-p05_length: 602
-p95_length: 2300
-p99_length: 2769
+chunks: 436
+multi-paragraph-chunks: 80
+single-paragraph-chunks: 82
+large-paragraph-chunks: 274
+average: 967
+p01_length: 230
+p05_length: 467
+p95_length: 1522
+p99_length: 1668
 journal:
   pages: 282
   chapters: 18

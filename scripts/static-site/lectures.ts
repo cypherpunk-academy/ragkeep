@@ -6,6 +6,7 @@ import { fileExists, readScalarFromManifest } from "./utils";
 
 interface LectureVerzeichnisEntry {
   id?: string | number;
+  uuid?: string;
   datum?: string;
   ort?: string;
   vortragstitel?: string;
@@ -20,6 +21,7 @@ interface LectureZyklusEntry {
 
 interface LectureCatalogRecord {
   id: string;
+  uuid: string;
   date: string;
   dateValue: number | null;
   location: string;
@@ -40,6 +42,7 @@ interface LectureCatalog {
 
 export interface LectureView {
   id: string;
+  uuid: string;
   date: string;
   dateValue: number | null;
   location: string;
@@ -253,6 +256,7 @@ function buildLectureCatalog(repoRoot: string, booksById: Map<string, Book>): Le
     const hasZyklus = Number.isFinite(zyklus);
     const record: LectureCatalogRecord = {
       id,
+      uuid: String(lecture.uuid ?? "").trim(),
       date: String(lecture.datum ?? "").trim(),
       dateValue: parseDateValue(String(lecture.datum ?? "").trim()),
       location: String(lecture.ort ?? "").trim(),
@@ -310,6 +314,7 @@ function resolveSelectionEntry(entry: string, catalog: LectureCatalog): string[]
 function toLectureView(record: LectureCatalogRecord): LectureView {
   return {
     id: record.id,
+    uuid: record.uuid,
     date: record.date,
     dateValue: record.dateValue,
     location: record.location,

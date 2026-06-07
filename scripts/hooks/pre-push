@@ -9,9 +9,13 @@ MAIN_BRANCH_PATTERN="^refs/heads/(main|master)$"
 
 # Prüfen ob wir auf main/master pushen
 pushing_to_main=false
+PUSH_LOCAL_SHA=""
+PUSH_REMOTE_SHA=""
 while IFS=' ' read -r local_ref local_sha remote_ref remote_sha; do
   if [[ "$remote_ref" =~ $MAIN_BRANCH_PATTERN ]]; then
     pushing_to_main=true
+    PUSH_LOCAL_SHA="$local_sha"
+    PUSH_REMOTE_SHA="$remote_sha"
   fi
 done
 
@@ -21,6 +25,22 @@ fi
 
 REPO_ROOT=$(git rev-parse --show-toplevel)
 REMOTE_URL=$(git remote get-url "$REMOTE")
+
+# Resolve .env (same lookup als build:pages)
+ENV_FILE="$REPO_ROOT/../ragrun/.env"
+if [ ! -f "$ENV_FILE" ]; then ENV_FILE="$REPO_ROOT/../../.env"; fi
+
+if [ ! -f "$ENV_FILE" ]; then
+  echo "pre-push: .env nicht gefunden, Sync übersprungen" >&2
+else
+  echo "▶ Syncing sources..."
+  node --env-file "$ENV_FILE" --import tsx "$REPO_ROOT/scripts/sync_sources.ts" "$PUSH_LOCAL_SHA" "$PUSH_REMOTE_SHA"
+  echo "✓ Sources synchronisiert"
+
+  echo "▶ Uploading covers..."
+  node --env-file "$ENV_FILE" --import tsx "$REPO_ROOT/scripts/upload_covers.ts" "$PUSH_LOCAL_SHA" "$PUSH_REMOTE_SHA"
+  echo "✓ Covers hochgeladen"
+fi
 
 echo "▶ Building static site..."
 cd "$REPO_ROOT"

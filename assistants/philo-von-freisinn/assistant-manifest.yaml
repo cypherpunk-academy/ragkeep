@@ -1,22 +1,27 @@
 name: Philo von Freisinn
-rag-collection: philo-von-freisinn-v2
+rag-collection: philo-von-freisinn
 assistant-id: 1e3d0f4f-8e71-4f78-8f46-b1d31e607a1c
 description: Auf der Grundlage der Philosophie der Freiheit und Werken, die in
   der Arbeit von Rudolf Steiner damit in engem Zusammenhang stehen, entwickelt
   Philo von Freisinn eine mathematistisch-individualistische Weltanschauung.
 cover-image: assets/cover.png
 avatar-image: assets/avatar.png
-writing-style: Lebendig, nahe am Leser, präzise und gelassen. Keine Ironie,
-  keine wertenden Adjektive, aber durchaus mit humorvollen Hinweisen. Aber immer
-  genau und fair gegenüber dem Originaltext.
+writing-style: Philo von Freisinn ist Autor eines Philosophie-Blogs und ein
+  Verfechter der individuellen Freiheit. Ziel ist es, Eigeninitiative anzuregen,
+  mit Schwerpunkt auf den Freiheitsgrenzen zwischen Menschen. Ton -> lebendig
+  und humorvoll, aber auch präzise und unaufgeregt. Humor ja, Nähe ja, aber
+  keine Ironie, keine Personifizierungen des Autors (z. B. „verteidigt
+  schelmisch“, „in charmantem Ton“). Keine Fremdworte wie Determinismus, die
+  Steiner nicht verwendet hat.
 primary-books:
   - Rudolf_Steiner#Die_Philosophie_der_Freiheit#4
+  - Rudolf_Steiner#Die_Kernpunkte_der_sozialen_Frage#23
   - Rudolf_Steiner#Die_Rätsel_der_Philosophie#18
+  - Rudolf_Steiner#Aufsätze_über_die_Dreigliederung_des_sozialen_Organismus_und_zur_Zeitlage#24
   - Rudolf_Steiner#Wahrheit_und_Wissenschaft#3
   - Rudolf_Steiner#Grundlinien_einer_Erkenntnistheorie_der_Goetheschen_Weltanschauung#2
+  - Rudolf_Steiner#Friedrich_Nietzsche._Ein_Kämpfer_gegen_seine_Zeit#5
   - Rudolf_Steiner#Goethes_Weltanschauung#6
-  - Rudolf_Steiner#Die_Kernpunkte_der_sozialen_Frage#23
-  - Rudolf_Steiner#Aufsätze_über_die_Dreigliederung_des_sozialen_Organismus_und_zur_Zeitlage#24
 primary-lectures:
   - Zyklus 33, Der menschliche und der kosmische Gedanke, 4 Vorträge
 secondary-books:
@@ -72,6 +77,35 @@ secondary-lectures:
 augmentation-types:
   - summaries
   - quotes
+active-embedder: e5
+embedders:
+  - key: e5
+    model: intfloat/multilingual-e5-large
+    mode: dense
+    prefix-query: "query: "
+    prefix-passage: "passage: "
+    test-collection: philo-von-freisinn-test-e5
+  - key: bge
+    model: BAAI/bge-m3
+    mode: dense
+    prefix-query: ""
+    prefix-passage: ""
+    test-collection: philo-von-freisinn-test-bge
+  - key: cross
+    model: T-Systems-onsite/cross-en-de-roberta-sentence-transformer
+    mode: dense
+    prefix-query: ""
+    prefix-passage: ""
+    test-collection: philo-von-freisinn-test-cross
+benchmark:
+  books:
+    - Rudolf_Steiner#Die_Philosophie_der_Freiheit#4
+    - Rudolf_Steiner#Die_Kernpunkte_der_sozialen_Frage#23
+  chunk-types:
+    - book
+    - summaries
+    - quotes
+  query-file: benchmarks/embedder-queries.md
 concepts:
   - concepts.jsonl
 typologies:
@@ -79,4 +113,4 @@ typologies:
 lexical-strip-hybrid:
   - Rudolf Steiner
   - Steiner
-last-updated: 2026-04-27T14:27:40.900Z
+last-updated: 2026-06-05T15:40:16.959Z

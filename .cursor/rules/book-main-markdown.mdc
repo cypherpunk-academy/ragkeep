@@ -1,0 +1,16 @@
+---
+description: Haupttext eines Ragkeep-Buchs für Fragen/Kontext (nicht paragraph_beginnings)
+globs:
+  - ragkeep/books/**/*.md
+alwaysApply: false
+---
+
+Bei inhaltlichen Fragen zu einem Buch unter `ragkeep/books/<BuchId>/` immer die **Haupt-Markdown-Datei** `<BuchId>.md` verwenden, **nicht** `paragraph_beginnings.md`.
+
+**Suchreihenfolge** (erste vorhandene Datei mit gleichem Basisnamen wie das Buchverzeichnis):
+
+1. `results/phase5/<BuchId>.md` — annotiert, mit Absatznummerierung nach `text:annotate`
+2. `results/phase4/<BuchId>.md` — modernisiert
+3. `results/phase2/<BuchId>.md` — z. B. nach Textimport oder OCR-Export, wenn es noch kein phase4/5 gibt
+
+`paragraph_beginnings.md` ist nur eine Hilfsliste (Absatzanfänge), kein Ersatz für den Volltext.

@@ -1,0 +1,17 @@
+Use the uploaded black-and-white schematic botanical diagram ONLY as a structural reference for composition and labeling—not as something to reproduce pixel-perfect.
+
+Redraw it as a naturalistic late 18th–early 19th century German scientific illustration in the spirit of Goethe-era botanical plates and delicate copperplate engravings: refined black ink linework on pure white paper, subtle stippling or light cross-hatching for gentle volume, elegant tapering stems and organic leaf contours. It must read as a real herbaceous plant observed by a draftsman, while preserving the educational clarity of the original diagram.
+
+Preserve exactly these elements and their relationships:
+• One main upright stem with basal seed circle labeled “a”, downward root indication labeled “b”, successive foliage leaves labeled “c” and “c′”, stem interval markers “z” and “z′”, progressively more divided foliage labeled “d” and “e”, flower originating from node “w”.
+• Flower parts labeled “f” (sepals/calyx with solid outlines), “g” (petals/corolla noticeably finer; use dashed or dotted outlines compared to “f”), “h” (stamens), “i” (central pistil).
+• Separate inset at upper right: fruit/capsule outlined with corner labels “k”, interior seeds labeled “a” with faint dotted vertical connections as in the reference.
+
+Requirements:
+• Keep all lowercase Latin labels legible and correctly placed next to the intended organs; do not invent extra letters.
+• Do not add captions, titles, watermarks, frames, modern infographic arrows, color, or photorealistic rendering.
+• Avoid geometric clipart stiffness: curves should be botanical and gently irregular while staying scientifically plausible.
+
+Output: single plate, high contrast lines on white, generous margins, entire plant and inset fully visible.
+
+Hier is a not too nice but correct example (from the book):

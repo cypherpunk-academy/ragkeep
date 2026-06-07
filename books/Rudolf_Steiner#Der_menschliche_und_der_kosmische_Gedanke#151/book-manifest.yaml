@@ -1,5 +1,6 @@
 author: Rudolf Steiner
 title: Der menschliche und der kosmische Gedanke
+year: 1914
 subtitle: Zyklus_33
 book-index: 151
 book-type: rudolf-steiner-ga-vortrag
@@ -14,12 +15,12 @@ journal:
   lines: 2463
   words: 23763
   footnotes: 0
-chunks: 101
-multi-paragraph-chunks: 40
-single-paragraph-chunks: 49
-large-paragraph-chunks: 12
-average: 1506
-p01_length: 708
-p05_length: 991
-p95_length: 2298
-p99_length: 2633
+chunks: 141
+multi-paragraph-chunks: 27
+single-paragraph-chunks: 42
+large-paragraph-chunks: 72
+average: 1075
+p01_length: 332
+p05_length: 694
+p95_length: 1570
+p99_length: 1682

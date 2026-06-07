@@ -1,5 +1,7 @@
 author: Rudolf Steiner
 title: Friedrich Nietzsche. Ein Kämpfer gegen seine Zeit
+year: 1926
+book-id: 5e6303e1-a4a4-4be4-bafd-c4c575024b8e
 book-index: 5
 book-type: rudolf-steiner-ga-werk
 language: de
@@ -13,3 +15,12 @@ journal:
   words: 45583
   footnotes: 18
 footnote-marker-type: asterisk
+chunks: 324
+multi-paragraph-chunks: 56
+single-paragraph-chunks: 61
+large-paragraph-chunks: 207
+average: 916
+p01_length: 160
+p05_length: 407
+p95_length: 1474
+p99_length: 1633

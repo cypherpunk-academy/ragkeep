@@ -67,17 +67,24 @@
   isFootnote: true
   isFootnoteStart: true
   footnoteReferenceWordIndices: []
+# modify statt insert (gleicher text → insert sonst still übersprungen); text erneuert words.
 - page: 38
-  action: insert
+  action: modify
   lineIndex: 31
   text: "*** Volkelt, Kants Erkenntnistheorie, S. 1."
   isFootnote: true
   isFootnoteStart: true
   footnoteReferenceWordIndices: []
 - page: 38
-  action: insert
+  action: modify
   lineIndex: 32
   text: "**** Dörner, Das menschliche Erkennen."
+  isFootnote: true
+  isFootnoteStart: true
+  footnoteReferenceWordIndices: []
+- page: 38
+  action: modify
+  lineIndex: 33
   isFootnote: true
   isFootnoteStart: true
   footnoteReferenceWordIndices: []
@@ -116,12 +123,6 @@
   isFootnoteReference: true
   footnoteReferenceWordIndices:
     - 1
-- page: 38
-  action: modify
-  lineIndex: 27
-- page: 38
-  action: modify
-  lineIndex: 27
 - page: 39
   action: modify
   lineIndex: 30

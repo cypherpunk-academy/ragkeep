@@ -1,5 +1,6 @@
 author: Rudolf Steiner
 title: Einleitungen zu Goethes Naturwissenschaftlichen Schriften
+year: 1926
 book-index: 1
 book-id: 47b137d3-f414-406f-b142-ed72c7e8989c
 book-type: rudolf-steiner-ga-werk
@@ -23,12 +24,12 @@ journal:
     words: 90664
     deepseek-guessed: 109
     taken-from-tesseract: 463
-chunks: 390
-multi-paragraph-chunks: 86
-single-paragraph-chunks: 98
-large-paragraph-chunks: 206
-average: 1422
-p01_length: 250
-p05_length: 698
-p95_length: 2174
-p99_length: 2622
+chunks: 560
+multi-paragraph-chunks: 63
+single-paragraph-chunks: 103
+large-paragraph-chunks: 394
+average: 940
+p01_length: 245
+p05_length: 443
+p95_length: 1497
+p99_length: 1662

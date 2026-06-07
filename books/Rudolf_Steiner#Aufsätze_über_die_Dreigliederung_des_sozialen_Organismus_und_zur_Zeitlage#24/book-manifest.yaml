@@ -1,5 +1,6 @@
 author: Rudolf Steiner
 title: Aufsätze über die Dreigliederung des sozialen Organismus und zur Zeitlage
+year: 1921
 book-index: 24
 book-type: rudolf-steiner-ga-aufsätze
 language: de
@@ -13,12 +14,12 @@ journal:
   lines: 14023
   words: 111835
   footnotes: 16
-chunks: 557
-multi-paragraph-chunks: 229
-single-paragraph-chunks: 172
-large-paragraph-chunks: 156
-average: 1388
-p01_length: 241
-p05_length: 564
-p95_length: 2180
-p99_length: 2484
+chunks: 782
+multi-paragraph-chunks: 180
+single-paragraph-chunks: 211
+large-paragraph-chunks: 391
+average: 978
+p01_length: 288
+p05_length: 516
+p95_length: 1525
+p99_length: 1702

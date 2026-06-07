@@ -347,7 +347,10 @@ function assembleChunkInfosFromMatchRows(
     let bookDir =
       bookIdToDir.get(r.source_id) ??
       (r.source_id.includes("#") ? r.source_id : null);
-    if (!bookDir && r.source_id.startsWith("lecture:")) {
+    const sourceType = String(meta.source_type ?? "").trim().toLowerCase();
+    const isLectureSource =
+      r.source_id.startsWith("lecture:") || sourceType === "lecture";
+    if (!bookDir && isLectureSource) {
       const st = String(meta.source_title ?? "").trim();
       if (st) {
         const fromTitle = titleToBookDir.get(normalizeBookTitleKey(st));
@@ -407,7 +410,7 @@ function assembleChunkInfosFromMatchRows(
       ? readScalarFromManifest(absBookDirForManifest, "book-id").trim()
       : "";
 
-    const lectureCover = r.source_id.startsWith("lecture:")
+    const lectureCover = isLectureSource
       ? parseLectureCoverMeta(r.source_id, String(meta.segment_title ?? ""))
       : null;
 

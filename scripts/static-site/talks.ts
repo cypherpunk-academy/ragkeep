@@ -188,10 +188,12 @@ function _resolveLink(c: TalkCitation, chunkIndex?: Map<string, ChunkInfo>, root
 
 /** Rohtext eines Chunks für Snippet (ohne Absatz-Markierung am Anfang). */
 function _normChunkBody(raw: string): string {
-  return String(raw || "")
+  let s = String(raw || "")
     .replace(/^\d+\|\s*/, "")
-    .replace(/\s+/g, " ")
     .trim();
+  s = s.replace(/[^\S\r\n]+/g, " ");
+  s = s.replace(/\n{3,}/g, "\n\n");
+  return s.trim();
 }
 
 /** Kurzanriss: aus Quelle oder Chunk-Index. */
