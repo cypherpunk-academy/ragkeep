@@ -36,12 +36,14 @@ const DEFAULT_OUT_DIR = path.join(REPO_ROOT, "assets/covers");
 /** 2:3 — scharf auf iPad; upload_covers konvertiert SVG→PNG in dieser Größe. */
 const W = 1200;
 const H = 1800;
-const TOP_RATIO = 0.35;
+const TOP_RATIO = 0.42;
 const TOP_H = Math.round(H * TOP_RATIO);
 const IMAGE_H = H - TOP_H;
 
-const MARGIN_X = 72;
+const MARGIN_X = 48;
 const MARGIN_TOP = 80;
+/** Abstand Autor/Jahr zum Bild — unverändert zum ursprünglichen Layout. */
+const META_OFFSET_FROM_IMAGE = 56;
 
 const BG_WHITE = "#ffffff";
 const TEXT_DARK = "#2a2a2a";
@@ -146,18 +148,19 @@ export function buildCoverSvg(params: CoverParams): string {
   const year = params.year != null && String(params.year).trim() ? String(params.year).trim() : "";
   const imageHref = imageToDataUri(params.image);
 
-  const titleLines = wrapLines(title, 16, 4);
-  const titleFontSize = titleLines.length >= 3 ? 78 : titleLines.length === 2 ? 88 : 96;
+  const titleLines = wrapLines(title, 22, 8);
+  const titleFontSize =
+    titleLines.length === 1 ? 96 : titleLines.length === 2 ? 88 : 78;
   const titleLineHeight = titleFontSize * 1.08;
   const titleFirstY = MARGIN_TOP + titleFontSize;
 
-  const subtitleLines = subtitle ? wrapLines(subtitle, 28, 3) : [];
+  const subtitleLines = subtitle ? wrapLines(subtitle, 30, 4) : [];
   const subtitleFontSize = 40;
   const subtitleLineHeight = subtitleFontSize * 1.22;
   const subtitleFirstY =
     titleFirstY + (titleLines.length - 1) * titleLineHeight + titleLineHeight + 24;
 
-  const metaY = TOP_H - 56;
+  const metaY = TOP_H - META_OFFSET_FROM_IMAGE;
   const authorX = W - MARGIN_X;
 
   const titleBlock =
