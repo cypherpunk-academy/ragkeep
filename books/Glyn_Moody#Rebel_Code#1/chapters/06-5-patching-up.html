@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>5 - Patching Up</title>
+  <link rel="stylesheet" href="../../../assets/book.css" />
+</head>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <article class="book-chapter" data-chapter="6" id="c-6">
+    <h1 class="book-chapter-title" id="c-6-title" data-slug="5-patching-up">5 - Patching Up</h1>
+    <section class="book-paragraph" id="p-6-1">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-1-1-p0">IT MIGHT SEEM STRAN­GE THAT LINUX, a sys­tem that was born and grew up across the In­ter­net, la­cked the abili­ty to con­nect to it for the first eigh­teen months of its life.</span>
+        
+        <span class="book-sentence" id="s-6-1-2-p0">The ex­pla­na­ti­on is that Linux was born on the cusp of the cur­rent In­ter­net era, just as it moved out of aca­de­me into the main­stream; this is re­flec­ted by a com­ment An­d­rew Ta­nen­baum made du­ring the “Linux is ob­so­le­te” epi­so­de.</span>
+        
+        <span class="book-sentence" id="s-6-1-3-p0">On the 3 Fe­bru­ary 1992 he wrote, “A point which I don’t think ever­yo­ne app­re­cia­tes is that ma­king so­me­thing avail­able by FTP is not ne­ces­sa­ri­ly the way to pro­vi­de the wi­dest dis­tri­bu­ti­on.</span>
+        
+        <span class="book-sentence" id="s-6-1-4-p0">The In­ter­net is still a high­ly elite group.</span>
+        
+        <span class="book-sentence" id="s-6-1-5-p0">Most com­pu­ter users are NOT on it.” Linus, by con­trast, said, “the best de­sign de­ci­si­on I ever made was ma­king it avail­able by FTP” for down­loa­ding from a Hel­sin­ki-based ser­ver con­nec­ted to the In­ter­net.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-2">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-2-1-p0">In ef­fect, Linux came out at the right time to ride the gro­wing wave of in­te­rest in the In­ter­net.</span>
+        
+        <span class="book-sentence" id="s-6-2-2-p0">The re­a­son early com­pu­ters run­ning GNU/Linux had not nee­ded to con­nect to the net­work is ex­plai­ned by Olaf Kirch, aut­hor of Linux Net­work Ad­mi­nis­tra­tor’s Guide, and one of the key fi­gu­res in the Linux net­wor­king world.</span>
+        
+        <span class="book-sentence" id="s-6-2-3-p0">“The point is that ever­yo­ne was on the In­ter­net” al­re­a­dy, he says, “other­wi­se they wouldn’t have been able to par­ti­ci­pa­te in Linux de­ve­lop­ment.</span>
+        
+        <span class="book-sentence" id="s-6-2-4-p0">I think most peop­le were at uni­ver­si­ties and the­re­fo­re had de­cent con­nec­tivi­ty.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-3">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-3-1-p0">This com­ment throws an in­te­res­ting light on where and how GNU/Linux was used in those early days.</span>
+        
+        <span class="book-sentence" id="s-6-3-2-p0">In Kirch’s view, most peop­le were working on com­pu­ters at uni­ver­si­ties that had good con­nec­tivi­ty to the In­ter­net.</span>
+        
+        <span class="book-sentence" id="s-6-3-3-p0">Their GNU/Linux ma­chi­nes, by con­trast, were pro­bab­ly at home, where they had no In­ter­net con­nec­tions, and the­re­fo­re did not miss the TCP/IP func­tions ab­sent from the ker­nel, which acted as a kind of soft­ware bridge bet­ween the ope­ra­ting sys­tem and the Net.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-4">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-4-1-p0">This pic­tu­re is con­fir­med by an­ec­do­tal in­for­ma­ti­on.</span>
+        
+        <span class="book-sentence" id="s-6-4-2-p0">For ex­amp­le, the early Linux ha­cker Alan Cox re­mem­bers ob­tai­ning up­dated ver­si­ons of Linux by “wal­king into [the uni­ver­si­ty] with a pile of flop­py disks” to down­load GNU/Linux by way of the In­ter­net con­nec­tion there.</span>
+        
+        <span class="book-sentence" id="s-6-4-3-p0">Then “you took forty flop­pies home, you fed it in” to the PC and ty­pi­cal­ly found “like three of them didn’t work,” which meant re­turning and down­loa­ding those files again.</span>
+        
+        <span class="book-sentence" id="s-6-4-4-p0">Down­loa­ding di­rect­ly would have been far more con­ve­ni­ent.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-5">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-5-1-p0">In a pos­ting to the comp.os.minix news­group on 21 Sep­tem­ber 1992, in an­s­wer to a query about Linux, Linus had given a run­down on its cur­rent state.</span>
+        
+        <span class="book-sentence" id="s-6-5-2-p0">Three im­portant fea­tures were being added, but were avail­able only as patches at the time of wri­ting; these were a dri­ver for the Sound­Blas­ter sound­card, which made mul­ti­me­dia pos­si­ble under Linux; a way of rea­ding CD-ROMs, cru­ci­al­ly im­portant to ease the in­stal­la­ti­on of the gro­wing range of Linux soft­ware; and TCP/IP sup­port, which Linus said would be “in the next major re­lease, pro­bab­ly next week.” The next ker­nel re­lease was ver­si­on 0.98, which came out 29 Sep­tem­ber.</span>
+        
+        <span class="book-sentence" id="s-6-5-3-p0">On 18 Oc­to­ber 1992, Linus re­leased a minor up­grade to this, num­be­red 0.98.2.</span>
+        
+        <span class="book-sentence" id="s-6-5-4-p0">This in­clu­ded “some TCP/IP patches,” but Linus war­ned, “TCP/IP is still in alpha”—an early stage of de­ve­lop­ment—“has not been ex­ten­si­ve­ly tested, and is pro­bab­ly not up to real use yet.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-6">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-6-1-p0">In a fur­ther pos­ting to the comp.os.minix news­group dated 12 De­cem­ber 1992, re­ply­ing to yet ano­ther ques­ti­on about whe­ther Minix was “much bet­ter than Linux,” Linus wrote, “The sim­ple an­s­wer is a re­soun­ding NO,” and then went on to give some re­a­sons; but at the end, he had to con­fess that “on the other hand, 386bsd has a more ma­tu­re net­wor­king setup, as well as ha­ving the ad­van­ta­ge of being ‘the real McCoy,’” since it de­ri­ved from the ori­gi­nal TCP/IP net­wor­king code writ­ten at Ber­ke­ley.</span>
+        
+        <span class="book-sentence" id="s-6-6-2-p0">Ass a re­sult, 386BSD still posed a com­pe­ti­ti­ve thre­at to GNU/Linux, part­ly be­cau­se of its su­pe­ri­or TCP/IP ca­pa­bi­li­ties.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-7">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-7-1-p0">De­tails of how these came to be in­clu­ded in Linux are con­tai­ned in the Linux Net­wor­king-Howto, one of the many se­mi­of­fi­ci­al Linux texts that are wi­de­ly avail­able; it is part of a vast cor­pus of free but high-qua­li­ty writ­ten ma­te­ri­al crea­ted by an ana­lo­gous co-ope­ra­ti­ve ef­fort of vol­un­te­ers around the world.</span>
+        
+        <span class="book-sentence" id="s-6-7-2-p0">Collec­tive­ly, this ma­te­ri­al is known as the Linux Do­cu­men­ta­ti­on Pro­ject.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-8">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-8-1-p0">In the Net­wor­king-Howto, its ori­gi­nal aut­hors, Terry Daw­son and Ales­san­dro Ru­bi­ni, write, “The ori­gi­nal vol­un­te­er to lead de­ve­lop­ment of the ker­nel net­work code was Ross Biro.</span>
+        
+        <span class="book-sentence" id="s-6-8-2-p0">Ross pro­du­ced a sim­ple and in­com­ple­te but most­ly usa­ble im­ple­men­ta­ti­on set of rou­ti­nes....</span>
+        
+        <span class="book-sentence" id="s-6-8-3-p0">This was en­ough to get many peop­le tes­ting and ex­pe­ri­men­ting with the soft­ware and some peop­le even ma­na­ged to con­nect ma­chi­nes in this con­fi­gu­ra­ti­on to live in­ter­net con­nec­tions” via local area net­works with links to the Net.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-9">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-9-1-p0">Olaf Kirch com­ments that “the re­a­son why Linux ha­ckers de­ci­ded to roll their own net­wor­king” ra­ther than adapt code that was fre­e­ly avail­able in BSD Unix was the AT&#x26;T law­su­it against BSD.</span>
+        
+        <span class="book-sentence" id="s-6-9-2-p0">“The out­co­me of that law­su­it was to­tal­ly un­cer­tain,” Kirch re­calls.</span>
+        
+        <span class="book-sentence" id="s-6-9-3-p0">“The com­mon sen­ti­ment on the Linux mai­ling lists at that time was that the only way to avoid any­thing like this was to stay clear of any code we didn’t write our­sel­ves.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-10">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-10-1-p0">Kirch also has some in­te­res­ting views on why net­wor­king was added at this time: “Ass far as I can re­mem­ber, the dri­ving force be­hind this was that peop­le wan­ted to run X,” ra­ther than be­cau­se they were try­ing to con­nect di­rect­ly to the In­ter­net.</span>
+        
+        <span class="book-sentence" id="s-6-10-2-p0">Cer­tain­ly, work on net­wor­king began around the same time that X Win­dow was being por­ted; and sur­pri­sin­gly, per­haps, the X Win­dow sys­tem and net­wor­king were in­ti­mate­ly re­la­ted.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-11">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-11-1-p0">In one re­spect, X was much more power­ful than the Apple Mac­in­tosh or Mi­cro­soft Win­dows sys­tems.</span>
+        
+        <span class="book-sentence" id="s-6-11-2-p0">The con­tents of an X win­dow were not li­mi­ted to pro­grams run­ning on the ma­chi­ne dis­play­ing them; X had been de­si­gned as a net­wor­ked win­dow sys­tem and al­lo­wed out­put from pro­grams on other ma­chi­nes, con­nec­ted via a net­work, to be dis­play­ed and ope­ra­ted.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-12">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-12-1-p0">The X Win­dow ap­proach re­qui­red some kind of net­wor­king in the ope­ra­ting sys­tem.</span>
+        
+        <span class="book-sentence" id="s-6-12-2-p0">Con­se­quent­ly, part of Orest Zbo­row­ski’s task when porting X to GNU/Linux was to write some sim­ple net­wor­king code.</span>
+        
+        <span class="book-sentence" id="s-6-12-3-p0">Linus ac­cep­ted these ad­di­ti­ons be­cau­se, in ad­di­ti­on to al­lo­wing X to run, the in­clu­si­on of this code brought other major be­ne­fits.</span>
+        
+        <span class="book-sentence" id="s-6-12-4-p0">Ass the Net­wor­king-Howto says, Zbo­row­ski’s work “was a big step for­ward as it al­lo­wed many of the exis­ting net­work ap­p­li­ca­ti­ons to be por­ted to linux wi­thout se­rious mo­di­fi­ca­ti­on.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-13">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-13-1-p0">Ass a re­sult of this glim­pse of the pos­si­bi­li­ties, Linux users star­ted pus­hing for im­pro­ve­ments to the net­wor­king code.</span>
+        
+        <span class="book-sentence" id="s-6-13-2-p0">Ass Kirch re­calls, “Ross’s in­iti­al work was quite OK, and it kind of worked.</span>
+        
+        <span class="book-sentence" id="s-6-13-3-p0">Of cour­se much of it was crude—things are ne­ces­sa­ri­ly crude when you re­wri­te TCP/IP from scratch.” The Net­wor­king-Howto do­cu­ment ex­plains, “The pres­su­re wi­t­hin the Linux com­mu­ni­ty dri­ving de­ve­lop­ment for net­wor­king sup­port was buil­ding and even­tual­ly the cost of a com­bi­na­ti­on of some un­fair pres­su­re ap­p­lied to Ross and his own per­so­nal com­mit­ments out­weig­hed the be­ne­fit he was de­ri­ving and he step­ped down as lead de­ve­l­oper.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-14">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-14-1-p0">Kirch re­calls that things tur­ned nasty.</span>
+        
+        <span class="book-sentence" id="s-6-14-2-p0">“What hap­pe­n­ed next was that a bunch of peop­le star­ted to flame Ross quite hea­vi­ly—I don’t re­call for what re­a­son.</span>
+        
+        <span class="book-sentence" id="s-6-14-3-p0">Ass a re­sult, Ross stop­ped doing Linux de­ve­lop­ment.</span>
+        
+        <span class="book-sentence" id="s-6-14-4-p0">It’s sad to say this—many old-time Linux ha­ckers tend to paint the early days on the mai­ling lists in fair­ly rosy co­lors.</span>
+        
+        <span class="book-sentence" id="s-6-14-5-p0">There was a lot more in­ti­ma­cy, but pro­bab­ly that made in­sults hurt a lot more as well,” he says.</span>
+        
+        <span class="book-sentence" id="s-6-14-6-p0">Alan Cox be­lie­ves that Biro “quit for va­rious re­a­sons, some of which in­clu­ded the fact that his PhD ad­vi­sor thought he re­al­ly ought to be fi­nis­hing his the­sis.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-15">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-15-1-p0">So­meo­ne else ob­ser­ving de­ve­lop­ments was Fred van Kem­pen.</span>
+        
+        <span class="book-sentence" id="s-6-15-2-p0">Kirch re­mem­bers the time: “After Ross quit,” he says, “Fred, or FvK, as many cal­led him, step­ped into the breach.</span>
+        
+        <span class="book-sentence" id="s-6-15-3-p0">In fact, he kind of took over the net­work de­ve­lop­ment.</span>
+        
+        <span class="book-sentence" id="s-6-15-4-p0">I re­call a mes­sa­ge from him where he wrote that he’d had a long phone con­ver­sa­ti­on with Linus, and had con­vin­ced him that he was the right per­son to do the job.</span>
+        
+        <span class="book-sentence" id="s-6-15-5-p0">To be ho­nest,” Kirch con­ti­nues, “jud­ging by his co­ding skills, FvK was in­de­ed a good can­di­da­te for that job.</span>
+        
+        <span class="book-sentence" id="s-6-15-6-p0">He had been wri­ting net­work ap­p­li­ca­ti­ons for Minix be­fo­re.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-16">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-16-1-p0">FvK had am­bi­tious plans.</span>
+        
+        <span class="book-sentence" id="s-6-16-2-p0">“Fred star­ted out with a great vi­si­on,” Kirch says.</span>
+        
+        <span class="book-sentence" id="s-6-16-3-p0">“He tried to im­ple­ment a laye­red ar­chi­tec­tu­re where you could stack net­work pro­to­cols on top of each other.” Such a laye­red ap­proach would allow net­works other than those based on the Net’s TCP/IP to be ac­ces­sed, a good idea at the time when it was by no means clear that TCP/IP would do­mi­na­te net­wor­king.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-17">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-17-1-p0">“He also im­pro­ved Ross’s code quite a bit,” Kirch notes.</span>
+        
+        <span class="book-sentence" id="s-6-17-2-p0">“In order to dis­tin­gu­ish his code from Ross’s, he star­ted to call his net­work patches Net-2.</span>
+        
+        <span class="book-sentence" id="s-6-17-3-p0">Then came Net-2b. Around Net-2b, the code ac­tual­ly be­ca­me quite usa­ble.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-18">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-18-1-p0">De­s­pi­te this, things star­ted to un­ra­vel.</span>
+        
+        <span class="book-sentence" id="s-6-18-2-p0">Kirch re­mem­bers that “there were se­veral pro­blems with FvK.</span>
+        
+        <span class="book-sentence" id="s-6-18-3-p0">He didn’t want to dis­cuss much of what he was doing with any­bo­dy else.</span>
+        
+        <span class="book-sentence" id="s-6-18-4-p0">Then, he was li­ving be­hind a very, very slow net­work link, which made it close to im­pos­si­ble to down­load the net­work patches he re­leased.</span>
+        
+        <span class="book-sentence" id="s-6-18-5-p0">At times, his link was so flaky that he didn’t re­cei­ve any mail for days.” More se­rious, per­haps, was that “so­me­ti­mes he [crea­ted] patches against a mo­di­fied ker­nel” ra­ther than against the stan­dard one.</span>
+        
+        <span class="book-sentence" id="s-6-18-6-p0">Ass a re­sult, Kirch says, “peop­le had a hard time get­ting them to apply” to their sys­tems—even Linus.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-19">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-19-1-p0">The Net­wor­king-Howto iden­ti­fies the fun­da­men­tal pro­blem with van Kem­pen’s work: “Fred’s focus was on de­ve­lo­ping in­no­va­tions to the stan­dard net­work im­ple­men­ta­ti­ons and this was ta­king time.</span>
+        
+        <span class="book-sentence" id="s-6-19-2-p0">The com­mu­ni­ty of users was gro­wing im­pa­ti­ent for so­me­thing that worked re­lia­bly and sa­tis­fied the 80 per­cent of users and, as with Ross, the pres­su­re on Fred as lead de­ve­l­oper rose.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-20">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-20-1-p0">The con­ti­nuing pro­blems in the net­wor­king area were be­co­m­ing a major head­a­che for Linus.</span>
+        
+        <span class="book-sentence" id="s-6-20-2-p0">Rich Slad­key, who made a num­ber of im­portant cont­ri­bu­ti­ons to ker­nel code in the early days, be­lie­ves that “un­re­lia­ble net­wor­king prior to Net-2 al­most kil­led con­fi­dence in Linux”; now pro­blems with Net-2 were fur­ther so­wing seeds of doubt about GNU/Linux’s abili­ty to grow into a se­rious ope­ra­ting sys­tem.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-21">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-21-1-p0">Ex­tre­me si­tua­ti­ons re­qui­re ex­tre­me re­me­di­es, and Linus took the unusu­al step of sanc­tio­n­ing a par­al­lel de­ve­lop­ment of net­wor­king code by Alan Cox.</span>
+        
+        <span class="book-sentence" id="s-6-21-2-p0">Ass the Net­wor­king-Howto do­cu­ment ex­plains, Cox “pro­po­sed that he would take Fred’s Net-2 code and debug it, ma­king it re­lia­ble and sta­ble so that it would sa­tis­fy the im­pa­ti­ent user base while re­li­e­ving that pres­su­re from Fred, al­lo­wing him to con­ti­nue his work” in de­ve­lo­ping the more ad­van­ced code with its laye­red ar­chi­tec­tu­re.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-22">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-22-1-p0">This ap­proach was dan­ge­rous be­cau­se it might have led to what is cal­led code-for­king, which is the evo­lu­ti­on of two se­pa­ra­te strands of de­ve­lop­ment whe­r­e­by some Linux de­ve­l­o­pers would use and im­pro­ve one net­wor­king ap­proach while others worked on the rival, both being con­vin­ced that “their” me­thod was best.</span>
+        
+        <span class="book-sentence" id="s-6-22-2-p0">Such du­pli­ca­ti­on of ef­fort con­fu­ses users and di­vi­des de­ve­l­o­pers into war­ring fac­tions, which in turn slows pro­gress.</span>
+        
+        <span class="book-sentence" id="s-6-22-3-p0">This is the kind of frag­men­ta­ti­on that had be­de­vi­led the Unix world and drove the rapid uptake of Mi­cro­soft’s Win­dows NT 3.5 when it ap­peared in 1993.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-23">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-23-1-p0">In the end, the gam­ble pro­ved more than ju­s­ti­fied: Sta­ble and usa­ble net­wor­king was at last made a stan­dard part of the ker­nel; and the Net wars that re­sul­ted brief­ly from this two-track ef­fort brought about an im­portant and ne­cessa­ry re­fi­ne­ment of the ent­i­re Linux de­ve­lop­ment model.</span>
+        
+        <span class="book-sentence" id="s-6-23-2-p0">The wars also led to the ano­in­ting of Alan Cox as Linus’s de facto Num­ber 2 and mar­ked his rise as one of the Linux com­mu­ni­ty’s most ta­len­ted and pro­duc­tive fi­gu­res.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-24">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-24-1-p0">Alan Cox was born a year be­fo­re Linus, in 1968, in So­li­hull, just outs­ide Bir­ming­ham, Eng­land’s se­cond lar­gest city, in the heart of the Mid­lands.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-25">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-25-1-p0">Cox was the elder of two boys; his fa­ther was a re­se­ar­cher for Bri­tish Gas, the na­tio­nal com­pa­ny sup­p­ly­ing gas to hou­se­holds, and his mo­ther was a teacher.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-26">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-26-1-p0">Cox stu­di­ed com­pu­ting at two uni­ver­si­ties in Wales, first at Abe­rystwyth, in the north, and then in Swan­sea, on the south coast.</span>
+        
+        <span class="book-sentence" id="s-6-26-2-p0">Cox says he lear­ned most of the im­portant things de­s­pi­te ra­ther than be­cau­se of his com­pu­ting stu­dies.</span>
+        
+        <span class="book-sentence" id="s-6-26-3-p0">“I didn’t read most of the of­fi­ci­al cour­se books; they were bo­ring,” he says.</span>
+        
+        <span class="book-sentence" id="s-6-26-4-p0">“Most of those were not writ­ten by peop­le who ac­tual­ly sat down and wrote pro­duc­tion ope­ra­ting sys­tems,” an area he was al­re­a­dy in­te­rested in.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-27">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-27-1-p0">Along­s­ide his of­fi­ci­al stu­dies, Cox lear­ned Unix and TCP/IP; he also ha­cked on an Amiga mi­cro­com­pu­ter that he kept in his stu­dent ac­com­mo­da­ti­on.</span>
+        
+        <span class="book-sentence" id="s-6-27-2-p0">“I only had a small room,” he says.</span>
+        
+        <span class="book-sentence" id="s-6-27-3-p0">“There were cer­tain solid piles of books you could stand [on] to get to the com­pu­ter or the bed.” He con­tem­pla­ted wri­ting an ent­i­re­ly new ope­ra­ting sys­tem for the Amiga, but says he wasn’t quite bold en­ough to take the plun­ge: “I thought wri­ting file sys­tem stuff was too hard for one per­son to do.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-28">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-28-1-p0">Cox came across Linux through Linus’s early pos­tings in comp.os.minix.</span>
+        
+        <span class="book-sentence" id="s-6-28-2-p0">He was rea­ding this news­group, he says, be­cau­se he “was in­te­rested in the work peop­le were doing in Minix [and] be­cau­se...</span>
+        
+        <span class="book-sentence" id="s-6-28-3-p0">a lot of very good ope­ra­ting sys­tem dis­cus­sion went on [in] that news­group.</span>
+        
+        <span class="book-sentence" id="s-6-28-4-p0">It was one of the few news­groups were peop­le where ac­tual­ly dis­cus­sing it, ar­guing over im­ple­men­ta­ti­on of ac­tu­al ope­ra­ting sys­tem code.” Not that he had Minix.</span>
+        
+        <span class="book-sentence" id="s-6-28-5-p0">“No,” he ex­plains, “Minix was then £100 [$150] and I was a tight bas­tard.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-29">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-29-1-p0">Alan Cox re­calls the time, at the end of 1991.</span>
+        
+        <span class="book-sentence" id="s-6-29-2-p0">“[Linux] 0.11 came out,” he says, “[and] short­ly after that the alt.os.linux group was for­med in­iti­al­ly and the Minix news­group ba­si­cal­ly went dead be­cau­se every sin­gle per­son who’d been try­ing to do stuff on Minix was grab­bing Linux,” a clear in­di­ca­ti­on of the huge pent-up de­mand that Linux un­leas­hed.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-30">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-30-1-p0">In­iti­al­ly Cox was temp­ted more by 386BSD than GNU/Linux.</span>
+        
+        <span class="book-sentence" id="s-6-30-2-p0">“I wasn’t par­ti­cu­lar­ly thin­king of Linux be­cau­se the BSD one loo­ked a lot more com­ple­te.</span>
+        
+        <span class="book-sentence" id="s-6-30-3-p0">Just be­fo­re Linus an­noun­ced 0.11, the very in­iti­al 386BSD an­noun­ce­ment came out.” Sti­mu­la­ted by all this ope­ra­ting sys­tem ac­tivi­ty, he de­ci­ded to buy a PC with a 386: “The next thing was, what am I going to put on it?” In the end, he chose GNU/Linux; his eva­lua­ti­on at the time of the two ri­vals con­firms that the cri­ti­cal fac­tors weig­hing against 386BSD were its need for a 387 math co-pro­ces­sor and its ina­bi­li­ty to share a hard disk with DOS or Win­dows.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-31">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-31-1-p0">Alt­hough he had left the uni­ver­si­ty in Swan­sea some time be­fo­re, Cox stay­ed in touch with his fri­ends there and hel­ped them out with the ma­chi­ne used by the uni­ver­si­ty’s com­pu­ter so­cie­ty.</span>
+        
+        <span class="book-sentence" id="s-6-31-2-p0">They de­ci­ded to try out Ross Biro’s re­cent­ly re­leased net­wor­king code.</span>
+        
+        <span class="book-sentence" id="s-6-31-3-p0">“We put [the PC] in the cam­pus [net­work]” he says, “and we plug­ged it in and we boo­ted the new won­d­rous TCP/IP code—and it fell over.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-32">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-32-1-p0">“So we star­ted put­ting newer ver­si­ons on it, and the ma­chi­ne would fall over more or less re­gu­lar­ly each time” de­s­pi­te the up­dated code, Cox re­calls.</span>
+        
+        <span class="book-sentence" id="s-6-32-2-p0">The re­a­son was si­gni­fi­cant: “We were ac­tual­ly one of the few peop­le who, it tur­ned out, had a Linux box on a very busy mul­ti­pro­to­col net­work.” That is, they were tes­ting the code in a new and ex­tre­me si­tua­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-33">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-33-1-p0">“The thing about busy net­works is you get very large amounts of data and you also get in­te­res­ting ti­mings,” Cox ex­plains.</span>
+        
+        <span class="book-sentence" id="s-6-33-2-p0">“One of the big pro­blems of de­bug­ging a net­wor­king setup is a lot of ti­ming-re­la­ted bugs only show up on busy net­works.</span>
+        
+        <span class="book-sentence" id="s-6-33-3-p0">So peop­le were see­ing that code as being not sta­ble, but it would fall over every few days.</span>
+        
+        <span class="book-sentence" id="s-6-33-4-p0">Whe­re­as we were in a po­si­ti­on where the same bug would fall over every few mi­nu­tes.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-34">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-34-1-p0">Cox app­re­cia­ted that what see­med to be bad luck (that their busy net­work cau­sed the net­wor­king code to crash quick­ly) was a stroke of for­tu­ne for Linux be­cau­se “we had a great tes­ting ground for it.” Ass a re­sult, he says, “I star­ted sen­ding Ross fixes.” Ross Biro stop­ped then working on the net­wor­king code, and Fred van Kem­pen took over.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-35">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-35-1-p0">Cox does not hide his skep­ti­cism about Fred van Kem­pen’s plans: “Fred de­ci­ded that he was going to re­wri­te it all, grand won­d­rous vi­si­on, ever­y­thing out of Fred Brooks [of The My­thi­cal Man-Month fame] you shouldn’t do.</span>
+        
+        <span class="book-sentence" id="s-6-35-2-p0">In the me­an­ti­me, while he was doing that, I star­ted re­leasing patches which were ba­si­cal­ly just a collec­tion of fixes.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-36">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-36-1-p0">Ass the Net­wor­king-Howto do­cu­ment puts it, he did this with “some good suc­cess and his first ver­si­on of Linux net­wor­king code was cal­led ‘Net-2D(ebug­ged).’ The code worked re­lia­bly in many ty­pi­cal con­fi­gu­ra­ti­ons and the user base was happy.</span>
+        
+        <span class="book-sentence" id="s-6-36-2-p0">Alan cle­ar­ly had ideas and skills of his own to cont­ri­bu­te to the pro­ject and many dis­cus­sions re­la­ting to the di­rec­tion the Net-2 code was hea­ding en­sued.” These dis­cus­sions shar­pe­ned until “there de­ve­l­o­ped two dis­tinct schools wi­t­hin the Linux net­wor­king com­mu­ni­ty, one that had the phi­lo­so­phy of ‘make it work first, then make it bet­ter’ and the other of ‘make it bet­ter first,’” as the Net­wor­king-Howto puts it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-37">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-37-1-p0">This was no minor dif­fe­rence of opi­ni­on over ob­scu­re tech­ni­cal is­su­es; it was a fun­da­men­tal ideo­lo­gi­cal batt­le that in­vol­ved not only net­wor­king but the ent­i­re Linux de­ve­lop­ment pro­cess.</span>
+        
+        <span class="book-sentence" id="s-6-37-2-p0">The heart of the de­ba­te ques­tio­ned how Linux should go for­ward; which me­cha­nisms should be em­ploy­ed to add si­gni­fi­cant new fea­tures to the ker­nel; and, most cri­ti­cal, how the gro­wing de­ve­lop­ment team should be run.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-38">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-38-1-p0">An­d­rew Ta­nen­baum had im­pli­cit­ly rai­sed most of these is­su­es in one of the points he made du­ring the “Linux is ob­so­le­te” ex­ch­an­ges.</span>
+        
+        <span class="book-sentence" id="s-6-38-2-p0">On 3 Fe­bru­ary 1992, he had writ­ten,</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-39">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-39-1-p0">An in­te­res­ting ques­ti­on is whe­ther Linus is wil­ling to let LINUX be­co­me ‘free’ of his con­trol.</span>
+        
+        <span class="book-sentence" id="s-6-39-2-p0">May peop­le mo­di­fy it (ruin it?) and sell it?</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-40">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-40-1-p0">He had then gone on to pose a hy­po­the­ti­cal ques­ti­on that shows as­to­nis­hing per­spi­ca­ci­ty be­cau­se it was writ­ten months be­fo­re Linus’s pro­blems with net­wor­king and Fred van Kem­pen had blown up:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-41">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-41-1-p0">Sup­po­se Fred van Kem­pen...</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-42">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-42-1-p0">wants to take over, crea­ting Fred’s LINUX and Linus’ LINUX, both use­ful but dif­fe­rent.</span>
+        
+        <span class="book-sentence" id="s-6-42-2-p0">Is that ok?</span>
+        
+        <span class="book-sentence" id="s-6-42-3-p0">The test comes when a siz­able group of peop­le want to evol­ve LINUX in a way Linus does not want.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-43">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-43-1-p0">Ta­nen­baum ex­pan­ded on his thoughts a coup­le of days later:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-44">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-44-1-p0">The pro­blem is co­or­di­na­ting things.</span>
+        
+        <span class="book-sentence" id="s-6-44-2-p0">Pro­jects like GNU, MINIX, or LINUX only hold to­ge­ther if one per­son is in char­ge.</span>
+        
+        <span class="book-sentence" id="s-6-44-3-p0">Du­ring the 1970s, when struc­tu­red pro­gramming was in­tro­du­ced, Har­lan Mills poin­ted out that the pro­gramming team should be or­ga­ni­zed like a sur­gi­cal team—one sur­ge­on and his or her as­sis­tants, not like a hog but­che­ring team—give ever­y­bo­dy an axe and let them chop away.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-45">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-45-1-p0">Ta­nen­baum of­fe­red a gra­phic image for the dis­tri­bu­ted soft­ware de­ve­lop­ment pro­cess Linux em­ploy­ed:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-46">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-46-1-p0">I think co­or­di­na­ting 1,000 [soft­ware] prima don­nas li­ving all over the world will be as easy as her­ding cats.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-47">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-47-1-p0">Linus pos­ted his reply to the news­group the next day, 6 Fe­bru­ary 1992:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-48">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-48-1-p0">Here’s my stan­ding on “ke­eping con­trol”, in 2 words (three?): I won’t.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-49">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-49-1-p0">The only con­trol I’ve ef­fec­tive­ly been ke­eping on linux is that I know it bet­ter than any­bo­dy else, and I’ve made my chan­ges avail­able to ftp-sites etc.</span>
+        
+        <span class="book-sentence" id="s-6-49-2-p0">Those have be­co­me ef­fec­tive­ly of­fi­ci­al re­lea­ses, and I don’t ex­pect this to chan­ge for some time: not be­cau­se I feel I have some moral right to it, but be­cau­se I haven’t heard too many com­plaints, and it will be a coup­le of months be­fo­re I ex­pect to find peop­le who have the same “feel” for what hap­pens in the ker­nel.</span>
+        
+        <span class="book-sentence" id="s-6-49-3-p0">(Well, maybe peop­le are get­ting there: [Ted Ts’o] cer­tain­ly made some heavy chan­ges even to 0.10, and others have ha­cked it as well.)</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-50">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-50-1-p0">In fact I have sent out fee­lers about some “linux-ker­nel” mai­ling list which would make the de­ci­si­ons about re­lea­ses, as I ex­pect I can­not fully sup­port all the fea­tures that will /have/ to be added: SCSI etc, that I don’t have the hard­ware for.</span>
+        
+        <span class="book-sentence" id="s-6-50-2-p0">The re­s­pon­se has been non­e­xis­tent: Peop­le don’t seem to be that eager to chan­ge yet...</span>
+        
+        <span class="book-sentence" id="s-6-50-3-p0">if Fred van Kem­pen wan­ted to make a super-linux, he’s quite wel­co­me.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-51">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-51-1-p0">He con­clu­ded with an im­portant point:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-52">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-52-1-p0">Yes, co­or­di­na­ti­on is a big pro­blem, and I don’t think linux will move away from me as “head sur­ge­on” for some time, part­ly be­cau­se most peop­le un­der­stand about these pro­blems.</span>
+        
+        <span class="book-sentence" id="s-6-52-2-p0">But co­py­right /is/ an issue: if peop­le feel I do a bad job, they can do it them­sel­ves.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-53">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-53-1-p0">Ass Linus ex­plai­ned in the same comp.os.minix pos­ting, he had cho­sen the GNU Ge­ne­ral Pu­blic Li­cen­se (GPL) be­cau­se the only thing the co­py­right for­bids (and I feel this is eminent­ly re­a­sonable) is that other peop­le start ma­king money off it, and don’t make sour­ce avail­able etc....</span>
+        
+        <span class="book-sentence" id="s-6-53-2-p0">This may not be a ques­ti­on of logic, but I’d feel very bad if so­meo­ne could just sell my work for money, when I made it avail­able ex­press­ly so that peop­le could play around with a per­so­nal pro­ject.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-54">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-54-1-p0">The GNU GPL al­lows others to take the Linux sour­ce code and mo­di­fy it pro­vi­ded they make the mo­di­fi­ca­ti­ons avail­able; that is, if so­meo­ne else makes a “super-Linux,” there is not­hing even Linus can do to stop that per­son if the sour­ce code is pro­vi­ded.</span>
+        
+        <span class="book-sentence" id="s-6-54-2-p0">The ad­van­ta­ge of this ap­proach is that Linus could then take chan­ges he ap­pro­ved of from such a “super-Linux” and fold them back into “his” Linux.</span>
+        
+        <span class="book-sentence" id="s-6-54-3-p0">The down­si­de was that the GNU GPL made such di­ver­gen­ces pos­si­ble in the first place.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-55">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-55-1-p0">Linus’s an­s­wer to the gro­wing split in the net­wor­king code bet­ween Fred van Kem­pen’s work and Alan Cox’s code pro­ved to be the same as the one he gave in Fe­bru­ary when he re­plied to Ta­nen­baum’s pos­ting.</span>
+        
+        <span class="book-sentence" id="s-6-55-2-p0">Alt­hough he could not for­bid an­yo­ne to de­ve­lop in a cer­tain way, he could use his aut­ho­ri­ty (built, as he had right­ly said, on his kno­wing it “bet­ter than any­bo­dy else” and on his pro­ven abili­ty in ma­na­ging the ker­nel de­ve­lop­ment) to ap­pro­ve one branch of the code, thus ma­king it part of the “ef­fec­tive­ly of­fi­ci­al re­lea­ses.” Pro­vi­ded en­ough peop­le in the Linux user com­mu­ni­ty agreed with this de­ci­si­on, as ma­ni­fes­ted by their ac­tions in using these “ef­fec­tive­ly of­fi­ci­al re­lea­ses,” the code base he chose would flou­rish and ri­vals would lan­gu­ish for want of sup­port.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-56">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-56-1-p0">The Net­wor­king-Howto do­cu­ment ex­plains how this ap­p­lied in the case of net­wor­king in the ker­nel.</span>
+        
+        <span class="book-sentence" id="s-6-56-2-p0">“Linus ul­ti­mate­ly ar­bi­tra­ted and of­fe­red his sup­port to Alan’s de­ve­lop­ment ef­forts and in­clu­ded Alan’s code in the stan­dard ker­nel sour­ce dis­tri­bu­ti­on.</span>
+        
+        <span class="book-sentence" id="s-6-56-3-p0">This pla­ced Fred in a dif­fi­cult po­si­ti­on.</span>
+        
+        <span class="book-sentence" id="s-6-56-4-p0">Any con­ti­nued de­ve­lop­ment would lack the large user base ac­tive­ly using and tes­ting the code and this would mean pro­gress would be slow and dif­fi­cult.</span>
+        
+        <span class="book-sentence" id="s-6-56-5-p0">Fred con­ti­nued to work for a short time and even­tual­ly stood down and Alan came to be the new lea­der of the Linux net­wor­king ker­nel de­ve­lop­ment ef­fort.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-57">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-57-1-p0">Kirch says, “I don’t know if there ever was a pu­blic state­ment by Linus about him pre­fer­ring Alan over Fred.</span>
+        
+        <span class="book-sentence" id="s-6-57-2-p0">What hap­pe­n­ed was that at some point, Linus stop­ped ac­cep­t­ing patches from Fred and ins­tead ac­cep­ted those from Alan.</span>
+        
+        <span class="book-sentence" id="s-6-57-3-p0">That’s when Alan ef­fec­tive­ly took over main­ten­an­ce of the net­work code.” Alan Cox em­pha­si­zes that “it was com­ple­te­ly ac­ci­den­tal.</span>
+        
+        <span class="book-sentence" id="s-6-57-4-p0">I just wan­ted the net­wor­king code to work.” This is doubt­less true, but on Linus’s side the move re­pre­sen­ted a state­ment of in­tent.</span>
+        
+        <span class="book-sentence" id="s-6-57-5-p0">Linus later said, “I’ve never been all that con­cer­ned with de­sign.</span>
+        
+        <span class="book-sentence" id="s-6-57-6-p0">I have a very prag­ma­tic ap­proach: What works and what peop­le want to use is good.</span>
+        
+        <span class="book-sentence" id="s-6-57-7-p0">And who cares about de­sign un­less peop­le want to use it?” By choo­sing Alan Cox, very much a fel­low prag­ma­tist, over Fred van Kem­pen’s “great vi­si­on,” as Kirch calls it, he was sen­ding a si­gnal to all Linux de­ve­l­o­pers about the kind of code he would favor, and the ge­ne­ral phi­lo­so­phy he would adopt hence­forth: that of “make it work first, then make it bet­ter,” as the Linux Net­wor­king-Howto puts it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-58">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-58-1-p0">This was, after all, the me­thod Linus had ad­op­ted when wri­ting Linux.</span>
+        
+        <span class="book-sentence" id="s-6-58-2-p0">The first Linux he pos­ted, 0.02, was ba­re­ly usa­ble, but it worked.</span>
+        
+        <span class="book-sentence" id="s-6-58-3-p0">More im­portant, it was a star­ting point that others could then use for ad­ding re­fi­ne­ments, which Linus pro­ved per­fect­ly ready to ac­cept.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-59">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-59-1-p0">Alan Cox’s sub­se­quent work on the net­wor­king code fol­lo­wed the same path.</span>
+        
+        <span class="book-sentence" id="s-6-59-2-p0">Kirch re­calls that “quite un­li­ke his pre­de­ces­sor, Alan did not throw away ever­y­thing at once.</span>
+        
+        <span class="book-sentence" id="s-6-59-3-p0">Even though he al­ways said that his even­tu­al goal was to get rid of FvK’s laye­ring, be­cau­se it was ma­king things com­pli­ca­ted and slow, and didn’t add much in the way of func­tio­na­li­ty.</span>
+        
+        <span class="book-sentence" id="s-6-59-4-p0">He star­ted by just ma­king it work.” Alan Cox re­calls, “The first thing I was doing in many cases was clea­ning it up...</span>
+        
+        <span class="book-sentence" id="s-6-59-5-p0">there was ac­tual­ly very litt­le I fixed at the pro­to­col level” in terms of the basic TCP/IP stan­dards.</span>
+        
+        <span class="book-sentence" id="s-6-59-6-p0">“The pro­to­col stuff was most­ly right, it was just ever­y­thing un­der­ly­ing was a bit flaky or had holes in it.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-60">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-60-1-p0">Fi­xing code that “was a bit flaky or had holes in it” was one of Cox’s for­tes.</span>
+        
+        <span class="book-sentence" id="s-6-60-2-p0">“Clea­ning hor­ri­b­le code up was one thing I ap­peared to be good at,” he says, and he soon emer­ged as Linux’s bug-fixer par ex­cel­lence.</span>
+        
+        <span class="book-sentence" id="s-6-60-3-p0">“I often fi­gu­re bugs out in my sleep,” he con­fes­ses.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-61">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-61-1-p0">Ass well as de­bug­ging and wri­ting new code, Cox also began to as­su­me the im­portant ad­di­tio­nal role of one of what are often cal­led Linus’s “trusted lieu­ten­ants.” These are se­ni­or ha­ckers who are re­s­pon­si­ble for cer­tain areas of the ker­nel.</span>
+        
+        <span class="book-sentence" id="s-6-61-2-p0">Their job is to fil­ter patches from other ha­ckers, check them, and then pass them on to Linus.</span>
+        
+        <span class="book-sentence" id="s-6-61-3-p0">Alan Cox re­calls, “Fair­ly early on, peop­le star­ted sen­ding me things” for the net­wor­king code.</span>
+        
+        <span class="book-sentence" id="s-6-61-4-p0">“If there’s any­thing they’re not sure about, so­meo­ne would say, ‘I think this is a fix but I’m not sure, what do you think?’”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-62">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-62-1-p0">Linus had never plan­ned the ad­di­ti­on of this cru­ci­al­ly im­portant de­ve­lop­ment in­fra­struc­tu­re; it arose in re­s­pon­se to the si­tua­ti­on.</span>
+        
+        <span class="book-sentence" id="s-6-62-2-p0">Ass he said in 1996,</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-63">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-63-1-p0">I’ve never made any con­scious de­ci­si­ons that this is how I want it to work in the fu­ture.</span>
+        
+        <span class="book-sentence" id="s-6-63-2-p0">All the chan­ges have been au­to­ma­tic re­s­pon­ses to dif­fe­rent cir­cum­stan­ces.</span>
+        
+        <span class="book-sentence" id="s-6-63-3-p0">At first, peop­le just sent me patches di­rect­ly, and what hap­pe­n­ed was I got to trust some peop­le be­cau­se I’d been e-mai­ling with them; I knew they were tech­ni­cal­ly sound, and did the right thing [a key ha­cker con­cept].</span>
+        
+        <span class="book-sentence" id="s-6-63-4-p0">Other peop­le star­ted sen­ding patches to these peop­le I trusted be­cau­se that off­loa­ded some of my work be­cau­se the peop­le I trusted che­cked the patches.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-64">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-64-1-p0">It’s worked pret­ty well.</span>
+        
+        <span class="book-sentence" id="s-6-64-2-p0">In some cases I tell peop­le who e-mail me di­rect­ly, ‘Can you send it to this other per­son just to check?’ be­cau­se I don’t have the hard­ware, for ex­amp­le.</span>
+        
+        <span class="book-sentence" id="s-6-64-3-p0">The other per­son’s the guy in char­ge of that part.</span>
+        
+        <span class="book-sentence" id="s-6-64-4-p0">And then after that, it kind of au­to­ma­ti­cal­ly goes the right way.</span>
+        
+        <span class="book-sentence" id="s-6-64-5-p0">So there’s maybe ten or twen­ty who are in char­ge of cer­tain parts of the ker­nel like net­wor­king, SCSI dri­vers sub­sys­tem, wha­te­ver.</span>
+        
+        <span class="book-sentence" id="s-6-64-6-p0">And then there are a lot of peop­le who have one spe­ci­fic dri­ver that they are in char­ge of.</span>
+        
+        <span class="book-sentence" id="s-6-64-7-p0">Usual­ly the ori­gi­nal aut­hors of that dri­ver, but in some cases they may have got­ten a new ma­chi­ne and some­bo­dy else has taken over that dri­ver.</span>
+        
+        <span class="book-sentence" id="s-6-64-8-p0">Stuff like that I ge­ne­ral­ly apply di­rect­ly, be­cau­se I can’t test it and I just have to trust the per­son who wrote it ori­gi­nal­ly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-65">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-65-1-p0">One re­a­son this gra­du­al ap­por­ti­onment of the ker­nel “worked pret­ty well,” Linus said, was be­cau­se “the way the whole [Linux] sys­tem is set up, which also hap­pe­n­ed kind of by its­elf, is that if you chan­ge one dri­ver it’s re­al­ly so lo­ca­li­zed that it should never im­pact any­thing else.” In other words, the ker­nel de­sign is high­ly mo­du­lar, with clean in­ter­faces bet­ween the parts.</span>
+        
+        <span class="book-sentence" id="s-6-65-2-p0">“It has to be so, when there’s peop­le all over the world doing this,” Linus noted.</span>
+        
+        <span class="book-sentence" id="s-6-65-3-p0">“There’s no weekly brain­stor­ming ses­si­on where ever­y­bo­dy gets to­ge­ther and dis­cus­ses things.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-66">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-66-1-p0">This model had been evol­ving even be­fo­re Cox had taken over re­s­pon­si­bi­li­ty for the net­wor­king code.</span>
+        
+        <span class="book-sentence" id="s-6-66-2-p0">Ge­ne­ral­ly, though, the kind of show­down bet­ween rival strands of de­ve­lop­ment that had taken place there had been avo­ided.</span>
+        
+        <span class="book-sentence" id="s-6-66-3-p0">The case of ano­ther trusted lieu­ten­ant, Ted Ts’o, is ty­pi­cal.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-67">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-67-1-p0">Like Cox, Ts’o was born in 1968, but a third of the world away, in Ca­li­for­nia.</span>
+        
+        <span class="book-sentence" id="s-6-67-2-p0">His fa­ther was a doc­tor, and his mo­ther hel­ped run the fa­mi­ly prac­tice.</span>
+        
+        <span class="book-sentence" id="s-6-67-3-p0">It was through his fa­ther’s re­se­arch work that Ts’o first came into con­tact with com­pu­ters: “I got star­ted at a re­la­tive­ly early age, play­ing with my fa­ther’s [Di­gi­tal] PDP-8, and PDP-15,” Ts’o re­calls.</span>
+        
+        <span class="book-sentence" id="s-6-67-4-p0">“In fact, those were the only com­pu­ters I re­al­ly had to play with until high school.” He pro­gram­med these Di­gi­tal ma­chi­nes not in a high-level lan­gua­ge such as Basic, but in “raw as­sem­bler.” When Ts’o went to MIT, in 1986, he stu­di­ed com­pu­ter sci­ence and gra­dua­ted in 1990.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-68">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-68-1-p0">Soon af­ter­wards, in the fall of 1991, he came across GNU/Linux.</span>
+        
+        <span class="book-sentence" id="s-6-68-2-p0">This would have been ver­si­on 0.02 or 0.03, be­cau­se Ts’o had cont­ri­bu­ted to the ker­nel as early as 0.10, which came out in De­cem­ber 1991.</span>
+        
+        <span class="book-sentence" id="s-6-68-3-p0">He added new code that gave users extra ways of con­trol­ling pro­grams that were run­ning.</span>
+        
+        <span class="book-sentence" id="s-6-68-4-p0">The mo­ti­va­ti­on for sen­ding this code to Linus is in­te­res­ting.</span>
+        
+        <span class="book-sentence" id="s-6-68-5-p0">“Part of the re­a­sons why I did it,” Ts’o says, “was just sim­ply that it nee­ded to be done, and it would make it a whole lot more use­ful for mys­elf.” But also, he says, “the thought did occur to me, gee, if I did this, I bet a lot more peop­le would find Linux use­ful.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-69">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-69-1-p0">“I think a num­ber of peop­le in­stinc­tive­ly knew that there was such a thing a cri­ti­cal mass, and if you could get en­ough peop­le working on [Linux], then you might get so­me­thing very in­te­res­ting out.” Mo­re­o­ver, Ts’o and others had al­re­a­dy put this theo­ry into prac­tice el­sew­he­re: “There were a lot of folks who re­al­ly un­ders­tood that you could cont­ri­bu­te chan­ges back to [free pro­grams], and they would get ac­cep­ted or not, but that the end re­sult was a much bet­ter pro­duct.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-70">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-70-1-p0">Ass well as con­ti­nuing to feed through patches, Ts’o made ano­ther im­portant cont­ri­bu­ti­on to the GNU/Linux mo­ve­ment in the early days by set­ting up the first site in the United Sta­tes that car­ri­ed the Linux ker­nel and re­la­ted soft­ware.</span>
+        
+        <span class="book-sentence" id="s-6-70-2-p0">Ts’o ex­plains the back­ground to this move.</span>
+        
+        <span class="book-sentence" id="s-6-70-3-p0">“I no­ti­ced that the only place you could get Linux in those days was on ftp.funet.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-71">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-71-1-p0">“the main site in Fin­land, which had been set up by Ari Lemm­ke—and that was often very, very slow.</span>
+        
+        <span class="book-sentence" id="s-6-71-2-p0">Again, it was one of these, gee, I bet it would help peop­le use Linux if I set up an FTP site.” The site soon be­ca­me well known as the TSX-11 re­po­si­to­ry.</span>
+        
+        <span class="book-sentence" id="s-6-71-3-p0">Ts’o ex­plains that “tsx-11 just sim­ply hap­pe­n­ed to be the work­sta­tion that was sit­ting on my desk.” Crea­ting a U.S. site for GNU/Linux pro­vi­ded a major boost to its avail­a­bi­li­ty on that side of the At­lan­tic; once again this im­portant step was taken by so­meo­ne out of sense that it would be a good thing for the ent­i­re com­mu­ni­ty.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-72">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-72-1-p0">Gra­dual­ly, Ts’o star­ted put­ting more of his ef­fort into just one or two areas.</span>
+        
+        <span class="book-sentence" id="s-6-72-2-p0">“What ge­ne­ral­ly hap­pe­n­ed was most peop­le were con­cen­tra­ting on all parts of the ker­nel, but over time, they would hand­le less of the ques­ti­ons or bug fixes in parts of the ker­nel they weren’t re­al­ly con­cen­tra­ting on, be­cau­se they didn’t have the time, or the ker­nel was get­ting big en­ough that you didn’t have time to look at all parts of it.” Ass the ker­nel grew in fea­tures and size, re­sul­ting spe­cia­liza­t­i­on meant that it was no lon­ger pos­si­ble for every ha­cker to cont­ri­bu­te ever­yw­he­re.</span>
+        
+        <span class="book-sentence" id="s-6-72-3-p0">When cer­tain peop­le be­ca­me known for their work on par­ti­cu­lar areas, they star­ted to take on some of the tasks ori­gi­nal­ly hand­led ex­clu­si­ve­ly by Linus.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-73">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-73-1-p0">Ano­ther im­portant fac­tor hel­ped drive this chan­ge.</span>
+        
+        <span class="book-sentence" id="s-6-73-2-p0">“What gra­dual­ly star­ted hap­pe­ning was more peop­le were sen­ding bug re­ports and or re­quests for help as op­po­sed to ac­tu­al patches,” Ts’o ex­plains.</span>
+        
+        <span class="book-sentence" id="s-6-73-3-p0">That is, GNU/Linux had be­co­me easy en­ough to use that it was no lon­ger pu­re­ly for ha­ckers.</span>
+        
+        <span class="book-sentence" id="s-6-73-4-p0">These non­ha­cker users sent not code but bug-re­ports, a vital cont­ri­bu­ti­on, no­nethe­l­ess.</span>
+        
+        <span class="book-sentence" id="s-6-73-5-p0">Ass a con­se­quence, some of the main ha­ckers star­ted to reply to the bug re­ports or re­quests for help, ins­tead of co­m­ing up with patches in­de­pen­dent­ly.</span>
+        
+        <span class="book-sentence" id="s-6-73-6-p0">Ass Ts’o re­calls, “I would just sim­ply be the one to hand­le the re­plies.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-74">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-74-1-p0">Things then star­ted to snow­ball.</span>
+        
+        <span class="book-sentence" id="s-6-74-2-p0">“This all hap­pe­n­ed on a pu­blic mai­ling list, so peop­le would see that when so-and-so asked for help, I would be the one who sent in the reply with the bug-fix and patch,” he says.</span>
+        
+        <span class="book-sentence" id="s-6-74-3-p0">“And so what ge­ne­ral­ly ended up hap­pe­ning was other peop­le would start de­fer­ring things to me, and start sen­ding patches to me be­cau­se they knew I was working ac­tive­ly in that area any­way.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-75">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-75-1-p0">The final stage in this evo­lu­tio­na­ry pro­cess, Ts’o ex­plains, was that “after a cer­tain point, peop­le would send patches to Linus, and he would send the patch to me and say, ‘What do you think of it?’” Ass a re­sult, Ts’o took con­trol of cer­tain parts of the ker­nel and fed through re­vi­sed patches to Linus for his con­side­ra­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-76">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-76-1-p0">Re­s­pon­si­bi­li­ty for one major area, that of the Linux file sys­tem ext2, is sha­red with ano­ther of the most se­ni­or Linux ha­ckers, Ste­phen Tweed­ie.</span>
+        
+        <span class="book-sentence" id="s-6-76-2-p0">Tweed­ie was born in Edin­burgh, Scot­land in 1969.</span>
+        
+        <span class="book-sentence" id="s-6-76-3-p0">Both his par­ents worked in the com­pu­ter in­dus­try, and Tweed­ie says, “I can’t ever re­mem­ber not ha­ving been in the pre­sence of com­pu­ters.” When he was four­teen, he was al­re­a­dy crea­ting ope­ra­ting sys­tem ex­ten­si­ons for his Sin­clair ZX-81 micro, a ma­chi­ne Alan Cox had also used as a boy.</span>
+        
+        <span class="book-sentence" id="s-6-76-4-p0">Tweed­ie stu­di­ed com­pu­ter sci­ence at Cam­bridge Uni­ver­si­ty; after gra­dua­ting, he re­tur­ned to Edin­burgh to do re­se­arch at the Scot­tish ca­pi­tal’s uni­ver­si­ty, where he dis­co­ve­r­ed GNU/Linux, around the be­gin­ning of 1992.</span>
+        
+        <span class="book-sentence" id="s-6-76-5-p0">“I didn’t spe­ci­fi­cal­ly get into it for the sin­gle pur­po­se of hacking on it,” he says, “but I did do that from very early on.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-77">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-77-1-p0">Tweed­ie echoes the ex­pla­na­ti­on of Ts’o as to how peop­le came to be as­si­gned areas of re­s­pon­si­bi­li­ty.</span>
+        
+        <span class="book-sentence" id="s-6-77-2-p0">“It’s very sim­ply a case of who’s ac­tual­ly working on so­me­thing,” Tweed­ie says, “and who has got a track re­cord of ma­king good choices.</span>
+        
+        <span class="book-sentence" id="s-6-77-3-p0">And if you are working on so­me­thing and you’ve got credi­bi­li­ty in the eyes of other peop­le who are doing that, then other patches tend to come through you.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-78">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-78-1-p0">“There are peop­le who are ge­ne­ral­ly re­co­gni­zed as being not ow­ners but sim­ply ex­perts in par­ti­cu­lar areas.</span>
+        
+        <span class="book-sentence" id="s-6-78-2-p0">The com­mu­ni­ty takes ad­van­ta­ge of that and works through those peop­le to get work done in those areas.” In other words, “it’s very, very much a me­ri­to­cra­cy,” he says, and re­pres­ents a kind of na­tu­ral selec­tion by the com­mu­ni­ty.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-79">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-79-1-p0">Linus’s wil­ling­ness to defer to his lieu­ten­ants and to hand off re­s­pon­si­bi­li­ty for major chunks of the ker­nel has had ano­ther im­portant ef­fect.</span>
+        
+        <span class="book-sentence" id="s-6-79-2-p0">Ass the con­ti­nuing cont­ri­bu­ti­ons of Alan Cox, Ted Ts’o, and Ste­phen Tweed­ie over the last de­ca­de in­di­ca­te, they have all re­mai­ned de­eply com­mit­ted to the Linux mo­ve­ment for many years, even though any one of them could ea­si­ly have star­ted up and led his own rival group—as Linux’s li­cen­se per­mit­ted.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-80">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-80-1-p0">This fier­ce loyal­ty to a sin­gle strand of de­ve­lop­ment stands in stark con­trast to other free Unix-like ker­nel pro­jects.</span>
+        
+        <span class="book-sentence" id="s-6-80-2-p0">For ex­amp­le, after 386BSD lost mo­men­tum, NetBSD was star­ted.</span>
+        
+        <span class="book-sentence" id="s-6-80-3-p0">Ass the an­noun­ce­ment by the foun­der, Chris De­me­triou, of NetBSD 0.8 in April 1993 ex­plai­ned, NetBSD was “based hea­vi­ly on 386BSD 0.1,” with va­rious patches ap­p­lied and new pro­grams added.</span>
+        
+        <span class="book-sentence" id="s-6-80-4-p0">Si­mi­lar­ly, FreeBSD, “had its ge­ne­sis in the early part of 1993, par­ti­al­ly as an out­growth of the ‘Un­of­fi­ci­al 386BSD Patch­kit,’” as Jor­dan Hub­bard, one of its ins­ti­ga­tors, wri­tes in his his­to­ry of the soft­ware.</span>
+        
+        <span class="book-sentence" id="s-6-80-5-p0">Yet ano­ther off­shoot of 386BSD is the OpenBSD pro­ject, led by Theo de Raadt, which pla­ces par­ti­cu­lar­ly strong em­pha­sis on se­cu­ri­ty.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-81">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-81-1-p0">The exis­tence of three high­ly si­mi­lar pro­jects has led to a di­vi­si­on of co­ding ef­fort and a smal­ler user base for each than would be the case were there only one such 386BSD de­scen­dant.</span>
+        
+        <span class="book-sentence" id="s-6-81-2-p0">The weak­nes­ses in the split world of the free BSD de­ri­va­ti­ves high­light the cor­re­spon­ding strengths of the uni­fied Linux de­ve­lop­ment.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-82">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-82-1-p0">When Linux was or­ga­ni­zed into a patch­work of areas hand­led by Linus’s lieu­ten­ants, this evo­lu­ti­on’s im­portant col­la­te­ral ef­fects on Linux’s growth and de­ve­lop­ment were felt only gra­dual­ly.</span>
+        
+        <span class="book-sentence" id="s-6-82-2-p0">Linus’s de­ci­si­on to back Alan Cox, howe­ver, pro­du­ced a more im­me­dia­te con­se­quence.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-83">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-83-1-p0">Cox’s in­ten­se hacking style meant that Linus could push out re­vi­sed ker­nels more ra­pidly to debug the TCP/IP code that had pro­ved so pro­ble­ma­tic.</span>
+        
+        <span class="book-sentence" id="s-6-83-2-p0">Olaf Kirch says, “I think Alan’s work on ma­king the net­work layer sta­ble was one of the main points why Linus kept de­lay­ing the re­lease of 1.0.</span>
+        
+        <span class="book-sentence" id="s-6-83-3-p0">He wan­ted a working TCP/IP [mo­du­le] be­fo­re cal­ling it 1.0.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-84">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-84-1-p0">De­tails from the Linux Ker­nel Ver­si­on His­to­ry re­flect this chan­ge.</span>
+        
+        <span class="book-sentence" id="s-6-84-2-p0">Ver­si­on 0.98 of the code, when TCP/IP was avail­able in the form of Ross Biro’s in­iti­al patches to the ker­nel, is dated 29 Sep­tem­ber 1992.</span>
+        
+        <span class="book-sentence" id="s-6-84-3-p0">Ver­si­on 0.99—tan­ta­li­zingly close to the long-de­si­red Linux 1.0, in num­be­ring at least—came out on 13 De­cem­ber 1992.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-85">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-85-1-p0">Ker­nel re­lea­ses in 1993 were slow—for Linux, any­way: three in Ja­nu­a­ry, two each in Fe­bru­ary, March, and April, one in May, and none in June.</span>
+        
+        <span class="book-sentence" id="s-6-85-2-p0">In July and Au­gust, Linus ma­na­ged to squee­ze out just one re­lease–that year’s sum­mer ho­li­days were not pro­ving very pro­duc­tive.</span>
+        
+        <span class="book-sentence" id="s-6-85-3-p0">It loo­ked as though the batt­les wi­t­hin the fledgling Linux group were sap­ping the mo­ve­ment’s pro­gress.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-86">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-86-1-p0">Then sud­den­ly, around the end of Sep­tem­ber 1993, there is a gear chan­ge.</span>
+        
+        <span class="book-sentence" id="s-6-86-2-p0">Ver­si­on 0.99.13 is re­leased on 20 Sep­tem­ber, fol­lo­wed by ele­ven re­lea­ses in just over a month, cul­mi­na­ting in 0.99.13k on 25 Oc­to­ber.</span>
+        
+        <span class="book-sentence" id="s-6-86-3-p0">The com­pres­sed size of the ker­nel was clim­bing too: from 320K for 0.98, 420K for 0.99, and ne­ar­ly 800K for 0.99.13k.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-87">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-87-1-p0">Linus and his fel­low coders go into over­dri­ve.</span>
+        
+        <span class="book-sentence" id="s-6-87-2-p0">In De­cem­ber 1993, there were ten re­lea­ses; in Ja­nu­a­ry 1994, no less than four­teen re­lea­ses, one every two days, on aver­age.</span>
+        
+        <span class="book-sentence" id="s-6-87-3-p0">Fe­bru­ary 1994 saw ele­ven new ver­si­ons.</span>
+        
+        <span class="book-sentence" id="s-6-87-4-p0">At last, with a final date-stamp of 22:38 on March 13 1994, a Sun­day, one me­ga­byte of com­pres­sed code was of­fi­ci­al­ly con­signed to the world as Linux 1.0.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-88">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-88-1-p0">Al­most three years to the day from when Linus re­cei­ved his copy of Minix, the first of­fi­ci­al­ly com­ple­te ver­si­on of Linux, one that could begin to bear se­rious com­pa­ri­son with other Unix ker­nels, had at last been fi­nis­hed.</span>
+        
+        <span class="book-sentence" id="s-6-88-2-p0">Along the way, the GNU/Linux user base had grown from one ha­cker to hund­reds of thousands of peop­le around the world.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-89">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-6-89-1-p0">It had wea­the­red a high­ly da­ma­ging pe­ri­od of in­ter­nal dis­sen­si­on to emer­ge stron­ger and bet­ter-equip­ped for fu­ture growth thanks to its in­cre­a­sin­gly well-de­fi­ned de­ve­lop­ment me­tho­do­lo­gy and a core group of gif­ted se­ni­or coders who could se­cond Linus’s ef­forts.</span>
+        
+        <span class="book-sentence" id="s-6-89-2-p0">The com­mu­ni­ty’s new resi­li­ence would put it in a good po­si­ti­on not only to wi­th­stand but even to be­ne­fit from ano­ther major shift now fully un­der­way: the com­mer­cia­liza­t­i­on of GNU/Linux.</span>
+        
+      </p>
+    </section>
+  </article>
+  <nav class="chapter-nav book-chapter-nav">
+    <a class="nav-btn prev" href="05-4-factor-x.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="07-6-boot-then-root.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
+</main>
+  <script src="../../../assets/reader.js" defer></script>
+</body>
+</html>

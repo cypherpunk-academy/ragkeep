@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Cathedral and the Bazaar</title>
+  <link rel="stylesheet" href="../../assets/book.css" />
+</head>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <h1 class="book-title">The Cathedral and the Bazaar</h1>
+  <nav class="toc book-toc" data-ragkeep-toc-summaries="6">
+    <ul class="book-toc-list">
+      <li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">The Cathedral and the Bazaar</span>
+      <a class="toc-link toc-book-link" href="chapters/01-the-cathedral-and-the-bazaar.html" aria-label="Kapitel öffnen">📖</a>
+    </summary>
+    <div class="toc-panel">
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt"><p>Der Autor beschreibt, wie Linux seine bisherigen Überzeugungen zur Softwareentwicklung grundlegend erschütterte. Jahrelang hatte er das Unix-Evangelium kleiner Werkzeuge, schnellen Prototypenbaus und evolutionärer Programmierung gepredigt. Dennoch glaubte er, dass besonders komplexe Software wie Betriebssysteme wie Kathedralen gebaut werden müsse: sorgfältig von einzelnen Zauberern oder kleinen Gruppen in erhabener Isolation, ohne voreilige Beta-Veröffentlichungen.</p><p>Linus Torvalds’ Entwicklungsstil – früh und oft veröffentlichen, alles delegieren, offen bis zur Promiskuität – kam daher überraschend. Stille, ehrfürchtige Kathedralen gab es nicht; die Linux-Gemeinschaft glich eher einem großen, lärmenden Basar verschiedener Absichten und Ansätze. Dass aus diesem scheinbaren Chaos ein kohärentes, stabiles System entstehen konnte, schien nur durch eine Reihe von Wundern möglich.</p><p>Die Tatsache, dass dieser Basar-Stil funktionierte und zwar hervorragend, war ein echter Schock. Der Autor begann zu verstehen, warum die Linux-Welt nicht in Verwirrung zerfiel, sondern von Stärke zu Stärke eilte. Mitte 1996 bot sich ihm die Gelegenheit, seine Theorie bewusst in einem eigenen Open-Source-Projekt im Basar-Stil zu testen – mit bedeutendem Erfolg.</p><p>Dies ist die Geschichte jenes Projekts. Der Autor wird daraus einige Aphorismen über effektive Open-Source-Entwicklung ableiten, die im Linux-Kontext besondere Bedeutung gewinnen. Sie sollen helfen zu verstehen, was die Linux-Gemeinschaft zu einer solchen Quelle guter Software macht, und vielleicht die eigene Produktivität steigern.</p></div>
+    </div>
+  </details>
+</li>
+      <li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">The Mail Must Get Through</span>
+      <a class="toc-link toc-book-link" href="chapters/02-the-mail-must-get-through.html" aria-label="Kapitel öffnen">📖</a>
+    </summary>
+    <div class="toc-panel">
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt"><p>Der Autor schildert, wie er 1993 die technische Leitung des Internetdienstanbieters CCIL übernahm und dort rund um die Uhr online war. Sein Problem: Er wollte E-Mails nicht nur auf dem Server abrufen, sondern direkt auf seinem Heimrechner empfangen, um sofort benachrichtigt zu werden und lokale Werkzeuge nutzen zu können. Das Standardprotokoll SMTP eignete sich nicht, da sein Rechner nicht dauerhaft verbunden war und keine feste IP-Adresse hatte. Stattdessen benötigte er ein Programm, das über eine Einwahlverbindung die Post abholte – ein POP3-Client.</p><p>Er fand mehrere Programme, aber keines beherrschte eine für ihn entscheidende Funktion: das automatische Umschreiben der Absenderadressen. Wenn etwa „joe“ auf dem Server schrieb, versuchte sein Mailprogramm, die Antwort an einen nicht existierenden „joe“ auf seinem Heimrechner zu senden. Manuelles Korrigieren war lästig. Dies führte zur ersten Lektion: Notwendigkeit treibt Erfindung an. Anders als viele bezahlte Entwickler arbeiten Linux-Programmierer oft an Werkzeugen, die sie selbst brauchen und lieben – was die hohe Qualität der Software erklärt.</p><p>Statt ein völlig neues Programm zu schreiben, suchte er nach einer guten Basis. Große Programmierer zeichnen konstruktive Faulheit aus: Sie beginnen lieber mit einer brauchbaren Vorlage als bei null. Er fand neun Kandidaten und entschied sich zunächst für „fetchpop“, das er um die Adressumschreibung erweiterte. Später entdeckte er „popclient“ von Carl Harris – professioneller programmiert, aber ohne einige wichtige Funktionen. Nach kurzem Zögern wechselte er, getrieben von der Einsicht, dass man ein Problem oft erst nach der ersten Lösung wirklich versteht und beim zweiten Mal richtig machen kann. Er übernahm schließlich die Pflege von popclient, und das Projekt wuchs über bloße Patches hinaus. Carl Harris’ Haltung war vorbildlich: Beide wollten die beste Lösung, und sobald der Autor Vertrauen bewiesen hatte, übergab Carl das Projekt bereitwillig.</p></div>
+    </div>
+  </details>
+</li>
+      <li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">The Importance of Having Users</span>
+      <a class="toc-link toc-book-link" href="chapters/03-the-importance-of-having-users.html" aria-label="Kapitel öffnen">📖</a>
+    </summary>
+    <div class="toc-panel">
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt"><p>Mit der Übernahme von popclient erbte ich nicht nur Code, sondern vor allem dessen Nutzerbasis. Nutzer sind ein großer Gewinn: Sie zeigen nicht nur, dass man etwas richtig gemacht hat, sondern können bei guter Pflege zu Mitentwicklern werden. Eine Stärke der Unix-Tradition, die Linux glücklich ausreizt, ist, dass viele Nutzer selbst Hacker sind. Da der Quellcode offen liegt, können sie Fehler diagnostizieren, Korrekturen vorschlagen und den Code schneller verbessern, als man es allein könnte.</p><p>Die Wirkung dieses Effekts wird leicht unterschätzt. Fast alle in der Open-Source-Welt haben massiv verkannt, wie gut er mit der Nutzerzahl und gegen Systemkomplexität skaliert – bis Linus Torvalds uns eines Besseren belehrte. Sein klügster Hack war nicht der Linux-Kernel selbst, sondern das Entwicklungsmodell. Er selbst sagt dazu: „Ich bin ein sehr fauler Mensch, der gerne Anerkennung für Dinge bekommt, die andere tatsächlich tun.“ Eine listige Faulheit.</p><p>Ein Vorgänger dieser Methode findet sich in der Entwicklung der GNU Emacs Lisp-Bibliothek. Anders als der kathedralenartige Emacs-C-Kern war die Lisp-Code-Entwicklung fließend und nutzergetrieben. Ideen und Prototypen wurden oft drei- oder viermal umgeschrieben, und lose Zusammenarbeit über das Internet war üblich. Mein eigener erfolgreichster Hack vor fetchmail, der Emacs VC-Modus, entstand genau so: eine Zusammenarbeit per E-Mail mit drei anderen, von denen ich nur einen je traf. Der Erfolg kam, weil Emacs Lisp-Code schnelle Release-Test-Verbesserungs-Zyklen erlaubte.</p><p>Diese zweistufige Architektur – kathedralenartiger Kern und bazarartiger Werkzeugkasten – findet sich auch bei kommerziellen Produkten wie MATLAB. Nutzer solcher Werkzeuge berichten einhellig, dass die meiste Innovation im offenen Teil stattfindet, wo eine große, vielfältige Gemeinschaft daran tüfteln kann.</p></div>
+    </div>
+  </details>
+</li>
+      <li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">Release Early, Release Often</span>
+      <a class="toc-link toc-book-link" href="chapters/04-release-early-release-often.html" aria-label="Kapitel öffnen">📖</a>
+    </summary>
+    <div class="toc-panel">
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt"><p>Frühe und häufige Veröffentlichungen sind ein entscheidender Bestandteil des Linux-Entwicklungsmodells. Die meisten Entwickler, mich eingeschlossen, hielten dies lange für falsch bei größeren Projekten, da frühe Versionen zwangsläufig fehlerhaft sind und die Geduld der Nutzer erschöpfen. Diese Überzeugung verstärkte das kathedralenartige Bauen: Man veröffentlichte nur alle sechs Monate und arbeitete dazwischen wie ein Besessener am Debuggen.</p><p>Linus Torvalds’ Ansatz war das genaue Gegenteil. Seine Innovation lag nicht in schnellen Veröffentlichungen an sich – das gab es in der Unix-Welt schon lange –, sondern darin, diese Intensität auf die Komplexität dessen abzustimmen, was er entwickelte. Er behandelte seine Nutzer als Mitentwickler, indem er sie durch ständige Verbesserungen belohnte und motivierte. Sein Ziel war es, die Anzahl der Arbeitsstunden für Debugging und Entwicklung zu maximieren.</p><p>Daraus leitet sich Linus’ Gesetz ab: „Bei genügend vielen Augen sind alle Fehler oberflächlich.“ Im Kathedralenbau gelten Fehler als tückisch und tief; man braucht monatelange Prüfung durch wenige, um sie alle zu finden. Im Basar-Modell dagegen geht man davon aus, dass Fehler schnell oberflächlich werden, wenn tausend eifrige Mitentwickler jede neue Version bearbeiten. Debugging ist parallelisierbar, da es keine nennenswerte Koordination zwischen den Debuggern erfordert.</p><p>Diese Erkenntnis wird durch den Delphi-Effekt gestützt: Die gemittelte Meinung vieler Beobachter ist zuverlässiger als die eines einzelnen. Hinzu kommt, dass die Mitwirkenden selbstselektiert sind – nur wer wirklich interessiert ist und brauchbare Lösungen findet, beteiligt sich. Linus sichert sich zudem ab, indem er Kernel-Versionen in stabil und experimentell unterteilt, sodass Nutzer wählen können.</p></div>
+    </div>
+  </details>
+</li>
+      <li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">How Many Eyeballs Tame Complexity</span>
+      <a class="toc-link toc-book-link" href="chapters/05-how-many-eyeballs-tame-complexity.html" aria-label="Kapitel öffnen">📖</a>
+    </summary>
+    <div class="toc-panel">
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt"><p>Der Basar-Stil beschleunigt das Debuggen nicht nur im Großen, sondern hat handfeste Mechanismen auf der täglichen Arbeitsebene. Ein zentraler Punkt ist, warum Fehlermeldungen von Nutzern ohne Quellcode-Kenntnis meist wenig nützen: Sie berichten nur äußere Symptome, lassen Hintergrunddaten weg und liefern selten eine zuverlässige Anleitung zur Fehlerwiederholung. Das Problem ist ein Bruch zwischen dem mentalen Modell des Testers (außen) und des Entwicklers (innen). In der geschlossenen Entwicklung reden sie aneinander vorbei.</p><p>Open Source löst diesen Knoten, indem Tester und Entwickler eine gemeinsame, am Quellcode verankerte Vorstellung aufbauen. Ein Bericht, der direkt auf eine Quellcode-Stelle verweist – etwa „Grenzproblem in Zeile nnn“ –, spart enorme Zeit. Der Entwickler kann den Fehler oft sofort eingrenzen und beheben. Diese Quellcode-Nähe beider Seiten schont die Zeit der Kernentwickler, selbst bei vielen Mitwirkenden.</p><p>Ein weiterer zeitsparender Faktor ist die Kommunikationsstruktur. Typische Open-Source-Projekte haben einen kleinen Kern (ein bis drei Entwickler) und einen großen Hof von Testern und Mitwirkenden. Brooks’ Gesetz, wonach die Komplexität mit dem Quadrat der Entwicklerzahl steigt, gilt nur unter der Annahme eines vollständigen Kommunikationsgraphen. Im Basar-Modell arbeiten die Hof-Entwickler weitgehend unabhängig an parallelen Teilaufgaben; nur der Kern trägt die vollen Brooks’schen Kosten.</p><p>Schließlich sind mehrstufige Fehler – solche mit vielen möglichen Symptomen – besonders effizient zu jagen. Ein Tester, der eine quellcode-nahe Vermutung liefert, kann dem Entwickler den entscheidenden Hinweis auf eine ganze Reihe von Symptomen geben. Bei vielen parallelen Testern und häufigen Veröffentlichungen findet fast immer jemand den einfachsten Pfad zum Fehler, und der Maintainer kann schnell eine neue Version ausliefern, bevor andere ihre schwierigeren Spuren weiterverfolgen.</p></div>
+    </div>
+  </details>
+</li>
+      <li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">When Is a Rose Not a Rose?</span>
+      <a class="toc-link toc-book-link" href="chapters/06-when-is-a-rose-not-a-rose.html" aria-label="Kapitel öffnen">📖</a>
+    </summary>
+    <div class="toc-panel">
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt"><p>Nachdem ich Linus&#39; Verhalten studiert und eine Theorie über dessen Erfolg entwickelt hatte, entschied ich mich bewusst, diese Theorie an meinem neuen, wenn auch weit weniger komplexen Projekt zu testen. Zunächst reorganisierte und vereinfachte ich popclient grundlegend. Carl Harris&#39; Implementierung war solide, aber unnötig komplex: Er behandelte den Code als zentral und die Datenstrukturen als bloße Unterstützung. Ich hingegen wollte das Programm vollständig verstehen, denn es macht keinen Spaß, Fehler in einem Programm zu beheben, das man nicht durchschaut.</p><p>Im ersten Monat folgte ich im Wesentlichen Carls grundlegendem Design. Die erste ernsthafte Änderung war die Integration von IMAP-Unterstützung, indem ich die Protokollmaschinen in einen generischen Treiber und drei Methodentabellen umorganisierte. Dies veranschaulicht ein allgemeines Prinzip, das Brooks bereits formulierte: Zeige mir deine Flussdiagramme und verstecke deine Tabellen, und ich werde weiterhin verwirrt sein. Zeige mir deine Tabellen, und ich werde dein Flussdiagramm meist nicht brauchen.</p><p>Nach etwa sechs Wochen dachte ich über eine Namensänderung nach, zögerte aber, weil mein Design noch nichts wirklich Neues bot. Das änderte sich radikal, als popclient lernte, abgerufene E-Mails an den SMTP-Port weiterzuleiten. Wie testete ich nun meine Theorie über Linus&#39; Erfolg? Ich veröffentlichte früh und oft, erweiterte meine Beta-Liste um jeden, der mich kontaktierte, verschickte gesprächige Ankündigungen und hörte auf meine Beta-Tester, befragte sie zu Designentscheidungen und lobte sie für Patches und Feedback.</p><p>Der Erfolg war sofort spürbar: Ich erhielt Bugmeldungen von einer Qualität, um die mich die meisten Entwickler beneiden würden, oft mit guten Lösungen. Die Beta-Liste wuchs auf 287 Mitglieder an. Interessanterweise begann die Liste später zu schrumpfen, weil einige Nutzer darum baten, ausgetragen zu werden – fetchmail funktionierte für sie so gut, dass sie die Listendiskussionen nicht mehr brauchten.</p></div>
+    </div>
+  </details>
+</li>
+      <li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">Popclient becomes Fetchmail</span>
+      <a class="toc-link toc-book-link" href="chapters/07-popclient-becomes-fetchmail.html" aria-label="Kapitel öffnen">📖</a>
+    </summary>
+    <div class="toc-panel">
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt"><p>Der entscheidende Wendepunkt kam, als Harry Hochheiser mir seinen Code für die SMTP-Weiterleitung schickte. Mir wurde sofort klar, dass eine zuverlässige Umsetzung dieser Funktion alle anderen Zustellungsmodi überflüssig machen würde. Bisher hatte ich popclient als Kombination aus Mail-Transport-Agent (MTA) und lokaler Zustellinstanz (MDA) entwickelt, was zu einem unübersichtlichen Design mit zu vielen Optionen geführt hatte. Mit SMTP-Weiterleitung konnte ich die MDA-Funktionen aufgeben und das Programm als reinen MTA betreiben, der die Zustellung an andere Programme delegiert – genau wie sendmail.</p><p>Dieses Konzept war der größte Gewinn aus meinem bewussten Versuch, Linus&#39; Methoden nachzuahmen: Ein Nutzer gab mir die Idee, ich musste nur die Konsequenzen verstehen. Als ich dann selbstkritisch und ehrlich zugab, wie viel ich anderen verdankte, behandelte mich die Welt, als hätte ich alles selbst erfunden – ähnlich wie bei Linus Torvalds.</p><p>Die eigentliche Lehre war jedoch eine grundsätzliche: Wenn man bei der Entwicklung gegen eine Wand läuft, sollte man nicht fragen, ob man die richtige Antwort hat, sondern ob man die richtige Frage stellt. Ich hatte das Problem neu gerahmt: SMTP-Weiterleitung zum Standard machen, alle anderen Zustellungsmodi entfernen. Zwar zögerte ich wegen der Langzeitnutzer, doch die Vorteile waren enorm: Der Code wurde schlanker, die Konfiguration einfacher, Mailverlust unmöglich und die Handbuchseite kürzer. Die Moral: Zögere nicht, überholte Funktionen wegzuwerfen, wenn es die Effektivität nicht beeinträchtigt. Als der Code besser und einfacher wurde, wusste ich, dass er richtig war. Das Design hatte eine eigene Identität gewonnen, und ich benannte das Programm in fetchmail um.</p></div>
+    </div>
+  </details>
+</li>
+      <li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">Fetchmail Grows Up</span>
+      <a class="toc-link toc-book-link" href="chapters/08-fetchmail-grows-up.html" aria-label="Kapitel öffnen">📖</a>
+    </summary>
+    <div class="toc-panel">
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt"><p>Mir wurde allmählich klar, dass ich kein triviales persönliches Programm mehr in den Händen hielt, sondern etwas, das jeder Unix-Hacker mit einer Mailverbindung wirklich braucht. Mit der SMTP-Weiterleitung war fetchmail auf dem Weg, ein „Kategorien-Killer“ zu werden – ein Programm, das seine Nische so gut ausfüllt, dass Alternativen nicht nur verdrängt, sondern fast vergessen werden.</p><p>Ein solches Ergebnis kann man nicht planen. Man wird von Designideen hineingezogen, die hinterher unvermeidlich erscheinen. Der einzige Weg dorthin ist, viele Ideen zu haben oder die guten Ideen anderer weiterzutreiben, als die Urheber es für möglich hielten – so wie Linus Torvalds mit Minix oder ich mit den Ideen von Carl Harris und Harry Hochheiser.</p><p>Der Erfolg zwang mich, meine Standards zu erhöhen. Ich musste nicht nur für meine eigenen Bedürfnisse schreiben, sondern auch Funktionen für andere einbauen, während das Programm einfach und robust blieb. Die wichtigste Neuerung war die Mehrfach-Empfänger-Unterstützung (Multidrop): das Abrufen von Mail aus Postfächern, die Nachrichten für eine Gruppe von Benutzern sammeln, und die Weiterleitung an die einzelnen Empfänger. Ich fügte sie teils auf Drängen von Nutzern ein, hauptsächlich aber, um durch die vollständige Adressverarbeitung Fehler im Einfach-Empfänger-Code zu finden. Das erwies sich als ausgezeichnete Designentscheidung: Eine unerwartete Anwendung ist der Betrieb von Mailinglisten auf der Client-Seite der Internetverbindung, ohne ständigen Zugriff auf die Alias-Dateien des Providers.</p><p>Weitere Änderungen auf Wunsch der Beta-Tester waren die Unterstützung von 8-Bit-MIME, die mir leicht fiel, weil ich den Code von Anfang an 8-Bit-sauber gehalten hatte, und eine Option zur Begrenzung der abgerufenen Nachrichten pro Sitzung – letztere gegen mein anfängliches Zögern, denn wenn man für die Welt schreibt, muss man auf seine Kunden hören, auch wenn sie nicht in Geld bezahlen.</p></div>
+    </div>
+  </details>
+</li>
+      <li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">A Few More Lessons from Fetchmail</span>
+      <a class="toc-link toc-book-link" href="chapters/09-a-few-more-lessons-from-fetchmail.html" aria-label="Kapitel öffnen">📖</a>
+    </summary>
+    <div class="toc-panel">
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt"><p>Im Kapitel über weitere Lehren aus Fetchmail geht es zunächst um die Syntax der Steuerdatei. Der Autor experimentierte mit optionalen „Rausch“-Schlüsselwörtern, die vom Parser ignoriert werden, aber die Konfiguration lesbarer machen. Obwohl er normalerweise keine englischähnlichen Syntaxen mag, weil sie oft verwirrend sind, funktioniert dies hier, weil der Sprachbereich extrem eingeschränkt ist. Die Lektion: Bei einfachen, begrenzten Anwendungen kann eine englischähnliche Syntax die Bedienung erleichtern, ohne die Komplexität unnötig zu erhöhen.</p><p>Eine weitere Lehre betrifft die Sicherheit durch Unklarheit. Nutzer baten um verschlüsselte Passwörter in der Konfigurationsdatei. Der Autor lehnte ab, weil dies keinen echten Schutz bietet: Wer die Datei lesen kann, kann auch Fetchmail als der Nutzer ausführen oder den Entschlüsselungscode aus dem Programm extrahieren. Passwortverschlüsselung hätte nur ein falsches Sicherheitsgefühl erzeugt. Die allgemeine Regel: Sicherheitsmaßnahmen, die keinen echten Schutz bieten, sind schlimmer als gar keine, weil sie zur Sorglosigkeit verleiten.</p></div>
+    </div>
+  </details>
+</li>
+      <li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">Necessary Preconditions for the Bazaar Style</span>
+      <a class="toc-link toc-book-link" href="chapters/10-necessary-preconditions-for-the-bazaar-style.html" aria-label="Kapitel öffnen">📖</a>
+    </summary>
+    <div class="toc-panel">
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt"><p>Ein Bazar-Projekt kann nicht von Grund auf neu entstehen. Man braucht etwas Lauffähiges, das potenzielle Mitentwickler testen und verbessern können. Entscheidend ist eine plausible Verheißung: Das Programm muss laufen und die Überzeugung wecken, dass daraus etwas Großartiges werden kann.</p><p>Die entscheidende Fähigkeit des Projektleiters ist nicht außergewöhnliche Design-Originalität, sondern die Fähigkeit, gute Designideen anderer zu erkennen und zu integrieren. Sowohl Linux als auch fetchmail zeigen dies: Linus Torvalds erkannte brillante Designkonzepte und baute sie ein, und die beste Idee für fetchmail – die SMTP-Weiterleitung – stammte von einem Nutzer. Originalität kann sogar schaden, weil sie zur Gewohnheit wird, Dinge unnötig kompliziert zu machen, statt sie robust und einfach zu halten.</p><p>Noch wichtiger als Design-Klugheit sind Menschen- und Kommunikationsfähigkeiten. Ein Bazar-Koordinator muss Menschen anziehen, für die Arbeit begeistern und bei Laune halten. Technische Brillanz allein reicht nicht; die ausgestrahlte Persönlichkeit ist entscheidend. Linus ist ein sympathischer Mensch, der andere zur Mitarbeit motiviert, und der Autor selbst ist ein energiegeladener Extravertierter, der Menschen für sich einnimmt. Ohne ein Mindestmaß an Charme und sozialem Geschick funktioniert das Bazar-Modell nicht.</p></div>
+    </div>
+  </details>
+</li>
+      <li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">The Social Context of Open-Source Software</span>
+      <a class="toc-link toc-book-link" href="chapters/11-the-social-context-of-open-source-software.html" aria-label="Kapitel öffnen">📖</a>
+    </summary>
+    <div class="toc-panel">
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt"><p>Die besten Hacks entstehen als persönliche Lösungen für alltägliche Probleme und verbreiten sich, weil das Problem typisch für viele Nutzer ist. Das führt zur entscheidenden Frage: Wie entwickelt sich Software weiter, wenn eine große, aktive Gemeinschaft von Nutzern und Mitentwicklern daran arbeitet?</p><p>Fred Brooks&#39; Gesetz, wonach zusätzliche Entwickler ein spätes Projekt nur noch später machen, gilt in der geschlossenen Entwicklung. Doch der Bazar-Methode gelingt es, diesen Effekt stark abzumildern. Gerald Weinbergs Konzept der „egolosen Programmierung“ – bei der Entwickler ihren Code nicht verteidigen, sondern andere zur Fehlersuche ermutigen – wird hier voll ausgeschöpft. Zwar bleibt Programmieren eine einsame Tätigkeit, doch die wirklich großen Hacks entstehen, wenn man die Aufmerksamkeit ganzer Gemeinschaften nutzt.</p><p>Linux war das erste Projekt, das bewusst die ganze Welt als Talentpool erschloss. Möglich wurde dies durch das billige Internet, aber auch durch eine neue Führungsweise. Diese kann nicht auf Befehl und Disziplin beruhen, sondern auf dem Prinzip des gemeinsamen Verständnisses, wie es der Anarchist Kropotkin beschrieb. Die Linux-Welt verhält sich wie ein freier Markt: egoistische Akteure maximieren ihren Nutzen – hier nicht Geld, sondern „Egoboo“, also die Steigerung des eigenen Ansehens. Linus Torvalds schuf einen effizienten Markt für dieses Egoboo, indem er die Eigeninteressen der Hacker mit schwierigen, nur durch Zusammenarbeit erreichbaren Zielen verknüpfte.</p><p>Die Zukunft der Open-Source-Software gehört denen, die das Bazar-Modell beherrschen: Sie beginnen mit individueller Vision und Brillanz und verstärken diese durch den Aufbau freiwilliger Gemeinschaften. Die geschlossene Welt kann diesen evolutionären Wettlauf nicht gewinnen, weil sie niemals die schiere Menge an Fachwissen aufbieten kann, die eine Open-Source-Gemeinschaft zu mobilieren vermag.</p></div>
+    </div>
+  </details>
+</li>
+      <li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">On Management and the Maginot Line</span>
+      <a class="toc-link toc-book-link" href="chapters/12-on-management-and-the-maginot-line.html" aria-label="Kapitel öffnen">📖</a>
+    </summary>
+    <div class="toc-panel">
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt"><p>Die Skeptiker des Bazar-Modells behaupten, dass die Vorteile konventionellen Managements unterschätzt würden. Doch dieser Einwand übersieht, dass Open-Source-Projekte über lange Zeiträume hinweg eine konsistente Ausrichtung bewahren können, wie die 15-jährige Entwicklung von GNU Emacs zeigt. Wenn solche Projekte ohne die üblichen Anreizstrukturen und Kontrollen auskommen, stellt sich die Frage, was das enorme Management-Overhead eigentlich bringt. Es liefert weder verlässliche Termin- noch Budgettreue, noch Anpassungsfähigkeit – in letzterer Hinsicht ist die Open-Source-Welt überlegen.</p><p>Die fünf klassischen Managementfunktionen – Zieldefinition, Überwachung, Motivation, Organisation und Ressourcenbeschaffung – erweisen sich im Open-Source-Kontext als seltsam irrelevant. Ressourcenbeschaffung entfällt weitgehend, da Freiwillige eigene Mittel mitbringen und der einzige knappe Faktor qualifizierte Aufmerksamkeit ist. Die Selbstselektion der Entwickler sorgt für höchste Produktivität, während konventionelle Manager oft die unteren 95% organisieren müssen. Die Motivationsfunktion gleicht einer Maginot-Linie: Sie ist nur solange nötig, wie Probleme als langweilig gelten. Sobald jemand aus echter Faszination daran arbeitet, ist Geld allein ein schwächerer Antrieb.</p><p>Die Überwachungsfunktion wird durch dezentrale Peer-Review übertroffen. Und die Zieldefinition? 60 bis 75% aller konventionellen Projekte werden nie fertig oder von den Nutzern abgelehnt. Wenn Manager selbst ihre eigenen Prozesse verachten, wie die Beliebtheit von Dilbert-Cartoons zeigt, dann spricht das Bände. Die entscheidende Lehre ist: Freude, Humor und Spiel sind wirtschaftliche Vermögenswerte. Spielerisches Schaffen erweist sich als die effizienteste Form kreativer Arbeit.</p></div>
+    </div>
+  </details>
+</li>
+      <li>
+  <details class="toc-details">
+    <summary class="toc-summary-line">
+      <span class="toc-arrow toc-arrow-closed" aria-hidden="true">►</span>
+      <span class="toc-arrow toc-arrow-open" aria-hidden="true">▼</span>
+      <span class="toc-title-text">Epilog: Netscape Embraces the Bazaar</span>
+      <a class="toc-link toc-book-link" href="chapters/13-epilog-netscape-embraces-the-bazaar.html" aria-label="Kapitel öffnen">📖</a>
+    </summary>
+    <div class="toc-panel">
+      <h3 class="toc-summary-heading">Zusammenfassung</h3>
+      <div class="toc-excerpt"><p>Netscape Communications kündigte am 22. Januar 1998 an, den Quellcode von Netscape Communicator freizugeben – etwa sieben Monate nach der Veröffentlichung von „The Cathedral and the Bazaar“. Eric Hahn, Chief Technology Officer bei Netscape, schrieb dem Autor, dass dessen Gedanken und Schriften eine grundlegende Inspiration für diese Entscheidung gewesen seien. Eine Woche später nahm der Autor an einer Strategiekonferenz in Silicon Valley teil, bei der gemeinsam die Lizenz und die Strategie für die Quellcode-Freigabe entwickelt wurden.</p><p>Der Autor sah darin einen groß angelegten Test des Basar-Modells in der kommerziellen Welt. Er warnte, dass ein Scheitern von Netscape das Open-Source-Konzept für ein Jahrzehnt diskreditieren könnte. Gleichzeitig bot sich die Chance, sich zu beweisen und eine längst überfällige Revolution in der Softwareindustrie auszulösen.</p><p>Die Entwicklung des späteren Mozilla-Projekts war ein nur bedingter Erfolg. Es erreichte das ursprüngliche Ziel, Microsoft ein Monopol auf dem Browsermarkt zu verwehren, und brachte den Gecko-Rendering-Engine hervor. Allerdings blieb der erhoffte massive Entwicklungsbeitrag von außen aus. Ein Grund: Die Mozilla-Distribution verletzte eine Grundregel des Basar-Modells – sie lieferte keine lauffähige Version, die potenzielle Mitentwickler sofort testen konnten. Zudem erschien erst zweieinhalb Jahre nach dem Start ein produktionsreifer Browser. Ein Projektleiter trat 1999 zurück und beklagte schlechtes Management und verpasste Chancen. Er stellte richtig: „Open Source ist keine magische Feenstaub.“</p><p>Dennoch hat die Open-Source-Idee seither Erfolge erzielt und Unterstützer gefunden. Seit der Netscape-Freigabe erlebte das Open-Source-Entwicklungsmodell eine enorme Explosion des Interesses, angetrieben durch den anhaltenden Erfolg von Linux. Der Trend, den Mozilla auslöste, setzt sich beschleunigt fort.</p></div>
+    </div>
+  </details>
+</li>
+    </ul>
+  </nav>
+</main>
+  <script src="../../assets/reader.js" defer></script>
+<script>
+/* ragkeep-toc-toggle-handler */
+(function() {
+  document.querySelectorAll('nav.toc a.toc-book-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  });
+})();
+</script>
+</body>
+</html>

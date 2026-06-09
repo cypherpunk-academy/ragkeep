@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>When Is a Rose Not a Rose?</title>
+  <link rel="stylesheet" href="../../../assets/book.css" />
+</head>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <article class="book-chapter" data-chapter="6" id="c-6">
+    <h1 class="book-chapter-title" id="c-6-title" data-slug="when-is-a-rose-not-a-rose">When Is a Rose Not a Rose?</h1>
+    <section class="book-paragraph" id="p-6-1">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-6-1">1|</a>
+        <span class="book-sentence" id="s-6-1-1-p0">Ha­ving stu­di­ed Linus's be­ha­vi­or and for­med a theo­ry about why it was suc­cess­ful, I made a con­scious de­ci­si­on to test this theo­ry on my new (ad­mit­ted­ly much less com­plex and am­bi­tious) pro­ject.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-2">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-6-2">2|</a>
+        <span class="book-sentence" id="s-6-2-1-p0">But the first thing I did was re­or­ga­ni­ze and sim­pli­fy pop­cli­ent a lot.</span>
+        
+        <span class="book-sentence" id="s-6-2-2-p0">Carl Har­ris's im­ple­men­ta­ti­on was very sound, but ex­hi­bi­ted a kind of un­ne­cessa­ry com­ple­xi­ty com­mon to many C pro­gramm­ers.</span>
+        
+        <span class="book-sentence" id="s-6-2-3-p0">He trea­ted the code as cen­tral and the data struc­tu­res as sup­port for the code.</span>
+        
+        <span class="book-sentence" id="s-6-2-4-p0">Ass a re­sult, the code was be­au­ti­ful but the data struc­tu­re de­sign ad-hoc and ra­ther ugly (at least by the high stan­dards of this ve­te­ran LISP ha­cker).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-3">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-6-3">3|</a>
+        <span class="book-sentence" id="s-6-3-1-p0">I had ano­ther pur­po­se for re­wri­ting be­si­des im­pro­ving the code and the data struc­tu­re de­sign, howe­ver.</span>
+        
+        <span class="book-sentence" id="s-6-3-2-p0">That was to evol­ve it into so­me­thing I un­ders­tood com­ple­te­ly.</span>
+        
+        <span class="book-sentence" id="s-6-3-3-p0">It's no fun to be re­s­pon­si­ble for fi­xing bugs in a pro­gram you don't un­der­stand.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-4">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-6-4">4|</a>
+        <span class="book-sentence" id="s-6-4-1-p0">For the first month or so, then, I was sim­ply fol­lo­wing out the im­pli­ca­ti­ons of Carl's basic de­sign.</span>
+        
+        <span class="book-sentence" id="s-6-4-2-p0">The first se­rious chan­ge I made was to add IMAP sup­port.</span>
+        
+        <span class="book-sentence" id="s-6-4-3-p0">I did this by re­or­ga­ni­zing the pro­to­col ma­chi­nes into a ge­ne­ric dri­ver and three me­thod ta­bles (for POP2, POP3, and IMAP).</span>
+        
+        <span class="book-sentence" id="s-6-4-4-p0">This and the pre­vious chan­ges il­lus­tra­te a ge­ne­ral prin­ciple that's good for pro­gramm­ers to keep in mind, es­pe­cial­ly in lan­gua­ges like C that don't na­tu­ral­ly do dy­na­mic typ­ing:</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-6-1" data-slug="9-smart-data-structures-and-dumb-code-works-a-lot-better-than-the-other-way-around">9. Smart data structures and dumb code works a lot better than the other way around.</h2>
+    <section class="book-paragraph" id="p-6-5">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-6-5">5|</a>
+        <span class="book-sentence" id="s-6-5-1-p0">Brooks, Chap­ter 9:</span>
+        
+        <span class="book-sentence" id="s-6-5-1-p1-q"><q author="Fre­de­rick P. Brooks" book-title="The My­thi­cal Man-Month" part="1">Show me your flow­chart and con­ce­al your ta­bles, and I shall con­ti­nue to be mys­ti­fied. Show me your ta­bles, and I won't usual­ly need your flow­chart; it'll be ob­vious.</q></span>
+        
+        <span class="book-sentence" id="s-6-5-1-p2">Al­lo­wing for thir­ty years of ter­mi­no­lo­gi­cal/cul­tu­ral shift, it's the same point.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-6">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-6-6">6|</a>
+        <span class="book-sentence" id="s-6-6-1-p0">At this point (early Sep­tem­ber 1996, about six weeks from zero) I star­ted thin­king that a name chan­ge might be in order—after all, it wasn't just a POP cli­ent any more.</span>
+        
+        <span class="book-sentence" id="s-6-6-2-p0">But I he­si­ta­ted, be­cau­se there was as yet not­hing ge­nui­nely new in the de­sign.</span>
+        
+        <span class="book-sentence" id="s-6-6-3-p0">My ver­si­on of pop­cli­ent had yet to de­ve­lop an iden­ti­ty of its own.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-7">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-6-7">7|</a>
+        <span class="book-sentence" id="s-6-7-1-p0">That chan­ged, ra­di­cal­ly, when pop­cli­ent lear­ned how to for­ward fet­ched mail to the SMTP port.</span>
+        
+        <span class="book-sentence" id="s-6-7-2-p0">I'll get to that in a mo­ment.</span>
+        
+        <span class="book-sentence" id="s-6-7-3-p0">But first: I said ear­lier that I'd de­ci­ded to use this pro­ject to test my theo­ry about what Linus Tor­valds had done right.</span>
+        
+        <span class="book-sentence" id="s-6-7-4-p0">How (you may well ask) did I do that?</span>
+        
+        <span class="book-sentence" id="s-6-7-5-p0">In these ways:</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-8">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-6-8">8|</a>
+        <span class="book-sentence" id="s-6-8-1-p0">I re­leased early and often (al­most never less often than every ten days; du­ring pe­ri­ods of in­ten­se de­ve­lop­ment, once a day).</span>
+        
+        <span class="book-sentence" id="s-6-8-2-p0">I grew my beta list by ad­ding to it ever­yo­ne who con­tac­ted me about fetchmail.</span>
+        
+        <span class="book-sentence" id="s-6-8-3-p0">I sent chat­ty an­noun­ce­ments to the beta list whe­ne­ver I re­leased, en­cou­ra­ging peop­le to par­ti­ci­pa­te.</span>
+        
+        <span class="book-sentence" id="s-6-8-4-p0">And I lis­tened to my beta-tes­ters, pol­ling them about de­sign de­ci­si­ons and stro­king them whe­ne­ver they sent in patches and feed­back.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-9">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-6-9">9|</a>
+        <span class="book-sentence" id="s-6-9-1-p0">The pay­off from these sim­ple mea­su­res was im­me­dia­te.</span>
+        
+        <span class="book-sentence" id="s-6-9-2-p0">From the be­gin­ning of the pro­ject, I got bug re­ports of a qua­li­ty most de­ve­l­o­pers would kill for, often with good fixes at­ta­ched.</span>
+        
+        <span class="book-sentence" id="s-6-9-3-p0">I got thought­ful cri­ti­cism, I got fan mail, I got in­tel­li­gent fea­ture sug­ges­ti­ons.</span>
+        
+        <span class="book-sentence" id="s-6-9-4-p0">Which leads to:</span>
+        
+      </p>
+    </section>
+    <h2 class="book-subheading" id="h2-6-2" data-slug="10-if-you-treat-your-beta-testers-as-if-they-re-your-most-valuable-resource-they-will-respond-by-becoming-your-most-valuable-resource">10. If you treat your beta-testers as if they're your most valuable resource, they will respond by becoming your most valuable resource.</h2>
+    <section class="book-paragraph" id="p-6-10">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-6-10">10|</a>
+        <span class="book-sentence" id="s-6-10-1-p0">One in­te­res­ting mea­su­re of fetchmail's suc­cess is the sheer size of the pro­ject beta list, fetchmail-fri­ends.</span>
+        
+        <span class="book-sentence" id="s-6-10-2-p0">At the time of la­test re­vi­si­on of this paper (No­vem­ber 2000) it has 287 mem­bers and is ad­ding two or three a week.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-6-11">
+      <p class="book-paragraph-text">
+        <a class="p-num" href="#p-6-11">11|</a>
+        <span class="book-sentence" id="s-6-11-1-p0">Ac­tual­ly, when I re­vi­sed in late May 1997 I found the list was be­gin­ning to lose mem­bers from its high of close to 300 for an in­te­res­ting re­a­son.</span>
+        
+        <span class="book-sentence" id="s-6-11-2-p0">Se­veral peop­le have asked me to un­sub­scri­be them be­cau­se fetchmail is working so well for them that they no lon­ger need to see the list traf­fic!</span>
+        
+        <span class="book-sentence" id="s-6-11-3-p0">Per­haps this is part of the nor­mal life-cycle of a ma­tu­re ba­zaar-style pro­ject.</span>
+        
+      </p>
+    </section>
+  </article>
+  <nav class="chapter-nav book-chapter-nav">
+    <a class="nav-btn prev" href="05-how-many-eyeballs-tame-complexity.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="07-popclient-becomes-fetchmail.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
+</main>
+  <script src="../../../assets/reader.js" defer></script>
+</body>
+</html>

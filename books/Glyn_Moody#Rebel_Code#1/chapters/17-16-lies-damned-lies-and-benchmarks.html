@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="de" class="book-page" data-theme="default" data-para="margin" data-width="normal">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>16 - Lies, Damned Lies, and Benchmarks</title>
+  <link rel="stylesheet" href="../../../assets/book.css" />
+</head>
+<body class="book-body">
+<main class="book-main">
+  <button id="themeToggle" class="reader-toggle reader-toggle-theme" aria-label="Theme umschalten" title="Theme umschalten">🌙</button>
+  <button id="sizeToggle" class="reader-toggle reader-toggle-size" aria-label="Schriftgröße umschalten" title="Schriftgröße umschalten">A</button>
+  <article class="book-chapter" data-chapter="17" id="c-17">
+    <h1 class="book-chapter-title" id="c-17-title" data-slug="16-lies-damned-lies-and-benchmarks">16 - Lies, Damned Lies, and Benchmarks</h1>
+    <section class="book-paragraph" id="p-17-1">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-1-1-p0">AS THE EVENTS OF 1998 AND 1999 brought GNU/Linux to more peop­le’s at­ten­ti­on, and the gro­wing range of hea­vy­weight ap­p­li­ca­ti­ons made it in­cre­a­sin­gly use­ful as an en­t­er­pri­se-level so­lu­ti­on, a na­tu­ral ques­ti­on posed its­elf: Which was bet­ter for the task—GNU/Linux or Win­dows NT?</span>
+        
+        <span class="book-sentence" id="s-17-1-2-p0">In early 1999, a spate of bench­mark tes­ting broke out as com­pu­ter ma­ga­zi­nes tried to es­ta­blish for the be­ne­fit of their re­a­ders how the two ope­ra­ting sys­tems com­pa­red in raw per­for­mance.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-2">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-2-1-p0">The first of these com­pa­ri­sons ap­peared on 25 Ja­nu­a­ry, in a Ziff-Davis pu­bli­ca­ti­on cal­led Sm@rt Re­sel­ler, a title aimed at the value-added re­sel­ler sec­tor of the com­pu­ter mar­ket.</span>
+        
+        <span class="book-sentence" id="s-17-2-2-p0">GNU/Linux was po­ten­ti­al­ly of great in­te­rest to these re­a­ders be­cau­se their li­ve­lihoods de­pen­ded on crea­ting and sel­ling com­ple­te so­lu­ti­ons to cust­o­m­ers.</span>
+        
+        <span class="book-sentence" id="s-17-2-3-p0">If they could swap in a free ope­ra­ting sys­tem ins­tead of Win­dows NT, and wi­thout sa­cri­fi­cing per­for­mance, their pro­fits might well in­crea­se sub­stan­ti­al­ly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-3">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-3-1-p0">The ar­ti­cle, writ­ten by Ste­ven J. Vaug­han-Ni­chols and Eric Carr, was un­e­qui­vo­cal.</span>
+        
+        <span class="book-sentence" id="s-17-3-2-p0">Its head­line read “Linux Up Close: Time to Switch,” and its opening pa­ra­graphs were equal­ly forth­right: “For­get Linux’s hype.</span>
+        
+        <span class="book-sentence" id="s-17-3-3-p0">For­get Mi­cro­soft Corp.’s ser­ver mar­ket share.</span>
+        
+        <span class="book-sentence" id="s-17-3-4-p0">The bot­tom line, ac­cor­ding to our hands-on ana­ly­sis, is that com­mer­ci­al Linux re­lea­ses can do much more with far less than Win­dows NT Ser­ver can.” Later on, the wri­ters rub­bed it in even more: “Ac­cor­ding to ZD­L­abs’ re­sults, each of the com­mer­ci­al Linux re­lea­ses ate NT’s lunch.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-4">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-4-1-p0">The tests used two bench­marks Ziff-Davis had crea­ted: Web­Bench and Net­Bench.</span>
+        
+        <span class="book-sentence" id="s-17-4-2-p0">The for­mer mea­su­red the per­for­mance of GNU/Linux with the Apa­che Web ser­ver, as com­pa­red to Win­dows NT run­ning Mi­cro­soft’s In­ter­net In­for­ma­ti­on Ser­ver, which was bund­led free with NT.</span>
+        
+        <span class="book-sentence" id="s-17-4-3-p0">Net­Bench tested how well the two sys­tems could send out files to Win­dows PCs.</span>
+        
+        <span class="book-sentence" id="s-17-4-4-p0">Ac­ting as a cen­tral file ser­ver to Win­dows cli­ents was one of Win­dows NT’s prin­ci­pal roles; for GNU/Linux, which was es­sen­ti­al­ly a Unix sys­tem, such ac­tivi­ty was alien.</span>
+        
+        <span class="book-sentence" id="s-17-4-5-p0">That it was pos­si­ble at all was thanks to yet ano­ther piece of free soft­ware.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-5">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-5-1-p0">Cal­led Samba, the pro­gram re­pres­ents one of the best- kept se­crets of the open sour­ce world.</span>
+        
+        <span class="book-sentence" id="s-17-5-2-p0">Its abili­ty to mimic al­most ex­act­ly a Win­dows NT ma­chi­ne ac­ting as a file ser­ver has led to its being in­tro­du­ced sur­rep­ti­tious­ly into thousands of com­pa­nies whose ma­nage­ment have never no­ti­ced for the sim­ple re­a­son that the com­bi­na­ti­on of Samba and GNU/Linux per­forms so flaw­less­ly.</span>
+        
+        <span class="book-sentence" id="s-17-5-3-p0">Samba is pro­bab­ly the re­a­son GNU/Linux sys­tems are first used wi­t­hin com­pa­nies other­wi­se com­mit­ted to pro­prieta­ry soft­ware.</span>
+        
+        <span class="book-sentence" id="s-17-5-4-p0">Ass such, it has play­ed a cru­ci­al role, along with the Apa­che Web ser­ver, in es­ta­blis­hing the cor­po­ra­te creden­ti­als of open sour­ce soft­ware.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-6">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-6-1-p0">The ori­gi­nal aut­hor of Samba is An­d­rew Tridgell, who joi­ned Li­nux­ca­re in 1999 as the star­riest of its star hires.</span>
+        
+        <span class="book-sentence" id="s-17-6-2-p0">He was born in 1967, in Aus­tra­lia, and had been Linus’s host in Can­ber­ra—and the in­di­rect cause of the fa­mous pen­gu­in in­ci­dent.</span>
+        
+        <span class="book-sentence" id="s-17-6-3-p0">Samba was crea­ted to meet a per­so­nal need, as with so much free soft­ware, and al­most ent­i­re­ly by ac­ci­dent.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-7">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-7-1-p0">“The whole thing star­ted back in De­cem­ber 1991; I was a PhD stu­dent in the Aus­tra­li­an Na­tio­nal Uni­ver­si­ty of Can­ber­ra, and es­sen­ti­al­ly I was loo­king for ways of pro­cras­ti­na­ting.</span>
+        
+        <span class="book-sentence" id="s-17-7-2-p0">An op­por­tu­ni­ty came up to beta-test so­me­thing cal­led Win­dex” Tridgell re­calls.</span>
+        
+        <span class="book-sentence" id="s-17-7-3-p0">Win­dex was an X ser­ver for Mi­cro­soft Win­dows (then at ver­si­on 3.0), and al­lo­wed a PC to dis­play pro­grams run­ning on a Unix ser­ver.</span>
+        
+        <span class="book-sentence" id="s-17-7-4-p0">This was pos­si­ble thanks to the in­her­ent­ly net­wor­ked na­tu­re of the X Win­dow sys­tem: Out­put from a pro­gram could be ac­ces­sed over a net­work and dis­play­ed in a win­dow crea­ted by an X ser­ver pro­gram—like Win­dex, say.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-8">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-8-1-p0">But Tridgell had a pro­blem.</span>
+        
+        <span class="book-sentence" id="s-17-8-2-p0">“I was using PC-NFS to con­nect to a Sun sys­tem to share my files,” he ex­plains.</span>
+        
+        <span class="book-sentence" id="s-17-8-3-p0">That is, he was using an al­ter­na­ti­ve way to swap files on his Win­dows PC with the main de­part­ment­al ser­ver; it was awk­ward be­cau­se a key ele­ment of the net­work con­nec­tivi­ty on a PC, the TCP/IP stack, was dif­fe­rent for the two ap­proa­ches.</span>
+        
+        <span class="book-sentence" id="s-17-8-4-p0">To use Win­dex, he had to load its own stack.</span>
+        
+        <span class="book-sentence" id="s-17-8-5-p0">“It had to use the Pa­thworks one, be­cau­se it was writ­ten by Di­gi­tal and Pa­thworks was Di­gi­tal’s im­ple­men­ta­ti­on of TCP/IP for Win­dows.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-9">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-9-1-p0">“So I in­stal­led Pa­thworks [on the PC],” he says, “and I could no lon­ger ac­cess my PC-NFS ser­ver” be­cau­se the stacks were dif­fe­rent.</span>
+        
+        <span class="book-sentence" id="s-17-9-2-p0">At this point, the clas­sic ha­cker idea oc­cur­red to him: “So I thought, well, it can’t be all that hard, the pro­to­col, so maybe I can try and write a ser­ver for SunOS that pro­vi­des the same func­tio­na­li­ty that is pro­vi­ded by a Pa­thworks ser­ver run­ning on a Di­gi­tal Unix box.” By wri­ting some soft­ware for the de­part­ment­al Sun ma­chi­ne, he hoped to be able to swap files with his PC using just Pa­thworks ins­tead of al­ways nee­ding to go back to NFS.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-10">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-10-1-p0">“What I didn’t know was that the [Pa­thworks] pro­to­col wasn’t a pro­prieta­ry Di­gi­tal pro­to­col,” he notes.</span>
+        
+        <span class="book-sentence" id="s-17-10-2-p0">“In fact, the pro­to­col was the same pro­to­col used by Mi­cro­soft in their net­wor­king.</span>
+        
+        <span class="book-sentence" id="s-17-10-3-p0">And I didn’t rea­li­ze that the pro­to­col was cal­led SMB [Ser­ver Mes­sa­ge Block], and I didn’t rea­li­ze that it was a part­ly do­cu­men­ted pro­to­col.</span>
+        
+        <span class="book-sentence" id="s-17-10-4-p0">So, in bliss­ful ignoran­ce, I went and im­ple­men­ted the pro­to­col from the wire,” he con­ti­nues, re­fer­ring to ano­ther clas­sic ha­cker tech­ni­que, “just watching pa­ckets.” By loo­king at what mes­sa­ges were sent over the net­work, Tridgell was able to write some soft­ware to do the same, even though he didn’t know how those mes­sa­ges worked.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-11">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-11-1-p0">“[I] im­ple­men­ted a basic ser­ver, and that took about a week over Christ­mas De­cem­ber ’91,” he re­calls.</span>
+        
+        <span class="book-sentence" id="s-17-11-2-p0">“It’s fun doing things over a Christ­mas break.” Co­in­ci­den­tal­ly, Linus was also ha­ving “fun doing things over a Christ­mas break,” that year; he was ad­ding the Vir­tu­al Me­mo­ry ca­pa­bi­li­ty to his very young Linux ker­nel, which he had begun just a few months be­fo­re.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-12">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-12-1-p0">Once he had writ­ten his ser­ver, Tridgell de­ci­ded to see whe­ther an­yo­ne else was in­te­rested in using it.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-13">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-13-1-p0">So that was sent out to a Pa­thworks mai­ling list, and a num­ber of peop­le were in­te­rested in it and tried it out.</span>
+        
+        <span class="book-sentence" id="s-17-13-2-p0">I re­leased ver­si­on 0.1, then 0.5, wi­t­hin a coup­le of days of each other,” he re­calls.</span>
+        
+        <span class="book-sentence" id="s-17-13-3-p0">But so­me­thing hap­pe­n­ed that cau­sed him to drop the pro­ject: The de­part­ment where he was working chan­ged the hard­ware he was using and he no lon­ger nee­ded his sim­ple Pa­thworks ser­ver pro­gram.</span>
+        
+        <span class="book-sentence" id="s-17-13-4-p0">“So I just stop­ped working on the pro­ject com­ple­te­ly,” he says.</span>
+        
+        <span class="book-sentence" id="s-17-13-5-p0">“I put a note on the FTP site say­ing, ‘If an­yo­ne else wants to take over, then feel free to do so.’” Even though he had re­cei­ved “quite a bit of feed­back,” in­clu­ding se­veral patches, no­bo­dy step­ped for­ward to carry on de­ve­lop­ment, and it see­med as if the pro­ject would go no fur­ther.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-14">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-14-1-p0">GNU/Linux re­vi­ved the pro­ject, which was apt be­cau­se the fu­ture Samba would prove one of its most power­ful al­lies.</span>
+        
+        <span class="book-sentence" id="s-17-14-2-p0">In No­vem­ber 1992, some­bo­dy named Dan Shea­rer sent Tridgell an e-mail about his old Pa­thworks ser­ver.</span>
+        
+        <span class="book-sentence" id="s-17-14-3-p0">“Dan told me ba­si­cal­ly that there was some in­te­rest in porting this thing to Linux,” Tridgell re­calls.</span>
+        
+        <span class="book-sentence" id="s-17-14-4-p0">“So I wrote back and asked him, ‘What’s Linux?’—I’d never heard of it.</span>
+        
+        <span class="book-sentence" id="s-17-14-5-p0">So he told me what Linux was, and I went and down­loa­ded a copy and put it on a PC that I’d got by that time, a 386, and I fell in love with Linux im­me­dia­te­ly.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-15">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-15-1-p0">Ass well as aler­ting him to GNU/Linux, this also rai­sed his con­scious­ness about free soft­ware in ge­ne­ral.</span>
+        
+        <span class="book-sentence" id="s-17-15-2-p0">Even though Tridgell used free soft­ware—for ex­amp­le, he em­ploy­ed Emacs to look at the con­tents of the pa­ckets being sent over the net­work by Pa­thworks—“it was just sort of, oh, there it was, [and] I down­loa­ded it.</span>
+        
+        <span class="book-sentence" id="s-17-15-3-p0">I didn’t think about the whole free soft­ware mo­ve­ment,” he says.</span>
+        
+        <span class="book-sentence" id="s-17-15-4-p0">But after his en­coun­ter with GNU/Linux, this chan­ged.</span>
+        
+        <span class="book-sentence" id="s-17-15-5-p0">“Once I star­ted rea­ding the mai­ling lists, very quick­ly I un­ders­tood what was hap­pe­ning, and wan­ted to par­ti­ci­pa­te.” For­t­u­n­a­te­ly, ano­ther chan­ce event a year later sug­gested a way he might do this.</span>
+        
+        <span class="book-sentence" id="s-17-15-6-p0">“This was about the same time that I set up a litt­le net­work at home.” By now, Tridgell was using GNU/Linux, but his wife had a Mi­cro­soft Win­dows ma­chi­ne.</span>
+        
+        <span class="book-sentence" id="s-17-15-7-p0">The pro­blem was how to net­work the two very dif­fe­rent sys­tems.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-16">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-16-1-p0">“And then I re­mem­be­red an e-mail that I’d got from some­bo­dy say­ing that my ser­ver worked with Mi­cro­soft Win­dows as a cli­ent,” he re­calls.</span>
+        
+        <span class="book-sentence" id="s-17-16-2-p0">That is, Tridgell’s Pa­thworks ser­ver could also talk to PCs run­ning Mi­cro­soft Win­dows, not just to those run­ning Di­gi­tal’s Pa­thworks pro­duct, which he was using in­iti­al­ly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-17">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-17-1-p0">“I’d dis­mis­sed the e-mail at the time,” he says, “be­cau­se I as­su­med the per­son didn’t know what they were tal­king about.” After all, he says, “I’d writ­ten a Pa­thworks ser­ver, not a Win­dows ser­ver.</span>
+        
+        <span class="book-sentence" id="s-17-17-2-p0">And you get a lot of crazy e-mails.</span>
+        
+        <span class="book-sentence" id="s-17-17-3-p0">But I went and down­loa­ded the code [for the Pa­thworks ser­ver]—I had to ac­tual­ly go and down­load it be­cau­se I didn’t have a copy—and tried it” on his GNU/Linux box and “with my wife’s Win­dows box at home.</span>
+        
+        <span class="book-sentence" id="s-17-17-4-p0">And lo and be­hold, it did in­de­ed work.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-18">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-18-1-p0">Tridgell rea­li­zed that his quick Christ­mas hack was ac­tual­ly so­me­thing much more va­luable: a way of al­lo­wing Unix and Win­dows ma­chi­nes to share files.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-19">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-19-1-p0">Spur­red on by this dis­co­very, Tridgell an­noun­ced on 1 De­cem­ber 1993 a pro­ject to im­pro­ve his old file-sharing code.</span>
+        
+        <span class="book-sentence" id="s-17-19-2-p0">“Lots of peop­le re­spon­ded to that,” he re­calls, “lots being of the order of fifty or a hund­red peop­le, which at the time, when you an­noun­ced free soft­ware pro­ject, that was a big deal.” Linux, after all, had in­iti­al­ly only eli­ci­ted re­s­pon­ses from a hand­ful of peop­le.</span>
+        
+        <span class="book-sentence" id="s-17-19-3-p0">“At that stage, I GPL’d the code,” Tridgell says.</span>
+        
+        <span class="book-sentence" id="s-17-19-4-p0">“I think it was lar­ge­ly out of loyal­ty to Linux; I was doing this on Linux and I loved what was hap­pe­ning with GCC, and the other GNU pro­jects, and so I wan­ted to be part of that.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-20">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-20-1-p0">In a short his­to­ry of Samba that he wrote, Tridgell ex­plains how the name ‘Samba’ came to be cho­sen.</span>
+        
+        <span class="book-sentence" id="s-17-20-2-p0">“The code in Samba was first cal­led just ‘ser­ver’; it then got re­na­med ‘smb­ser­ver’ when I dis­co­ve­r­ed that the pro­to­col is cal­led SMB.</span>
+        
+        <span class="book-sentence" id="s-17-20-3-p0">Then in April 1994, I got an e-mail from Syn­tax, the ma­kers of ‘To­tal­Net Ad­van­ced Ser­ver,’ a com­mer­ci­al SMB ser­ver.</span>
+        
+        <span class="book-sentence" id="s-17-20-4-p0">They told me that they had a trade­mark on the name SMB­ser­ver and I would have to chan­ge the name.” So Tridgell loo­ked for words that con­tai­ned the let­ters S, M, and B and chose Samba as the best (ano­ther was “sal­mon­be­r­ry”).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-21">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-21-1-p0">Samba de­ve­l­o­ped in clas­sic open sour­ce style.</span>
+        
+        <span class="book-sentence" id="s-17-21-2-p0">“Peop­le ba­si­cal­ly star­ted sen­ding in patches,” he says, “and I star­ted working fran­ti­cal­ly to im­pro­ve the pro­ject.</span>
+        
+        <span class="book-sentence" id="s-17-21-3-p0">It was not long after that that I first read a spe­ci­fi­ca­ti­on of the SMB pro­to­col, and dis­co­ve­r­ed that there were lots of holes in the spec.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-22">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-22-1-p0">The holes in the spe­ci­fi­ca­ti­on make SMB an in­te­res­ting hy­brid bet­ween an open and pro­prieta­ry stan­dard.</span>
+        
+        <span class="book-sentence" id="s-17-22-2-p0">“Mi­cro­soft very much takes the at­ti­tu­de that if the spe­ci­fi­ca­ti­on, such as it exists, and the im­ple­men­ta­ti­on in Win­dows NT dif­fer, then NT is cor­rect and the spe­ci­fi­ca­ti­on’s wrong.” This has a di­rect con­se­quence for Tridgell and the Samba team.</span>
+        
+        <span class="book-sentence" id="s-17-22-3-p0">“In the SMB world,” he says, “the whole point of the pro­to­col these days is for in­ter­ope­ra­bi­li­ty with Mi­cro­soft.</span>
+        
+        <span class="book-sentence" id="s-17-22-4-p0">And so we al­ways do all of our tes­ting di­rect­ly against the Mi­cro­soft im­ple­men­ta­ti­ons.</span>
+        
+        <span class="book-sentence" id="s-17-22-5-p0">And we try to re­main bug-for-bug com­pa­ti­ble where it makes sense.</span>
+        
+        <span class="book-sentence" id="s-17-22-6-p0">There are some cases where it doesn’t make sense, and their bugs are just ri­di­cu­lous, and you shouldn’t emu­la­te them.</span>
+        
+        <span class="book-sentence" id="s-17-22-7-p0">But in most cases, we emu­la­te the bugs so that we in­ter­ope­ra­te com­ple­te­ly with the Mi­cro­soft im­ple­men­ta­ti­on.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-23">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-23-1-p0">Tridgell makes an im­portant point about Mi­cro­soft in this con­text.</span>
+        
+        <span class="book-sentence" id="s-17-23-2-p0">“They con­sider them­sel­ves the only im­ple­men­ta­ti­on of this pro­to­col, even though they know they’re not.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-24">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-24-1-p0">But they con­trol the ser­ver and they con­trol the cli­ent, so they can just stick the code at the cli­ent and the ser­ver and it will work, and they don’t re­al­ly think much be­fo­rehand about de­si­gning it ap­pro­pria­te­ly.” This ana­ly­sis sounds a note of warning of what might hap­pen should Mi­cro­soft ever at­tain a do­mi­nant po­si­ti­on on the Web, able to use—and abuse—its power on the cli­ent and ser­ver sides to mask bad co­ding.</span>
+        
+        <span class="book-sentence" id="s-17-24-2-p0">It em­pha­si­zes once again the im­port­an­ce of in­de­pen­dent pro­jects, such as Apa­che and Mo­zil­la, de­di­ca­ted to open stan­dards.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-25">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-25-1-p0">Mi­cro­soft’s at­ti­tu­de to the SMB pro­to­cols means that as it has ex­ten­ded the basic stan­dard, Samba has had to track it.</span>
+        
+        <span class="book-sentence" id="s-17-25-2-p0">Samba’s con­stant shado­wing has led to a cer­tain am­bi­va­lence on the soft­ware com­pa­ny’s part.</span>
+        
+        <span class="book-sentence" id="s-17-25-3-p0">“Our re­la­ti­ons­hip with Mi­cro­soft is ra­ther in­te­res­ting,” Tridgell says.</span>
+        
+        <span class="book-sentence" id="s-17-25-4-p0">“There are some peop­le in Mi­cro­soft who are all out to help us, be­cau­se they see Samba as pro­vi­ding a cri­ti­cal link for them to the Unix world.</span>
+        
+        <span class="book-sentence" id="s-17-25-5-p0">We’ve even got Mi­cro­soft en­gi­neers rin­ging us up for help when they’re in­stal­ling Samba at a site be­cau­se it al­lows them to roll out NT at an exis­ting Unix shop.” On the other hand, he adds, “there’s other peop­le try­ing to hin­der us.</span>
+        
+        <span class="book-sentence" id="s-17-25-6-p0">Mi­cro­soft is a big com­pa­ny, and there’s a multi­tu­de of opi­ni­ons.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-26">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-26-1-p0">Those opi­ni­ons were doubt­less po­la­ri­zing even more when the bench­marks star­ted ap­pearing in 1999 be­cau­se they show­ed Samba and GNU/Linux in an in­cre­a­sin­gly fa­vor­able light.</span>
+        
+        <span class="book-sentence" id="s-17-26-2-p0">Fol­lo­wing the in­iti­al com­pa­ri­son in Sm@rt Re­sel­ler on 25 Ja­nu­a­ry, which had noted that GNU/Linux run­ning Samba “kicks NT’s butt” as a file ser­ver, on 1 Fe­bru­ary, PC Week Labs re­view­ed the new Linux 2.2 ker­nel.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-27">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-27-1-p0">The ori­gi­nal Sm@rt Re­sel­ler test had used ver­si­on 2.0 of the Linux ker­nel, which was over two years old at this point.</span>
+        
+        <span class="book-sentence" id="s-17-27-2-p0">Per­haps it was not too sur­pri­sing that the PC Week ar­ti­cle began, “Look out, Mi­cro­soft: The new Linux 2.2.0 ker­nel adds en­t­er­pri­se-cri­ti­cal SMP [Sym­metric Multi-Pro­ces­sor] ca­pa­bi­li­ties to the ope­ra­ting sys­tem’s pro­ven re­lia­bi­li­ty, fle­xi­bi­li­ty and ir­re­sis­ti­ble price, gi­ving users weary of Win­dows 2000 de­lays and short­co­m­ings strong re­a­sons to se­rious­ly in­ves­ti­ga­te the plat­form.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-28">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-28-1-p0">Then, on 26 March, the same Sm@rt Re­sel­ler team that had writ­ten the piece on 25 Ja­nu­a­ry loo­ked at the re­cent­ly re­leased Samba 2.0.</span>
+        
+        <span class="book-sentence" id="s-17-28-2-p0">Once again, their com­ments left no room for doubt.</span>
+        
+        <span class="book-sentence" id="s-17-28-3-p0">Under the title “Samba 2.0: A li­cen­se to kill NT?” they began, “Who needs an NT li­cen­se?</span>
+        
+        <span class="book-sentence" id="s-17-28-4-p0">Not us!” and con­clu­ded with the fol­lo­wing: “Even if your cust­o­m­ers seem to have dug their heels into the Mi­cro­soft camp, Samba’s one-two punch of far fas­ter SMB file and print ser­vices wi­thout Mi­cro­soft li­cen­sing fees makes it an op­ti­on that must be con­side­red.</span>
+        
+        <span class="book-sentence" id="s-17-28-5-p0">For basic Ser­ver Mes­sa­ge Block file and print ser­ving, Samba can’t be beat.</span>
+        
+        <span class="book-sentence" id="s-17-28-6-p0">No ifs, ands or buts.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-29">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-29-1-p0">The ver­dict see­med un­ani­mous, and the de­feat stun­ning: the fre­e­ly avail­able GNU/Linux and Samba com­bi­na­ti­on beat the pro­prieta­ry Win­dows NT as a file ser­ver from every view­point.</span>
+        
+        <span class="book-sentence" id="s-17-29-2-p0">But not quite un­ani­mous.</span>
+        
+        <span class="book-sentence" id="s-17-29-3-p0">Mi­ra­cu­lous­ly, just when all see­med lost, a bench­mark ap­peared that as­ser­ted the con­tra­ry and pro­vi­ded Mi­cro­soft with the am­mu­ni­ti­on it so des­pe­ra­te­ly nee­ded.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-30">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-30-1-p0">On 13 April, a com­pa­ny cal­led Mind­craft is­sued a press re­lease hea­ded “Mind­craft study shows Win­dows NT ser­ver out­per­forms Linux.” The sum­ma­ry read, “Mi­cro­soft Win­dows NT Ser­ver is 2.5 times fas­ter than Linux as a file ser­ver and 3.7 times fas­ter as Web ser­ver.” Once more, Ziff-Davis’s Net­Bench and Web­Bench were used for the bench­marks, run­ning on a PC with four Intel Xeon pro­ces­sors and 1 Gi­ga­byte of me­mo­ry (al­most iden­ti­cal to the PC Week test ma­chi­ne of 1 Fe­bru­ary).</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-31">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-31-1-p0">Mind­craft was set up in 1985 by Bruce Wei­ner.</span>
+        
+        <span class="book-sentence" id="s-17-31-2-p0">“Our cur­rent busi­ness has re­al­ly been fo­cu­sed on per­for­mance tes­ting over the last four or five years,” Wei­ner ex­plains.</span>
+        
+        <span class="book-sentence" id="s-17-31-3-p0">This comes in two forms.</span>
+        
+        <span class="book-sentence" id="s-17-31-4-p0">“One is per­for­mance tes­ting for ven­dors to va­li­da­te that their pro­ducts per­form the way they ex­pec­ted under cir­cum­stan­ces they ex­pec­ted to work in,” he says, “and that work is ge­ne­ral­ly not pu­blis­hed.</span>
+        
+        <span class="book-sentence" id="s-17-31-5-p0">The other side is per­for­mance mar­ke­ting; it’s ne­ar­ly al­ways for pu­blis­hing.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-32">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-32-1-p0">Al­most im­me­dia­te­ly after the press re­lease ap­peared, an item pos­ted to the Linux Today Web site by Dave Whi­t­in­ger poin­ted out one ex­tre­me­ly re­le­vant fact from the bench­mark re­port not men­tio­ned in the press re­lease.</span>
+        
+        <span class="book-sentence" id="s-17-32-2-p0">Under the hea­ding “Mind­craft Cer­ti­fi­ca­ti­on,” Whi­t­in­ger noted, was the fol­lo­wing phra­se: “Mind­craft, Inc.</span>
+        
+        <span class="book-sentence" id="s-17-32-3-p0">con­duc­ted the per­for­mance tests de­scri­bed in this re­port bet­ween March 10 and March 13, 1999.</span>
+        
+        <span class="book-sentence" id="s-17-32-4-p0">Mi­cro­soft Cor­po­ra­ti­on spon­so­red the tes­ting re­por­ted her­ein.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-33">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-33-1-p0">Of this si­gni­fi­cant omis­si­on, Wei­ner ex­plains, “In­iti­al­ly the contract had a clau­se that pre­clu­ded us from dis­cus­sing the test in any de­tail.</span>
+        
+        <span class="book-sentence" id="s-17-33-2-p0">Other de­tails were ap­pro­ved.” Wei­ner was well-aware that it would have been bet­ter to admit this from the start.</span>
+        
+        <span class="book-sentence" id="s-17-33-3-p0">“I sug­gested that,” he says, and ex­plains Mi­cro­soft’s about-face as fol­lows: “They’re a big com­pa­ny, and I think things got com­mu­ni­ca­ted in­cor­rect­ly or mi­sun­ders­tood so­mew­he­re along the way as to what hap­pe­n­ed.</span>
+        
+        <span class="book-sentence" id="s-17-33-4-p0">When that be­ca­me clear, they said, ‘Well, sure, go ahead and tell them.’ I guess maybe some­bo­dy high en­ough up heard the noise, wha­te­ver.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-34">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-34-1-p0">That noise was con­siderable.</span>
+        
+        <span class="book-sentence" id="s-17-34-2-p0">“I ex­pec­ted a few things: ‘They don’t know what they’re tal­king about’—that kind of thing,” Wei­ner says.</span>
+        
+        <span class="book-sentence" id="s-17-34-3-p0">“But the fi­restorm that oc­cur­red was un­be­lieva­ble; it’s like I kil­led a baby or so­me­thing.</span>
+        
+        <span class="book-sentence" id="s-17-34-4-p0">I didn’t kill it, I span­ked it, and I said, ‘No, no, don’t do that, learn how to do it right.’” But the open sour­ce com­mu­ni­ty felt that even a span­king was a mor­tal in­sult, and Mi­cro­soft must have been taken aback by the ve­he­mence of the re­ac­tion.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-35">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-35-1-p0">Of Mi­cro­soft’s in­iti­al ap­proach, Wei­ner says, “They con­tac­ted us some short time be­fo­re; it wasn’t months and months.” This put a cer­tain amount of pres­su­re on Mind­craft, be­cau­se “ty­pi­cal­ly there’s a lot of setup goes on in these tests ahead of time,” he says.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-36">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-36-1-p0">Mind­craft and Mi­cro­soft agreed that the Ziff-Davis Web­Bench and Net­Bench pro­grams would be used.</span>
+        
+        <span class="book-sentence" id="s-17-36-2-p0">“It’s an OK thing to run,” Wei­ner ex­plains, be­cau­se “no­bo­dy can say you rig­ged the test.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-37">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-37-1-p0">No­nethe­l­ess, peop­le in the open sour­ce com­mu­ni­ty were soon sug­gesting pre­cise­ly that, lar­ge­ly be­cau­se more de­tails began to emer­ge about the cir­cum­stan­ces of the tests.</span>
+        
+        <span class="book-sentence" id="s-17-37-2-p0">Ap­pro­pria­te­ly per­haps, it was Sm@rt Re­sel­ler’s Vaug­han-Ni­chols who was among the first to point out some in­te­res­ting is­su­es sur­roun­ding how the two sys­tems were pre­pa­red.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-38">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-38-1-p0">Ass Vaug­han-Ni­chols’s ar­ti­cle dated 15 April 1998 ex­plai­ned, Mind­craft was able to draw di­rect­ly on sup­port from Mi­cro­soft when tu­ning the sys­tem to get the best per­for­mance.</span>
+        
+        <span class="book-sentence" id="s-17-38-2-p0">When it came to the GNU/Linux sys­tem, howe­ver, it could ob­tain no si­mi­lar help, eit­her from Red Hat, whose dis­tri­bu­ti­on was being used for the test, or from the open sour­ce com­mu­ni­ty at large.</span>
+        
+        <span class="book-sentence" id="s-17-38-3-p0">Ass a re­sult, the Red Hat sys­tem used for the test la­cked se­veral im­portant tweaks that would have im­pro­ved its per­for­mance.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-39">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-39-1-p0">Fur­ther in­ves­ti­ga­ti­on by the open sour­ce com­mu­ni­ty dug up in­te­res­ting de­tails about Mind­craft’s at­tempts to ob­tain tu­ning in­for­ma­ti­on for GNU/Linux, which con­sis­ted of ap­peals for help in Use­net news­groups.</span>
+        
+        <span class="book-sentence" id="s-17-39-2-p0">Wei­ner ex­plains what hap­pe­n­ed.</span>
+        
+        <span class="book-sentence" id="s-17-39-3-p0">“We did it right at the be­gin­ning of the tests,” he says.</span>
+        
+        <span class="book-sentence" id="s-17-39-4-p0">“I think we did one [post] our­sel­ves.</span>
+        
+        <span class="book-sentence" id="s-17-39-5-p0">We got no real re­s­pon­se and then there was ano­ther party that did one.</span>
+        
+        <span class="book-sentence" id="s-17-39-6-p0">And at that time there were just like no re­s­pon­ses to this thing that we got, not­hing at least mea­ningful.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-40">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-40-1-p0">To say that “not­hing mea­ningful” was ob­tai­ned is hard­ly fair, be­cau­se a reply was pos­ted on the same day, 11 March 1999, with de­tai­led com­ments and sug­ges­ti­ons.</span>
+        
+        <span class="book-sentence" id="s-17-40-2-p0">But these in­clu­ded chan­ging the way the sys­tem was set up and using a dif­fe­rent ope­ra­ting sys­tem, and so could not be taken up.</span>
+        
+        <span class="book-sentence" id="s-17-40-3-p0">If Mind­craft had wan­ted se­rious help for the bench­marks, its ob­vious cour­se would have been to ex­plain why it wan­ted the in­for­ma­ti­on.</span>
+        
+        <span class="book-sentence" id="s-17-40-4-p0">In these cir­cum­stan­ces, open sour­ce sup­por­ters would have done their ut­most to help tune the sys­tem.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-41">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-41-1-p0">Wei­ner ex­plains why he felt it was im­pos­si­ble to take this ac­tion.</span>
+        
+        <span class="book-sentence" id="s-17-41-2-p0">“In the open sour­ce com­mu­ni­ty,” he says, for “a lot of peop­le there, [Mi­cro­soft is] the evil vil­lain, and we knew had we men­tio­ned that, the whole fi­restorm that oc­cur­red after the fact would have oc­cur­red” then.</span>
+        
+        <span class="book-sentence" id="s-17-41-3-p0">This is a fair point, but still left open the pos­si­bi­li­ty of men­tio­n­ing the bench­marks wi­thout na­ming the com­pa­ny spon­so­ring them.</span>
+        
+        <span class="book-sentence" id="s-17-41-4-p0">“Boy, things were tight and rol­ling fast in terms of ti­ming and what was oc­cur­ring,” Wei­ner says.</span>
+        
+        <span class="book-sentence" id="s-17-41-5-p0">“In re­tro­s­pect, cer­tain­ly, we could have done it much bet­ter, no ques­ti­on about it.</span>
+        
+        <span class="book-sentence" id="s-17-41-6-p0">And we used that re­tro­s­pect, and I guess the at­ten­ti­on that this brought the first time, to do it right the se­cond time.</span>
+        
+        <span class="book-sentence" id="s-17-41-7-p0">And there’s no ques­ti­on, I think, we got the input we nee­ded the se­cond time.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-42">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-42-1-p0">The “se­cond time” re­fer­red to Wei­ner’s de­ci­si­on to rerun the bench­marks, this time so­li­cit­ing help from the top peop­le in the Linux and Samba worlds.</span>
+        
+        <span class="book-sentence" id="s-17-42-2-p0">Con­tra­ry to Wei­ner’s claim that there was “no ques­ti­on” that they got the input they nee­ded, the open sour­ce com­mu­ni­ty, though of­fe­ring what help it could, was still de­eply un­hap­py with the over­all setup, and felt that it was not able to give the ne­cessa­ry input.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-43">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-43-1-p0">At the heart of the mat­ter was Mind­craft’s con­ti­nued re­fu­sal to allow an­yo­ne from the open sour­ce world to be pre­sent du­ring the se­cond run.</span>
+        
+        <span class="book-sentence" id="s-17-43-2-p0">Wi­thout ac­cess to the test­bed, the open sour­ce com­mu­ni­ty be­lie­ved it was at a con­siderable di­sad­van­ta­ge.</span>
+        
+        <span class="book-sentence" id="s-17-43-3-p0">Je­re­my All­ison, who be­ca­me one of the major ac­tors in the Mind­craft bench­mark drama, al­re­a­dy had a good idea about the real re­a­son this ac­cess was being de­nied.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-44">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-44-1-p0">Born in Shef­field, Eng­land, in 1962, All­ison is num­ber two in the Samba world after An­d­rew Tridgell.</span>
+        
+        <span class="book-sentence" id="s-17-44-2-p0">“I tend to do the stuff that makes a re­lease go into pro­duc­tion, so I am the pa­ra­no­id one,” he says.</span>
+        
+        <span class="book-sentence" id="s-17-44-3-p0">In this re­spect, All­ison plays a role si­mi­lar to that of Alan Cox in the Linux world.</span>
+        
+        <span class="book-sentence" id="s-17-44-4-p0">All­ison has had a wide-ran­ging ca­re­er, in­clu­ding stints as a soft­ware en­gi­neer at Sun, Cyg­nus, SGI and, most re­cent­ly, VA Linux.</span>
+        
+        <span class="book-sentence" id="s-17-44-5-p0">His open sour­ce creden­ti­als are im­pecca­ble.</span>
+        
+        <span class="book-sentence" id="s-17-44-6-p0">In the late 1980s, he came up with a patch to GCC, which he sent off to Ri­chard Stall­man, who prompt­ly said, “No.” “It was great,” All­ison says.</span>
+        
+        <span class="book-sentence" id="s-17-44-7-p0">“It was like get­ting a re­ject mes­sa­ge from God.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-45">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-45-1-p0">All­ison even crea­ted an SMB ser­ver of his own, though he notes, “No one ever saw that code.” Ass soon as he came across Samba, he says, “I just star­ted hacking on it,” and he quick­ly be­ca­me the key de­ve­l­oper along­s­ide Tridgell.</span>
+        
+        <span class="book-sentence" id="s-17-45-2-p0">Ass such, and pro­bab­ly be­cau­se he was lo­ca­ted in Si­li­con Val­ley and Tridgell was in Aus­tra­lia, All­ison was one of the ex­perts to whom Wei­ner tur­ned.</span>
+        
+        <span class="book-sentence" id="s-17-45-3-p0">“Bruce Wei­ner was cal­ling me up and I was gi­ving him Samba tu­ning ad­vice,” All­ison re­calls.</span>
+        
+        <span class="book-sentence" id="s-17-45-4-p0">“The Val­ley’s a kind of small place, and peop­le talk a lot.</span>
+        
+        <span class="book-sentence" id="s-17-45-5-p0">I knew he was up at Mi­cro­soft [in Se­at­tle].</span>
+        
+        <span class="book-sentence" id="s-17-45-6-p0">And it was re­al­ly funny, be­cau­se I was ba­si­cal­ly try­ing to get him to admit that, and he wouldn’t.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-46">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-46-1-p0">On 4 May, in a Linux Today ar­ti­cle tit­led “Set­ting the Re­cord Strai­ght: Where Linux Today got it right and wrong,” Wei­ner of­fe­red his re­but­tal to an ar­ti­cle of 27 April on the same Web site, in which Dave Whit­tin­ger and Dwight John­son asked, “Will Mind­craft II be bet­ter?” In it, among other things, Wei­ner ack­now­led­ged that the Mind­craft bench tests had in­de­ed been car­ri­ed out at Mi­cro­soft.</span>
+        
+        <span class="book-sentence" id="s-17-46-2-p0">Wei­ner wrote, “Many have tried to imply that so­me­thing is wrong with Mind­craft’s tests be­cau­se they were done in a Mi­cro­soft lab.</span>
+        
+        <span class="book-sentence" id="s-17-46-3-p0">You should know that Mind­craft ve­ri­fied the cli­ents were set up as we do­cu­men­ted in our re­port and that Mind­craft, not Mi­cro­soft, loa­ded the ser­ver soft­ware and tuned it as do­cu­men­ted in our re­port.</span>
+        
+        <span class="book-sentence" id="s-17-46-4-p0">In es­sence, we took over the lab we were using and ve­ri­fied it was set up fair­ly.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-47">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-47-1-p0">There is no re­a­son to dis­pu­te this; but sus­pi­ci­ons and skep­ti­cism about the end re­sults are to be ex­pec­ted when the cir­cum­stan­ces of the tes­ting are hi­d­den.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-48">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-48-1-p0">Mo­re­o­ver, in one im­portant re­spect, run­ning the tests in Mi­cro­soft’s labs did give NT an ad­van­ta­ge through the pre­sence of Mi­cro­soft’s tech­ni­ci­ans.</span>
+        
+        <span class="book-sentence" id="s-17-48-2-p0">Ass Wei­ner says, “They were avail­able on call to us at any time.</span>
+        
+        <span class="book-sentence" id="s-17-48-3-p0">And we tal­ked with them up front about tunes for their pro­ducts, and they re­com­men­ded a cer­tain set of tunes.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-49">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-49-1-p0">Wei­ner em­pha­si­zes, “The in­for­ma­ti­on we’re get­ting is the same as that in­for­ma­ti­on that’s pu­bli­cly avail­able.</span>
+        
+        <span class="book-sentence" id="s-17-49-2-p0">So it wasn’t as if we got any­thing spe­cial.” He con­ce­des, howe­ver, that by being at the Mi­cro­soft labs, “we did have the con­ve­ni­ence,” if not­hing else.</span>
+        
+        <span class="book-sentence" id="s-17-49-3-p0">In any case, the pre­sence of these tech­ni­ci­ans “at any time” stands in pain­f­ul con­trast with the re­fu­sal to allow even one mem­ber from the open sour­ce com­mu­ni­ty to be pre­sent for eit­her of the tests.</span>
+        
+        <span class="book-sentence" id="s-17-49-4-p0">“I think the best way to put it is it was too short no­ti­ce to make that hap­pen well,” he says, cit­ing once more the pres­su­re of time as one of the over­ri­ding fac­tors in the way bench­marks were con­duc­ted.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-50">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-50-1-p0">Wei­ner re­co­gni­zes the im­port­an­ce of the issue.</span>
+        
+        <span class="book-sentence" id="s-17-50-2-p0">“It was un­for­t­u­na­te,” he says.</span>
+        
+        <span class="book-sentence" id="s-17-50-3-p0">“I know that the guys that hel­ped us were fee­ling short­ch­an­ged be­cau­se of that.</span>
+        
+        <span class="book-sentence" id="s-17-50-4-p0">Even if only one of their folks could have come in, that would have been good en­ough for all of them.</span>
+        
+        <span class="book-sentence" id="s-17-50-5-p0">And I said to mys­elf, look, the best way to do this thing is let’s don’t pu­blish these [se­cond] re­sults yet.” Be­cau­se they were con­duc­ted in lar­ge­ly the same cir­cum­stan­ces, the same ac­cu­sa­ti­ons would be le­ve­led.</span>
+        
+        <span class="book-sentence" id="s-17-50-6-p0">Wei­ner rea­li­zed that so­me­thing more was nee­ded.</span>
+        
+        <span class="book-sentence" id="s-17-50-7-p0">He quo­tes him­s­elf as say­ing, “‘Let’s do an open bench­mark.’ And I tal­ked Mi­cro­soft into doing it.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-51">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-51-1-p0">The per­son over­see­ing the Mind­craft bench­marks at Mi­cro­soft at this time was Jim Ewel, one of the com­pa­ny’s most ex­pe­ri­en­ced mar­ke­ting ex­perts.</span>
+        
+        <span class="book-sentence" id="s-17-51-2-p0">He had joi­ned Mi­cro­soft in 1989, and worked on what he de­scri­bes as an “eclec­tic mix” of jobs be­fo­re being ap­poin­ted ge­ne­ral ma­na­ger of mar­ke­ting in Ja­nu­a­ry 1999 for the up­co­m­ing Win­dows 2000, the final name for Win­dows NT 5.</span>
+        
+        <span class="book-sentence" id="s-17-51-3-p0">He worked along­s­ide Mike Nash, the ge­ne­ral ma­na­ger of the Win­dows 2000 launch.</span>
+        
+        <span class="book-sentence" id="s-17-51-4-p0">Ewel ex­plains that the Mind­craft bench­marks “star­ted out as a pro­ject over in Mike Nash’s group.” The Mi­cro­soft team in­itia­ted the Mind­craft bench­marks, Ewel says, be­cau­se “we were hea­ring a lot of PR about Linux, and a lot of claims in terms of per­for­mance and all that stuff.</span>
+        
+        <span class="book-sentence" id="s-17-51-5-p0">We just thought that the rea­li­ty was very dif­fe­rent from the per­cep­ti­on.</span>
+        
+        <span class="book-sentence" id="s-17-51-6-p0">So we wan­ted to get some facts out.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-52">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-52-1-p0">Wei­ner says that once the open bench­marks were sug­gested, the at­ti­tu­de of the ha­ckers chan­ged.</span>
+        
+        <span class="book-sentence" id="s-17-52-2-p0">“It was ‘OK, guys, let’s call your bluff,’” he re­calls.</span>
+        
+        <span class="book-sentence" id="s-17-52-3-p0">And “all of a sud­den, the Linux com­mu­ni­ty was backing away,” he adds.</span>
+        
+        <span class="book-sentence" id="s-17-52-4-p0">In one re­spect, this was hard­ly sur­pri­sing; after all, when the first test re­sults were re­leased, there was no men­ti­on that Mi­cro­soft had paid for them, nor that they were con­duc­ted in a Mi­cro­soft lab.</span>
+        
+        <span class="book-sentence" id="s-17-52-5-p0">The tu­ning was not op­ti­mal for the GNU/Linux sys­tem, and even with the se­cond round of tests, re­pre­sen­ta­ti­ves of the open sour­ce world were re­fu­sed ac­cess to the equip­ment.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-53">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-53-1-p0">In ano­ther re­spect, howe­ver, Wei­ner may have been right about a cer­tain backing away.</span>
+        
+        <span class="book-sentence" id="s-17-53-2-p0">After the in­iti­al shock and ou­tra­ge had begun to die down, the top ha­ckers got down to some se­rious ana­ly­sis of just what was going on.</span>
+        
+        <span class="book-sentence" id="s-17-53-3-p0">One of the re­a­sons this took some time was the na­tu­re of the Ziff-Davis bench­marks.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-54">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-54-1-p0">Ass An­d­rew Tridgell ex­plains, “The pro­blem with Net­Bench is that it’s a very clo­sed bench­mark, in the sense that an­yo­ne can down­load it, but you’d need a half-mil­li­on-dol­lar lab in order to run it se­rious­ly.</span>
+        
+        <span class="book-sentence" id="s-17-54-2-p0">You can’t just go and run it at home and ex­pect to get a re­sult that’s at all mea­ningful.</span>
+        
+        <span class="book-sentence" id="s-17-54-3-p0">There was re­al­ly only one lo­ca­ti­on avail­able to the open sour­ce com­mu­ni­ty to test this sort of con­fi­gu­ra­ti­on,” he con­ti­nues, “and that was in­si­de SGI, where Je­re­my [All­ison] was working.</span>
+        
+        <span class="book-sentence" id="s-17-54-4-p0">And so though he could do that, that was an enor­mous bott­len­eck, and it meant that peop­le like Alan [Cox], Linus, and David Mil­ler couldn’t re­al­ly do the tests them­sel­ves.” In this re­spect, Net­Bench and Web­Bench were ta­king the com­mu­ni­ty into a new realm where the open sour­ce tech­ni­ques based on the input of the many users run­ning soft­ware on their per­so­nal com­pu­ters was no lon­ger en­ough.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-55">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-55-1-p0">But ha­ckers are not­hing if not re­source­ful.</span>
+        
+        <span class="book-sentence" id="s-17-55-2-p0">Using SGI’s fa­ci­li­ties, All­ison ran Net­Bench for just one PC cli­ent, and all the de­tails of the data’s flo­wing over the net­work were re­cor­ded.</span>
+        
+        <span class="book-sentence" id="s-17-55-3-p0">Tridgell then re­play­ed that data to si­mu­la­te hund­reds of cli­ents run­ning si­mul­ta­neous­ly, em­ploy­ing just two fast GNU/Linux ma­chi­nes lin­ked to­ge­ther.</span>
+        
+        <span class="book-sentence" id="s-17-55-4-p0">In this way, it was pos­si­ble to run Net­Bench wi­thout ha­ving that half-a-mil­li­on-dol­lar la­bo­ra­to­ry—and hence start in­ves­ti­ga­ting what was hap­pe­ning in the Mind­craft bench­marks.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-56">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-56-1-p0">Tridgell also car­ri­ed out ano­ther im­portant piece of work.</span>
+        
+        <span class="book-sentence" id="s-17-56-2-p0">“One of the things you’re doing with bench­mar­king is you’re try­ing to work out which sub­sys­tem on the ser­ver is the bott­len­eck,” he says.</span>
+        
+        <span class="book-sentence" id="s-17-56-3-p0">“So what I did was I crea­ted three bench­marks,” each one of which tested a dif­fe­rent part of the GNU/Linux-Samba com­bi­na­ti­on.</span>
+        
+        <span class="book-sentence" id="s-17-56-4-p0">The pro­blem was re­vea­led when the Net­Bench si­mu­la­ti­on was run using these three bench­marks.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-57">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-57-1-p0">The dif­fi­cul­ty was not with Samba, as Tridgell was plea­sed to find; the tests ran slow­ly even wi­thout it.</span>
+        
+        <span class="book-sentence" id="s-17-57-2-p0">It tur­ned out that it “was a ker­nel pro­blem,” he ex­plains.</span>
+        
+        <span class="book-sentence" id="s-17-57-3-p0">“Ba­si­cal­ly, we weren’t scalable to a four-way SMP.” This was a va­ri­ant on the old “Linux does not scale pro­blem,” in this case deep wi­t­hin the ker­nel, that was sho­w­ing up only under the ex­tre­me cir­cum­stan­ces of the Mind­craft test.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-58">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-58-1-p0">Once he knew what the pro­blem was, Tridgell came up with a way of fi­xing it.</span>
+        
+        <span class="book-sentence" id="s-17-58-2-p0">“It was a very ugly hack,” he says with the ty­pi­cal dis­da­in a top coder has for such rough-and-ready so­lu­ti­ons.</span>
+        
+        <span class="book-sentence" id="s-17-58-3-p0">“That sped us up by about a fac­tor or two.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-59">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-59-1-p0">It wasn’t of cour­se valid, it wasn’t a patch that you could re­al­ly put into a pro­duc­tion ker­nel.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-60">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-60-1-p0">The good news was that Tridgell’s ana­ly­sis and the rough fix meant that the pro­blem he had lo­ca­ted could be fixed after a litt­le se­rious hacking.</span>
+        
+        <span class="book-sentence" id="s-17-60-2-p0">The bad news was that a pro­per patch would not be avail­able for the open bench­mark that Wei­ner was pro­po­sing.</span>
+        
+        <span class="book-sentence" id="s-17-60-3-p0">Ass All­ison says, “I knew we were going to lose, be­cau­se I’d al­re­a­dy done the bench­marks on Linux in SGI’s in­ter­nal lab.</span>
+        
+        <span class="book-sentence" id="s-17-60-4-p0">I knew what the bott­len­eck was, and it wasn’t a Samba issue.</span>
+        
+        <span class="book-sentence" id="s-17-60-5-p0">Ba­si­cal­ly, the idea at that point was just try­ing to do da­ma­ge con­trol as much as we could.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-61">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-61-1-p0">In this sense, Wei­ner is pro­bab­ly right in that the open sour­ce com­mu­ni­ty were backing away from the idea of a re­match: They knew what was wrong, and that at this stage “it was all po­li­tics,” as Tridgell com­ments.</span>
+        
+        <span class="book-sentence" id="s-17-61-2-p0">“It was Mind­craft try­ing to save face.” But “sa­ving face” was im­portant to Wei­ner; the “fi­restorm” that the bench­marks had pro­vo­ked had cast as­per­si­ons on his com­pa­ny.</span>
+        
+        <span class="book-sentence" id="s-17-61-3-p0">Wha­te­ver flaws the first two bench­marks may have had, Mind­craft nee­ded to es­ta­blish that it had not chea­ted.</span>
+        
+        <span class="book-sentence" id="s-17-61-4-p0">If doubts re­mai­ned on that score, Mind­craft would have no fu­ture cust­o­m­ers.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-62">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-62-1-p0">Wei­ner ori­gi­nal­ly made his open bench­mark in­vi­ta­ti­on on 4 May 1998, and re­vi­sed it on 18 May to ad­dress some of the con­cerns rai­sed.</span>
+        
+        <span class="book-sentence" id="s-17-62-2-p0">The first phase of the test had as its sta­ted pur­po­se to “re­pro­du­ce the re­sults of Mind­craft’s se­cond test.” Ass Wei­ner says, “The re­a­son we wan­ted that one done is that we wan­ted Mind­craft to be vin­di­ca­ted that we hadn’t rig­ged a damn thing.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-63">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-63-1-p0">The se­cond phase was where “Linux ex­perts use any­thing avail­able at the time of Mind­craft’s se­cond test.</span>
+        
+        <span class="book-sentence" id="s-17-63-2-p0">This will show how much bet­ter Mind­craft could have done at the time.” The final phase aimed to “get the best per­for­mance using today’s soft­ware.” Wei­ner says that al­lo­wing this third phase “was a pret­ty brave thing for Mi­cro­soft to say at that point,” with some jus­ti­ce.</span>
+        
+        <span class="book-sentence" id="s-17-63-3-p0">Mi­cro­soft had litt­le to gain and much to lose by al­lo­wing the GNU/Linux plat­form to be tuned to the limit.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-64">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-64-1-p0">Ewel ex­plains that “it was a joint de­ci­si­on.</span>
+        
+        <span class="book-sentence" id="s-17-64-2-p0">I tal­ked to Mike Nash and Jim All­chin”—one of the most se­ni­or Mi­cro­soft exe­cu­ti­ves—“about it.</span>
+        
+        <span class="book-sentence" id="s-17-64-3-p0">It was ta­king a chan­ce, we knew that.” But “we know we have a good pro­duct and we were pret­ty con­fi­dent that [the Linux ha­ckers] weren’t going to be able to do a bench­mark spe­cial to beat us.” This was be­cau­se he and his col­le­agues had “sat down with our best tech­no­lo­gists,” he says, to weigh the risks and the re­wards of ta­king part in such an open bench­mark.</span>
+        
+        <span class="book-sentence" id="s-17-64-4-p0">The last point is in­te­res­ting, be­cau­se it sug­gests that Mi­cro­soft had been ex­ami­ning GNU/Linux and Samba in great de­tail, to the point that it knew how much work was re­qui­red to deal with is­su­es the Mind­craft bench­marks had sur­faced.</span>
+        
+        <span class="book-sentence" id="s-17-64-5-p0">No­nethe­l­ess, credit should be given to Ewel and his team for ha­ving the cou­ra­ge to take this cal­cu­la­ted risk.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-65">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-65-1-p0">Not that Mi­cro­soft did not ex­ploit the si­tua­ti­on to the full in other ways.</span>
+        
+        <span class="book-sentence" id="s-17-65-2-p0">On 12 May, it pos­ted a do­cu­ment to its Web site cal­led “Up­date on Win­dows NT ser­ver vs.</span>
+        
+        <span class="book-sentence" id="s-17-65-3-p0">Linux per­for­mance and ca­pa­bi­li­ties.” In this, a ty­pi­cal­ly well-re­se­ar­ched Mi­cro­soft do­cu­ment, it laid out the pre­vious Mind­craft bench­marks, along with other in­de­pen­dent tests; for ex­amp­le, tests that had just ap­peared in PC Week on 10 May, and in PC Ma­ga­zi­ne on 11 May, all of which ten­ded to corr­o­bo­ra­te Mind­craft’s re­sults.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-66">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-66-1-p0">Ass well as al­lo­wing re­pre­sen­ta­ti­ves of the open sour­ce world to be pre­sent, the open bench­mark tests sought to ad­dress other con­cerns.</span>
+        
+        <span class="book-sentence" id="s-17-66-2-p0">For ex­amp­le, it turns out that Samba works bet­ter with PCs run­ning Win­dows NT ra­ther than the Win­dows 95 and 98 used in the first two Mind­craft tests.</span>
+        
+        <span class="book-sentence" id="s-17-66-3-p0">“I per­so­nal­ly wasn’t aware of that at all at the time,” Wei­ner says.</span>
+        
+        <span class="book-sentence" id="s-17-66-4-p0">But the open bench­mark would be run using both Win­dows 95/98 and Win­dows NT cli­ents.</span>
+        
+        <span class="book-sentence" id="s-17-66-5-p0">Mo­re­o­ver, the tests would be run using first one pro­ces­sor and then four pro­ces­sors, with cor­re­spon­ding amounts of me­mo­ry, be­cau­se GNU/Linux was de­si­gned to run bet­ter on lea­ner sys­tems.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-67">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-67-1-p0">Wei­ner’s final con­ces­si­on was to allow these open bench­marks to be run at an in­de­pen­dent la­bo­ra­to­ry.</span>
+        
+        <span class="book-sentence" id="s-17-67-2-p0">Wei­ner ex­plains, “PC Week and ZD Labs said, ‘Why don’t you do it here,’ be­cau­se ob­vious­ly it was a story.</span>
+        
+        <span class="book-sentence" id="s-17-67-3-p0">And we said, ‘Great, we’d love to do it.’” The bench­marks ha­ving ori­gi­na­ted at Ziff-Davis, a cer­tain jus­ti­ce pre­vai­led in this choice for the scene of the final shoot-out.</span>
+        
+        <span class="book-sentence" id="s-17-67-4-p0">All par­ties agreed to par­ti­ci­pa­te on this basis, and the bench tes­ting began on 14 June.</span>
+        
+        <span class="book-sentence" id="s-17-67-5-p0">“We wan­ted it to hap­pen much ear­lier,” Wei­ner says, “but [the head of ZD Labs] couldn’t ar­ran­ge that be­cau­se of their lab sche­du­le.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-68">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-68-1-p0">The event pro­ved an­ti­cli­mac­tic after the drama of the pre­vious three months.</span>
+        
+        <span class="book-sentence" id="s-17-68-2-p0">Ass ever­y­bo­dy knew it would, Win­dows NT beat GNU/Linux run­ning Apa­che and Samba.</span>
+        
+        <span class="book-sentence" id="s-17-68-3-p0">Henry Bal­ta­zar and Pan­kaj Chowdhry re­por­ted in PC Week: “After a tor­tuous five days of tests, au­di­ted by the best and the brigh­test from Mind­craft, Mi­cro­soft and Red Hat Soft­ware Inc., and de­s­pi­te si­gni­fi­cant tu­ning im­pro­ve­ments made on the Linux side, Win­dows NT 4.0 still beat Linux using the Apa­che Web ser­ver and Samba in every per­for­mance ca­te­go­ry, alt­hough the mar­gin of vic­to­ry was smal­ler than in Mind­craft’s tests.</span>
+        
+        <span class="book-sentence" id="s-17-68-4-p0">But far more in­te­res­ting is that, in all the areas in which the Linux com­mu­ni­ty cried foul, its as­sump­ti­ons were wrong.” Wei­ner says he felt “to­tal­ly vin­di­ca­ted” by the out­co­me, and for Mi­cro­soft, Ewel com­ments, “We were very plea­sed with the final pu­blis­hed re­sults.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-69">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-69-1-p0">The Mind­craft bench­marks re­pre­sen­ted a dif­fi­cult time for the GNU/Linux com­mu­ni­ty—and an im­portant one.</span>
+        
+        <span class="book-sentence" id="s-17-69-2-p0">Be­fo­re, its mem­bers had al­most re­ve­led in their sple­ndid iso­la­ti­on from the rest of the com­pu­ter world.</span>
+        
+        <span class="book-sentence" id="s-17-69-3-p0">Like re­bel­lious ado­lescents, they had taken a great de­light in co­cking a snook at aut­ho­ri­ty, in doing things their way—se­cu­re in the know­ledge that their ap­proach was “ob­vious­ly” bet­ter.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-70">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-70-1-p0">The Mind­craft bench­marks chan­ged all that.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-71">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-71-1-p0">They show­ed that for all its real strengths, the Linux ker­nel had real weak­nes­ses.</span>
+        
+        <span class="book-sentence" id="s-17-71-2-p0">It still did not scale well.</span>
+        
+        <span class="book-sentence" id="s-17-71-3-p0">The failu­re to shine in these bench­marks shat­te­red the com­pla­cent at­ti­tu­de of the ha­cker com­mu­ni­ty that held they were sim­ply the best in ever­y­thing.</span>
+        
+        <span class="book-sentence" id="s-17-71-4-p0">Ass such, it re­pre­sen­ted a kind of rite of pas­sa­ge—pain­f­ul, but ne­cessa­ry—to the grown-up world of real com­pu­ting.</span>
+        
+        <span class="book-sentence" id="s-17-71-5-p0">In par­ti­cu­lar, it pro­vi­ded a messy in­tro­duc­tion to the so­me­ti­mes un­fair world of busi­ness.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-72">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-72-1-p0">The Mind­craft tests, de­s­pi­te the un­sa­tis­fac­to­ry way in which the re­la­ti­ons­hip with Mi­cro­soft was re­vea­led, show­ed un­e­qui­vo­cal­ly that GNU/Linux did not hand­le this kind of en­t­er­pri­se-level sys­tem as well as Win­dows NT.</span>
+        
+        <span class="book-sentence" id="s-17-72-2-p0">Open sour­ce ad­vo­ca­tes might point out that the test sys­tem and bench­marks were cho­sen to show their soft­ware at its worst; but com­pa­nies do use such sys­tems, and such bench­marks, howe­ver fla­wed, do play a role in the framing of cor­po­ra­te IT po­li­cies.</span>
+        
+        <span class="book-sentence" id="s-17-72-3-p0">Linus him­s­elf had long be­fo­re re­co­gni­zed the rea­li­ties of com­pa­ra­ti­ve tes­ting when he wrote of “Lies, dam­ned lies, and bench­marks” du­ring an early ex­ch­an­ge about the re­la­ti­ve per­for­mance of GNU/Linux back in Fe­bru­ary 1993.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-73">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-73-1-p0">If GNU/Linux was to be taken se­rious­ly in the en­t­er­pri­se mar­ket, it had to im­pro­ve its sho­w­ing in these kinds of tests.</span>
+        
+        <span class="book-sentence" id="s-17-73-2-p0">An­d­rew Tridgell’s work had al­re­a­dy poin­ted the way, and patches were soon forth­co­m­ing.</span>
+        
+        <span class="book-sentence" id="s-17-73-3-p0">First, Dave Mil­ler did some hacking, but “the per­son that did the re­al­ly good work was Ingo Mol­nar from Red Hat,” Tridgell says.</span>
+        
+        <span class="book-sentence" id="s-17-73-4-p0">Tridgell ex­plains that Mol­nar “ended up tri­pling our per­for­mance, even qua­dru­pling in some cases.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-74">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-74-1-p0">The Mind­craft saga has done more than give rise to a few handy patches.</span>
+        
+        <span class="book-sentence" id="s-17-74-2-p0">“It gave a real focus,” Tridgell be­lie­ves.</span>
+        
+        <span class="book-sentence" id="s-17-74-3-p0">“In par­ti­cu­lar, from a tech­ni­cal point of view, it made us focus on the lar­ger-scale bench­marks as com­pa­red to the mi­cro­bench­marks.</span>
+        
+        <span class="book-sentence" id="s-17-74-4-p0">To a re­a­sonable extent, the ker­nel de­ve­l­o­pers had been using mi­cro­bench­marks like lm­bench,” which was Larry McVoy’s soft­ware for tu­ning at a very low level.</span>
+        
+        <span class="book-sentence" id="s-17-74-5-p0">In this area, Tridgell cont­ends, “Linux was so far ahead of all the other ope­ra­ting sys­tems in that it’s just not funny.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-75">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-75-1-p0">But lm­bench “didn’t stress the ope­ra­ting sys­tem under a load of fifty pro­ces­sors run­ning si­mul­ta­neous­ly,” he says.</span>
+        
+        <span class="book-sentence" id="s-17-75-2-p0">“Get­ting scalable ker­nel-level SMP is a much more dif­fi­cult task, and no­bo­dy had re­al­ly worked on it.</span>
+        
+        <span class="book-sentence" id="s-17-75-3-p0">So what this [epi­so­de] did was it fo­cu­sed a lot of ef­fort on that.” In a sense, then, the Mind­craft bench­marks did Linux a great ser­vice.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-76">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-76-1-p0">Linus even­tual­ly rea­li­zed this too, but not be­fo­re even he lost his usual equani­mi­ty and coolhea­ded­ness.</span>
+        
+        <span class="book-sentence" id="s-17-76-2-p0">Wei­ner says, “I got the fi­restorm from the top ranks” in the open sour­ce world, and All­ison re­calls that “Linus sent [Wei­ner] this just un­be­liev­a­b­ly nasty e-mail cal­ling him a fair few names.” Si­mi­lar­ly, Ewel says that he and Linus “ex­ch­an­ged some fair­ly hea­ted e-mails.” For a mo­ment, Linus had for­got­ten that bug re­ports from users in new si­tua­ti­ons, pus­hing and stres­sing the soft­ware in new ways, had al­ways hel­ped make Linux bet­ter.</span>
+        
+        <span class="book-sentence" id="s-17-76-3-p0">And the Mind­craft bench­marks had done this by sho­w­ing what nee­ded to be done if GNU/Linux was to be­co­me an en­t­er­pri­se so­lu­ti­on.</span>
+        
+        <span class="book-sentence" id="s-17-76-4-p0">One con­cre­te re­sult of this input was re­vea­led by Red Hat’s an­noun­ce­ment on 15 Au­gust 2000 that Dell ser­vers run­ning GNU/Linux and Red Hat’s own new high-per­for­mance Web ser­ver, Tux, were “the fas­test Web so­lu­ti­ons of those tested” and more than twice as power­ful as Win­dows 2000 on the same four-pro­ces­sor sys­tem.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-77">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-77-1-p0">The fue­ling of fu­ture im­pro­ve­ments in Linux was one way the ex­er­cise back­fi­red for Mi­cro­soft.</span>
+        
+        <span class="book-sentence" id="s-17-77-2-p0">The big­ger blun­der, howe­ver, was so­me­thing more pro­found.</span>
+        
+        <span class="book-sentence" id="s-17-77-3-p0">By ar­ran­ging for GNU/Linux, Apa­che, and Samba to be bench­mar­ked against Win­dows NT, Mi­cro­soft said in the most em­pha­tic man­ner pos­si­ble that these were ri­vals; after all, there is no point bench­mar­king things that are not in some sense com­pa­ra­ble.</span>
+        
+        <span class="book-sentence" id="s-17-77-4-p0">This was a si­gni­fi­cant shift from Mi­cro­soft’s pre­vious stan­ce that GNU/Linux was not up to en­t­er­pri­se-level tasks, and no­bo­dy was using it any­way.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-78">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-78-1-p0">The Mind­craft bench­marks gave the lie to this po­si­ti­on more ef­fec­tive­ly than any­thing the open sour­ce com­mu­ni­ty could have done.</span>
+        
+        <span class="book-sentence" id="s-17-78-2-p0">At a stroke, Mi­cro­soft had ano­in­ted GNU/Linux as an of­fi­ci­al rival.</span>
+        
+        <span class="book-sentence" id="s-17-78-3-p0">Mo­re­o­ver, through its inept in­iti­al hand­ling of the re­sul­ting furor, it ham­me­red home this mes­sa­ge for over three months, just in case any­bo­dy mis­sed the first an­noun­ce­ment in April.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-79">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-79-1-p0">Wha­te­ver its pu­blic state­ments, Mi­cro­soft chan­ged its at­ti­tu­de to GNU/Linux in­ter­nal­ly at this time.</span>
+        
+        <span class="book-sentence" id="s-17-79-2-p0">Ewel ex­plains that “we had some tech­ni­cal peop­le who were loo­king at Linux, but we didn’t re­al­ly have any kind of what we call a busi­ness and pro­duct plan­ning team loo­king at it.” Around the time of the Mind­craft bench­marks, the omis­si­on was re­me­di­ed.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-80">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-80-1-p0">This “Linux com­pe­ti­ti­ve” team, as it is cal­led wi­t­hin Mi­cro­soft, re­ports ul­ti­mate­ly to Ewel, and is quite small.</span>
+        
+        <span class="book-sentence" id="s-17-80-2-p0">“On Linux, we only have ac­tual­ly one guy full-time,” Ewel ex­plains.</span>
+        
+        <span class="book-sentence" id="s-17-80-3-p0">This com­pa­res to five peop­le on the mar­ke­ting side for the ent­i­re com­pe­ti­ti­ve team, which mo­ni­tors Sun and No­vell as well as Linux.</span>
+        
+        <span class="book-sentence" id="s-17-80-4-p0">Me­anw­hi­le, “on the tech side,” Ewel says, there is “one guy full-time, and four or five guys who pro­bab­ly spend 10 to 20 per­cent of their time” loo­king at Linux.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-81">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-81-1-p0">Per­haps re­co­gni­zing that the Mind­craft bench­marks had gone badly wrong by ge­ne­ra­ting po­si­ti­ve pu­bli­ci­ty for GNU/Linux, Mi­cro­soft re­tur­ned to the at­tack in Oc­to­ber, when it pu­blis­hed what it cal­led “Linux Myths” on its Web site.</span>
+        
+        <span class="book-sentence" id="s-17-81-2-p0">“With all the re­cent at­ten­ti­on around Linux as an ope­ra­ting sys­tem,” it began, “it’s im­portant to step back from the hype and look at the rea­li­ty.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-82">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-82-1-p0">The first sec­tion, dea­ling with per­for­mance, leads with the Mind­craft bench tests (as car­ri­ed out by PC Week), and then adds other sup­porting re­ports and ar­ti­cles.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-83">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-83-1-p0">The se­cond sec­tion deals with re­lia­bi­li­ty, and says that “Linux lacks a com­mer­ci­al qua­li­ty Jour­na­ling File Sys­tem.” It points out that wi­thout such a sys­tem, “in the event of a sys­tem failu­re, such as a power ou­ta­ge, data loss or cor­rup­ti­on is pos­si­ble.” This had been an im­portant mis­sing com­po­nent from GNU/Linux for a long time.</span>
+        
+        <span class="book-sentence" id="s-17-83-2-p0">Since the Linux Myths do­cu­ment ap­peared, howe­ver, se­veral jour­na­ling file sys­tem pro­jects have begun.</span>
+        
+        <span class="book-sentence" id="s-17-83-3-p0">Two of them come from com­mer­ci­al ven­dors: IBM and SGI have of­fe­red their re­spec­tive soft­ware to the open sour­ce com­mu­ni­ty.</span>
+        
+        <span class="book-sentence" id="s-17-83-4-p0">Ano­ther is being led by Ste­phen Tweed­ie, one of the most se­ni­or ker­nel ha­ckers.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-84">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-84-1-p0">Mi­cro­soft’s com­ment that “there are no com­mer­ci­al­ly pro­ven clus­te­ring tech­no­lo­gies to pro­vi­de High Avail­a­bi­li­ty for Linux” was si­mi­lar­ly true at the time.</span>
+        
+        <span class="book-sentence" id="s-17-84-2-p0">Such high-avail­a­bi­li­ty clus­te­ring al­lows one ma­chi­ne in a group to fail wi­thout an over­all break in ser­vice.</span>
+        
+        <span class="book-sentence" id="s-17-84-3-p0">The many non­com­mer­ci­al clus­te­ring pro­jects that exis­ted then have now ma­tu­red con­sider­ab­ly, and some, like that of Tur­bo­Li­nux, have been sold and fully sup­por­ted for some time.</span>
+        
+        <span class="book-sentence" id="s-17-84-4-p0">That the high­ly po­pu­lar Web se­arch en­gi­ne Goog­le de­pends on a GNU/Linux clus­ter con­sis­ting of no fewer than 4,000 ma­chi­nes is evi­dence en­ough of the “com­mer­ci­al­ly pro­ven” na­tu­re of these tech­no­lo­gies.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-85">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-85-1-p0">The third myth that Mi­cro­soft seeks to de­mo­lish is that “Linux is free.” It right­ly points out that “the cost of the ope­ra­ting sys­tem is only a small per­cen­ta­ge of the over­all total cost of ow­nership (TCO).</span>
+        
+        <span class="book-sentence" id="s-17-85-2-p0">In ge­ne­ral Win­dows NT has pro­ven to have a lower cost of ow­nership than UNIX.” But its state­ment that “there is no re­a­son to be­lie­ve that Linux is si­gni­fi­cant­ly dif­fe­rent than other ver­si­ons of UNIX when it comes to TCO” con­ve­ni­ent­ly for­gets that Unix’s high costs were lar­ge­ly cau­sed by the frag­men­ted na­tu­re of the sec­tor, which in turn led to hig­her soft­ware and trai­ning costs.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-86">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-86-1-p0">The next point ad­dres­ses se­cu­ri­ty.</span>
+        
+        <span class="book-sentence" id="s-17-86-2-p0">Mi­cro­soft as­serts that the “Linux se­cu­ri­ty model is weak.” But many be­lie­ve it is the Mi­cro­soft se­cu­ri­ty model that is fun­da­men­tal­ly fla­wed.</span>
+        
+        <span class="book-sentence" id="s-17-86-3-p0">One such per­son is Bruce Schnei­er, aut­hor of the clas­sic book <em>Ap­p­lied Cryp­to­gra­phy</em>, and wi­de­ly re­spec­ted as an in­de­pen­dent aut­ho­ri­ty on com­pu­ter se­cu­ri­ty.</span>
+        
+        <span class="book-sentence" id="s-17-86-4-p0">In the Sep­tem­ber 1999 issue of his free month­ly news­let­ter <em>Cryp­to-Gram</em>, Schnei­er ex­ami­ned the re­la­ti­ve se­cu­ri­ty of clo­sed and open sour­ce soft­ware.</span>
+        
+        <span class="book-sentence" id="s-17-86-5-p0">He wrote, “Ass a cryp­to­gra­phy and com­pu­ter se­cu­ri­ty ex­pert, I have never un­ders­tood the cur­rent fuss about the open sour­ce soft­ware mo­ve­ment.</span>
+        
+        <span class="book-sentence" id="s-17-86-6-p0">In the cryp­to­gra­phy world, we con­sider open sour­ce ne­cessa­ry for good se­cu­ri­ty; we have for de­ca­des.” Schnei­er con­clu­ded, “Com­pa­ring the se­cu­ri­ty of Linux with that of Mi­cro­soft Win­dows is not very in­struc­tive.</span>
+        
+        <span class="book-sentence" id="s-17-86-7-p0">Mi­cro­soft has done such a ter­ri­b­le job with se­cu­ri­ty that it is not re­al­ly a fair com­pa­ri­son.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-87">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-87-1-p0">Mi­cro­soft’s last point in the Linux Myths do­cu­ment sta­tes that “Linux as a desk­top ope­ra­ting sys­tem makes no sense.</span>
+        
+        <span class="book-sentence" id="s-17-87-2-p0">A user would end up with a sys­tem that has fewer ap­p­li­ca­ti­ons, is more com­plex to use and ma­na­ge, and is less in­tui­ti­ve.” The com­ment about GNU/Linux’s being less in­tui­ti­ve has been over­ta­ken to a large extent by enor­mous pro­gress in the KDE and GNOME pro­jects, which offer most of the be­ne­fits of Mi­cro­soft Win­dows.</span>
+        
+        <span class="book-sentence" id="s-17-87-3-p0">Howe­ver, GNU/Linux sup­port for PC hard­ware tech­no­lo­gies such as Plug and Play (al­lo­wing au­to­ma­tic con­fi­gu­ra­ti­on of de­vices), PCM­CIA (credit-card-sized pe­ri­pherals com­mon­ly used with note­books) and USB (ano­ther easy way of ad­ding hard­ware) has un­doub­ted­ly lag­ged be­hind Win­dows, which does in­de­ed make the sys­tem more dif­fi­cult to use and ma­na­ge.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-88">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-88-1-p0">There is also much truth in the com­ment about soft­ware avail­a­bi­li­ty.</span>
+        
+        <span class="book-sentence" id="s-17-88-2-p0">Tens of thousands of ap­p­li­ca­ti­ons run under Win­dows 95/98 and NT; GNU/Linux can­not yet come close.</span>
+        
+        <span class="book-sentence" id="s-17-88-3-p0">But things are chan­ging ra­pidly, as the gro­wing flood of an­noun­ce­ments on sites such as Fresh­meat in­di­ca­tes.</span>
+        
+        <span class="book-sentence" id="s-17-88-4-p0">Mo­re­o­ver, the pic­tu­re could chan­ge al­most at a stroke if a long-run­ning open sour­ce pro­ject cal­led Wine comes to frui­ti­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-89">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-89-1-p0">Star­ted in June 1993, Wine aims to allow GNU/Linux sys­tems to run un­mo­di­fied Win­dows ap­p­li­ca­ti­ons di­rect­ly.</span>
+        
+        <span class="book-sentence" id="s-17-89-2-p0">Ac­cor­ding to the cur­rent lea­der of the pro­ject, the Swiss-born Alex­and­re Jul­li­ard, “there are two mea­nings to the name,” which, in ty­pi­cal ha­cker fa­shion, hap­pen to be con­tra­dic­to­ry.</span>
+        
+        <span class="book-sentence" id="s-17-89-3-p0">“The ori­gi­nal mea­ning is WIN­dows Emu­la­tor, and the other mea­ning is a re­cur­si­ve acro­nym, Wine Is Not an Emu­la­tor,” he ex­plains.</span>
+        
+        <span class="book-sentence" id="s-17-89-4-p0">“The goal is to run just about ever­y­thing.</span>
+        
+        <span class="book-sentence" id="s-17-89-5-p0">I don’t think we can re­al­ly reach that goal, but I think we can get good en­ough com­pa­ti­bi­li­ty to run things like Mi­cro­soft Of­fice,” which would be a huge bre­akth­rough.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-90">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-90-1-p0">If suc­cess­ful, the Wine pro­ject would be a tre­men­dous boon for users of the GNU/Linux sys­tem; it would give them ac­cess to the wide range of Win­dows pro­grams wi­thout the need to in­stall Win­dows its­elf.</span>
+        
+        <span class="book-sentence" id="s-17-90-2-p0">An im­portant side-ef­fect is that Wine would also allow com­pa­nies with Win­dows soft­ware to sell to GNU/Linux users wi­thout porting their pro­grams di­rect­ly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-91">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-91-1-p0">Note that in this last Linux Myth, which deals with ap­p­li­ca­ti­ons, Mi­cro­soft swit­ches from the ser­ver side, the focus of all the other points, to the desk­top.</span>
+        
+        <span class="book-sentence" id="s-17-91-2-p0">In 1998 and 1999, GNU/Linux made great stri­des in gai­ning si­gni­fi­cant ser­ver-side ap­p­li­ca­ti­ons sup­port, as Chap­ter 12 de­tai­led.</span>
+        
+        <span class="book-sentence" id="s-17-91-3-p0">This has been re­flec­ted in a cor­re­spon­ding rise in the de­ploy­ment of GNU/Linux as a ser­ver plat­form.</span>
+        
+        <span class="book-sentence" id="s-17-91-4-p0">For ex­amp­le, fi­gu­res from the mar­ket ana­lyst com­pa­ny IDC in­di­ca­te that of all ser­ver ope­ra­ting sys­tems bought world­wi­de in 1999, paid GNU/Linux li­cen­ses re­pre­sen­ted 24.4 per­cent; in 1998 it was 15.8 per­cent.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-92">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-92-1-p0">Se­veral main hea­dings of the Linux Myths mir­ror clo­se­ly the ori­gi­nal goals of the Win­dows NT pro­ject, pres­u­m­a­b­ly be­cau­se most of these goals re­main prio­ri­ties.</span>
+        
+        <span class="book-sentence" id="s-17-92-2-p0">In his fo­r­e­word to <em>In­si­de Win­dows NT</em>, the of­fi­ci­al his­to­ry of the pro­ject writ­ten by Helen Cus­ter, NT’s ar­chi­tect, Dave Cut­ler, in­clu­ded four areas not tou­ched on in the Linux Myths do­cu­ment: por­ta­bi­li­ty, Posix com­p­li­an­ce, ex­ten­si­bi­li­ty, and in­ter­na­tio­na­liza­t­i­on.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-93">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-93-1-p0">Their omis­si­on later is un­der­stan­da­ble; in all but one of them—in­ter­na­tio­na­liza­t­i­on—GNU/Linux is cle­ar­ly ahead of Win­dows NT.</span>
+        
+        <span class="book-sentence" id="s-17-93-2-p0">In the area of por­ta­bi­li­ty—the abili­ty to run on dif­fe­rent pro­ces­sors—GNU/Linux’s lead is so si­gni­fi­cant as to con­sti­tu­te an in­cre­a­sin­gly se­rious pro­blem for Mi­cro­soft’s ope­ra­ting sys­tem.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-94">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-94-1-p0">In­iti­al­ly, Win­dows NT ran on the Intel x86 fa­mi­ly, and the MIPS R4000 fa­mi­ly.</span>
+        
+        <span class="book-sentence" id="s-17-94-2-p0">Sup­port for the Alpha AXP chips from Di­gi­tal and the Mo­to­ro­la Power­PC was added later, but Mi­cro­soft drop­ped the MIPS and Power­PC chips in 1996.</span>
+        
+        <span class="book-sentence" id="s-17-94-3-p0">Alpha sup­port sur­vi­ved until Au­gust 1999, when Di­gi­tal’s owner, Com­paq, an­noun­ced that it was drop­ping Win­dows NT on that plat­form.</span>
+        
+        <span class="book-sentence" id="s-17-94-4-p0">This left Mi­cro­soft NT on just one pro­ces­sor, Intel’s x86 fa­mi­ly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-95">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-95-1-p0">Where NT va­rie­ties have dwind­led, GNU/Linux ports have mul­ti­plied ex­tra­or­di­na­ri­ly to em­bra­ce prac­tical­ly every pro­ces­sor chip ca­pa­ble of run­ning the ope­ra­ting sys­tem, even those em­ploy­ed in such un­li­kely plat­forms as the Palm hand­held.</span>
+        
+        <span class="book-sentence" id="s-17-95-2-p0">But wi­thout doubt, the most im­portant port of all is to an Intel chip that in 1999 was still shrou­ded in mys­te­ry: code-named Mer­ced, later dub­bed of­fi­ci­al­ly “Ita­ni­um,” and often re­fer­red to as the IA-64.</span>
+        
+        <span class="book-sentence" id="s-17-95-3-p0">The “64” was si­gni­fi­cant be­cau­se it in­di­ca­ted that this was the 64-bit ver­si­on of the ve­nerable Intel x86 fa­mi­ly.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-96">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-96-1-p0">GNU/Linux took an early lead here thanks to the ef­forts of VA Linux’s Larry Au­gus­tin.</span>
+        
+        <span class="book-sentence" id="s-17-96-2-p0">He ap­proa­ched Intel with the idea of porting GNU/Linux to the IA-64 plat­form be­cau­se he had noted how tra­di­tio­nal­ly the open sour­ce com­mu­ni­ty al­ways saw hard­ware and do­cu­men­ta­ti­on long after ever­yo­ne else.</span>
+        
+        <span class="book-sentence" id="s-17-96-3-p0">This meant that GNU/Linux ports lag­ged be­hind those of other com­pa­nies that were given do­cu­men­ta­ti­on con­fi­den­ti­al­ly—and early.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-97">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-97-1-p0">“We loo­ked and said, ‘Gee, you know, we want to try and chan­ge that,’” Au­gus­tin re­calls.</span>
+        
+        <span class="book-sentence" id="s-17-97-2-p0">“‘We’d like to get ahead of the curve for once.’ And we saw Intel’s new pro­ces­sor as an op­por­tu­ni­ty to crea­te a new stan­dard for de­ve­lop­ment.</span>
+        
+        <span class="book-sentence" id="s-17-97-3-p0">That is, when the hard­ware is re­leased, open sour­ce and Linux sup­port is avail­able on day one.</span>
+        
+        <span class="book-sentence" id="s-17-97-4-p0">We put to­ge­ther a pro­po­sal how we’d do the de­ve­lop­ment, and the plans for re­leasing it to the open sour­ce com­mu­ni­ty.</span>
+        
+        <span class="book-sentence" id="s-17-97-5-p0">That was a very im­portant piece, that we were going to work with Linus and the de­ve­lop­ment com­mu­ni­ty to make sure that what we pro­du­ced was not VA soft­ware, it was stan­dard, ever­yo­ne used it.</span>
+        
+        <span class="book-sentence" id="s-17-97-6-p0">And Intel liked the ap­proach.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-98">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-98-1-p0">Au­gus­tin be­lie­ves there were two im­portant fac­tors in Intel’s de­ci­si­on to give its backing to his pro­po­sal.</span>
+        
+        <span class="book-sentence" id="s-17-98-2-p0">“I can tell you that that ‘Fu­ture of Linux’ panel” held in Si­li­con Val­ley in July 1998, “had an im­pact,” he says—just as it did on Ora­cle, when it promp­ted the da­ta­ba­se com­pa­ny to an­noun­ce its port of Ora­cle8 to GNU/Linux.</span>
+        
+        <span class="book-sentence" id="s-17-98-3-p0">The other fac­tor was “plain eco­no­mic,” Au­gus­tin says.</span>
+        
+        <span class="book-sentence" id="s-17-98-4-p0">“Intel wan­ted to be in the ser­ver space, and was not doing a good job of it.</span>
+        
+        <span class="book-sentence" id="s-17-98-5-p0">They saw in Linux an op­por­tu­ni­ty to do that.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-99">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-99-1-p0">The agree­ment for VA Linux to lead the port of GNU/Linux to the IA-64 was an­noun­ced on 2 March 1999.</span>
+        
+        <span class="book-sentence" id="s-17-99-2-p0">Other com­pa­nies men­tio­ned in the press re­lease as joi­ning the ef­fort were Hew­lett-Pa­ckard—which had hel­ped to de­sign the IA-64 chip—and SGI, with ad­di­tio­nal sup­port from IBM, Com­paq and Dell, as well as Cal­de­ra, De­bi­an, Red Hat and SuSE.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-100">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-100-1-p0">Ass a re­sult of this in­itia­ti­ve, and the broad sup­port it re­cei­ved from the ent­i­re com­pu­ter in­dus­try, GNU/Linux was soon well ahead in the race to port to the new Intel pro­ces­sor.</span>
+        
+        <span class="book-sentence" id="s-17-100-2-p0">For ex­amp­le, at the be­gin­ning of 2000, Mi­cha­el Tie­mann, who be­ca­me Red Hat’s CTO after it ac­qui­red Cyg­nus, gave a cour­se on the GNU de­ve­lop­ment tools that Cyg­nus had por­ted to the IA-64, at a con­fe­rence for de­ve­l­o­pers on the new plat­form.</span>
+        
+        <span class="book-sentence" id="s-17-100-3-p0">“Mi­cro­soft was now­he­re to be seen at the con­fe­rence,” he re­calls.</span>
+        
+        <span class="book-sentence" id="s-17-100-4-p0">“And I asked, did they ac­tual­ly ma­na­ge to demo Win­dows 2000 boo­ting on IA-64?</span>
+        
+        <span class="book-sentence" id="s-17-100-5-p0">And what peop­le told me was they got up on stage on the first day of the con­fe­rence, they show­ed it boo­ting, they shut it down, and their ma­chi­ne went back into cold sto­r­a­ge.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-101">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-101-1-p0">“Howe­ver, there was a third-party so­lu­ti­ons booth where NEC and SGI and IBM and Com­paq and ever­y­bo­dy else [were] de­mons­tra­ting IA-64.</span>
+        
+        <span class="book-sentence" id="s-17-101-2-p0">Those ma­chi­nes were run­ning all day long, all throughout the con­fe­rence, and they were all run­ning Linux.” The first pu­bli­cly avail­able GNU/Linux dis­tri­bu­ti­on for IA-64 was de­li­ve­r­ed by Tur­bo­Li­nux on 20 March 2000, just six weeks after the sour­ce code of the Linux port was re­leased to de­ve­l­o­pers—a con­siderable achie­ve­ment.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-102">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-102-1-p0">Mi­cro­soft doesn’t talk much about GNU/Linux’s lead here.</span>
+        
+        <span class="book-sentence" id="s-17-102-2-p0">Ins­tead, it pre­fers to cha­rac­te­ri­ze open sour­ce as “kind of cha­sing tail­lights” as Jim Ewel puts it.</span>
+        
+        <span class="book-sentence" id="s-17-102-3-p0">There is some jus­ti­ce in this be­cau­se, as Au­gus­tin had noted, GNU/Linux de­ve­l­o­pers were de­nied ti­me­ly ac­cess to pro­prieta­ry hard­ware spe­ci­fi­ca­ti­ons.</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-103">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-103-1-p0">Now, though, Intel had not only pro­vi­ded de­tails about the Ita­ni­um chip to the GNU/Linux com­mu­ni­ty, it had even pla­ced what were once tight­ly guar­ded trade se­crets about the IA-64 ar­chi­tec­tu­re on­line for all to see—a stun­ning con­ver­si­on to open sour­ce ideas.</span>
+        
+        <span class="book-sentence" id="s-17-103-2-p0">Tie­mann says, “IA-64 is the first time where we got an even start ins­tead of being be­hind by six months or a year.” And Au­gus­tin points out, “It’s the first time that we’ve seen a major launch of a new pro­ces­sor where Linux was the de­fault ope­ra­ting sys­tem.</span>
+        
+        <span class="book-sentence" id="s-17-103-3-p0">That to me is just a tre­men­dous mi­les­to­ne, it moves Linux from being the num­ber two play­er to being the num­ber one play­er.”</span>
+        
+      </p>
+    </section>
+    <section class="book-paragraph" id="p-17-104">
+      <p class="book-paragraph-text">
+        <span class="book-sentence" id="s-17-104-1-p0">Not only is it in the new mar­ket de­fi­ned by the Intel Ita­ni­um chip that GNU/Linux is res­ha­ping the com­pu­ting land­scape.</span>
+        
+        <span class="book-sentence" id="s-17-104-2-p0">Par­al­lel to the move to 64-bit en­t­er­pri­se sys­tems, prac­tical­ly every sec­tor of the in­dus­try is re­inven­ting its­elf as a re­sult of GNU/Linux and open sour­ce.</span>
+        
+        <span class="book-sentence" id="s-17-104-3-p0">And this was re­vea­led now­he­re more dra­ma­ti­cal­ly or vi­si­bly than in the ex­tra­or­di­na­ry an­noun­ce­ments made by IBM at the be­gin­ning of 2000.</span>
+        
+      </p>
+    </section>
+  </article>
+  <nav class="chapter-nav book-chapter-nav">
+    <a class="nav-btn prev" href="16-15-trolls-versus-gnomes.html" aria-label="Zurück zum vorherigen Kapitel">Zurück</a>
+    <a class="nav-btn next" href="18-17-tomorrow-s-hothouse.html" aria-label="Weiter zum nächsten Kapitel">Nächstes Kapitel</a>
+  </nav>
+</main>
+  <script src="../../../assets/reader.js" defer></script>
+</body>
+</html>

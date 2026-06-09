@@ -1,0 +1,20 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1117;
+    --surface: #131722;
+    --surface-soft: #181d2b;
+    --fg: #e9ecf3;
+    --muted: #b6bfce;
+    --border: #2a3243;
+    --accent: #6366f1;
+    --accent-soft: #1f2453;
+  }
+
+  .agent-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
+  }
+
+  .agent-meta {
+    border-top-color: #2a3243;
+  }
+}
