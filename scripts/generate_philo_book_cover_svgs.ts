@@ -16,11 +16,15 @@
  * Batch (philo-von-freisinn primary/secondary-books):
  *   npx tsx scripts/generate_philo_book_cover_svgs.ts --batch --image-dir assets/cover-images
  *
+ * Nur primary-books (Bild aus image-dir, Manifest oder bestehendem SVG):
+ *   npx tsx scripts/generate_philo_book_cover_svgs.ts --primary
+ *
  * Bildauflösung für iPad (Retina):
  *   Cover 2048×3072 px (2:3) → Bildbereich ~65 % Höhe → mindestens 2048×1300 px.
  *   Für kleinere Vorschau reicht 1200×780 px (Default-Canvas 1200×1800).
  */
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import yaml from "js-yaml";
@@ -49,6 +53,9 @@ const BG_WHITE = "#ffffff";
 const TEXT_DARK = "#2a2a2a";
 const TEXT_MUTED = "#8a8a8a";
 const TEXT_LIGHT = "#b0b0b0";
+
+const AUTHOR_FONT_SIZE = 30;
+const AUTHOR_FONT_WEIGHT = 600;
 
 const FONT =
   "system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif";
@@ -107,6 +114,21 @@ function wrapLines(text: string, maxChars: number, maxLines: number): string[] {
   return lines;
 }
 
+/** Extrahiert eingebettetes Foto aus einem bestehenden Cover-SVG (Fallback für Re-Generierung). */
+function extractEmbeddedImageFromSvg(svgPath: string, bookId: string): string | null {
+  const svg = fs.readFileSync(svgPath, "utf8");
+  const m = svg.match(/href="data:image\/([^;]+);base64,([^"]+)"/);
+  if (!m) return null;
+  const mimeSub = m[1];
+  const ext =
+    mimeSub === "jpeg" ? "jpg" : mimeSub === "svg+xml" ? "svg" : mimeSub;
+  const outDir = path.join(os.tmpdir(), "ragkeep-cover-extract", bookId);
+  fs.mkdirSync(outDir, { recursive: true });
+  const outPath = path.join(outDir, `cover.${ext}`);
+  fs.writeFileSync(outPath, Buffer.from(m[2], "base64"));
+  return outPath;
+}
+
 function imageToDataUri(imagePath: string): string {
   const abs = path.resolve(imagePath);
   if (!fs.existsSync(abs)) {
@@ -151,7 +173,7 @@ export function buildCoverSvg(params: CoverParams): string {
   const titleLines = wrapLines(title, 22, 8);
   const titleFontSize =
     titleLines.length === 1 ? 96 : titleLines.length === 2 ? 88 : 78;
-  const titleLineHeight = titleFontSize * 1.08;
+  const titleLineHeight = titleFontSize * 1.22;
   const titleFirstY = MARGIN_TOP + titleFontSize;
 
   const subtitleLines = subtitle ? wrapLines(subtitle, 30, 4) : [];
@@ -177,7 +199,7 @@ export function buildCoverSvg(params: CoverParams): string {
     ? `<text x="${MARGIN_X}" y="${metaY}" fill="${TEXT_LIGHT}" font-family="${FONT}" font-size="24" font-weight="400">${escapeXml(year)}</text>`
     : "";
 
-  const authorBlock = `<text x="${authorX}" y="${metaY}" text-anchor="end" fill="${TEXT_MUTED}" font-family="${FONT}" font-size="26" font-weight="400">${escapeXml(author)}</text>`;
+  const authorBlock = `<text x="${authorX}" y="${metaY}" text-anchor="end" fill="${TEXT_MUTED}" font-family="${FONT}" font-size="${AUTHOR_FONT_SIZE}" font-weight="${AUTHOR_FONT_WEIGHT}">${escapeXml(author)}</text>`;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
@@ -258,10 +280,20 @@ function resolveImagePath(
     }
   }
   if (defaultImage && fs.existsSync(defaultImage)) return defaultImage;
+  if (m["book-id"]) {
+    const existingSvg = path.join(DEFAULT_OUT_DIR, `${m["book-id"]}.svg`);
+    if (fs.existsSync(existingSvg)) {
+      return extractEmbeddedImageFromSvg(existingSvg, m["book-id"]);
+    }
+  }
   return null;
 }
 
-async function runBatch(imageDir?: string, defaultImage?: string): Promise<void> {
+async function runBatch(
+  imageDir?: string,
+  defaultImage?: string,
+  primaryOnly = false
+): Promise<void> {
   const assistant = loadYaml<{
     "primary-books"?: string[];
     "secondary-books"?: string[];
@@ -271,12 +303,16 @@ async function runBatch(imageDir?: string, defaultImage?: string): Promise<void>
     process.exit(1);
   }
 
-  const ids = [
-    ...(assistant["primary-books"] ?? []),
-    ...(assistant["secondary-books"] ?? []),
-  ];
+  const ids = primaryOnly
+    ? (assistant["primary-books"] ?? [])
+    : [
+        ...(assistant["primary-books"] ?? []),
+        ...(assistant["secondary-books"] ?? []),
+      ];
 
   fs.mkdirSync(DEFAULT_OUT_DIR, { recursive: true });
+
+  const skippedNoImage: string[] = [];
 
   for (const bookDirId of ids) {
     const manifestPath = path.join(REPO_ROOT, "books", bookDirId, "book-manifest.yaml");
@@ -289,6 +325,7 @@ async function runBatch(imageDir?: string, defaultImage?: string): Promise<void>
     const imagePath = resolveImagePath(bookDirId, m, imageDir, defaultImage);
     if (!imagePath) {
       console.warn(`Überspringe (kein Bild): ${bookDirId}`);
+      skippedNoImage.push(bookDirId);
       continue;
     }
 
@@ -303,6 +340,11 @@ async function runBatch(imageDir?: string, defaultImage?: string): Promise<void>
     const outPath = path.join(DEFAULT_OUT_DIR, `${m["book-id"]}.svg`);
     fs.writeFileSync(outPath, svg, "utf8");
     console.log(`OK ${m["book-id"]}  (${title})`);
+  }
+
+  if (skippedNoImage.length > 0) {
+    console.log(`\n${skippedNoImage.length} ohne Bild übersprungen:`);
+    for (const id of skippedNoImage) console.log(`  - ${id}`);
   }
 }
 
@@ -337,7 +379,7 @@ async function runSingle(args: Record<string, string | boolean>): Promise<void> 
 async function main(): Promise<void> {
   const args = parseArgs(process.argv.slice(2));
 
-  if (args.batch) {
+  if (args.batch || args.primary) {
     const imageDir = args["image-dir"]
       ? path.isAbsolute(String(args["image-dir"]))
         ? String(args["image-dir"])
@@ -348,7 +390,7 @@ async function main(): Promise<void> {
         ? String(args["default-image"])
         : path.join(REPO_ROOT, String(args["default-image"]))
       : undefined;
-    await runBatch(imageDir, defaultImage);
+    await runBatch(imageDir, defaultImage, Boolean(args.primary));
     return;
   }
 
@@ -362,6 +404,7 @@ async function main(): Promise<void> {
     "Cover-Generator\n" +
       "  Einzelcover: --title --author --image --output [--subtitle] [--year]\n" +
       "  Batch:       --batch [--image-dir assets/cover-images] [--default-image path]\n" +
+      "  Primary:     --primary [--image-dir …]\n" +
       `\nEmpfohlene Bildgröße (Retina-iPad): ${RECOMMENDED_IMAGE_SIZE.retina.width}×${RECOMMENDED_IMAGE_SIZE.retina.height} px`
   );
 }
