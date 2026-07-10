@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# Export all Rudolf Steiner books of an assistant via ragprep text:export.
+# Chunk + release all Rudolf Steiner books of an assistant via ragprep rag:chunk.
 # Usage: ./export-steiner-books.sh [assistant-name] [--release]
 #   assistant-name defaults to philo-von-freisinn
-#   --release: zusätzlich _released.md im Buchordner erstellen
+#   --release: zusätzlich results/<buch>.md und _released.md im Buchordner
 #
 # Run from ragkeep root. Expects ragprep as sibling directory.
 
@@ -12,7 +12,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 RAGKEEP_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 RAGPREP_ROOT="$(cd "$RAGKEEP_ROOT/../ragprep" && pwd)"
 
-# Parse args: first non-flag = assistant, rest = extra args for text:export (e.g. --release)
+# Parse args: first non-flag = assistant, rest = extra args for rag:chunk (e.g. --release)
 EXTRA_ARGS=()
 ASSISTANT="philo-von-freisinn"
 for arg in "$@"; do
@@ -75,11 +75,11 @@ for BOOK_ID in $BOOKS; do
   echo "--- [$COUNT] $BOOK_ID ---"
 
   if [[ ${#EXTRA_ARGS[@]} -gt 0 ]]; then
-    (cd "$RAGPREP_ROOT" && yarn rp text:export "$BOOK_DIR" "${EXTRA_ARGS[@]}")
+    (cd "$RAGPREP_ROOT" && yarn rp rag:chunk "$BOOK_DIR" --assistant "$ASSISTANT" --yes-chapter-changes "${EXTRA_ARGS[@]}")
   else
-    (cd "$RAGPREP_ROOT" && yarn rp text:export "$BOOK_DIR")
+    (cd "$RAGPREP_ROOT" && yarn rp rag:chunk "$BOOK_DIR" --assistant "$ASSISTANT" --yes-chapter-changes)
   fi
   echo ""
 done
 
-echo "=== Fertig: $COUNT Bücher exportiert ==="
+echo "=== Fertig: $COUNT Bücher gechunkt ==="

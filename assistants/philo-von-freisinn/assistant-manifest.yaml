@@ -22,8 +22,7 @@ primary-books:
   - Rudolf_Steiner#Grundlinien_einer_Erkenntnistheorie_der_Goetheschen_Weltanschauung#2
   - Rudolf_Steiner#Friedrich_Nietzsche._Ein_Kämpfer_gegen_seine_Zeit#5
   - Rudolf_Steiner#Goethes_Weltanschauung#6
-primary-lectures:
-  - Zyklus 33, Der menschliche und der kosmische Gedanke, 4 Vorträge
+primary-lectures: null
 secondary-books:
   - Rudolf_Steiner#Methodische_Grundlagen_der_Anthroposophie#30
   - Rudolf_Steiner#Gesammelte_Aufsätze_zur_Kultur-_und_Zeitgeschichte#31
@@ -40,6 +39,7 @@ secondary-books:
   - Julian_Assange#Various_Interviews_and_Articles#1
   - Sigismund_von_Gleich#Die_Wahrheit_als_Gesamtumfang_aller_Weltansichten
 secondary-lectures:
+  - Zyklus 33, Der menschliche und der kosmische Gedanke, 4 Vorträge
   - GA 73a, Fachwissenschaften und Anthroposophie
   - GA 76, Die befruchtende Wirkung der Anthroposophie auf die Fachwissenschaften
   - GA 79, Die Wirklichkeit der höheren Welten
@@ -74,6 +74,10 @@ secondary-lectures:
   - GA 293, Allgemeine Menschenkunde als Grundlage der Pädagogik
   - GA 294, Erziehungskunst. Methodisch-Didaktisches
   - GA 295, Erziehungskunst. Seminarbesprechungen und Lehrplanvorträge
+  - GA 185, Geschichtliche Symptomatologie
+  - GA 333, Gedankenfreiheit und soziale Kräfte
+  - GA 338, Wie wirkt man für den Impuls der Dreigliederung des sozialen
+    Organismus?
 augmentation-types:
   - summaries
   - quotes
@@ -113,4 +117,4 @@ typologies:
 lexical-strip-hybrid:
   - Rudolf Steiner
   - Steiner
-last-updated: 2026-06-05T15:40:16.959Z
+last-updated: 2026-07-09T15:31:30.256Z

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# pre-push hook: build static site locally and deploy to gh-pages
+# pre-push hook: sync sources and covers before push to main
 # Wird automatisch per `npm ci` installiert (prepare script in package.json)
 
 set -euo pipefail
@@ -24,10 +24,10 @@ if [ "$pushing_to_main" = false ]; then
 fi
 
 REPO_ROOT=$(git rev-parse --show-toplevel)
-REMOTE_URL=$(git remote get-url "$REMOTE")
 
-# Resolve .env (same lookup als build:pages)
+# Resolve .env (same lookup as sync:sources)
 ENV_FILE="$REPO_ROOT/../ragrun/.env"
+if [ ! -f "$ENV_FILE" ]; then ENV_FILE="$REPO_ROOT/../.env"; fi
 if [ ! -f "$ENV_FILE" ]; then ENV_FILE="$REPO_ROOT/../../.env"; fi
 
 if [ ! -f "$ENV_FILE" ]; then
@@ -41,24 +41,3 @@ else
   node --env-file "$ENV_FILE" --import tsx "$REPO_ROOT/scripts/upload_covers.ts" "$PUSH_LOCAL_SHA" "$PUSH_REMOTE_SHA"
   echo "✓ Covers hochgeladen"
 fi
-
-echo "▶ Building static site..."
-cd "$REPO_ROOT"
-npm run build:pages
-echo "✓ Build erfolgreich"
-
-echo "▶ Deploy zu gh-pages..."
-DEPLOY_MSG="deploy: $(git log -1 --format='%h %s')"
-
-TMP=$(mktemp -d)
-trap 'rm -rf "$TMP"' EXIT
-
-cp -r "$REPO_ROOT/site/." "$TMP/"
-cd "$TMP"
-unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
-git init -q
-git add -A
-git commit -q -m "$DEPLOY_MSG"
-git push -q "$REMOTE_URL" HEAD:gh-pages --force
-
-echo "✓ Deployed zu gh-pages"

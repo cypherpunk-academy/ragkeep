@@ -12,15 +12,15 @@ quotation-mark-open: «
 quotation-mark-close: »
 internal-page-references: null
 external-page-references: null
-chunks: 436
-multi-paragraph-chunks: 80
-single-paragraph-chunks: 82
-large-paragraph-chunks: 274
-average: 967
-p01_length: 230
-p05_length: 467
-p95_length: 1522
-p99_length: 1668
+chunks: 400
+multi-paragraph-chunks: 85
+single-paragraph-chunks: 77
+large-paragraph-chunks: 238
+average: 1056
+p01_length: 234
+p05_length: 515
+p95_length: 1624
+p99_length: 1765
 journal:
   pages: 282
   chapters: 18

@@ -6,11 +6,6 @@
 #   2. rag:augment:summaries --assistant <name>   (nur bei augmentation-types: summaries)
 #   3. rag:augment:quotes                         (nur bei augmentation-types: quotes)
 #
-# Mit --jsonl werden statt der rag:augment:*-Kommandos die vorhandenen
-# results/rag-chunks/*-chunks.jsonl direkt nach ragrun (POST /rag/store-chunks)
-# hochgeladen. Nützlich, wenn die Artefakte bereits existieren, aber ragrun
-# neu befüllt werden soll (z.B. nach einem DB-Reset).
-#
 # Ausführung: Von ragkeep-Root aus.
 # Erwartet ragprep als Geschwisterverzeichnis oder RAGPREP_ROOT gesetzt.
 #
@@ -23,7 +18,6 @@
 #   --skip-assistant     assistant:chunk (Talks, assistant-Quotes) überspringen
 #   --only-assistant     Nur assistant-globale Chunks (Talks, Quotes, Concepts, Typologies);
 #                        entspricht --skip-books --skip-lectures
-#   --jsonl              Vorhandene *-chunks.jsonl direkt hochladen statt rag:augment:*
 #   --force              rag:augment:* mit --force ausführen (Neuberechnung)
 #   --dry-run            Nur anzeigen, keine Befehle ausführen
 
@@ -38,7 +32,6 @@ SKIP_LECTURES=""
 SKIP_BOOKS=""
 SKIP_AUGMENT=""
 SKIP_ASSISTANT=""
-USE_JSONL=""
 FORCE=""
 DRY_RUN=""
 
@@ -50,7 +43,6 @@ for arg in "$@"; do
         --skip-augment)   SKIP_AUGMENT=1   ;;
         --skip-assistant)  SKIP_ASSISTANT=1               ;;
         --only-assistant)  SKIP_BOOKS=1; SKIP_LECTURES=1  ;;
-        --jsonl)          USE_JSONL=1      ;;
         --force)          FORCE=1          ;;
         --dry-run)        DRY_RUN=1        ;;
         --assistant=*)   ASSISTANT="${arg#--assistant=}" ;;
@@ -68,10 +60,17 @@ done
 # ---------------------------------------------------------------------------
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 RAGKEEP_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-RAGPREP_ROOT="${RAGPREP_ROOT:-$(cd "$RAGKEEP_ROOT/../ragprep" && pwd)}"
+if [[ -z "${RAGPREP_ROOT:-}" ]]; then
+    if [[ -f "$RAGKEEP_ROOT/../ragprep/package.json" ]]; then
+        RAGPREP_ROOT="$(cd "$RAGKEEP_ROOT/../ragprep" && pwd)"
+    elif [[ -f "$RAGKEEP_ROOT/../../ragprep/package.json" ]]; then
+        RAGPREP_ROOT="$(cd "$RAGKEEP_ROOT/../../ragprep" && pwd)"
+    else
+        RAGPREP_ROOT="$(cd "$RAGKEEP_ROOT/../ragprep" && pwd)"
+    fi
+fi
 BOOKS_ROOT="$RAGKEEP_ROOT/books"
 MANIFEST="$RAGKEEP_ROOT/assistants/$ASSISTANT/assistant-manifest.yaml"
-RAGRUN_BASE_URL="${RAGRUN_BASE_URL:-http://localhost:8000/api/v1}"
 
 if [[ ! -f "$MANIFEST" ]]; then
     echo "Fehler: Manifest nicht gefunden: $MANIFEST" >&2
@@ -145,81 +144,6 @@ run() {
     fi
 }
 
-# Lädt eine einzelne *-chunks.jsonl direkt nach ragrun hoch.
-# Bestimmt die rag_partition anhand des chunk_type des ersten Eintrags:
-#   book / secondary_book  →  __shared__
-#   alles andere           →  $COLLECTION
-upload_jsonl() {
-    local jsonl_file="$1"
-    if [[ ! -f "$jsonl_file" ]]; then
-        echo "  [jsonl] Datei nicht gefunden, übersprungen: $jsonl_file" >&2
-        return 0
-    fi
-    echo "  [jsonl] Upload: $(basename "$jsonl_file")"
-    if [[ -n "$DRY_RUN" ]]; then
-        echo "  [jsonl dry-run] würde POST ${RAGRUN_BASE_URL}/rag/store-chunks"
-        return 0
-    fi
-    python3 - "$jsonl_file" "$COLLECTION" "$RAGRUN_BASE_URL" <<'PYEOF'
-import sys, json, urllib.request, urllib.error
-
-LANG_NORM = {'german': 'de', 'english': 'en', 'french': 'fr', 'spanish': 'es'}
-
-def normalize_chunk(obj):
-    """Normalize fields that ragprep usually fixes before upload (e.g. language)."""
-    md = obj.get('metadata')
-    if isinstance(md, dict):
-        lang = md.get('language', '')
-        if isinstance(lang, str):
-            md['language'] = LANG_NORM.get(lang.lower(), lang)
-    return obj
-
-jsonl_file, collection, base_url = sys.argv[1], sys.argv[2], sys.argv[3]
-
-with open(jsonl_file) as f:
-    raw_lines = [l for l in f.read().splitlines() if l.strip()]
-
-# Parse, normalize, re-serialize
-chunks = []
-for line in raw_lines:
-    try:
-        chunks.append(normalize_chunk(json.loads(line)))
-    except json.JSONDecodeError as e:
-        print(f'  Warnung: Zeile übersprungen ({e})', file=sys.stderr)
-
-if not chunks:
-    print('  Keine gültigen Chunks gefunden.', file=sys.stderr)
-    sys.exit(1)
-
-# Partition aus erstem Eintrag ableiten
-chunk_type = chunks[0].get('metadata', {}).get('chunk_type', '')
-partition = '__shared__' if chunk_type in ('book', 'secondary_book') else collection
-
-content = '\n'.join(json.dumps(c) for c in chunks)
-body = json.dumps({
-    'chunks_jsonl_content': content,
-    'collection_name': partition,
-}).encode()
-
-req = urllib.request.Request(
-    f'{base_url}/rag/store-chunks',
-    data=body,
-    headers={'Content-Type': 'application/json'},
-    method='POST',
-)
-try:
-    resp = urllib.request.urlopen(req)
-    result = json.loads(resp.read())
-    stored = result.get('stored', '?')
-    coll   = result.get('collection', '?')
-    print(f'  → {stored} Chunks gespeichert  (collection={coll})')
-except urllib.error.HTTPError as e:
-    body_txt = e.read().decode('utf-8', errors='replace')
-    print(f'  HTTP {e.code}: {body_txt}', file=sys.stderr)
-    sys.exit(1)
-PYEOF
-}
-
 # Führt die vollständige Pipeline für ein Buch-/Vortrag-Verzeichnis aus.
 # $1 = book_dir   $2 = "book" | "lecture"
 process_book() {
@@ -231,26 +155,17 @@ process_book() {
         return 0
     fi
 
-    local rag_chunks_dir="$book_dir/results/rag-chunks"
-
     # --- Schritt 1: rag:chunk ------------------------------------------
     run yarn --cwd "$RAGPREP_ROOT" rp rag:chunk "$book_dir" --assistant "$ASSISTANT"
 
     # --- Schritt 2+3: Augmentierung ------------------------------------
     if [[ -z "$SKIP_AUGMENT" ]]; then
-        if [[ -n "$USE_JSONL" ]]; then
-            # JSONL-Modus: vorhandene Augment-Artefakte direkt hochladen
-            [[ -n "$DO_SUMMARIES" ]] && upload_jsonl "$rag_chunks_dir/summaries-chunks.jsonl"
-            [[ -n "$DO_QUOTES"    ]] && upload_jsonl "$rag_chunks_dir/quotes-chunks.jsonl"
-        else
-            # Normal-Modus: rag:augment:* ausführen
-            if [[ -n "$DO_SUMMARIES" ]]; then
-                run yarn --cwd "$RAGPREP_ROOT" rp rag:augment:summaries "$book_dir" \
-                    --assistant "$ASSISTANT" $FORCE_FLAG
-            fi
-            if [[ -n "$DO_QUOTES" ]]; then
-                run yarn --cwd "$RAGPREP_ROOT" rp rag:augment:quotes "$book_dir" $FORCE_FLAG
-            fi
+        if [[ -n "$DO_SUMMARIES" ]]; then
+            run yarn --cwd "$RAGPREP_ROOT" rp rag:augment:summaries "$book_dir" \
+                --assistant "$ASSISTANT" $FORCE_FLAG
+        fi
+        if [[ -n "$DO_QUOTES" ]]; then
+            run yarn --cwd "$RAGPREP_ROOT" rp rag:augment:quotes "$book_dir" $FORCE_FLAG
         fi
     fi
 }
@@ -319,7 +234,6 @@ echo "    talks          : aus rag_talks (published)"
 echo "    Bücher         : ${#ALL_BOOKS[@]}"
 echo "    Vorträge       : ${#ALL_LECTURE_DIRS[@]}"
 [[ -n "$DRY_RUN"       ]] && echo "    Modus          : dry-run"
-[[ -n "$USE_JSONL"     ]] && echo "    Modus          : --jsonl (Augment-JSONL direkt hochladen)"
 [[ -n "$FORCE"         ]] && echo "    Modus          : --force"
 [[ -n "$SKIP_AUGMENT"  ]] && echo "    Modus          : --skip-augment"
 [[ -n "$SKIP_ASSISTANT" ]] && echo "    Modus          : --skip-assistant"
@@ -383,27 +297,15 @@ if [[ -z "$SKIP_AUGMENT" ]] && [[ -z "$SKIP_ASSISTANT" ]]; then
     # --- Concepts -----------------------------------------------------------
     if [[ -n "$DO_CONCEPTS" ]]; then
         echo ""
-        CONCEPTS_JSONL="$RAGKEEP_ROOT/assistants/$ASSISTANT/concepts/chunks/concepts.jsonl"
-        if [[ -n "$USE_JSONL" ]]; then
-            echo "=== concepts – JSONL-Upload ==="
-            upload_jsonl "$CONCEPTS_JSONL"
-        else
-            echo "=== rag:augment:concepts ==="
-            run yarn --cwd "$RAGPREP_ROOT" rp rag:augment:concepts "$ASSISTANT" $FORCE_FLAG
-        fi
+        echo "=== rag:augment:concepts ==="
+        run yarn --cwd "$RAGPREP_ROOT" rp rag:augment:concepts "$ASSISTANT" $FORCE_FLAG
     fi
 
     # --- Typologies ---------------------------------------------------------
     if [[ -n "$DO_TYPOLOGIES" ]]; then
         echo ""
-        TYPOLOGIES_JSONL="$RAGKEEP_ROOT/assistants/$ASSISTANT/typologies/chunks/typologies.jsonl"
-        if [[ -n "$USE_JSONL" ]]; then
-            echo "=== typologies – JSONL-Upload ==="
-            upload_jsonl "$TYPOLOGIES_JSONL"
-        else
-            echo "=== rag:augment:typologies:explain ==="
-            run yarn --cwd "$RAGPREP_ROOT" rp rag:augment:typologies:explain "$ASSISTANT" $FORCE_FLAG
-        fi
+        echo "=== rag:augment:typologies:explain ==="
+        run yarn --cwd "$RAGPREP_ROOT" rp rag:augment:typologies:explain "$ASSISTANT" $FORCE_FLAG
     fi
 fi
 

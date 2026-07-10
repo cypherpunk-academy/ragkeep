@@ -1,5 +1,5 @@
 author: Rudolf Steiner
-title: Nationalökonomischer Kurs.
+title: Nationalökonomischer Kurs
 subtitle: Aufgaben einer neuen Wirtschaftswissenschaft Band I
 book-index: 340
 book-type: rudolf-steiner-ga-vortrag
@@ -14,12 +14,12 @@ journal:
   lines: 7118
   words: 70043
   footnotes: 1
-chunks: 450
-multi-paragraph-chunks: 48
-single-paragraph-chunks: 144
-large-paragraph-chunks: 258
-average: 1010
+chunks: 405
+multi-paragraph-chunks: 61
+single-paragraph-chunks: 142
+large-paragraph-chunks: 202
+average: 1122
 p01_length: 255
-p05_length: 474
-p95_length: 1551
-p99_length: 1656
+p05_length: 529
+p95_length: 1682
+p99_length: 1921

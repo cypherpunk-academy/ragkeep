@@ -5,6 +5,9 @@ book-index: 82
 book-type: rudolf-steiner-ga-vortrag
 language: de
 book-id: 3a9a436b-21ff-4bc6-ba5c-21c3da401318
+# Anhang: Bericht (kein Steiner-Vortrag) — nicht chunken/embedden
+exclude-lecture-ids:
+  - 19220507b
 first-author-page: 15
 last-author-page: 236
 journal:
@@ -14,12 +17,12 @@ journal:
   lines: 7573
   words: 60507
   footnotes: 0
-chunks: 374
-multi-paragraph-chunks: 18
-single-paragraph-chunks: 96
-large-paragraph-chunks: 260
-average: 998
+chunks: 334
+multi-paragraph-chunks: 27
+single-paragraph-chunks: 98
+large-paragraph-chunks: 209
+average: 1119
 p01_length: 408
-p05_length: 568
-p95_length: 1514
-p99_length: 1666
+p05_length: 681
+p95_length: 1725
+p99_length: 1951

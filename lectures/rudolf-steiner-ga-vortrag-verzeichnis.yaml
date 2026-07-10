@@ -13225,7 +13225,7 @@ lectures:
     datum: 22.02.1912
     jahr: "1912"
     ort: Stuttgart
-    vortragstitel: Christus und das XX. Jahrhundert
+    vortragstitel: Christus und das 20. Jahrhundert
     ga: 69c
   - id: 19120222b
     uuid: 38c8262f-b8e4-5818-b5f9-7c1c4db6d2a6
@@ -14994,7 +14994,7 @@ lectures:
     datum: 29.03.1913
     jahr: "1913"
     ort: Haag
-    vortragstitel: ""
+    vortragstitel: "Fragenbeantwortung"
   - id: 19130329c
     uuid: 5532ce19-ad04-5781-8165-2ff46a1ef766
     datum: 29.03.1913
@@ -15698,13 +15698,20 @@ lectures:
     ort: München
     vortragstitel: Geisteswissenschaft und die geistige Welt. Ausblicke in die Ziele unserer Zeit.
     ga: 69e
-  - id: 19131208
+  - id: 19131208a
     uuid: 77928f5a-a36f-524a-bd9b-3e657ef85306
     datum: 08.12.1913
     jahr: "1913"
     ort: München
     vortragstitel: Das fünfte Evangelium
     ga: 148
+  - id: 19131208b
+    uuid: e5f4b4b7-1d8f-4de6-9ce5-8ad17e66a959
+    datum: 08.12.1913
+    jahr: "1913"
+    ort: München
+    vortragstitel: ""
+    anlass: Esoterische Stunde
   - id: 19131209a
     uuid: 246e6703-d6d3-548f-98ee-a1fd70958e05
     datum: 09.12.1913
@@ -15816,7 +15823,7 @@ lectures:
     reihe: Christus und die geistige Welt
     ga: 149
     zyklus: 31
-  - id: 19140101
+  - id: 19140101a
     uuid: 57f1038e-67bc-5b3f-a046-05dbfffc6266
     datum: 01.01.1914
     jahr: "1914"
@@ -15825,6 +15832,13 @@ lectures:
     reihe: Christus und die geistige Welt
     ga: 149
     zyklus: 31
+  - id: 19140101b
+    uuid: 4f338691-5ec0-4a3e-b9eb-e47841cf3843
+    datum: 01.01.1914
+    jahr: "1914"
+    ort: München
+    vortragstitel: ""
+    anlass: Esoterische Stunde
   - id: 19140102a
     uuid: c622615f-b3e8-5c04-918f-417fe1b4f35e
     datum: 02.01.1914
@@ -16174,7 +16188,7 @@ lectures:
     datum: 31.03.1914
     jahr: "1914"
     ort: München
-    vortragstitel: Vom Tode
+    vortragstitel: Vom Tod
     ga: 69d
   - id: 19140331b
     uuid: 5b346b6d-ec2f-5a0f-8ab9-ccd0b7e8168d
@@ -16240,6 +16254,13 @@ lectures:
     vortragstitel: Robert Hamerling als Philosoph und Reformator
     anlass: Vortrag für den Bund «Homo contra Homunculus»
     ga: 85
+  - id: 19140411c
+    uuid: 57168508-2bda-4d8d-befb-32e2025db687
+    datum: 11.04.1914
+    jahr: "1914"
+    ort: Wien
+    vortragstitel: ""
+    anlass: Esoterische Stunde
   - id: 19140412
     uuid: 812a1d7b-cff0-5420-9936-088696c6a78f
     datum: 12.04.1914
@@ -16280,7 +16301,7 @@ lectures:
     datum: 14.04.1914
     jahr: "1914"
     ort: Wien
-    vortragstitel: ""
+    vortragstitel: "(eventuell 11.4.1914)"
     anlass: Esoterische Stunde
     ga: 266/3
   - id: 19140416
@@ -16381,14 +16402,14 @@ lectures:
     ort: Kassel
     vortragstitel: Gedächtnisfeier für Christian Morgenstern
     ga: 261
-  - id: 19140510b
+  - id: 19140510a
     uuid: 4c636623-d4c8-57d5-9e0c-c7efa292326f
     datum: 10.05.1914
     jahr: "1914"
     ort: Kassel
     vortragstitel: Das Hereinragen der geistigen Welt in die physische. Gedenkworte für Maria Strauch-Spettini
     ga: 261
-  - id: 19140510c
+  - id: 19140510b
     uuid: 60553607-790f-5e84-b8cb-fb365c33d807
     datum: 10.05.1914
     jahr: "1914"
@@ -16558,8 +16579,8 @@ lectures:
     datum: 13.08.1914
     jahr: "1914"
     ort: Dornach
-    vortragstitel: Ansprache nach dem Ausbruch des ersten Weltkriegs
-    anlass: Vor dem Vortrag vom 13.08.1914
+    vortragstitel: Samariter-Kursus
+    anlass: Nach dem Vortrag
     ga: 252
   - id: 19140814
     uuid: dfad904a-9709-502e-84de-60ec0565c513

@@ -39,29 +39,12 @@ MIT
 ## Notes
 - Full working tree (inputs, intermediates) lives in `ragkeep`; only the HF subset is mirrored here.
 
-## GitHub Pages (publish the HTML books to `github.io`)
+## GitHub Pages (deprecated)
 
-This repo can publish a static site under `site/` that lists all books which have an HTML rendering at:
-- `books/<bookDir>/html/index.html` (preferred), or
-- `books/<bookDir>/results/html/index.html` (legacy)
+The former static site build (`scripts/static-site/`, `npm run build:pages`) is removed.
+Book HTML under `books/<bookDir>/results/html/` remains for export and HF; there is no in-repo site generator anymore.
 
-### Build locally
-
-```bash
-npm run build:pages
-```
-
-This (re)creates `site/` and writes an `index.html` that links to each book.
-
-### Publish on GitHub Pages
-
-This repo includes a workflow at `.github/workflows/pages.yml` that deploys the `site/` folder to GitHub Pages on every push to `main`/`master`.
-
-To enable it once in GitHub:
-- Go to **Settings → Pages**
-- Set **Source** to **GitHub Actions**
-
-Your site will be available at `https://<owner>.github.io/<repo>/` and the books index at `https://<owner>.github.io/<repo>/index.html`.
+Legacy workflow `.github/workflows/pages.yml` may still exist but is unmaintained.
 
 ## Essay-Verwaltung mit MCP
 
