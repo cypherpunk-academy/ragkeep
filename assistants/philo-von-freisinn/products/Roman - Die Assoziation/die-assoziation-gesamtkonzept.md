@@ -1,6 +1,6 @@
 # Die Assoziation — Gesamtkonzept
 
-*Weltbibel-Dokument 00 zum Roman „Die Assoziation" (Brückenroman zu „2064")*
+*Welt-Konzept-Matrix Dokument 00 zum Roman „Die Assoziation" (Brückenroman zu „2064")*
 *Version 0.1 — Arbeitsstand, zusammengestellt aus der Struktursitzung vom 10.07.2026*
 
 ---
@@ -47,7 +47,7 @@ Die Tragik ist keine Niederlage der Idee, sondern: **Geist und Recht waren schon
 
 Die Kern-Assoziation (10–12 Menschen, Linux-Kernel-Maintainer-Modell) baut und pflegt die freie Weltwährung **Korn** — naturgedeckt (Proof of Harvest), alternd (Jahreszahl, Reife und Verfall), in den drei Zuständen Kaufgeld/Leihgeld/Schenkgeld, nicht handel- oder spekulierbar, emittiert von der Assoziation, rechtlich geschützt vom Staat. Getragen wird sie vom weltweiten Netz der Assoziationen.
 
-**Die Regel der Zwanzig:** Keine Assoziation im Netz hat mehr als zwanzig Mitglieder. Eine Assoziation, die wächst, teilt sich wie eine Zelle. Keine Riesenkonzerne — viele, viele kleine Teile. (Vollständig ausgearbeitet in Weltbibel-Dokument 01: korn-konzeptpapier.md, inkl. Ahnenreihe, Angriffsflächen und Ruddick-Mapping.)
+**Die Regel der Zwanzig:** Keine Assoziation im Netz hat mehr als zwanzig Mitglieder. Eine Assoziation, die wächst, teilt sich wie eine Zelle. Keine Riesenkonzerne — viele, viele kleine Teile. (Vollständig ausgearbeitet in Welt-Konzept-Matrix Dokument 01: korn-konzeptpapier.md, inkl. Ahnenreihe, Angriffsflächen und Ruddick-Mapping.)
 
 ---
 
@@ -85,7 +85,7 @@ Figurenkeim (aus Dokument 01): Das älteste Mitglied hat das W€-Prinzip um 200
 
 1. **Figurenbrücken:** Mindestens eine junge Nebenfigur ist eine alte Bekannte aus „2064" — Marlene als Kind oder junge Frau der 2050er liegt nahe (ihre Biografie existiert bereits als Objekt im ersten Roman).
 2. **Institutionenbrücke:** Der „Geheimdienst im Geheimdienst" von damals ist der Kern des verhärteten Komplexes von jetzt.
-3. **Formbrücke — der Repo-Roman:** „2064" endet mit einem Pull-Request an den Leser. „Die Assoziation" wird konsequent als Repo-Roman gebaut: Dokument-Artefakte zwischen den Kapiteln (Commits, Protokolle der Assoziation, Preisfindungsdaten, abgefangene Memos der Gegenseite), die zugleich die Zeitsprünge der Chronik überbrücken. Die Weltbibel-Dokumente selbst können Teil dieser Form werden.
+3. **Formbrücke — der Repo-Roman:** „2064" endet mit einem Pull-Request an den Leser. „Die Assoziation" wird konsequent als Repo-Roman gebaut: Dokument-Artefakte zwischen den Kapiteln (Commits, Protokolle der Assoziation, Preisfindungsdaten, abgefangene Memos der Gegenseite), die zugleich die Zeitsprünge der Chronik überbrücken. Die Welt-Konzept-Matrix-Dokumente selbst können Teil dieser Form werden.
 
 ---
 
@@ -97,7 +97,7 @@ Figurenkeim (aus Dokument 01): Das älteste Mitglied hat das W€-Prinzip um 200
 
 ---
 
-## Weltbibel-Inventar (Stand)
+## Welt-Konzept-Matrix Inventar (Stand)
 
 | Nr. | Dokument | Status |
 |---|---|---|
@@ -106,6 +106,7 @@ Figurenkeim (aus Dokument 01): Das älteste Mitglied hat das W€-Prinzip um 200
 | 02 | Zeitleiste 2027–2064 (drei Crashs, asymmetrische Heilung, Anschlusspunkte an „2064") | geplant |
 | 03 | Figurenkanon (Gründerteam, Gegenseite, Brückenfiguren) | geplant |
 | 04 | Die Bodenfrage (Steiners Bodenrente-Kritik, der Ort als unverkäufliches Rechtsgut) | geplant |
+| 05 | git-partei.md — GIT / Politics as a Service | v0.2 |
 
 ---
 

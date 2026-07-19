@@ -1,6 +1,6 @@
 # Das Korn — Konzeptpapier der freien Weltwährung
 
-*Weltbibel-Dokument 01 zum Roman „Die Assoziation" (Brückenroman zu „2064")*
+*Welt-Konzept-Matrix Dokument 01 zum Roman „Die Assoziation" (Brückenroman zu „2064")*
 *Version 0.2 — Arbeitsstand (0.1 rekonstruiert, neu: Abschnitt „Empirische Bestätigung von außen" und Reparaturpfade)*
 
 ---
@@ -160,7 +160,7 @@ Im Juni 2026 erscheint ein ökonomisches Paper, das — ohne Steiner zu nennen �
 - Wie genau funktioniert die Verjüngung technisch und sozial — wer entscheidet, wohin verjüngtes Korn als Schenkgeld fließt? (Kandidat: die Assoziationen des Geisteslebens selbst, nicht die Kern-Assoziation.)
 - Übergangsökonomie: Wie leben Menschen gleichzeitig in Euro/Dollar und Korn, solange beide existieren? (Keine Konvertierung — aber doppelte Preisauszeichnung?)
 - Name des Kernels/Protokolls im Roman — bleibt es schlicht „der Kernel"?
-- Verhältnis zur Bodenfrage: Steiners Bodenrente-Kritik (der Ort als unverkäufliches Rechtsgut) — eigenes Weltbibel-Dokument?
+- Verhältnis zur Bodenfrage: Steiners Bodenrente-Kritik (der Ort als unverkäufliches Rechtsgut) — eigenes Welt-Konzept-Matrix-Dokument?
 - **Neu (aus Ruddick):** Reparaturpfade des Korn vollständig spezifizieren — Trigger, Zustände (Stundung/Bürgschaft/Teilerfüllung/Schenkungsabschreibung), Zuständigkeit der Zwanziger-Assoziation, Öffentlichkeit vs. Personenschutz.
 - **Neu (aus Ruddick):** Regenerative Bonds als Übergangsfinanzierung in Teil I — welche Assoziation nimmt den ersten Bond auf, wer ist der Emittent, und wie wird die Brandmauer erzählt?
 
