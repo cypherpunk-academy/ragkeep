@@ -4,13 +4,26 @@
 
 ### Feld 1 — Geist → Recht: Sachkenntnis prägt das Recht
 
-1. **Jeder kann das werden, was in ihm steckt** – und dadurch gibt es für jede Aufgabe in der Gesellschaft Menschen, die sie erfüllen können.
-2. **Das Geistesleben liefert dem Rechtsleben das, was es selbst nicht leisten kann: sachkundiges Urteil** – damit es nicht aus Mehrheit oder Macht heraus sondern aus Einsicht handelt.
-3. **Gesetze sollen von denen kommen, die die Sache aus eigener Erfahrung kennen** – nicht von Politikern oder Bürokraten, die sie nur verwalten.
-4. **Gesetze müssen so geschrieben sein, dass sie jeder mündige Bürger verstehen kann.** – Sonst ist Mitbestimmung eine Illusion.
-5. **Manche Fragen brauchen Sachverstand – und dann soll auch nur der Sachverstand entscheiden, nicht die Mehrheit.**
-6. **Miturteil (PR Review) für alle Entscheidungen, die Sachkenntnis erfordern – ein anderer, der die Sache versteht, prüft mit.** – Das gilt für Gesetze, Verfahren, Urteile, Befähigungen, Diagnosen.
-7. **Einspruch (Bugmeldung) aus geistiger Überzeugung** – wer erkennt, dass ein Gesetz oder Urteil nicht aus der Sache kommt, muss das für alle sichtbar an der Stelle melden können, wo das Gesetz oder Urteil öffentlich steht.
+1. **Jeder kann das werden, was in ihm steckt.**  
+Das freie Geistesleben entwickelt die individuellen Fähigkeiten jedes Menschen und macht zugleich die gesellschaftlichen Aufgaben sichtbar. Dadurch finden sich für alle Aufgaben Menschen, die sie aus eigenem Antrieb und Können erfüllen. Das Rechtsleben erhält so eine verlässliche Grundlage an Kompetenz, aus der es überhaupt erst schöpfen kann.
+
+2. **Recht entsteht aus der Sache, nicht aus der Mehrheit.**  
+Das Rechtsleben kann aus Abstimmungen und Machtverhältnissen keine Sachkenntnis gewinnen — bei technischen, medizinischen oder pädagogischen Fragen hilft keine Auszählung. Es ist darauf angewiesen, dass das freie Geistesleben Menschen hervorbringt, die aus eigener Arbeit im Feld urteilen: Wer ein Gesetz über Schule, Gesundheit oder Forschung gestaltet, sollte selbst darin gestanden haben. Das Geistesleben gibt diesem Urteil Gewicht, ohne es zur Macht zu machen — entschieden wird im Rechtsleben, aber nicht blind.
+
+3. **Gesetze muss jeder mündige Bürger verstehen können.**  
+Ein Gesetz, das nur Fachleute durchschauen, schließt die meisten von der Mitbestimmung aus. Das freie Geistesleben erzieht zu klarer, allgemeinverständlicher Sprache — und zu der Fähigkeit, das Gelesene selbst zu prüfen. Nur dann ist Demokratie mehr als eine Illusion.
+
+4. **Kein Urteil ohne Miturteil.**  
+Wie beim Code-Review prüft ein zweiter Fachkundiger jedes Gesetz, jedes Urteil, jede Befähigung — bevor es gilt. Das verhindert, dass ein Einzelner aus Blindheit oder Eigennutz entscheidet. Das Geistesleben institutionalisiert diese gegenseitige Prüfung, weil es die Menschen bereitstellt, die sie leisten können.
+
+5. **Richter kommen aus der Sache und werden auf Zeit gewählt.**  
+Im Geistesleben stellen sich Menschen zur Verfügung, die in dem Gebiet, über das sie urteilen, selbst gearbeitet haben. Die Beteiligten wählen aus ihnen auf Zeit ihren Richter – und nur dieser darf über sie richten. So kommt das Urteil aus Sachkenntnis und persönlichem Vertrauen, nicht aus bürokratischer Ernennung.
+
+6. **Einspruch aus geistiger Überzeugung ist jederzeit möglich.**  
+Was einmal gilt, bleibt korrigierbar. Wer erkennt, dass ein Gesetz oder Urteil nicht aus der Sache kommt, muss das öffentlich und genau an der Stelle melden können, wo es steht. Das Geistesleben gibt jedem die Freiheit dazu — und pflegt das Urteilsvermögen, das den Einspruch erst begründet macht. So bleibt das Recht lebendig.
+
+7. **Aus dem Geistesleben kommen die politischen Inhalte.**  
+Das freie Geistesleben entwickelt Gesetze, Verordnungen und Reformen, die Politiker aufgreifen, ihren Wählern vorstellen und mit ihnen besprechen können. Die Inhalte entstehen nicht in den Parteizentralen oder aus Machtkalkül, sondern aus der freien Arbeit derer, die sich mit den Fragen der Zeit aus eigenem Antrieb beschäftigen. Die Politik greift auf, was das Geistesleben bereitstellt — sie entscheidet im demokratischen Prozess, was daraus wird.
 
 ### Feld 2 — Geist → Wirtschaft: Die Idee beflügelt die Produktion
 
@@ -26,24 +39,49 @@ Bedürfnisse entstehen aus der Individualität: aus Bildung, Biografie, kulturel
 
 ### Feld 3 — Recht → Geist: Der Staat bewahrt die Freiheit des Einzelnen
 
-1. **Das Rechtsleben garantiert dir den Raum, deine eigenen Überzeugungen zu bilden – unabhängig von Geld oder Macht.** Niemand darf dich zwingen, eine bestimmte Weltanschauung anzunehmen oder zu lehren. Deine innere Freiheit ist geschützt, bevor du überhaupt etwas tust.
-2. **Das Rechtsleben garantiert jedem Kind das Recht auf Bildung – als Rahmen, nicht als Inhaltsvorgabe.** Der Staat stellt sicher, dass jedes Kind Zugang zu Bildung hat. Aber er bestimmt nicht, was gelehrt wird oder wie. Die Inhalte und Methoden entscheidet das freie Geistesleben selbst. Keine staatliche Zensur von Forschung, Lehre oder Kunst.
-3. **Bildungseinrichtungen sind vor wirtschaftlicher Abhängigkeit geschützt – sie gehören nicht dem Markt.** Ihre Finanzierung kommt aus den Überschüssen des assoziativ organisierten Wirtschaftslebens. Das Rechtsleben sichert den Fluss dieser Mittel rechtlich, das Geistesleben entscheidet selbst, wohin sie fließen. Die individuelle Förderung jedes Menschen wird dadurch möglich, dass das Geistesleben aus sich selbst heraus erkennt, welche Anlagen förderungswürdig sind – im offenen Diskurs derer, die die Sache verstehen, und offen für Erfahrungen aus dem praktischen Leben.
-4. **Jeder Mensch hat das Recht, seine individuellen Fähigkeiten zu entwickeln – unabhängig von Herkunft oder Einkommen.** Das Rechtsleben sorgt für gleiche Zugangschancen zu Bildung und Kultur. „Fähigkeiten" meint hier alle Kräfte der menschlichen Seele, die aus eigener Tätigkeit erwachsen – handwerkliche, künstlerische, organisatorische, technische, soziale, nicht nur theoretisch-geistige.
-5. **Richter, die über geistige Fragen urteilen, müssen die Sache aus eigener Anschauung kennen – nicht aus Akten oder Mehrheitsbeschlüssen.** Sie müssen frei sein von politischen Weisungen und wirtschaftlichen Abhängigkeiten. Ihr Urteil gründet auf der persönlichen Kenntnis der angeklagten Person – weil jeder Mensch sich seinen Richter für eine bestimmte Zeit selbst wählt. Der Richter kennt dich, deine Lebensumstände, deine Art. Er urteilt nicht aus Paragraphen, sondern aus der Begegnung mit dem Menschen.
-6. **Alle Ergebnisse des Geisteslebens stehen offen – geschützt wird nur die Privatsphäre des Einzelnen.** Gesetze, Gerichtsurteile, Diagnosen, Prognosen, wissenschaftliche Arbeiten müssen in ihrer Entstehung und Begründung von jedem ohne Antrag nachvollzogen werden können. Persönliche Daten, die Rückschlüsse auf eine konkrete Person zulassen, werden anonymisiert. Die Sache selbst bleibt offen. Das bedeutet: Es gibt keine Geschäftsgeheimnisse an Erkenntnissen. Alles, was seiner Natur nach auf Einsicht und Verständigung beruht – Gesetze, Baupläne, Urteile, Diagnosen, Algorithmen – muss in seiner inneren Funktionsweise offen, verstehbar und veränderbar sein. Nicht nur auditierbar, sondern quelloffen.
-7. **Jeder kann jederzeit für alle sichtbar die Ergebnisse aus Punkt 6 kommentieren und Vorschläge einbringen.** Es gibt keine Vorprüfung der Beiträge. Jeder kann einreichen, was er will. Das Archiv erfasst die Beiträge formal und bündelt sie technisch – ohne über ihren Wert zu urteilen. So wird sichtbar, welche Kritiken häufig eingebracht werden. Die Beiträge müssen nicht beantwortet werden, bleiben aber dauerhaft einsehbar. Das Geistesleben bleibt lebendig und korrigierbar.
+1. **Das Rechtsleben schützt deine innere Freiheit.**  
+Niemand darf dich zwingen, eine bestimmte Weltanschauung anzunehmen oder zu lehren. Deine Überzeugungen bildest du unabhängig von Geld oder Macht – der Staat garantiert diesen Raum, bevor du überhaupt handelst.
+
+2. **Das Rechtsleben sichert jedem Kind den Bildungszugang.**  
+Der Staat stellt sicher, dass jedes Kind eine Schule besuchen kann. Aber er bestimmt weder Inhalte noch Methoden – das entscheidet das freie Geistesleben selbst. Keine staatliche Zensur von Forschung, Lehre oder Kunst.
+
+3. **Bildungs- und Kultureinrichtungen sind dem Markt entzogen.**  
+Ihre Finanzierung kommt aus den Überschüssen des assoziativ organisierten Wirtschaftslebens. Das Rechtsleben sichert den Mittelzufluss rechtlich, das Geistesleben entscheidet selbst, wohin sie fließen. Die Wirtschaft gibt, ohne zu diktieren.
+
+4. **Jeder Mensch hat das Recht auf freie Fähigkeitsentfaltung.**  
+Das Rechtsleben sorgt für gleiche Zugangschancen zu Bildung und Kultur – unabhängig von Herkunft oder Einkommen. „Fähigkeiten" meint alle Kräfte der Seele: hand werkliche, künstlerische, organisatorische, technische, soziale.
+
+5. **Das Rechtsleben ermöglicht fachkundiges und persönliches Richten.**  
+Richter müssen in dem Gebiet, über das sie urteilen, selbst gearbeitet haben – und sie müssen den Angeklagten persönlich kennen. Beides ist eine innere Angelegenheit des Geisteslebens. Das Rechtsleben schafft nur den Rahmen, dass dieses Richten frei von staatlichen Weisungen und wirtschaftlichen Abhängigkeiten stattfinden kann.
+
+6. **Alle Ergebnisse des Geisteslebens sind offen und zugänglich.**  
+Gesetze, Urteile, Baupläne, Diagnosen, Algorithmen müssen in ihrer Funktionsweise verstehbar und veränderbar sein – quelloffen, nicht nur auditierbar. Geschützt wird nur die Privatsphäre des Einzelnen. Das Rechtsleben sichert dieses Zugangsrecht rechtlich.
+
+7. **Jeder kann Ergebnisse dauerhaft kommentieren und Verbesserungen vorschlagen.**  
+Es gibt keine Vorprüfung der Beiträge. Ein Archiv erfasst sie formal und bündelt sie technisch – ohne über ihren Wert zu urteilen. So wird sichtbar, welche Anregungen häufig eingebracht werden. Das Geistesleben bleibt lebendig und korrigierbar.
 
 ### Feld 4 — Recht → Wirtschaft: Das Gesetz sichert den fairen Rahmen
 
-1. **Vertragsfreiheit innerhalb der Rechtsordnung** – Du kannst mit anderen vereinbaren, was du willst, solange die Vereinbarung nicht gegen die vom Rechtsleben gesetzten Grenzen verstößt. Was du vereinbart hast, musst du halten. Verträge, die gegen die Punkte 5 oder 6 dieser Liste verstoßen – also etwa Arbeitszeit unter der menschenwürdigen Untergrenze oder den Verkauf von Verfügungsrechten als Ware –, sind nichtig. Das Rechtsleben greift nicht in die Wirtschaft ein, indem es Preise oder Mengen vorschreibt. Es greift nur ein, wenn jemand sein Wort bricht oder eine Vereinbarung außerhalb des rechtlich Zulässigen trifft. Die Verbindlichkeit des Vertrags ist die Bedingung dafür, dass assoziative Wirtschaft überhaupt funktionieren kann.
-2. **Haftung gegenüber Dritten** – Wer durch ein Produkt oder eine Dienstleistung einen Menschen schädigt, der nicht sein Vertragspartner ist, haftet für den Schaden. Das gilt für den Endverwender ebenso wie für Unbeteiligte, die durch Umweltschäden betroffen sind. Das Rechtsleben setzt hier den Rahmen für Schadensersatz, unabhängig davon, ob ein Vertrag besteht.
-3. **Verbot der Täuschung durch geplante Obsoleszenz** – Ein Produkt darf nicht bewusst so konstruiert werden, dass es vorzeitig verschleißt oder sich nicht reparieren lässt, nur um den Absatz zu steigern. Das ist keine Frage der Qualität – die beurteilen die Nutzer in den Assoziationen des Wirtschaftslebens. Es ist eine Frage der Täuschung: Wer so konstruiert, gibt vor, ein dauerhaftes Gut zu liefern, und liefert in Wirklichkeit ein Verbrauchsgut. Das ist strukturell dasselbe wie Wortbruch und damit genuin eine Rechtssache. Deklariert der Hersteller die kurze Lebensdauer offen, liegt keine Täuschung vor – dann urteilen die Assoziationen über die Qualität.
-4. **Eigentum an Produktionsmitteln als Nutzungsrecht auf Zeit, gebunden an die Fähigkeit des Verwalters** – Wer Kapital fruchtbar einsetzt, verfügt darüber, solange er es aus eigener Fähigkeit tut. Zieht er sich zurück oder lässt seine Leistung nach, wandert das Verfügungsrecht an den nächsten Fähigen – nicht automatisch an Erben, nicht an den Meistbietenden. Das Rechtsleben regelt diese Übergänge und verhindert, dass totes Kapital sich als Macht über lebendige Menschen festsetzt.
-5. **Rechte dürfen nicht zur Ware werden** – Ware ist, was verbraucht wird. Ein Recht wird nicht verbraucht, sondern ausgeübt. Wird es dennoch verkäuflich gemacht, entsteht ein Schein-Wirtschaftsgut, das Erträge abwirft, ohne dass jemand leistet – und die Verfügung löst sich vom Fähigen ab und wandert zum Zahlkräftigen. Genau das ist die Aktie: ein Verfügungsrecht über Betriebe und Menschen, das auf Märkten zirkuliert, losgelöst von jeder Sachkenntnis. Dasselbe gilt für gehandelte Urheberrechte, Patente, Lizenzen, Bodentitel – und für das Geld selbst: Es ist Anweisung auf Leistung, Buchhaltung des Wirtschaftslebens, keine Ware. Wer Währungen gegeneinander handelt, handelt mit Rechten, nicht mit Gütern. Das Rechtsleben verweigert all diesen Konstruktionen die Warenform: Rechte werden verliehen, übertragen, entzogen – nach Fähigkeit und Rechtsgrund, niemals nach Gebot und Nachfrage. (Dieser Punkt ist die negative Seite von Punkt 4: Er beschreibt, wie Verfügungsrechte nicht zirkulieren dürfen.)
-6. **Bodennutzung als Zuweisungsfrage des Rechtslebens** – Der Boden ist ein Sonderfall: Er ist weder ein Produktionsmittel, das jemand hergestellt hat, noch ein bloßes Recht unter anderen. Die Nutzung des Bodens wird nicht durch Kauf oder Verkauf, sondern durch Zuweisung nach Fähigkeit und Bedarf geregelt. Wer Boden fruchtbar bewirtschaften kann, erhält das Nutzungsrecht auf Zeit – analog zu Punkt 4. Das Rechtsleben regelt diese Zuweisung und verhindert, dass Boden als Spekulationsobjekt oder Machtinstrument dient.
-7. **Arbeitszeit und Arbeitsbedingungen als Rechtsfrage** – Wie viel und unter welchen Bedingungen ein Mensch arbeitet, wird auf dem Boden des Rechtslebens geregelt, nicht im wirtschaftlichen Kalkül. Das Rechtsleben setzt sowohl eine Untergrenze (unter die kein Arbeitsverhältnis fallen darf, weil sonst die Existenz nicht gesichert ist) als auch eine Obergrenze (über die hinaus Gesundheit oder soziale Beziehungen Schaden nehmen). Diese Grenzen werden demokratisch von allen mündigen Menschen festgelegt, nicht von den Assoziationen des Wirtschaftslebens. Die Frage, welche Arbeit jemand tut – also die Frage nach der Fähigkeit – gehört ins Geistesleben, nicht ins Rechtsleben. Der Arbeiter muss sein Arbeitsrecht bereits voll geregelt haben, wenn er dem Arbeitsleiter gegenübertritt. Der Vertrag zwischen Arbeiter und Arbeitsleiter geht dann nicht über Arbeitskraft gegen Lohn, sondern über die Teilung der gemeinsam erbrachten Leistung. Arbeiter und Arbeitsleiter sind Vertragspartner über das Erzeugnis, nicht Käufer und Verkäufer von Arbeit. Das Lohnverhältnis verschwindet damit ganz.
-8. **Gleicher Zugang zum gemeinsamen Wirtschaftsergebnis – unabhängig von Arbeit und Zahlkraft** – Jeder Mensch hat Anspruch auf das, was er zum Leben braucht. Nicht als Almosen, sondern als Recht. Dieses Recht gilt unbedingt, unabhängig davon, ob der Mensch arbeitet oder nicht. Es folgt aus dem sozialen Hauptgesetz: Arbeit und Einkommen sind getrennt zu betrachten. Das Rechtsleben sichert diesen Zugang – nicht, indem es Preise festsetzt, sondern indem es den Fluss der Mittel aus dem Wirtschaftsleben so regelt, dass jeder teilhaben kann. Die Höhe bestimmt sich aus dem, was die Gemeinschaft als menschenwürdig anerkennt.
+1. **Vertragsfreiheit sichert die Verbindlichkeit.**  
+Du vereinbarst, was du willst, solange es nicht gegen die vom Rechtsleben gesetzten Grenzen verstößt. Was du vereinbarst, musst du halten. Die Wirtschaft kann as soziativ funktionieren, weil sie sich auf das gegebene Wort verlassen kann. Die Wirtschaft gibt, ohne zu diktieren.
+
+2. **Haftung schützt Unbeteiligte.**  
+Wer durch ein Produkt einen Menschen schädigt, der nicht sein Vertragspartner ist, haftet für den Schaden. Das gilt für den Endverwender ebenso wie für Dritte, die durch Umweltschäden betroffen sind. Ein Hersteller haftet, wenn sein Gerät einen Brand auslöst.
+
+3. **Täuschungsverbot verhindert geplante Obsoleszenz.**  
+Ein Produkt darf nicht bewusst so konstruiert werden, dass es vorzeitig verschleißt, nur um den Absatz zu steigern. Deklariert der Hersteller die kurze Lebensdauer offen, liegt keine Täuschung vor – dann urteilen die Assoziationen über die Qualität. Die Wirtschaft erhält echte Wahlfreiheit.
+
+4. **Eigentum bindet sich an die Fähigkeit des Verwalters.**  
+Wer Kapital fruchtbar einsetzt, verfügt darüber, solange er es aus eigener Fähigkeit tut. Zieht er sich zurück, wandert das Verfügungsrecht an den nächsten Fähigen – nicht an Erben oder Meistbietende. Das Rechtsleben verhindert, dass totes Kapital über lebendige Menschen herrscht.
+
+5. **Rechte werden nicht zur Ware.**  
+Ein Recht wird nicht verbraucht, sondern ausgeübt. Wird es dennoch verkäuflich, entsteht ein Schein-Wirtschaftsgut, das Erträge abwirft, ohne dass jemand leistet. Die Aktie ist ein solches Scheingut: ein Verfügungsrecht, losgelöst von Sachkenntnis. Das Rechtsleben verweigert Rechten die Warenform.
+
+6. **Bodennutzung wird zugewiesen, nicht gehandelt.**  
+Der Boden ist weder hergestellt noch ein bloßes Recht. Seine Nutzung wird nach Fähigkeit und Bedarf zugewiesen, nicht durch Kauf oder Verkauf. Wer fruchtbar wirtschaften kann, erhält das Nutzungsrecht auf Zeit. Das Rechtsleben verhindert, dass Boden als Spekulationsobjekt dient.
+
+7. **Arbeitszeit und -bedingungen setzt das Rechtsleben.**  
+Wie viel und unter welchen Bedingungen du arbeitest, wird demokratisch von allen mündigen Menschen festgelegt, nicht von den Assoziationen. Das Rechtsleben setzt eine Unter- und eine Obergrenze. Der Arbeiter tritt dem Arbeitsleiter mit bereits geregeltem Arbeitsrecht gegenüber – der Vertrag geht dann über die Teilung des Erzeugnisses, nicht über Lohn gegen Arbeit.
 
 ### Feld 5 — Wirtschaft → Recht: Die Wirtschaft trägt den Staat
 

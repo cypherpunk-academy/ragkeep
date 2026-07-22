@@ -30,6 +30,7 @@ Das Korn hat vier Ahnen und einen Gegenahnen.
 *Romanverwendung:* Diese Fußnote der Wirtschaftsliteratur wird in Teil I zum Fundstück — jemand aus der Kern-Assoziation entdeckt das Buch (Antiquariat, Nachlass, offenes Archiv) und erkennt: Das Prinzip wurde schon einmal entworfen, im kleinen Rahmen der Unternehmens-Wissensmärkte, und blieb im alten System folgenlos. Optional als Figurenkeim: Das älteste Mitglied der Kern-Assoziation hat diesen Entwurf selbst miterlebt oder mitverfasst und weiß deshalb zweierlei — dass es funktioniert, und dass man es diesmal nicht dem alten System zur Adoption anbieten darf.
 
 **Der Gegenahne: Bitcoin.** Bitcoin beweist, dass eine staatsfreie Weltwährung technisch möglich ist — und wird zugleich zum warnenden Beispiel: Knappheit aus Rechenleistung (Stromhunger), Deflationslogik (Horten statt Umlauf), volle Handelbarkeit (Spekulationsobjekt statt Tauschmittel). Das Korn ist in jedem dieser drei Punkte die bewusste Umkehrung. Merksatz für den Roman: *Bitcoin hat das Geld vom Staat befreit; das Korn befreit es vom Kapitalmarkt.*
+[Andere Währungen hinzufügen: E.]
 
 ---
 
@@ -112,7 +113,7 @@ Dramaturgischer Bogen: Das teilgeheilte Rechtsleben schwankt. Erst Wörgl-Reflex
 
 **Die Software:** intern „der Kernel" — im Englischen fallen Währung (corn/kernel) und Code (kernel) in ein Wort. Quelloffen, weltweit gespiegelt, unzerstörbar. Zerstörbar sind nur die Menschen und das Vertrauen.
 
-**Stückelung (Arbeitsstand):** Gran < Korn < Garbe < Scheffel.
+**Stückelung (Arbeitsstand):** Korn < Garbe (100) < Scheffel (1000).
 
 ---
 
@@ -142,7 +143,108 @@ Im Juni 2026 erscheint ein ökonomisches Paper, das — ohne Steiner zu nennen �
 4. *Reporting unterscheidet Zahlung, Erfüllung, Clearing, Reparatur, Verlustanerkennung.* Entspricht der Zustandslogik Kaufgeld/Leihgeld/Schenkgeld — **aber hier hat das Korn-Design eine Lücke** (siehe unten: Reparaturpfade).
 5. *Schutz vor Zwangseintreibung, Spekulation, kultureller Verflachung, Datenextraktion, versteckten Bürgschaften.* Beim Korn konstitutiv statt nachgelagert: Nichthandelbarkeit ist Protokoll, nicht Auflage. „Cultural flattening" ist in Matrix-Sprache die Pathologie Wirtschaft→Kultursphäre. Und „legally protected by state but emitted by association" ist exakt die Rollenteilung des Korn — Gewaltenteilung 2.0 auf Geldebene.
 
-**Das fehlende Bauteil: Reparaturpfade (Repair).** Ruddick spezifiziert, was geschieht, wenn eine Verpflichtung platzt: Relisting, Limit-Anpassung, Einlösungshilfe, Bürgenaktion, Abschreibung, Streitschlichtung — mit expliziten Triggern und Zustandsübergängen. Das Korn-Design hat dafür bisher nur den Keim: Steiners Schenkgeld deutet die Antwort an — die Abschreibung als bewusster Schenkungsakt statt Zwangsvollstreckung. Zu spezifizieren: Wann geht eine geplatzte Korn-Verpflichtung in Reparatur, wer entscheidet (die betroffene Zwanziger-Assoziation, nicht die Kern-Assoziation), welche Zustände gibt es (Stundung → Bürgschaft → Teilerfüllung → Schenkungsabschreibung), und wie bleibt das öffentlich einsehbar, ohne die Person bloßzustellen. Dramaturgisch wertvoll: Eine Reparatur-Szene in Teil I oder II zeigt den Kulturunterschied zum alten System besser als jede Erklärung — dort Inkasso, hier Metanoia.
+## Was misst das Korn eigentlich? Das regionale Portfolio
+
+Der Preis ist das Zentrale. Alles andere am Korn — die Alterung, die Nichthandelbarkeit, die drei Zustände — sind Schutzmechanismen um eine einzige Frage herum: Woran bemisst sich der Wert?
+
+Die Antwort ist nicht global, sondern regional. Jede regionale Assoziation baut ihr eigenes Portfolio. Zwei Kriterien bestimmen, was hineingehört:
+
+**Erstens: das, was am meisten übermenschlichen Gehalt trägt.** Nicht das, was Menschen gemacht haben, sondern das, worin etwas hereinwirkt, das nicht aus menschlicher Planung stammt.
+
+**Zweitens: das, was am wenigsten durch den Menschen beeinflussbar ist.** Kein Vorstand, kein Kartell, keine Zentralbank darf am Anker drehen können. Steiner formuliert dieselbe Forderung als Kardinalfrage der Preisbildung: Man müsse zu Preisen und Werten kommen, die nicht von den Menschen abhängen, sondern vom volkswirtschaftlichen Prozess selbst (GA 340, S. 49).
+
+Beide Kriterien laufen auf dasselbe operative Merkmal zu: **Unberechenbarkeit**. Das Portfolio muss die Unberechenbarkeit seiner Entwicklung maximieren. Ziel ist, dass keine Vorhersage möglich ist, wohin die Entwicklung geht.
+
+Das ist keine Marotte, sondern die Spekulationssperre auf der Ebene der Messung selbst. Wer einen Anker vorhersagen kann, kann sich vor ihn stellen — genau das ist Spekulation. Ein Portfolio, das niemand prognostizieren kann, ist ein Portfolio, vor das sich niemand stellen kann. Alle bisherigen Sperren des Korn (Nichtkonvertierbarkeit, Personenbindung, Alterung) verhindern das Wetten auf das Geld. Die Unberechenbarkeit des Portfolios verhindert das Wetten auf den Wert.
+
+Steiners Bild für das Verhältnis von Preis und Wirklichkeit ist meteorologisch: Man müsse den Preis so beobachten wie einen Thermometerstand, um auf die zugrunde liegenden Bedingungen zu kommen (GA 340, 3. Vortrag, 26. Juli 1922, S. 38ff). Wer die Preise ändern will, darf nicht am Instrument ziehen — wenn es im Zimmer friert, versucht niemand, die Thermometersäule zu verlängern; man heizt ein. Das Portfolio ist in dieser Sprache nicht die Anzeige, sondern das Wetter selbst.
+
+Daraus folgt die zweite Seite der Unberechenbarkeit: Wo nichts berechenbar ist, entsteht ein Freiraum. Ein Spielfeld, auf dem etwas geschehen kann, das nicht von Menschen gemacht wurde. Und dann werden alle gespannt sein, was passiert.
+
+> *Anmerkung: Die esoterische Fassung dieses Gedankens — das Portfolio als Spielfeld für das Aktivwerden von Engeln — gehört in den separaten esoterischen Anhang, nicht in das Hauptdokument.*
+
+---
+
+## Was gehört ins Portfolio? Und was nicht?
+
+**Naturerträge.** Getreide, das Korn selbst, das der Währung den Namen gibt: abhängig von Wetter, Feuchtigkeit, Wärme, Boden und einem Dutzend weiterer Faktoren, die zusammen niemand steuert.
+
+**Geburten in der Region.** Die vielleicht unberechenbarste Zahl überhaupt — das Ankommen neuer Menschen.
+
+**Die Rohstoffproduktion**, wie sie für diese Region typisch ist, und ihre Entwicklung.
+
+**Regionale Signaturen.** Marzipan in Estland, Teekonsum in England, Olivenöl in Italien, Käse und Wein in Frankreich, Bier in Deutschland. Nicht als Konsumstatistik, sondern als Ausdruck dessen, was eine Region tut, wie es keine andere tut.
+
+**Fähigkeiten und Geschicklichkeiten**, besonders die regionaltypischen — etwas, das man üben muss: das Laufen in Äthiopien. Eine Fähigkeit kann man nicht kaufen, nur erwerben. Deshalb ist sie manipulationsfest.
+
+**Die Zufriedenheit von Menschen kurz vor ihrem Tod.** Der ungewöhnlichste Posten und zugleich der konsequenteste. Der Tod ist unberechenbar. Und eine Region, in der Menschen zufrieden sterben, ist eine Region, in der etwas gelungen ist. Diese Zahl kann kein Markt herstellen.
+
+**Was nicht hineingehört:** Fahrzeuge und vergleichbare technische Massenprodukte. Zu viele Eingriffsmöglichkeiten, zu komplexe Technik, zu viele Hebel. Faustregel: *Was ein Vorstand beschließen kann, ist kein Anker.*
+
+Aus vielen solchen Größen wird in jeder Region ein Portfolio gebaut. Und dieses Portfolio ist von außen lesbar: Was ist hier wesentlich? Was sind die zentralen Dinge in dieser Gegend? Das Portfolio ist ein Selbstporträt der Region — und das Zusammenstellen und Pflegen dieses Porträts wird die Hauptaufgabe der weltweit verteilten kleinen Assoziationen.
+
+Die eine Assoziation — die zentrale — macht die Grundregeln und schaut auf alle anderen. Sie schreibt keiner Region ihr Portfolio vor.
+
+---
+
+## Phase 1: Wie fängt es an? Das befreite Stück Land
+
+Eine kleine Gruppe beginnt in einer Region mit ihrem Portfolio und bekommt von der Zentrale die Verbindung. Damit ist der erste Schritt getan, dieses Stück Land zu befreien.
+
+Dann beginnt die eigentliche Arbeit: Menschen überzeugen, mit diesem Geld zu kaufen und zu verkaufen — so viel sie können. Am wirksamsten sind die, die etwas Einzigartiges herstellen, mit besonderen Fähigkeiten. Wenn ein solcher Mensch sagt: *Ich verkaufe das nur für Korn* — dann entsteht eine Knappheit, die nicht im Gut liegt, sondern in der Verbindung.
+
+Daraus folgt die harte Regel des Zugangs:
+
+- Korn bekommt nur, wer in der Assoziation seiner Region dabei ist.
+- Wer nicht dabei ist, kann Korn nur geschenkt bekommen.
+- **Verkaufen darf man Korn nicht.** Wer Korn gegen eine Gegenleistung weitergibt statt es zu verschenken, verliert das Recht, in dieser Gemeinschaft zu sein.
+- Wer dann weiter mit Korn leben will, kann die Region wechseln.
+
+Das ist die Nichtkonvertierbarkeit, die das Konzeptpapier bisher als Eigenschaft beschreibt — hier bekommt sie ihren Durchsetzungsmechanismus: nicht Strafe, sondern Mitgliedschaft. Das Korn ist Zahlungsmittel und Geschenk, aber niemals Handelsware. Und die einzige Tür hinein ist eine menschliche Beziehung. Die Währung breitet sich entlang von Vertrauen aus, nicht entlang eines Wechselkurses.
+
+Die Geldmenge nimmt zu mit der Zahl der Menschen, die mitmachen, und mit dem Anteil des eigenen Lebens, den sie in Korn abbilden. Man sucht weitere Menschen, die interessante Sachen machen.
+
+**Erster Meilenstein:** Alle Grundbedürfnisse der Gruppe sind in Korn deckbar. Bis dahin ist das Korn ein individuelles Weitergeben, kein Wirtschaftsraum.
+
+---
+
+## Phase 2: Wie wird aus der Gruppe eine Region?
+
+Ist der erste Meilenstein erreicht, geht es um die Ausweitung auf die ganze Region: alle Menschen dort zu überzeugen, in die Gemeinschaft hineinzukommen und sie lebendig zu machen.
+
+Damit hebt sich die Transparenz der Wirtschaft auf eine andere Ebene. Es entsteht eine regionale, für jeden sichtbare, aktuelle Statistik, aus der ich jederzeit ablesen kann:
+
+- was in dieser Region als Grundbedürfnis gilt,
+- wie gut es gedeckt wird,
+- was übrig ist,
+- und was fehlt und zugekauft werden muss.
+
+Das ist die Grundregel der Phase 2: Ziel ist, alle Grundbedürfnisse der Region durch Korn decken zu können.
+
+Diese Statistik ist mehr als ein Dashboard. Sie ist das Wahrnehmungsorgan der Assoziation. Steiners Assoziationen leben davon, dass Bedürfnis und Fähigkeit *gesehen* werden, bevor über Preise verhandelt wird — die Statistik macht das Sehen kollektiv und laufend. Sie ist außerdem die natürliche Schnittstelle zum Schenkgeld: Was als Lücke sichtbar wird, zeigt an, welche Fähigkeit in dieser Region noch fehlt und finanziert werden müsste.
+
+---
+
+## Phase 3: Wann wird das Korn zur Währung?
+
+In der dritten Phase dürfen Grundbedürfnisse **nur noch** mit Korn gedeckt werden. Die regionale Assoziation legt fest, was Grundbedürfnisse sind. Andere Währungen sind vom Kauf dieser Güter ausgeschlossen.
+
+Gleichzeitig rückt der Austausch zwischen den regionalen Assoziationen ins Zentrum. Es gab ihn vorher, aber unsystematisch. Jetzt wird er zur Norm: Wo Verbindung hilfreich erscheint, soll sie sein.
+
+Der Ausschluss der Fremdwährungen aus dem Bereich der Grundbedürfnisse hat eine unspektakuläre, aber durchschlagende Folge: Das Korn setzt sich Stück um Stück durch, weil die anderen Währungen uninteressant werden. Keine Verdrängung durch Verbot, sondern durch Bedeutungslosigkeit im wichtigsten Bereich des Lebens.
+
+**Zur Freiheitsfrage:** Der Ausschluss ist keine staatliche Vorschrift, sondern eine Selbstbindung der Assoziation. Er bindet ihre Mitglieder, und Mitgliedschaft ist freiwillig; wer nicht will, geht oder wechselt die Region. Das Recht setzt den Rahmen, nicht die Regel — die Regel setzen die, die sie tragen.
+
+---
+
+## Offene Punkte
+
+1. **Vom Portfolio zum Preis.** Der Abschnitt beginnt mit „Der Preis ist das Zentrale", beschreibt aber den Anker, nicht den Rechenweg. Wie wird aus einem Portfolio aus Getreide, Geburten, Laufleistungen und Sterbezufriedenheit eine Zahl? Gewichtung, Erhebungsrhythmus, Attestierung — hier fehlt noch ein Absatz, der an den Wiederherstellungspreis aus der Grundanlage anschließt.
+2. **Wer definiert Grundbedürfnisse?** In Phase 3 setzt ein wirtschaftliches Organ eine quasi-rechtliche Norm. Das ist genau die Konstellation, die die Doppelmatrix als Übergriff Wirtschaft → Recht beschreibt. Zu klären: Was hält das gesund?
+3. **Attestierung der weichen Posten.** Zufriedenheit vor dem Tod ist der schönste Posten im Portfolio und der angreifbarste. Wer erhebt sie, ohne sie manipulierbar oder übergriffig zu machen?
+4. **Der Freigeld-Einwand — direkt gegen das Korn gerichtet.** Im 5. Vortrag (28. Juli 1922, GA 340, S. 80) kritisiert Steiner die „Freigeldleute" mit genau demselben Thermometerbild: Wer den Preis über den Geldwert steuern will, bringt die Thermometersäule durch eine hinterlistige Vorrichtung zum Steigen und kuriert an Symptomen. Real werde erst, wer die Verteilung der arbeitenden Menschen auf die Arbeitsfelder reguliere — nicht durch den Staat („die schlimmste Tyrannei"), sondern durch die freien Assoziationen, in denen jeder Einblick hat. Für das Korn heißt das: Der Naturanker allein macht noch keine gesunde Preisbildung. Was das Korn dagegenzusetzen hat, ist genau die Statistik aus Phase 2 — sie ist das Organ, mit dem die Assoziation sieht, wo Menschen und Fähigkeiten fehlen. Dieser Zusammenhang gehört ausgeschrieben, sonst trifft Steiners Einwand das Korn.
+5. **Korrelation im Portfolio.** Steiner beobachtet, dass Weizen, Roggen und andere Getreidesorten ihr Wertverhältnis über lange Zeiträume ziemlich stabil halten und gemeinsam steigen und fallen (GA 340, S. 104). Wenig differenzierte Produkte sind also ein einziger Faktor, nicht mehrere. Ein Portfolio aus lauter Naturerträgen wäre weniger unberechenbar als es aussieht — die Unabhängigkeit der Posten muss ein eigenes Auswahlkriterium werden.
+6. **Quellenstand.** Das Wetter-Bild ist in GA 340 als Thermometer- und Barometerbild belegt (S. 38ff), aber mit anderer Stoßrichtung: Anzeige und zugrunde liegende Bedingung, nicht Unberechenbarkeit. Die Wendung „die Wirtschaft ist wie das Wetter, unberechenbar" ist in GA 340 nicht nachweisbar und wird hier als eigene Weiterentwicklung geführt, nicht als Zitat. Zu prüfen bleibt GA 341 (Nationalökonomisches Seminar).
 
 **Weitere Übernahmen fürs Weltbuch:**
 - *„Carrying capacity of a settlement commons"* — Kapital nur innerhalb der Tragfähigkeit des Abwicklungs-Gemeinguts. Fast wörtlich die GA-340-Logik; brauchbar als Formel, mit der eine Figur der Finanzwelt das Korn erklärt.
@@ -163,6 +265,9 @@ Im Juni 2026 erscheint ein ökonomisches Paper, das — ohne Steiner zu nennen �
 - Verhältnis zur Bodenfrage: Steiners Bodenrente-Kritik (der Ort als unverkäufliches Rechtsgut) — eigenes Welt-Konzept-Matrix-Dokument?
 - **Neu (aus Ruddick):** Reparaturpfade des Korn vollständig spezifizieren — Trigger, Zustände (Stundung/Bürgschaft/Teilerfüllung/Schenkungsabschreibung), Zuständigkeit der Zwanziger-Assoziation, Öffentlichkeit vs. Personenschutz.
 - **Neu (aus Ruddick):** Regenerative Bonds als Übergangsfinanzierung in Teil I — welche Assoziation nimmt den ersten Bond auf, wer ist der Emittent, und wie wird die Brandmauer erzählt?
+- Was macht das Netz aus weltweit verteilten, kleinen Assoziationen?
+- Grundnahrungsmittel dürfen nur über KORN gehandelt werden.
+- Wie wird die Anonymität gewährleistet
 
 ---
 
