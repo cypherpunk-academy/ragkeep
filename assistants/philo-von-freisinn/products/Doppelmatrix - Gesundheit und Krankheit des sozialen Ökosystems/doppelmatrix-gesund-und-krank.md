@@ -1,42 +1,101 @@
-# Zwei Matritzen für Gesundheit und Krankheit der Gesellschaft
+# Die Doppelmatrix für Gesundheit und Krankheit der Gesellschaft
 
 ## Matrix der Gesundheit
 
 ### Feld 1 — Geist → Recht: Sachkenntnis prägt das Recht
 
-1. **Jeder kann das werden, was in ihm steckt.**  
-Das freie Geistesleben entwickelt die individuellen Fähigkeiten jedes Menschen und macht zugleich die gesellschaftlichen Aufgaben sichtbar. Dadurch finden sich für alle Aufgaben Menschen, die sie aus eigenem Antrieb und Können erfüllen. Das Rechtsleben erhält so eine verlässliche Grundlage an Kompetenz, aus der es überhaupt erst schöpfen kann.
+1. **Entfaltung: Jeder kann das werden, was in ihm steckt.**  
+Das freie Geistesleben schafft die Voraussetzungen, dass jeder Mensch seine individuellen Fähigkeiten entfalten kann und macht zugleich die gesamtgesellschaftlichen Herausforderungen sichtbar. Dadurch finden sich für alle Herausforderungen Menschen, die sie aus eigenem Antrieb und Können erfüllen. Der politische und rechtliche Gesellschaftsbereich erhält so eine verlässliche Grundlage an Fähigkeiten, aus der er schöpfen kann.
 
-2. **Recht entsteht aus der Sache, nicht aus der Mehrheit.**  
-Das Rechtsleben kann aus Abstimmungen und Machtverhältnissen keine Sachkenntnis gewinnen — bei technischen, medizinischen oder pädagogischen Fragen hilft keine Auszählung. Es ist darauf angewiesen, dass das freie Geistesleben Menschen hervorbringt, die aus eigener Arbeit im Feld urteilen: Wer ein Gesetz über Schule, Gesundheit oder Forschung gestaltet, sollte selbst darin gestanden haben. Das Geistesleben gibt diesem Urteil Gewicht, ohne es zur Macht zu machen — entschieden wird im Rechtsleben, aber nicht blind.
+2. **Erfahrung: Recht entsteht aus der Sache, nicht aus Mehrheiten.**  
+Das Rechtsleben kann aus Abstimmungen und Machtverhältnissen keine sachkundigen Urteile fällen — bei technischen, medizinischen, pädagogischen und ähnlichen Fragen hilft keine Auszählung und kein Machtwort. Solche Fragen müssen durch Menschen beantwartet werden, die aus dem freien Geistesleben heraus, aus eigener Arbeit im jeweiligen Feld urteilen: Wer ein Gesetz über Schule, Gesundheit oder Forschung gestaltet, sollte selbst darin gestanden haben. Das Geistesleben liefert die Sachkenntnis, auf deren Grundlage das Rechtsleben entscheidet. Die Inhalte der Geseetze sind während ihrer Entstehung Geistesfragen und werden mit Fertigstellung zu Rechtsfragen.
 
-3. **Gesetze muss jeder mündige Bürger verstehen können.**  
-Ein Gesetz, das nur Fachleute durchschauen, schließt die meisten von der Mitbestimmung aus. Das freie Geistesleben erzieht zu klarer, allgemeinverständlicher Sprache — und zu der Fähigkeit, das Gelesene selbst zu prüfen. Nur dann ist Demokratie mehr als eine Illusion.
+3. **Verständlichkeit: Gesetze muss jeder mündige Bürger verstehen können.**  
+Ein Gesetz, das nur Fachleute durchschauen, schließt die meisten von der Mitbestimmung aus. Das freie Geistesleben hat die Aufgabe, Gesetze, Verordnungen und andere Äußerungen des Rechtslebens in klarer, allgemeinverständlicher Sprache zu formulieren — und soll die allgemeine Fähigkeit fördern, die Texte selbst zu prüfen. Das Rechtsleben ist zuständig für alles was jeder einzelne mündige Bürger verstehen kann. Nur so ist Demokratie mehr als eine Illusion. Die Aufgabe des Geisteslebens ist es ein Gesetz frei so zu formulieren bis es jeder verstehen kann. Damit geht es über ins Rechtsleben.
 
-4. **Kein Urteil ohne Miturteil.**  
-Wie beim Code-Review prüft ein zweiter Fachkundiger jedes Gesetz, jedes Urteil, jede Befähigung — bevor es gilt. Das verhindert, dass ein Einzelner aus Blindheit oder Eigennutz entscheidet. Das Geistesleben institutionalisiert diese gegenseitige Prüfung, weil es die Menschen bereitstellt, die sie leisten können.
+4. **Perspektiven: Kein Urteil ohne Miturteil.**  
+Wie beim Code-Review in der Software-Entwicklung prüft ein zweiter Fachkundiger jeden Entwicklungsschritt von Gesetzen, jedes Urteil, jede Befähigung — bevor sie gelten. Das verhindert, dass ein Einzelner aus Blindheit oder Eigennutz entscheidet. Das Geistesleben fordert diese gegenseitige Prüfung, und stellt die Menschen bereit, die sie leisten können.
 
-5. **Richter kommen aus der Sache und werden auf Zeit gewählt.**  
-Im Geistesleben stellen sich Menschen zur Verfügung, die in dem Gebiet, über das sie urteilen, selbst gearbeitet haben. Die Beteiligten wählen aus ihnen auf Zeit ihren Richter – und nur dieser darf über sie richten. So kommt das Urteil aus Sachkenntnis und persönlichem Vertrauen, nicht aus bürokratischer Ernennung.
+5. **Vertrauen: Richter kommen aus der Sache und werden auf Zeit gewählt.**  
+Im Geistesleben stellen sich Menschen zur Verfügung, die in dem Gebiet, über das sie urteilen, selbst gearbeitet haben. Jeder Einzelne wählt aus dieser Gruppe auf Zeit seinen Richter, vorher – und nur der darf über ihn richten. So kommt das Urteil aus Sachkenntnis *und* persönlichem Vertrauen, nicht aus bürokratischer Ernennung. Jedes Urteil ist öffentlich unbegrenzt nachvollziehbar.
 
-6. **Einspruch aus geistiger Überzeugung ist jederzeit möglich.**  
-Was einmal gilt, bleibt korrigierbar. Wer erkennt, dass ein Gesetz oder Urteil nicht aus der Sache kommt, muss das öffentlich und genau an der Stelle melden können, wo es steht. Das Geistesleben gibt jedem die Freiheit dazu — und pflegt das Urteilsvermögen, das den Einspruch erst begründet macht. So bleibt das Recht lebendig.
+6. **Mitwirken: Konstruktive Verbesserungsvorschläge, statt Kompromisse.**  
+Was einmal gilt, bleibt korrigierbar. Wer erkennt, dass ein Gesetz oder Urteil nicht aus der Sache kommt oder nicht allgemein für alle gilt, muss das öffentlich sichtbar genau an der Stelle melden können, wo es steht. Das Geistesleben gibt jedem die Freiheit dazu — und pflegt das Urteilsvermögen, das den Einspruch erst begründet macht. So bleibt das Recht lebendig.
 
-7. **Aus dem Geistesleben kommen die politischen Inhalte.**  
-Das freie Geistesleben entwickelt Gesetze, Verordnungen und Reformen, die Politiker aufgreifen, ihren Wählern vorstellen und mit ihnen besprechen können. Die Inhalte entstehen nicht in den Parteizentralen oder aus Machtkalkül, sondern aus der freien Arbeit derer, die sich mit den Fragen der Zeit aus eigenem Antrieb beschäftigen. Die Politik greift auf, was das Geistesleben bereitstellt — sie entscheidet im demokratischen Prozess, was daraus wird.
+7. **Berichtigen: Wer den Fehler spürt, muss ihn nicht beheben können.**  
+Nicht jeder kann einen politischen Verbesserungsvorschlag (PPR) schreiben — aber jeder merkt, wenn ein Gesetz an seinem Leben vorbeigeht. Diese Meldung braucht keine Begründung aus der Sache, nur die ehrliche Beschreibung: hier klemmt es, so wirkt es bei mir. Sie ist öffentlich und steht an der Stelle, um die es geht. Niemand ist verpflichtet, darauf zu antworten — aber niemand kann sie entfernen. Sie bleibt stehen, solange das Gesetz steht. Wer sie übergeht, übergeht sie vor aller Augen. So erfährt das Recht, was es selbst nicht sehen kann: wie es wirkt.
 
 ### Feld 2 — Geist → Wirtschaft: Die Idee beflügelt die Produktion
 
-1. **Die Idee beflügelt die Produktion** – nicht der Gewinn oder der Zwang, sondern der schöpferische Einfall aus freiem Geistesleben gibt der Arbeit ihren Inhalt und ihr Ziel. So wie ein Open-Source-Projekt aus einer Idee entsteht, nicht aus einem Businessplan.
-2. **Jeder arbeitet dort, wo seine Fähigkeiten liegen** – ein freies Geistesleben entdeckt und pflegt die Talente jedes Menschen, sodass die Wirtschaft nicht nach Belieben, sondern nach Können besetzt wird.
-3. **Die Wirtschaft bekommt von außen, was sie selbst nicht hervorbringen kann: neue Gedanken** – aus Wissenschaft, Kunst, Bildung, Religion, Philosophie, Technikentwicklung, handwerklichem Können kommen die Innovationen, die die Produktion voranbringen, nicht aus Gewinnstreben und Wachstumswille. Das Geistesleben greift die offenen Fragen der Wirtschaft frei auf — es wählt selbst, welche es beantwortet und wie. 
-4. **Arbeit wird sinnvoll, weil sie aus eigener Einsicht kommt** – wer versteht, warum und wofür er arbeitet, tut es nicht aus Not, sondern aus innerem Antrieb. Das macht die Arbeit produktiver und den Menschen zufriedener.
-5. **Produktionsentscheidungen sollen von denen getroffen werden, die die Sache verstehen** – nicht von Kapitalgebern oder Verwaltungsbeamten, sondern von den Fachleuten, die aus ihrem Können heraus urteilen.
-6. **Jeder Arbeitsplatz muss so gestaltet sein, dass der Einzelne seine Fähigkeiten entfalten kann** – sonst verkümmert die Produktivität, weil der Mensch nicht das tut, was er wirklich kann. Open Source ist der Beweis, dass Menschen ihre beste Arbeit leisten, wenn sie selbst bestimmen, woran sie arbeiten.
-7. **Pull Request statt Beschwerde** – wer einen Fehler oder eine Verbesserung sieht, reicht einen konkreten Vorschlag ein, offen einsehbar für alle. Kein Jammern, kein Appell an Vorgesetzte – sondern die Sache selbst verbessern.
-8. **Das Geistesleben artikuliert die Bedürfnisse der Menschen** — klar, gebildet, unverstellt
-Bedürfnisse entstehen aus der Individualität: aus Bildung, Biografie, kultureller Entwicklung. Ein gesundes Geistesleben befähigt Menschen, ihre wirklichen Bedürfnisse zu erkennen und auszusprechen — statt sie sich einreden zu lassen. Bildung ist auch Konsumreife: wissen, was man braucht und was nicht. In der EVG sprechen die Verwender aus ihrem Kulturleben heraus, und ihre Artikulation ist der Anfang des Wirtschaftsprozesses. Die Pointe: Die Qualität des Wirtschaftens hängt an der Qualität der Bedürfnisartikulation. Eine Wirtschaft kann nur so gut versorgen, wie ihr Bedürfnisse entgegenkommen. Ein Geistesleben, das schweigt oder nur nimmt, was angeboten wird, überlässt der Wirtschaft die Bedürfnisdefinition — und öffnet damit selbst die Tür zur Pathologie der Gegenseite (Bedürfnisimplantation durch Werbung). Das gesunde Geistesleben hält diese Tür zu, indem es spricht.
+1. **Das Bedürfnis ist der Anfang** – Bedürfnisse sind keine wirtschaftliche Größe.
+   Sie entstehen aus der Individualität: aus Bildung, Lebenserfahrung und kultureller
+   Entwicklung. Ein gesundes Geistesleben befähigt Menschen, ihre wirklichen
+   Bedürfnisse zu erkennen und auszusprechen, statt sie sich einreden zu lassen —
+   (Urteils-)Bildung ist auch Konsumreife. In der Erzeuger-Verwender-Gemeinschaft
+   (Assoziation) sprechen die Verwender aus ihrer Kultursphäre heraus, und diese
+   Artikulation ist der Anfang des Wirtschaftsprozesses. Eine Wirtschaft kann nur so
+   gut versorgen, wie ihr Bedürfnisse entgegenkommen. Ein Geistesleben, das schweigt,
+   überlässt der Wirtschaft die Bedürfnisdefinition — dann erzeugt der Erzeuger nicht
+   mehr nur die Ware, sondern auch das Bedürfnis danach. Das gesunde Geistesleben
+   spricht, und zwar zuerst.
 
+2. **Die Idee befeuert die Produktion** – nicht der Gewinn, nicht der Zwang, sondern
+   der schöpferische Einfall gibt der Arbeit ihren Inhalt und ihr Ziel. Der Geist wirkt
+   hier mit seinen ureigenen Mitteln: Einsicht, Erfindung, Sachkenntnis, Urteilskraft.
+   Er befiehlt nicht, er bietet an — und die Wirtschaft nimmt an, weil die Idee trägt,
+   nicht weil jemand sie verordnet hat. So entsteht überhaupt erst Wert: Das
+   Naturprodukt wird durch Arbeit wertvoll, das Arbeitsprodukt durch den Geist, der die
+   Arbeit ordnet. Kapital ist in diesem Sinn geronnener Geist — es ist nur so fruchtbar
+   wie die Ideen, die es leiten.
+
+3. **Woher die Gedanken kommen** – aus Wissenschaft, Kunst, Bildung, Religion,
+   Philosophie, Technikentwicklung, handwerklichem Können. Das ist keine Zierde am
+   Rand der Wirtschaft, sondern ihre Zufuhr: Neues kann die Wirtschaft aus sich selbst
+   nicht erzeugen, sie kann es nur aufnehmen. Entscheidend ist dabei die Richtung der
+   Freiheit — das Geistesleben greift die offenen Fragen der Wirtschaft auf, aber es
+   wählt selbst, welche es beantwortet und wie. Nur so kommt eine Antwort zurück, die
+   der Fragende noch nicht kannte. Eine Kultursphäre, die nur Auftragsforschung
+   betreibt, liefert der Wirtschaft nichts mehr, was sie nicht schon wüsste — sie
+   bestätigt bloß, was ohnehin geplant war.
+
+4. **Fähigkeit trifft Aufgabe** – ein freies Geistesleben entdeckt und pflegt die
+   Fähigkeiten jedes Einzelnen, sodass die Wirtschaft nicht nach Belieben, nicht aus
+   Konkurrenzdenken oder Beziehungen, sondern nach Können besetzt wird. Umgekehrt muss
+   jeder Arbeitsplatz so gestaltet sein, dass sich diese Fähigkeiten auch entfalten
+   können. Beides gehört zusammen: Talent ohne Spielraum verkümmert, Spielraum ohne
+   Talent bleibt leer. Fähigkeiten lassen sich nicht einkaufen und nicht anordnen —
+   sie wachsen, wo jemand sie pflegt, oder sie wachsen nicht. Open Source ist der
+   Beweis: Menschen leisten ihre beste Arbeit, wenn sie selbst bestimmen, woran sie
+   arbeiten.
+
+5. **Die Sache entscheidet, nicht der Rang** – über die Produktion urteilt, wer sie
+   versteht. Nicht der Kapitalgeber, dem das Geld die Zuständigkeit verleiht; nicht der
+   Verwaltungsbeamte, dem sie das Amt verleiht. Beides sind fremde Mittel, und beide
+   Male entscheidet jemand über eine Sache, die er nicht durchschaut. Sachautorität ist
+   dabei keine Hierarchie in neuem Gewand: Sie gilt für diese Frage, sie endet, wo die
+   Sachkenntnis endet, und sie muss sich in jedem Einzelfall neu bewähren. Der
+   Maintainer eines Projekts entscheidet, weil er den Code kennt — nicht, weil ihm
+   jemand einen Titel gegeben hat.
+
+6. **Wer das Ganze übersieht, arbeitet für andere** – Brüderlichkeit lässt sich nicht
+   verordnen und nicht anappellieren; sie setzt voraus, dass jemand den Zusammenhang
+   durchschaut, in dem er steht. Wer nur seinen Handgriff kennt, kann gar nicht anders,
+   als für seinen Lohn zu arbeiten. Wer sieht, wessen Bedarf am Ende seiner Arbeit
+   steht, arbeitet für diesen Bedarf — nicht aus Opferbereitschaft, sondern weil es die
+   sachlich richtige Handlung ist. Diesen Überblick liefert kein Wirtschaftsprozess von
+   selbst; er kommt aus dem Geistesleben, oder er kommt nicht. Hier liegt der Grund,
+   warum eine Wirtschaft ohne freies Geistesleben moralisch predigen muss, was sie
+   nicht erzeugen kann.
+
+7. **Pull Request statt Beschwerde** – wer einen Fehler oder eine Verbesserung sieht,
+   reicht einen konkreten Vorschlag ein, offen einsehbar für alle. Kein Jammern, kein
+   Appell an Vorgesetzte — denn der Appell nach oben holt ein fremdes Mittel herein, er
+   sucht Macht statt Einsicht. Kritik ist hier keine Anklage, sondern eine Gabe: Sie
+   fügt der Sache etwas hinzu, das ihr fehlte. Das setzt Urteilsbildung voraus, und es
+   setzt eine Kultur voraus, in der ein Einwand nichts kostet. Damit bleibt der ganze
+   Kreis in Bewegung — denn jede angenommene Korrektur ist ein neu ausgesprochenes
+   Bedürfnis, und dort, bei Punkt 1, beginnt der Prozess wieder von vorn.
+   
 ### Feld 3 — Recht → Geist: Der Staat bewahrt die Freiheit des Einzelnen
 
 1. **Das Rechtsleben schützt deine innere Freiheit.**  
@@ -96,12 +155,20 @@ Wie viel und unter welchen Bedingungen du arbeitest, wird demokratisch von allen
 ### Feld 6 — Wirtschaft → Geist: Die Wirtschaft versorgt den Geist
 
 1. **Die Wirtschaft stellt dem Geistesleben Mittel bereit, über deren Verwendung der Geist selbst entscheidet** – Das ist der Grundsatz. Die Wirtschaft gibt Geld, Räume, Sachmittel oder Infrastruktur, aber sie wählt nicht aus, welches Projekt, welche Forschung oder welche Kunst gefördert wird. Der Geist entscheidet aus eigener Sachkenntnis, was er tut und wofür er die Mittel einsetzt.
+
 2. **Die Wirtschaft finanziert Schulen, Berufsschulen und Universitäten als freie Bildungsorte** – Unternehmen, Verbände oder Stiftungen stellen Gebäude, Labore, Bibliotheken, Lernmaterialien und Stipendien bereit, ohne Einfluss auf Lehrpläne, Einstellungen oder Prüfungen. Die Bildungseinrichtung bleibt inhaltlich autonom. Die Wirtschaft sichert ihre Existenz, nicht ihre Ausrichtung.
+
 3. **Die Wirtschaft finanziert Kunst und Kultur ohne inhaltliche Vorgaben** – Kunst ist die Darstellung des Geistigen im Leben, Kultur ist die Selbstverständigung der Gesellschaft über ihre gemeinsamen Anliegen. Die Wirtschaft unterstützt Theater, Museen, Festivals, Publikationen und Diskursreihen mit Geld, Räumen oder Technik, ohne Programm oder Inhalte zu diktieren.
+
 4. **Die Wirtschaft stellt Räume für künstlerische und geistige Arbeit bereit** – Ateliers, Proberäume, Werkstätten, Studios, Schreibbüros oder Seminarräume – zu kostendeckenden Konditionen oder als Stipendium – ohne dass der Nutzer Rechenschaft über Inhalt oder Markterfolg ablegen muss. Der Raum ist die Bedingung, nicht die Botschaft.
+
 5. **Die Wirtschaft gewährt dem Geistesleben Transparenz über ihr Handeln** – Auf rechtliche Verpflichtung hin und ohne Ausnahme legen Unternehmen offen, welche Produkte sie herstellen, mit welchen Stoffen, unter welchen Bedingungen, mit welchen Nebenwirkungen. Algorithmen, Sicherheitsdaten und Wirkungsstudien sind öffentlich zugänglich. Der Geist kann prüfen, kritisieren und einordnen.
+
 6. **Die Wirtschaft organisiert die informationelle Infrastruktur so, dass der Geist sie frei und sicher nutzen kann** – Sichere, dezentrale Netze, verschlüsselte Kommunikation, offene Plattformen für Publikation und Austausch, Archive und Suchmaschinen, die nicht nach Werbeertrag sortieren. Jeder Mensch kann sich sicher und bei Bedarf anonym äußern, alle Informationen jederzeit erreichen, selbst unzensiert veröffentlichen.
+
 7. **Der Geist kann die Wirtschaft kritisieren, weil die Wirtschaft ihm die dafür nötigen Mittel bereitstellt, ohne einzugreifen** – Ein Unternehmen unterstützt eine unabhängige Zeitschrift, ein Recherchebüro oder eine Diskussionsreihe, ohne redaktionelle Einflussnahme – auch wenn dort wirtschaftliche Verhältnisse kritisiert werden. Die Wirtschaft stellt das Medium, der Geist bestimmt den Inhalt. Das ist die höchste Form der gesunden Versorgung: Sie trägt sogar die Kritik an sich selbst.
+
+8. **Das Geistesleben gewinnt aus der wirtschaftlichen Zusammenarbeit Erkenntnis über die Fähigkeiten und Talente der Menschen** – Die konkrete Arbeit in Assoziationen und Betrieben zeigt, was ein Mensch tatsächlich kann, wo seine Begabungen liegen und welche Fähigkeiten in der Gemeinschaft gebraucht werden. Das Geistesleben – insbesondere die Bildungseinrichtungen – nimmt diese sich zeigenden Talente auf und fördert sie. Es „ablauscht“ der Praxis, welche Fähigkeiten ausgebildet werden müssen, ohne dass die Wirtschaft dadurch Einfluss auf die Inhalte der Bildung gewinnt.
 
 ### Feld 7 — Geist + Recht → Wirtschaft: Bildung und Rahmen ermöglichen das Wirtschaften
 
