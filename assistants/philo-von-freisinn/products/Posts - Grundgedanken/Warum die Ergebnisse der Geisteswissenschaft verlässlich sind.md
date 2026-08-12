@@ -38,7 +38,7 @@ Es gibt einen zweiten Prüfstein, und der ist härter: das Leben selbst. Denn Bo
 
 Steiners Kernaussage hätte tausendfach widerlegt werden können. Sie wurde es nicht.
 
-Und die Dreigliederung? Hier wird es dramatisch.
+## Und die Dreigliederung? Hier wird es dramatisch.
 
 Noch überzeugender für mich: Steiner beschrieb die Dreigliederung und sagte, der soziale Organismus ist krank — krebskrank war sein Wort. Gesund wird er, wenn jedes Glied auf seine eigene Gesetzmäßigkeit gestellt wird: das Geistesleben auf Freiheit und Initiative, das Rechtsleben auf Gleichheit und Teilhabe, das Wirtschaftsleben auf Brüderlichkeit.
 
@@ -54,7 +54,7 @@ Und wer einwendet, Linux habe eben aus ökonomischen Gründen überlebt — kost
 
 Steiner beschrieb eine Realität aus dem Übersinnlichen heraus, als Wahrnehmung. Zwei Generationen später baut eine Gruppe von Menschen genau diese Struktur — und sie besteht den härtesten Test, den die Wirklichkeit anbieten kann.
 
-Und wie steht die Naturwissenschaft selbst da?
+## Und wie steht die Naturwissenschaft selbst da?
 
 Um es klar zu sagen: Ihre Ergebnisse sind beeindruckend, und im Bereich der Technik ist sie absolut überzeugend. Was zu eng ist, ist ihr selbstgewähltes Fundament. Sie will alle Vorgänge auf mathematisch-mechanische Verhältnisse zurückführen — und überspringt dabei das, was unmittelbar gegeben ist: die konkreten Sinnesqualitäten, die Farbe, den Ton, das Lebendige. An deren Stelle setzt sie hypothetische Bewegungen einer farb- und tonlosen Materie. Das ist keine solide Basis, sondern eine Abstraktion — und der Fehler beginnt dort, wo man die Abstraktion mit der Wirklichkeit verwechselt.
 

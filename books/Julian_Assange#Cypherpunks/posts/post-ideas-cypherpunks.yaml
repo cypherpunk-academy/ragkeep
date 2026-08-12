@@ -1,0 +1,787 @@
+# Gedanken-Inventar — Julian Assange: Cypherpunks (dt. Ausgabe)
+# Quelldatei: Julian_Assange_Cypherpunks.md (phase4, mit Weltanschauungs-Kommentaren)
+# Hinweis: Quelldatei ohne N|-Absatznummerierung. Anker daher über Kapitel +
+# wörtliches Stichwort (String-Match gegen Quelle verifiziert). Nach text:annotate
+# können Absatznummern nachgetragen werden.
+
+book_title: "Cypherpunks. Unsere Freiheit und die Zukunft des Internets"
+book_author: "Julian Assange (mit Appelbaum, Müller-Maguhn, Zimmermann)"
+generated_at: 2026-08-04
+model: claude-fable-5 (manuelle Redaktion, kein CLI-Lauf)
+
+ideas:
+  # ── EINLEITUNG: AUFRUF ZUM KRYPTOKAMPF ──────────────────────────────
+
+  - id: cp-001
+    kapitel: "Einleitung AUFRUF ZUM KRYPTOKAMPF"
+    titel: "Das Universum ist ein Freund der Kryptografie"
+    these: >
+      Verschlüsseln ist physikalisch leichter als Entschlüsseln. Diese
+      Asymmetrie ist kein Menschenwerk, sondern eine Eigenschaft der Welt —
+      und sie macht Freiheit möglich, die kein Staat einkassieren kann.
+    zitat_anker:
+      - stichwort: "Das Universum nämlich ist ein Freund der Kryptografie"
+      - stichwort: "Wirksame Kryptografie ist die höchste Form des gewaltlosen Widerstands"
+    aktualitaet: "Anhaltende Crypto-Wars: Chatkontrolle, Client-Side-Scanning, Backdoor-Forderungen."
+    anschluss:
+      dreigliederung: "Wo endet die Reichweite des Rechtslebens prinzipiell? Eine Grenze, die nicht verhandelt wird, sondern besteht."
+      eigenwerk: ["2064"]
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-002
+    kapitel: "Einleitung AUFRUF ZUM KRYPTOKAMPF"
+    titel: "Der Staat als System geregelter Gewalt"
+    these: >
+      Eigentum, Steuern, Urheberrecht — alles ruht auf der Androhung
+      staatlicher Gewalt, die wir nur nicht sehen, weil wir ihr ständig
+      ausweichen. Die Frage des Buches: Was ist der Mediator der Gewalt
+      im Netz?
+    zitat_anker:
+      - stichwort: "Grundbesitz, Eigentum, Pacht, Dividenden"
+      - stichwort: "die dunklen Tiefen, die unsere Welt tragen"
+    aktualitaet: "Debatten um Plattformregulierung: Wer erzwingt was im digitalen Raum?"
+    anschluss:
+      dreigliederung: "Präzise Bestimmung dessen, was Politik/Recht ist — und was nicht."
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-003
+    kapitel: "Einleitung AUFRUF ZUM KRYPTOKAMPF"
+    titel: "Vom Emanzipationsmittel zum Wegbereiter des Totalitarismus"
+    these: >
+      Das Internet hat sich still in sein Gegenteil verwandelt — nicht durch
+      einen Putsch, sondern durch die Übernahme seines physischen Fundaments
+      (Kabel, Satelliten, Rechenzentren).
+    zitat_anker:
+      - stichwort: "gefährlichsten Wegbereiter des Totalitarismus"
+      - stichwort: "indem sie sich die Kontrolle über sein physisches Fundament verschafften"
+    aktualitaet: "Unterseekabel-Geopolitik, Cloud-Konzentration bei drei Hyperscalern."
+    anschluss:
+      dreigliederung: "Übergriff Politik→Kultursphäre über die Wirtschaftsinfrastruktur"
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  # ── MEHR KOMMUNIKATION, MEHR ÜBERWACHUNG ────────────────────────────
+
+  - id: cp-004
+    kapitel: "MEHR KOMMUNIKATION, MEHR ÜBERWACHUNG"
+    titel: "Die Doppelbewegung des Netzes"
+    these: >
+      Mehr Kommunikation bedeutet mehr Freiheit gegenüber den
+      Konsens-Fabrikanten — und zugleich mehr Überwachung. Beides wächst
+      aus derselben Wurzel. Wer nur eine Seite sieht, versteht das Netz nicht.
+    zitat_anker:
+      - stichwort: "Wir haben heute mehr Kommunikation, aber eben auch mehr Überwachung"
+    aktualitaet: "KI-gestützte Auswertung macht die Überwachungsseite der Gleichung gerade sprunghaft effizienter."
+    anschluss:
+      dreigliederung: "Polarität statt Entweder-Oder — methodisch anschlussfähig an Goetheanistisches Denken"
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-005
+    kapitel: "MEHR KOMMUNIKATION, MEHR ÜBERWACHUNG"
+    titel: "Geheimhaltung heißt: Prozesse verlangsamen"
+    these: >
+      Ein BND-Mann beim Buffet definiert Geheimdienstarbeit: Prozesse
+      verlangsamen, indem man die Zahl derer begrenzt, die verstehen und
+      darum eingreifen können. Geheimhaltung ist Entmündigung durch
+      Wissensentzug.
+    zitat_anker:
+      - stichwort: "Prozesse zu verlangsamen, damit man sie besser kontrollieren kann"
+    aktualitaet: "Verschlusssachen-Praxis, Informationsfreiheitsgesetz-Blockaden, 'Geheimschutz' bei Verträgen."
+    anschluss:
+      dreigliederung: "Krankes Rechtsleben: Recht lebt von Öffentlichkeit, Geheimnis zersetzt es"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-006
+    kapitel: "MEHR KOMMUNIKATION, MEHR ÜBERWACHUNG"
+    titel: "Die Revolution und ihre Fahndungsmaschine"
+    these: >
+      Dieselbe Infrastruktur, die schnellen Massenkonsens ermöglicht, wird
+      nach einer gescheiterten Revolution zur Fahndungsmaschine. Das
+      ägyptische Revolutionshandbuch warnte auf Seite eins: verbreitet
+      dies nicht über Twitter und Facebook.
+    zitat_anker:
+      - stichwort: "Benutzt zur Verbreitung dieses Handbuchs weder Twitter noch Facebook"
+      - stichwort: "eine kritische Masse, es muss schnell gehen und man muss gewinnen"
+    aktualitaet: "Protestbewegungen zwischen Plattformreichweite und Plattformverrat (Iran, Belarus, Hongkong)."
+    anschluss: {}
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  # ── DIE MILITARISIERUNG DES CYBERSPACE ──────────────────────────────
+
+  - id: cp-007
+    kapitel: "DIE MILITARISIERUNG DES CYBERSPACE"
+    titel: "Ein Panzer im Schlafzimmer"
+    these: >
+      Wenn militärische Geheimdienste die private Kommunikation abfangen,
+      steht beim Simsen ein Soldat zwischen dir und deiner Frau. Das
+      Privatleben ist in eine militarisierte Zone eingezogen — wir sehen
+      die Panzer nur nicht.
+    zitat_anker:
+      - stichwort: "Es ist, als hätte man einen Panzer im Schlafzimmer"
+    aktualitaet: "Staatstrojaner, Quellen-TKÜ, Zero-Day-Ankauf durch Behörden."
+    anschluss:
+      dreigliederung: "Übergriff Politik/Militär→Kultursphäre bis in die intimste Sphäre"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-008
+    kapitel: "DIE MILITARISIERUNG DES CYBERSPACE"
+    titel: "Totalüberwachung zum Schnäppchenpreis"
+    these: >
+      Ein Kampfflugzeug: 100 Millionen. Alle Telefonate Deutschlands ein
+      Jahr lang speichern: acht Millionen. Die Ökonomie der Überwachung
+      erklärt ihre Ausbreitung besser als jede Ideologie.
+    zitat_anker:
+      - stichwort: "die Kosten für die reine Speicherung belaufen sich auf acht Millionen Euro"
+    aktualitaet: "Speicher- und KI-Kosten seit 2012 nochmals um Größenordnungen gefallen."
+    anschluss:
+      dreigliederung: "Wirtschaftliche Logik frisst rechtliche Schranken — Matrix-Zelle W→R"
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-009
+    kapitel: "DIE MILITARISIERUNG DES CYBERSPACE"
+    titel: "Alles abgreifen, später sortieren"
+    these: >
+      Der Wechsel vom taktischen zum strategischen Abfangen kehrt die
+      Unschuldsvermutung um: Früher wurde man Zielperson durch Verdacht,
+      heute ist jeder Zielperson, und der Verdacht wird nachgereicht.
+    zitat_anker:
+      - stichwort: "Wir greifen alles ab, sortieren können wir es später"
+    aktualitaet: "Vorratsdatenspeicherung-Dauerdebatte, EU-Going-Dark-Arbeitsgruppe."
+    anschluss:
+      dreigliederung: "Rechtsprinzip (Verdacht → Maßnahme) durch Technikprinzip (Kapazität → Maßnahme) ersetzt"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-010
+    kapitel: "DIE MILITARISIERUNG DES CYBERSPACE"
+    titel: "Die Doppelmoral von Wassenaar"
+    these: >
+      Verschlüsselung, die vor Überwachung schützt, unterliegt
+      Exportkontrollen wie Waffen. Überwachungstechnik selbst darf frei
+      verkauft werden — auch an Regime, die damit Oppositionelle jagen.
+      Der Grund: Auch Demokratien wollen Kontrolle.
+    zitat_anker:
+      - stichwort: "wird bis heute nicht durch Exportkontrollen beschränkt"
+    aktualitaet: "Pegasus/NSO-Skandale, europäische Spyware-Exporte, PKD-Untersuchungsausschüsse."
+    anschluss:
+      dreigliederung: "Wer schützt das Recht, wenn das Recht die Waffen gegen sich selbst freigibt?"
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  # ── MIT DEN GESETZEN DES MENSCHEN GEGEN TOTALE ÜBERWACHUNG ──────────
+
+  - id: cp-011
+    kapitel: "MIT DEN GESETZEN DES MENSCHEN GEGEN TOTALE ÜBERWACHUNG"
+    titel: "Warum Gesetze strategische Überwachung nicht zähmen können"
+    these: >
+      Taktische Überwachung lässt sich richterlich kontrollieren,
+      strategische nicht: Sie erfasst per Definition alle, ist geheim,
+      komplex und wird vom Kern des Establishments getragen. Gesetze kommen
+      hier nur vor, um die Betreiber nachträglich zu legalisieren (Schweden/FRA).
+    zitat_anker:
+      - stichwort: "sie lässt sich gesetzlich nicht sinnvoll beschränken"
+      - stichwort: "um den Arsch derjenigen Leute zu schützen, die sie durchführen"
+    aktualitaet: "BND-Gesetz-Novellen nach Verfassungsgerichtsurteilen: Legalisierung statt Begrenzung."
+    anschluss:
+      dreigliederung: "Kernfrage der Gewaltenteilung 2.0: Es gibt Machtformen, die das Rechtsleben strukturell nicht erreicht"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-012
+    kapitel: "MIT DEN GESETZEN DES MENSCHEN GEGEN TOTALE ÜBERWACHUNG"
+    titel: "Die vier Reiter der Infokalypse"
+    these: >
+      Kinderpornografie, Terrorismus, Geldwäsche, Drogen — mit denselben
+      vier Schreckbildern wird seit Jahrzehnten jede Freiheitstechnologie
+      angegriffen. Wer das Muster kennt, erkennt den nächsten Vorstoß,
+      bevor er da ist.
+    zitat_anker:
+      - stichwort: "Kinderpornografie, Terrorismus, Geldwäsche und der Krieg gegen einige Drogen"
+    aktualitaet: "Chatkontrolle-Begründungen folgen dem Muster wortgleich."
+    anschluss:
+      dreigliederung: "Angst als Hebel, mit dem Politik in die Kultursphäre übergreift"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-013
+    kapitel: "MIT DEN GESETZEN DES MENSCHEN GEGEN TOTALE ÜBERWACHUNG"
+    titel: "Komplexität und Geheimhaltung: ein toxisches Gemisch"
+    these: >
+      Mangelnde Aufsicht ist bei Überwachungssystemen kein Betriebsunfall,
+      sondern Systemmerkmal: Die Komplexität verbirgt, die Geheimhaltung
+      versiegelt. Ein solches System ist von seiner Anlage her gefährlich —
+      unabhängig davon, wer es gerade bedient.
+    zitat_anker:
+      - stichwort: "Komplexität und Geheimhaltung ein toxisches Gemisch sind"
+    aktualitaet: "Debatte um algorithmische Entscheidungssysteme und Auditierbarkeit (KI-Verordnung)."
+    anschluss: {}
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-014
+    kapitel: "MIT DEN GESETZEN DES MENSCHEN GEGEN TOTALE ÜBERWACHUNG"
+    titel: "Die Überwachungskurve dominiert die Bevölkerungskurve"
+    these: >
+      Die Bevölkerung verdoppelt sich alle 25 Jahre, die
+      Überwachungskapazität alle 18 Monate. Assange fordert deshalb eine
+      Reaktion wie auf die Atombombe: Massenüberwachung als
+      Massenvernichtungswaffe der Demokratie behandeln.
+    zitat_anker:
+      - stichwort: "die Überwachungskapazität aber verdoppelt sich alle 18 Monate"
+    aktualitaet: "Mit LLM-Auswertung erreicht die Kurve eine neue Steigung: Verstehen skaliert jetzt mit."
+    anschluss:
+      eigenwerk: ["2064"]
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-015
+    kapitel: "MIT DEN GESETZEN DES MENSCHEN GEGEN TOTALE ÜBERWACHUNG"
+    titel: "Überwachungstechnik wie Landminen behandeln"
+    these: >
+      Der CCC-Vorschlag: nicht die Nutzung regulieren, sondern Herstellung
+      und Besitz — wie bei Landminen. Nur weil etwas möglich ist, müssen
+      wir den Weg nicht bis zum Ende gehen. Das norwegische Telefonsystem
+      bewies: Man kann dieselbe Technik datenschutzfreundlich bauen.
+    zitat_anker:
+      - stichwort: "analog zu Landminen zu behandeln"
+      - stichwort: "Metadaten der Anrufe zu speichern"
+    aktualitaet: "Spyware-Moratorium-Forderungen von UN-Menschenrechtskommissar und EU-Parlament."
+    anschluss:
+      dreigliederung: "Positives Beispiel für gesundes Rechtsleben: Architekturentscheidung als Rechtsakt"
+    spannung: 3
+    reihe: "Cypherpunks reloaded"
+
+  # ── PRIVATWIRTSCHAFTLICHE SPIONAGE ──────────────────────────────────
+
+  - id: cp-016
+    kapitel: "PRIVATWIRTSCHAFTLICHE SPIONAGE"
+    titel: "Verlängerte Arme der Geheimdienste"
+    these: >
+      Von zehn NSA-Hauptauftragnehmern auf über tausend in einer Dekade:
+      Die Grenze zwischen Staat und Unternehmen verwischt, und Google und
+      Facebook werden funktional zu Außenstellen der Dienste — ohne dass
+      je jemand darüber abgestimmt hätte.
+    zitat_anker:
+      - stichwort: "die verlängerten Arme dieser Geheimdienste"
+    aktualitaet: "Cloud-Verträge der Bundesverwaltung, CLOUD Act, Microsoft/AWS in kritischer Infrastruktur."
+    anschluss:
+      dreigliederung: "Doppelübergriff: Staat und Wirtschaft verschmelzen gegen die Kultursphäre — Kernfall für die Doppelmatrix"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-017
+    kapitel: "PRIVATWIRTSCHAFTLICHE SPIONAGE"
+    titel: "Die demokratisierte Stasi"
+    these: >
+      Die Stasi musste Spitzel bezahlen; Facebook entlohnt sie mit
+      Gratifikationen. Wir berichten freiwillig über unsere Freunde —
+      die Überwachung ist demokratisiert worden.
+    zitat_anker:
+      - stichwort: "haben wir sogar die Überwachung demokratisiert"
+    aktualitaet: "Sharenting, Ring-Kameras, Bewegungsdaten-Apps: die Selbstverspitzelung hat seit 2012 Ebenen dazugewonnen."
+    anschluss:
+      dreigliederung: "Freiheit stirbt hier nicht durch Zwang, sondern durch Bequemlichkeit — eine Frage an die innere Freiheit, nicht ans Recht"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-018
+    kapitel: "PRIVATWIRTSCHAFTLICHE SPIONAGE"
+    titel: "In der Datenbank heißt du »target«"
+    these: >
+      Als Nutzer ihre Facebook-Daten herausklagten, kam die
+      Datenbankstruktur ans Licht: Der Schlüsselverweis lautet »target«.
+      Marketing- und Geheimdienstsprache fallen im Wort zusammen — es ist
+      nur eine Frage der Umstände, wer die Daten nutzt.
+    zitat_anker:
+      - stichwort: "das Wort »target«"
+      - stichwort: "der eigentliche Kunde sind vielmehr die Werbefirmen"
+    aktualitaet: "Adtech-Daten als Rohstoff für Behörden-Ankäufe (Data-Broker-Berichte)."
+    anschluss: {}
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-019
+    kapitel: "PRIVATWIRTSCHAFTLICHE SPIONAGE"
+    titel: "Eingebauter statt erklärter Datenschutz"
+    these: >
+      Wer ein System baut, das alles über Menschen speichert, in einem
+      Land, dessen Gesetze die Herausgabe erzwingen, trägt moralische
+      Verantwortung für die Architektur — nicht erst für den Missbrauch.
+      Es ist keine Technikfrage, es ist eine ökonomische Entscheidung.
+    zitat_anker:
+      - stichwort: "erklärtem und eingebautem Schutz der Privatsphäre"
+      - stichwort: "die ökonomische Entscheidung getroffen haben, ihre Nutzer zu verkaufen"
+    aktualitaet: "Privacy-by-Design ist seit DSGVO Gesetzestext — und bleibt meist Erklärung statt Einbau."
+    anschluss:
+      dreigliederung: "Moralische Intuition des Architekten vs. Systemzwang — Philosophie-der-Freiheit-Anschluss"
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  # ── MIT DEN GESETZEN DER PHYSIK GEGEN TOTALE ÜBERWACHUNG ────────────
+
+  - id: cp-020
+    kapitel: "MIT DEN GESETZEN DER PHYSIK GEGEN TOTALE ÜBERWACHUNG"
+    titel: "Kein Maß an Gewalt löst ein mathematisches Problem"
+    these: >
+      Die Stärke fast jeder Autorität leitet sich aus Gewalt ab. Aber vor
+      einem kryptografisch gesicherten Geheimnis sind die Spione machtlos,
+      ganz gleich, welche Gewalt hinter ihnen steht. Folter bricht Menschen,
+      nicht Mathematik.
+    zitat_anker:
+      - stichwort: "kein Maß an Gewalt jemals ein mathematisches Problem lösen wird"
+    aktualitaet: "Going-Dark-Rhetorik der Innenminister prallt an genau dieser Tatsache ab."
+    anschluss:
+      dreigliederung: "Die schärfste Formulierung der Grenzfrage: eine Freiheit, die nicht gewährt, sondern gefunden wird"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-021
+    kapitel: "MIT DEN GESETZEN DER PHYSIK GEGEN TOTALE ÜBERWACHUNG"
+    titel: "Händewaschen gegen unsichtbare Keime"
+    these: >
+      Erst musste die Keimtheorie verstanden sein, dann kam die Nachfrage
+      nach Seife. Massenüberwachung ist unsichtbar wie Keime — ohne
+      verbreitetes Verständnis keine Nachfrage nach Schutz. Aufklärung
+      geht der Hygiene voraus.
+    zitat_anker:
+      - stichwort: "Verbreitung des Händewaschens"
+    aktualitaet: "Signal-Adoption nach Snowden/WhatsApp-AGB-Wellen zeigt genau diese Dynamik."
+    anschluss:
+      dreigliederung: "Aufgabe der Kultursphäre: Verstehen erzeugen, wo Politik nur Angst erzeugt"
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-022
+    kapitel: "MIT DEN GESETZEN DER PHYSIK GEGEN TOTALE ÜBERWACHUNG"
+    titel: "Selbstzensur oder Selbstermächtigung"
+    these: >
+      Wer sich überwacht weiß, hat zwei Wege: sich anpassen — dann wird
+      politischer Konformismus universell und die Menschen melden sich als
+      politische Akteure ab — oder die Werkzeuge beherrschen lernen, um
+      frei denken und sprechen zu können.
+    zitat_anker:
+      - stichwort: "wird politischer Konformismus zu einer universellen Erscheinung"
+    aktualitaet: "Chilling-Effects-Forschung belegt den Anpassungspfad empirisch."
+    anschluss:
+      dreigliederung: "Innere Freiheit braucht äußere Bedingungen — der Punkt, wo Technik und Philosophie der Freiheit sich berühren"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  # ── INTERNET UND POLITIK ────────────────────────────────────────────
+
+  - id: cp-023
+    kapitel: "INTERNET UND POLITIK"
+    titel: "Das Internet lehrt die Menschen zu schreiben"
+    these: >
+      Bayarts Satz: Die Druckerpresse hat die Menschen lesen gelehrt, das
+      Internet lehrt sie zu schreiben. Dass 99 Prozent davon Mist sind,
+      spricht nicht dagegen — so lernt man schreiben. Die Fähigkeit, sich
+      öffentlich auszudrücken, ist neu in der Menschheitsgeschichte.
+    zitat_anker:
+      - stichwort: "das Internet lehrt die Menschen zu schreiben"
+    aktualitaet: "KI-Textgeneratoren stellen die Frage neu: Wer schreibt da eigentlich?"
+    anschluss:
+      dreigliederung: "Kultursphären-Emanzipation im Wortsinn"
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-024
+    kapitel: "INTERNET UND POLITIK"
+    titel: "Der Sieg an der Oberfläche, die Niederlage im Untergrund"
+    these: >
+      ACTA wurde demokratisch besiegt — und lebte in geheimen bilateralen
+      Abkommen weiter. Öffentliche demokratische Siege können vom
+      Verhandlungs-Untergrund schlicht umflossen werden. Der demokratische
+      Prozess wird nicht gebrochen, sondern unterlaufen.
+    zitat_anker:
+      - stichwort: "Der demokratische Prozess wurde schlicht unterlaufen"
+    aktualitaet: "Handelsabkommen-Nebenklauseln, Verordnungswege an Parlamenten vorbei."
+    anschluss:
+      dreigliederung: "Diagnose fürs GIT-Konzept: Transparenz der Verfahren als Gegenmittel"
+      eigenwerk: ["GIT"]
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-025
+    kapitel: "INTERNET UND POLITIK"
+    titel: "Internetzeit gegen den 24-Stunden-Zyklus"
+    these: >
+      Politische Erzählungen wirken durch Emotion und Kurzatmigkeit:
+      Information verschwindet binnen 24 Stunden. Das Netz erlaubt
+      »Internetzeit« — jahrelange kollektive Dossiers, Zeile-für-Zeile-Analyse,
+      ein eigenes Gedächtnis gegen das Vergessen der Medien.
+    zitat_anker:
+      - stichwort: "was ich Internetzeit nenne"
+    aktualitaet: "OSINT-Kollektive (Bellingcat u. a.) sind die Reifung genau dieser Praxis."
+    anschluss:
+      dreigliederung: "Medienkritik konstruktiv: nicht klagen, sondern eigene Zeitform aufbauen"
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-026
+    kapitel: "INTERNET UND POLITIK"
+    titel: "Zentralisierung siegt ökonomisch — und kostet die Freiheit"
+    these: >
+      Das Internet könnte dezentral sein; zentral ist es, weil zentral
+      billiger ist. In den Server-Bienenstöcken sitzen dann die
+      Zugriffspunkte der NSA. Wer Dezentralität will, muss die Ökonomie
+      schlagen, nicht nur die Technik bauen — eine Arme-Leute-Version von
+      Facebook genügt nicht.
+    zitat_anker:
+      - stichwort: "trägt die zentralisierte Version den Sieg davon"
+      - stichwort: "Arme-Leute-Version von Facebook"
+    aktualitaet: "Fediverse/Bluesky-Momente nach Twitter-Übernahme: Test dieser These in Echtzeit."
+    anschluss:
+      dreigliederung: "Assoziative Ökonomie als Antwort: Dezentralität braucht eine tragfähige Wirtschaftsform"
+      eigenwerk: ["Die Assoziation", "Korn"]
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-027
+    kapitel: "INTERNET UND POLITIK"
+    titel: "»Wir brauchen unsere eigene Währung«"
+    these: >
+      Müller-Maguhns Konsequenz aus Bankenblockade und Amazon-Rauswurf:
+      eigene Druck- und Publikationsfähigkeit, eigene Infrastruktur — und
+      als nächster Schritt eine eigene Währung, die nicht von einer
+      zentralen, einem Hoheitsgebiet unterworfenen Infrastruktur abhängt.
+    zitat_anker:
+      - stichwort: "dass wir unsere eigene Währung brauchen"
+    aktualitaet: "Von Bitcoin bis Komplementärwährungen: die Frage ist offen geblieben."
+    anschluss:
+      dreigliederung: "Direkte Steilvorlage für Korn: Emission durch Assoziation statt Staat oder Konzern"
+      eigenwerk: ["Korn", "Die Assoziation", "W€"]
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  # ── INTERNET UND WIRTSCHAFT ─────────────────────────────────────────
+
+  - id: cp-028
+    kapitel: "INTERNET UND WIRTSCHAFT"
+    titel: "Drei Freiheiten, drei Attribute der Staatlichkeit"
+    these: >
+      Bewegungsfreiheit, Kommunikationsfreiheit, Freiheit wirtschaftlicher
+      Interaktion — Assange leitet sie aus den drei Attributen der
+      Staatlichkeit ab (Gewalt, Kommunikations-, Finanzinfrastruktur).
+      Wer eine davon kontrolliert, kontrolliert ein Stück Staat; wer eine
+      verliert, verliert ein Stück Freiheit.
+    zitat_anker:
+      - stichwort: "die drei wesentlichen Attribute der Staatlichkeit"
+    aktualitaet: "Digitale ID, Zahlungsplattformen, Mobilitätsdaten: alle drei Freiheiten laufen heute über dieselben Netze."
+    anschluss:
+      dreigliederung: "Frappierende Parallele und Kontrast zur Dreigliederung: Assanges Trias quer zu Kultur/Recht/Wirtschaft legen — ein eigener Vergleichspost"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-029
+    kapitel: "INTERNET UND WIRTSCHAFT"
+    titel: "Kein freier Markt: die Anatomie der Bankenblockade"
+    these: >
+      Visa, MasterCard, PayPal blockierten WikiLeaks ohne Gericht, Gesetz
+      oder Verfahren. Assanges Pointe: Das war kein Marktereignis —
+      staatliche Regulierung hat aus bestimmten Finanzspielern Könige
+      gemacht, und die Könige vollstrecken Politik.
+    zitat_anker:
+      - stichwort: "aus bestimmten Finanzspielern Könige gemacht"
+      - stichwort: "außerhalb jedes juristischen oder administrativen Verfahrens"
+    aktualitaet: "Debanking-Fälle, Zahlungsdienstleister als Inhaltsregulierer (OnlyFans-, Patreon-Episoden)."
+    anschluss:
+      dreigliederung: "Matrix-Musterfall W→K: Zensur mit ökonomischen Mitteln, Rechtssphäre umgangen"
+      eigenwerk: ["Dreigliederungs-Matrix", "2064"]
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-030
+    kapitel: "INTERNET UND WIRTSCHAFT"
+    titel: "Selbst Russland durfte kein eigenes Kartensystem"
+    these: >
+      Eine WikiLeaks-Depesche zeigt: US-Botschaft und Visa verhinderten
+      gemeinsam, dass russische Inlandszahlungen in Russland verarbeitet
+      werden. Wenn Putin eine Cola kauft, weiß es Washington 30 Sekunden
+      später — Finanzinfrastruktur ist Souveränitätsinfrastruktur.
+    zitat_anker:
+      - stichwort: "sein eigenes inländisches Bezahlkartensystem einzurichten"
+    aktualitaet: "Sanktionsregime, SWIFT-Ausschlüsse, Mir/UnionPay, De-Dollarisierungs-Debatte."
+    anschluss:
+      dreigliederung: "Geopolitik der Zahlungswege — nüchtern, ohne Lagerdenken"
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-031
+    kapitel: "INTERNET UND WIRTSCHAFT"
+    titel: "Bitcoin: Durchsetzung durch Architektur statt Gesetz"
+    these: >
+      Bei Bitcoin erzwingt nicht Regulierung ehrliches Verhalten, sondern
+      die Architektur selbst: Betrug kostet mehr Strom, als er einbringt.
+      Die Cypherpunk-Einsicht dahinter — die Architektur definiert die
+      politische Situation — gilt für jedes Geldsystem.
+    zitat_anker:
+      - stichwort: "in die Architektur des Systems eingebaut"
+      - stichwort: "die Architektur tatsächlich die politische Situation definiert"
+    aktualitaet: "Nach 15 Jahren: Bitcoin als Spekulationsobjekt widerlegt nicht das Architekturprinzip — es zeigt, dass die Wertfrage offen blieb."
+    anschluss:
+      dreigliederung: "Korn übernimmt das Architekturprinzip, beantwortet aber die Wertfrage anders: Naturanker, Alterung, Nicht-Spekulierbarkeit"
+      eigenwerk: ["Korn", "GA 340"]
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-032
+    kapitel: "INTERNET UND WIRTSCHAFT"
+    titel: "Ist wirtschaftliche Vertraulichkeit wichtiger als Redefreiheit?"
+    these: >
+      Journalisten verteidigen die Redefreiheit, weil es ihre eigene ist.
+      Assange fragt provokant: Wenn die ganze Gesellschaftsstruktur auf
+      wirtschaftlichem Austausch ruht — ist dann nicht dessen
+      Vertraulichkeit die fundamentalere Freiheit? Jacob: Beide hängen im
+      Kern zusammen.
+    zitat_anker:
+      - stichwort: "wichtiger als die Redefreiheit"
+    aktualitaet: "Bargeld-Obergrenzen, digitaler Euro und programmierbares Geld machen die Frage konkret."
+    anschluss:
+      dreigliederung: "Geldfluss als Willensausdruck: wirtschaftliche Privatheit als Bedingung freien Handelns"
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-033
+    kapitel: "INTERNET UND WIRTSCHAFT"
+    titel: "Handle stets so, dass die Wahlmöglichkeiten größer werden"
+    these: >
+      Heinz von Foersters ethischer Imperativ als Prüfstein für Technik
+      und Politik: Kommunikation vermehrt Optionen anderer, Waffen und
+      Überwachung beschränken sie. Ein einfaches Kriterium mit
+      erstaunlicher Trennschärfe.
+    zitat_anker:
+      - stichwort: "dass die Anzahl der Wahlmöglichkeiten größer wird"
+    aktualitaet: "Brauchbare Heuristik für KI-Regulierungsdebatten diesseits von Verbots- vs. Laissez-faire-Reflexen."
+    anschluss:
+      dreigliederung: "Verwandtschaft und Differenz zum moralischen Individualismus: Regel vs. Intuition — lohnender Reibungspunkt"
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-034
+    kapitel: "INTERNET UND WIRTSCHAFT"
+    titel: "Reichtum ist eine Reihe von Bits"
+    these: >
+      Die Bankenrettungen zeigten: Durch wirkungsvolles Betteln wurden
+      Bits hochgesetzt — während die, die sich abstrampeln, keine Bits
+      haben, die es zu manipulieren lohnte. Wenn Geldwert so entsteht,
+      was ist dann noch der Wert im System?
+    zitat_anker:
+      - stichwort: "eine Reihe von Bits in einem Computersystem"
+    aktualitaet: "Bilanzsummen der Zentralbanken seit 2012; Diskussion um leistungslose Vermögenszuwächse."
+    anschluss:
+      dreigliederung: "Genau die Entkopplung, die GA 340 mit Warendeckung und alterndem Geld verhindern will"
+      eigenwerk: ["Korn", "GA 340"]
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  # ── ZENSUR ──────────────────────────────────────────────────────────
+
+  - id: cp-035
+    kapitel: "ZENSUR"
+    titel: "Die Zensurpyramide"
+    these: >
+      Nur die Spitze der Zensur ragt sichtbar aus dem Sand — Klagen,
+      beschlagnahmte Kameras. Darunter: Selbstzensur aus Angst, dann
+      Patronage, dann rohe Ökonomie, dann Vorurteil und Bildung, zuunterst
+      die Verteilung. Die wirksamste Zensur ist die, die man abstreiten kann.
+    zitat_anker:
+      - stichwort: "Zensur als Pyramide"
+    aktualitaet: "Content-Moderation, Shadow-Banning, Deplatforming: die Schichten haben neue Namen bekommen."
+    anschluss:
+      dreigliederung: "Medienkritisches Kernstück — differenziert statt pauschal, ideal fürs Format"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-036
+    kapitel: "ZENSUR"
+    titel: "Geschichte, die nie existiert hat"
+    these: >
+      Die Sowjets klebten Korrekturen in Enzyklopädien — plump, aber
+      nachweisbar. Der Guardian entfernt Auchi-Artikel spurlos aus Archiv
+      und Index: »Page not found«. Die westliche Zensur ist nicht milder,
+      sie ist unnachweisbarer. Orwell: Wer die Gegenwart kontrolliert,
+      kontrolliert die Vergangenheit.
+    zitat_anker:
+      - stichwort: "Wer die Gegenwart kontrolliert, kontrolliert die Vergangenheit"
+      - stichwort: "Page not found"
+    aktualitaet: "Stille Archiv-Änderungen, Link-Rot als Zensurvektor, Wayback-Machine-Löschersuchen."
+    anschluss:
+      dreigliederung: "Gedächtnis der Kultursphäre als Schutzgut; Anschluss an Internetzeit (cp-025)"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-037
+    kapitel: "ZENSUR"
+    titel: "Zensur setzt Totalüberwachung voraus"
+    these: >
+      Um eine einzige Sache zu filtern, muss man alles sehen — und was man
+      sehen kann, kann man speichern. Die Chinesen, sagt Assange, fürchten
+      nicht die Zensur, sondern die Überwachung, die sie voraussetzt.
+      Jede Filterinfrastruktur ist eine Überwachungsinfrastruktur.
+    zitat_anker:
+      - stichwort: "eine Überwachung des Internets geben muss"
+      - stichwort: "um eine einzige Sache zu zensieren"
+    aktualitaet: "Upload-Filter und Chatkontrolle: dasselbe Argument, aktuelle Gesetzgebung."
+    anschluss:
+      dreigliederung: "Der Preis des Filterns wird systematisch verschwiegen — Aufklärungspost"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-038
+    kapitel: "ZENSUR"
+    titel: "Filterung gehört ins Endgerät zwischen den Ohren"
+    these: >
+      Wau Hollands Antwort auf die Filterfrage: Gefiltert werden soll beim
+      Endnutzer — im Kopf. Nicht die Regierung soll im Namen des Volkes
+      entscheiden, was gesehen werden darf; die Urteilsfähigkeit des
+      Einzelnen ist der einzige legitime Filter.
+    zitat_anker:
+      - stichwort: "im Endgerät des Endnutzers"
+    aktualitaet: "Medienkompetenz- vs. Regulierungsdebatte in Reinform."
+    anschluss:
+      dreigliederung: "Mündigkeit statt Bevormundung: Kultursphären-Autonomie als Zumutung und Zutrauen"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-039
+    kapitel: "ZENSUR"
+    titel: "Journalisten holt man heute per Hypothek aus dem Haus"
+    these: >
+      Die Springerstiefel-Zensur der Sowjetunion hat sich um 180 Grad
+      gedreht: Im Westen verliert der unbotmäßige Journalist die Patronage
+      und kann die Hypothek nicht mehr zahlen. Niemand befiehlt etwas —
+      man versteht, was erwartet wird.
+    zitat_anker:
+      - stichwort: "indem man ihnen ihre Häuser wegnimmt"
+    aktualitaet: "Prekarisierung des Journalismus, Abhängigkeit von Plattform-Traffic und Förderern."
+    anschluss:
+      dreigliederung: "Wirtschaftliche Abhängigkeit der Kultursphäre — Matrix-Zelle W→K in der Presse"
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  # ── PRIVATSPHÄRE DEN SCHWACHEN, TRANSPARENZPFLICHT DEN MÄCHTIGEN ────
+
+  - id: cp-040
+    kapitel: "PRIVATSPHÄRE DEN SCHWACHEN, TRANSPARENZPFLICHT DEN MÄCHTIGEN"
+    titel: "Geheim vor den Ohnmächtigen, offen für die Mächtigen"
+    these: >
+      4,3 Millionen US-Bedienstete dürfen »private« Daten einsehen — privat
+      sind sie also nicht, sie sind nur asymmetrisch geheim: vor den
+      Ohnmächtigen für die Mächtigen. Das Cypherpunk-Credo dreht die
+      Asymmetrie um: Privatsphäre den Schwachen, Transparenzpflicht den
+      Mächtigen.
+    zitat_anker:
+      - stichwort: "vor den Ohnmächtigen für die Mächtigen geheim gehalten"
+    aktualitaet: "Das Credo ist zum Standardargument der Digitalrechtsbewegung geworden — seine Herkunft kennt kaum jemand."
+    anschluss:
+      dreigliederung: "Asymmetrie als Rechtsprinzip statt Gleichbehandlungs-Falle; Titel-Kandidat für die ganze Reihe"
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-041
+    kapitel: "PRIVATSPHÄRE DEN SCHWACHEN, TRANSPARENZPFLICHT DEN MÄCHTIGEN"
+    titel: "Kohls Bürowägelchen"
+    these: >
+      Kohl verstand Telekommunikationsüberwachung nicht — bis man ihm 8000
+      Stasi-Transkripte seiner eigenen Telefonate ins Büro rollte.
+      Abstraktion überzeugt niemanden; die eigene Akte überzeugt jeden.
+    zitat_anker:
+      - stichwort: "auf zwei Bürowägelchen in Kohls Büro"
+    aktualitaet: "DSGVO-Auskunftsrecht als didaktisches Werkzeug: Hol dir deine Daten, dann verstehst du."
+    anschluss: {}
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-042
+    kapitel: "PRIVATSPHÄRE DEN SCHWACHEN, TRANSPARENZPFLICHT DEN MÄCHTIGEN"
+    titel: "WikiLeaks ist nur der Schatten eines Schattens"
+    these: >
+      Die veröffentlichten Geheimnisse sind ein Prozentbruchteil des
+      privat gehorteten Geheimmaterials. Die eigentliche Asymmetrie liegt
+      zwischen denen, die jede Kreditkartentransaktion der Welt kennen,
+      und denen, die Blogs googeln können.
+    zitat_anker:
+      - stichwort: "nur der Schatten eines Schattens"
+    aktualitaet: "Datenkonzentration bei Plattformen und Diensten hat sich seit 2012 vervielfacht."
+    anschluss: {}
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  # ── RATTEN IN DER OPER ──────────────────────────────────────────────
+
+  - id: cp-043
+    kapitel: "RATTEN IN DER OPER"
+    titel: "Das Recht zu lesen, das Recht anonym zu sprechen, das Recht zu bezahlen"
+    these: >
+      Appelbaums Utopie-Minimum: freier Informationszugang und freie Rede
+      für ausnahmslos jeden — einschließlich anonymer Rede, Bezahlung ohne
+      Einmischung Dritter, Reisefreiheit, Korrektur der eigenen Daten,
+      Transparenzpflicht für alle Systeme, die auf unser Leben wirken.
+    zitat_anker:
+      - stichwort: "das Recht der anonymen Meinungsäußerung"
+    aktualitaet: "Anonymitätsverbots-Vorstöße (Klarnamenpflicht) tauchen zyklisch wieder auf."
+    anschluss:
+      dreigliederung: "Ein Grundrechtskatalog aus der Hackerethik — Vergleich mit klassischen Grundrechten lohnt"
+    spannung: 4
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-044
+    kapitel: "RATTEN IN DER OPER"
+    titel: "Code ist Gesetz"
+    these: >
+      Was du im Netz tun kannst, definieren die Programme, die existieren
+      und laufen. Software-Architektur ist faktische Gesetzgebung — darum
+      muss Software so frei und offen einsehbar sein wie Gesetzestexte in
+      einer Demokratie.
+    zitat_anker:
+      - stichwort: "Code ist Gesetz"
+      - stichwort: "offen zutage liegt wie Gesetzestexte in einer Demokratie"
+    aktualitaet: "Algorithmen-Transparenz-Forderungen (DSA), Open-Source-Auflagen für staatliche Software."
+    anschluss:
+      dreigliederung: "Wer Code schreibt, gesetzgebt — die Verantwortungsfrage der Kultursphäre; Anschluss an GIT"
+      eigenwerk: ["GIT"]
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-045
+    kapitel: "RATTEN IN DER OPER"
+    titel: "Eine einzige Utopie wäre eine Dystopie"
+    these: >
+      Assanges überraschendste Wendung: Die Verwirklichung einer einzigen
+      Utopie wäre dystopisch. Utopische Ideale müssen die
+      Verschiedenartigkeit von Systemen einschließen — Homogenisierung ist
+      die eigentliche Gefahr, auch die der guten Absichten.
+    zitat_anker:
+      - stichwort: "einer einzigen Utopie wäre für mich in Wirklichkeit eine Dystopie"
+    aktualitaet: "Plattform-Monokultur und globale Standardisierung als schleichende Homogenisierung."
+    anschluss:
+      dreigliederung: "Pluralismus als Prinzip: exakt die Pointe der Assoziations-Vielfalt gegen den Einheitsstaat"
+      eigenwerk: ["Die Assoziation"]
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
+
+  - id: cp-046
+    kapitel: "RATTEN IN DER OPER"
+    titel: "Die gewitzten Ratten in der Oper"
+    these: >
+      Assanges wahrscheinlichstes Szenario: eine homogenisierte,
+      transnationale, totalitäre Struktur voller Absurditäten — und darin
+      ein Raum, der nur den gewitzten Ratten offensteht. Frei bleiben nur
+      die, die sich in den Eingeweiden des Systems auskennen. Ein
+      Lichtblick, der keiner sein dürfte.
+    zitat_anker:
+      - stichwort: "die gewieften Ratten, die durch die Oper turnen"
+    aktualitaet: "13 Jahre später: Wie viel von der Prognose ist eingetreten? Ehrliche Bilanz als Post-Format."
+    anschluss:
+      dreigliederung: "Gegenbild zur Elitenfreiheit: Freiheit für alle ist Kulturaufgabe, nicht Hackerprivileg — kritische Würdigung statt Zustimmung"
+      eigenwerk: ["2064", "Die Assoziation"]
+    spannung: 5
+    reihe: "Cypherpunks reloaded"
