@@ -36,8 +36,11 @@ PAGE_H = 5940.0
 PAGE_MARGIN = 80.0
 HALF_GAP = 60.0              # Abstand zwischen Krankheits- und Gesundheits-Haelfte
 
-MAIN_TITLE = "Gesundheit und Krankheit des Sozialen"
-MAIN_TITLE_WIDTH_FRAC = 0.90  # Anteil der Seitenbreite
+MAIN_TITLE_LINES = [
+    "Gesundheit und Krankheit",
+    "des sozialen Zusammenlebens",
+]
+MAIN_TITLE_WIDTH_FRAC = 0.90  # Anteil der Seitenbreite (laengste Zeile)
 
 # ---------------------------------------------------------------- Dreiecks-Parameter
 SIDE   = 1400.0              # Seitenlaenge (gleichseitig)
@@ -63,7 +66,7 @@ RAD_FONT   = 22
 RAD_GAP    = 14
 V_FONT_SIZE = 46
 V_GAP      = 85
-SECTION_FONT = 56            # "Krankheit" / "Gesundheit"
+INNER_FONT = 70              # Leitprinzipien im Dreieck
 
 BLOCK_NUDGE = {
     0: (0, -150),
@@ -301,6 +304,23 @@ BLOCK_NUDGE_KRANK = {
 
 VERTEX_LABELS = ["Recht", "Wirtschaft", "Kultur/Geist"]
 
+# Leitprinzipien im Inneren (Wirtschaft, Kultur/Geist, Recht)
+INNER_KRANK = ("Wettbewerb", "Leere Worte", "Vorrechte")
+INNER_GESUND = ("Br\u00fcderlichkeit", "Freiheit", "Gleichheit")
+INNER_BASE_FRAC = 0.20       # Abstand von der Grundlinie (Anteil der Hoehe)
+INNER_EDGE_PAD = 70.0        # Abstand Textkante \u2192 Dreiecksschenkel
+INNER_LEG_T = 0.52           # Position auf dem linken Schenkel (0 = Spitze)
+INNER_LEG_INSET = 48.0       # Versatz vom linken Schenkel nach innen
+# Vorrechte / Wettbewerb (Krankheit): 2× Schrift, aussen an der Kante
+VORRECHTE_SCALE = 2.0
+VORRECHTE_LEG_T = 0.06       # Anker nahe Spitze (Anteil Kante Spitze→Wirtschaft)
+VORRECHTE_INSET_FRAC = 0.0   # Baseline auf der Aussenkante; Buchstaben nach aussen
+WETTBEWERB_LEG_T = 0.06      # Anker nahe Wirtschaft (Anteil Kante Wirtschaft→Geist)
+LEERE_WORTE_LEG_T = 0.06     # Anker nahe Kultur/Geist (Anteil Kante Geist→Recht)
+# Krankheit, Boegen 0+1: CSS-Zoom, dann senkrecht nach aussen
+ARC_ZOOM = 1.5               # wieder 15% kleiner als zuletzt (1.725)
+ARC_CLEAR_PAD = 40.0         # Abstand Strahlen zu Vorrechte / Wettbewerb
+
 # ---------------------------------------------------------------- Geometrie-Helfer
 def sub(p, q):  return (p[0] - q[0], p[1] - q[1])
 def add(p, q):  return (p[0] + q[0], p[1] + q[1])
@@ -440,9 +460,93 @@ def vertex_items(a, b, c, centroid):
     return items
 
 
+def inner_labels(a, b, c, words, recht_style=None, wirtschaft_style=None,
+                 geist_style=None):
+    """Leitprinzipien im Dreieck: (Wirtschaft, Kultur/Geist, Recht).
+
+    a = Recht (Spitze), b = Wirtschaft (unten links),
+    c = Kultur/Geist (unten rechts).
+    Waagerechte Worte sitzen an der Grundlinie bei Wirtschaft bzw. Geist,
+    sofern kein wirtschaft_style / geist_style die Aussenkante setzt.
+    Das Rechts-Wort steht auf dem linken Schenkel, nach oben lesbar.
+
+    Returns list of (pos, ang, txt, font_size, anchor, baseline).
+    """
+    w_txt, g_txt, r_txt = words
+    h = b[1] - a[1]
+    t_down = 1.0 - INNER_BASE_FRAC
+    y = a[1] + h * t_down
+    half_w = (c[0] - a[0]) * t_down
+    cx = a[0]
+    centroid = ((a[0] + b[0] + c[0]) / 3.0, (a[1] + b[1] + c[1]) / 3.0)
+
+    def horiz(txt, sign):
+        half_tw = text_w(txt, INNER_FONT, bold=True) / 2.0
+        edge_x = cx + sign * half_w
+        x = edge_x - sign * (INNER_EDGE_PAD + half_tw)
+        return ((x, y), 0.0, txt, INNER_FONT, "middle", "central")
+
+    def edge_item(P0, P1, txt, style, ang_vec, default_anchor, default_base):
+        scale = style.get("scale", 1.0)
+        font = INNER_FONT * scale
+        t = style.get("leg_t", INNER_LEG_T)
+        inset_frac = style.get("inset_frac", None)
+        inset = INNER_LEG_INSET if inset_frac is None else font * inset_frac
+        u = sub(P1, P0)
+        edge_pt = add(P0, mul(u, t))
+        n = norm((u[1], -u[0]))
+        to_c = sub(centroid, edge_pt)
+        if to_c[0] * n[0] + to_c[1] * n[1] < 0:
+            n = (-n[0], -n[1])
+        if style.get("outward"):
+            n = (-n[0], -n[1])
+        pos = add(edge_pt, mul(n, inset))
+        # rsvg ignoriert text-before-edge oft: Buchstaben unter die Grundkante
+        # schieben, wenn die Schrift waagerecht aussen an der Basis sitzt.
+        if style.get("drop_below"):
+            pos = (pos[0], pos[1] + font * 0.78)
+        ang = math.degrees(math.atan2(ang_vec[1], ang_vec[0]))
+        return (pos, ang, txt, font,
+                style.get("anchor", default_anchor),
+                style.get("baseline", default_base))
+
+    if wirtschaft_style:
+        w_item = edge_item(
+            b, c, w_txt, wirtschaft_style, sub(c, b),
+            "start", "text-before-edge")
+    else:
+        w_item = horiz(w_txt, -1.0)
+
+    if geist_style:
+        # Rechter Schenkel: Ende an Kultur/Geist, nach oben zum Recht lesbar
+        # (Wortende an c, Text erstreckt sich zur Spitze).
+        g_item = edge_item(
+            c, a, g_txt, geist_style, sub(c, a),
+            "end", "alphabetic")
+    else:
+        g_item = horiz(g_txt, 1.0)
+
+    rs = recht_style or {}
+    r_item = edge_item(
+        a, b, r_txt, rs if recht_style else {
+            "scale": 1.0, "leg_t": INNER_LEG_T, "outward": False,
+        },
+        sub(a, b), "middle", "central")
+
+    return [
+        w_item,
+        g_item,
+        r_item,
+    ]
+
+
 def panel_extent(arcs, radial_by_arc, block_items, verts, a, b, c):
     xs, ys = [a[0], b[0], c[0]], [a[1], b[1], c[1]]
-    for bx, by, w_, t_ in block_items:
+    for item in block_items:
+        if len(item) == 5:
+            _idx, bx, by, w_, t_ = item
+        else:
+            bx, by, w_, t_ = item
         xs += [bx, bx + line_w(w_, t_)]
         ys += [by - BLOCK_FONT, by + BLOCK_FONT]
     for items in radial_by_arc.values():
@@ -487,7 +591,7 @@ def build_panel_content(arcs, centroid, labels, radial, blocks,
         center, chord, bulge, n, off = arcs[idx]
         items = radial_items(center, chord, bulge, off, n, words)
         radial_by_arc[idx] = items
-        radial_all.extend(items)
+        radial_all.extend((idx,) + item for item in items)
 
     def arc_extent(idx):
         center, chord, bulge, n, off = arcs[idx]
@@ -521,7 +625,7 @@ def build_panel_content(arcs, centroid, labels, radial, blocks,
     block_items = []
     for idx, (bx, by, items) in block_placements.items():
         for i, (w, t) in enumerate(items):
-            block_items.append((bx, by + i * BLOCK_LH, w, t))
+            block_items.append((idx, bx, by + i * BLOCK_LH, w, t))
 
     if isinstance(labels, dict):
         label_iter = sorted(labels.items())
@@ -535,61 +639,112 @@ def build_panel_content(arcs, centroid, labels, radial, blocks,
         center, chord, bulge, n, off = arcs[idx]
         (px, py), ang = label_pos(center, chord, bulge, off, n, lines, centroid)
         dx, dy = label_nudge.get(idx, (0.0, 0.0))
-        label_items.append((px + dx, py + dy, ang, lines))
+        label_items.append((idx, px + dx, py + dy, ang, lines))
 
     return label_items, radial_all, radial_by_arc, block_items
 
 
 def render_panel(out, gid, a, b, c, arcs, verts,
                  label_items=None, radial_all=None, block_items=None,
-                 section_title=None, section_pos=None):
-    out.append(f'  <g id="{gid}">')
-    if section_title and section_pos:
-        sx, sy = section_pos
-        out.append(f'    <text x="{sx:.2f}" y="{sy:.2f}" '
-                   f'font-family="{FONT}" font-size="{SECTION_FONT}" '
-                   f'font-weight="bold" fill="{TXT_COLOR}" text-anchor="middle" '
-                   f'dominant-baseline="central" letter-spacing="3">'
-                   f'{section_title}</text>')
+                 inner_items=None, arc_zoom=None):
+    """arc_zoom: {idx: (origin, zoom, (shift_x, shift_y))} CSS-Zoom + Verschiebung."""
+    arc_zoom = arc_zoom or {}
+    label_items = label_items or []
+    radial_all = radial_all or []
 
+    def zoom_attr(idx):
+        spec = arc_zoom.get(idx)
+        if not spec:
+            return None
+        (ox, oy), z, (sx, sy) = spec
+        return (f'transform="translate({sx:.2f},{sy:.2f}) '
+                f'translate({ox:.2f},{oy:.2f}) scale({z}) '
+                f'translate({-ox:.2f},{-oy:.2f})"')
+
+    out.append(f'  <g id="{gid}">')
     out.append(f'    <polygon points="{a[0]:.2f},{a[1]:.2f} {b[0]:.2f},{b[1]:.2f} '
                f'{c[0]:.2f},{c[1]:.2f}" fill="{TRI_FILL}" stroke="{TRI_STROKE}" '
                f'stroke-width="3"/>')
 
+    if inner_items:
+        out.append(f'    <g font-family="{FONT}" font-weight="bold" '
+                   f'fill="{TXT_COLOR}" dominant-baseline="central" '
+                   f'letter-spacing="1">')
+        for item in inner_items:
+            (px, py), ang, txt = item[0], item[1], item[2]
+            size = item[3] if len(item) > 3 else INNER_FONT
+            anch = item[4] if len(item) > 4 else "middle"
+            base = item[5] if len(item) > 5 else "central"
+            out.append(f'      <text x="0" y="0" text-anchor="{anch}" '
+                       f'dominant-baseline="{base}" font-size="{size}" '
+                       f'transform="translate({px:.2f},{py:.2f}) '
+                       f'rotate({ang:.2f})">{txt}</text>')
+        out.append('    </g>')
+
     out.append(f'    <g fill="none" stroke="{ARC_COLOR}" stroke-width="5" '
                f'stroke-linecap="round">')
-    for arc in arcs:
+    for i, arc in enumerate(arcs):
+        za = zoom_attr(i)
         center, chord, bulge, n, off = arc
-        out.append(f'      <path d="{arc_path(center, chord, bulge, off, n)}"/>')
+        path = f'      <path d="{arc_path(center, chord, bulge, off, n)}"/>'
+        if za:
+            out.append(f'      <g {za}>')
+            out.append(path)
+            out.append('      </g>')
+        else:
+            out.append(path)
     out.append('    </g>')
 
     if label_items:
         out.append(f'    <g font-family="{FONT}" font-size="{FONT_SIZE}" '
                    f'font-weight="bold" fill="{TXT_COLOR}" text-anchor="middle" '
                    f'dominant-baseline="central">')
-        for px, py, ang, lines in label_items:
+        for item in label_items:
+            if len(item) == 5:
+                idx, px, py, ang, lines = item
+            else:
+                idx, px, py, ang, lines = None, *item
+            za = zoom_attr(idx) if idx is not None else None
             spans = "".join(
                 f'<tspan x="0" dy="{0 if i == 0 else LINE_H}">{t}</tspan>'
                 for i, t in enumerate(lines))
-            out.append(f'      <text x="0" y="0" '
-                       f'transform="translate({px:.2f},{py:.2f}) '
-                       f'rotate({ang:.2f})">{spans}</text>')
+            text = (f'<text x="0" y="0" '
+                    f'transform="translate({px:.2f},{py:.2f}) '
+                    f'rotate({ang:.2f})">{spans}</text>')
+            if za:
+                out.append(f'      <g {za}>{text}</g>')
+            else:
+                out.append(f'      {text}')
         out.append('    </g>')
 
     if radial_all:
         out.append(f'    <g font-family="{FONT}" font-size="{RAD_FONT}" '
                    f'font-weight="bold" fill="{TXT_COLOR}" '
                    f'dominant-baseline="central">')
-        for (px, py), ang, anch, word, _d in radial_all:
-            out.append(f'      <text x="0" y="0" text-anchor="{anch}" '
-                       f'transform="translate({px:.2f},{py:.2f}) '
-                       f'rotate({ang:.2f})">{word}</text>')
+        for item in radial_all:
+            if len(item) == 6:
+                idx, (px, py), ang, anch, word, _d = item
+            else:
+                idx = None
+                (px, py), ang, anch, word, _d = item
+            za = zoom_attr(idx) if idx is not None else None
+            text = (f'<text x="0" y="0" text-anchor="{anch}" '
+                    f'transform="translate({px:.2f},{py:.2f}) '
+                    f'rotate({ang:.2f})">{word}</text>')
+            if za:
+                out.append(f'      <g {za}>{text}</g>')
+            else:
+                out.append(f'      {text}')
         out.append('    </g>')
 
     if block_items:
         out.append(f'    <g font-family="{FONT}" font-size="{BLOCK_FONT}" '
                    f'fill="{TXT_COLOR}" dominant-baseline="central">')
-        for bx, by, w_, t_ in block_items:
+        for item in block_items:
+            if len(item) >= 5:
+                _idx, bx, by, w_, t_ = item[0], item[1], item[2], item[3], item[4]
+            else:
+                bx, by, w_, t_ = item
             out.append(f'      <text x="{bx:.2f}" y="{by:.2f}">{w_}: '
                        f'<tspan font-weight="bold">{t_}</tspan></text>')
         out.append('    </g>')
@@ -619,16 +774,74 @@ kra_labels, kra_radial, kra_radial_by_arc, kra_blocks = build_panel_content(
     local_arcs, lcentroid, LABELS_KRANK, RADIAL_KRANK, BLOCKS_KRANK,
     LABEL_NUDGE_KRANK, BLOCK_NUDGE_KRANK)
 
-# Ausdehnung der Haelften
+# Leitprinzipien im Inneren (lokale Koordinaten, vor Font-Skalierung)
+kra_inner = inner_labels(la, lb, lc, INNER_KRANK, recht_style={
+    "scale": VORRECHTE_SCALE,
+    "leg_t": VORRECHTE_LEG_T,
+    "inset_frac": VORRECHTE_INSET_FRAC,
+    "anchor": "end",
+    "outward": True,
+    "baseline": "alphabetic",
+}, wirtschaft_style={
+    "scale": VORRECHTE_SCALE,
+    "leg_t": WETTBEWERB_LEG_T,
+    "inset_frac": 0.0,
+    "anchor": "start",
+    "outward": True,
+    "baseline": "alphabetic",
+    "drop_below": True,
+}, geist_style={
+    "scale": VORRECHTE_SCALE,
+    "leg_t": LEERE_WORTE_LEG_T,
+    "inset_frac": 0.0,
+    "anchor": "end",
+    "outward": True,
+    "baseline": "alphabetic",
+})
+ges_inner = inner_labels(la, lb, lc, INNER_GESUND, recht_style={
+    "scale": VORRECHTE_SCALE,
+    "leg_t": VORRECHTE_LEG_T,
+    "inset_frac": VORRECHTE_INSET_FRAC,
+    "anchor": "end",
+    "outward": True,
+    "baseline": "alphabetic",
+}, wirtschaft_style={
+    "scale": VORRECHTE_SCALE,
+    "leg_t": WETTBEWERB_LEG_T,
+    "inset_frac": 0.0,
+    "anchor": "start",
+    "outward": True,
+    "baseline": "alphabetic",
+    "drop_below": True,
+}, geist_style={
+    "scale": VORRECHTE_SCALE,
+    "leg_t": LEERE_WORTE_LEG_T,
+    "inset_frac": 0.0,
+    "anchor": "end",
+    "outward": True,
+    "baseline": "alphabetic",
+})
+
+# Ausdehnung der Haelften (inkl. Reserve fuer CSS-Zoom + Aussenversatz)
+ZOOM_LAYOUT_PAD = (ARC_ZOOM - 1.0) * (OFFSET + R + 260.0) + 220.0
 gx0, gx1, gy0, gy1 = panel_extent(
     local_arcs, ges_radial_by_arc, ges_blocks, local_verts, la, lb, lc)
 kx0, kx1, ky0, ky1 = panel_extent(
     local_arcs, kra_radial_by_arc, kra_blocks, local_verts, la, lb, lc)
+gx0 -= ZOOM_LAYOUT_PAD; gx1 += ZOOM_LAYOUT_PAD
+gy0 -= ZOOM_LAYOUT_PAD; gy1 += ZOOM_LAYOUT_PAD
+kx0 -= ZOOM_LAYOUT_PAD; kx1 += ZOOM_LAYOUT_PAD
+ky0 -= ZOOM_LAYOUT_PAD; ky1 += ZOOM_LAYOUT_PAD
 
 # Beides in die jeweilige A2-Haelfte einpassen (Breite + Hoehe)
-# Hauptueberschrift oben: Schriftgroesse so, dass Text ≈ 90% der Seitenbreite.
-MAIN_TITLE_FONT = (MAIN_TITLE_WIDTH_FRAC * PAGE_W) / (0.52 * len(MAIN_TITLE))
-MAIN_TITLE_BAND = MAIN_TITLE_FONT * 1.35 + PAGE_MARGIN * 0.5
+# Hauptueberschrift oben: Schriftgroesse so, dass die laengste Zeile
+# ≈ 90% der Seitenbreite einnimmt.
+_title_len = max(len(s) for s in MAIN_TITLE_LINES)
+MAIN_TITLE_FONT = ((MAIN_TITLE_WIDTH_FRAC * PAGE_W) / (0.52 * _title_len)) * 0.85
+MAIN_TITLE_LINE_H = MAIN_TITLE_FONT * 1.12
+MAIN_TITLE_BAND = (PAGE_MARGIN + MAIN_TITLE_FONT * 0.55
+                   + (len(MAIN_TITLE_LINES) - 1) * MAIN_TITLE_LINE_H
+                   + MAIN_TITLE_FONT * 0.70)
 
 half_h = (PAGE_H - PAGE_MARGIN - MAIN_TITLE_BAND - HALF_GAP - PAGE_MARGIN) / 2
 usable_w = PAGE_W - 2 * PAGE_MARGIN
@@ -687,7 +900,7 @@ BLOCK_LH_S = BLOCK_LH * scale
 RAD_FONT_S = RAD_FONT * scale
 RAD_GAP_S = RAD_GAP * scale
 V_FONT_SIZE_S = V_FONT_SIZE * scale
-SECTION_FONT_S = SECTION_FONT * scale
+INNER_FONT_S = INNER_FONT * scale
 
 # Font-Globals fuer Rendering anpassen
 FONT_SIZE = FONT_SIZE_S
@@ -697,7 +910,7 @@ BLOCK_LH = BLOCK_LH_S
 RAD_FONT = RAD_FONT_S
 RAD_GAP = RAD_GAP_S
 V_FONT_SIZE = V_FONT_SIZE_S
-SECTION_FONT = SECTION_FONT_S
+INNER_FONT = INNER_FONT_S
 V_GAP_S = V_GAP * scale
 
 # Vertices mit skaliertem V_GAP neu setzen
@@ -716,19 +929,22 @@ kra_b = xform_pt(lb, kra_dx, kra_dy)
 kra_c = xform_pt(lc, kra_dx, kra_dy)
 kra_arcs = xform_arcs(local_arcs, kra_dx, kra_dy)
 kra_verts = scaled_verts(la, lb, lc, lcentroid, kra_dx, kra_dy)
-kra_title_y = kra_top + SECTION_FONT * 0.6
+kra_inner_t = [
+    (xform_pt(p, kra_dx, kra_dy), ang, txt, size * scale, anch, base)
+    for p, ang, txt, size, anch, base in kra_inner
+]
 
 kra_labels_t = [
-    (px * scale + kra_dx, py * scale + kra_dy, ang, lines)
-    for px, py, ang, lines in kra_labels
+    (idx, px * scale + kra_dx, py * scale + kra_dy, ang, lines)
+    for idx, px, py, ang, lines in kra_labels
 ]
 kra_radial_t = [
-    (xform_pt((px, py), kra_dx, kra_dy), ang, anch, word, d)
-    for (px, py), ang, anch, word, d in kra_radial
+    (idx, xform_pt((px, py), kra_dx, kra_dy), ang, anch, word, d)
+    for idx, (px, py), ang, anch, word, d in kra_radial
 ]
 kra_blocks_t = [
-    (bx * scale + kra_dx, by * scale + kra_dy, w, t)
-    for bx, by, w, t in kra_blocks
+    (idx, bx * scale + kra_dx, by * scale + kra_dy, w, t)
+    for idx, bx, by, w, t in kra_blocks
 ]
 
 # Gesundheit (mit Inhalt)
@@ -737,20 +953,271 @@ ges_b = xform_pt(lb, ges_dx, ges_dy)
 ges_c = xform_pt(lc, ges_dx, ges_dy)
 ges_arcs = xform_arcs(local_arcs, ges_dx, ges_dy)
 ges_verts = scaled_verts(la, lb, lc, lcentroid, ges_dx, ges_dy)
+ges_inner_t = [
+    (xform_pt(p, ges_dx, ges_dy), ang, txt, size * scale, anch, base)
+    for p, ang, txt, size, anch, base in ges_inner
+]
 
 ges_labels_t = [
-    (px * scale + ges_dx, py * scale + ges_dy, ang, lines)
-    for px, py, ang, lines in ges_labels
+    (idx, px * scale + ges_dx, py * scale + ges_dy, ang, lines)
+    for idx, px, py, ang, lines in ges_labels
 ]
 ges_radial_t = [
-    (xform_pt((px, py), ges_dx, ges_dy), ang, anch, word, d)
-    for (px, py), ang, anch, word, d in ges_radial
+    (idx, xform_pt((px, py), ges_dx, ges_dy), ang, anch, word, d)
+    for idx, (px, py), ang, anch, word, d in ges_radial
 ]
 ges_blocks_t = [
-    (bx * scale + ges_dx, by * scale + ges_dy, w, t)
-    for bx, by, w, t in ges_blocks
+    (idx, bx * scale + ges_dx, by * scale + ges_dy, w, t)
+    for idx, bx, by, w, t in ges_blocks
 ]
-ges_title_y = ges_top + SECTION_FONT * 0.6
+
+
+def css_zoom_point(p, origin, z, shift):
+    ox, oy = origin
+    return (ox + z * (p[0] - ox) + shift[0],
+            oy + z * (p[1] - oy) + shift[1])
+
+
+def one_arc_zoom(arcs, labels, radials, inner, arc_idx, clear_names=None):
+    """CSS-Zoom um den Kreis-Mittelpunkt, dann senkrecht nach aussen.
+
+    clear_names: Liste von Innen-Beschriftungen, gegen die Abstand gehalten wird.
+    Ohne clear_names: Mindest-Aussenversatz proportional zum Zoom.
+    """
+    center, chord, bulge, n, off = arcs[arc_idx]
+    origin = add(center, mul(n, off))
+    z = ARC_ZOOM
+    pts = []
+    for p in arc_points(center, chord, bulge, off, n):
+        pts.append(p)
+    for item in labels:
+        if item[0] == arc_idx:
+            pts.append((item[1], item[2]))
+    for item in radials:
+        if item[0] != arc_idx:
+            continue
+        (px, py), _ang, _an, word, d = item[1], item[2], item[3], item[4], item[5]
+        pts.append((px, py))
+        pts.append(add((px, py), mul(d, text_w(word, RAD_FONT, bold=True))))
+    clear_names = clear_names or []
+    extra = (z - 1.0) * R + ARC_CLEAR_PAD * 0.35
+    for clear_name in clear_names:
+        matches = [it for it in inner if it[2] == clear_name]
+        if not matches:
+            continue
+        (vx, vy), _vang, _txt, vsize, _a, _b = matches[0]
+        obs_h = 1.05 * vsize
+        min_along = None
+        for p in pts:
+            q = css_zoom_point(p, origin, z, (0.0, 0.0))
+            along = (q[0] - vx) * n[0] + (q[1] - vy) * n[1]
+            min_along = along if min_along is None else min(min_along, along)
+        need = (obs_h + ARC_CLEAR_PAD) - min_along
+        if need > extra:
+            extra = need
+    if extra < 0:
+        extra = 0.0
+    shift = mul(n, extra)
+    return origin, z, shift
+
+
+# Welche Innen-Beschriftung den Aussenabstand setzt (Krankheit / Gesundheit)
+ARC_CLEAR_KRANK = {
+    0: ["Vorrechte"],
+    1: ["Vorrechte", "Wettbewerb"],
+    2: [],
+    3: ["Wettbewerb"],
+    4: ["Wettbewerb", "Leere Worte"],
+    5: [],
+    6: ["Leere Worte"],
+    7: ["Leere Worte"],
+    8: [],
+}
+ARC_CLEAR_GESUND = {
+    0: ["Gleichheit"],
+    1: ["Gleichheit", "Br\u00fcderlichkeit"],
+    2: [],
+    3: ["Br\u00fcderlichkeit"],
+    4: ["Br\u00fcderlichkeit", "Freiheit"],
+    5: [],
+    6: ["Freiheit"],
+    7: ["Freiheit"],
+    8: [],
+}
+# Bevorzugte Seite der 7-Zeilen; fit_blocks faellt auf freie Seite zurueck
+BLOCK_PLACE = {
+    0: "left",
+    1: "left",
+    3: "left",
+    4: "right",
+    6: "right",
+    7: "right",
+}
+
+
+def panel_arc_zooms(arcs, labels, radials, inner, clear_map):
+    """Alle 9 Halbkreise gleich zoomen und nach aussen schieben."""
+    out = {}
+    for idx in range(9):
+        out[idx] = one_arc_zoom(
+            arcs, labels, radials, inner, idx, clear_map.get(idx, []))
+    return out
+
+
+# Untere Eck-Halbkreise (Wirtschaft → Geist / Geist → Wirtschaft)
+BASE_ARC_PAIR = (3, 4)
+
+
+def equalize_arc_pair_shift(arc_zoom, arcs, pair):
+    """Gleiche Aussenverschiebung auf derselben Kante (gleiche Hoehe)."""
+    a, b = pair
+    n = arcs[a][3]
+    extras = []
+    for idx in pair:
+        _o, _z, sh = arc_zoom[idx]
+        extras.append(sh[0] * n[0] + sh[1] * n[1])
+    extra = max(extras)
+    shift = mul(n, extra)
+    for idx in pair:
+        origin, z, _sh = arc_zoom[idx]
+        arc_zoom[idx] = (origin, z, shift)
+    return arc_zoom
+
+
+def equalize_block_pair_y(blocks, pair):
+    """7-Zeiler eines Paares auf dieselbe erste Zeile setzen."""
+    a, b = pair
+    first = {}
+    for item in blocks:
+        idx, _bx, by, _w, _t = item
+        if idx in pair and idx not in first:
+            first[idx] = by
+    if a not in first or b not in first:
+        return blocks
+    y = (first[a] + first[b]) / 2.0
+    out = []
+    for item in blocks:
+        idx, bx, by, w, t = item
+        if idx == a:
+            by = by + (y - first[a])
+        elif idx == b:
+            by = by + (y - first[b])
+        out.append((idx, bx, by, w, t))
+    return out
+
+
+def fit_blocks_to_zoomed_arcs(blocks, arcs, radials, arc_zoom):
+    """7 Einzeiler neben/ueber/unter den gezoomten Halbkreisen neu setzen."""
+    def rad_w(word, z):
+        return 0.65 * RAD_FONT * z * len(word)
+
+    def fan_box(idx):
+        origin, z, shift = arc_zoom[idx]
+        center, chord, bulge, n, off = arcs[idx]
+        xs, ys = [], []
+        for p in arc_points(center, chord, bulge, off, n):
+            q = css_zoom_point(p, origin, z, shift)
+            xs.append(q[0]); ys.append(q[1])
+        for item in radials:
+            if item[0] != idx:
+                continue
+            (px, py), _a, _an, word, d = item[1], item[2], item[3], item[4], item[5]
+            p0 = css_zoom_point((px, py), origin, z, shift)
+            wlen = rad_w(word, z)
+            p1 = add(p0, mul(d, wlen))
+            p2 = add(p0, mul(d, -wlen))
+            xs += [p0[0], p1[0], p2[0]]
+            ys += [p0[1], p1[1], p2[1]]
+        return min(xs), max(xs), min(ys), max(ys)
+
+    def try_place(place, x0, x1, y0, y1, max_w, n_lines):
+        """Position ohne Seiten-Ueberlauf und ohne Fan-Ueberlappung, oder None."""
+        block_h = (n_lines - 1) * BLOCK_LH
+        mid_x = (x0 + x1) / 2
+        mid_y = (y0 + y1) / 2
+
+        def clamp_x(bx):
+            bx = max(PAGE_MARGIN, bx)
+            if bx + max_w > PAGE_W - PAGE_MARGIN:
+                bx = PAGE_W - PAGE_MARGIN - max_w
+            return bx
+
+        if place == "right":
+            bx = x1 + BLOCK_PAD
+            by0 = mid_y - block_h / 2
+            if bx + max_w > PAGE_W - PAGE_MARGIN:
+                return None
+        elif place == "left":
+            bx = x0 - BLOCK_PAD - max_w
+            by0 = mid_y - block_h / 2
+            if bx < PAGE_MARGIN:
+                bx = PAGE_MARGIN
+        elif place == "above":
+            bx = clamp_x(mid_x - max_w / 2)
+            by0 = y0 - BLOCK_PAD - block_h
+            if by0 < PAGE_MARGIN + BLOCK_FONT:
+                return None
+        elif place == "below":
+            bx = clamp_x(mid_x - max_w / 2)
+            by0 = y1 + BLOCK_PAD
+            if by0 + block_h > PAGE_H - PAGE_MARGIN:
+                return None
+        else:
+            return None
+        # Fan-Bounding-Box: kleine Randberuehrung (geklammerte Linkstexte) zulassen
+        ox = min(bx + max_w, x1) - max(bx, x0)
+        oy = min(by0 + block_h, y1) - max(by0, y0)
+        if ox > BLOCK_PAD and oy > BLOCK_PAD:
+            return None
+        return bx, by0
+
+    by_arc = {}
+    for item in blocks:
+        idx, bx, by, w, t = item
+        by_arc.setdefault(idx, []).append((w, t))
+    out = []
+    for idx, entries in by_arc.items():
+        if idx not in arc_zoom:
+            continue
+        x0, x1, y0, y1 = fan_box(idx)
+        max_w = max(line_w(w, t) for w, t in entries)
+        n = len(entries)
+        preferred = BLOCK_PLACE.get(idx, "left")
+        order = [preferred]
+        for alt in ("right", "left", "above", "below"):
+            if alt not in order:
+                order.append(alt)
+        placed = None
+        for place in order:
+            placed = try_place(place, x0, x1, y0, y1, max_w, n)
+            if placed:
+                break
+        if not placed:
+            # Notfall: an Seitenrand klemmen (lieber lesbar als unsichtbar)
+            bx = PAGE_MARGIN if preferred in ("left", "above") else PAGE_W - PAGE_MARGIN - max_w
+            by0 = max(PAGE_MARGIN + BLOCK_FONT,
+                      min(y0 - BLOCK_PAD - (n - 1) * BLOCK_LH,
+                          PAGE_H - PAGE_MARGIN - (n - 1) * BLOCK_LH))
+            placed = (bx, by0)
+        bx, by0 = placed
+        for i, (w, t) in enumerate(entries):
+            out.append((idx, bx, by0 + i * BLOCK_LH, w, t))
+    return out
+
+
+kra_arc_zoom = panel_arc_zooms(
+    kra_arcs, kra_labels_t, kra_radial_t, kra_inner_t, ARC_CLEAR_KRANK)
+equalize_arc_pair_shift(kra_arc_zoom, kra_arcs, BASE_ARC_PAIR)
+kra_blocks_t = fit_blocks_to_zoomed_arcs(
+    kra_blocks_t, kra_arcs, kra_radial_t, kra_arc_zoom)
+kra_blocks_t = equalize_block_pair_y(kra_blocks_t, BASE_ARC_PAIR)
+
+ges_arc_zoom = panel_arc_zooms(
+    ges_arcs, ges_labels_t, ges_radial_t, ges_inner_t, ARC_CLEAR_GESUND)
+equalize_arc_pair_shift(ges_arc_zoom, ges_arcs, BASE_ARC_PAIR)
+ges_blocks_t = fit_blocks_to_zoomed_arcs(
+    ges_blocks_t, ges_arcs, ges_radial_t, ges_arc_zoom)
+ges_blocks_t = equalize_block_pair_y(ges_blocks_t, BASE_ARC_PAIR)
 
 # ---------------------------------------------------------------- SVG schreiben
 out = []
@@ -760,28 +1227,29 @@ out.append(f'<svg xmlns="http://www.w3.org/2000/svg" '
 out.append(f'  <rect x="0" y="0" width="{PAGE_W:.2f}" height="{PAGE_H:.2f}" '
            f'fill="{BG}"/>')
 
-# Hauptueberschrift ueber dem oberen Dreieck (~90% der Seitenbreite)
+# Hauptueberschrift ueber dem oberen Dreieck (zwei Zeilen, ~90% Breite)
 main_title_y = PAGE_MARGIN + MAIN_TITLE_FONT * 0.55
+_title_spans = "".join(
+    f'<tspan x="{PAGE_W / 2:.2f}" dy="{0 if i == 0 else MAIN_TITLE_LINE_H:.2f}">{line}</tspan>'
+    for i, line in enumerate(MAIN_TITLE_LINES))
 out.append(f'  <text x="{PAGE_W / 2:.2f}" y="{main_title_y:.2f}" '
            f'font-family="{FONT}" font-size="{MAIN_TITLE_FONT:.2f}" '
            f'font-weight="bold" fill="{TXT_COLOR}" text-anchor="middle" '
            f'dominant-baseline="central" letter-spacing="2">'
-           f'{MAIN_TITLE}</text>')
+           f'{_title_spans}</text>')
 
 # Krankheit oben
 render_panel(
     out, "krankheit", kra_a, kra_b, kra_c, kra_arcs, kra_verts,
     label_items=kra_labels_t, radial_all=kra_radial_t, block_items=kra_blocks_t,
-    section_title="Krankheit",
-    section_pos=(PAGE_W / 2, kra_title_y),
+    inner_items=kra_inner_t, arc_zoom=kra_arc_zoom,
 )
 
-# Gesundheit unten — mit Inhalt
+# Gesundheit unten
 render_panel(
     out, "gesundheit", ges_a, ges_b, ges_c, ges_arcs, ges_verts,
     label_items=ges_labels_t, radial_all=ges_radial_t, block_items=ges_blocks_t,
-    section_title="Gesundheit",
-    section_pos=(PAGE_W / 2, ges_title_y),
+    inner_items=ges_inner_t, arc_zoom=ges_arc_zoom,
 )
 
 out.append('</svg>')
@@ -792,4 +1260,8 @@ with open(_out_path, "w") as f:
     f.write(svg)
 print(f"DIN A2 Portrait  {PAGE_W:.0f}\u00d7{PAGE_H:.0f}  (1 unit = 0.1 mm)")
 print(f"scale={scale:.4f}  OFFSET={OFFSET}  MEDIAN_OFFSET={MEDIAN_OFFSET}")
+for _i, (_o, _z, _sh) in sorted(kra_arc_zoom.items()):
+    print(f"kra arc{_i} zoom={_z}  |shift|={math.hypot(*_sh):.1f}")
+for _i, (_o, _z, _sh) in sorted(ges_arc_zoom.items()):
+    print(f"ges arc{_i} zoom={_z}  |shift|={math.hypot(*_sh):.1f}")
 print(f"wrote {_out_path}")
