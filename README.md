@@ -39,12 +39,6 @@ MIT
 ## Notes
 - Full working tree (inputs, intermediates) lives in `ragkeep`; only the HF subset is mirrored here.
 
-## GitHub Pages (deprecated)
-
-The former static site build (`scripts/static-site/`, `npm run build:pages`) is removed.
-Book HTML under `books/<bookDir>/results/html/` remains for export and HF; there is no in-repo site generator anymore.
-
-Legacy workflow `.github/workflows/pages.yml` may still exist but is unmaintained.
 
 ## Essay-Verwaltung mit MCP
 
