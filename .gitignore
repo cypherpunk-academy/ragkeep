@@ -49,6 +49,9 @@ tmp
 site/
 *.log
 
+# Videos
+youtube
+
 # Node dependencies
 node_modules/
 **/node_modules/
