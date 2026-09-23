@@ -10,7 +10,7 @@ Erstellt 21.09.2026, überarbeitet 22.09.2026. Basiert auf dem Briefing `filo-cl
 |-------|-------------|
 | MCP-Server | Existiert nicht, wird neu gebaut. Es gibt nur DeepSeek-Functions. |
 | Notes = Arbeitstexte | Ja. `app_notes` ist die bestehende Tabelle, „Arbeitstext" der neue Name. Schema wird erweitert. |
-| Absatz-IDs | **Neuanfang.** Stabile Zufalls-IDs von Anfang an, dauerhaft in ragkeep aufbewahrt. Keine Rücksicht auf bestehende Daten. |
+| Absatz-IDs | **UUID bleibt.** `rag_paragraphs.id` ist seit Migration 0023 eine UUID (`gen_random_uuid()`). Die UUID ist bereits das stabile, öffentliche Verweisziel. Keine neue ID-Schicht nötig. |
 | WatermelonDB | **Vollständig entfernen.** Nutzerdaten direkt über Supabase. Bücher als gebundelte SQLite-DB bei Installation. |
 | Problem-Solver | **Entfernen.** |
 | DeepSeek nach Chat-Entfernung | Schlüssel bleibt für Pipeline-Tools (ACE, Typology-Explain, Thought-Explain, Quote-Explain, Action-Prompt). Kein App-facing-LLM mehr. |
@@ -44,7 +44,7 @@ Erstellt 21.09.2026, überarbeitet 22.09.2026. Basiert auf dem Briefing `filo-cl
 |---------|--------|
 | **Lokale DB** | WatermelonDB 0.28.0 (SQLite), Schema v24, 8 Tabellen. **Wird komplett entfernt.** |
 | **Sync** | `pull_changes`/`push_changes`. **Entfällt.** |
-| **Absatz-IDs** | Format `{source_id}:{segment_index}:{paragraph_number}`. **Wird durch stabile Zufalls-IDs ersetzt.** |
+| **Absatz-IDs** | UUID (seit Migration 0023). Natürlicher Schlüssel `(source_id, segment_slug, paragraph_number)`. UUID ist bereits das stabile Verweisziel. |
 | **Chat-UI** | `FiloScreen.tsx`, `ChatTab.tsx` (1294 Z.), `GespraecheTab.tsx`, `ArbeitstextTab.tsx`. **Entfällt.** |
 | **Deep Links** | Nur `ragapp://` für Auth. Keine Universal Links. **Werden in Schritt 12b gebaut** — nötig für `return_url`-Rückwege von Claude in die App. |
 | **Tabs** | [0] Filo (Chat), [1] Bücher, [2] Lesen, [3] Suche. |
@@ -53,9 +53,9 @@ Erstellt 21.09.2026, überarbeitet 22.09.2026. Basiert auf dem Briefing `filo-cl
 
 | Bereich | Befund |
 |---------|--------|
-| **Tabellen** | 12 Tabellen, 18 Migrationen. |
+| **Tabellen** | ~13 Tabellen in App-Migrationen (live inkl. ragrun-Zusatztabellen mehr), 18 Migrationen (000–017). |
 | **Entfällt** | `rag_talks`, `rag_turns`, `rag_references`, `app_starter_prompts`, `pull_changes`/`push_changes` RPC. |
-| **Bleibt** | `rag_paragraphs` (+ `stable_id`, `lemma_fingerprint_hash`, `split_from`), `rag_chunks`, `rag_sources`, `vector_chunks`. |
+| **Bleibt** | `rag_paragraphs` (UUID PK, unverändert), `rag_chunks`, `rag_sources`, `vector_chunks`, `app_paragraph_chunk` (Join: Absatz-UUID ↔ Chunk-ID). |
 | **Wird erweitert** | `app_notes` → Arbeitstexte mit Versionierung. `app_bookmarks` → direkt über Supabase. |
 | **Neu** | `app_note_versions`, `user_profiles`, `protocols`, `protocol_entries`, `handoffs`, `passage_redirect`. |
 
@@ -105,7 +105,7 @@ Erstellt 21.09.2026, überarbeitet 22.09.2026. Basiert auf dem Briefing `filo-cl
 | Modul | Dateien | Zeilen (ca.) |
 |-------|---------|-------------|
 | WatermelonDB | `database.ts`, `schema.ts`, `migrations.ts`, `models/*.ts` (8), `sync.ts` | ~1.100 |
-| Chat-UI | `ChatTab.tsx`, `GespraecheTab.tsx`, `ArbeitstextTab.tsx`, `ConversationDetailScreen.tsx` | ~2.000 |
+| Chat-UI | `FiloScreen.tsx`, `ChatTab.tsx`, `GespraecheTab.tsx`, `ArbeitstextTab.tsx`, `ConversationDetailScreen.tsx` | ~2.000 |
 | Chat-Repositories | `TalkRepository.ts`, `TurnRepository.ts`, `ReferenceRepository.ts`, `StarterPromptRepository.ts` | ~290 |
 | Chat-API-Aufrufe | `ragrunApi.ts` (chat/*, compress, summarize) | ~200 |
 | WatermelonDB-Dependency | `@nozbe/watermelondb` in `package.json` | — |
@@ -207,48 +207,13 @@ Android (physisches Gerät):
 - Abhängigkeit: keine
 - Geschätzter Aufwand: Debug-Screen ~2h, Tests ~1 Nachmittag
 
-### Schritt 2: Stabile Absatz-IDs vergeben
+### Schritt 2: ~~Stabile Absatz-IDs vergeben~~ Entfällt
 
-Jeder Absatz bekommt eine stabile, bedeutungslose Kennung. **Zufällig vergeben, dauerhaft aufbewahrt.** Deterministische IDs aus dem Text sind ausgeschlossen, weil eine Textkorrektur die ID ändern würde und gleichlautende kurze Absätze kollidieren.
+**Entfällt.** `rag_paragraphs.id` ist seit Migration 0023 eine UUID (`gen_random_uuid()`). Die UUID ist bereits das stabile, öffentliche Verweisziel. Annotations (`page_refs[].target_paragraph_id`) verweisen bereits auf UUIDs. `ParagraphRenderer.tsx` löst UUIDs auf. `app_paragraph_chunk` mappt Chunk-IDs auf Absatz-UUIDs für Suchtreffer-Navigation. Es gibt nichts zu tun.
 
-**IDs leben ausschließlich in phase5.** Die phase5-Markdown-Datei ist die maßgebliche Quelle für Absatztext und stabile ID. Phase4 ist ein Zwischenprodukt und enthält keine IDs. `rag:chunk` und `rag:embed` akzeptieren nur phase5 als Eingabe; wird phase4 übergeben, brechen sie mit Fehler ab.
+**`passage_redirect`-Tabelle** wird in Schritt 8d leer angelegt; Befüllung erst bei späterer Korpuspflege.
 
-**Implementierung über `text:annotate`.** Der bestehende ragprep-Befehl `text:annotate` wird erweitert: Neben Seitenreferenz-Annotationen vergibt er auch stabile IDs. Beim ersten Lauf erzeugt er für jeden Absatz ohne ID eine neue; bei jedem weiteren Lauf liest er die vorhandenen Anker und führt die Ankerprüfung durch. Kein separater Befehl — die ID-Vergabe ist ein regulärer Teil der Annotation.
-
-Ablauf:
-- Beim ersten Lauf bekommt jeder Absatz eine Zufalls-ID (8 Zeichen, base62, Kollisionsprüfung gegen alle vergebenen IDs).
-- Die ID wird als Anker in der phase5-Datei gespeichert (ragkeep). Kein Manifest. **ragkeep/phase5 ist die maßgebliche Quelle der IDs.**
-- Jeder weitere `text:annotate`-Lauf liest die Anker aus dem Quelltext und übernimmt die IDs direkt. Die Zuordnung ist sofort klar, kein Fingerprint-Matching nötig.
-- Die positionale ID `{source_id}:{segment_index}:{paragraph_number}` bleibt als Nachschlagefeld erhalten, ist aber nie Verweisziel.
-- Eine einmal vergebene ID wird nie an einen anderen Text vergeben, auch nicht nach Löschung.
-- Alle 22 Bücher von Philo haben bereits phase5 — kein Blocker.
-
-**Ankerprüfung im Normallauf.** Der Normallauf vergleicht die Anker der vorigen Fassung eines Bandes mit den aktuellen und behandelt folgende Fälle:
-
-- **Verschwundene ID** (Anker nicht mehr im Quelltext): Die ID wird nie stillschweigend fallen gelassen. Der Lauf bricht mit einer Liste der verschwundenen IDs ab. Fortsetzen nur mit ausdrücklicher Bestätigung, die für jede verschwundene ID einen Grabstein (`kind = 'deleted'`, `old_text`, Nachbar) anlegt.
-- **Zwei oder mehr Anker in einem Absatz:** Gilt als Zusammenlegung. Der erste Anker bleibt die ID, jeder weitere bekommt einen Eintrag `kind = 'merged'`.
-- **Absatz ohne Anker direkt nach einem Absatz, dessen Text deutlich geschrumpft ist:** Teilungskandidat. Kommt auf die Prüfliste. Bei Bestätigung bekommt er `split_from`.
-- **Übrige Absätze ohne Anker:** Neu, neue ID.
-- **Schutz gegen ankerlose Fassungen:** Hat ein bereits erfasster Band mehr als 5 % Absätze ohne Anker, bricht der Normallauf ab und verweist auf den Korpusabgleich (Schritt 5). Damit kann eine neu extrahierte Fassung nicht versehentlich alle IDs neu vergeben.
-
-**Fingerabdruck zusätzlich zur ID.** ragprep hat bereits einen Lemma-Fingerprint: `{ head: string[5], tail: string[5] }` — die ersten und letzten 5 normalisierten Lemmas des Absatztexts (`paragraphLemmaFingerprint()` in `paragraphChapterMatcher.ts`). Die bestehende Spalte `lemma_fingerprint` (JSONB) auf `rag_paragraphs` wird direkt verwendet, **keine neue Spalte `fingerprint`.** Der Fingerabdruck ist nie Verweisziel und nie Identität. Er dient ausschließlich der Wiedererkennung im Korpusabgleich (Schritt 5). Er wird in ragkeep neben der ID gespeichert. Kollisionen bei kurzen und wiederkehrenden Absätzen sind erwartet. Wechselt der Lemmatisierer oder sein Modell, werden alle Fingerabdrücke neu berechnet, die IDs bleiben unberührt.
-
-**Zusätzlich: `lemma_fingerprint_hash`.** Für die Gleichheitsprüfung im Abgleich eine neue Spalte `lemma_fingerprint_hash text` — Hash aus Kopf und Schwanz des Fingerprints, mit normalem B-Tree-Index. Der GIN-Index auf JSONB eignet sich für Enthaltensein-Prüfungen, nicht für Gleichheit.
-
-**Annotationen (Querverweise in Buchtexten) umstellen.** Das Feld `annotations` in `rag_paragraphs` enthält `page_refs` mit `target_paragraph_id`, die heute auf positionale IDs verweisen. Beim ersten Lauf werden alle `target_paragraph_id`-Einträge auf die neuen stabilen IDs umgeschrieben. In `books.db` stehen dann nur noch stabile IDs. Die App-Seite (`ParagraphRenderer.tsx`) löst `target_paragraph_id` über `booksDb.resolveRedirect()` auf, sodass auch Verweise auf verschobene oder gelöschte Absätze korrekt behandelt werden.
-
-- Betroffene Repos: **ragprep** (`text:annotate` erweitern, Annotations-Umschreibung, phase4-Guard in `rag:chunk`/`rag:embed`), **ragkeep** (phase5-Dateien aller Bücher)
-- Betroffene App-Dateien: `ParagraphRenderer.tsx` (Querverweis-Auflösung über stabile IDs)
-**`stable_id` nach Vergabe verpflichtend.** Nach dem ersten vollständigen Lauf von Schritt 2 ist jede Zeile in `rag_paragraphs` mit einer stabilen ID versehen. Danach eine Folgemigration:
-
-```sql
-ALTER TABLE rag_paragraphs ALTER COLUMN stable_id SET NOT NULL;
-```
-
-So kann kein Absatz ohne ID nachrutschen.
-
-- Testkriterium: Zwei aufeinanderfolgende ragprep-Läufe ohne Textänderung erzeugen identische IDs. Ein Lauf nach Einfügen eines Absatzes ändert keine bestehende ID und vergibt genau eine neue. Alle `target_paragraph_id` in Annotationen verweisen auf stabile IDs. Löschen eines Absatzes samt Anker führt zum Abbruch mit Liste. Zwei Anker in einem Absatz erzeugen eine Weiterleitung. Ein Band ohne Anker wird im Normallauf abgelehnt. Nach der Folgemigration: `stable_id` ist NOT NULL.
-- Abhängigkeit: Muss VOR allen Verweisen und vor der Bücher-DB geschehen
+- Abhängigkeit: keine — UUID existiert bereits
 
 ### Schritt 3: Bücher-DB Build-Pipeline
 
@@ -257,20 +222,22 @@ So kann kein Absatz ohne ID nachrutschen.
 **Umbau:** Statt JSON im WatermelonDB-Format erzeugt das Skript eine SQLite-Datei `assets/seed/books.db`. Die Zwischenschicht (JSON → WatermelonDB-Import) entfällt — die App öffnet die SQLite-Datei direkt.
 
 Änderungen an `fetch-db-seed.mjs`:
-- Supabase-Abfragen bleiben gleich (+ neue Tabelle `passage_redirect`)
+- Supabase-Abfragen bleiben gleich (+ neue Tabelle `passage_redirect`), aber Absätze nur mit `deprecated_at IS NULL` übernehmen (heute holt das Skript auch deprecated)
+- `app_starter_prompts` nicht in `books.db` (entfällt komplett)
 - Ausgabe: SQLite-Datei statt JSON
-- SQLite-Erzeugung z.B. via `better-sqlite3` (nur Build-Tool, nicht im App-Bundle)
+- SQLite-Erzeugung via `better-sqlite3` — neue Build-Dependency (nur Build-Tool, nicht im App-Bundle)
+- Binary-`.db`-Datei braucht Metro/expo-asset-Einbindung (heute nur JSON-Import)
 - `seedLoader.ts` und `db-snapshot.json` entfallen komplett (Teil der WatermelonDB-Entfernung in Schritt 8a)
 
 Schema der erzeugten `books.db`:
-  - `paragraphs` (stable_id PK, source_id, segment_index, segment_slug, segment_title, paragraph_number, text_raw, annotations, language, split_from)
+  - `paragraphs` (id UUID PK, source_id, segment_index, segment_slug, segment_title, paragraph_number, text_raw, annotations, language)
   - `sources` (id, title, author, language, year, book_index, is_primary, sort_order)
   - `passage_redirect` (old_id, new_id, corpus_version, kind, old_text)
 - Versionsnummer als `PRAGMA user_version`
 - Die Datei ist im App-Bundle schreibgeschützt. Beim ersten Start wird sie ins Dokumentenverzeichnis kopiert. Updates ersetzen dort atomar.
 - Betroffene Repos: **ragapp** (Umbau `fetch-db-seed.mjs`, Asset-Einbindung `app.config.js`)
-- Testkriterium: `books.db` enthält alle Absätze mit stabilen IDs, App kann sie direkt nach Installation lesen, Verweise offline auflösen
-- Abhängigkeit: Schritt 2 (stabile IDs existieren in Supabase)
+- Testkriterium: `books.db` enthält alle Absätze mit UUIDs, App kann sie direkt nach Installation lesen, Verweise offline auflösen
+- Abhängigkeit: Optional Schritt 8d, wenn `passage_redirect` mitgebaut werden soll (sonst leere Tabelle, später nachziehen)
 
 ### Schritt 4: Bücher-Update-Mechanismus
 
@@ -281,47 +248,13 @@ Schema der erzeugten `books.db`:
 - Testkriterium: Update läuft im Hintergrund, App zeigt während Update alte Version
 - Abhängigkeit: Schritt 3
 
-### Schritt 5: Korpusabgleich
+### Schritt 5: ~~Korpusabgleich~~ Entfällt (später / Korpuspflege)
 
-**Normallauf (`rp rag:chunk`):** Anker lesen und Ankerprüfung durchführen, siehe Schritt 2. Der Korpusabgleich wird nur ausgelöst, wenn die Ankerprüfung abbricht oder eine neue Korpusfassung ohne Anker eingespielt wird.
+**Entfällt für 1.0.** Bestehender Matcher bleibt. Spezialabgleich `split | merged | deleted` + Befüllen von `passage_redirect` = spätere Korpusarbeit, nicht Teil dieses Plans.
 
-**Korpusabgleich (bei strukturellen Änderungen):** Wenn Absätze geteilt, zusammengelegt oder gelöscht werden, ändern sich die Anker im Quelltext. Hier kommt der Fingerprint-Matcher zum Einsatz — ein **neuer, spezialisierter Abgleich** mit den Aktionen `split | merged | deleted`. Dieser läuft nicht automatisch bei `rp rag:chunk`, sondern wird gezielt ausgelöst.
+### Schritt 6: ~~Qdrant-Payloads ergänzen~~ Entfällt
 
-Ablauf des Korpusabgleichs:
-
-1. **Fingerabdruck-Match:** Absätze mit gleichem Fingerprint in alter und neuer Fassung werden direkt zugeordnet und behalten ihre ID. Bei mehrdeutigen Fingerprints entscheidet die Reihenfolge im Abschnitt, bei Unklarheit geht der Fall an Stufe 2.
-2. **Textähnlichkeit** für alle übrigen Absätze, beschränkt auf das Umfeld im selben Abschnitt.
-
-Regeln auf das Ergebnis:
-
-- **Unverändert, leicht korrigiert, verschoben:** ID bleibt, Anker im Quelltext bleibt, kein Eintrag in `passage_redirect`.
-- **split:** Der erste Teil behält die stabile ID. Weitere Teile bekommen neue stabile IDs und die Spalte `split_from` mit der ursprünglichen ID. Kein Eintrag in `passage_redirect`. Ausnahme: Ist der erste Teil nur ein Splitter (etwa eine abgetrennte Überschrift, deutlich kürzer als der Rest), geht die ID an den Hauptteil. Solche Fälle kommen auf die Prüfliste.
-- **merged:** Der zusammengelegte Absatz behält die stabile ID des ersten beteiligten Absatzes. Jede weitere beteiligte ID bekommt einen Eintrag `kind = 'merged'` auf diese ID. **Die alte Zeile wird aus `rag_paragraphs` entfernt** — sie existiert nur noch als Weiterleitung.
-- **deleted:** Eintrag `kind = 'deleted'` mit `new_id` = nächster erhaltener Nachbar und dem alten Wortlaut in `old_text`. **Die alte Zeile wird aus `rag_paragraphs` entfernt.**
-- **Neu (kein Match in alter Fassung):** Neue stabile ID, kein Eintrag.
-- **Unter Ähnlichkeitsschwelle:** Prüfliste, Entscheidung durch Michael.
-
-Nach dem Abgleich: Anker im Quelltext (ragkeep) aktualisieren. Optional: Anker in `app_notes` und `protocols` auf die neuen IDs umschreiben, damit Auflösungsketten kurz bleiben. Die Weiterleitung bleibt trotzdem bestehen.
-
-Ausgabe: aktualisierte Anker in ragkeep, neue Einträge in `passage_redirect`, neue Korpusversion, Prüfliste als Datei.
-
-**Konsequenz für den bestehenden Matcher:** `matchParagraphsInChapter()` mit seinen Aktionen `keep | renumber | replace | insert | ambiguous` wird durch den Anker-Mechanismus im Normallauf abgelöst. Der Code kann perspektivisch vereinfacht oder durch den Korpusabgleich-Matcher ersetzt werden.
-
-- Betroffene Repos: **ragprep** (neuer Korpusabgleich-Matcher, Anker-Leser in Chunking-Pipeline, `supabaseParagraphWriter.ts`)
-**IDs mit einem Eintrag in `passage_redirect` (`merged` oder `deleted`) haben keine Zeile mehr in `rag_paragraphs` und nicht in `books.db`.** Die Auflösung „erst `paragraphs`, dann Weiterleitung" setzt das voraus.
-
-- Testkriterium: Nach Einfügen, Teilen, Zusammenlegen und Löschen von Absätzen: korrekte Einträge in `passage_redirect`, keine bestehende stabile ID geändert. Für jede `old_id` in `passage_redirect` gibt es keine Zeile in `rag_paragraphs`.
-- Abhängigkeit: Schritt 2 (stabile IDs und Fingerprints existieren)
-
-### Schritt 6: Qdrant-Payloads ergänzen
-
-Alle Punkte in Qdrant und alle Zeilen in `rag_chunks` bekommen die stabilen Absatz-IDs der enthaltenen Absätze in die Metadaten. **Keine neuen Embeddings.** Vektoren (dense und BM25) und Punkt-IDs bleiben unverändert, geändert wird nur die Payload über `set_payload`. Die Zuordnung positionale ID → stabile ID liefert Schritt 2.
-
-Vorher prüfen: Ob die positionale Absatz-ID oder andere sich ändernde Metadaten in den eingebetteten Text eingehen. Nur dann wäre für die betroffenen Chunks eine Neuberechnung nötig.
-
-- Betroffene Repos: **ragrun** (Qdrant-Client, rag_chunks-Repository)
-- Testkriterium: Jeder Suchtreffer liefert mindestens eine gültige stabile ID. Vektoren sind unverändert.
-- Abhängigkeit: Schritt 2
+**Entfällt.** Die Zuordnung Chunk → Absatz-UUID existiert bereits über die Tabelle `app_paragraph_chunk`. Der bestehende `app_search_service.py` nutzt `_lookup_paragraph_ids()`, um aus Chunk-IDs die Absatz-UUIDs aufzulösen. Qdrant-Payloads müssen nicht geändert werden.
 
 ### Schritt 7: OAuth-Vortest
 
@@ -366,7 +299,7 @@ Ergebnis: Funktioniert der Supabase-Weg, wird 11a später zügig ausgebaut. Funk
 
 **8d. Supabase-Schema: Neue Tabellen + Erweiterungen**
 
-Migrationsnummer: Nächste freie Nummer nach den bestehenden 18 Migrationen verwenden.
+Migrationsnummer: Nächste freie Nummer nach den bestehenden 18 Migrationen (000–017) verwenden. `017_starter_prompt_3_wording.sql` existiert bereits.
 
 Migration `018_claude_integration.sql`:
 
@@ -403,9 +336,8 @@ CREATE TABLE app_note_versions (
   UNIQUE (note_id, version)
 );
 
--- Stabile IDs in allen Verweisspalten:
 -- paragraph_id in app_notes, app_bookmarks, protocol_entries und handoffs
--- enthält immer eine stabile ID, nie eine positionale.
+-- enthält immer eine UUID aus rag_paragraphs.id.
 
 -- Arbeitstexte: Wer hat angelegt?
 ALTER TABLE app_notes
@@ -508,7 +440,7 @@ CREATE TABLE user_profiles (
 
 -- Protokolle: eines pro Kapitel bzw. Vortrag, nicht pro Absatz.
 -- Prüfen, ob segment_slug über Korpusänderungen stabil ist.
--- Wenn nicht, einen stabilen Kapitelschlüssel verwenden (etwa die stabile ID des ersten Absatzes).
+-- Wenn nicht, einen stabilen Kapitelschlüssel verwenden (etwa die UUID des ersten Absatzes).
 CREATE TABLE protocols (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   user_id uuid NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
@@ -522,7 +454,7 @@ CREATE TABLE protocols (
 CREATE TABLE protocol_entries (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   protocol_id uuid NOT NULL REFERENCES protocols(id) ON DELETE CASCADE,
-  paragraph_id text,            -- stabile ID der Stelle, auf die sich der Eintrag bezieht (optional)
+  paragraph_id uuid,             -- UUID der Stelle, auf die sich der Eintrag bezieht (optional)
   entry_type varchar(32) NOT NULL,
   content text NOT NULL,
   conversation_url text,
@@ -585,7 +517,7 @@ BEGIN
 END;
 $$;
 
--- Weiterleitungstabelle
+-- Weiterleitungstabelle (für spätere Korpusänderungen; in 1.0 ungenutzt/leer)
 CREATE TABLE passage_redirect (
   old_id text PRIMARY KEY,
   new_id text NOT NULL,
@@ -594,19 +526,8 @@ CREATE TABLE passage_redirect (
   old_text text               -- Grabstein-Wortlaut bei 'deleted'
 );
 
--- Stabile ID, Fingerprint-Hash und Split-Herkunft auf rag_paragraphs
--- lemma_fingerprint (JSONB) existiert bereits, wird weiterverwendet.
--- Keine neue fingerprint-Spalte.
-ALTER TABLE rag_paragraphs
-  ADD COLUMN IF NOT EXISTS stable_id varchar(12) UNIQUE,
-  ADD COLUMN IF NOT EXISTS lemma_fingerprint_hash text,  -- Hash aus head+tail für schnelle Gleichheitsprüfung
-  ADD COLUMN IF NOT EXISTS split_from varchar(12);
-
-CREATE INDEX IF NOT EXISTS idx_rag_paragraphs_fp_hash ON rag_paragraphs (lemma_fingerprint_hash);
-CREATE INDEX IF NOT EXISTS idx_rag_paragraphs_split_from ON rag_paragraphs (split_from) WHERE split_from IS NOT NULL;
-
--- Soft-Delete für Arbeitstexte (Entscheidung: markieren statt endgültig löschen)
-ALTER TABLE app_notes ADD COLUMN IF NOT EXISTS deleted_at timestamptz;
+-- rag_paragraphs: UUID PK existiert bereits (Migration 0023). Keine Änderungen nötig.
+-- app_notes.deleted_at existiert bereits (001_initial_schema.sql). Keine Änderungen nötig.
 
 CREATE OR REPLACE FUNCTION delete_note(p_id text) RETURNS jsonb
 LANGUAGE plpgsql
@@ -681,7 +602,7 @@ Testkriterium ergänzen: Ein direktes `UPDATE app_notes …` oder `INSERT INTO a
 ~~Migration `019_cleanup_watermelon.sql`~~ → **verschoben nach Schritt 15.** Alte TestFlight-Builds rufen `pull_changes()` und `push_changes()` noch auf und brechen sofort, wenn diese Funktionen fehlen. 019 wird erst eingespielt, wenn alle Tester auf einen Build ohne WatermelonDB aktualisiert haben.
 
 - Testkriterium: Alle Tabellen angelegt, RLS greift, `save_note()` und `create_note()` funktionieren transaktional
-- Abhängigkeit: Schritt 2 (stable_id existiert)
+- Abhängigkeit: keine (UUID existiert bereits)
 
 ### Schritt 9: Neue Datenzugriffsschicht in ragapp
 
@@ -689,10 +610,10 @@ Testkriterium ergänzen: Ein direktes `UPDATE app_notes …` oder `INSERT INTO a
 - Neues Modul `src/data/lib/booksDb.ts`
 - Beim ersten Start: gebundelte `books.db` aus Assets ins Dokumentenverzeichnis kopieren
 - Öffnet via expo-sqlite (ohne WatermelonDB-ORM)
-- API: `getParagraph(stableId)`, `getParagraphsBySource(sourceId)`, `getParagraphsBySegment(sourceId, segmentIndex)`, `getSources()`, `getCorpusVersion()`, `resolveRedirect(stableId)`
-- `resolveRedirect`: Auflösungskette in `passage_redirect` folgen bis zum Ende. Bei `deleted`: Grabstein-Objekt zurückgeben mit `old_text` und `new_id` (Nachbar).
+- API: `getParagraph(id)`, `getParagraphsBySource(sourceId)`, `getParagraphsBySegment(sourceId, segmentIndex)`, `getSources()`, `getCorpusVersion()`, `resolveRedirect(id)`
+- `resolveRedirect`: Auflösungskette in `passage_redirect` folgen bis zum Ende. Bei `deleted`: Grabstein-Objekt zurückgeben mit `old_text` und `new_id` (Nachbar). **In 1.0 Pass-through: UUID → Absatz; kein Redirect nötig, solange die Tabelle leer ist.**
 - Betroffene Dateien: neues Modul, `app.config.js` (Asset-Einbindung)
-- Testkriterium: Absätze lesbar direkt nach Installation ohne Netzwerk, Verweise offline auflösbar
+- Testkriterium: Absätze über UUID lesbar direkt nach Installation ohne Netzwerk, Verweise offline auflösbar
 - Abhängigkeit: Schritt 3 (books.db existiert)
 
 **9b. Supabase-Repositories für Nutzerdaten**
@@ -704,7 +625,7 @@ Testkriterium ergänzen: Ein direktes `UPDATE app_notes …` oder `INSERT INTO a
   - Bei Konflikt-Antwort von `save_note()`: liefert `{ conflict: true, currentVersion, currentContent, currentTitle }`
 - `src/data/repositories/BookmarkRepository.ts` — Supabase-direkt
   - `getLastRead(sourceId)`, `setLastRead(sourceId, paragraphId)`, `listManual(sourceId)`, `create()`, `delete()`
-  - **Leseposition lokal-first:** `setLastRead` schreibt zuerst in AsyncStorage, bei Verbindung zusätzlich nach Supabase. Beim Start gilt der neuere Zeitstempel. So geht beim Offline-Lesen keine Position verloren.
+  - **Leseposition lokal-first:** Heute ist die Leseposition ein WatermelonDB-Bookmark (`is_last_read`), nicht AsyncStorage. Ziel: `setLastRead` schreibt zuerst in AsyncStorage, bei Verbindung zusätzlich nach Supabase. Beim Start gilt der neuere Zeitstempel. So geht beim Offline-Lesen keine Position verloren.
   - Manuelle Lesezeichen bleiben online-only (wie Arbeitstexte).
 - `src/data/repositories/ProtocolRepository.ts`
   - `getOrCreate(sourceId, segmentSlug)`, `append(protocolId, entry)` — Eintrag mit optionalem `paragraph_id`
@@ -742,7 +663,7 @@ Testkriterium ergänzen: Ein direktes `UPDATE app_notes …` oder `INSERT INTO a
 
 **9e. ParagraphRepository auf Buch-Cache umstellen**
 - `ParagraphRepository.ts` neu: liest aus `booksDb` statt WatermelonDB
-- API: `findById(stableId)`, `findBySource(sourceId)`, `findBySegment(sourceId, segmentIndex)`, `findBySegmentSlug(sourceId, segmentSlug)`
+- API: `findById(id)`, `findBySource(sourceId)`, `findBySegment(sourceId, segmentIndex)`, `findBySegmentSlug(sourceId, segmentSlug)`
 - Betroffene Dateien: `ParagraphRepository.ts`, `ReadScreen.tsx`
 - Testkriterium: Bücher lesbar aus gebundelter DB
 - Abhängigkeit: Schritt 9a
@@ -759,7 +680,7 @@ Testkriterium ergänzen: Ein direktes `UPDATE app_notes …` oder `INSERT INTO a
 
 **⚠️ Nicht öffentlich bis Schritt 11.** Der MCP-Server aus Schritt 10 arbeitet mit Dummy-Nutzer und Service-Schlüssel. Bis Schritt 11 steht, ist er nur lokal oder hinter einer Zugangssperre erreichbar, nie öffentlich unter `ragxxx.com`.
 
-**Serverseitige Auflösung von `passage_redirect`.** Als gemeinsame Funktion `resolve_passage(stable_id)` in ragrun — liefert Absatz, Weiterleitungskette oder Grabstein. Genutzt von `get_passage`, `get_protocol`, `get_handoff`, `append_to_protocol` und der Fallback-Webseite (12b). Optional als Postgres-Funktion, dann nutzen MCP-Server und Webseite denselben Code. Bei Weiterleitung: Zielabsatz liefern, mit Hinweis „Stelle wurde zusammengelegt". Bei Grabstein: alten Wortlaut, Hinweis auf Entfernung und ID des Nachbarn.
+**Serverseitige Auflösung von `passage_redirect`.** Als gemeinsame Funktion `resolve_passage(paragraph_id)` in ragrun — liefert Absatz, Weiterleitungskette oder Grabstein. Genutzt von `get_passage`, `get_protocol`, `get_handoff`, `append_to_protocol` und der Fallback-Webseite (12b). Optional als Postgres-Funktion, dann nutzen MCP-Server und Webseite denselben Code. Bei Weiterleitung: Zielabsatz liefern, mit Hinweis „Stelle wurde zusammengelegt". Bei Grabstein: alten Wortlaut, Hinweis auf Entfernung und UUID des Nachbarn. **In 1.0 ist `passage_redirect` leer — `resolve_passage` ist ein Pass-through (UUID → Absatz, kein Redirect). Kein Fehler, wenn kein Redirect-Eintrag existiert.**
 
 **10a. FastMCP-Modul einrichten**
 - Neues Verzeichnis: `ragrun/app/mcp_server/`
@@ -783,32 +704,32 @@ Testkriterium ergänzen: Ein direktes `UPDATE app_notes …` oder `INSERT INTO a
 **10b. `search_corpus`-Tool**
 - Nutzt bestehende Hybrid-Suche: `app/retrieval/utils/retrievers.py` (Qdrant dense + BM25 sparse)
 - Parameter: `query: str`, `detail: "kurz" | "normal" | "ausführlich"`, `limit: int` (default 5)
-- Stufenweise Auslieferung: nur `stable_id`, Metadaten, Auszug (1–2 Sätze)
+- Stufenweise Auslieferung: nur `paragraph_id` (UUID), Metadaten, Auszug (1–2 Sätze)
 - **Auszugsmechanismus:** BM25 auf Satzebene — Chunk-Text in Sätze zerlegen, Stichwortüberlappung mit Query, Top-1–2 Sätze als Originalwortlaut mit Auslassungszeichen
 - Metadaten pro Treffer: Band-Titel, Vortragstitel, Ort, Datum, Kapitelüberschrift (eigene Felder, nicht im Fließtext)
 - `detail`-Default: liest `claude_tier` aus `user_profiles` (kostenlos → kurz, bezahlt → normal, fehlend → kurz)
 - Tool-Beschreibung: „Liefert Kurzauszüge. Für den vollen Text einer Stelle: get_passage aufrufen."
-- Testkriterium: Suchergebnisse mit Auszügen, Metadaten, stabilen IDs
-- Abhängigkeit: Schritt 6 (stabile IDs in Qdrant-Payloads)
+- Testkriterium: Suchergebnisse mit Auszügen, Metadaten, Absatz-UUIDs
+- Abhängigkeit: keine (UUIDs bereits in `app_paragraph_chunk` verfügbar)
 
 **10c. `get_passage`-Tool**
-- Parameter: `paragraph_id: str` (stable_id), `context_size: int` (Absätze drumherum, default 3), `detail`
+- Parameter: `paragraph_id: str` (UUID), `context_size: int` (Absätze drumherum, default 3), `detail`
 - `detail`-Default: liest `claude_tier` (wie search_corpus)
 - Liefert: Absatztext + Umfeld + `return_url` + Anzahl Protokolleinträge zur Stelle
 - Bei `detail` ≥ normal: zusätzlich die letzten 2–3 Protokolleinträge knapp
 - Liest direkt aus Supabase `rag_paragraphs`
-- `return_url`: `https://ragxxx.com/passage/{stable_id}` (Universal Link)
+- `return_url`: `https://ragxxx.com/passage/{paragraph_id}` (Universal Link)
 - Tool-Beschreibung: „Liefert immer eine return_url mit. Jede Antwort mit Stellenbezug muss die return_url enthalten."
-- Testkriterium: Absatz mit Kontext, Return-URL und Protokollinfo. Bei weitergeleiteter oder gelöschter ID: korrekte Auflösung über `resolve_passage`.
-- Abhängigkeit: Schritt 2 (stabile IDs), Schritt 8d (Protokolltabellen, `passage_redirect`)
+- Testkriterium: Absatz mit Kontext, Return-URL und Protokollinfo. Bei weitergeleiteter oder gelöschter UUID: korrekte Auflösung über `resolve_passage`.
+- Abhängigkeit: Schritt 8d (Protokolltabellen, `passage_redirect`)
 
 **10d. `get_protocol`-Tool**
-- Parameter: `paragraph_id: str` (stabile ID) **oder** `source_id` + `segment_slug`, dazu `detail`
+- Parameter: `paragraph_id: str` (UUID) **oder** `source_id` + `segment_slug`, dazu `detail`
 - Mit `paragraph_id`: Kapitel ermitteln, Einträge des Kapitelprotokolls liefern. Einträge zu dieser Stelle zuerst, dann die übrigen jüngsten.
 - Mit `source_id` + `segment_slug`: Kapitelprotokoll direkt.
 - `detail`-Staffelung: kurz = letzte 5, normal = letzte 10, ausführlich = alle
-- IDs vor Verwendung über `resolve_passage` auflösen
-- Testkriterium: Korrekte Einträge, nur eigene Protokolle, Auflösung weitergeleiteter IDs
+- UUIDs vor Verwendung über `resolve_passage` auflösen
+- Testkriterium: Korrekte Einträge, nur eigene Protokolle, Auflösung weitergeleiteter UUIDs
 - Abhängigkeit: Schritt 8d (Protokoll-Tabellen)
 
 **10e. `list_work_texts` und `get_work_text`-Tools**
@@ -825,7 +746,7 @@ Testkriterium ergänzen: Ein direktes `UPDATE app_notes …` oder `INSERT INTO a
 - Abhängigkeit: keine
 
 **10g. Server-Instructions, Prompt und Resource**
-- **Server-`instructions`**: Aufbau des Korpus (50 Bände Rudolf Steiner, Vorträge und Bücher), Hinweis auf stufenweise Auslieferung, Regeln zu Arbeitstexten und Protokollen. Enthält auch die Anweisungen zur Philo-Stimme, da Prompts und Resources von Claude nicht automatisch geladen werden.
+- **Server-`instructions`**: Aufbau des Korpus (22 Bände: 8 primäre + 14 sekundäre, überwiegend Rudolf Steiner, dazu Raymond, Lessig, Stallman, Assange u.a.), Hinweis auf stufenweise Auslieferung, Regeln zu Arbeitstexten und Protokollen. Enthält auch die Anweisungen zur Philo-Stimme, da Prompts und Resources von Claude nicht automatisch geladen werden.
 - **`philo_voice`-Prompt**: Zusätzlich als MCP-Prompt verfügbar (für Nutzer, die ihn manuell auswählen)
 - **`band_list`-Resource**: Zusätzlich als Resource verfügbar
 - Tool-Beschreibungen enthalten Regeln:
@@ -863,7 +784,7 @@ Supabase Auth als OAuth-2.1-Server mit PKCE und dynamischer Client-Registrierung
 **11c. Schreibende Tools**
 - `update_work_text`: Parameter `id`, `content`, `expected_version`, optional `title`, `status` → ruft `save_note()` RPC auf mit `changed_by: 'claude'`, erzeugt Versionseintrag
 - `create_work_text`: Parameter `title`, `content`, `text_type` (optional), `paragraph_id` (optional, Anker an eine Stelle), `conversation_url` (optional). Ruft `create_note()` mit `p_created_by = 'claude'` auf, ID erzeugt der MCP-Server (UUID). Liefert ID, Version 1 und Rücklink `https://ragxxx.com/text/{note_id}`. Regel in Tool-Beschreibung: „Nur anlegen, wenn der Nutzer ausdrücklich darum bittet, einen Text in Filo abzulegen. Vor dem Anlegen den Titel mit dem Nutzer abstimmen."
-- `append_to_protocol`: Parameter entweder `paragraph_id` (stabile ID, Kapitel wird ermittelt) **oder** `source_id` + `segment_slug` (Eintrag betrifft das ganze Kapitel, `paragraph_id` bleibt leer). Wie bei `get_protocol`. Legt Kapitelprotokoll bei Bedarf an, speichert den Eintrag. IDs vor Verwendung über `resolve_passage` auflösen.
+- `append_to_protocol`: Parameter entweder `paragraph_id` (UUID, Kapitel wird ermittelt) **oder** `source_id` + `segment_slug` (Eintrag betrifft das ganze Kapitel, `paragraph_id` bleibt leer). Wie bei `get_protocol`. Legt Kapitelprotokoll bei Bedarf an, speichert den Eintrag. UUIDs vor Verwendung über `resolve_passage` auflösen.
 - `get_handoff`: Parameter `id` → liefert Übergabe-Datensatz (Stelle, Markierung, Frage, Rückweg) plus Anweisungen aus `config/handoff_instructions.md` im Feld `instructions`, nur wenn `user_id` passt. **Nach Ablauf (`expires_at`):** kein nackter Fehler, sondern verständliche Meldung und, wenn möglich, die Stellenreferenz (`paragraph_id`), damit Claude mit `get_passage` weiterarbeiten kann.
 - Betroffene Dateien: `app/mcp_server/tools/`
 - Testkriterium: Schreiben nur mit gültigem Token, `save_note()` liefert Konflikt bei Mismatch, abgelaufener Handoff liefert Fallback
@@ -878,7 +799,7 @@ Supabase Auth als OAuth-2.1-Server mit PKCE und dynamischer Client-Registrierung
 
 **12b. Universal Links (iOS) / App Links (Android)**
 - URL-Schemata:
-  - `https://ragxxx.com/passage/{stable_id}` — Stellenlink (Rückweg von Claude)
+  - `https://ragxxx.com/passage/{paragraph_id}` — Stellenlink (Rückweg von Claude, UUID)
   - `https://ragxxx.com/text/{note_id}` — Arbeitstextlink (Rücklink auf von Claude angelegte oder geänderte Texte)
 - `apple-app-site-association` auf Server: verknüpft Domain mit App-Bundle-ID
 - `assetlinks.json` auf Server: verknüpft Domain mit Android-Package
@@ -886,7 +807,7 @@ Supabase Auth als OAuth-2.1-Server mit PKCE und dynamischer Client-Registrierung
 - Fallback-Webseite für `/text/`: „Dieser Text liegt in deiner Filo-App" ohne Inhalt (Arbeitstexte sind privat) + „In Filo öffnen"-Link
 - Betroffene Dateien: `app.config.js` (Associated Domains), ragrun (statische Dateien + Fallback-Seite)
 - Testkriterium: Link öffnet App an richtiger Stelle; ohne App zeigt Fallback
-- Abhängigkeit: Schritt 12a (Domain), Schritt 2 (stabile IDs)
+- Abhängigkeit: Schritt 12a (Domain)
 
 **12c. Deep-Link-Konfiguration vom Backend**
 - `GET /app/deep-link-config` → `{ ios: { strategy, url_template }, android: { strategy, url_template } }`
@@ -898,8 +819,8 @@ Supabase Auth als OAuth-2.1-Server mit PKCE und dynamischer Client-Registrierung
 - Abhängigkeit: Schritt 1 (Testergebnis bestimmt Default-Strategie)
 
 **12d. Deep-Link-Handling in der App**
-- `app/_layout.tsx` erweitern: `Linking.addEventListener` für `ragxxx.com/passage/{id}` und `ragxxx.com/text/{note_id}`
-- **Stellenlinks** (`/passage/{id}`): Auflösungsreihenfolge: `paragraphs` suchen → sonst `passage_redirect` folgen (Kette bis zum Ende) → bei `deleted`: Grabstein-Ansicht mit „Diese Stelle wurde in Korpusversion N entfernt", altem Wortlaut und Sprung zum Nachbarn. Alles aus `books.db`, also auch offline.
+- `app/_layout.tsx` erweitern: `Linking.addEventListener` für `ragxxx.com/passage/{paragraph_id}` und `ragxxx.com/text/{note_id}`
+- **Stellenlinks** (`/passage/{paragraph_id}`): Auflösungsreihenfolge: `paragraphs` suchen → sonst `passage_redirect` folgen (Kette bis zum Ende) → bei `deleted`: Grabstein-Ansicht mit „Diese Stelle wurde in Korpusversion N entfernt", altem Wortlaut und Sprung zum Nachbarn. Alles aus `books.db`, also auch offline.
 - **Arbeitstextlinks** (`/text/{note_id}`): Öffnet den Arbeitstext im Editor. Ist der Text nicht vorhanden, gelöscht (`deleted_at` gesetzt) oder gehört einem anderen Nutzer: verständliche Meldung statt leerem Editor.
 - Betroffene Dateien: `app/_layout.tsx`, `ReadingContext.tsx`, `NoteEditorModal.tsx`
 - Testkriterium: Externer Link öffnet Buch an korrekter Stelle, Redirect wird aufgelöst, Grabstein wird angezeigt. Rücklink aus einem Claude-Gespräch öffnet den von Claude angelegten Text. Gelöschter oder fremder Text zeigt verständliche Meldung.
@@ -958,7 +879,7 @@ Supabase Auth als OAuth-2.1-Server mit PKCE und dynamischer Client-Registrierung
 **Migration `019_cleanup_watermelon.sql` einspielen** (aus Schritt 8d verschoben):
 
 ```sql
-DROP FUNCTION IF EXISTS pull_changes(bigint, bigint);
+DROP FUNCTION IF EXISTS pull_changes(bigint, integer);
 DROP FUNCTION IF EXISTS push_changes(jsonb, bigint);
 DROP FUNCTION IF EXISTS ms_to_ts(bigint);
 DROP FUNCTION IF EXISTS ts_to_ms(timestamptz);
@@ -968,7 +889,7 @@ DROP FUNCTION IF EXISTS increment_starter_prompt_click(uuid);
 
 Voraussetzung: Alle Tester sind auf einem Build ohne WatermelonDB.
 
-- Chat-Endpunkte entfernen: `/app/chat`, `/app/chat/stream`, `/app/chats/*`
+- Chat-Endpunkte entfernen: `/app/chat`, `/app/chat/stream`, `/app/chat/...`
 - Chat-Services entfernen: `app_chat_service.py`, `app_chat_stream_service.py`
 - Chat-Graph entfernen: `assistant_chat_graph.py`, `intents.py`
 - Problem-Solver entfernen: `problem_solver_graph.py`, Endpoint
@@ -988,21 +909,13 @@ Voraussetzung: Alle Tester sind auf einem Build ohne WatermelonDB.
 Schritt 1 (Deep-Link-Test) ──→ 12c (Link-Konfiguration Default)
 Schritt 7 (OAuth-Vortest) ──→ 11a (OAuth-Ausbau)
 
-Schritt 2 (Stabile IDs)
-    │
-    ├──→ 3 (Bücher-DB) ──→ 4 (Update-Mechanismus)
-    │         │
-    │         └──→ 9a (Buch-Cache) ──→ 9e/9f (Paragraph/Source Repos)
-    │
-    ├──→ 5 (Korpusabgleich)
-    │
-    ├──→ 6 (Qdrant-Payloads) ──→ 10b (search_corpus)
-    │
-    ├──→ 10c (get_passage)
-    │
-    └──→ 8d (Schema) ──→ 9b (Supabase-Repos) ──→ 9c (Hooks) ──→ 9d (Editor) ──→ 13c (Tab)
-                │
-                └──→ 10c (get_passage), 10d (get_protocol)
+3 (Bücher-DB) ──→ 4 (Update-Mechanismus)
+      │
+      └──→ 9a (Buch-Cache) ──→ 9e/9f (Paragraph/Source Repos)
+
+8d (Schema) ──→ 9b (Supabase-Repos) ──→ 9c (Hooks) ──→ 9d (Editor) ──→ 13c (Tab)
+      │
+      └──→ 10c (get_passage), 10d (get_protocol)
 
 8a (WatermelonDB raus) ──→ 9a–9f (neue Datenschicht)
 8c (Chat-Code raus) ──→ 13c (Tab-Umbau)
@@ -1014,16 +927,18 @@ Schritt 2 (Stabile IDs)
 13a–13c ──→ 14 (Testen) ──→ 15 (Aufräumen ragrun + Migration 019)
 ```
 
+**Schritte 2 (Stabile IDs), 5 (Korpusabgleich) und 6 (Qdrant-Payloads) entfallen.** UUIDs und `app_paragraph_chunk` existieren bereits. Korpuspflege (`passage_redirect` befüllen) = spätere Arbeit.
+
 **Branch-Merge-Punkt:** Nach 9a + 9e + 9f (Lesen/Suchen/Bücher funktionieren wieder).
 
 **Parallelisierbar:**
 - Schritt 1 (Deep-Link-Test) und Schritt 7 (OAuth-Vortest) — sofort, unabhängig voneinander
-- Schritt 2 + 8a + 8c — unabhängig voneinander
+- Schritt 3 + 8a + 8c + 8d — unabhängig voneinander
 - Schritt 10 (MCP-Server) parallel zu Schritt 9 (App-Datenschicht)
 - Schritt 12a/12b (Domain + Universal Links) parallel zu allem
 
 **Zwei kritische Pfade** (welcher länger ist, entscheidet sich an Schritt 7):
-- **Editor-Kette:** 2 → 8d → 9b → 9c → 9d → 13c → 14
+- **Editor-Kette:** 8d → 9b → 9c → 9d → 13c → 14
 - **MCP-Kette:** 7 → 10a → 10b–10g → 11a → 11b/11c → 13b → 14
 
 Der OAuth-Vortest (Schritt 7) klärt früh, ob die MCP-Kette aufwändiger wird als geplant.
@@ -1056,11 +971,7 @@ Der MCP-Server ist von jedem MCP-Client nutzbar — nicht nur über die App. Vor
 | Free-Claude-Kontingent zu klein | Nutzer frustriert | `detail: "kurz"` Default, knappe Auszüge, Hinweis in App |
 | Supabase Auth unterstützt kein OAuth 2.1 mit Dynamic Client Registration | Mehr eigener Code in Schritt 11 | OAuth-Vortest (Schritt 7) klärt früh; Fallback: eigene Endpunkte, User-Token-Prinzip bleibt |
 | expo-sqlite ohne WatermelonDB: Performance bei 50k Absätzen | Langsames Lesen | Gebundelte DB ist vorindexiert; SQLite-Indizes auf `source_id`, `segment_index` |
-| Stabile-ID-Vergabe in ragprep aufwändig | Blockiert alles | Einfacher Algorithmus: `base62(random(8))`, einmal pro Absatz, in ragkeep speichern |
 | Korpus-Update im Feld (neue books.db) | Großer Download (~15 MB) | Im Hintergrund laden, alte Version zeigen bis fertig |
-| ragprep erzeugt bei neuem Lauf neue IDs | Alle Verweise brechen | IDs aus ragkeep übernehmen, Testkriterium aus Schritt 2 (zwei Läufe = identische IDs) |
 | Gleichzeitiges Speichern von App und Claude | Verlorene Änderungen | `save_note()` als einzige transaktionale Speicherfunktion mit `FOR UPDATE`, Konflikterkennung in App und MCP |
-| Absatz samt Anker im Quelltext gelöscht | ID verschwindet ohne Grabstein, Verweise brechen | Ankerprüfung im Normallauf (Schritt 2): Abbruch mit Liste verschwundener IDs |
-| Neu extrahierte Fassung ohne Anker läuft durch Normallauf | Alle IDs des Bandes neu, alle Verweise brechen | Abbruch bei mehr als 5 % Absätzen ohne Anker |
-| MCP-Tools erhalten weitergeleitete oder gelöschte IDs | Fehler statt Stelle bei Claude | Serverseitige Auflösung `resolve_passage` in allen relevanten Tools |
+| Absätze bei struktureller Korpusänderung gelöscht/geteilt | UUID verschwindet, Verweise brechen | Erst bei späterer Korpuspflege relevant, nicht Launch-kritisch. `passage_redirect`-Tabelle ist vorbereitet, `resolve_passage` als Pass-through implementiert. |
 | Alte TestFlight-Builds nach Migration 019 | App bricht bei Testern | 019 erst in Schritt 15, wenn alle Tester auf neuem Build |
