@@ -190,6 +190,7 @@ Besonders dokumentieren:
 - Variante 1 (HTTPS Universal Link) funktioniert auf iOS: `Linking.openURL` → Safari → `claude.ai/new?q=...` → Claude-App
 - `?q=`-Parameter wird durchgereicht, Prompt erscheint vollständig im Eingabefeld
 - Kodierung OK: Umlaute (äöü), deutsche Anführungszeichen („"), ß — alles korrekt
+- Zustand A (App nicht installiert): Safari öffnet `claude.ai/new?q=...` im Browser — funktioniert ebenfalls, Prompt ist da
 - Zustand B (nicht eingeloggt): Login wird dazwischengeschaltet, `?q=`-Parameter geht NICHT verloren. Der Prompt ist nach dem Login im Chat.
 - Rückweg zur App sichtbar: iOS zeigt „◀ Philo (Staging)" oben links
 - Android-Test steht noch aus
