@@ -186,6 +186,14 @@ Besonders dokumentieren:
 
 **Grundregel:** Prompt wird NIE automatisch gesendet — der Nutzer tippt auf Senden.
 
+**Bisherige Testergebnisse (23.09.2026, iPad Simulator + physisches iPad):**
+- Variante 1 (HTTPS Universal Link) funktioniert auf iOS: `Linking.openURL` → Safari → `claude.ai/new?q=...` → Claude-App
+- `?q=`-Parameter wird durchgereicht, Prompt erscheint vollständig im Eingabefeld
+- Kodierung OK: Umlaute (äöü), deutsche Anführungszeichen („"), ß — alles korrekt
+- Zustand B (nicht eingeloggt): Login wird dazwischengeschaltet, `?q=`-Parameter geht NICHT verloren. Der Prompt ist nach dem Login im Chat.
+- Rückweg zur App sichtbar: iOS zeigt „◀ Philo (Staging)" oben links
+- Android-Test steht noch aus
+
 - Ergebnis: Ausgefüllte Matrix-Tabelle, Empfehlung für Default-Strategie pro Plattform, Fallback-Strategie pro Zustand
 - Betroffene Dateien: neuer Debug-Screen in ragapp
 - Testkriterium: Mindestens ein Weg funktioniert pro Plattform in allen 4 Zuständen, oder klare Fallback-Strategie pro Zustand dokumentiert
