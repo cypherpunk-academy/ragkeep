@@ -28,6 +28,7 @@ function resolveSteineroriginalsRoot(): string {
 
 const CATALOG_PATH = join(resolveSteineroriginalsRoot(), 'rudolf-steiner-ga-lecture-catalog.yaml');
 const CYCLES_PATH = join(REPO_ROOT, 'lectures', 'rudolf-steiner-ga-vortrag-zyklus.yaml');
+const GA_TITLES_PATH = join(REPO_ROOT, 'lectures', 'ga-titles.json');
 const NULL_SHA = '0000000000000000000000000000000000000000';
 
 const RAW_DSN = process.env.RAGRUN_POSTGRES_DSN;
@@ -74,6 +75,50 @@ function parseDatum(datum: string): string | null {
 function parseYear(jahr: string): number | null {
   const n = parseInt(jahr, 10);
   return isNaN(n) ? null : n;
+}
+
+// ── GA title lookup ──────────────────────────────────────────────────────────
+
+const GA_TITLES: Record<string, string> = JSON.parse(readFileSync(GA_TITLES_PATH, 'utf8'));
+
+function lookupGaTitle(ga: string | number | undefined): string | null {
+  if (ga == null) return null;
+  const gaStr = String(ga);
+  // Try first GA for comma-separated entries like "280,295"
+  const first = gaStr.split(',')[0].trim();
+  return GA_TITLES[first] ?? null;
+}
+
+const GENERIC_TITLE_RE = /^(Vortrag \d+|Erster |Zweiter |Dritter |Vierter |Fünfter |Sechster |Siebenter |Achter |Neunter |Zehnter |Elfter |Zwölfter |Dreizehnter |Vierzehnter )/;
+
+function buildDisplayTitle(
+  entry: CatalogEntry,
+  cyclesByNr: Map<number, string>,
+  duplicateTitles: Set<string>,
+): string {
+  const title = entry.vortragstitel?.trim() || '';
+  const isGeneric = GENERIC_TITLE_RE.test(title);
+  const location = `${entry.ort}, ${entry.datum}`;
+  const cycleTitle = entry.zyklus ? cyclesByNr.get(entry.zyklus) ?? null : null;
+  // Band title only — never embed "GA n" in display titles (ga stays a separate DB field).
+  const gaTitle = lookupGaTitle(entry.ga);
+  const anlass = entry.anlass?.trim() || '';
+
+  if (title && !isGeneric) {
+    return duplicateTitles.has(title) ? `${title} (${location})` : title;
+  }
+  if (title && isGeneric) {
+    if (cycleTitle) return `${cycleTitle} — ${title}`;
+    if (gaTitle) return `${gaTitle} — ${title}`;
+    return `${title} (${location})`;
+  }
+  // Titleless: prefer anlass (with location — anlass repeats across dates), else cycle/GA band, else catalog id.
+  if (anlass) {
+    return `${anlass} (${location})`;
+  }
+  if (cycleTitle) return `${cycleTitle} — ${location}`;
+  if (gaTitle) return `${gaTitle} — ${location}`;
+  return `Vortrag ${entry.id} — ${location}`;
 }
 
 // ── Git diff ─────────────────────────────────────────────────────────────────
@@ -158,11 +203,30 @@ async function syncAll(client: pg.Client): Promise<void> {
 
   // 7. Build rag_sources entries for chunked lectures
   const catalogByUuid = new Map(lectures.map(l => [l.uuid, l]));
-  let upsertedSources = 0;
+  const cyclesByNr = new Map(cycles.map(c => [c.zyklus, c.titel]));
 
+  // Find duplicate vortragstitel among chunked lectures
+  const titleCounts = new Map<string, number>();
   for (const sourceId of chunkedIds) {
     const entry = catalogByUuid.get(sourceId);
-    const title = entry?.vortragstitel ?? '(unknown lecture)';
+    const t = entry?.vortragstitel?.trim();
+    if (t && !GENERIC_TITLE_RE.test(t)) {
+      titleCounts.set(t, (titleCounts.get(t) ?? 0) + 1);
+    }
+  }
+  const duplicateTitles = new Set(
+    [...titleCounts.entries()].filter(([, c]) => c > 1).map(([t]) => t),
+  );
+  if (duplicateTitles.size > 0) {
+    console.log(`sync_lectures: ${duplicateTitles.size} duplicate titles will be disambiguated`);
+  }
+
+  let upsertedSources = 0;
+  for (const sourceId of chunkedIds) {
+    const entry = catalogByUuid.get(sourceId);
+    const title = entry
+      ? buildDisplayTitle(entry, cyclesByNr, duplicateTitles)
+      : '(unknown lecture)';
     const year = entry ? parseYear(entry.jahr) : null;
     const ga = entry?.ga?.toString() ?? null;
 
