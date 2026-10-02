@@ -2,7 +2,7 @@
 
 Stand: 1.10.2026 · Dev / Staging (ngrok) · Branch `philo-claude-integration`
 
-Operativer Ausschnitt aus [`claude-philo-phasenplan.md`](claude-philo-phasenplan.md) (**Schritt 0c**). Testdaten: [`../../tests/mcp_testdata.yaml`](../../tests/mcp_testdata.yaml), Skripte `../../scripts/test_handoffs.py`, `test_cleanup.py`.
+Operativer Ausschnitt aus [`claude-philo-phasenplan.md`](claude-philo-phasenplan.md) (**Schritt 0c**). Testdaten: [`../../tests/mcp/mcp_testdata.yaml`](../../tests/mcp/mcp_testdata.yaml), Skripte `../../scripts/mcp_tests/`.
 
 ---
 
@@ -27,7 +27,7 @@ Ebene-A-Tests des Philo-MCP-Servers grün machen (Befunde F-1–F-4), ohne Prod-
 | 0c.7 | Oberschlesien doppelt | **Keine Aktion** | — | — | — |
 | 0c.8 | Dev „Error executing tool“ | **Diagnose** | ragrun | Pre-Flight Qdrant/Embeddings/DSN; MCP `{error, code}` (X-04) | `search_corpus` + `get_passage` testbar |
 
-**Reihenfolge:** 0c.1 → 0c.2 → 0c.4 → 0c.5 → 0c.6 → 0c.3 → 0c.8. Vor Testlauf: `scripts/test_handoffs.py`.
+**Reihenfolge:** 0c.1 → 0c.2 → 0c.4 → 0c.5 → 0c.6 → 0c.3 → 0c.8. Vor Testlauf: `scripts/mcp_tests/test_handoffs.py`.
 
 **Schritt 13 (Phase 1):** Vollkatalog in `list_volumes` bleibt; Filter „nur Bücher“ erst mit Lecture-Tools (12) als separates Tool/Parameter.
 

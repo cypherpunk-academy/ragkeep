@@ -2,7 +2,7 @@
 
 Stand 1.10.2026. Operative Folge der Arbeit in **ragapp**, **ragrun**, **ragkeep** und Supabase (**ragxxx**, Dev → Staging → Prod nur nach Freigabe).
 
-**Fachlicher Plan:** `plans/ZUKUNFT/filo-naechste-schritte.md` (Ziele, Datenmodell, Entscheidungen). **Bestand:** `docs/status-v2.md` (v2-Schritte 1–18 auf `philo-claude-integration`). **Korpus-Promotion:** `plans/ZUKUNFT/corpus-promotion.md`. **Vorträge (Schema/Sync):** `plans/lecture-sources-plan.md`, Anreicherung `plans/ZUKUNFT/philo-claude-consistency-plan.md`. **MCP-Schnittstelle (Testplan, Befunde F-1–F-4):** [`plans/claude-philo-mcp-schnittstelle.md`](claude-philo-mcp-schnittstelle.md) · Fixtures `ragrun/tests/mcp_testdata.yaml`, `ragrun/scripts/test_handoffs.py`, `test_cleanup.py`.
+**Fachlicher Plan:** `plans/ZUKUNFT/filo-naechste-schritte.md` (Ziele, Datenmodell, Entscheidungen). **Bestand:** `docs/status-v2.md` (v2-Schritte 1–18 auf `philo-claude-integration`). **Korpus-Promotion:** `plans/ZUKUNFT/corpus-promotion.md`. **Vorträge (Schema/Sync):** `plans/lecture-sources-plan.md`, Anreicherung `plans/ZUKUNFT/philo-claude-consistency-plan.md`. **MCP-Schnittstelle (Testplan, Befunde F-1–F-4):** [`plans/claude-philo-mcp-schnittstelle.md`](claude-philo-mcp-schnittstelle.md) · Fixtures `ragrun/tests/mcp/mcp_testdata.yaml`, `ragrun/scripts/mcp_tests/`.
 
 Arbeit geht auf **`philo-claude-integration`** weiter (Abschluss Schritt 0, dann Phasen 1–4). Kein paralleler Neuaufbau auf frischem `main`.
 
@@ -40,7 +40,6 @@ Anpassungen nur dort, wo der Branch dem Fachplan widerspricht. Nicht einführen:
 | 0.2 | `buildDisplayTitle`: keine GA-Nummer im Anzeigetitel; Feld `ga` unverändert | ragkeep | `sync_lectures.ts`; Re-Sync Dev optional |
 | 0.3 | Handoff-Sprung: URL aus `GET /app/deep-link-config`, nicht fest `claude.ai/new` | ragapp | Langer Druck / Übergabe |
 | 0.4 | `list_volumes`: weiter Gesamtliste mit `source_type` aus DB (Filter auf Bücher erst Schritt 8) | ragrun | Kein vorzeitiger Bücher-Filter |
-| 0.5 | Merge nach `main`, wenn Lesen, Suche, Bücher, Notes-RPC stabil laufen | alle | Rückmeldung an Michael |
 
 **Abhängigkeit:** vor erneuter Bestandsaufnahme, falls sich der Branch ändert.
 
