@@ -4,6 +4,7 @@
 books/**/results
 books/**/input
 books/**/research
+ga
 
 # Keep chapter summaries tracked (needed for GitHub Pages TOC summaries)
 !books/**/results/

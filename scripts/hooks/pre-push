@@ -37,6 +37,10 @@ else
   node --env-file "$ENV_FILE" --import tsx "$REPO_ROOT/scripts/sync_sources.ts" "$PUSH_LOCAL_SHA" "$PUSH_REMOTE_SHA"
   echo "✓ Sources synchronisiert"
 
+  echo "▶ Syncing lectures..."
+  node --env-file "$ENV_FILE" --import tsx "$REPO_ROOT/scripts/sync_lectures.ts" "$PUSH_LOCAL_SHA" "$PUSH_REMOTE_SHA"
+  echo "✓ Lectures synchronisiert"
+
   echo "▶ Uploading covers..."
   node --env-file "$ENV_FILE" --import tsx "$REPO_ROOT/scripts/upload_covers.ts" "$PUSH_LOCAL_SHA" "$PUSH_REMOTE_SHA"
   echo "✓ Covers hochgeladen"

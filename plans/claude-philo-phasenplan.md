@@ -88,7 +88,7 @@ Ziel: einheitliches **Belegobjekt** (`citation`), **Titel-Fallback** in MCP-List
 
 | Schritt | Aufgabe | Lieferung | Akzeptanz |
 |---------|---------|-----------|-----------|
-| **14** | Migration **020** (ragapp): `connector_grants.client_kind`, `redirect_host`; `config/ai_clients.yaml` | `supabase/migrations/020_…sql`, ragrun config | Dev + Staging |
+| **14** | Migration **021** (ragapp): `connector_grants.client_kind`, `redirect_host`; `config/ai_clients.yaml` | `supabase/migrations/021_…sql`, ragrun config | Dev + Staging |
 | **15** | Beim Grant/MCP: Domain → `client_kind` setzen; DCR-Metadaten auf Staging loggen | ragrun OAuth/MCP-Middleware | Neue Grants nicht `unknown` |
 | **16** | `GET /app/ai-connections` (JWT); `claude-status` unverändert für alte Builds | `app_api.py` | Liste aktiver Verbindungen |
 
@@ -96,11 +96,27 @@ Ziel: einheitliches **Belegobjekt** (`citation`), **Titel-Fallback** in MCP-List
 
 ### Block D — Referenztests (ragrun)
 
+Gerüst steht: Ebene-A-Suite in `ragrun/tests/mcp/` und Helfer in `ragrun/scripts/mcp_tests/`. Sprachmodelle sind nicht Teil davon. Fälle und Soll: [`../../tests/mcp/TESTPLAN_MCP.md`](../../tests/mcp/TESTPLAN_MCP.md). Fixtures nur in `tests/mcp/mcp_testdata.yaml`.
+
+| Pfad | Rolle |
+|------|--------|
+| `tests/mcp/level_a/` | pytest gegen Streamable HTTP (`pytest tests/mcp/level_a`, optional `--mcp-id`) |
+| `tests/mcp/test_mcp_citation.py` | Belegformat ohne Live-Server |
+| `tests/mcp/mcp_live_support.py` | Token, Aufruf, `citation_problem` |
+| `scripts/mcp_tests/seed_fixtures.py` | dauerhafte `[FIXTURE]`-Notizen |
+| `scripts/mcp_tests/test_handoffs.py` | frische `[TEST]`-Handoffs vor dem Lauf |
+| `scripts/mcp_tests/test_cleanup.py` | löscht nur `[TEST]` |
+| `scripts/mcp_tests/mint.py` | JWT für Anton/Antonia |
+| `scripts/mcp_tests/proxy.py` | stdio-Proxy für Cursor (Dev/Staging) |
+| `tests/reports/ebene_a_<datum>.md` | Laufbericht |
+
+Vor dem Lauf: Cleanup, Seed, Handoffs. Am Ende wieder Cleanup. Ein gewöhnliches `pytest` im Repo lässt Ebene A aus. Ablauf: `tests/mcp/level_a/README.md`.
+
 | Schritt | Aufgabe | Lieferung | Akzeptanz |
 |---------|---------|-----------|-----------|
-| **17** | Gerüst `tests/mcp_reference/*.yaml` + Skript gegen `search_corpus` / `get_passage` | ragrun | Meldet Trefferquote und Belegformat; Fragen von Michael nachreichbar |
+| **17** | Ebene A auf Dev grün fahren | `pytest tests/mcp/level_a` | Bericht ohne Fehlschlag. Treffer mit `paragraph_id` haben vollständiges `citation` (`citation_problem` leer). Schreibfälle unter Anton/Antonia. Offen laut Testplan-Lauf 1b: G-01/03, A/C/U, H-01/02/05–07, V-02, C-07 |
 
-**Phase-1-Gate:** Staging-MCP mit Beleg in Suche/Passage/Handoff; **`list_volumes` mit Metadaten** (0c.6); Lecture-Tools; Grants mit `client_kind`; Hook synct Vorträge auf Dev; **0c** (MCP-Testplan Ebene A) auf Dev grün.
+**Phase-1-Gate:** Staging-MCP mit Beleg in Suche/Passage/Handoff; **`list_volumes` mit Metadaten** (0c.6); Lecture-Tools; Grants mit `client_kind`; Hook synct Vorträge auf Dev; **Ebene A** (`pytest tests/mcp/level_a`) auf Dev grün.
 
 **Entscheidungen Michael (blockieren nicht Block A/C):** Korpus-Promotion A/B/C/D; Band vs. Einzelvortrag doppelt; Nicht-Vorträge eigener `source_type`.
 

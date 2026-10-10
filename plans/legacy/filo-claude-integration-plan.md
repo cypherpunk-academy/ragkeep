@@ -1,6 +1,8 @@
-# Filo × Claude — Implementationsplan
+# Filo × Claude — Implementationsplan (v1, historisch)
 
-Erstellt 21.09.2026, überarbeitet 22.09.2026. Basiert auf dem Briefing `filo-claude-integration-briefing.md`, Code-Bestandsaufnahme von ragrun, ragapp und Supabase, den Änderungen aus `filo-plan-aenderungen.md`, Runde 2 und Runde 3 der Änderungen.
+> **Archiv.** Abgelöst durch [`filo-claude-integration-plan-v2.md`](./filo-claude-integration-plan-v2.md) (24.09.2026); aktuelle Arbeit: [`../ZUKUNFT/filo-naechste-schritte.md`](../ZUKUNFT/filo-naechste-schritte.md).
+
+Erstellt 21.09.2026, überarbeitet 24.09.2026. Basiert auf dem Briefing `filo-claude-integration-briefing.md`, Code-Bestandsaufnahme von ragrun, ragapp und Supabase, den Änderungen aus `filo-plan-aenderungen.md`, Runde 2–4 der Änderungen.
 
 ---
 
@@ -22,6 +24,12 @@ Erstellt 21.09.2026, überarbeitet 22.09.2026. Basiert auf dem Briefing `filo-cl
 | Arbeitstexte löschen | **Soft-Delete** (`deleted_at`-Spalte statt endgültiges Löschen). Papierkorb-Ansicht mit Wiederherstellen. Rücklinks bleiben verständlich, versehentliches Löschen rückgängig. |
 | Handoff-Anweisungen | Stehen in Serverkonfiguration (`handoff_instructions.md`), nicht im Handoff-Datensatz. Änderbar ohne App-Release. |
 | Handoff-ID | Erzeugt die Datenbank (`create_handoff()`), nicht die App. Alphabet ohne verwechselbare Zeichen. |
+| Claude-App | **Nicht voraussetzen.** `claude.ai/new?q=...` funktioniert im Browser genauso. Die Claude-App ist nice-to-have, kein Requirement. |
+| Connector-Status | **Über `connector_grants`-Tabelle.** Jeder erfolgreiche MCP-OAuth-Grant wird gespeichert (client_id aus DCR; nicht an `claude.ai`-Redirect-URI gekoppelt). `last_mcp_request` bei jedem MCP-Aufruf aktualisiert (gedrosselt). App fragt `GET /app/claude-status` ab (Konvention wie übrige App-API). Status-Semantik: `not_connected` / `connected_unused` / `connected` (+ `lastActive`) / `revoked`. |
+| Autorisierungsseite | **Selbst gebaut auf `ragxxx.com`.** Supabase liefert kein fertiges OAuth-Consent-UI. Login: Email-OTP + Apple + Google (Web: jeweilige Provider-Flows; App: bestehende/erweiterte Native-Flows). Consent-Screen. Wird von Claude beim Connector-Setup aufgerufen. Nötig auch ohne App (MCP-first-Szenario). |
+| `claude_tier` | **Nicht abfragen, keine Spalte.** Detail-Default immer `"kurz"`. Optional später lokal in Einstellungen oder automatisch ableiten. |
+| `user_profiles` | **Entfällt.** Ohne `claude_tier` keine Felder; Nutzeridentität bleibt `auth.users`. |
+| Einladungs-Gate | **Entfernen.** Offene Registrierung über App und Autorisierungsseite (MCP-first). `invitations`-Tabelle, `/app/invitations/*`, Invite-UI und Check-Email-Gate fliegen raus. |
 
 ---
 
@@ -54,10 +62,10 @@ Erstellt 21.09.2026, überarbeitet 22.09.2026. Basiert auf dem Briefing `filo-cl
 | Bereich | Befund |
 |---------|--------|
 | **Tabellen** | ~13 Tabellen in App-Migrationen (live inkl. ragrun-Zusatztabellen mehr), 18 Migrationen (000–017). |
-| **Entfällt** | `rag_talks`, `rag_turns`, `rag_references`, `app_starter_prompts`, `pull_changes`/`push_changes` RPC. |
+| **Entfällt** | `rag_talks`, `rag_turns`, `rag_references`, `app_starter_prompts`, `invitations` (+ Invite-RPCs/UI), `pull_changes`/`push_changes` RPC. |
 | **Bleibt** | `rag_paragraphs` (UUID PK, unverändert), `rag_chunks`, `rag_sources`, `vector_chunks`, `app_paragraph_chunk` (Join: Absatz-UUID ↔ Chunk-ID). |
 | **Wird erweitert** | `app_notes` → Arbeitstexte mit Versionierung. `app_bookmarks` → direkt über Supabase. |
-| **Neu** | `app_note_versions`, `user_profiles`, `protocols`, `protocol_entries`, `handoffs`, `passage_redirect`. |
+| **Neu** | `app_note_versions`, `protocols`, `protocol_entries`, `handoffs`, `passage_redirect`, `connector_grants`. |
 
 ### B.4 DeepSeek-Funktionen — Was bleibt, was entfällt
 
@@ -91,7 +99,7 @@ Erstellt 21.09.2026, überarbeitet 22.09.2026. Basiert auf dem Briefing `filo-cl
 | **Bücher-Katalog** | `rag_sources` in Supabase (Sync via `db-snapshot.json`) | **In gebundelter SQLite-DB** + Supabase für MCP | Teil von `fetch-db-seed.mjs` |
 | **Chat-Verlauf** | `talks`/`turns`/`references` | **Entfällt komplett** | Alles löschen |
 | **Starter-Prompts** | `starter_prompts` | **Entfällt** | Löschen |
-| **Einstellungen** | AsyncStorage | Bleibt lokal + `claude_tier` in Supabase | SettingsContext + `user_profiles` |
+| **Einstellungen** | AsyncStorage | Bleibt lokal (kein `claude_tier` / kein `user_profiles`) | SettingsContext |
 | **Such-Chunks** | On-demand von ragrun | Bleibt, wird MCP-Tool `search_corpus` | ragrunApi → MCP |
 | **Nutzungsdaten** | `rag_usage` + `llm_pricing` | Bleiben für Pipeline-Tracking, kein App-facing-LLM mehr | — |
 | **WatermelonDB** | Gesamte Schicht | **Entfällt komplett** | DB, Schema, Migrations, Models, Sync — alles raus |
@@ -127,7 +135,17 @@ Erstellt 21.09.2026, überarbeitet 22.09.2026. Basiert auf dem Briefing `filo-cl
 | `pull_changes()`, `push_changes()` RPC | Entfernen |
 | `ms_to_ts()`, `ts_to_ms()` | Entfernen (WatermelonDB-spezifisch) |
 | `app_starter_prompts` + `increment_starter_prompt_click()` | Entfernen |
+| `invitations` + zugehörige RPCs / Edge Function `send-invitation` | Entfernen (Einladungs-Gate entfällt) |
 | `rag_talks`, `rag_turns`, `rag_references` | Archivieren (Daten lassen, nicht mehr ansprechen) |
+
+### D.4 ragapp — Einladungs-Gate entfernen
+
+| Modul | Dateien |
+|-------|---------|
+| Invite-UI | `app/auth/invite.tsx`, `app/auth/redeem-invitation.tsx`, Konto-Invite-Einstieg |
+| Invite-API-Client | `src/data/services/invitationService.ts` |
+| Login-Gate | Check-Email / Invite-Only-Zweige in `app/auth/login.tsx` und `register.tsx` |
+| ragrun Invite-API | `app/api/invitation.py` (`/app/invitations/*`) |
 
 ---
 
@@ -261,7 +279,7 @@ Schema der erzeugten `books.db`:
 Direkt nach Schritt 1, vor allen übrigen MCP-Arbeiten. Klärt das OAuth-Risiko früh.
 
 - Minimaler MCP-Server (Schritt 10a im Kleinen) mit einem einzigen Test-Tool `whoami`, das die Nutzer-ID aus dem Token zurückgibt.
-- Supabase als OAuth-2.1-Server mit dynamischer Client-Registrierung aktivieren, minimale Autorisierungsseite.
+- Supabase als OAuth-2.1-Server mit dynamischer Client-Registrierung aktivieren, **minimale selbst gebaute Autorisierungsseite** (gleiche Richtung wie 11a: Login + Consent; nicht auf ein fertiges Supabase-Consent-UI warten).
 - Als Custom Connector in Claude eintragen, Anmeldung durchspielen, `whoami` aufrufen.
 
 Ergebnis: Funktioniert der Supabase-Weg, wird 11a später zügig ausgebaut. Funktioniert er nicht, ist früh klar, dass eigene Endpunkte nötig sind, und die Planung wird angepasst.
@@ -430,13 +448,7 @@ ALTER TABLE app_note_versions
 ALTER TABLE app_notes
   ADD CONSTRAINT chk_created_by CHECK (created_by IN ('user', 'claude'));
 
--- Nutzerprofil
-CREATE TABLE user_profiles (
-  id uuid PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
-  claude_tier varchar(16),
-  created_at timestamptz NOT NULL DEFAULT now(),
-  updated_at timestamptz NOT NULL DEFAULT now()
-);
+-- Nutzerprofil entfällt: ohne claude_tier keine Felder; Identität = auth.users.
 
 -- Protokolle: eines pro Kapitel bzw. Vortrag, nicht pro Absatz.
 -- Prüfen, ob segment_slug über Korpusänderungen stabil ist.
@@ -526,6 +538,23 @@ CREATE TABLE passage_redirect (
   old_text text               -- Grabstein-Wortlaut bei 'deleted'
 );
 
+-- Connector-Grant-Tracking (OAuth-Zuordnung Supabase-User ↔ MCP-Client)
+-- Bei jedem erfolgreichen MCP-OAuth-Grant anlegen (client_id aus DCR; gilt für Claude.ai,
+-- Desktop, Cursor usw. — nicht an claude.ai-Redirect-URI gekoppelt).
+-- last_mcp_request im MCP-Handler aktualisiert (gedrosselt, max 1×/min).
+-- App fragt GET /app/claude-status ab.
+CREATE TABLE connector_grants (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id uuid NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
+  client_id text NOT NULL,         -- OAuth client_id (von Dynamic Client Registration)
+  client_name text,                -- optional aus Client-Metadaten
+  created_at timestamptz NOT NULL DEFAULT now(),
+  last_refresh timestamptz,        -- letzter Token-Refresh
+  last_mcp_request timestamptz,    -- letzter MCP-Tool-Aufruf (gedrosselt geschrieben)
+  revoked_at timestamptz,
+  UNIQUE (user_id, client_id)
+);
+
 -- rag_paragraphs: UUID PK existiert bereits (Migration 0023). Keine Änderungen nötig.
 -- app_notes.deleted_at existiert bereits (001_initial_schema.sql). Keine Änderungen nötig.
 
@@ -585,16 +614,14 @@ GRANT EXECUTE ON FUNCTION create_handoff(text, text, text, text, text, text) TO 
 -- (Fallback-Webseite löst ohne Anmeldung auf, aber ohne Nutzerdaten)
 ```
 
-**`user_profiles` automatisch anlegen:** Trigger auf `auth.users` (nach Insert) oder Upsert in `UserProfileRepository.get()`. Sonst liefert `get()` für neue Nutzer nichts.
-
-Plus: RLS-Policies für alle neuen Tabellen, `set_updated_at()`-Trigger auf `user_profiles`, `protocols`.
+Plus: RLS-Policies für alle neuen Tabellen, `set_updated_at()`-Trigger auf `protocols`.
 
 RLS-Regeln:
 - **`app_notes`: SELECT alle eigenen Texte (`user_id = auth.uid()`), auch gelöschte.** Gelöschte Texte werden in den Abfragen ausgeblendet (`WHERE deleted_at IS NULL`), nicht in der Policy — sonst kann die Papierkorb-Ansicht nichts anzeigen und `get_work_text` kann gelöschte nicht von fehlenden unterscheiden. Keine INSERT-, UPDATE- oder DELETE-Policy für `authenticated`. Schreiben geschieht ausschließlich über `create_note()`, `save_note()`, `delete_note()` und `undelete_note()`.
 - `app_note_versions`: Nur SELECT über Parent-Join auf `app_notes.user_id = auth.uid()`. Keine INSERT/UPDATE/DELETE-Policy.
-- `user_profiles`: SELECT/UPDATE nur eigenes Profil (`id = auth.uid()`)
 - `protocols`, `protocol_entries`: SELECT/INSERT nur eigene (`user_id = auth.uid()`, bzw. Parent-Join)
 - `handoffs`: Nur SELECT eigene (`user_id = auth.uid()`). Keine INSERT-Policy — Anlegen nur über `create_handoff()`.
+- `connector_grants`: SELECT nur eigene (`user_id = auth.uid()`). Kein INSERT/UPDATE/DELETE — nur über Backend.
 - `passage_redirect`: SELECT für alle authenticated (read-only Korpusdaten)
 
 Testkriterium ergänzen: Ein direktes `UPDATE app_notes …` oder `INSERT INTO app_notes …` über den Supabase-Client mit Nutzer-JWT wird abgewiesen.
@@ -603,6 +630,13 @@ Testkriterium ergänzen: Ein direktes `UPDATE app_notes …` oder `INSERT INTO a
 
 - Testkriterium: Alle Tabellen angelegt, RLS greift, `save_note()` und `create_note()` funktionieren transaktional
 - Abhängigkeit: keine (UUID existiert bereits)
+
+**8e. Einladungs-Gate entfernen** (kann vor Schritt 7 laufen; spätestens vor 11a)
+- Abbauliste D.4: Invite-UI, `invitationService`, Login/Register-Gate, ragrun `/app/invitations/*`, Edge Function `send-invitation`
+- Supabase: `invitations`-Tabelle in Migration 019 droppen (oder früher, wenn keine alten Builds mehr darauf angewiesen sind)
+- Danach: offene Registrierung in App und auf der Autorisierungsseite
+- Testkriterium: Neuer User kann sich ohne Einladungscode registrieren (Email-OTP)
+- Abhängigkeit: keine (parallel zu 8a–8d)
 
 ### Schritt 9: Neue Datenzugriffsschicht in ragapp
 
@@ -630,8 +664,6 @@ Testkriterium ergänzen: Ein direktes `UPDATE app_notes …` oder `INSERT INTO a
 - `src/data/repositories/ProtocolRepository.ts`
   - `getOrCreate(sourceId, segmentSlug)`, `append(protocolId, entry)` — Eintrag mit optionalem `paragraph_id`
   - `list(sourceId, segmentSlug)`, `listForParagraph(paragraphId)` — Einträge des Kapitels, die sich auf diese Stelle beziehen
-- `src/data/repositories/UserProfileRepository.ts`
-  - `get()`, `updateClaudeTier(tier)`
 - `src/data/repositories/HandoffRepository.ts`
   - `create(data)` — ruft `create_handoff()` RPC auf (ID erzeugt die DB)
   - `get(id)`
@@ -644,8 +676,12 @@ Testkriterium ergänzen: Ein direktes `UPDATE app_notes …` oder `INSERT INTO a
 - `useNotes(filter)` → `{ data, status, refresh }`
 - `useBookmarks(sourceId)` → `{ lastRead, manual, setLastRead, addBookmark }`
 - `useProtocol(sourceId, segmentSlug)` → `{ entries, append }`
-- `useUserProfile()` → `{ profile, updateClaudeTier }`
-- Status-Enum: `loading | ready | saving | saved | error | offline`
+- `useConnectorStatus()` → `{ status: 'not_connected' | 'connected_unused' | 'connected' | 'revoked' | 'loading', lastActive? }` — fragt `GET /app/claude-status` ab
+  - `not_connected`: kein Grant mit `revoked_at IS NULL`
+  - `connected_unused`: Grant vorhanden, `last_mcp_request` NULL
+  - `connected`: Grant vorhanden, `last_mcp_request` gesetzt (+ relativer Zeitstempel)
+  - `revoked`: nur widerrufene Grants (kein aktiver)
+- Status-Enum (Notes/Editor): `loading | ready | saving | saved | error | offline`
 - Auto-Save: Debounce 1s nach Tippen + Save bei `AppState` → background (vor Claude-Absprung)
 - Offline: Editor schreibgeschützt mit Hinweis, ungespeicherte Eingaben im Arbeitsspeicher behalten
 - Betroffene Dateien: `src/shared/hooks/` (neu)
@@ -707,14 +743,14 @@ Testkriterium ergänzen: Ein direktes `UPDATE app_notes …` oder `INSERT INTO a
 - Stufenweise Auslieferung: nur `paragraph_id` (UUID), Metadaten, Auszug (1–2 Sätze)
 - **Auszugsmechanismus:** BM25 auf Satzebene — Chunk-Text in Sätze zerlegen, Stichwortüberlappung mit Query, Top-1–2 Sätze als Originalwortlaut mit Auslassungszeichen
 - Metadaten pro Treffer: Band-Titel, Vortragstitel, Ort, Datum, Kapitelüberschrift (eigene Felder, nicht im Fließtext)
-- `detail`-Default: liest `claude_tier` aus `user_profiles` (kostenlos → kurz, bezahlt → normal, fehlend → kurz)
+- `detail`-Default: immer `"kurz"` (sicher für alle Tarife)
 - Tool-Beschreibung: „Liefert Kurzauszüge. Für den vollen Text einer Stelle: get_passage aufrufen."
 - Testkriterium: Suchergebnisse mit Auszügen, Metadaten, Absatz-UUIDs
 - Abhängigkeit: keine (UUIDs bereits in `app_paragraph_chunk` verfügbar)
 
 **10c. `get_passage`-Tool**
 - Parameter: `paragraph_id: str` (UUID), `context_size: int` (Absätze drumherum, default 3), `detail`
-- `detail`-Default: liest `claude_tier` (wie search_corpus)
+- `detail`-Default: immer `"kurz"` (wie search_corpus)
 - Liefert: Absatztext + Umfeld + `return_url` + Anzahl Protokolleinträge zur Stelle
 - Bei `detail` ≥ normal: zusätzlich die letzten 2–3 Protokolleinträge knapp
 - Liest direkt aus Supabase `rag_paragraphs`
@@ -764,19 +800,32 @@ Testkriterium ergänzen: Ein direktes `UPDATE app_notes …` oder `INSERT INTO a
 Supabase Auth als OAuth-2.1-Server mit PKCE und dynamischer Client-Registrierung verwenden statt eigener Endpunkte.
 
 - OAuth-2.1-Server und dynamische Registrierung im Supabase-Projekt aktivieren
-- Selbst gebaut wird nur die Autorisierungsseite (Anmeldung mit denselben Wegen wie in der App: Email + Apple Sign-In, Zustimmung zum Zugriff)
 - Der MCP-Server gibt Supabase als Authorization Server an und prüft eingehende Supabase-Tokens
 - **Datenzugriff im MCP-Server mit dem Token des Nutzers, nicht mit dem Service-Schlüssel.** Dann greifen die RLS-Regeln automatisch, und eine vergessene Filterbedingung kann keine fremden Daten preisgeben. Service-Schlüssel nur für Korpusdaten ohne Nutzerbezug (z.B. `rag_paragraphs`, `rag_chunks`).
 
+**Autorisierungsseite (selbst gebaut).** Supabase liefert kein fertiges OAuth-Consent-UI. Auf `ragxxx.com` gehostete Webseite, die:
+- Den OAuth-Authorization-Request von Claude (oder anderem MCP-Client) entgegennimmt
+- Login anbietet: **Email-OTP, Apple Sign-In, Google Sign-In**
+  - Web: Provider-Flows (Apple Services ID / Google OAuth Web Client) über Supabase Auth
+  - App: bestehende Native-Flows erweitern (Apple ist halb verdrahtet; Google neu; Email-OTP bleibt)
+- Consent-Screen zeigt: „Philo möchte auf dein Konto zugreifen"
+- Nach Zustimmung den Grant an den Client zurückgibt (Redirect mit Auth Code)
+- **Auch ohne App erreichbar** — nötig für das MCP-first-Szenario (User installiert Connector in Claude, hat noch keine App)
+- **Keine Einladung nötig** — offene Registrierung (Einladungs-Gate entfällt, siehe D.4)
+
+**Grant-Tracking.** Bei jedem erfolgreichen MCP-OAuth-Grant wird ein Eintrag in `connector_grants` angelegt (client_id aus DCR, optional `client_name`). Gilt für Claude.ai, Desktop, Cursor usw. — nicht an eine `claude.ai`-Redirect-URI gekoppelt. Der MCP-Handler aktualisiert `last_mcp_request` bei jedem Tool-Aufruf (gedrosselt, max 1×/min). Neuer Endpunkt `GET /app/claude-status` (Bearer-JWT wie übrige `/app/*`-Routen) — Antwort gemäß Status-Semantik aus 9c.
+
+**OAuth-Redirect-Ziel:** Zurück zum Client (Claude / Desktop) — der User bleibt in seinem Flow. Kein Umweg über eine eigene Seite.
+
 **Ergebnis aus Schritt 7 übernehmen.** Hat Schritt 7 gezeigt, dass der Supabase-Weg nicht trägt, gilt der Fallback mit eigenen Endpunkten (`/mcp/authorize`, `/mcp/token`, `/mcp/register`). Der Grundsatz „User-Token statt Service-Key" bleibt in jedem Fall.
 
-- Betroffene Dateien: Supabase-Projektkonfiguration, ragrun `app/mcp_server/auth/`, `app/main.py`
-- Testkriterium: Claude Custom Connector autorisiert sich, Token wird erneuert, MCP-Tools erkennen User
-- Abhängigkeit: Schritt 10a (MCP-Server läuft)
+- Betroffene Dateien: Supabase-Projektkonfiguration, ragrun `app/mcp_server/auth/`, `app/main.py`, `app/api/app_api.py` (`GET /app/claude-status`), neue Autorisierungs-Webseite auf `ragxxx.com`, App-Auth (Apple/Google)
+- Testkriterium: Claude Custom Connector autorisiert sich, Token wird erneuert, MCP-Tools erkennen User, `connector_grants`-Eintrag wird angelegt, `GET /app/claude-status` liefert korrekten Status
+- Abhängigkeit: Schritt 10a (MCP-Server läuft), Schritt 8d (`connector_grants`-Tabelle)
 
 **11b. User-Kontext in Tools**
 - Alle Tools erhalten User-ID aus OAuth-Token
-- `search_corpus`, `get_passage`, `get_protocol` lesen `claude_tier` für Detail-Default
+- `detail`-Default immer `"kurz"` (sicher für alle Tarife). Optional später über Einstellungen oder automatisch anpassbar.
 - `list_work_texts` / `get_work_text` filtern nach User (automatisch durch RLS bei User-Token)
 - Testkriterium: Verschiedene User sehen nur eigene Daten
 - Abhängigkeit: Schritt 11a
@@ -830,13 +879,24 @@ Supabase Auth als OAuth-2.1-Server mit PKCE und dynamischer Client-Registrierung
 
 **13a. Einrichtungsweg (Connector-Setup)**
 - Neuer Screen: `src/features/settings/ConnectorSetupScreen.tsx`
-- Anleitung: „So verbindest du Filo mit Claude" (Screenshots, Schritte)
+- **Claude-App wird nicht vorausgesetzt.** `claude.ai` funktioniert im Browser genauso (getestet in Schritt 1).
+- Ablauf:
+  1. „Hast du ein Claude-Konto?" → ja / Link zu `claude.ai` (Registrierung)
+  2. „Connector verbinden" → öffnet `https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Philo&connectorUrl=...` per `Linking.openURL` — der User landet direkt im Connector-hinzufügen-Dialog (Name/URL prefilled). Falls Claude diesen Deep Link nicht (mehr) unterstützt: Fallback auf Anleitung mit Copy-Button für die MCP-Server-URL.
+  3. In Claude: **Add** (Connector erscheint in der Liste, noch nicht verbunden) → **Connect** (startet erst jetzt OAuth). Add allein erzeugt keinen Grant.
+  4. OAuth → Autorisierungsseite auf `ragxxx.com` (Login Email/Apple/Google + Consent) → Redirect zurück zu Claude
+  5. Zurück in der App: `GET /app/claude-status` → `connected` / `connected_unused` oder noch `not_connected` (wenn Add ohne Connect)
 - Hinweis: Free-Nutzer haben nur einen Connector-Platz
-- Prüft Connector-Status: Test-Request an MCP-Server mit User-Token
-- Claude-Tarif-Abfrage (kostenlos / bezahlt) → `user_profiles.claude_tier`
-- Betroffene Dateien: neuer Screen, `UserProfileRepository`, `SettingsScreen.tsx`
-- Testkriterium: Nutzer kann Anleitung durchgehen, Tarif wird gespeichert, Status wird angezeigt
-- Abhängigkeit: Schritt 11a (OAuth funktioniert)
+- Betroffene Dateien: neuer Screen, `SettingsScreen.tsx`
+- Testkriterium: Nutzer kann Einrichtung in unter 2 Minuten durchlaufen (inkl. Add → Connect), Status wird korrekt angezeigt
+- Abhängigkeit: Schritt 11a (OAuth + Autorisierungsseite + `connector_grants`)
+
+**MCP-first-Szenario (User kommt über Claude, hat keine App):**
+- User fügt Philo-Connector in Claude hinzu (Marketplace, geteilte URL oder Prefill-Deep-Link)
+- Add → Connect → OAuth → Autorisierungsseite auf `ragxxx.com` → Login/Registrierung (ohne Einladung) → Consent → Redirect zurück zu Claude
+- `connector_grants`-Eintrag wird angelegt, Connector ist sofort aktiv
+- User entdeckt die App über `return_url`s in Tool-Antworten: Klick auf Stellenlink → Fallback-Webseite mit „Lade die Philo-App" + Store-Links
+- Installiert er die App und loggt sich ein → `GET /app/claude-status` → `connected` / `connected_unused` → kein zweiter Setup nötig
 
 **13b. Übergabe-Sheet**
 - Am Absatz im ReadScreen: Kontextmenü-Punkt „Im Arbeitszimmer vertiefen"
@@ -858,12 +918,13 @@ Supabase Auth als OAuth-2.1-Server mit PKCE und dynamischer Client-Registrierung
 
 **13c. Tab-Umbau**
 - Tab 0 wird von „Filo (Chat)" zu „Werkstatt" (oder „Arbeitszimmer")
+- Connector-Status über `GET /app/claude-status` / `useConnectorStatus()`
 - Inhalt:
-  - **Mit Claude-Connector:** Arbeitstexte-Liste + „Mit Claude weiterdenken"-Einstieg + letzter Connector-Status
-  - **Ohne Claude-Connector:** Arbeitstexte-Liste + „Mit Claude weiterdenken — Einrichten" (führt zu Einrichtungsweg)
-  - **Ohne Claude-Konto:** „Filo ist eine Lese- und Such-App. Mit Claude kannst du tiefer einsteigen." + Einrichtungsweg
+  - **`connected` / `connected_unused`:** Arbeitstexte-Liste + „Mit Claude weiterdenken"-Einstieg + Statuszeile („Verbunden, noch nicht genutzt" bzw. „Zuletzt aktiv vor 2h")
+  - **`not_connected` / `revoked`:** Arbeitstexte-Liste + „Mit Claude verbinden" (führt zu Einrichtungsweg 13a)
+  - **Nicht eingeloggt:** „Filo ist eine Lese- und Such-App. Mit Claude kannst du tiefer einsteigen." + Einrichtungsweg
 - Betroffene Dateien: `FiloScreen.tsx` (komplett umbauen), Tab-Layout
-- Testkriterium: Tab zeigt sinnvollen Inhalt in allen drei Zuständen
+- Testkriterium: Tab zeigt sinnvollen Inhalt in allen Zuständen
 - Abhängigkeit: Schritt 9d (Arbeitstexte-Editor), Schritt 13a (Einrichtungsweg)
 
 ### Schritt 14: Testen und Nachschärfen
@@ -885,9 +946,10 @@ DROP FUNCTION IF EXISTS ms_to_ts(bigint);
 DROP FUNCTION IF EXISTS ts_to_ms(timestamptz);
 DROP TABLE IF EXISTS app_starter_prompts;
 DROP FUNCTION IF EXISTS increment_starter_prompt_click(uuid);
+DROP TABLE IF EXISTS invitations;
 ```
 
-Voraussetzung: Alle Tester sind auf einem Build ohne WatermelonDB.
+Voraussetzung: Alle Tester sind auf einem Build ohne WatermelonDB (und ohne Invite-Flow).
 
 - Chat-Endpunkte entfernen: `/app/chat`, `/app/chat/stream`, `/app/chat/...`
 - Chat-Services entfernen: `app_chat_service.py`, `app_chat_stream_service.py`
@@ -895,9 +957,10 @@ Voraussetzung: Alle Tester sind auf einem Build ohne WatermelonDB.
 - Problem-Solver entfernen: `problem_solver_graph.py`, Endpoint
 - Alte Tool-Registry entfernen: `app/tools/`
 - Nicht mehr gebrauchte Sync-Endpunkte entfernen: `/app/sync/pull`, `/app/sync/push`
+- Invite-API entfernen: `app/api/invitation.py` (falls nicht schon in 8e)
 - DeepSeek-Client: **bleibt** (wird von Pipeline-Tools genutzt)
 - `rag_usage` / `llm_pricing`: bleiben (Pipeline-Tracking)
-- Betroffene Dateien: siehe Abbauliste D.2
+- Betroffene Dateien: siehe Abbauliste D.2, D.4
 - Testkriterium: ragrun startet sauber, keine toten Imports, Pipeline-Tools (#7–#11) funktionieren weiter
 - Abhängigkeit: Schritt 14 (Tester-Feedback positiv)
 
@@ -932,8 +995,8 @@ Schritt 7 (OAuth-Vortest) ──→ 11a (OAuth-Ausbau)
 **Branch-Merge-Punkt:** Nach 9a + 9e + 9f (Lesen/Suchen/Bücher funktionieren wieder).
 
 **Parallelisierbar:**
-- Schritt 1 (Deep-Link-Test) und Schritt 7 (OAuth-Vortest) — sofort, unabhängig voneinander
-- Schritt 3 + 8a + 8c + 8d — unabhängig voneinander
+- Schritt 1 (Deep-Link-Test) und Schritt 7 (OAuth-Vortest) — sofort, unabhängig voneinander (8e Einladungs-Gate vor 7 empfohlen)
+- Schritt 3 + 8a + 8c + 8d + 8e — unabhängig voneinander
 - Schritt 10 (MCP-Server) parallel zu Schritt 9 (App-Datenschicht)
 - Schritt 12a/12b (Domain + Universal Links) parallel zu allem
 
@@ -947,11 +1010,11 @@ Der OAuth-Vortest (Schritt 7) klärt früh, ob die MCP-Kette aufwändiger wird a
 
 ### Schritt 16 (optional): MCP in Claude Desktop / Claude Code / Cursor
 
-Der MCP-Server ist von jedem MCP-Client nutzbar — nicht nur über die App. Voraussetzung: Der User hat sich über die App registriert und den MCP-Server dort verbunden (OAuth aus Schritt 11).
+Der MCP-Server ist von jedem MCP-Client nutzbar — nicht nur über die App. Voraussetzung: Der User hat einen Filo-Account (über App **oder** Autorisierungsseite beim ersten OAuth) und hat den Client per OAuth verbunden (Schritt 11). Jeder Client erzeugt seinen eigenen `connector_grants`-Eintrag; Status in der App bedeutet „mindestens ein aktiver MCP-Grant", nicht nur Claude.ai.
 
 **16a. MCP-Konfiguration für Desktop-Clients**
 - Dokumentation/Anleitung: Wie man den Filo-MCP-Server in Claude Desktop, Claude Code oder Cursor einrichtet
-- Jeder Client durchläuft seinen eigenen OAuth-Flow gegen denselben Supabase-Account (der über die App erstellt wurde)
+- Jeder Client durchläuft seinen eigenen OAuth-Flow gegen denselben Supabase-Account
 - Alle Lese-Tools (Suche, Lesen, Protokolle) und Schreib-Tools (Arbeitstexte, Protokolle) funktionieren
 
 **16b. App-Hinweis im MCP-Server**

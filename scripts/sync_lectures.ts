@@ -26,9 +26,10 @@ function resolveSteineroriginalsRoot(): string {
   throw new Error('steineroriginals not found. Set STEINERORIGINALS_ROOT or clone as sibling of ragrun.');
 }
 
-const CATALOG_PATH = join(resolveSteineroriginalsRoot(), 'rudolf-steiner-ga-lecture-catalog.yaml');
-const CYCLES_PATH = join(REPO_ROOT, 'lectures', 'rudolf-steiner-ga-vortrag-zyklus.yaml');
-const GA_TITLES_PATH = join(REPO_ROOT, 'lectures', 'ga-titles.json');
+const STEINER_ROOT = resolveSteineroriginalsRoot();
+const CATALOG_PATH = join(STEINER_ROOT, 'rudolf-steiner-ga-lecture-catalog.yaml');
+const CYCLES_PATH = join(STEINER_ROOT, 'reference', 'lecture-catalog-cycles.yaml');
+const GA_TITLES_PATH = join(STEINER_ROOT, 'reference', 'ga-titles.json');
 const NULL_SHA = '0000000000000000000000000000000000000000';
 
 const RAW_DSN = process.env.RAGRUN_POSTGRES_DSN;
@@ -123,11 +124,13 @@ function buildDisplayTitle(
 
 // ── Git diff ─────────────────────────────────────────────────────────────────
 
-function hasCatalogChanges(remoteSha: string, localSha: string): boolean {
+function hasCatalogChanges(_remoteSha: string, _localSha: string): boolean {
+  // Catalog, cycles, and GA titles live in steineroriginals (sibling repo).
+  // ragrun SHAs cannot see those files; check the steineroriginals working tree.
   try {
     const out = execSync(
-      `git diff --name-only ${remoteSha} ${localSha} -- 'ragkeep/lectures/rudolf-steiner-ga-vortrag-zyklus.yaml'`,
-      { cwd: RAGRUN_ROOT, encoding: 'utf8' },
+      `git diff --name-only HEAD -- rudolf-steiner-ga-lecture-catalog.yaml reference/lecture-catalog-cycles.yaml reference/ga-titles.json`,
+      { cwd: STEINER_ROOT, encoding: 'utf8' },
     );
     return out.trim().length > 0;
   } catch {
