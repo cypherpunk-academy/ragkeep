@@ -143,7 +143,14 @@ function hasCatalogChanges(_remoteSha: string, _localSha: string): boolean {
 async function syncAll(client: pg.Client): Promise<void> {
   // 1. Load catalog YAML
   const catalog = yaml.load(readFileSync(CATALOG_PATH, 'utf8')) as CatalogYaml;
-  const lectures = catalog.lectures;
+  const loaded = catalog.lectures;
+  const skipped = loaded.filter((l) => l.uuid == null || String(l.uuid).trim() === '');
+  if (skipped.length > 0) {
+    console.log(
+      `sync_lectures: skipping ${skipped.length} entries without uuid: ${skipped.map((l) => l.id).join(', ')}`,
+    );
+  }
+  const lectures = loaded.filter((l) => l.uuid != null && String(l.uuid).trim() !== '');
   console.log(`sync_lectures: ${lectures.length} catalog entries loaded`);
 
   // 2. Load cycles YAML

@@ -1,10 +1,16 @@
 # Claude × Philo — Phasenplan
 
-Stand 1.10.2026. Operative Folge der Arbeit in **ragapp**, **ragrun**, **ragkeep** und Supabase (**ragxxx**, Dev → Staging → Prod nur nach Freigabe).
+**Geschlossen 18.10.2026.** Phase-1-Gate, Phase 4 und die unten genannten Entscheidungen gelten als erledigt (läuft oder gestrichen). Bei einem Fehler an einem dieser Punkte gehen wir den einzeln an.
+
+Erledigt: **G1–G8** einschließlich **G2b**. **Phase 4** (39–41): Tester, DROP von `app_starter_prompts` / `llm_pricing` / `vector_chunks` sowie Sync/Invite, Desktop-Anleitung. Entscheidungen: Korpus-Promotion, Band gegen Einzelvortrag in `list_volumes`, `source_type` für Nicht-Vorträge, Formpaket vor Schritt 23, Umfang des Aktivitätslogs vor Schritt 29.
+
+Phase 2 (18–34) liegt in ragapp `plans/filo-phase-2-werkstatt.md` und kommt später.
+
+Stand 14.10.2026. Operative Folge der Arbeit in **ragapp**, **ragrun**, **ragkeep** und Supabase (**ragxxx**, Dev → Staging → Prod nur nach Freigabe). Dev liest Qdrant und Embedder lokal (`localhost:6333`, `localhost:8001`). Staging und Production lesen **Tuxai**. Der Korpus liegt dort (G2b).
 
 **Fachlicher Plan:** `plans/ZUKUNFT/filo-naechste-schritte.md` (Ziele, Datenmodell, Entscheidungen). **Bestand:** `docs/status-v2.md` (v2-Schritte 1–18 auf `philo-claude-integration`). **Korpus-Promotion:** `plans/ZUKUNFT/corpus-promotion.md`. **Vorträge (Schema/Sync):** `plans/lecture-sources-plan.md`, Anreicherung `plans/ZUKUNFT/philo-claude-consistency-plan.md`. **MCP-Schnittstelle (Testplan, Befunde F-1–F-4):** [`plans/claude-philo-mcp-schnittstelle.md`](claude-philo-mcp-schnittstelle.md) · Fixtures `ragrun/tests/mcp/mcp_testdata.yaml`, `ragrun/scripts/mcp_tests/`.
 
-Arbeit geht auf **`philo-claude-integration`** weiter (Abschluss Schritt 0, dann Phasen 1–4). Kein paralleler Neuaufbau auf frischem `main`.
+Arbeit geht auf **`philo-claude-integration`** weiter. Nächster Schritt ist das Phase-1-Gate (G1–G8), danach Phasen 2–4. Kein paralleler Neuaufbau auf frischem `main`.
 
 ---
 
@@ -19,7 +25,7 @@ Migrationen zuerst Dev, dann Staging. Schreiben auf `app_notes` nur über RPCs. 
 | Phase | Schritte | Schwerpunkt |
 |-------|----------|-------------|
 | 0 | 0, 0b, **0c** | Branch-Abschluss, Bestand, **MCP-Testplan-Befunde** |
-| 1 | 1–17 | Schnittstelle exakt, Vorträge, Verbindungsherkunft, Referenztests |
+| 1 | 1–17 | Schnittstelle exakt, Vorträge, Collection `rudolf-steiner-ga`, Verbindungsherkunft, Referenztests |
 | 2 | 18–34 | App, Übergabe, Durchschaubarkeit, Links/OTA |
 | 3 | 35–38 | Filo-Bibliothek |
 | 4 | 39–41 | Tester, Aufräumen, optional Desktop |
@@ -49,13 +55,47 @@ Vollständiger Plan, Befunde F-1–F-4, Primärkorpus, Umsetzungstabelle und Rei
 
 ### Schritt 0b — Bestandsaufnahme (Referenz)
 
-Erledigt 30.9.2026 → `docs/status-v2.md`. Vor Phase 1 nur aktualisieren, wenn Schritt 0 den Code verändert hat. Offene Punkte aus dem Dokument in die jeweiligen Schritte unten eintragen (Staging ohne 019, `client_kind` fehlt, Beleg fehlt, Chat-Endpoint in ragrun noch da).
+Erledigt 30.9.2026 → `docs/status-v2.md`. Für Phase 1 nicht mehr als Ist verwenden: Beleg, Lecture-Tools und `client_kind` sind seit dem 10.10. im Code. Chat-Endpoint und Staging ohne geprüfte 019 bleiben offen.
 
 ---
 
 ## Phase 1 — Exakt und Verbindung
 
 Ziel: einheitliches **Belegobjekt** (`citation`), **Titel-Fallback** in MCP-Listen, **Vortrags**-Tools und -Titel, **`client_kind`**.
+
+### Stand 10.10.2026
+
+Abgelesen am Code auf `philo-claude-integration`, nicht an einem frischen Ebene-A-Lauf und nicht an Dev/Staging. `docs/status-v2.md` (30.9.) beschreibt diesen Stand nicht mehr.
+
+| Block | Schritte | Stand |
+|-------|----------|--------|
+| A Zitation | 1–8 | Im Code (`citation.py`, `tools.py`, Instructions). ragrun lokal **1 Commit voraus**, nicht gepusht, nicht neu deployt. |
+| B Vorträge | 11–13 | Hook in ragkeep, `get_lecture_info` / `list_lectures`, `list_volumes` mit `is_primary`, `ga`, `zyklus`. Beide Repos lokal **1 Commit voraus**, nicht gepusht. |
+| B2 GA-Collection | `search_ga`, `search_ga_summaries` | Im selben ragrun-Commit. Collection `rudolf-steiner-ga`, getrennt von `search_corpus`. Kein Philo-`citation`. Beleg „(GA n, S. seite, Wortlaut nicht sicher)“. Noch kein Ebene-A-Fall, live nicht geprüft. |
+| B Vorträge | 9–10 | Schema **019** auf Dev und Staging. **G4** 14.10.: Staging-Katalog 5302 Zeilen, 50 Zyklen (`19140208` ohne UUID ausgelassen, falscher Eintrag). Staging hat keine Vortrags-Chunks, daher 0 Lecture-Zeilen in `rag_sources`. Dev: 0 leere Lecture-Titel; GA 337b am 10.10.1920 zwei Titel (`19201010a`, `19201010c`). |
+| C Herkunft | 15–16 | Im ragrun-Code (`ai_clients.yaml`, Grant-Upsert, `GET /app/ai-connections`). Nicht gepusht, nicht deployt. |
+| C Herkunft | 14 | **020** und **021** am 14.10. auf Dev und Staging: `save_note`/`create_note` mit 1-MB-Grenze, `connector_grants.client_kind` (`varchar(32)`, Default `unknown`) und `redirect_host`. |
+| D Tests | 17 | Letzter Lauf **1b, 1.10.**, nicht grün. Ohne Anton blockiert: G-01/03, A/C/U, H-01/02/05–07, V-02. Ebene A ohne `xfail` (C-07/CITE-02 gestrichen; V-04 nach DB-Bereinigung). |
+
+### Weg zum Gate
+
+Erledigt 18.10.2026: G1–G8, einschließlich G2b. Die Tabelle bleibt als Protokoll.
+
+| # | Aufgabe | Akzeptanz |
+|---|---------|-----------|
+| **G1** | ragapp: `021` committen. ragapp, ragrun, ragkeep auf `philo-claude-integration` pushen. | Origin hat Beleg, Lecture-Tools, `search_ga` / `search_ga_summaries`, Hook, `ai_clients.yaml`, Migration 021. |
+| **G2** | 019 auf Staging einspielen, falls die Tabellen fehlen. 020 und 021 auf Dev und Staging. | Staging hat Katalogtabellen und `source_type`/`ga`. Beide Umgebungen haben `client_kind`, `redirect_host` und die 1-MB-RPC. |
+| **G3** | ragrun-MCP auf Dev deployen, danach Staging. Connector neu verbinden, damit Lecture-Tools und die GA-Suche in der Tool-Liste sind. | Dev-`list_volumes` liefert `is_primary`, `ga`, `zyklus`. `get_lecture_info`, `list_lectures`, `search_ga` und `search_ga_summaries` antworten gegen lokales Qdrant (`localhost:6333`) und den lokalen Embedder (`localhost:8001`). Ein Treffer aus `search_ga` hat `ga` und `page_start` oder lässt die Seite weg, und die Instructions verlangen „(GA n, S. seite, Wortlaut nicht sicher)“. Die Staging-Suche folgt nach G2b in G8. |
+| **G4** | `sync_lectures.ts --all` gegen Staging. Auf Dev einmal prüfen: keine leeren Titel bei gechunkten Vorträgen, GA 337b am 10.10.1920 zwei verschiedene Titel. | Schritt 10. Hook (Schritt 11) synct beim nächsten Push nach `main` nur Dev. |
+| **G5** | Neuen Grant auf Dev anlegen (Claude oder Cursor) und `GET /app/ai-connections` lesen. | `client_kind` ist nicht `unknown`. `claude-status` für alte Builds unverändert. |
+| **G6** | Ebene A ohne erledigte `xfail`-Markierungen; F-4 nur noch Unit. A-03, C-03, U-04 bleiben „speichert oder lehnt strukturiert ab“, solange kein Enum-Check beschlossen ist. Dazu zwei Fälle für die Collection: `search_ga` mit einem bekannten Band (Treffer `chunk_type` `ga_text`, kein `citation`) und `search_ga_summaries` (Zusammenfassung, kein `citation`). Unbekanntes `ga` → `unknown_ga`. | `tests/mcp/level_a/README.md` nennt keine erledigten Befunde mehr als `xfail`. Die beiden GA-Fälle stehen im Testplan. |
+| **G7** | Auf Dev: Cleanup, Seed, Handoffs, `pytest tests/mcp/level_a`, Cleanup. Token über `scripts/mcp_tests/mint.py` (Anton/Antonia). Bericht `tests/reports/ebene_a_<datum>.md`. | Kein Fehlschlag. Treffer mit `paragraph_id` haben `citation` (`citation_problem` leer). Die am 1.10. blockierten Fälle G-01/03, H-01/02/05–07, V-02 sind gelaufen. Der Lauf liest lokales Qdrant und den lokalen Embedder. |
+| **G2b** | Lokaler Korpus ist bestätigt. Collections `rudolf-steiner-ga` und `philo-von-freisinn` vom Mac-Docker nach Tuxai kopieren (`deploy/tuxai/copy_collection.sh`). Railway Staging und Production an die Tailscale-IP anbinden. Variablen dort: `RAGRUN_QDRANT_URL=http://100.93.243.73:6333`, `RAGRUN_QDRANT_API_KEY`, `RAGRUN_EMBEDDINGS_PROVIDER=http`, `RAGRUN_EMBEDDINGS_BASE_URL=http://100.93.243.73:8001`. `.env.dev` bleibt auf `localhost:6333` und `localhost:8001`. | `rudolf-steiner-ga` auf Tuxai hat dieselbe Punktzahl wie das lokale Docker (12.10.2026: 183168). Ein Query-Embed gegen Tuxai `:8001` antwortet. Staging und Production lesen diese Kopie und denselben Tuxai-Embedder. Dev liest weiter lokal. Qdrant Cloud, Railway-`qdrant-staging` und der HF-/Modal-Query-Pfad sind für Staging und Production abgelöst. |
+| **G8** | Dieselben Verträge auf Staging stichprobenweise: Suche, Passage, Handoff mit Beleg; `list_volumes` mit Metadaten; `list_lectures`; ein `search_ga`-Treffer; ein Grant mit `client_kind`. | Gate-Satz unten erfüllt. `search_ga` trifft die Tuxai-Kopie aus G2b. |
+
+**Dev lokal, Tuxai für Staging und Production.** Auf Dev laufen Qdrant und Embedder lokal (Docker, `localhost:6333` und `localhost:8001`). Chunking, Embed und die Prüfung des Korpus passieren dort. Stimmt der Korpus, kopiert `copy_collection.sh` die Collections auf Tuxai. Staging und Production teilen sich diese eine Qdrant-Instanz und diesen einen Embedder, mit denselben Collection-Namen. Das Modell bleibt `intfloat/multilingual-e5-large`, lokal und auf Tuxai, damit die kopierten Vektoren zu den Query-Embeddings passen. Nutzerdaten bleiben in getrennten Supabase-Projekten. Ein späterer Korpus-Stand geht denselben Weg: lokal prüfen, dann Snapshot nach Tuxai. Eigene Collections pro Umgebung kommen erst mit der Korpus-Promotion, sobald ein Staging-Stand vom Production-Stand abweichen soll (`plans/ZUKUNFT/corpus-promotion.md`).
+
+**Phase-1-Gate:** Staging-MCP mit Beleg in Suche, Passage und Handoff; `list_volumes` mit Metadaten; Lecture-Tools; `search_ga` und `search_ga_summaries` gegen `rudolf-steiner-ga` auf Tuxai (G2b); Grants mit `client_kind`; Hook synct Vorträge auf Dev; Ebene A auf Dev grün. Erst dann Phase 2.
 
 ### Block A — Zitation (ragrun)
 
@@ -83,6 +123,21 @@ Ziel: einheitliches **Belegobjekt** (`citation`), **Titel-Fallback** in MCP-List
 | **13** | `list_volumes`: Metadaten `is_primary`, `ga`, `zyklus`; optional später Filter nur Bücher oder zweites Tool | `app_catalog_repository.py` | Siehe **0c.6** — Testplan V-02: ~333 Einträge; App-Bibliothek bleibt 8 Primärbände |
 
 **Reihenfolge:** 9 → 10 → 11 parallel möglich zu Block A ab Schritt 1; **13 erst nach 12**.
+
+### Block B2 — Collection `rudolf-steiner-ga` (ragrun)
+
+Eigene Qdrant-Collection, nicht der Philo-Korpus von `search_corpus`. Sie liefert kein `citation`-Objekt. Stellenangabe für den Nutzer: „(GA n, S. seite, Wortlaut nicht sicher)“; ohne `page_start` die Seite weglassen, die Unsicherheit behalten. Lange zusammenhängende Passagen nicht an den Nutzer weitergeben. Die Tools sind dem Philo-Korpus nachgeordnet: erst `search_corpus`, die GA-Suche zum Prüfen und wenn der Korpus wenig ergibt.
+
+| Tool | Inhalt | Filter |
+|------|--------|--------|
+| `search_ga` | Wortlaut, `chunk_type` `ga_text`. Treffer: `ga`, `lecture_id`, `vortragstitel`, `lecture_date`, `venue`, `page_start`/`page_end`, Text | `ga` (eins oder Liste, leer = alle), `lecture_id` (`YYYYMMDD` plus Buchstabe), `limit` 1–20, Default 8 |
+| `search_ga_summaries` | Vortragszusammenfassungen, `chunk_type` `chapter_summary`. Orientierung, danach `search_ga` für den Wortlaut | dieselben Filter, Default `limit` 5 |
+
+Unbekanntes `ga` → `{error, code: unknown_ga}` gegen `rag_lecture_catalog`. Leere Query → `empty_query`. Instructions in `server.py` und `handoff_instructions.md` nennen die Ausnahme schon bei Schritt 0.1. Ebene-A-Fälle kommen in **G6**, der Live-Nachweis in **G3** und **G7**. Bis **G2b** lesen Staging und Production noch Railway-Qdrant bzw. Qdrant Cloud. Dev liest lokales Docker.
+
+**Tuxai** (`deploy/tuxai/compose.yaml`): ein Compose auf dem Pulse, Qdrant `qdrant/qdrant:v1.11.0` an Port 6333, Embedding-Dienst (`personal-embeddings-service`, Modell `intfloat/multilingual-e5-large`) an Port 8001 — Origin **`127.0.0.1`** für `cloudflared`. Railway Staging/Production erreichen Qdrant/Embed über **Cloudflare Tunnel + Access** (`deploy/tuxai/plan-tuxai-cloudflare-railway.md`), nicht Tailscale.
+
+Gemessen 12.10.2026 am Container `ragrun-qdrant` (dasselbe Image): `rudolf-steiner-ga` 183168 Punkte, 366283 indizierte Vektoren, dicht 1024 float32 Cosine, Sparse `text-sparse`, HNSW `m=64` im RAM, ohne Quantisierung, Payload auf Platte, Collection 1,8 GB. `philo-von-freisinn`: 35340 Punkte, 328 MB Platte. Der Prozess belegt 2,17 GiB RAM für beide Collections. Ein Qdrant-Cloud-Free-Cluster (1 GB RAM) trägt das nicht. Auf Tuxai liegt deshalb eine Instanz für Staging und Production. Dev bleibt das lokale Docker und liefert den Korpus per Snapshot, sobald er stimmt.
 
 ### Block C — Verbindungsherkunft (Supabase + ragrun + ragapp)
 
@@ -114,56 +169,15 @@ Vor dem Lauf: Cleanup, Seed, Handoffs. Am Ende wieder Cleanup. Ein gewöhnliches
 
 | Schritt | Aufgabe | Lieferung | Akzeptanz |
 |---------|---------|-----------|-----------|
-| **17** | Ebene A auf Dev grün fahren | `pytest tests/mcp/level_a` | Bericht ohne Fehlschlag. Treffer mit `paragraph_id` haben vollständiges `citation` (`citation_problem` leer). Schreibfälle unter Anton/Antonia. Offen laut Testplan-Lauf 1b: G-01/03, A/C/U, H-01/02/05–07, V-02, C-07 |
+| **17** | Ebene A auf Dev grün fahren | `pytest tests/mcp/level_a` | Bericht ohne Fehlschlag. Treffer mit `paragraph_id` haben vollständiges `citation` (`citation_problem` leer). Schreibfälle unter Anton/Antonia. Offen laut Testplan-Lauf 1b: G-01/03, A/C/U, H-01/02/05–07, V-02 |
 
-**Phase-1-Gate:** Staging-MCP mit Beleg in Suche/Passage/Handoff; **`list_volumes` mit Metadaten** (0c.6); Lecture-Tools; Grants mit `client_kind`; Hook synct Vorträge auf Dev; **Ebene A** (`pytest tests/mcp/level_a`) auf Dev grün.
-
-**Entscheidungen Michael (blockieren nicht Block A/C):** Korpus-Promotion A/B/C/D; Band vs. Einzelvortrag doppelt; Nicht-Vorträge eigener `source_type`.
+**Entscheidungen Michael (blockieren das Gate nicht):** Korpus-Promotion A/B/C/D; Band vs. Einzelvortrag doppelt in `list_volumes`; Nicht-Vorträge eigener `source_type`; Enum-Prüfung für A-03, C-03, U-04.
 
 ---
 
 ## Phase 2 — App, Übergabe, Durchschaubar
 
-Voraussetzung: Phase 1 gemerged; Editor/Repos (v2 5–7) laut status-v2 erledigt.
-
-### Block E — App Werkstatt und Arbeitstexte (ragapp)
-
-| Schritt | Aufgabe | Akzeptanz |
-|---------|---------|-----------|
-| **18** | Werkstatt Tab 0: Philo-Bild, zuletzt gelesen, bearbeitete Arbeitstexte, `conversation_url`; Leerzustände laut Fachplan 5.1 | Alle Connector-Zustände sinnvoll |
-| **19** | Connector-Setup: Prefill `claude.ai/customize/connectors?modal=add-custom-connector` | |
-| **20** | Markdown lesen + Editor Bearbeiten/Vorschau | |
-| **21** | Titel-Fallback in UI wie MCP (`display_title`-Logik geteilt oder API) | |
-| **22** | Kopfzeile Stellenbezug → Navigation; Herkunft, Version, Verlauf, Papierkorb | |
-| **23** | Formpaket (nach Entscheidung Michael): Migration, RPCs, App-Reiter, `text_formats.yaml`, MCP `format`/`parent_id` | Facebook-Post als verknüpfte Form |
-
-### Block F — Übergabe zur KI (ragapp + ragrun + Supabase)
-
-| Schritt | Aufgabe | Akzeptanz |
-|---------|---------|-----------|
-| **24** | Migration Handoffs: `function_key`, `note_ids`, `protocol_entry_ids`, `target_kind` | |
-| **25** | `paragraph_functions.yaml`, `GET /app/paragraph-functions`; Absatz-Sheet (langer Druck) | Handoff + `get_handoff` mit Texten/Protokoll |
-| **26** | `deep-link-config`: `clients` mit `url_template` pro `client_kind`; App liest Config | ChatGPT-Test: kein Auto-Send → Kopierweg |
-| **27** | Mehrere Verbindungen, ohne Verbindung Klartext-Prompt | Fachplan 8.3–8.4 |
-
-### Block G — Durchschaubar (ragrun + ragapp)
-
-| Schritt | Aufgabe | Akzeptanz |
-|---------|---------|-----------|
-| **28** | `commands.yaml` → MCP-Resource `filo://befehle`, `GET /app/commands`, Tool-Beschreibungen | |
-| **29** | Tabelle `mcp_activity` + Anzeige Werkstatt (Umfang nach Entscheidung Michael) | |
-| **30** | Hilfeseite: Kurzbefehle, Server-Instructions sichtbar | |
-
-### Block H — Rest v2 in Phase 2
-
-| Schritt | Aufgabe | Repo |
-|---------|---------|------|
-| **31** | Chat-Endpoint `/app/chat/stream` entfernen (wenn App clean) | ragrun |
-| **32** | Domain/Universal Links Prod (`ragxxx.com`), AASA/assetlinks, Fallback `/passage`, `/text` | ragrun, ragapp |
-| **33** | Korpus-OTA End-to-End (Hosting `.db`, Version bump) | ragrun, ragapp |
-| **34** | Tab-Id `chat` → `werkstatt` o. ä. (kosmetisch) | ragapp |
-
-**Parallel empfohlen:** E (18–22) mit F (24–26); G (28–30) neben F.
+Nach ragapp verschoben: `plans/filo-phase-2-werkstatt.md` (Schritte 18–34). Kommt später.
 
 ---
 
@@ -179,6 +193,8 @@ Voraussetzung: Phase 1 gemerged; Editor/Repos (v2 5–7) laut status-v2 erledigt
 ---
 
 ## Phase 4 — Tester und Aufräumen
+
+Erledigt 18.10.2026 (läuft oder gestrichen).
 
 | Schritt | Aufgabe | Akzeptanz |
 |---------|---------|-----------|
@@ -203,7 +219,7 @@ Voraussetzung: Phase 1 gemerged; Editor/Repos (v2 5–7) laut status-v2 erledigt
 Phase 1 Gate ──→ 18–34 Phase 2 ──→ 35–38 Phase 3 ──→ 39–41 Phase 4
 ```
 
-**Kritischer Pfad Phase 1:** 1 → 2 → 3 und 9 → 10 → 12 → 13 und 14 → 15.
+**Kritischer Pfad Phase 1:** 1 → 2 → 3 und 9 → 10 → 12 → 13 und 14 → 15. `search_ga` / `search_ga_summaries` auf Dev hängen am lokalen Qdrant und Embedder (G3, G7). Die Staging-Suche hängt am Snapshot nach Tuxai (**G2b**, nach bestätigtem lokalem Korpus, vor G8), an Tailscale von Railway und an der Embedding-URL auf dem Pulse. Kein weiteres Schema.
 
 ---
 
@@ -230,13 +246,18 @@ Phase 1 Gate ──→ 18–34 Phase 2 ──→ 35–38 Phase 3 ──→ 39–
 
 ## Offene Entscheidungen (Michael)
 
-Siehe Fachplan Abschnitt 11. Vor **23** (Formpaket), **29** (Aktivitätslog-Umfang), **38** (`note_conversations`), Promotion **vor Prod-Sync** nach Schritt 17-Befund in status-v2.
+Geschlossen 18.10.2026: Formpaket vor **23**, Aktivitätslog-Umfang vor **29**, Korpus-Promotion vor einem eigenen Staging-Stand, Band gegen Einzelvortrag in `list_volumes`, Nicht-Vorträge eigener `source_type`. `note_conversations` (Schritt 38) bleibt bei Phase 3.
+
+Qdrant und Embeddings: Dev lokal, Staging und Production gemeinsam auf Tuxai (G2b erledigt).
 
 ---
 
 ## Nächster konkreter Start
 
-1. **[`claude-philo-mcp-schnittstelle.md`](claude-philo-mcp-schnittstelle.md)** — Reihenfolge 0c.1 ff.
-2. Parallel **Phase 1 Block A** (Beleg/Zitation), falls noch offen laut `docs/status-v2.md`.
+Keiner in diesem Plan. Das Phase-1-Gate ist zu. Phase 2 steht in ragapp `plans/filo-phase-2-werkstatt.md`.
 
-Wenn Schritt **0** (Merge) noch offen: **0.1–0.3** nicht durch 0c blockieren — 0c auf `philo-claude-integration` committen.
+---
+
+## Mittelfristig deprecated
+
+`app_starter_prompts`, `llm_pricing` und `vector_chunks` fallen weg. Sie gehören nicht in die Korpus-Kopie Dev → Staging → Production. DROP mit dem Aufräumen in Schritt **40**, nicht vorher: alte TestFlight-Builds können die Tabellen noch lesen. `sync_prod_to_dev.mjs` nimmt `app_starter_prompts` und `llm_pricing` heute noch mit; der Vorwärts-Sync lässt sie aus.

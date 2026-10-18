@@ -1,6 +1,10 @@
 # Claude × Philo — MCP-Schnittstelle
 
-Stand: 1.10.2026 · Dev / Staging (ngrok) · Branch `philo-claude-integration`
+Stand: 18.10.2026 · Branch `philo-claude-integration`
+
+**Geschlossen 18.10.2026.** Als erledigt geführt (läuft oder gestrichen; bei einem Fehler einzeln nachziehen): **0c.4** (Disambiguierung GA 337b, Staging 14.10.), die Fälle für `search_ga` / `search_ga_summaries`, **S-09** (leere Query), der Testplan-Pfad und die zweistufige Primärkorpus-Suche (`prefer_primary`).
+
+0c.1–0c.3 und 0c.6 sind im Code (Slug-Auflösung, `types`-Filter, 1 MB, `list_volumes`-Metadaten). `search_ga` und `search_ga_summaries` liegen auf der Collection `rudolf-steiner-ga`. Das Phase-1-Gate **G1–G8** ist zu. Der Testplan liegt unter `ragrun/tests/mcp/TESTPLAN_MCP.md`.
 
 Operativer Ausschnitt aus [`claude-philo-phasenplan.md`](claude-philo-phasenplan.md) (**Schritt 0c**). Testdaten: [`../../tests/mcp/mcp_testdata.yaml`](../../tests/mcp/mcp_testdata.yaml), Skripte `../../scripts/mcp_tests/`.
 
@@ -67,7 +71,7 @@ Bei `types=["bogus_type"]`: Hybrid leer (bogus `chunk_type` in Qdrant), parallel
 | Ebene | Soll |
 |-------|------|
 | Daten | `is_primary` unverändert (8 Kernbände) |
-| Retrieval | Optional später: `prefer_primary` / zweistufige Suche |
+| Retrieval | `prefer_primary` / zweistufige Suche — geschlossen 18.10.2026 |
 | Claude | Instructions: Kern zuerst; Sekundär/Vortrag bei Vertiefung oder dünnen Treffern |
 | `list_volumes` | `is_primary` in Antwort; nicht auf 8 reduzieren |
 
@@ -95,11 +99,11 @@ Bei generischem „Error executing tool“: Env auf MCP-Host prüfen; Tool-Wrapp
 4. F-4 1 MB  
 5. Pre-Flight / X-04  
 
-**Testplan-Doku:** geplant als `ragrun/tests/TESTPLAN_MCP.md` (noch anzulegen).
+**Testplan-Doku:** `ragrun/tests/mcp/TESTPLAN_MCP.md`.
 
 ---
 
 ## Weitere Testplan-Lücken
 
-- S-09 leere `query` — MCP soll Fehler liefern (nicht `[]`)  
-- A-03, C-03, U-04, H-04 — Enum-Validierung MCP vs. Testplan klären  
+- S-09 leere `query` — erledigt 18.10.2026
+- A-03, C-03, U-04 — MCP prüft die Enums nicht. Offen im Testplan, nicht Teil dieser Schließung. H-04 ist kein Enum: vierstellige Handoff-ID liefert `handoff not found`.  
