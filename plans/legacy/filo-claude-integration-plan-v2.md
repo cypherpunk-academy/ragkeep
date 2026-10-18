@@ -1,6 +1,6 @@
 # Filo × Claude — Implementationsplan v2
 
-> **Archiv** — siehe [`../ZUKUNFT/filo-naechste-schritte.md`](../ZUKUNFT/filo-naechste-schritte.md) und [`../claude-philo-phasenplan.md`](../claude-philo-phasenplan.md).
+> **Archiv** — siehe [`../ZUKUNFT/filo-naechste-schritte.md`](../ZUKUNFT/filo-naechste-schritte.md). Der Phasenplan ist am 18.10.2026 entfernt.
 
 Erstellt 24.09.2026. Löst den früheren Plan ([`filo-claude-integration-plan.md`](./filo-claude-integration-plan.md)) ab.
 

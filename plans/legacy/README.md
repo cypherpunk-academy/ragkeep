@@ -5,8 +5,8 @@ Nicht mehr aktuelle Pläne und Snapshots. Nicht weiter pflegen. Aktive Arbeit: [
 | Datei | Grund |
 |-------|--------|
 | [`filo-claude-integration-plan.md`](filo-claude-integration-plan.md) | Integrationsplan v1 (historisch) |
-| [`filo-claude-integration-plan-v2.md`](filo-claude-integration-plan-v2.md) | Abgelöst durch `filo-naechste-schritte` + `claude-philo-phasenplan` |
-| [`mcp-tools-overview.md`](mcp-tools-overview.md) | Ersetzt durch `claude-philo-mcp-schnittstelle.md` |
+| [`filo-claude-integration-plan-v2.md`](filo-claude-integration-plan-v2.md) | Abgelöst durch `filo-naechste-schritte`. Der Phasenplan ist am 18.10.2026 entfernt |
+| [`mcp-tools-overview.md`](mcp-tools-overview.md) | Historische Tool-Übersicht. Testplan: `ragrun/tests/mcp/TESTPLAN_MCP.md` |
 | [`Embed_Readiness_Audit.md`](Embed_Readiness_Audit.md) | Snapshot 1.7.2026 |
 | [`Body_Audit_GA_Bands.md`](Body_Audit_GA_Bands.md) | Snapshot 28.6.2026 |
 | [`GA_Vortrag_Chunks_Paragraphs_Audit.md`](GA_Vortrag_Chunks_Paragraphs_Audit.md) | Snapshot 28.6.2026 |
