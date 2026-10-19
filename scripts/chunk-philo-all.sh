@@ -16,7 +16,7 @@
 #   --skip-books         Bücher überspringen
 #   --skip-augment       rag:augment:* überspringen (nur rag:chunk)
 #   --skip-assistant     assistant:chunk (assistant-Quotes) überspringen
-#   --only-assistant     Nur assistant-globale Chunks (Quotes, Concepts, Typologies);
+#   --only-assistant     Nur assistant-globale Chunks (Quotes, Concepts);
 #                        entspricht --skip-books --skip-lectures
 #   --force              rag:augment:* mit --force ausführen (Neuberechnung)
 #   --dry-run            Nur anzeigen, keine Befehle ausführen
@@ -121,13 +121,6 @@ const m=yaml.load(fs.readFileSync('$MANIFEST','utf8'));
 const c=m['concepts']||[];
 console.log(Array.isArray(c)&&c.length>0?'1':'');
 ")
-DO_TYPOLOGIES=$(cd "$RAGKEEP_ROOT" && node -e "
-const yaml=require('js-yaml'),fs=require('fs');
-const m=yaml.load(fs.readFileSync('$MANIFEST','utf8'));
-const t=m['typologies']||[];
-console.log(Array.isArray(t)&&t.length>0?'1':'');
-")
-
 FORCE_FLAG=""
 [[ -n "$FORCE" ]] && FORCE_FLAG="--force"
 
@@ -226,7 +219,6 @@ echo "    Manifest       : $MANIFEST"
 echo "    rag-collection : $COLLECTION"
 echo "    augment-types  : ${AUGMENT_TYPES:-–}"
 echo "    concepts       : ${DO_CONCEPTS:+ja}"
-echo "    typologies     : ${DO_TYPOLOGIES:+ja}"
 echo "    Bücher         : ${#ALL_BOOKS[@]}"
 echo "    Vorträge       : ${#ALL_LECTURE_DIRS[@]}"
 [[ -n "$DRY_RUN"       ]] && echo "    Modus          : dry-run"
@@ -270,7 +262,7 @@ fi
 
 
 # ---------------------------------------------------------------------------
-# Assistant-globale Chunks (assistant-Quotes, Concepts, Typologies)
+# Assistant-globale Chunks (assistant-Quotes, Concepts)
 # ---------------------------------------------------------------------------
 if [[ -z "$SKIP_AUGMENT" ]] && [[ -z "$SKIP_ASSISTANT" ]]; then
 
@@ -288,13 +280,6 @@ if [[ -z "$SKIP_AUGMENT" ]] && [[ -z "$SKIP_ASSISTANT" ]]; then
         echo ""
         echo "=== rag:augment:concepts ==="
         run yarn --cwd "$RAGPREP_ROOT" rp rag:augment:concepts "$ASSISTANT" $FORCE_FLAG
-    fi
-
-    # --- Typologies ---------------------------------------------------------
-    if [[ -n "$DO_TYPOLOGIES" ]]; then
-        echo ""
-        echo "=== rag:augment:typologies:explain ==="
-        run yarn --cwd "$RAGPREP_ROOT" rp rag:augment:typologies:explain "$ASSISTANT" $FORCE_FLAG
     fi
 fi
 
