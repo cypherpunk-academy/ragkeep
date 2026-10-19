@@ -49,7 +49,6 @@ yarn rp rag:augment:summaries <book_dir>           # Generate summaries
 yarn rp rag:augment:quotes <book_dir>              # Extract quotes
 yarn rp rag:augment:concepts <assistant>            # Explain concepts
 yarn rp rag:augment:typologies:explain <assistant>  # Explain typologies
-yarn rp assistant:chunk <assistant> --type talks    # Chunk assistant talks
 yarn rp assistant:chunk <assistant> --type quotes   # Chunk assistant quotes
 yarn rp text:annotate <book_dir>                    # Annotate page refs
 ```

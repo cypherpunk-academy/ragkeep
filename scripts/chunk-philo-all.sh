@@ -15,8 +15,8 @@
 #   --skip-lectures      Vorträge überspringen
 #   --skip-books         Bücher überspringen
 #   --skip-augment       rag:augment:* überspringen (nur rag:chunk)
-#   --skip-assistant     assistant:chunk (Talks, assistant-Quotes) überspringen
-#   --only-assistant     Nur assistant-globale Chunks (Talks, Quotes, Concepts, Typologies);
+#   --skip-assistant     assistant:chunk (assistant-Quotes) überspringen
+#   --only-assistant     Nur assistant-globale Chunks (Quotes, Concepts, Typologies);
 #                        entspricht --skip-books --skip-lectures
 #   --force              rag:augment:* mit --force ausführen (Neuberechnung)
 #   --dry-run            Nur anzeigen, keine Befehle ausführen
@@ -127,9 +127,6 @@ const m=yaml.load(fs.readFileSync('$MANIFEST','utf8'));
 const t=m['typologies']||[];
 console.log(Array.isArray(t)&&t.length>0?'1':'');
 ")
-# Talks: Source of Truth ist rag_talks.publishing_status='published', nicht das Manifest.
-# assistant:chunk --type talks fragt die DB ab – das Flag steuert nur ob der Schritt läuft.
-DO_TALKS=1
 
 FORCE_FLAG=""
 [[ -n "$FORCE" ]] && FORCE_FLAG="--force"
@@ -230,7 +227,6 @@ echo "    rag-collection : $COLLECTION"
 echo "    augment-types  : ${AUGMENT_TYPES:-–}"
 echo "    concepts       : ${DO_CONCEPTS:+ja}"
 echo "    typologies     : ${DO_TYPOLOGIES:+ja}"
-echo "    talks          : aus rag_talks (published)"
 echo "    Bücher         : ${#ALL_BOOKS[@]}"
 echo "    Vorträge       : ${#ALL_LECTURE_DIRS[@]}"
 [[ -n "$DRY_RUN"       ]] && echo "    Modus          : dry-run"
@@ -274,16 +270,9 @@ fi
 
 
 # ---------------------------------------------------------------------------
-# Assistant-globale Chunks (Talks, assistant-Quotes, Concepts, Typologies)
+# Assistant-globale Chunks (assistant-Quotes, Concepts, Typologies)
 # ---------------------------------------------------------------------------
 if [[ -z "$SKIP_AUGMENT" ]] && [[ -z "$SKIP_ASSISTANT" ]]; then
-
-    # --- assistant:chunk (Talks + assistant-eigene Quotes) ------------------
-    if [[ -n "$DO_TALKS" ]]; then
-        echo ""
-        echo "=== assistant:chunk – Talks ==="
-        run yarn --cwd "$RAGPREP_ROOT" rp assistant:chunk "$ASSISTANT" --type talks
-    fi
 
     # assistant:chunk quotes (assistant-eigene Quotes, unabhängig von rag:augment:quotes)
     # Nur wenn quotes/ im Assistenten-Verzeichnis vorhanden sind
