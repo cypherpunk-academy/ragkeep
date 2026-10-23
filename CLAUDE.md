@@ -47,9 +47,12 @@ All chunking/augmentation goes through ragprep:
 yarn rp rag:chunk <book_dir> --assistant <name>    # Chunk a book
 yarn rp rag:augment:summaries <book_dir>           # Generate summaries
 yarn rp rag:augment:quotes <book_dir>              # Extract quotes
-yarn rp rag:augment:concepts <assistant>            # Explain concepts
-yarn rp assistant:chunk <assistant> --type quotes   # Chunk assistant quotes
-yarn rp text:annotate <book_dir>                    # Annotate page refs
+yarn rp rag:augment:concepts <assistant>                 # Frequencies → concepts-extracted / curated
+yarn rp rag:augment:concepts:explain <assistant>         # LLM → sources/concepts/concepts.yaml
+yarn rp assistant:chunk <assistant> --type quotes        # Chunk assistant quotes
+yarn rp assistant:chunk <assistant> --type typology      # Typology YAML → rag_chunks; dann rag:embed --type typology
+yarn rp assistant:chunk <assistant> --type concept       # concepts.yaml → rag_chunks; dann rag:embed --type concept
+yarn rp text:annotate <book_dir>                         # Annotate page refs
 ```
 
 ## ID Conventions
