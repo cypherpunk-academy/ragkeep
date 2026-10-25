@@ -1,7 +1,7 @@
 # Front 2 — MCP-Architektur
 
-**Stand:** 2026-10-23  
-**Status:** Soll-Architektur; Schritte 1–2 in Umsetzung  
+**Stand:** 2026-10-25  
+**Status:** Soll-Architektur; Schritte 1–2 erledigt; Schritt 3 (SG) weitgehend (Übergang: Referenzen noch in YAML); **Schritt 4 umgesetzt (ragrun + ragapp)**  
 **Repos:** ragrun (`app/mcp_server/`), ragprep (Referenzlauf), ragkeep (YAML), ragapp (gemeinsame Suche)  
 **Vorrang:** Entscheidungen aus dem Plan-Review (E1–E10) gelten vor älteren Planfragmenten.
 
@@ -56,42 +56,39 @@ Zwei Wege: direkte Original-Chunks und Wegweiser (Begriff, Typologie, Zusammenfa
 
 ## 3a. Referenzlauf (ragprep)
 
-Belege an Typologie-Knoten, Begriffen und `curated_text`-Abschnitten (`##`) aus Manifest Primär/Sekundär (Bücher + Vorträge). Ziel-Pool: nur `chunk_type` **`book`** und **`secondary_book`**, bare `source_id`, keine `:quotes`/`:summary`, kein GA, kein Augment. Steiner-Vorträge im Korpus sind `secondary_book` (Staging geprüft). **`rag:augment:references`** entsteht neu nach diesem Abschnitt (E3: bestehende Branches `feat/augment-references` / `feat/chunk-references-endpoint` nicht verwenden).
+Belege an Typologie-Knoten, Begriffen und `curated_text`-Zeilen (je **ein** Chunk pro Textknoten) aus Manifest Primär/Sekundär (Bücher + Vorträge). Ziel-Pool: nur `chunk_type` **`book`** und **`secondary_book`**, bare `source_id`, keine `:quotes`/`:summary`, kein GA, kein Augment. Steiner-Vorträge im Korpus sind `secondary_book` (Staging geprüft). **`rag:augment:references`** (E3: alte Branches `feat/augment-references` / `feat/chunk-references-endpoint` nicht verwenden).
 
-**Speicherort (colocated):**
+**SSOT vs. Laufzeit**
 
-| Art | Ort |
-|-----|-----|
-| Typologie | `sources/typologies/*.yaml` |
-| Begriff | `sources/concepts/concepts.yaml` |
-| Curated | Sidecar `*.references.yaml` pro `.md`, Block pro `##` |
+| Was | SSOT (Git) | Laufzeit (DB) |
+| --- | ---------- | ------------- |
+| Redaktion (Titel, Text, Struktur, `chunk_id`, `kuratiert`, …) | `sources/typologies/*.yaml`, `sources/concepts/concepts.yaml`, `sources/curated-texts/` | Spiegel in `rag_chunks.text` / Metadaten nach `assistant:chunk` |
+| Belege (`references`) | **nicht** — nie manuell pflegen | **`rag_chunks.references`** (JSONB); MCP `search_corpus(ref=…)` und Wegweiser `references_status` lesen **nur Postgres** |
+| Embeddings | — | Qdrant nach `rag:embed` |
 
-**YAML-Referenz (E1):** Kein dauerhafter `paragraph_id`-Anker — IDs sind je Umgebung neu (`randomUUID` in `paragraphChapterMatcher.ts`). Gespeichert werden **`chunk_id`** (uuid5, stabil) und natürlicher Schlüssel **`source_id`, `segment_slug`, `paragraph_number`**. `paragraph_id` zur Laufzeit über `app_paragraph_chunk` / Lookup wie `_lookup_paragraph_ids`. Verwaist, wenn `chunk_id` nicht mehr aktiv.
+**Pipeline (Pflichtreihenfolge):**
 
-```yaml
-references:
-  - id: "<uuidv4>"
-    chunk_id: …
-    chunk_type: book | secondary_book
-    source_id: …
-    segment_slug: …
-    paragraph_number: …
-    relation: …
-    relevance: …
-    begruendung: …
-```
+1. **`assistant:chunk`** — exakt **1 Chunk pro Textknoten** (Typologie-Member, Begriff, `curated_text`-Segment); Referenzen beim Upsert **leer lassen** (nicht aus YAML übernehmen).
+2. **`rag:augment:references`** — Kandidaten + LLM-Judge → **`references` auf die bestehende Assistant-`chunk_id` in der DB** schreiben (Upsert/Patch über ragrun, z. B. `store-chunks` mit Merge oder schlanker References-Endpoint).
+3. **`rag:embed`** — Vektoren; ändert keine Referenzen.
 
-Pipeline: Hybrid-Kandidaten (~30) → LLM-Prüfung (`definiert | erlaeutert | …`, Krank-Pol: `kritisiert | warnt | …`) → max. 5 pro Knoten. In-place in dieselbe YAML. Kein Pflicht-`rag:augment:quotes` (Buch).
+Text in YAML geändert → **chunk + augment:references** neu. Korpus (Primär/Sekundär) neu ingested ohne YAML-Änderung → **augment:references** (betroffene Typen / Vollrefresh) prüfen — Ziel-`chunk_id`s können verwaist sein (E1, `deprecated_at`).
+
+**Referenz-Objekt (E1, in DB):** Kein dauerhafter `paragraph_id`-Anker — IDs sind je Umgebung neu (`randomUUID` in `paragraphChapterMatcher.ts`). Gespeichert werden u. a. `chunk_id` (Korpus-Ziel, uuid5), `chunk_type`, natürlicher Schlüssel `source_id`, `segment_slug`, `paragraph_number`, `relation`, `relevance`, `begruendung`. `paragraph_id` zur Laufzeit über `app_paragraph_chunk` / Lookup wie `_lookup_paragraph_ids`.
+
+Judge-Pipeline: Hybrid-Kandidaten (~30) → LLM-Prüfung (`definiert | erlaeutert | …`, Krank-Pol: `kritisiert | warnt | …`) → max. 5 pro Knoten. Kein Pflicht-`rag:augment:quotes` (Buch).
+
+**Übergang (Schritt 3):** SG-YAML enthält noch `references` aus dem ersten Typologie-Lauf; Schritt 6 entfernt sie aus Git, sobald die DB befüllt ist, und stellt Augment auf DB-Schreiben um.
 
 #### 3a.1 Soziale Gesundheit
 
-`zitate` entfällt; pro Aspekt `references` (Freitext-`zitate` nicht übernehmen). FM: `members.references: references`. Chunker: `parseReferences`, kein `quoteReferences`. Band-2-`generate-a2.py`: Regex `references` statt `zitate`.
+`zitate` entfällt (Freitext-`zitate` nicht übernehmen). **Soll:** keine `references`-Blöcke mehr in `soziale-gesundheit.yaml` — nur redaktionelle Felder. Band-2-`generate-a2.py` nutzt für das Plakat nur `schlagwort`/`schlagsatz`; `references` war nur Parser-Grenze (optional `chunk_id` als Abschnittende).
 
 ---
 
 ## 3b. Steiner-Zitat-Katalog (Front 3)
 
-`rag:augment:quotes:export-yaml` (geplant): Scan `references` in typologies + concepts + Sidecars; ergänzend Kursiv; optional einmalig legacy `quotes.md`. Output `sources/quotes/*.yaml`. Philo `*.quote.md` entfällt. Nicht identisch mit Buch-`rag:augment:quotes`.
+`rag:augment:quotes:export-yaml` (geplant): Scan **`rag_chunks.references`** (Assistant-Partition, Typologie/Begriff/curated_text) — nicht mehr YAML/Sidecars; ergänzend Kursiv; optional einmalig legacy `quotes.md`. Output `sources/quotes/*.yaml`. Philo `*.quote.md` entfällt. Nicht identisch mit Buch-`rag:augment:quotes`.
 
 ---
 
@@ -145,12 +142,23 @@ Handoff-Erweiterung, `commands.yaml` als Resource, `mcp_activity`, Hilfeseite �
 
 ## 9. Umsetzung (PR-Reihenfolge)
 
-1. **Konsistenzprüfung** Absatznummern + `segment_slug` (E2); GA-Payload-Notiz (E4).
-2. **`get_passage`** erweitern (E9) + Unit-Tests.
-3. **§3a.1** + `rag:augment:references` — **vor Start Rücksprache Michael.**
-4. `search_corpus`-Wegweiser, Typ-Trennung, **`talk` entfernen** — **App `/app/search` mitziehen (E6)** + ragapp.
-5. `curated_text` Parser/Reader; GA `routed`; Vergleichsmodus; Testkorpus.
-6. `TESTPLAN_MCP.md` je Schritt.
+1. **Erledigt:** Konsistenzprüfung Absatznummern + `segment_slug` (E2); GA-Payload-Notiz (E4).
+2. **Erledigt:** `get_passage` erweitern (E9) + Unit-Tests.
+3. **Weitgehend (SG):** §3a.1 Soziale Gesundheit (`members.references`, kein `zitate`) + `rag:augment:references --type typology` für `soziale-gesundheit.yaml`. Offenes → Schritt 7.
+4. **Erledigt:** `search_corpus` → `{hits, wegweiser}`, `ref=`, `talk` entfernt, `/app/search` E6/E7/E10, MCP-Tools `list_typology` / `search_typology` / `list_typologies` entfernt, Resource `philo://typologien`.
+5. **Manuell (vor Schritt 6):** Begriffe in `sources/concepts/concepts.yaml` redaktionell überarbeiten — braucht die neue MCP-Antwortstufe aus Schritt 4 (Wegweiser, `references`, Lesen über `get_passage` / `search_corpus(ref=…)`).
+6. **Referenzlauf §3a — DB-first, YAML bereinigen (ragprep + ragkeep + ggf. ragrun):**
+   - **Pipeline dokumentieren** (README ragprep, CLAUDE/ragkeep): immer `assistant:chunk` → `rag:augment:references` → `rag:embed`; MCP liest Referenzen aus Postgres.
+   - **ragprep `rag:augment:references`:** Primärsink **`rag_chunks.references`** (bestehende Assistant-`chunk_id`); **kein** In-place-Patch in Typologie-/Concept-YAML mehr. Typologie-Lauf (`--type typology`) auf DB-Schreiben umstellen (ersetzt `patchTypologyYaml`).
+   - **`--type concept`**, **`--type curated_text`** implementieren (Ziele = `begriff`- bzw. `curated_text`-Zeilen nach Chunking; 1 Chunk = 1 Begriff bzw. 1 Segment).
+   - **`assistant:chunk`:** `references` aus YAML **ignorieren/strippen** beim `store-chunks` (Typologie, Begriff); FM **`members.references`** aus Typologie-YAML-Schema entfernen, wenn bereinigt.
+   - **Migration Git:** Nach erfolgreichem Augment-Lauf in der Zielumgebung (Staging/Dev): **`references:`-Blöcke aus `sources/` löschen** — zuerst `soziale-gesundheit.yaml`, dann **`concepts.yaml`** (historische/heuristische Einträge), übrige Typologien; Commit nur wenn DB-Belege für dieselben `chunk_id`s vorhanden sind (Audit: `search_corpus(ref=…)` / SQL).
+   - **SG + Begriffe ausführen:** `assistant:chunk` (typology/concept) → `augment:references` → `rag:embed` auf Dev/Staging, damit Wegweiser `references_status: belegt` und `ref` greifen.
+   - **`generate-a2.py`:** Parser an YAML **ohne** `references`-Block anpassen (Abschnittende an `chunk_id` / nächstem Aspekt).
+   - **Tests/Docs:** `typology-tree-chunks.md`, Plan E1-Zeile; optional ragrun-Test für References-Upsert.
+7. **Schritt-3-Rest:** andere Typologie-YAMLs (redaktionell, ohne `references`), SG-Nacharbeit (Rest-`zitate`, Qualität), Primär-vs.-Sekundär-Gewichtung in Suche/Judge, vollständige E1-Felder in DB-Referenzen, übrige Typologien **chunk → augment → embed**, Git/PR. O1 weiter offen.
+8. **`curated_text` Parser/Reader** (Ingest/Lesen); GA **`routed`**; **Vergleichsmodus**; Korpus-Testkorpus (Abschnitt 11).
+9. **`TESTPLAN_MCP.md`** je Schritt.
 
 ---
 
@@ -178,7 +186,7 @@ Nicht jetzt umsetzen:
 
 | ID | Inhalt |
 |----|--------|
-| E1 | Referenz-YAML: `chunk_id` + `source_id`/`segment_slug`/`paragraph_number`, kein gespeicherter `paragraph_id` |
+| E1 | Referenz-Payload in `rag_chunks.references`: Korpus-`chunk_id` + `source_id`/`segment_slug`/`paragraph_number`, kein gespeicherter `paragraph_id`; nicht in Git-YAML |
 | E2 | Konsistenzprüfung inkl. `segment_index` ↔ `segment_slug` |
 | E3 | Alte Referenz-Branches ignorieren; Vorträge = `secondary_book` im Referenz-Pool |
 | E4 | GA „Eintauchen“ nach `segment_id`; kein absatzweises GA-Lesen |
