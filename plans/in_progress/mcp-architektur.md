@@ -13,13 +13,13 @@ Ersetzt inhaltlich [`mcp-functions-and-search.md`](./mcp-functions-and-search.md
 
 Drei Jobs: suchen, lesen, Nutzerarbeit. Der Katalog (`list_volumes`, `list_lectures`, `get_lecture_info`) gehört zum Lesen. Neue MCP-Tools nur bei neuem Datentyp oder klarer Trennung Lesen/Schreiben. Filter sind Parameter; Verhalten steht in Instructions oder am Treffer. Schreib-Tools nur auf ausdrückliche Bitte. Kein Tool pro Typologie, Buch oder Pipeline-Schritt.
 
-**Originalquellen in `hits`:** Körper aus Werken und Vorträgen (`book`, `secondary_book`), wörtliche Zitate (`quote`, siehe E10) und Eigentexte (`curated_text` aus `sources/curated-texts/` — in Treffern, nicht als Steiner-Beleg). KI-Augment (Begriff, Typologie, Kapitelzusammenfassung, Zitat-Erklärung) lenkt die Suche, landet nicht in `hits`; Einordnung über `via` und Block `wegweiser`.
+**Originalquellen in `hits`:** Körper aus Werken und Vorträgen (`book`, `secondary_book`) und wörtliche Zitate (`quote`, siehe E10). **`curated_text` nie in `hits` und nie als `wegweiser`:** Eigentexte aus `sources/curated-texts/` sind unsichtbare Routing-/Referenzträger; bei Match werden gespeicherte `references` expandiert — Korpus (`book` / `secondary_book`, zitierbar) und ggf. GA-Angaben (`ga_text`, `zitierbar: false`, ohne `citation`). KI-Augment (Begriff, Typologie, Kapitelzusammenfassung, Zitat-Erklärung) landet in `wegweiser`, nicht in `hits`.
 
 **`kuratiert` (Boolean, Typologie + Begriff-YAML):** `kuratiert: true | false`, fehlend = false. Nicht verwechseln mit `chunk_type: curated_text`. `false`: Wegweiser nur mit Titel, `ref`, `herkunft: augment`, `zitierbar: false`. `true`: zusätzlich `schlagsatz` und `kurztext` (max. ~300 Zeichen), `herkunft: kuratiert`, nie Beleg.
 
 **Chunk-Typen (Soll):** Körper `book`, `secondary_book` (Steiner-Vorträge: `secondary_book`, `source_id` = Katalog-UUID, nicht `talk`). Augment: `quote`, `quote_explanation`, `chapter_summary`, `begriff`, `typology`. Eigentexte: `curated_text`. GA: `ga_text` (eigene Collection). `talk` / `talk_summary` entfallen (Ersatz `curated_text`). App-Chat `rag_talks` hat keinen `chunk_type`.
 
-**Such-Reihenfolge:** Immer zuerst `search_corpus`. `search_ga` nur bei expliziter GA-Nennung oder wenn der Korpus nicht reicht. Referenzlauf ohne GA-Fallback.
+**Such-Reihenfolge:** Immer zuerst `search_corpus`. Bekannte GA-`chunk_id` → `get_ga_chunk`. Freie `search_ga` nur nach explizitem Nutzerwunsch (Gesamtausgabe).
 
 **Ist (Review, unverändert dokumentiert):** 18 Tools in `server.py`; `talk` noch in `_APP_TYPE_TO_CHUNK_TYPES`; Instructions erwähnen Typologie-`zitate`; `quote_explanation` wird gegen Elternzitat aufgelöst (`_resolve_quote_explanations`) — Vorbild Wegweiser-Weg; Staging: 0 `rag_paragraphs`, Korpus-Treffer ohne `paragraph_id`; `parseBookStructure.ts` erfasst Zwischenüberschriften fest nur Ebene 2.
 
@@ -29,7 +29,7 @@ Drei Jobs: suchen, lesen, Nutzerarbeit. Der Katalog (`list_volumes`, `list_lectu
 
 | Job | Soll (dauerhaft) |
 |-----|------------------|
-| Suchen | `search_corpus`, `search_ga` |
+| Suchen | `search_corpus`, `get_ga_chunk`, `search_ga` |
 | Lesen | `get_passage`, `list_volumes`, `list_lectures`, `get_lecture_info` |
 | Nutzer | `list_work_texts`, `get_work_text`, `create_work_text`, `update_work_text`, `get_protocol`, `append_to_protocol`, `get_handoff` |
 | Befristet | `rate_search_comparison` (Vergleichsmodus) |
@@ -42,9 +42,9 @@ Entfallen: `list_typologies`, `list_typology`, `search_typology`, `search_ga_sum
 
 Zwei Wege: direkte Original-Chunks und Wegweiser (Begriff, Typologie, Zusammenfassung) → Referenzen oder Kapitelsuche → RRF/Dedupe. **Chunk vs. Absatz:** Treffer sind `rag_chunks`; Lesen/Zitat über `paragraph_id` (Lookup wie `_lookup_paragraph_ids`). **`get_passage`** liefert Absätze, nicht Chunk-Rohtext.
 
-**`types`:** `text | quote | curated_text`. Intern `text` → `book` + `secondary_book` (ohne `talk`, E6). **`quote` (E10):** nur in `hits`, wenn `quote_verified` und auflösbare `paragraph_id`; Dedupe pro `paragraph_id` fasst Zitat und Körper desselben Absatzes. **`curated_text`:** kein `return_url`, nicht als Steiner-Beleg zitieren.
+**`types`:** `text | quote | curated_text`. Intern `text` → `book` + `secondary_book` (ohne `talk`, E6). **`quote` (E10):** nur in `hits`, wenn `quote_verified` und auflösbare `paragraph_id`; Dedupe pro `paragraph_id` fasst Zitat und Körper desselben Absatzes. **`curated_text`:** Kandidaten aus dem Index nur zur Referenz-Expansion — nie selbst in `hits`/`wegweiser`.
 
-**Titelsuche (E7):** `_title_match_search` liefert in `hits` nur Originaltypen (`book`, `secondary_book`, `quote`, `curated_text`). Augment-Titel → höchstens `wegweiser`.
+**Titelsuche (E7):** `_title_match_search` liefert in `hits` nur Originaltypen (`book`, `secondary_book`, `quote`). Augment-Titel → höchstens `wegweiser`. Curated-Titel → References expandieren, kein Hit.
 
 **Antwort:** `hits` (Originale) + `wegweiser` (max. 5): `kind`, `titel`, `ref`, `references_status`, `herkunft`, `zitierbar: false`; bei `kuratiert: true` optional `schlagsatz`/`kurztext`. Treffer mit `citation`/`return_url` für Steiner-Originale mit Absatz-Mapping.
 
@@ -102,9 +102,11 @@ Ein Lesezugang; **kein** Lesen per `chunk_id`. Parameter (E9, englisch): `paragr
 
 ---
 
-## 4a. `search_ga`
+## 4a. GA-Tools
 
-Gefiltert: direkte Hybrid-Suche. Ungefiltert: gestuft (Summaries orientieren → `ga_text` „Eintauchen“ → RRF). **Eintauchen filtert auf `segment_id`**, nicht nur `lecture_id`, damit Schriften (z. B. GA 4, `segment_id` `"4:11"`) nicht fehlen. Summaries nie in `hits`.
+**`get_ga_chunk(chunk_id)`:** Qdrant-Lookup in `rudolf-steiner-ga` per Payload-`chunk_id` (≠ Point-ID). Immer erlaubt für bekannte IDs (z. B. curated-Angaben). Antwort mit Volltext, `zitierbar: false`.
+
+**`search_ga` / `search_ga_summaries`:** freie Hybrid-Suche nur nach explizitem Nutzerwunsch. Gefiltert: direkte Hybrid-Suche. Ungefiltert: gestuft (Summaries orientieren → `ga_text` „Eintauchen“ → RRF). **Eintauchen filtert auf `segment_id`**, nicht nur `lecture_id`. Summaries nie in `hits`.
 
 **Korpus-Mapping (E5):** Liegt der Vortrag eines GA-Treffers im Korpus, Abbildung über Katalog (`lecture_id` → UUID → `rag_paragraphs`) auf Korpus-Absatz → `citation`/`return_url`, Dedupe Korpus/GA. Deep-Link-Lücke nur noch für Stellen **außerhalb** des Korpus.
 
@@ -118,7 +120,7 @@ Kette: `citation.return_url` → `/passage/{uuid}` → App oder `corpus.*`. Stag
 
 ## 5a. `curated_text`
 
-Quelle `sources/curated-texts/`; `#` Titel, `##` Segment, `###` Annotation `subheading`. Parser/Reader-Anpassungen wie im Umsetzungsplan. Kein MCP-`return_url` für Eigentexte.
+Quelle `sources/curated-texts/<sammlung>/`. Markdown unverändert: **`#`** = Vortrag/Artikel (`segment_title`), **`##`** = Abschnitt (harte Chunk-Grenze, `section_title`). Sammlung = 1. Verzeichnisebene; `source_id` = UUIDv4 in `.uuid` im Ordner. `chunk_id` = frische UUIDv4 pro Chunk-Zeile (kein Anker). Pipeline: `assistant:chunk --type curated_text` → `rag:augment:references --type curated_text` → `rag:embed --type curated_text`. MCP: nie in `hits`/`wegweiser`; Match → expandierte `references` in `hits`. Korpus-Ziele (`book` / `secondary_book`) mit `citation`. Bei spärlichen Korpus-Refs (≤1) ergänzt Augment GA-Angaben (`ga_text` aus `rudolf-steiner-ga`) mit `zitierbar: false` (ohne `citation`, kurzes `snippet` + `chunk_id`). Volltext bei Bedarf via **`get_ga_chunk(chunk_id)`** (immer erlaubt für bekannte IDs). Freie **`search_ga`**-Textsuche nur nach explizitem Nutzerwunsch. Chunks ohne jede Referenz: manuell in Markdown nacharbeiten.
 
 ---
 

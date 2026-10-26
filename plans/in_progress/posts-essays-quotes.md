@@ -19,23 +19,25 @@ Gehört zu Front 3 neben [`typology-tree-chunks.md`](./typology-tree-chunks.md),
 
 **SSOT (Soll, siehe [`mcp-architektur.md`](./mcp-architektur.md) §3b — noch zu schreiben aus Konsolidierungsplan):**
 
-- **Steiner-Katalog:** `sources/quotes/*.yaml` (kurze, zitierbare Passagen), gebaut durch **`rag:augment:quotes:export-yaml`** aus colocated **`references`** (`typologies/`, `concepts/`, `curated-texts/*.references.yaml`), ergänzt Kursiv aus `rag_paragraphs`, optional einmalig legacy `books/…/quotes.md`.
+- **Steiner-Katalog:** `sources/quotes/*.yaml` (kurze, zitierbare Passagen), gebaut durch **`rag:augment:quotes:export-yaml`** aus **`rag_chunks.references`** (Typologie/Begriff/curated_text in Postgres — keine Sidecars), ergänzt Kursiv aus `rag_paragraphs`, optional einmalig legacy `books/…/quotes.md`.
 - **Philo-Assistentenzitate** (`sources/quotes/*.quote.md`, `writings/co-created/quotes/`) **entfallen** — kein `assistant:chunk --type quotes` für Philo.
 - Deprecated **`rag:augment:quotes`** (Buch → `quotes.md`) bleibt eigene Pipeline; nicht verwechseln mit `export-yaml`.
 
 **MCP/App:** Belege für Steiner weiter über Körper/`paragraph_id` und `return_url`. Ob der YAML-Katalog als eigene Treffer-Art in `search_corpus` (`types=quote`) oder nur in der App rankt, ist offen — keine dritte `search_*`-Funktion (Front 2).
 
-## Posts und Essays — wie chunken?
+## Posts und Essays — `curated_text`
 
-**SSOT für MCP/Einbettung (Soll):** [`ragkeep/assistants/philo-von-freisinn/sources/curated-texts/`](../../../ragrun/ragkeep/assistants/philo-von-freisinn/sources/curated-texts/) mit `chunk_type: curated_text` (siehe MCP-Plan §5a). Migration aus `writings/talks/` und `projects/…` (z. B. „Das Korn …“).
+**SSOT:** [`sources/curated-texts/`](../../assistants/philo-von-freisinn/sources/curated-texts/) (siehe MCP-Plan §5a).
 
-Ist noch verstreut: Talks unter `writings/talks/`, Blog-Posts unter `projects/Band 1 …/blog-posts/`.
+| Ebene | Bedeutung |
+|-------|-----------|
+| Verzeichnis | Sammlung; `source_id` = UUIDv4 in `.uuid` |
+| `#` | Vortrag/Artikel (`segment_title`) |
+| `##` | Abschnitt (harte Chunk-Grenze, buchähnliches Splitting innerhalb) |
 
-Offen:
+Pipeline: `assistant:chunk --type curated_text` → `rag:augment:references --type curated_text` → `rag:embed`. **Keine Sidecars / `*.references.yaml`.** MCP: Curated nie in `hits`/`wegweiser`; Match expandiert nur Korpus-Belege.
 
-- Ein Chunk-Typ `talk` / `essay` / `post`, oder alles `book`-artig mit eigenem `source_type`?
-- Absatz vs. Abschnitt vs. ganzer Text. Essays sind länger als ein Talk und kürzer als ein Buch.
-- `source_id`: Assistenten-Pfad, nicht Buch-UUID. Suffices `:quotes` / `:summary` nur wenn wirklich Zitat- oder Summary-Chunks entstehen.
+Talks unter `writings/talks/` und Blog-Posts unter `projects/…` bleiben Migrationskandidaten in diesen Baum.
 
 ### Essays zuerst
 
