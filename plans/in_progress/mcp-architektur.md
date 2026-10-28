@@ -1,7 +1,7 @@
 # Front 2 — MCP-Architektur
 
-**Stand:** 2026-10-25  
-**Status:** Soll-Architektur; Schritte 1–2 erledigt; Schritt 3 (SG) weitgehend (Übergang: Referenzen noch in YAML); **Schritt 4 umgesetzt (ragrun + ragapp)**  
+**Stand:** 2026-10-26  
+**Status:** Schritte 1–4 erledigt; Schritt 3 (SG) weitgehend; **Schritt 6 Teil** (`augment:references` DB-first inkl. `--type concept` / `--type curated_text`) und **Schritt 8 Teil** (`curated_text` Chunk→Augment→Embed, GA-Angaben + `get_ga_chunk`) auf Dev umgesetzt. Offen: YAML-`references`-Bereinigung, übrige Typologien, Quotes (Front 3), Staging→Prod / `rag_paragraphs`.  
 **Repos:** ragrun (`app/mcp_server/`), ragprep (Referenzlauf), ragkeep (YAML), ragapp (gemeinsame Suche)  
 **Vorrang:** Entscheidungen aus dem Plan-Review (E1–E10) gelten vor älteren Planfragmenten.
 
@@ -13,15 +13,15 @@ Ersetzt inhaltlich [`mcp-functions-and-search.md`](./mcp-functions-and-search.md
 
 Drei Jobs: suchen, lesen, Nutzerarbeit. Der Katalog (`list_volumes`, `list_lectures`, `get_lecture_info`) gehört zum Lesen. Neue MCP-Tools nur bei neuem Datentyp oder klarer Trennung Lesen/Schreiben. Filter sind Parameter; Verhalten steht in Instructions oder am Treffer. Schreib-Tools nur auf ausdrückliche Bitte. Kein Tool pro Typologie, Buch oder Pipeline-Schritt.
 
-**Originalquellen in `hits`:** Körper aus Werken und Vorträgen (`book`, `secondary_book`) und wörtliche Zitate (`quote`, siehe E10). **`curated_text` nie in `hits` und nie als `wegweiser`:** Eigentexte aus `sources/curated-texts/` sind unsichtbare Routing-/Referenzträger; bei Match werden gespeicherte `references` expandiert — Korpus (`book` / `secondary_book`, zitierbar) und ggf. GA-Angaben (`ga_text`, `zitierbar: false`, ohne `citation`). KI-Augment (Begriff, Typologie, Kapitelzusammenfassung, Zitat-Erklärung) landet in `wegweiser`, nicht in `hits`.
+**Originalquellen in `hits`:** Körper aus Werken und Vorträgen (`book`, `secondary_book`). Kuratierte Steiner-Zitate sind **Markierungen** am Körper (`metadata.quote_marks[]`, Keyword `metadata.quotes` = none|author|quoted, siehe §3b) — kein eigener Hit-Typ. **`curated_text` nie in `hits` und nie als `wegweiser`:** Eigentexte aus `sources/curated-texts/` sind unsichtbare Routing-/Referenzträger; bei Match werden gespeicherte `references` expandiert — Korpus (`book` / `secondary_book`, zitierbar) und ggf. GA-Angaben (`ga_text`, `zitierbar: false`, ohne `citation`). KI-Augment (Begriff, Typologie, Kapitelzusammenfassung) landet in `wegweiser`, nicht in `hits`.
 
 **`kuratiert` (Boolean, Typologie + Begriff-YAML):** `kuratiert: true | false`, fehlend = false. Nicht verwechseln mit `chunk_type: curated_text`. `false`: Wegweiser nur mit Titel, `ref`, `herkunft: augment`, `zitierbar: false`. `true`: zusätzlich `schlagsatz` und `kurztext` (max. ~300 Zeichen), `herkunft: kuratiert`, nie Beleg.
 
-**Chunk-Typen (Soll):** Körper `book`, `secondary_book` (Steiner-Vorträge: `secondary_book`, `source_id` = Katalog-UUID, nicht `talk`). Augment: `quote`, `quote_explanation`, `chapter_summary`, `begriff`, `typology`. Eigentexte: `curated_text`. GA: `ga_text` (eigene Collection). `talk` / `talk_summary` entfallen (Ersatz `curated_text`). App-Chat `rag_talks` hat keinen `chunk_type`.
+**Chunk-Typen (Soll):** Körper `book`, `secondary_book` (Steiner-Vorträge: `secondary_book`, `source_id` = Katalog-UUID, nicht `talk`). Augment: `chapter_summary`, `begriff`, `typology`. Eigentexte: `curated_text`. GA: `ga_text` (eigene Collection). `talk` / `talk_summary` entfallen (Ersatz `curated_text`). App-Chat `rag_talks` hat keinen `chunk_type`. Legacy `quote` / `quote_explanation` (Buch-Mine) werden nach Katalog-Migration abgelöst — Katalog nutzt Markierung am Körper (§3b).
 
 **Such-Reihenfolge:** Immer zuerst `search_corpus`. Bekannte GA-`chunk_id` → `get_ga_chunk`. Freie `search_ga` nur nach explizitem Nutzerwunsch (Gesamtausgabe).
 
-**Ist (Review, unverändert dokumentiert):** 18 Tools in `server.py`; `talk` noch in `_APP_TYPE_TO_CHUNK_TYPES`; Instructions erwähnen Typologie-`zitate`; `quote_explanation` wird gegen Elternzitat aufgelöst (`_resolve_quote_explanations`) — Vorbild Wegweiser-Weg; Staging: 0 `rag_paragraphs`, Korpus-Treffer ohne `paragraph_id`; `parseBookStructure.ts` erfasst Zwischenüberschriften fest nur Ebene 2.
+**Ist (26.10.):** MCP u. a. `search_corpus`, `get_ga_chunk`, `search_ga` / `search_ga_summaries`; `talk` aus App-Suchtypen entfernt; curated nie in `hits`; GA-Angaben aus curated-Refs nachladbar. Quotes-Front: Markierungsmodell (Plan [`quotes-afternoon-2026-10-26.md`](./quotes-afternoon-2026-10-26.md)); Legacy-Quote-Chunks noch im Code. **Staging/Prod:** `rag_paragraphs`-Promotion weiter kritisch für `citation`.
 
 ---
 
@@ -42,9 +42,9 @@ Entfallen: `list_typologies`, `list_typology`, `search_typology`, `search_ga_sum
 
 Zwei Wege: direkte Original-Chunks und Wegweiser (Begriff, Typologie, Zusammenfassung) → Referenzen oder Kapitelsuche → RRF/Dedupe. **Chunk vs. Absatz:** Treffer sind `rag_chunks`; Lesen/Zitat über `paragraph_id` (Lookup wie `_lookup_paragraph_ids`). **`get_passage`** liefert Absätze, nicht Chunk-Rohtext.
 
-**`types`:** `text | quote | curated_text`. Intern `text` → `book` + `secondary_book` (ohne `talk`, E6). **`quote` (E10):** nur in `hits`, wenn `quote_verified` und auflösbare `paragraph_id`; Dedupe pro `paragraph_id` fasst Zitat und Körper desselben Absatzes. **`curated_text`:** Kandidaten aus dem Index nur zur Referenz-Expansion — nie selbst in `hits`/`wegweiser`.
+**`types`:** `text | curated_text` (und Übergangs-`quote` nur solange Legacy-Chunks existieren). Intern `text` → `book` + `secondary_book` (ohne `talk`, E6). Katalog-Zitate: siehe §3b — Modus `quotes=author|quoted` (+ optional `author=`), schlanke Hits; ohne `quotes=` kein eigener Hit-Typ. **`curated_text`:** Kandidaten aus dem Index nur zur Referenz-Expansion — nie selbst in `hits`/`wegweiser`.
 
-**Titelsuche (E7):** `_title_match_search` liefert in `hits` nur Originaltypen (`book`, `secondary_book`, `quote`). Augment-Titel → höchstens `wegweiser`. Curated-Titel → References expandieren, kein Hit.
+**Titelsuche (E7):** `_title_match_search` liefert in `hits` nur Originaltypen (`book`, `secondary_book`). Augment-Titel → höchstens `wegweiser`. Curated-Titel → References expandieren, kein Hit.
 
 **Antwort:** `hits` (Originale) + `wegweiser` (max. 5): `kind`, `titel`, `ref`, `references_status`, `herkunft`, `zitierbar: false`; bei `kuratiert: true` optional `schlagsatz`/`kurztext`. Treffer mit `citation`/`return_url` für Steiner-Originale mit Absatz-Mapping.
 
@@ -76,7 +76,7 @@ Text in YAML geändert → **chunk + augment:references** neu. Korpus (Primär/S
 
 **Referenz-Objekt (E1, in DB):** Kein dauerhafter `paragraph_id`-Anker — IDs sind je Umgebung neu (`randomUUID` in `paragraphChapterMatcher.ts`). Gespeichert werden u. a. `chunk_id` (Korpus-Ziel, uuid5), `chunk_type`, natürlicher Schlüssel `source_id`, `segment_slug`, `paragraph_number`, `relation`, `relevance`, `begruendung`. `paragraph_id` zur Laufzeit über `app_paragraph_chunk` / Lookup wie `_lookup_paragraph_ids`.
 
-Judge-Pipeline: Hybrid-Kandidaten (~30) → LLM-Prüfung (`definiert | erlaeutert | …`, Krank-Pol: `kritisiert | warnt | …`) → max. 5 pro Knoten. Kein Pflicht-`rag:augment:quotes` (Buch).
+Judge-Pipeline: Hybrid-Kandidaten (~30) → LLM-Prüfung (`definiert | erlaeutert | …`, Krank-Pol: `kritisiert | warnt | …`) → max. 5 pro Knoten. Buch-Minen-`rag:augment:quotes` entfällt (siehe §3b).
 
 **Übergang (Schritt 3):** SG-YAML enthält noch `references` aus dem ersten Typologie-Lauf; Schritt 6 entfernt sie aus Git, sobald die DB befüllt ist, und stellt Augment auf DB-Schreiben um.
 
@@ -88,7 +88,13 @@ Judge-Pipeline: Hybrid-Kandidaten (~30) → LLM-Prüfung (`definiert | erlaeuter
 
 ## 3b. Steiner-Zitat-Katalog (Front 3)
 
-`rag:augment:quotes:export-yaml` (geplant): Scan **`rag_chunks.references`** (Assistant-Partition, Typologie/Begriff/curated_text) — nicht mehr YAML/Sidecars; ergänzend Kursiv; optional einmalig legacy `quotes.md`. Output `sources/quotes/*.yaml`. Philo `*.quote.md` entfällt. Nicht identisch mit Buch-`rag:augment:quotes`.
+**Nächster Fokus:** [`quotes-afternoon-2026-10-26.md`](./quotes-afternoon-2026-10-26.md) / [`posts-essays-quotes.md`](./posts-essays-quotes.md).
+
+- **SSOT:** eine Datei `sources/quotes/quotes.yaml` (`text`, **`author`**, Anker; Laufzeit-Wortlaut aus DB/`text_raw` über Span).
+- **Laufzeit:** `metadata.quote_marks[]` + Keyword `quotes` (none|author|quoted) an `book` / `secondary_book` — Sync `rag:augment:quotes:mark` (analog References-Patch). Qdrant filtert über Payload-`quotes`.
+- **MCP-Suche (`search_corpus`):** Parameter `quotes=author|quoted` (Quotes-Modus; weglassen = normales Verhalten) und optional `author=` (Filter auf `quote_marks[].author`). Hybrid über Körper mit Qdrant-`extra_must` auf `quotes`; Pool nur `book`/`secondary_book`. Nach Enrich: Marken nach Kind filtern (`author` ≈ Band-Autor, `quoted` = abweichend), Span-Text aus `rag_paragraphs.text_raw`. Antwort schlank: `hits: [{ author, text, return_url }]` — `return_url` = Universal Link `/passage/{paragraph_id}`; **kein** `wegweiser`. Ohne Treffer: `hits: []` plus `authors: [...]` (DISTINCT Mark-Autoren für dieses Kind, alphabetisch). Overfetch `limit*3`, dann kappen.
+- **Nachschub (A–D):** Legacy `quotes:vet`; `<q>`/`foreign_quotes` → `quotes:harvest --source q` (kein Vet); Kursiv → `harvest --source italics` (Skip bei Overlap mit `q`) → Vet; Refs Begriff/Typologie/curated → `harvest --source refs` → Vet. Dann `quotes:mark`.
+- **Entfällt:** Buch-Mine `rag:augment:quotes` → `quotes.md`; Katalog als `chunk_type=quote`; E10 für Katalog-Hits; Philo `*.quote.md` / Assistentenstimmen-Quotes; eigenes MCP-Tool nur für Zitate.
 
 ---
 
@@ -149,18 +155,13 @@ Handoff-Erweiterung, `commands.yaml` als Resource, `mcp_activity`, Hilfeseite �
 3. **Weitgehend (SG):** §3a.1 Soziale Gesundheit (`members.references`, kein `zitate`) + `rag:augment:references --type typology` für `soziale-gesundheit.yaml`. Offenes → Schritt 7.
 4. **Erledigt:** `search_corpus` → `{hits, wegweiser}`, `ref=`, `talk` entfernt, `/app/search` E6/E7/E10, MCP-Tools `list_typology` / `search_typology` / `list_typologies` entfernt, Resource `philo://typologien`.
 5. **Manuell (vor Schritt 6):** Begriffe in `sources/concepts/concepts.yaml` redaktionell überarbeiten — braucht die neue MCP-Antwortstufe aus Schritt 4 (Wegweiser, `references`, Lesen über `get_passage` / `search_corpus(ref=…)`).
-6. **Referenzlauf §3a — DB-first, YAML bereinigen (ragprep + ragkeep + ggf. ragrun):**
-   - **Pipeline dokumentieren** (README ragprep, CLAUDE/ragkeep): immer `assistant:chunk` → `rag:augment:references` → `rag:embed`; MCP liest Referenzen aus Postgres.
-   - **ragprep `rag:augment:references`:** Primärsink **`rag_chunks.references`** (bestehende Assistant-`chunk_id`); **kein** In-place-Patch in Typologie-/Concept-YAML mehr. Typologie-Lauf (`--type typology`) auf DB-Schreiben umstellen (ersetzt `patchTypologyYaml`).
-   - **`--type concept`**, **`--type curated_text`** implementieren (Ziele = `begriff`- bzw. `curated_text`-Zeilen nach Chunking; 1 Chunk = 1 Begriff bzw. 1 Segment).
-   - **`assistant:chunk`:** `references` aus YAML **ignorieren/strippen** beim `store-chunks` (Typologie, Begriff); FM **`members.references`** aus Typologie-YAML-Schema entfernen, wenn bereinigt.
-   - **Migration Git:** Nach erfolgreichem Augment-Lauf in der Zielumgebung (Staging/Dev): **`references:`-Blöcke aus `sources/` löschen** — zuerst `soziale-gesundheit.yaml`, dann **`concepts.yaml`** (historische/heuristische Einträge), übrige Typologien; Commit nur wenn DB-Belege für dieselben `chunk_id`s vorhanden sind (Audit: `search_corpus(ref=…)` / SQL).
-   - **SG + Begriffe ausführen:** `assistant:chunk` (typology/concept) → `augment:references` → `rag:embed` auf Dev/Staging, damit Wegweiser `references_status: belegt` und `ref` greifen.
-   - **`generate-a2.py`:** Parser an YAML **ohne** `references`-Block anpassen (Abschnittende an `chunk_id` / nächstem Aspekt).
-   - **Tests/Docs:** `typology-tree-chunks.md`, Plan E1-Zeile; optional ragrun-Test für References-Upsert.
-7. **Schritt-3-Rest:** andere Typologie-YAMLs (redaktionell, ohne `references`), SG-Nacharbeit (Rest-`zitate`, Qualität), Primär-vs.-Sekundär-Gewichtung in Suche/Judge, vollständige E1-Felder in DB-Referenzen, übrige Typologien **chunk → augment → embed**, Git/PR. O1 weiter offen.
-8. **`curated_text` Parser/Reader** (Ingest/Lesen); GA **`routed`**; **Vergleichsmodus**; Korpus-Testkorpus (Abschnitt 11).
-9. **`TESTPLAN_MCP.md`** je Schritt.
+6. **Referenzlauf §3a — DB-first, YAML bereinigen:**
+   - **Erledigt (Dev):** Pipeline chunk → `augment:references` → embed; Primärsink Postgres; `--type typology|concept|curated_text`; curated GA-Fallback + Expand/`get_ga_chunk`.
+   - **Offen:** `references:` aus Git-YAML entfernen (SG → `concepts.yaml` → Rest), wenn DB auditiert; FM `members.references` aus Schema; `generate-a2.py` an YAML ohne Refs; Concept-/SG-Qualität (Schritt 5/7).
+7. **Schritt-3-Rest:** andere Typologie-YAMLs, SG-Nacharbeit, Primär-vs.-Sekundär-Gewichtung, übrige Typologien **chunk → augment → embed**. O1 weiter offen.
+8. **`curated_text`:** Parser/Chunk/Augment/Embed **erledigt (Dev)**; Rest dieses Schritts: GA **`routed`** (Korpus-Mapping E5), **Vergleichsmodus**, Korpus-Testkorpus (Abschnitt 11); 8 curated-Chunks ohne Refs manuell nacharbeiten.
+8b. **Front 3 Quotes:** §3b / [`quotes-afternoon-2026-10-26.md`](./quotes-afternoon-2026-10-26.md) — Harvest A–D → YAML → `quotes:mark`; Legacy-Mine und Philo-`*.quote.md` ablösen.
+9. **`TESTPLAN_MCP.md`** je Schritt; danach **Staging→Prod** inkl. `rag_paragraphs`-Promotion.
 
 ---
 
@@ -197,4 +198,4 @@ Nicht jetzt umsetzen:
 | E7 | Titelsuche nur Originale in `hits` |
 | E8 | (siehe O1) |
 | E9 | `nav` über Vortragsgrenzen im Band; einheitliche englische `get_passage`-Parameter |
-| E10 | `quote` in `hits` nur verified + `paragraph_id`; Dedupe mit Körper |
+| E10 | **Obsolet für Katalog:** galt für parallele `quote`-Chunks (verified + `paragraph_id`, Dedupe mit Körper). Katalog = Markierung am Körper (§3b); keine eigenen Quote-Hits mehr. |

@@ -1,8 +1,8 @@
 # Front 3 — Zitate, Posts, Essays
 
-**Stand:** 2026-10-21  
-**Status:** Begriffe und Typologie haben Pipelines; Zitate/Posts/Essays brauchen eine neue Linie  
-**Repos:** ragkeep (Texte), ragprep (Chunk / Augment), ragrun (Retrieval)
+**Stand:** 2026-10-26  
+**Status:** `curated_text`-Pipeline auf Dev live; **nächster Fokus: Steiner-Zitat-Katalog (YAML + Markierung am Körper)** — siehe [`quotes-afternoon-2026-10-26.md`](./quotes-afternoon-2026-10-26.md). Essays später.  
+**Repos:** ragkeep (Texte), ragprep (Chunk / Augment / Mark-Sync), ragrun (Retrieval)
 
 Gehört zu Front 3 neben [`typology-tree-chunks.md`](./typology-tree-chunks.md), [`augment-thoughts-extract-associate-graph.md`](./augment-thoughts-extract-associate-graph.md) und `ragprep/plans/in_progress/authentic-concept-retrieval.md`.
 
@@ -17,13 +17,14 @@ Gehört zu Front 3 neben [`typology-tree-chunks.md`](./typology-tree-chunks.md),
 
 ## Zitate
 
-**SSOT (Soll, siehe [`mcp-architektur.md`](./mcp-architektur.md) §3b — noch zu schreiben aus Konsolidierungsplan):**
+**SSOT (Soll, siehe [`mcp-architektur.md`](./mcp-architektur.md) §3b und [`quotes-afternoon-2026-10-26.md`](./quotes-afternoon-2026-10-26.md)):**
 
-- **Steiner-Katalog:** `sources/quotes/*.yaml` (kurze, zitierbare Passagen), gebaut durch **`rag:augment:quotes:export-yaml`** aus **`rag_chunks.references`** (Typologie/Begriff/curated_text in Postgres — keine Sidecars), ergänzt Kursiv aus `rag_paragraphs`, optional einmalig legacy `books/…/quotes.md`.
-- **Philo-Assistentenzitate** (`sources/quotes/*.quote.md`, `writings/co-created/quotes/`) **entfallen** — kein `assistant:chunk --type quotes` für Philo.
-- Deprecated **`rag:augment:quotes`** (Buch → `quotes.md`) bleibt eigene Pipeline; nicht verwechseln mit `export-yaml`.
+- **Steiner-Katalog:** eine Datei `sources/quotes/quotes.yaml` — `text`, **`author`**, Anker. **Laufzeit-Wortlaut aus DB**, nicht aus YAML.
+- **Markierung:** `rag:augment:quotes:mark` setzt `metadata.quote_marks[]` und Keyword `quotes` (none|author|quoted) an `book` / `secondary_book`. Kein eigener `chunk_type=quote`; Treffer = Körper inkl. Markierungsarray. E10 für Katalog-Hits entfällt.
+- **Nachschub:** A Legacy `quotes:vet`; B `<q>` `harvest --source q` (kein Vet); C Kursiv `harvest --source italics` (Skip Overlap mit `q`) → Vet; D Refs `harvest --source refs` → Vet; Abschluss `quotes:mark`.
+- **Entfällt:** Buch-Mine `rag:augment:quotes` → `quotes.md`; `quote_explanation` für den Katalog; Philo-Assistentenzitate (`sources/quotes/*.quote.md`, `writings/co-created/quotes/`).
 
-**MCP/App:** Belege für Steiner weiter über Körper/`paragraph_id` und `return_url`. Ob der YAML-Katalog als eigene Treffer-Art in `search_corpus` (`types=quote`) oder nur in der App rankt, ist offen — keine dritte `search_*`-Funktion (Front 2).
+**MCP/App:** Suche findet den Körper; am Hit sichtbar, ob/welche Katalog-Zitate im Chunk liegen. Filter „nur mit Zitat“ über Metadaten — keine dritte `search_*`-Funktion.
 
 ## Posts und Essays — `curated_text`
 
@@ -35,7 +36,7 @@ Gehört zu Front 3 neben [`typology-tree-chunks.md`](./typology-tree-chunks.md),
 | `#` | Vortrag/Artikel (`segment_title`) |
 | `##` | Abschnitt (harte Chunk-Grenze, buchähnliches Splitting innerhalb) |
 
-Pipeline: `assistant:chunk --type curated_text` → `rag:augment:references --type curated_text` → `rag:embed`. **Keine Sidecars / `*.references.yaml`.** MCP: Curated nie in `hits`/`wegweiser`; Match expandiert nur Korpus-Belege.
+Pipeline: `assistant:chunk --type curated_text` → `rag:augment:references --type curated_text` → `rag:embed`. **Keine Sidecars.** MCP: Curated nie in `hits`/`wegweiser`; Match expandiert Korpus-Belege (+ GA-Angaben `zitierbar: false`, Volltext via `get_ga_chunk`). **Dev: erledigt** (Re-embed / Null-Refs manuell nachziehen bei Bedarf).
 
 Talks unter `writings/talks/` und Blog-Posts unter `projects/…` bleiben Migrationskandidaten in diesen Baum.
 
