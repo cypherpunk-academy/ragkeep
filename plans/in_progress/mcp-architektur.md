@@ -122,6 +122,8 @@ Ein Lesezugang; **kein** Lesen per `chunk_id`. Parameter (E9, englisch): `paragr
 
 Kette: `citation.return_url` → `/passage/{uuid}` → App oder `corpus.*`. Staging/Prod: Promotion `rag_paragraphs` nötig (Front 6). GA-only ohne Korpus-Mapping: Zitierform ohne sicheren Wortlaut-Link.
 
+**Offen — Universal Links fertigstellen:** Die Passage-/Beleg-Links (`return_url`, Universal Links) funktionieren noch nicht zuverlässig genug (App-Öffnung, Host/Aliases, Staging vs. Prod). Vor produktiver MCP-Nutzung als Beleg-Links nachziehen und prüfen.
+
 ---
 
 ## 5a. `curated_text`
@@ -170,6 +172,7 @@ Handoff-Erweiterung, `commands.yaml` als Resource, `mcp_activity`, Hilfeseite �
 | ID | Thema |
 |----|--------|
 | O1 | `search_corpus(ref=…)` ohne gespeicherte Referenzen — siehe §3 |
+| O2 | Universal Links / `return_url` zuverlässig machen — siehe §5 |
 
 Weitere Abhängigkeiten: Promotion Absätze Staging/Prod; `auftrag_ga_ranking.md` nicht im Workspace (Stand im Code dokumentieren).
 
