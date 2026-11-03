@@ -1,0 +1,610 @@
+candidates:
+  - id: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    title: Kryptografie als physikalisch verbürgte Grenze gegen staatlichen Zugriff
+    core: Weil das Universum das Verschlüsseln leichter macht als das Entschlüsseln,
+      lässt sich daraus ein Rechtsraum bauen, dessen Grenze nicht politisch
+      gesetzt, sondern durch Rechenaufwand verteidigt wird – der Staat kann in
+      ihn nur eindringen, wenn er unendliche Mittel aufwendet.
+    type: verbindung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: 8,10-11
+    evidence: '"Das Universum nämlich ist ein Freund der Kryptografie. Es ist
+      leichter, Informationen zu verschlüsseln, als sie wieder zu
+      entschlüsseln."'
+    interwoven_with: []
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 11-12
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "60"
+  - id: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    title: Technik als systematisierte Interaktion und als Motor der
+      Kontrollzentralisierun
+    core: Technik ist nicht das Gerät, sondern systematisierte Interaktion; wer über
+      die physischen Ressourcen einer Technik verfügt, zentralisiert Kontrolle,
+      weshalb Technikgeschichte eher Herrschaft verfestigt als demokratisiert.
+    type: begriff
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "30"
+    evidence: '"In diesem Sinn ist Technik systematisierte Interaktion.
+      Feudalsysteme haben sich zum Beispiel, wie es scheint, aus der
+      Mühlentechnik entwickelt."'
+    interwoven_with: []
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 75-77
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 95-96
+  - id: 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+    title: "Vom taktischen zum strategischen Abfangen: Verdacht wird durch Vorrat
+      ersetzt"
+    core: Die Überwachung hat sich von der gezielten Verfolgung Verdächtiger zum
+      unterschiedslosen Abschöpfen und Aufbewahren aller Kommunikation
+      verschoben, weil man erst im Nachhinein sortiert – Verdacht wird damit
+      durch Speicherkapazität ersetzt.
+    type: unterscheidung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: 39-40
+    evidence: '"Heutzutage hält man es für viel effizienter zu sagen: »Wir greifen
+      alles ab, sortieren können wir es später.«"'
+    interwoven_with: []
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "43"
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "140"
+  - id: 446f65a8-087c-5e6a-9365-20c670473e08
+    title: Verwischung von Staat und Unternehmen im Überwachungsverbund
+    core: "Die Grenze zwischen Staat und Privatwirtschaft ist im
+      Überwachungsgeschäft eingeebnet: weil Geheimdienste auf die Datenbestände
+      von Google und Facebook zugreifen, werden diese Konzerne zu verlängerten
+      Armen der Dienste."
+    type: verbindung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "53"
+    evidence: '"Somit sind Facebook und Google in gewisser Weise die verlängerten
+      Arme dieser Geheimdienste."'
+    interwoven_with: []
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 30,56
+  - id: 0b895879-ea76-5ad8-a988-c81578e48680
+    title: Drei Infrastrukturen der Staatlichkeit als drei Grundfreiheiten
+    core: Staatlichkeit lässt sich an drei Infrastrukturen messen – Kontrolle über
+      Streitkräfte, über Kommunikation und über Finanzen –, und dieselben drei
+      werden zu den Grundfreiheiten der Bewegung, des Denkens und des
+      Wirtschaftens, deren Schutz jeweils Privatheit voraussetzt.
+    type: verbindung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: 87-88
+    evidence: '"Die Hisbollah verfügt also über die drei wesentlichen Attribute der
+      Staatlichkeit ... Das können wir uns auch als drei grundlegende Freiheiten
+      denken."'
+    interwoven_with: []
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 118-119
+  - id: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    title: Zensur erfordert Überwachung und erzeugt Selbstzensur
+    core: "Zensur ist technisch nicht von Überwachung zu trennen: Um zu prüfen, ob
+      ein Inhalt erlaubt ist, muss das System ihn sehen, und was es sieht, kann
+      es speichern – die eigentliche Wirkung ist die Verhaltensänderung der
+      Wissenden."
+    type: verbindung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "122"
+    evidence: '"Um zu kontrollieren, was sich jemand ansieht, um zu sehen, ob das
+      erlaubt ist oder verboten, musst du es sehen, und weil du es sehen kannst,
+      kannst du es auch speichern."'
+    interwoven_with: []
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 127-128
+  - id: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    title: "Spurlose Ausradierung: die unnachweisbare Zensur des Westens"
+    core: "Zensur im Westen arbeitet nicht durch sichtbare Korrektur, sondern durch
+      spurloses Entfernen aus Archiven und Indizes: Die Geschichte wird nicht
+      verändert, sie hat nachträglich nie existiert, was schwerer nachweisbar
+      ist als die offene sowjetische Richtigkeitsklebung."
+    type: unterscheidung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: 123-124
+    evidence: '"Die Geschichte wird nicht nur verändert, sie hat niemals existiert."'
+    interwoven_with: []
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "127"
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "127"
+  - id: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    title: Sichtbarkeit des Unrechts als Bedingung seiner Bekämpfung
+    core: Das Sichtbarmachen von Unrecht erzeugt die politische Lobby, die zu seiner
+      Bekämpfung nötig ist; Zensur nimmt den Ermittlern den Anreiz und der
+      Öffentlichkeit das Wissen, und der Schutz der Unversehrtheit der
+      Geschichte wiegt schwerer als die Schonung der Opfer vor erneuter
+      Konfrontation.
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: 130,132
+    evidence: '"Ein Zensurregime zu errichten, das in der Lage ist, Stücke der
+      Geschichte zu entfernen, bedeutet, dass wir das Problem nicht angehen
+      können, weil wir gar nicht sehen, was das Problem ist."'
+    interwoven_with: []
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "136"
+  - id: 4818261d-92b0-5acb-9aff-d9f229f51056
+    title: "Die eine Utopie als Dystopie: Vielfalt statt Einheitslösung"
+    core: Eine einzige verwirklichte Utopie wäre selbst eine Dystopie; wünschenswert
+      ist nicht die Einebnung, sondern die Vervielfältigung von Systemen,
+      Kulturen und Interaktionsformen – während die Marktlogik gerade auf
+      Homogenisierung zutreibt.
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "151"
+    evidence: '"Die Verwirklichung einer einzigen Utopie wäre für mich in
+      Wirklichkeit eine Dystopie."'
+    interwoven_with: []
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 151-152
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "154"
+  - id: c253b639-d56a-5cb5-ab58-a796f62b5547
+    title: Das Internet als platonisches Reich, das auf physischen Fundamenten ruht
+    core: Das Netz erscheint als körperloser Raum zirkulierender Ideen, ist aber auf
+      Kabel, Satelliten und Serverhallen gegründet; wer diese physische Basis
+      kontrolliert, beherrscht den scheinbar körperlosen Raum.
+    type: unterscheidung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: 4-5,7
+    evidence: '"Das platonische Wesen des Internets mit seinen zirkulierenden Ideen
+      und Informationen wird durch seine physischen Ursprünge besudelt."'
+    interwoven_with: []
+    occurrences: []
+  - id: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    title: Die Geschwindigkeit der Konsensbildung als Waffe, die sich gegen ihre
+      Urheber we
+    core: Massenkommunikation erzeugt einen Vorsprung bei der Konsensbildung, der
+      den Staat überraschen kann; derselbe Vorsprung kehrt sich um, wenn die
+      Bewegung scheitert, weil dann die nämliche Infrastruktur zur Verfolgung
+      aller Initiatoren dient.
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: 27-28
+    evidence: '"falls man unterliegen sollte, wird eben jene Infrastruktur, die so
+      schnell die Bildung eines Konsenses erlaubte hatte, dazu benutzt werden,
+      um sämtliche Initiatoren aufzuspüren und auszuschalten."'
+    interwoven_with: []
+    occurrences: []
+  - id: 91cb5ac7-9874-5136-aa93-ee421ce62dce
+    title: Die netzinterne Freiheit als Gipfel der neoliberalen Ordnung
+    core: Die Freiheit des Netzes ruht auf der am strengsten hierarchisierten,
+      staatlich durchsetzten Industrie überhaupt; der
+      High-Tech-Kommunikationsraum ist damit der Gipfel und nicht der Gegner der
+      neoliberalen Ordnung.
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "31"
+    evidence: '"Der High-Tech-Kommunikationsrevolution – und der Freiheit, die wir
+      aus ihr gewonnen haben – liegt also die ganze neoliberale, transnationale,
+      globalisierte moderne Marktwirtschaft zugrunde."'
+    interwoven_with: []
+    occurrences: []
+  - id: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    title: "Militarisierung des Zivillebens: der unsichtbare Panzer im Schlafzimmer"
+    core: Die private, familiäre Kommunikation ist in eine militärisch besetzte Zone
+      umgezogen, ohne dass die Besatzung sichtbar wäre; Zivilraum und Kriegsraum
+      sind damit nicht mehr getrennt, sondern dasselbe Netz.
+    type: ausdruck
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "35"
+    evidence: '"Es ist, als hätte man einen Panzer im Schlafzimmer. Beim Simsen
+      steht ein Soldat zwischen dir und deiner Frau."'
+    interwoven_with: []
+    occurrences: []
+  - id: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    title: "Die Asymmetrie der Exportkontrollen: Schutz verboten, Überwachung erlaubt"
+    core: Waffenexportkontrolle verbietet gerade die Verschlüsselung, die den Bürger
+      schützt, während Überwachungsgeräte frei handelbar bleiben – weil auch
+      demokratische Staaten am Wissen aus fremder Überwachung interessiert sind.
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: 36,47
+    evidence: '"du darfst in diejenigen Länder ... keine Verschlüsselungstechnologie
+      exportieren, die vor Überwachungstechnologie schützt. Aber wenn du ein
+      Händler von Überwachungsausrüstung bist, dann darfst du die'
+    interwoven_with: []
+    occurrences: []
+  - id: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    title: Überwachungskapazität wächst schneller als die Bevölkerung
+    core: Die Überwachungskapazität wächst alle achtzehn Monate, die Bevölkerung
+      alle fünfundzwanzig Jahre, sodass die Überwachungskurve die
+      Bevölkerungsentwicklung dauerhaft überholt und ein Aufholen durch bloßes
+      Abwarten unmöglich wird.
+    type: verbindung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "47"
+    evidence: '"die Überwachungskapazität aber verdoppelt sich alle 18 Monate. Die
+      Überwachungskurve dominiert die Bevölkerungskurve."'
+    interwoven_with: []
+    occurrences: []
+  - id: 4feb2234-c04c-503c-a8a2-1ae068560986
+    title: "Die Dritt-Doktrin: im Netz ist jeder ein Dritter, also niemand geschützt"
+    core: Die Gerichte begründen fehlenden Datenschutz damit, dass man durch die
+      Nutzung eines Dienstes dessen Betreiber zum Dritten macht und damit
+      angeblich freiwillig preisgibt – obwohl im Netz jeder ein Dritter ist,
+      sodass der Schutzbegriff sich selbst aufhebt.
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "55"
+    evidence: '"hat das Gericht erklärt, dass man im Internet keine Privatsphäre
+      erwarten darf, wenn man bereit ist, Informationen an Dritte zu offenbaren.
+      Nebenbei bemerkt: Jeder im Internet ist ein Dritter."'
+    interwoven_with: []
+    occurrences: []
+  - id: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    title: Der Rückzug aus dem Netz als Selbstentmachtung
+    core: "Der Verzicht auf Netznutzung ist keine Freiheit, sondern Entmachtung: Wer
+      offline bleibt, verliert gerade die Möglichkeit, Einfluss zu nehmen,
+      weshalb der Ausweg nicht im Rückzug, sondern im gesicherten Bleiben
+      liegt."
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "61"
+    evidence: '"Natürlich kann sich jeder vom Internet fernhalten, aber dann ist es
+      schwer, irgendeinen Einfluss zu haben. Wer es tut, beraubt sich seiner
+      eigenen Einflussmöglichkeiten."'
+    interwoven_with: []
+    occurrences: []
+  - id: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    title: Die Industrie als Schutzmacht der Kryptografie
+    core: Kryptografie verbreitet sich, weil Unternehmen ihre transnationalen
+      Datenströme absichern müssen; der wirtschaftliche Eigennutz der Konzerne
+      wird so zur Machtbasis, die verhindert, dass Verschlüsselung politisch
+      verboten wird.
+    type: verbindung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "61"
+    evidence: '"Dadurch gewinnt die Kryptografie eine Machtbasis in der Industrie,
+      die verhindert, dass sie verbannt wird."'
+    interwoven_with: []
+    occurrences: []
+  - id: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    title: Selbstzensur als Preis des Nichtkönnens
+    core: Wer angesichts der Überwachung nicht lernt, schützende Technik selbst zu
+      beherrschen, verfällt in universelle Selbstzensur und meldet sich als
+      politischer Akteur von der Welt ab – Anpassung oder Werkzeugbeherrschung
+      sind die beiden einzigen Wege.
+    type: unterscheidung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "62"
+    evidence: '"Wenn die Leute nicht diesen zweiten Schritt gehen, dann wird
+      politischer Konformismus zu einer universellen Erscheinung"'
+    interwoven_with: []
+    occurrences: []
+  - id: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    title: Internetzeit als Gegenrhythmus zur medialen Kurzfristigkeit
+    core: "Das Netz vergisst nicht, und daraus entsteht eine eigene Zeitform: gegen
+      den 24-Stunden-Takt der Medienerzählungen lassen sich über Jahre Dossiers
+      aufbauen, die politische Mythen Schritt für Schritt widerlegen."
+    type: begriff
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "73"
+    evidence: '"Beim Internet habe ich das Gefühl, dass wir etwas schaffen, was ich
+      Internetzeit nenne."'
+    interwoven_with: []
+    occurrences: []
+  - id: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    title: "Der abgeschlagene Kopf und die Wurmfortsätze: Sieg im Parlament,
+      Weiterleben im "
+    core: "Ein demokratischer Sieg an der Oberfläche beendet die Sache nicht: Wird
+      ein Abkommen öffentlich gestoppt, wandert sein Inhalt in geheime
+      bilaterale Verträge, sodass der demokratische Prozess umgangen wird, ohne
+      dass der Sieg verloren scheint."
+    type: ausdruck
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "74"
+    evidence: '"Der Kopf von ACTA mag abgeschlagen sein, aber der Rumpf könnte sich
+      sehr wohl in ein paar neue Wurmfortsätze teilen"'
+    interwoven_with: []
+    occurrences: []
+  - id: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    title: Von konkurrierenden Staaten zur verschmolzenen transnationalen Elite
+    core: Die Hoffnung auf Rettung durch konkurrierende Regierungen trägt nicht
+      mehr, weil nationale Eliten sich nicht länger bekämpfen, sondern sich
+      miteinander verbinden und von ihren Bevölkerungen lösen.
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: 77-78
+    evidence: '"einst haben wir nationale Eliten gehabt, die miteinander konkurriert
+      haben, und heute verbinden die sich miteinander und lösen sich von ihren
+      jeweiligen Bevölkerungen."'
+    interwoven_with: []
+    occurrences: []
+  - id: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    title: Zentralisierung als Rücknahme der Druckerpresse
+    core: Zentralisierung von Informationsdiensten macht die Erfindung der
+      Druckerpresse rückgängig, weil der Zugang zu Wissen dann an ein bestimmtes
+      Gerät oder einen bestimmten Anbieter gebunden ist statt an eine
+      Allzweckmaschine.
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "85"
+    evidence: '"wenn wir anfangen, die Kontrolle über Informationssysteme zu
+      zentralisieren, fangen wir tatsächlich an, die Erfindung der Druckerpresse
+      rückgängig zu machen"'
+    interwoven_with: []
+    occurrences: []
+  - id: b8641875-ac5d-558d-91bb-bbb197e2d860
+    title: "Vom Lesenlernen zum Schreibenlernen: das Netz als neue Ausdrucksfähigkeit"
+    core: Die Druckerpresse lehrte die Menschen lesen, das Netz lehrt sie schreiben;
+      damit entsteht eine neue, allen zugängliche Ausdrucksfähigkeit, die nicht
+      über Partei, Verlag oder Avantgarde kanalisiert werden muss.
+    type: ausdruck
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "86"
+    evidence: '"Die Druckerpresse hat die Menschen lesen gelehrt; das Internet lehrt
+      die Menschen zu schreiben."'
+    interwoven_with: []
+    occurrences: []
+  - id: 21c01f78-59a8-5b05-9137-ec7443e72239
+    title: Die Bankenblockade als staatlich erzeugte Marktmacht
+    core: Die Bankenblockade gegen WikiLeaks war kein Marktereignis, sondern das
+      Ergebnis staatlicher Regulierung, die einzelne Finanzakteure zu Königen
+      gemacht hat; wer das Tauschmedium kontrolliert, kontrolliert damit auch,
+      was Menschen tun dürfen.
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "101"
+    evidence: '"ist es nicht der freie Markt gewesen, der beschlossen hat, WikiLeaks
+      zu blockieren, weil es gar kein freier Markt ist – staatliche Regulierung
+      hat aus bestimmten Finanzspielern Könige gemacht"'
+    interwoven_with: []
+    occurrences: []
+  - id: a3a35365-d663-565d-b501-1b5c8151f709
+    title: "Reichweite gegen Vertraulichkeit: die Doppelbilanz der drei Freiheiten
+      im Netz"
+    core: Beim Übergang ins Netz bleibt die Bewegungsfreiheit gleich, die
+      Kommunikationsfreiheit wächst an Reichweite und schrumpft zugleich durch
+      den Verlust der Privatheit, und die wirtschaftliche Freiheit erleidet
+      denselben Verlust – der Zugewinn an Reichweite wird mit dem Verlust an
+      Vertraulichkeit bezahlt.
+    type: unterscheidung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "106"
+    evidence: '"Die Freiheit der Kommunikation ist in mancher Hinsicht unerhört
+      gestiegen ... andererseits ist sie auch ungeheuer herabgesunken, weil es
+      keinen Schutz der Privatsphäre mehr gibt"'
+    interwoven_with: []
+    occurrences: []
+  - id: babe4d40-4c53-509c-a0d4-eb3593a19501
+    title: Vertrauen durch Rechenkosten statt durch Recht und Prüfung
+    core: "Bitcoin verlegt die Durchsetzung von Vertrauen aus Gesetz, Regulierung
+      und Prüfung in die Architektur selbst: Rechenleistung kostet Strom, Betrug
+      wird teurer als sein Nutzen, und Vertrauen wird auf viele Teilnehmer
+      verteilt statt an einer Stelle erzwingbar zu sein."
+    type: verbindung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "108"
+    evidence: '"Die Durchsetzung ehrbaren Bitcoin-»Bankings« ist also in die
+      Architektur des Systems eingebaut."'
+    interwoven_with: []
+    occurrences: []
+  - id: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    title: Privatsphäre als käufliches Gut, im Netz wie davor
+    core: "Datenschutz war nie eine Frage des Mediums, sondern des Geldes: Wer reich
+      ist, kauft sich Vertraulichkeit, wer arm ist, hat sie nicht – und das Netz
+      setzt diesen vor-digitalen Trend nur fort."
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "109"
+    evidence: '"wenn du einen Haufen Geld hast, eine Prämie zahlst, um deine Daten
+      zu schützen, und wenn du nicht viel Geld hast, dann hast du fast sicher
+      auch keinen Datenschutz"'
+    interwoven_with: []
+    occurrences: []
+  - id: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    title: Wirtschaftliche Vertraulichkeit als das eigentliche Freiheitsproblem
+    core: Die Vertraulichkeit wirtschaftlicher Transaktionen ist womöglich wichtiger
+      als die Redefreiheit, weil Geheimdienste aus Zahlungsdaten ein
+      vollständiges Bild von Macht und Beziehungen gewinnen und der
+      wirtschaftliche Austausch die Grundlage der Gesellschaftsstruktur bildet.
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "109"
+    evidence: '"Ist also nicht die Freiheit oder die Vertraulichkeit
+      wirtschaftlicher Interaktionen in Wirklichkeit wichtiger als die
+      Redefreiheit, schließlich ist es wirtschaftlicher Austausch, auf dem die
+      ganze Ge'
+    interwoven_with: []
+    occurrences: []
+  - id: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    title: Das Kriterium der Besitzstandsverteidigung
+    core: Lobbying lässt sich daran messen, ob eine Gruppe ihren Vorteil auf Kosten
+      der Freiheiten anderer ausbaut, ohne die sie selbst nie dorthin gekommen
+      wäre – daran unterscheidet sich produktive Interessenvertretung von
+      Besitzstandsverteidigung.
+    type: unterscheidung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "113"
+    evidence: '"weil du dir anschauen kannst, welche Leute bestrebt sind, sich auf
+      Kosten der Allgemeinheit Vorteile zu verschaffen und die Freiheiten
+      anderer, ohne die sie selbst nicht dorthin gelangt wären, wo sie'
+    interwoven_with: []
+    occurrences: []
+  - id: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    title: Zwei unvereinbare Begriffe von Sicherheit
+    core: "Technische Sicherheit und staatlich verstandene Sicherheit sind
+      Gegensätze: Der Staat begreift Sicherheit als eigene Einsichtsfähigkeit,
+      weshalb ein funktionierend verschlüsseltes System für ihn eine Bedrohung
+      darstellt."
+    type: unterscheidung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "121"
+    evidence: '"Du kannst ein absolut sicheres technisches System haben, und der
+      Staat findet das nicht gut, weil er glaubt, Sicherheit ist, wenn seine
+      Beamten hineinschauen"'
+    interwoven_with: []
+    occurrences: []
+  - id: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    title: "Nachstaatliche Organisation: Wo die Aktiva Informationen sind, greift
+      man den Ge"
+    core: Weil die Aktiva einer Enthüllungsorganisation vor allem Informationen
+      sind, kann sie transnational und durch Kryptografie geschützt operieren;
+      angreifbar ist sie nicht an ihren Inhalten, sondern an ihren Finanzflüssen
+      – daher die Blockade.
+    type: verbindung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "128"
+    evidence: '"wenn die Aktivposten einer Organisation in erster Linie seine
+      Informationen sind, dann kann sie transnational sein und infolge der
+      Kryptografie nur schwer daran gehindert werden. Es gibt einen Grund,'
+    interwoven_with: []
+    occurrences: []
+  - id: 61c88d95-a028-5258-82d9-a922d165f040
+    title: Das universelle Netz als einziges Werkzeug für globale Probleme
+    core: Ein universelles Netz ist das einzige Werkzeug, das für die globalen
+      Probleme der Menschheit noch zur Verfügung steht; deshalb ist der Kampf um
+      seine Offenheit kein Sonderinteresse, sondern der zentrale politische
+      Kampf.
+    type: verbindung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "129"
+    evidence: '"Ich habe den Verdacht, dass ein globales, universelles Internet das
+      einzige Werkzeug ist, das wir haben, um diese globalen Probleme anzugehen,
+      und das ist der Grund, weshalb dieser Kampf für ein frei'
+    interwoven_with: []
+    occurrences: []
+  - id: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    title: Der Filter im Kopf des Nutzers statt beim Staat
+    core: Filtern gehört ans Ende der Kette, in den Kopf des Empfängers, nicht zur
+      Regierung, die im Namen des Volkes filtert – die Fähigkeit, mit dem
+      Gesehenen umzugehen, ersetzt die Vorzensur.
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: 137-139
+    evidence: '"Filterung sollte beim Endnutzer stattfinden, im Endgerät des
+      Endnutzers ... das ist dieses Ding zwischen deinen Ohren."'
+    interwoven_with: []
+    occurrences: []
+  - id: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    title: "Asymmetrische Geheimhaltung: privat nur gegenüber den Ohnmächtigen"
+    core: "Geheimhaltung ist asymmetrisch: Daten, auf die Millionen
+      Staatsbedienstete zugreifen dürfen, sind nicht privat, sondern nur vor den
+      Ohnmächtigen verborgen – Geheimhaltung schützt die Mächtigen, nicht die
+      Bürger."
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "140"
+    evidence: '"Sie werden vor den Ohnmächtigen für die Mächtigen geheim gehalten."'
+    interwoven_with: []
+    occurrences: []
+  - id: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    title: "Der Schatten eines Schattens: das Missverhältnis von veröffentlichtem
+      und privat"
+    core: "WikiLeaks ist nur der Schatten eines Schattens: Gemessen an der
+      gewaltigen Menge Geheimmaterials in privaten Händen mächtiger Akteure ist
+      das veröffentlichte Material ein winziger Bruchteil, weshalb die
+      Behauptung, nun könne niemand mehr etwas geheim halten, falsch ist."
+    type: ausdruck
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "140"
+    evidence: '"Ich behaupte, WikiLeaks ist nur der Schatten eines Schattens."'
+    interwoven_with: []
+    occurrences: []
+  - id: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    title: Die disziplinierende Wirkung erwarteter Enthüllung
+    core: "Weil geheimes Handeln heute nur begrenzte Zeit verborgen bleibt,
+      verändert sich staatliches Verhalten vorab: Die Erwartung späterer
+      Rechenschaft diszipliniert die Mächtigen, und umgekehrt braucht es
+      geschützte interne Warnkanäle, damit Missstände überhaupt an die
+      Öffentlichkeit dringen."
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "141"
+    evidence: '"Ihnen ist klar, dass geheimes Handeln heutzutage nur eine gewisse
+      Zeit im Verborgenen bleibt und früher oder später doch an die
+      Öffentlichkeit gelangt, und das ist gut so. Das verändert ihre Handlung'
+    interwoven_with: []
+    occurrences: []
+  - id: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    title: Nicht neutrale Technik als Werkzeug einer neuen Demokratie
+    core: "Technologie und Wissenschaft sind nicht neutral: Bestimmte Technikformen
+      können die lange ersehnten Grundrechte erst hervorbringen, weshalb es Sinn
+      hat, Werkzeuge für eine neue Demokratie zu bauen statt nur über
+      Überwachung zu klagen."
+    type: umkehrung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "142"
+    evidence: '"Technologie und Wissenschaft sind nicht neutral. Es gibt bestimmte
+      Formen von Technologie, die uns diese fundamentalen Rechte und Freiheiten
+      ... geben können."'
+    interwoven_with: []
+    occurrences: []
+  - id: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    title: Code als Gesetz und freie Software als Verfassungsfrage
+    core: Im Netz wird das Handeln durch den Code bestimmt, der läuft; deshalb ist
+      Code Gesetz, und freie Software muss so offenliegen wie Gesetzestexte in
+      einer Demokratie, damit jeder sie prüfen und ändern kann.
+    type: verbindung
+    source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    paragraphs: "145"
+    evidence: '"Im Internet wird das, was du tun kannst, dadurch definiert, welche
+      Programme existieren, welche Programme laufen, und deshalb ist Code gleich
+      Gesetz."'
+    interwoven_with: []
+    occurrences: []

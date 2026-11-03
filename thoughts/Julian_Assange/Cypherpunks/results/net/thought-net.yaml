@@ -1,0 +1,5033 @@
+nodes:
+  - id: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    title: Kryptografie als physikalisch verbürgte Grenze gegen staatlichen Zugriff
+    core: Weil das Universum das Verschlüsseln leichter macht als das Entschlüsseln, lässt
+      sich daraus ein Rechtsraum bauen, dessen Grenze nicht politisch gesetzt, sondern
+      durch Rechenaufwand verteidigt wird – der Staat kann in ihn nur eindringen, wenn
+      er unendliche Mittel aufwendet.
+    type: verbindung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: 8,10-11
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 11-12
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "60"
+    queries:
+      - Asymmetrie von Ver- und Entschlüsselung als Grundlage eines staatsfreien
+        Rechtsraums
+      - Rechenaufwand statt politischer Setzung als Grenze der staatlichen Zugriffsmacht
+      - Kryptografische Schutzmauer als materielle Schranke gegen Überwachung und Zwang
+    keywords:
+      - Kryptografie
+      - Verschlüsselungsasymmetrie
+      - Rechtsraum
+      - staatlicher Zugriff
+      - Rechenaufwand
+      - Unabhängigkeit
+  - id: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    title: Technik als systematisierte Interaktion und als Motor der Kontrollzentralisierun
+    core: Technik ist nicht das Gerät, sondern systematisierte Interaktion; wer über die
+      physischen Ressourcen einer Technik verfügt, zentralisiert Kontrolle, weshalb
+      Technikgeschichte eher Herrschaft verfestigt als demokratisiert.
+    type: begriff
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "30"
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 75-77
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 95-96
+    queries:
+      - Technik ist nicht das Gerät, sondern geordnete Wechselbeziehungen zwischen
+        Menschen; wer die materiellen Grundlagen beherrscht, bündelt Macht
+      - Die Geschichte der Technik festigt Herrschaft eher, als sie zu verteilen, weil
+        zentrale Ressourcen kontrollierbar sind
+      - Aus der Zentralisierung von Mühlentechnik entstanden feudale Abhängigkeiten; nur
+        wenige Techniken lassen sich breit streuen
+    keywords:
+      - Technikphilosophie
+      - Zentralisierung
+      - Kontrolle
+      - physische Ressourcen
+      - Feudalismus
+      - Demokratisierung
+  - id: 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+    title: "Vom taktischen zum strategischen Abfangen: Verdacht wird durch Vorrat ersetzt"
+    core: Die Überwachung hat sich von der gezielten Verfolgung Verdächtiger zum
+      unterschiedslosen Abschöpfen und Aufbewahren aller Kommunikation verschoben, weil
+      man erst im Nachhinein sortiert – Verdacht wird damit durch Speicherkapazität
+      ersetzt.
+    type: unterscheidung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: 39-40
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "43"
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "140"
+    queries:
+      - Überwachung wandelt sich von gezielter Verfolgung zum unterschiedslosen Sammeln
+        und späteren Filtern
+      - Nicht mehr Verdacht, sondern Speicherkapazität entscheidet, wer ins Visier gerät
+      - Strategisches Abfangen speichert alles, weil sich Relevanz erst nachträglich
+        zeigt
+    keywords:
+      - strategisches Abfangen
+      - Vorratsdatenspeicherung
+      - Massenüberwachung
+      - Verdacht
+      - Speicherkapazität
+      - Sortierung im Nachhinein
+  - id: 446f65a8-087c-5e6a-9365-20c670473e08
+    title: Verwischung von Staat und Unternehmen im Überwachungsverbund
+    core: "Die Grenze zwischen Staat und Privatwirtschaft ist im Überwachungsgeschäft
+      eingeebnet: weil Geheimdienste auf die Datenbestände von Google und Facebook
+      zugreifen, werden diese Konzerne zu verlängerten Armen der Dienste."
+    type: verbindung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "53"
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 30,56
+    queries:
+      - Geheimdienste greifen auf Datenbestände privater Plattformkonzerne zu und machen
+        sie zu Erfüllungsgehilfen
+      - Die Trennung zwischen staatlicher Spionage und kommerzieller Datensammlung ist
+        aufgehoben
+      - Private Tech-Firmen werden durch staatlichen Datenzugriff zu Organen der
+        Nachrichtendienste
+    keywords:
+      - Überwachungsverbund
+      - Geheimdienste
+      - Google
+      - Facebook
+      - Privatwirtschaft
+      - Datenzugriff
+  - id: 0b895879-ea76-5ad8-a988-c81578e48680
+    title: Drei Infrastrukturen der Staatlichkeit als drei Grundfreiheiten
+    core: Staatlichkeit lässt sich an drei Infrastrukturen messen – Kontrolle über
+      Streitkräfte, über Kommunikation und über Finanzen –, und dieselben drei werden zu
+      den Grundfreiheiten der Bewegung, des Denkens und des Wirtschaftens, deren Schutz
+      jeweils Privatheit voraussetzt.
+    type: verbindung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: 87-88
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 118-119
+    queries:
+      - Drei Infrastrukturen staatlicher Macht entsprechen drei Grundfreiheiten, die auf
+        Privatheit angewiesen sind
+      - Streitkräfte, Kommunikation und Finanzen als Maßstab für Staatlichkeit und als
+        Freiheiten der Bewegung, des Denkens und des Handelns
+      - Privatsphäre als Bedingung für Bewegungs-, Kommunikations- und
+        Wirtschaftsfreiheit
+    keywords:
+      - Staatlichkeit
+      - Infrastrukturen
+      - Grundfreiheiten
+      - Privatheit
+      - Cypherpunks
+      - Finanzinfrastruktur
+  - id: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    title: Zensur erfordert Überwachung und erzeugt Selbstzensur
+    core: "Zensur ist technisch nicht von Überwachung zu trennen: Um zu prüfen, ob ein
+      Inhalt erlaubt ist, muss das System ihn sehen, und was es sieht, kann es speichern
+      – die eigentliche Wirkung ist die Verhaltensänderung der Wissenden."
+    type: verbindung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "122"
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 127-128
+    queries:
+      - Wer Inhalte filtern will, muss sie einsehen können, und was eingesehen wird,
+        lässt sich aufzeichnen
+      - Die eigentliche Wirkung von Kontrolle ist die Verhaltensänderung der Wissenden,
+        nicht das Verbot selbst
+      - Zensur und Überwachung sind technisch untrennbar, weil Prüfung Sichtbarkeit
+        voraussetzt
+    keywords:
+      - Zensur
+      - Überwachung
+      - Selbstzensur
+      - Firewall
+      - Speicherung
+      - Verhaltensänderung
+  - id: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    title: "Spurlose Ausradierung: die unnachweisbare Zensur des Westens"
+    core: "Zensur im Westen arbeitet nicht durch sichtbare Korrektur, sondern durch
+      spurloses Entfernen aus Archiven und Indizes: Die Geschichte wird nicht verändert,
+      sie hat nachträglich nie existiert, was schwerer nachweisbar ist als die offene
+      sowjetische Richtigkeitsklebung."
+    type: unterscheidung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: 123-124
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "127"
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "127"
+    queries:
+      - Zensur durch nachträgliches Löschen aus Archiven und Suchindizes ist schwerer
+        nachweisbar als offene Korrektur
+      - Im Westen verschwinden Artikel spurlos, statt sichtbar berichtigt zu werden
+      - Die Vergangenheit wird nicht umgeschrieben, sondern zum Nichtexistieren gebracht
+    keywords:
+      - spurlose Zensur
+      - Archivlöschung
+      - Suchindex
+      - Geschichtsausradierung
+      - Nachweisbarkeit
+      - Selbstzensur
+    suspect_source: "Orwell (1984): Wer die Vergangenheit kontrolliert, kontrolliert die Zukunft"
+  - id: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    title: Sichtbarkeit des Unrechts als Bedingung seiner Bekämpfung
+    core: Das Sichtbarmachen von Unrecht erzeugt die politische Lobby, die zu seiner
+      Bekämpfung nötig ist; Zensur nimmt den Ermittlern den Anreiz und der
+      Öffentlichkeit das Wissen, und der Schutz der Unversehrtheit der Geschichte wiegt
+      schwerer als die Schonung der Opfer vor erneuter Konfrontation.
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: 130,132
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "136"
+    queries:
+      - Sichtbarkeit von Missständen erzeugt politischen Druck zu ihrer Bekämpfung
+      - Zensur nimmt Ermittlern den Anreiz und der Öffentlichkeit das Wissen über Unrecht
+      - Erhalt der historischen Aufzeichnung wiegt schwerer als die Schonung Betroffener
+        vor erneuter Konfrontation
+    keywords:
+      - Sichtbarkeit
+      - Zensur
+      - Lobby
+      - Geschichte
+      - Opferschutz
+      - Ermittlungsanreiz
+  - id: 4818261d-92b0-5acb-9aff-d9f229f51056
+    title: "Die eine Utopie als Dystopie: Vielfalt statt Einheitslösung"
+    core: Eine einzige verwirklichte Utopie wäre selbst eine Dystopie; wünschenswert ist
+      nicht die Einebnung, sondern die Vervielfältigung von Systemen, Kulturen und
+      Interaktionsformen – während die Marktlogik gerade auf Homogenisierung zutreibt.
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "151"
+    occurrences:
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: 151-152
+      - source_id: Julian_Assange_Cypherpunks
+        segment_id: Julian_Assange_Cypherpunks
+        paragraphs: "154"
+    queries:
+      - Eine einzige verwirklichte Utopie wäre selbst eine Dystopie, daher müssen
+        utopische Ideale die Vielfalt von Systemen einschließen
+      - Die Marktlogik treibt auf Homogenisierung und Standardisierung zu und bedroht
+        die Vielfalt der Kulturen
+      - Nicht Einheitslösung, sondern Vervielfältigung von Systemen, Kulturen und
+        Interaktionsformen ist wünschenswert
+    keywords:
+      - Utopie
+      - Dystopie
+      - Vielfalt
+      - Homogenisierung
+      - Marktlogik
+      - Standardisierung
+  - id: c253b639-d56a-5cb5-ab58-a796f62b5547
+    title: Das Internet als platonisches Reich, das auf physischen Fundamenten ruht
+    core: Das Netz erscheint als körperloser Raum zirkulierender Ideen, ist aber auf Kabel,
+      Satelliten und Serverhallen gegründet; wer diese physische Basis kontrolliert,
+      beherrscht den scheinbar körperlosen Raum.
+    type: unterscheidung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: 4-5,7
+    occurrences: []
+    queries:
+      - Die scheinbar immaterielle Sphäre digitaler Ideen beruht auf materieller
+        Infrastruktur, deren Beherrschung die Macht über sie verleiht
+      - Wer Kabel, Satelliten und Rechenzentren kontrolliert, kontrolliert den
+        vermeintlich körperlosen Informationsraum
+      - "Die Trennung von Geistraum und physischer Basis ist eine Illusion: Herrschaft
+        über die Hardware erzwingt Herrschaft über den Datenfluss"
+    keywords:
+      - Platonisches Reich
+      - physische Infrastruktur
+      - Glasfaserkabel
+      - Satelliten
+      - Serverhallen
+      - Kontrolle des Informationsflusses
+  - id: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    title: Die Geschwindigkeit der Konsensbildung als Waffe, die sich gegen ihre Urheber we
+    core: Massenkommunikation erzeugt einen Vorsprung bei der Konsensbildung, der den Staat
+      überraschen kann; derselbe Vorsprung kehrt sich um, wenn die Bewegung scheitert,
+      weil dann die nämliche Infrastruktur zur Verfolgung aller Initiatoren dient.
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: 27-28
+    occurrences: []
+    queries:
+      - Dieselbe Vernetzung, die schnelle kollektive Einigung ermöglicht, wird nach
+        einer Niederlage zum Werkzeug der Verfolgung ihrer Urheber.
+      - Wer durch digitale Massenkommunikation rasch Mehrheiten schafft, muss gewinnen,
+        weil die Infrastruktur sonst gegen ihn aussagt.
+      - Die Beschleunigung von Konsens durch soziale Medien ist eine Waffe mit
+        eingebauter Rückstoßwirkung.
+    keywords:
+      - Konsensbildung
+      - Überwachung
+      - Umkehrung
+      - soziale Medien
+      - Verfolgung
+      - Revolution
+  - id: 91cb5ac7-9874-5136-aa93-ee421ce62dce
+    title: Die netzinterne Freiheit als Gipfel der neoliberalen Ordnung
+    core: Die Freiheit des Netzes ruht auf der am strengsten hierarchisierten, staatlich
+      durchsetzten Industrie überhaupt; der High-Tech-Kommunikationsraum ist damit der
+      Gipfel und nicht der Gegner der neoliberalen Ordnung.
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "31"
+    occurrences: []
+    queries:
+      - Die Freiheit des Internets beruht auf der am rigidesten hierarchisierten,
+        staatlich gestützten Industrie und ist daher Krönung statt Widersacher der
+        marktradikalen Ordnung
+      - Halbleiterfertigung mit ihren Reinraumbedingungen und staatlicher Macht bildet
+        die Basis der Netzfreiheit und markiert den Höhepunkt des globalisierten
+        Kapitalismus
+      - Der digitale Kommunikationsraum ist kein Gegenmodell zur neoliberalen
+        Wirtschaft, sondern deren technologische Spitze und Ausdruck
+    keywords:
+      - Halbleiterproduktion
+      - Neoliberalismus
+      - Netzfreiheit
+      - Hierarchie
+      - Staatsmacht
+      - Technikphilosophie
+  - id: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    title: "Militarisierung des Zivillebens: der unsichtbare Panzer im Schlafzimmer"
+    core: Die private, familiäre Kommunikation ist in eine militärisch besetzte Zone
+      umgezogen, ohne dass die Besatzung sichtbar wäre; Zivilraum und Kriegsraum sind
+      damit nicht mehr getrennt, sondern dasselbe Netz.
+    type: ausdruck
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "35"
+    occurrences: []
+    queries:
+      - Die intimste Familienkommunikation läuft heute über ein Netz, das militärisch
+        besetzt ist, ohne dass die Besatzung sichtbar wird.
+      - Ziviler Alltag und Kriegsraum fallen zusammen, weil dieselbe Infrastruktur beide
+        Bereiche trägt.
+      - Private Kommunikation ist in eine unsichtbar besetzte Zone übergesiedelt, der
+        Soldat steht zwischen den Ehepartnern.
+    keywords:
+      - Militarisierung
+      - Zivilleben
+      - Privatkommunikation
+      - Internet
+      - Besatzung
+      - Kriegsrecht
+  - id: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    title: "Die Asymmetrie der Exportkontrollen: Schutz verboten, Überwachung erlaubt"
+    core: Waffenexportkontrolle verbietet gerade die Verschlüsselung, die den Bürger
+      schützt, während Überwachungsgeräte frei handelbar bleiben – weil auch
+      demokratische Staaten am Wissen aus fremder Überwachung interessiert sind.
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: 36,47
+    occurrences: []
+    queries:
+      - Exportkontrollen verbieten schützende Kryptografie, lassen aber
+        Überwachungstechnik frei zirkulieren
+      - Staaten regulieren Verschlüsselung scharf, während sie Spähsoftware ungehindert
+        exportieren dürfen
+      - "Doppelstandard bei Ausfuhrregeln: Bürger schützende Technik wird behindert,
+        staatliche Ausspähung gefördert"
+    keywords:
+      - Wassenaar-Abkommen
+      - Exportkontrolle
+      - Überwachungstechnologie
+      - Doppelmoral
+      - Kryptografie
+      - Staatsinteresse
+  - id: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    title: Überwachungskapazität wächst schneller als die Bevölkerung
+    core: Die Überwachungskapazität wächst alle achtzehn Monate, die Bevölkerung alle
+      fünfundzwanzig Jahre, sodass die Überwachungskurve die Bevölkerungsentwicklung
+      dauerhaft überholt und ein Aufholen durch bloßes Abwarten unmöglich wird.
+    type: verbindung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "47"
+    occurrences: []
+    queries:
+      - Überwachungstechnik wächst exponentiell schneller als die Zahl der Menschen,
+        daher lässt sich der Rückstand nicht aussitzen
+      - Das Tempo des Ausbaus von Überwachung übersteigt das Bevölkerungswachstum
+        dauerhaft und verschiebt das Machtgleichgewicht
+      - Wer auf demografischen Wandel als Gegengewicht zur Überwachung hofft, irrt, weil
+        die technische Kurve steiler verläuft
+    keywords:
+      - Überwachungskapazität
+      - Verdopplungszeit
+      - Bevölkerungswachstum
+      - Kurvendominanz
+      - Massenüberwachung
+      - Demokratie
+  - id: 4feb2234-c04c-503c-a8a2-1ae068560986
+    title: "Die Dritt-Doktrin: im Netz ist jeder ein Dritter, also niemand geschützt"
+    core: Die Gerichte begründen fehlenden Datenschutz damit, dass man durch die Nutzung
+      eines Dienstes dessen Betreiber zum Dritten macht und damit angeblich freiwillig
+      preisgibt – obwohl im Netz jeder ein Dritter ist, sodass der Schutzbegriff sich
+      selbst aufhebt.
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "55"
+    occurrences: []
+    queries:
+      - Die juristische Begründung, Nutzer gäben Daten freiwillig an Dienstebetreiber
+        weiter, macht jeden zum Dritten und hebt damit den Schutz selbst auf
+      - Weil im Internet jeder gegenüber jedem ein Dritter ist, kann die Dritt-Doktrin
+        keinen Datenschutz mehr begründen
+      - Gerichte verweigern Privatsphäre im Netz mit dem Argument der Offenbarung an
+        Dritte, obwohl diese Konstruktion dort allumfassend und damit sinnlos wird
+    keywords:
+      - Dritt-Doktrin
+      - Datenschutz
+      - dritter Dritter
+      - Preisgabe
+      - Stored Communications Act
+      - Selbstaufhebung
+  - id: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    title: Der Rückzug aus dem Netz als Selbstentmachtung
+    core: "Der Verzicht auf Netznutzung ist keine Freiheit, sondern Entmachtung: Wer offline
+      bleibt, verliert gerade die Möglichkeit, Einfluss zu nehmen, weshalb der Ausweg
+      nicht im Rückzug, sondern im gesicherten Bleiben liegt."
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "61"
+    occurrences: []
+    queries:
+      - Wer sich dem Netz entzieht, verliert Einflussmöglichkeiten statt Freiheit zu
+        gewinnen
+      - Der Ausweg aus der Überwachung liegt im geschützten Dabeibleiben, nicht im
+        Offline-Gehen
+      - Nichtnutzung digitaler Infrastruktur bedeutet Selbstentmachtung des Einzelnen
+    keywords:
+      - Rückzug
+      - Selbstentmachtung
+      - Einfluss
+      - Offline
+      - Kryptografie
+      - Überwachung
+  - id: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    title: Die Industrie als Schutzmacht der Kryptografie
+    core: Kryptografie verbreitet sich, weil Unternehmen ihre transnationalen Datenströme
+      absichern müssen; der wirtschaftliche Eigennutz der Konzerne wird so zur
+      Machtbasis, die verhindert, dass Verschlüsselung politisch verboten wird.
+    type: verbindung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "61"
+    occurrences: []
+    queries:
+      - Wirtschaftliche Interessen von Konzernen sichern die Verbreitung starker
+        Verschlüsselung gegen staatliche Verbote
+      - Transnationale Datenströme brauchen Absicherung, wodurch Unternehmen zu einer
+        Schutzmacht der Kryptografie werden
+      - Die Machtbasis der Kryptografie liegt in der Industrie, die sie für eigene
+        Vernetzung benötigt
+    keywords:
+      - Kryptografie
+      - Industrie
+      - Machtbasis
+      - Virtual Private Networks
+      - transnationale Datenströme
+      - Verbot
+  - id: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    title: Selbstzensur als Preis des Nichtkönnens
+    core: Wer angesichts der Überwachung nicht lernt, schützende Technik selbst zu
+      beherrschen, verfällt in universelle Selbstzensur und meldet sich als politischer
+      Akteur von der Welt ab – Anpassung oder Werkzeugbeherrschung sind die beiden
+      einzigen Wege.
+    type: unterscheidung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "62"
+    occurrences: []
+    queries:
+      - Wer Überwachung nicht mit eigener Schutztechnik begegnet, verstummt überall und
+        zieht sich aus der Politik zurück
+      - "Nur zwei Auswege gegenüber totaler Beobachtung: Anpassung der Rede oder
+        Beherrschung der Schutzwerkzeuge"
+      - Fehlende technische Selbstbefähigung führt zu durchgängiger Selbstzensur und
+        politischer Handlungsunfähigkeit
+    keywords:
+      - Selbstzensur
+      - Überwachung
+      - Kryptografie
+      - Anpassung
+      - Werkzeugbeherrschung
+      - politischer Rückzug
+  - id: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    title: Internetzeit als Gegenrhythmus zur medialen Kurzfristigkeit
+    core: "Das Netz vergisst nicht, und daraus entsteht eine eigene Zeitform: gegen den
+      24-Stunden-Takt der Medienerzählungen lassen sich über Jahre Dossiers aufbauen,
+      die politische Mythen Schritt für Schritt widerlegen."
+    type: begriff
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "73"
+    occurrences: []
+    queries:
+      - Digitale Archive erzeugen eine langsame Zeitform, die der kurzen Taktung von
+        Nachrichten entgegensteht
+      - Über Jahre aufgebaute Dokumentensammlungen widerlegen politische Erzählungen,
+        die auf schnelle Emotion setzen
+      - Das nicht vergessende Netz ermöglicht langfristige Gegenarbeit zu medialen
+        Kurzgeschichten
+    keywords:
+      - Internetzeit
+      - Dossiers
+      - medialer Zeitrahmen
+      - Gegenrhythmus
+      - politische Mythen
+      - Archiv
+  - id: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    title: "Der abgeschlagene Kopf und die Wurmfortsätze: Sieg im Parlament, Weiterleben im "
+    core: "Ein demokratischer Sieg an der Oberfläche beendet die Sache nicht: Wird ein
+      Abkommen öffentlich gestoppt, wandert sein Inhalt in geheime bilaterale Verträge,
+      sodass der demokratische Prozess umgangen wird, ohne dass der Sieg verloren
+      scheint."
+    type: ausdruck
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "74"
+    occurrences: []
+    queries:
+      - Ein öffentlich gestopptes Abkommen lebt in geheimen bilateralen Verträgen
+        weiter, sodass demokratische Erfolge die Sache nicht beenden.
+      - Parlamentarische Niederlagen werden durch Hinterzimmerverträge umgangen, während
+        der Sieg an der Oberfläche bestehen bleibt.
+      - Der sichtbare politische Prozess lässt sich gewinnen, doch die Inhalte wandern
+        in unkontrollierte zwischenstaatliche Abmachungen.
+    keywords:
+      - ACTA
+      - bilaterale Abkommen
+      - Demokratieumgehung
+      - Geheimdiplomatie
+      - Urheberrecht
+      - Parlamentssieg
+  - id: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    title: Von konkurrierenden Staaten zur verschmolzenen transnationalen Elite
+    core: Die Hoffnung auf Rettung durch konkurrierende Regierungen trägt nicht mehr, weil
+      nationale Eliten sich nicht länger bekämpfen, sondern sich miteinander verbinden
+      und von ihren Bevölkerungen lösen.
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: 77-78
+    occurrences: []
+    queries:
+      - Nationale Eliten kooperieren statt zu rivalisieren und entkoppeln sich von der
+        eigenen Bevölkerung
+      - Staaten als Schutzinstanz versagen, weil ihre Führungsschichten sich
+        transnational zusammenschließen
+      - Die Konkurrenz zwischen Regierungen als Gegengewicht zur Machtkonzentration
+        entfällt
+    keywords:
+      - transnationale Elite
+      - Staatenkonkurrenz
+      - Entkopplung von der Bevölkerung
+      - Machtkonzentration
+      - Cypherpunks
+      - Dezentralisierung
+  - id: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    title: Zentralisierung als Rücknahme der Druckerpresse
+    core: Zentralisierung von Informationsdiensten macht die Erfindung der Druckerpresse
+      rückgängig, weil der Zugang zu Wissen dann an ein bestimmtes Gerät oder einen
+      bestimmten Anbieter gebunden ist statt an eine Allzweckmaschine.
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "85"
+    occurrences: []
+    queries:
+      - Zentralisierte Informationsdienste binden Wissenszugang an ein Gerät oder einen
+        Anbieter und heben damit die Errungenschaft des Buchdrucks auf
+      - Wer Informationssysteme zentral kontrolliert, macht den freien Zugang zu Wissen
+        wieder von einer Erlaubnis abhängig
+      - Die Verbreitung von Wissen braucht eine universelle Maschine statt eines
+        herstellergesteuerten Abspielgeräts
+    keywords:
+      - Zentralisierung
+      - Druckerpresse
+      - Allzweckcomputer
+      - Wissenszugang
+      - Informationskontrolle
+      - Encyclopedia Britannica
+    suspect_source: Ross Anderson
+  - id: b8641875-ac5d-558d-91bb-bbb197e2d860
+    title: "Vom Lesenlernen zum Schreibenlernen: das Netz als neue Ausdrucksfähigkeit"
+    core: Die Druckerpresse lehrte die Menschen lesen, das Netz lehrt sie schreiben; damit
+      entsteht eine neue, allen zugängliche Ausdrucksfähigkeit, die nicht über Partei,
+      Verlag oder Avantgarde kanalisiert werden muss.
+    type: ausdruck
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "86"
+    occurrences: []
+    queries:
+      - Die Druckerpresse lehrte die Menschen lesen, das Netz lehrt sie schreiben
+      - Neue allen zugängliche Ausdrucksfähigkeit ohne Partei, Verlag oder Avantgarde
+      - Vom Konsumieren zum Produzieren von Öffentlichkeit durch das Internet
+    keywords:
+      - Druckerpresse
+      - Schreibenlernen
+      - Ausdrucksfähigkeit
+      - Dezentralisierung
+      - Avantgarde
+      - Kanalisierung
+    suspect_source: Benjamin Bayart
+  - id: 21c01f78-59a8-5b05-9137-ec7443e72239
+    title: Die Bankenblockade als staatlich erzeugte Marktmacht
+    core: Die Bankenblockade gegen WikiLeaks war kein Marktereignis, sondern das Ergebnis
+      staatlicher Regulierung, die einzelne Finanzakteure zu Königen gemacht hat; wer
+      das Tauschmedium kontrolliert, kontrolliert damit auch, was Menschen tun dürfen.
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "101"
+    occurrences: []
+    queries:
+      - Staatliche Regulierung schafft Oligopole im Zahlungsverkehr, die dann politisch
+        blockieren können
+      - Wer das Tauschmedium kontrolliert, bestimmt die Grenzen erlaubten Handelns
+      - Die Finanzblockade gegen WikiLeaks war politische Steuerung durch regulierte
+        Gatekeeper, kein Marktresultat
+    keywords:
+      - Zahlungsverkehr
+      - Gatekeeper
+      - Regulierung
+      - Monopol
+      - Finanzblockade
+      - Souveränität
+  - id: a3a35365-d663-565d-b501-1b5c8151f709
+    title: "Reichweite gegen Vertraulichkeit: die Doppelbilanz der drei Freiheiten im Netz"
+    core: Beim Übergang ins Netz bleibt die Bewegungsfreiheit gleich, die
+      Kommunikationsfreiheit wächst an Reichweite und schrumpft zugleich durch den
+      Verlust der Privatheit, und die wirtschaftliche Freiheit erleidet denselben
+      Verlust – der Zugewinn an Reichweite wird mit dem Verlust an Vertraulichkeit
+      bezahlt.
+    type: unterscheidung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "106"
+    occurrences: []
+    queries:
+      - Der Wechsel ins Netz lässt Bewegungsfreiheit unberührt, vergrößert die
+        Reichweite des Austauschs, aber zerstört die Vertraulichkeit von Kommunikation
+        und Wirtschaften
+      - Reichweitengewinn im Internet wird durch den Verlust von Privatheit bezahlt, was
+        Kommunikation und ökonomischen Tausch gleichermaßen trifft
+      - "Drei Grundfreiheiten im Vergleich vor und nach dem Übergang zur vernetzten
+        Gesellschaft: Bewegung gleich, Kommunikation und Wirtschaft verlieren an
+        Vertraulichkeit"
+    keywords:
+      - Bewegungsfreiheit
+      - Kommunikationsfreiheit
+      - wirtschaftliche Interaktion
+      - Privatheit
+      - Reichweite
+      - Überwachung
+  - id: babe4d40-4c53-509c-a0d4-eb3593a19501
+    title: Vertrauen durch Rechenkosten statt durch Recht und Prüfung
+    core: "Bitcoin verlegt die Durchsetzung von Vertrauen aus Gesetz, Regulierung und
+      Prüfung in die Architektur selbst: Rechenleistung kostet Strom, Betrug wird teurer
+      als sein Nutzen, und Vertrauen wird auf viele Teilnehmer verteilt statt an einer
+      Stelle erzwingbar zu sein."
+    type: verbindung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "108"
+    occurrences: []
+    queries:
+      - Vertrauen in digitalen Währungen wird durch teure Rechenarbeit statt durch
+        staatliche Aufsicht hergestellt
+      - Betrug lohnt sich nicht, weil die Energiekosten der Manipulation den möglichen
+        Gewinn übersteigen
+      - Dezentrale Verteilung der Kontrolle ersetzt zentrale Instanzen, die erpressbar
+        wären
+    keywords:
+      - Bitcoin
+      - Rechenleistung
+      - Stromkosten
+      - Betrugsanreiz
+      - Dezentralisierung
+      - Architektur
+  - id: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    title: Privatsphäre als käufliches Gut, im Netz wie davor
+    core: "Datenschutz war nie eine Frage des Mediums, sondern des Geldes: Wer reich ist,
+      kauft sich Vertraulichkeit, wer arm ist, hat sie nicht – und das Netz setzt diesen
+      vor-digitalen Trend nur fort."
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "109"
+    occurrences: []
+    queries:
+      - "Vertraulichkeit ist eine Frage des Vermögens, nicht der Technik: Reiche kaufen
+        sich Privatheit, Arme bekommen sie nicht"
+      - Das Internet verstärkt die vordigitale Ungleichheit beim Schutz persönlicher
+        Daten statt sie aufzuheben
+      - Wer wenig Geld hat, hat auch keinen Datenschutz – diese ökonomische Logik gilt
+        online wie offline fort
+    keywords:
+      - Datenschutz
+      - Vermögen
+      - Privatsphäre als Ware
+      - digitale Ungleichheit
+      - Überwachung
+      - Geldströme
+  - id: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    title: Wirtschaftliche Vertraulichkeit als das eigentliche Freiheitsproblem
+    core: Die Vertraulichkeit wirtschaftlicher Transaktionen ist womöglich wichtiger als die
+      Redefreiheit, weil Geheimdienste aus Zahlungsdaten ein vollständiges Bild von
+      Macht und Beziehungen gewinnen und der wirtschaftliche Austausch die Grundlage der
+      Gesellschaftsstruktur bildet.
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "109"
+    occurrences: []
+    queries:
+      - Vertraulichkeit von Zahlungen ist politisch bedeutsamer als freie Rede, weil
+        Finanzströme Machtverhältnisse offenlegen
+      - Wer wirtschaftliche Transaktionen überwacht, erhält ein vollständiges Bild
+        gesellschaftlicher Beziehungen
+      - Geheimdienste würden Finanzdaten gegenüber Kommunikationsdaten bevorzugen, da
+        Geld die Basis der Gesellschaft ist
+    keywords:
+      - wirtschaftliche Vertraulichkeit
+      - Zahlungsdaten
+      - Redefreiheit
+      - Geheimdienste
+      - Gesellschaftsstruktur
+      - Machtbeziehungen
+  - id: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    title: Das Kriterium der Besitzstandsverteidigung
+    core: Lobbying lässt sich daran messen, ob eine Gruppe ihren Vorteil auf Kosten der
+      Freiheiten anderer ausbaut, ohne die sie selbst nie dorthin gekommen wäre – daran
+      unterscheidet sich produktive Interessenvertretung von Besitzstandsverteidigung.
+    type: unterscheidung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "113"
+    occurrences: []
+    queries:
+      - Interessenvertretung ist daran zu erkennen, ob eine Gruppe ihren Vorteil auf
+        Kosten fremder Freiheiten ausbaut, die ihr den Aufstieg erst ermöglichten
+      - Produktive Lobbyarbeit erhält die eigene Nützlichkeit, Besitzstandsverteidigung
+        dehnt staatlich verliehene Monopole aus
+      - "Ein Prüfmaßstab für Einflussnahme: Wer Freiheiten anderer beschneidet, die er
+        selbst zum Erfolg brauchte, verteidigt nur Erworbenes"
+    keywords:
+      - Lobbying
+      - Besitzstand
+      - Freiheitsbeschränkung
+      - Monopol
+      - Wohlstandstransfer
+      - Interessenvertretung
+  - id: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    title: Zwei unvereinbare Begriffe von Sicherheit
+    core: "Technische Sicherheit und staatlich verstandene Sicherheit sind Gegensätze: Der
+      Staat begreift Sicherheit als eigene Einsichtsfähigkeit, weshalb ein
+      funktionierend verschlüsseltes System für ihn eine Bedrohung darstellt."
+    type: unterscheidung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "121"
+    occurrences: []
+    queries:
+      - Staatliche Sicherheit beruht auf Einsicht in Systeme, technische Sicherheit auf
+        Undurchdringlichkeit – daraus folgt Konflikt
+      - Ein funktionierendes Verschlüsselungssystem ist für Behörden eine Bedrohung,
+        weil es ihre Kontrolle ausschließt
+      - "Zwei entgegengesetzte Sicherheitsbegriffe: Kontrollierbarkeit durch Beamte
+        versus Schutz vor Zugriff"
+    keywords:
+      - Sicherheitsbegriff
+      - Verschlüsselung
+      - Staatskontrolle
+      - Überwachung
+      - Undurchdringlichkeit
+      - Souveränität
+  - id: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    title: "Nachstaatliche Organisation: Wo die Aktiva Informationen sind, greift man den Ge"
+    core: Weil die Aktiva einer Enthüllungsorganisation vor allem Informationen sind, kann
+      sie transnational und durch Kryptografie geschützt operieren; angreifbar ist sie
+      nicht an ihren Inhalten, sondern an ihren Finanzflüssen – daher die Blockade.
+    type: verbindung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "128"
+    occurrences: []
+    queries:
+      - Eine Organisation, deren Vermögen aus Daten besteht, kann grenzüberschreitend
+        agieren und ist durch Verschlüsselung kaum zu fassen; deshalb zielt die
+        Gegenwehr auf ihre Geldwege.
+      - Weil Informationen das eigentliche Kapital sind, sind nur die Zahlungsströme der
+        wirksame Angriffspunkt gegen eine Enthüllungsplattform.
+      - Kryptografie macht Informationsbestände schwer angreifbar, weshalb Gegner
+        stattdessen die Finanzierung abschneiden.
+    keywords:
+      - Informationsaktiva
+      - Finanzblockade
+      - Transnationalität
+      - Kryptografie
+      - Enthüllungsorganisation
+      - Nachstaatlichkeit
+  - id: 61c88d95-a028-5258-82d9-a922d165f040
+    title: Das universelle Netz als einziges Werkzeug für globale Probleme
+    core: Ein universelles Netz ist das einzige Werkzeug, das für die globalen Probleme der
+      Menschheit noch zur Verfügung steht; deshalb ist der Kampf um seine Offenheit kein
+      Sonderinteresse, sondern der zentrale politische Kampf.
+    type: verbindung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "129"
+    occurrences: []
+    queries:
+      - Das Internet als einziges verbleibendes Mittel zur Lösung weltweiter Probleme
+      - Der Kampf um ein offenes Netz ist kein Partikularinteresse, sondern der
+        entscheidende politische Konflikt
+      - Ein universelles Kommunikationsnetz als Voraussetzung für die Bewältigung
+        globaler Krisen
+    keywords:
+      - universelles Netz
+      - globale Probleme
+      - Offenheit
+      - zentraler Kampf
+      - Balkanisierung
+      - Cyberspace
+  - id: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    title: Der Filter im Kopf des Nutzers statt beim Staat
+    core: Filtern gehört ans Ende der Kette, in den Kopf des Empfängers, nicht zur
+      Regierung, die im Namen des Volkes filtert – die Fähigkeit, mit dem Gesehenen
+      umzugehen, ersetzt die Vorzensur.
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: 137-139
+    occurrences: []
+    queries:
+      - Zensur durch Vorfilterung ersetzen durch Medienkompetenz beim Rezipienten
+      - Filterung von Inhalten gehört zum Empfänger, nicht zur Regierung
+      - Nicht Verbote, sondern Urteilsfähigkeit des Publikums entscheidet über
+        schädliche Inhalte
+    keywords:
+      - Endnutzerfilterung
+      - Vorzensur
+      - Medienkompetenz
+      - Wau Holland
+      - Selbstregulation
+      - Informationsfreiheit
+  - id: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    title: "Asymmetrische Geheimhaltung: privat nur gegenüber den Ohnmächtigen"
+    core: "Geheimhaltung ist asymmetrisch: Daten, auf die Millionen Staatsbedienstete
+      zugreifen dürfen, sind nicht privat, sondern nur vor den Ohnmächtigen verborgen –
+      Geheimhaltung schützt die Mächtigen, nicht die Bürger."
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "140"
+    occurrences: []
+    queries:
+      - Zugriffsbeschränkung macht Daten nicht privat, wenn viele Staatsdiener sie
+        einsehen können
+      - Geheimhaltung dient den Herrschenden und verbirgt Informationen nur vor den
+        Machtlosen
+      - Asymmetrischer Zugang zu Informationen entlarvt den Begriff der Privatheit als
+        Fiktion
+    keywords:
+      - asymmetrische Geheimhaltung
+      - Privatheit
+      - Zugriffsbeschränkung
+      - Mächtige
+      - Ohnmächtige
+      - Überwachung
+  - id: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    title: "Der Schatten eines Schattens: das Missverhältnis von veröffentlichtem und privat"
+    core: "WikiLeaks ist nur der Schatten eines Schattens: Gemessen an der gewaltigen Menge
+      Geheimmaterials in privaten Händen mächtiger Akteure ist das veröffentlichte
+      Material ein winziger Bruchteil, weshalb die Behauptung, nun könne niemand mehr
+      etwas geheim halten, falsch ist."
+    type: ausdruck
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "140"
+    occurrences: []
+    queries:
+      - Das veröffentlichte Geheimmaterial ist verschwindend gering gegenüber dem, was
+        mächtige Akteure im Verborgenen halten
+      - Die Vorstellung, das Netz mache Geheimhaltung unmöglich, verkennt die
+        Größenverhältnisse
+      - Transparenzprojekte erreichen nur einen winzigen Ausschnitt des tatsächlich
+        existierenden Geheimwissens
+    keywords:
+      - WikiLeaks
+      - Geheimmaterial
+      - Asymmetrie
+      - Transparenz
+      - Macht
+      - Schatten
+  - id: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    title: Die disziplinierende Wirkung erwarteter Enthüllung
+    core: "Weil geheimes Handeln heute nur begrenzte Zeit verborgen bleibt, verändert sich
+      staatliches Verhalten vorab: Die Erwartung späterer Rechenschaft diszipliniert die
+      Mächtigen, und umgekehrt braucht es geschützte interne Warnkanäle, damit
+      Missstände überhaupt an die Öffentlichkeit dringen."
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "141"
+    occurrences: []
+    queries:
+      - Die Aussicht auf spätere Aufdeckung zwingt Mächtige schon vorher zu besserem
+        Verhalten, während Whistleblower-Kanäle nötig sind, damit Missstände publik
+        werden
+      - Weil Geheimnisse nicht dauerhaft bleiben, kalkulieren Regierungen künftige
+        Rechenschaft ein und brauchen zugleich geschützte Meldewege
+      - Vorweggenommene Transparenz diszipliniert staatliches Handeln; ohne abgesicherte
+        interne Warnsysteme bleibt Aufklärung aus
+    keywords:
+      - erwartete Enthüllung
+      - Rechenschaft
+      - Abschreckung durch Transparenz
+      - Whistleblower-Schutz
+      - Sarbanes-Oxley
+      - staatliche Selbstdisziplin
+  - id: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    title: Nicht neutrale Technik als Werkzeug einer neuen Demokratie
+    core: "Technologie und Wissenschaft sind nicht neutral: Bestimmte Technikformen können
+      die lange ersehnten Grundrechte erst hervorbringen, weshalb es Sinn hat, Werkzeuge
+      für eine neue Demokratie zu bauen statt nur über Überwachung zu klagen."
+    type: umkehrung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "142"
+    occurrences: []
+    queries:
+      - Werkzeuge und Technikgestaltung als Mittel, um Grundrechte erst hervorzubringen,
+        statt nur Kritik an Überwachung zu üben
+      - "Technik ist nicht wertneutral: bestimmte Bauformen von Software können
+        Freiheitsrechte ermöglichen"
+      - Statt Klagen über staatliche Kontrolle lieber selbst Werkzeuge für eine neue
+        Demokratie bauen und verbreiten
+    keywords:
+      - Cypherpunks
+      - Technikdeterminismus
+      - nicht neutrale Technologie
+      - Werkzeuge für Demokratie
+      - Kryptografie
+      - Grundrechte
+  - id: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    title: Code als Gesetz und freie Software als Verfassungsfrage
+    core: Im Netz wird das Handeln durch den Code bestimmt, der läuft; deshalb ist Code
+      Gesetz, und freie Software muss so offenliegen wie Gesetzestexte in einer
+      Demokratie, damit jeder sie prüfen und ändern kann.
+    type: verbindung
+    origin: harvested
+    status: offen
+    primary:
+      source_id: Julian_Assange_Cypherpunks
+      segment_id: Julian_Assange_Cypherpunks
+      paragraphs: "145"
+    occurrences: []
+    queries:
+      - Der laufende Programmcode bestimmt, was im Netz möglich ist, daher hat er die
+        Wirkung eines Gesetzes
+      - Software muss wie ein öffentlich einsehbarer Gesetzestext offenliegen, damit
+        Bürger sie prüfen und verändern können
+      - Wer die Programme kontrolliert, die tatsächlich ausgeführt werden, bestimmt die
+        Handlungsspielräume der Nutzer
+    keywords:
+      - Code ist Gesetz
+      - freie Software
+      - Quelloffenheit
+      - Transparenz
+      - Lessig
+      - Cypherpunks
+    suspect_source: Lawrence Lessig („Code is Law“)
+edges:
+  - id: e1
+    fro: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    to: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    kind: local
+    relation: fuehrt_weiter
+    note: Die physikalisch verbürgte Grenze wird politisch haltbar, weil die Industrie sie
+      aus Eigennutz verteidigt.
+    confidence: mittel
+    origin: generated
+  - id: e2
+    fro: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    to: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    kind: local
+    relation: widerspricht
+    note: Die Rechenaufwand-Grenze wird durch Exportkontrollen unterlaufen, die gerade die
+      schützende Verschlüsselung verbieten.
+    confidence: hoch
+    origin: generated
+  - id: e3
+    fro: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    to: 91cb5ac7-9874-5136-aa93-ee421ce62dce
+    kind: local
+    relation: fuehrt_weiter
+    note: Wenn Technik Kontrolle zentralisiert, ist die netzinterne Freiheit nur der Gipfel
+      der hierarchisierten High-Tech-Ordnung.
+    confidence: hoch
+    origin: generated
+  - id: e4
+    fro: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    to: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Zentralisierung von Informationsdiensten ist ein Fall der
+      Kontrollzentralisierung durch Ressourcenbesitz.
+    confidence: mittel
+    origin: generated
+  - id: e5
+    fro: 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+    to: 446f65a8-087c-5e6a-9365-20c670473e08
+    kind: local
+    relation: fuehrt_weiter
+    note: Das unterschiedslose Abschöpfen läuft über die Datenbestände der Konzerne und
+      verschmilzt so Staat und Privatwirtschaft.
+    confidence: hoch
+    origin: generated
+  - id: e6
+    fro: 446f65a8-087c-5e6a-9365-20c670473e08
+    to: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    kind: local
+    relation: fuehrt_weiter
+    note: Wenn Konzerne zu verlängerten Armen der Dienste werden, ist Geheimhaltung nur noch
+      gegenüber den Ohnmächtigen wirksam.
+    confidence: mittel
+    origin: generated
+  - id: e7
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: a3a35365-d663-565d-b501-1b5c8151f709
+    kind: local
+    relation: fuehrt_weiter
+    note: "Die drei Grundfreiheiten werden im Netz einzeln bilanziert: Reichweite wächst,
+      Vertraulichkeit schrumpft."
+    confidence: hoch
+    origin: generated
+  - id: e8
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    kind: local
+    relation: fuehrt_weiter
+    note: Die wirtschaftliche Grundfreiheit wird zur wichtigsten, weil Zahlungsdaten das
+      Machtgefüge offenlegen.
+    confidence: hoch
+    origin: generated
+  - id: e9
+    fro: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil Zensur Überwachung voraussetzt, ist Selbstzensur die eigentliche Wirkung und
+      Werkzeugbeherrschung der Ausweg.
+    confidence: hoch
+    origin: generated
+  - id: e10
+    fro: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: unterscheidet
+    note: "Die spurlose westliche Zensur ist eine Sonderform: Sie wirkt ohne sichtbare
+      Prüfung durch nachträgliches Entfernen."
+    confidence: mittel
+    origin: generated
+  - id: e11
+    fro: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    to: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    kind: local
+    relation: widerspricht
+    note: Die spurlose Ausradierung nimmt genau die Sichtbarkeit des Unrechts, die zur
+      Bekämpfung nötig wäre.
+    confidence: hoch
+    origin: generated
+  - id: e12
+    fro: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    to: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Sichtbarkeit des Unrechts erzeugt die Erwartung späterer Rechenschaft, die die
+      Mächtigen vorab diszipliniert.
+    confidence: hoch
+    origin: generated
+  - id: e13
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    kind: local
+    relation: fuehrt_weiter
+    note: Wenn Vielfalt das Ziel ist, gehört das Filtern in den Kopf des Einzelnen statt zu
+      einer zentralen Instanz.
+    confidence: mittel
+    origin: generated
+  - id: e14
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil das Netz auf physischer Basis ruht, kann dieselbe Infrastruktur zum
+      unsichtbar besetzten Kriegsraum im Schlafzimmer werden.
+    confidence: hoch
+    origin: generated
+  - id: e15
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    kind: local
+    relation: unterscheidet
+    note: Der scheinbare Sieg an der Oberfläche ist die andere Form, in der die
+      Infrastruktur gegen ihre Urheber wirkt.
+    confidence: niedrig
+    origin: generated
+  - id: e16
+    fro: 91cb5ac7-9874-5136-aa93-ee421ce62dce
+    to: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    kind: local
+    relation: widerspricht
+    note: Der These, Technik sei nicht neutral und könne Grundrechte hervorbringen, steht
+      entgegen, dass die Netzfreiheit selbst Gipfel der neoliberalen Ordnung ist.
+    confidence: mittel
+    origin: generated
+  - id: e17
+    fro: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: fuehrt_weiter
+    note: Wer die militärisch besetzte Zone nicht technisch beherrscht, verfällt in
+      Selbstzensur.
+    confidence: mittel
+    origin: generated
+  - id: e18
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil die Überwachungskurve dauerhaft davonzieht, ist Rückzug keine Option, sondern
+      Entmachtung.
+    confidence: hoch
+    origin: generated
+  - id: e19
+    fro: 4feb2234-c04c-503c-a8a2-1ae068560986
+    to: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    kind: local
+    relation: fuehrt_weiter
+    note: Wenn im Netz jeder Dritter ist, bleibt Privatsphäre nur als käufliches Gut für die
+      Reichen.
+    confidence: mittel
+    origin: generated
+  - id: e20
+    fro: 4feb2234-c04c-503c-a8a2-1ae068560986
+    to: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    kind: local
+    relation: unterscheidet
+    note: Die Dritt-Doktrin betrifft den formalen Schutzbegriff, die asymmetrische
+      Geheimhaltung die faktische Zugänglichkeit für Millionen Bedienstete.
+    confidence: mittel
+    origin: generated
+  - id: e21
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: unterscheidet
+    note: "Rückzug und Selbstzensur sind zwei verschiedene Formen der Selbstentmachtung:
+      Verzicht auf Teilnahme gegen Schweigen im Netz."
+    confidence: mittel
+    origin: generated
+  - id: e22
+    fro: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: unterscheidet
+    note: Die Industrie schützt die Kryptografie, aber im Finanzbereich wird sie zum
+      staatlich erzeugten Machtfaktor gegen WikiLeaks.
+    confidence: mittel
+    origin: generated
+  - id: e23
+    fro: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: fuehrt_weiter
+    note: Werkzeugbeherrschung als Ausweg verlangt prüfbaren Code, weshalb freie Software
+      zur Verfassungsfrage wird.
+    confidence: hoch
+    origin: generated
+  - id: e24
+    fro: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Das nicht vergessende Netz erlaubt langfristige Dossiers, doch das veröffentlichte
+      Material bleibt nur ein Schatten des Geheimen.
+    confidence: mittel
+    origin: generated
+  - id: e25
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    kind: local
+    relation: widerspricht
+    note: Die disziplinierende Wirkung erwarteter Enthüllung wird durch das Weiterleben im
+      Geheimen nach dem Parlamentssieg relativiert.
+    confidence: mittel
+    origin: generated
+  - id: e26
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    kind: local
+    relation: fuehrt_weiter
+    note: Die von ihren Bevölkerungen gelöste Elite ist der Grund, warum Geheimhaltung nur
+      gegenüber den Ohnmächtigen wirkt.
+    confidence: mittel
+    origin: generated
+  - id: e27
+    fro: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    to: b8641875-ac5d-558d-91bb-bbb197e2d860
+    kind: local
+    relation: widerspricht
+    note: Der Zentralisierung als Rücknahme der Druckerpresse steht entgegen, dass das Netz
+      eine neue, allen zugängliche Schreibfähigkeit hervorbringt.
+    confidence: hoch
+    origin: generated
+  - id: e28
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    kind: local
+    relation: fuehrt_weiter
+    note: Wenn alle schreiben lernen, kann das Filtern in den Kopf des Empfängers verlagert
+      werden statt zur Regierung.
+    confidence: mittel
+    origin: generated
+  - id: e29
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    kind: local
+    relation: fuehrt_weiter
+    note: Bitcoin überträgt das Prinzip der Rechenkosten-Grenze von der Verschlüsselung auf
+      die Vertrauensdurchsetzung.
+    confidence: hoch
+    origin: generated
+  - id: e30
+    fro: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    to: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    kind: local
+    relation: unterscheidet
+    note: Die wirtschaftliche Vertraulichkeit ist ein strukturelles Freiheitsproblem, der
+      käufliche Datenschutz eine Verteilungsfrage.
+    confidence: mittel
+    origin: generated
+  - id: e31
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    kind: local
+    relation: fuehrt_weiter
+    note: "Die Exportkontroll-Asymmetrie ist ein Fall von Besitzstandsverteidigung: Schutz
+      der Bürger verboten, Überwachung erlaubt."
+    confidence: mittel
+    origin: generated
+  - id: e32
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil der Staat Sicherheit als eigene Einsichtsfähigkeit begreift, verbietet er den
+      Schutz und erlaubt die Überwachung.
+    confidence: hoch
+    origin: generated
+  - id: e33
+    fro: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil die Aktiva Informationen sind, greift man die Organisation über die
+      Finanzflüsse an – daher die Blockade.
+    confidence: hoch
+    origin: generated
+  - id: e34
+    fro: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    to: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    kind: local
+    relation: unterscheidet
+    note: Der Filter im Kopf des Nutzers ist die Alternative zur staatlichen Vorzensur, die
+      technisch Überwachung voraussetzt.
+    confidence: hoch
+    origin: generated
+  - id: e35
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    kind: local
+    relation: widerspricht
+    note: Die disziplinierende Wirkung erwarteter Enthüllung wird durch das Missverhältnis
+      von veröffentlichtem und geheimem Material eingeschränkt.
+    confidence: mittel
+    origin: generated
+  - id: e36
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: fuehrt_weiter
+    note: Werkzeuge für eine neue Demokratie zu bauen heißt konkret, Code als Gesetz
+      offenzulegen und freie Software zu sichern.
+    confidence: hoch
+    origin: generated
+  - id: e37
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    kind: local
+    relation: widerspricht
+    note: Offener, prüfbarer Code als Verfassungsfrage steht der Zentralisierung entgegen,
+      die den Zugang an einen Anbieter bindet.
+    confidence: mittel
+    origin: generated
+  - id: e38
+    fro: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    to: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    kind: local
+    relation: unterscheidet
+    note: Der käufliche Datenschutz betrifft die Verteilung, die wirtschaftliche
+      Vertraulichkeit die Struktur der Gesellschaft.
+    confidence: mittel
+    origin: generated
+  - id: e39
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+    kind: local
+    relation: fuehrt_weiter
+    note: Das exponentielle Wachstum der Überwachungskapazität ist die materielle Bedingung
+      für das Abschöpfen aller Kommunikation.
+    confidence: hoch
+    origin: generated
+  - id: e40
+    fro: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    to: b8641875-ac5d-558d-91bb-bbb197e2d860
+    kind: local
+    relation: unterscheidet
+    note: Die Internetzeit als Gegenrhythmus betrifft die Dauer der Wirkung, das
+      Schreibenlernen die neue Ausdrucksfähigkeit.
+    confidence: niedrig
+    origin: generated
+  - id: e41
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: 4feb2234-c04c-503c-a8a2-1ae068560986
+    kind: local
+    relation: unterscheidet
+    note: Rückzug ist Entmachtung, während die Dritt-Doktrin den Schutz gerade für die
+      Bleibenden aufhebt.
+    confidence: mittel
+    origin: generated
+  - id: e42
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    kind: local
+    relation: fuehrt_weiter
+    note: Das Missverhältnis von veröffentlichtem und geheimem Material bestätigt, dass
+      Geheimhaltung die Mächtigen schützt.
+    confidence: hoch
+    origin: generated
+  - id: e43
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    kind: local
+    relation: unterscheidet
+    note: Bitcoin verlegt Vertrauen in die Architektur, während die Industrie Kryptografie
+      aus wirtschaftlichem Eigennutz verbreitet.
+    confidence: niedrig
+    origin: generated
+  - id: e44
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: 4818261d-92b0-5acb-9aff-d9f229f51056
+    kind: local
+    relation: unterscheidet
+    note: Das Kriterium der Besitzstandsverteidigung bewertet Lobbying, die Utopiekritik
+      bewertet die Einebnung von Systemen.
+    confidence: niedrig
+    origin: generated
+  - id: e45
+    fro: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Bankenblockade ist die praktische Demonstration, dass Kontrolle des
+      Tauschmediums wirtschaftliche Vertraulichkeit zerstört.
+    confidence: hoch
+    origin: generated
+  - id: e46
+    fro: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    to: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    kind: local
+    relation: widerspricht
+    note: Die spurlose Ausradierung aus Archiven und Indizes untergräbt die Annahme, das
+      Netz vergesse nicht.
+    confidence: hoch
+    origin: generated
+  - id: e47
+    fro: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Sichtbarkeit des Unrechts als Bedingung seiner Bekämpfung steht dem winzigen
+      Bruchteil veröffentlichten Materials gegenüber.
+    confidence: mittel
+    origin: generated
+  - id: e48
+    fro: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    to: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    kind: local
+    relation: unterscheidet
+    note: Der käufliche Datenschutz betrifft die soziale Schichtung, die asymmetrische
+      Geheimhaltung die Zugänglichkeit für Staatsbedienstete.
+    confidence: mittel
+    origin: generated
+  - id: e49
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    kind: local
+    relation: fuehrt_weiter
+    note: Das überproportionale Wachstum der Überwachungskapazität treibt die
+      Militarisierung des Zivillebens voran.
+    confidence: mittel
+    origin: generated
+  - id: e50
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: fuehrt_weiter
+    note: Die allen zugängliche Schreibfähigkeit macht den Kampf um die Offenheit des
+      universellen Netzes zum zentralen politischen Kampf.
+    confidence: mittel
+    origin: generated
+  - id: e51
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil der Staat Sicherheit als Einsichtsfähigkeit begreift, wird die
+      kryptografische Grenze zum eigentlichen Rechtsraum.
+    confidence: hoch
+    origin: generated
+  - id: e52
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    kind: local
+    relation: unterscheidet
+    note: Code als Gesetz betrifft die Prüfbarkeit der Systeme, der Filter im Kopf die
+      Verlagerung der Auswahl zum Empfänger.
+    confidence: niedrig
+    origin: generated
+  - id: e53
+    fro: 91cb5ac7-9874-5136-aa93-ee421ce62dce
+    to: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    kind: local
+    relation: fuehrt_weiter
+    note: Die netzinterne Freiheit als Gipfel der neoliberalen Ordnung passt zur
+      verschmolzenen transnationalen Elite, die sich von ihren Bevölkerungen löst.
+    confidence: mittel
+    origin: generated
+  - id: e54
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: 91cb5ac7-9874-5136-aa93-ee421ce62dce
+    kind: local
+    relation: widerspricht
+    note: Die Forderung nach Vervielfältigung der Systeme richtet sich gegen die
+      Homogenisierung, die der neoliberalen Netzordnung eigen ist.
+    confidence: mittel
+    origin: generated
+  - id: e55
+    fro: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Kontrolle über die Finanzinfrastruktur ist ein Beispiel dafür, wie
+      Ressourcenbesitz Marktmacht erzeugt.
+    confidence: mittel
+    origin: generated
+  - id: e56
+    fro: 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+    to: 4feb2234-c04c-503c-a8a2-1ae068560986
+    kind: local
+    relation: fuehrt_weiter
+    note: Das unterschiedslose Abschöpfen macht jeden zum Dritten und höhlt so den
+      Datenschutzbegriff aus.
+    confidence: mittel
+    origin: generated
+  - id: e57
+    fro: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    to: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    kind: local
+    relation: unterscheidet
+    note: Die spurlose Ausradierung betrifft das nachträgliche Verschwinden von Inhalten,
+      die asymmetrische Geheimhaltung die Zugänglichkeit für viele Bedienstete.
+    confidence: niedrig
+    origin: generated
+  - id: e58
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: unterscheidet
+    note: Bitcoin ersetzt staatlich erzeugte Finanzmacht durch in die Architektur verlegtes
+      Vertrauen.
+    confidence: mittel
+    origin: generated
+  - id: e59
+    fro: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: widerspricht
+    note: Die These vom nicht vergessenden Netz steht im Widerspruch zur spurlosen
+      Entfernung aus Archiven und Indizes.
+    confidence: hoch
+    origin: generated
+  - id: e60
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    kind: local
+    relation: unterscheidet
+    note: Der wirtschaftliche Eigennutz der Konzerne als Schutzmacht der Kryptografie ist
+      produktive Interessenvertretung, nicht Besitzstandsverteidigung.
+    confidence: mittel
+    origin: generated
+  - id: e61
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    kind: local
+    relation: fuehrt_weiter
+    note: Das Weiterleben im Geheimen nach dem Parlamentssieg zeigt, dass Geheimhaltung die
+      Mächtigen schützt.
+    confidence: mittel
+    origin: generated
+  - id: e62
+    fro: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: unterscheidet
+    note: Selbstzensur ist die Anpassung im Netz, Rückzug die Verweigerung der Teilnahme –
+      beides Entmachtung, aber entgegengesetzte Wege.
+    confidence: mittel
+    origin: generated
+  - id: e63
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: 446f65a8-087c-5e6a-9365-20c670473e08
+    kind: local
+    relation: fuehrt_weiter
+    note: Wer die physische Basis kontrolliert, kann die Datenbestände der Konzerne
+      abschöpfen und so Staat und Unternehmen verschmelzen.
+    confidence: mittel
+    origin: generated
+  - id: e64
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: babe4d40-4c53-509c-a0d4-eb3593a19501
+    kind: local
+    relation: fuehrt_weiter
+    note: Bitcoin ist das Beispiel dafür, dass eine bestimmte Technikform Vertrauen und
+      damit eine neue Ordnung hervorbringt.
+    confidence: hoch
+    origin: generated
+  - id: e65
+    fro: 61c88d95-a028-5258-82d9-a922d165f040
+    to: 4818261d-92b0-5acb-9aff-d9f229f51056
+    kind: local
+    relation: unterscheidet
+    note: Das universelle Netz als einziges Werkzeug ist eine Einheitslösung, die der
+      Forderung nach Vervielfältigung der Systeme entgegensteht.
+    confidence: mittel
+    origin: generated
+  - id: e66
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    kind: local
+    relation: widerspricht
+    note: Die Hoffnung, offener Code könne Macht demokratisieren, steht der These gegenüber,
+      dass Technikgeschichte Herrschaft verfestigt.
+    confidence: mittel
+    origin: generated
+  - id: e67
+    fro: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    to: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil Zensur technisch Überwachung erfordert, ist die Verlagerung des Filters in
+      den Kopf des Empfängers die Alternative.
+    confidence: hoch
+    origin: generated
+  - id: e68
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: fuehrt_weiter
+    note: Das dauerhafte Überholen der Bevölkerungsentwicklung macht den Gegensatz von
+      technischer und staatlicher Sicherheit unauflösbar.
+    confidence: mittel
+    origin: generated
+  - id: e69
+    fro: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    to: 4feb2234-c04c-503c-a8a2-1ae068560986
+    kind: local
+    relation: fuehrt_weiter
+    note: Die asymmetrische Geheimhaltung zeigt, dass der Dritt-Schutzbegriff die faktische
+      Preisgabe an Millionen Bedienstete nicht erfasst.
+    confidence: mittel
+    origin: generated
+  - id: e70
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    kind: local
+    relation: unterscheidet
+    note: Das Missverhältnis von veröffentlichtem und geheimem Material betrifft die Menge,
+      der abgeschlagene Kopf die institutionelle Umgehung.
+    confidence: niedrig
+    origin: generated
+  - id: e71
+    fro: a3a35365-d663-565d-b501-1b5c8151f709
+    to: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    kind: local
+    relation: fuehrt_weiter
+    note: Der Verlust an Vertraulichkeit im Netz verstärkt den vor-digitalen Trend, dass
+      Privatsphäre vom Geld abhängt.
+    confidence: mittel
+    origin: generated
+  - id: e72
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    kind: local
+    relation: fuehrt_weiter
+    note: Die verschmolzene Elite verschärft die Umkehrung, weil bei Scheitern der Bewegung
+      keine konkurrierende Macht mehr Schutz bietet.
+    confidence: mittel
+    origin: generated
+  - id: e73
+    fro: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    to: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    kind: local
+    relation: widerspricht
+    note: Die These, Technik verfestige Herrschaft, widerspricht der Hoffnung, bestimmte
+      Technikformen könnten Grundrechte hervorbringen.
+    confidence: hoch
+    origin: generated
+  - id: e74
+    fro: 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+    to: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    kind: local
+    relation: fuehrt_weiter
+    note: Das universelle Abschöpfen macht deutlich, dass Geheimhaltung nur noch gegenüber
+      den Ohnmächtigen besteht.
+    confidence: mittel
+    origin: generated
+  - id: e75
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    kind: local
+    relation: fuehrt_weiter
+    note: Bitcoin zeigt, wie wirtschaftliche Transaktionen ohne zentrale Instanz vertraulich
+      und vertrauenswürdig werden können.
+    confidence: mittel
+    origin: generated
+  - id: e76
+    fro: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: unterscheidet
+    note: Der Filter im Kopf ist die aktive Fähigkeit, mit Gesehenem umzugehen, Selbstzensur
+      dagegen die passive Vorwegnahme von Verbotenem.
+    confidence: mittel
+    origin: generated
+  - id: e77
+    fro: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    to: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    kind: local
+    relation: unterscheidet
+    note: Die spurlose westliche Zensur wirkt ohne sichtbare Prüfung, während Zensur sonst
+      technisch an Überwachung gebunden ist.
+    confidence: mittel
+    origin: generated
+  - id: e78
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil Rückzug keine Freiheit ist, bleibt nur die Wahl zwischen Selbstzensur und
+      Werkzeugbeherrschung.
+    confidence: hoch
+    origin: generated
+  - id: e79
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    kind: local
+    relation: unterscheidet
+    note: Das Kriterium der Besitzstandsverteidigung bewertet politische Vorteile, der
+      käufliche Datenschutz beschreibt eine soziale Verteilung.
+    confidence: niedrig
+    origin: generated
+  - id: e80
+    fro: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    to: 91cb5ac7-9874-5136-aa93-ee421ce62dce
+    kind: local
+    relation: unterscheidet
+    note: Die Industrie als Schutzmacht der Kryptografie zeigt, dass die High-Tech-Ordnung
+      nicht nur Herrschaft, sondern auch Schutz hervorbringt.
+    confidence: mittel
+    origin: generated
+  - id: e81
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: 4feb2234-c04c-503c-a8a2-1ae068560986
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil die Überwachungskapazität dauerhaft davonzieht, wird der Dritt-Schutzbegriff
+      faktisch zum Schutzlosigkeitsbegriff.
+    confidence: mittel
+    origin: generated
+  - id: e82
+    fro: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: widerspricht
+    note: Die spurlose Ausradierung nimmt der Öffentlichkeit genau das Wissen, das zur
+      Bekämpfung des Unrechts nötig wäre.
+    confidence: hoch
+    origin: generated
+  - id: e83
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: a3a35365-d663-565d-b501-1b5c8151f709
+    kind: local
+    relation: unterscheidet
+    note: Die Utopiekritik fordert Vielfalt der Systeme, die Doppelbilanz beschreibt den
+      Preis der Reichweite im Netz.
+    confidence: niedrig
+    origin: generated
+  - id: e84
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    kind: local
+    relation: fuehrt_weiter
+    note: Der Staat begreift Sicherheit als eigene Einsichtsfähigkeit, weshalb Geheimhaltung
+      nur gegenüber den Ohnmächtigen gilt.
+    confidence: mittel
+    origin: generated
+  - id: e85
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil das Netz auf physischen Fundamenten ruht, kann die Bindung an einen Anbieter
+      die Druckerpresse faktisch zurücknehmen.
+    confidence: hoch
+    origin: generated
+  - id: e86
+    fro: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    to: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Langzeitgedächtnisfähigkeit des Netzes ist die Bedingung dafür, dass erwartete
+      Enthüllung disziplinierend wirkt.
+    confidence: hoch
+    origin: generated
+  - id: e87
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    kind: local
+    relation: unterscheidet
+    note: Der Bau demokratiefördernder Werkzeuge ist eine bewusste Gestaltung, die
+      Verbreitung der Kryptografie durch Konzerne ein unbeabsichtigter Nebeneffekt.
+    confidence: mittel
+    origin: generated
+  - id: e88
+    fro: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil Privatsphäre käuflich ist, ist der Rückzug aus dem Netz für die meisten keine
+      Wahl, sondern Entmachtung.
+    confidence: mittel
+    origin: generated
+  - id: e89
+    fro: 446f65a8-087c-5e6a-9365-20c670473e08
+    to: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Verwischung von Staat und Unternehmen ist die institutionelle Form der
+      verschmolzenen transnationalen Elite.
+    confidence: mittel
+    origin: generated
+  - id: e90
+    fro: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    to: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil Zensur Überwachung erfordert, wird die private Kommunikation zur militärisch
+      besetzten Zone.
+    confidence: mittel
+    origin: generated
+  - id: e91
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    kind: local
+    relation: unterscheidet
+    note: Bitcoin ersetzt Vertrauensdurchsetzung durch Rechenkosten, das Kriterium der
+      Besitzstandsverteidigung bewertet politisches Lobbying.
+    confidence: niedrig
+    origin: generated
+  - id: e92
+    fro: 21c01f78-59a8-5b05-9137-ec7443e72239
+    to: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    kind: local
+    relation: unterscheidet
+    note: Die Bankenblockade ist eine gezielte politische Ausschaltung, der käufliche
+      Datenschutz eine allgemeine soziale Schichtung.
+    confidence: mittel
+    origin: generated
+  - id: e93
+    fro: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    to: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    kind: local
+    relation: widerspricht
+    note: Die Zentralisierung, die den Zugang an einen Anbieter bindet, steht der
+      Verlagerung des Filters in den Kopf des Nutzers entgegen.
+    confidence: mittel
+    origin: generated
+  - id: e94
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    kind: local
+    relation: widerspricht
+    note: Die winzige Menge veröffentlichten Materials schwächt die These, Sichtbarmachen
+      erzeuge die nötige politische Lobby.
+    confidence: mittel
+    origin: generated
+  - id: e95
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Kontrolle über die Kommunikationsinfrastruktur führt dazu, dass Zivil- und
+      Kriegsraum dasselbe Netz werden.
+    confidence: mittel
+    origin: generated
+  - id: e96
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil der Staat offene Systeme als Bedrohung erlebt, wird freie Software zur
+      Verfassungsfrage.
+    confidence: mittel
+    origin: generated
+  - id: e97
+    fro: a3a35365-d663-565d-b501-1b5c8151f709
+    to: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    kind: local
+    relation: fuehrt_weiter
+    note: Der Verlust wirtschaftlicher Vertraulichkeit im Netz macht diese zum eigentlichen
+      Freiheitsproblem.
+    confidence: hoch
+    origin: generated
+  - id: e98
+    fro: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    to: babe4d40-4c53-509c-a0d4-eb3593a19501
+    kind: local
+    relation: unterscheidet
+    note: Technik als Ressourcenbesitz zentralisiert Kontrolle, während Bitcoin Vertrauen
+      gerade auf viele Teilnehmer verteilt.
+    confidence: mittel
+    origin: generated
+  - id: e99
+    fro: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    to: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    kind: local
+    relation: widerspricht
+    note: Die spurlose Ausradierung untergräbt die disziplinierende Erwartung, dass geheimes
+      Handeln später ans Licht kommt.
+    confidence: mittel
+    origin: generated
+  - id: e100
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    kind: local
+    relation: unterscheidet
+    note: Das Kriterium bewertet Lobbying, die asymmetrische Geheimhaltung beschreibt die
+      faktische Zugänglichkeit von Daten.
+    confidence: niedrig
+    origin: generated
+  - id: e101
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: fuehrt_weiter
+    note: Die verschmolzene Elite macht die staatlich erzeugte Marktmacht der Finanzakteure
+      erst wirksam gegen WikiLeaks.
+    confidence: mittel
+    origin: generated
+  - id: e102
+    fro: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    to: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    kind: local
+    relation: widerspricht
+    note: Die disziplinierende Wirkung erwarteter Enthüllung wird durch das Weiterleben im
+      Geheimen nach dem Sieg unterlaufen.
+    confidence: mittel
+    origin: generated
+  - id: e103
+    fro: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    to: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    kind: local
+    relation: fuehrt_weiter
+    note: Die nachstaatliche Organisation ist die praktische Verkörperung des kryptografisch
+      verbürgten Rechtsraums.
+    confidence: hoch
+    origin: generated
+  - id: e104
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: fuehrt_weiter
+    note: Wenn Code Gesetz ist, wird die Offenheit des universellen Netzes zum zentralen
+      politischen Kampf.
+    confidence: mittel
+    origin: generated
+  - id: e105
+    fro: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    to: 4818261d-92b0-5acb-9aff-d9f229f51056
+    kind: local
+    relation: unterscheidet
+    note: Die Sichtbarkeit des Unrechts betrifft die Bekämpfung konkreter Missstände, die
+      Utopiekritik die Vielfalt der Ordnungsformen.
+    confidence: niedrig
+    origin: generated
+  - id: e106
+    fro: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    to: 4feb2234-c04c-503c-a8a2-1ae068560986
+    kind: local
+    relation: fuehrt_weiter
+    note: Die unsichtbare Besatzung des Zivilraums wird juristisch durch die Dritt-Doktrin
+      ermöglicht.
+    confidence: mittel
+    origin: generated
+  - id: e107
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil die Überwachung dauerhaft davonzieht, bleibt dem Einzelnen nur Anpassung oder
+      Werkzeugbeherrschung.
+    confidence: hoch
+    origin: generated
+  - id: e108
+    fro: a3a35365-d663-565d-b501-1b5c8151f709
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil die Reichweite im Netz nur um den Preis der Vertraulichkeit wächst, wäre
+      Rückzug der Verzicht auf den einzigen Zugewinn.
+    confidence: mittel
+    origin: generated
+  - id: e109
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: widerspricht
+    note: Die Behauptung, nun könne niemand mehr etwas geheim halten, widerspricht der These
+      vom universellen Netz als einzigem Werkzeug.
+    confidence: niedrig
+    origin: generated
+  - id: e110
+    fro: 446f65a8-087c-5e6a-9365-20c670473e08
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: unterscheidet
+    note: Die Verwischung von Staat und Unternehmen betrifft die Überwachung, die
+      Bankenblockade die Finanzkontrolle.
+    confidence: mittel
+    origin: generated
+  - id: e111
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: widerspricht
+    note: Die Umkehrung des Konsensvorsprungs zeigt, dass Bleiben im Netz riskant ist, was
+      der These vom Rückzug als Entmachtung eine Spannung gibt.
+    confidence: niedrig
+    origin: generated
+  - id: e112
+    fro: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: fuehrt_weiter
+    note: Die technische Kopplung von Zensur und Überwachung wird im Westen durch spurloses
+      Entfernen unsichtbar gemacht.
+    confidence: mittel
+    origin: generated
+  - id: e113
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: c253b639-d56a-5cb5-ab58-a796f62b5547
+    kind: local
+    relation: unterscheidet
+    note: Das Kriterium bewertet Interessenvertretung, die physische Fundierung beschreibt
+      die Machtstruktur des Netzes.
+    confidence: niedrig
+    origin: generated
+  - id: e114
+    fro: 21c01f78-59a8-5b05-9137-ec7443e72239
+    to: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    kind: local
+    relation: unterscheidet
+    note: Die Bankenblockade nutzt die Finanzkontrolle, die Exportkontroll-Asymmetrie die
+      Wissenskontrolle – zwei verschiedene Hebel.
+    confidence: mittel
+    origin: generated
+  - id: e115
+    fro: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    to: 4feb2234-c04c-503c-a8a2-1ae068560986
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil Zahlungsdaten Macht und Beziehungen offenlegen, ist der Dritt-Schutzbegriff
+      im Netz besonders folgenreich.
+    confidence: mittel
+    origin: generated
+  - id: e116
+    fro: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    to: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    kind: local
+    relation: widerspricht
+    note: Die Forderung, die Unversehrtheit der Geschichte über die Schonung der Opfer zu
+      stellen, steht der Geheimhaltung zugunsten der Mächtigen entgegen.
+    confidence: mittel
+    origin: generated
+  - id: e117
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    kind: local
+    relation: widerspricht
+    note: Das exponentielle Wachstum der Überwachung stellt die Behauptung in Frage, die
+      kryptografische Grenze sei dauerhaft durch Rechenaufwand verteidigt.
+    confidence: mittel
+    origin: generated
+  - id: e118
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: 4818261d-92b0-5acb-9aff-d9f229f51056
+    kind: local
+    relation: fuehrt_weiter
+    note: Die allen zugängliche Schreibfähigkeit ermöglicht die Vervielfältigung von
+      Kulturen und Interaktionsformen.
+    confidence: mittel
+    origin: generated
+  - id: e119
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil der Staat Sicherheit als eigene Einsichtsfähigkeit begreift, ist Rückzug aus
+      dem Netz keine Sicherheit, sondern Entmachtung.
+    confidence: mittel
+    origin: generated
+  - id: e120
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: babe4d40-4c53-509c-a0d4-eb3593a19501
+    kind: local
+    relation: unterscheidet
+    note: Code als Gesetz betrifft die Prüfbarkeit von Software, Bitcoin die Verlagerung von
+      Vertrauen in Rechenkosten.
+    confidence: mittel
+    origin: generated
+  - id: e121
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    kind: local
+    relation: fuehrt_weiter
+    note: Die verschmolzene Elite treibt die Zentralisierung der Informationsdienste voran
+      und nimmt so die Druckerpresse zurück.
+    confidence: mittel
+    origin: generated
+  - id: e122
+    fro: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    to: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    kind: local
+    relation: widerspricht
+    note: Die Exportkontroll-Asymmetrie zeigt, dass die Industrie die Kryptografie nicht
+      durchgehend schützt, wenn Staaten sie verbieten.
+    confidence: mittel
+    origin: generated
+  - id: e123
+    fro: 4feb2234-c04c-503c-a8a2-1ae068560986
+    to: a3a35365-d663-565d-b501-1b5c8151f709
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Dritt-Doktrin erklärt, warum der Zugewinn an Reichweite im Netz mit dem
+      Verlust an Vertraulichkeit bezahlt wird.
+    confidence: hoch
+    origin: generated
+  - id: e124
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil alle drei Grundfreiheiten Privatheit voraussetzen, wird der käufliche
+      Datenschutz zum Freiheitsproblem.
+    confidence: mittel
+    origin: generated
+  - id: e125
+    fro: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    to: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    kind: local
+    relation: unterscheidet
+    note: Die Militarisierung beschreibt den Zustand des Zivilraums, die Umkehrung des
+      Konsensvorsprungs die Dynamik bei Erfolg und Scheitern.
+    confidence: mittel
+    origin: generated
+  - id: e126
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: fuehrt_weiter
+    note: Der Bau demokratiefördernder Werkzeuge ist die praktische Antwort auf die These,
+      das Netz sei das einzige Werkzeug für globale Probleme.
+    confidence: hoch
+    origin: generated
+  - id: e127
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    kind: local
+    relation: unterscheidet
+    note: Das Kriterium bewertet Lobbying, die Sichtbarkeitsthese begründet, warum
+      Öffentlichkeit für die Bekämpfung von Unrecht nötig ist.
+    confidence: niedrig
+    origin: generated
+  - id: e128
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: babe4d40-4c53-509c-a0d4-eb3593a19501
+    kind: local
+    relation: unterscheidet
+    note: Das Wachstum der Überwachungskapazität ist eine Bedrohung, während Bitcoin
+      Vertrauen gerade durch Rechenkosten statt durch Überwachung stiftet.
+    confidence: niedrig
+    origin: generated
+  - id: e129
+    fro: 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+    to: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    kind: local
+    relation: fuehrt_weiter
+    note: Das unterschiedslose Abschöpfen aller Kommunikation ist die technische Grundlage
+      der Herrschaft einer verschmolzenen Elite.
+    confidence: mittel
+    origin: generated
+  - id: e130
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    kind: local
+    relation: fuehrt_weiter
+    note: Die neue Schreibfähigkeit erzeugt die Öffentlichkeit, die Unrecht sichtbar macht
+      und bekämpfbar hält.
+    confidence: mittel
+    origin: generated
+  - id: e131
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil der Staat Sicherheit als Einsichtsfähigkeit begreift, wird die private
+      Kommunikation zur militärisch besetzten Zone.
+    confidence: hoch
+    origin: generated
+  - id: e132
+    fro: a3a35365-d663-565d-b501-1b5c8151f709
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: fuehrt_weiter
+    note: Der Verlust an Vertraulichkeit bei wachsender Reichweite lässt nur die Wahl
+      zwischen Selbstzensur und Werkzeugbeherrschung.
+    confidence: mittel
+    origin: generated
+  - id: e133
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    kind: local
+    relation: widerspricht
+    note: Die physische Beherrschbarkeit des Netzes relativiert die Vorstellung einer rein
+      durch Rechenaufwand verteidigten Grenze.
+    confidence: mittel
+    origin: generated
+  - id: e134
+    fro: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    to: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    kind: local
+    relation: widerspricht
+    note: Wenn Privatsphäre ohnehin käuflich ist, verliert die These von der
+      wirtschaftlichen Vertraulichkeit als eigentlichem Freiheitsproblem an Schärfe.
+    confidence: niedrig
+    origin: generated
+  - id: e135
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    kind: local
+    relation: widerspricht
+    note: Das Weiterleben im Geheimen zeigt, dass Sichtbarmachen allein Unrecht nicht
+      dauerhaft bekämpfbar macht.
+    confidence: mittel
+    origin: generated
+  - id: e136
+    fro: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    to: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    kind: local
+    relation: fuehrt_weiter
+    note: Die spurlose Entfernung aus Archiven und Indizes ist die konkrete Form der
+      Zentralisierung, die die Druckerpresse zurücknimmt.
+    confidence: mittel
+    origin: generated
+  - id: e137
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: widerspricht
+    note: Die Hoffnung auf demokratiefördernde Technik steht dem Befund entgegen, dass der
+      Staat Sicherheit als eigene Einsichtsfähigkeit begreift.
+    confidence: mittel
+    origin: generated
+  - id: e138
+    fro: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    to: b8641875-ac5d-558d-91bb-bbb197e2d860
+    kind: local
+    relation: fuehrt_weiter
+    note: Das nicht vergessende Netz und die neue Schreibfähigkeit zusammen erlauben es,
+      über Jahre eigene Erzählungen aufzubauen.
+    confidence: mittel
+    origin: generated
+  - id: e139
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil Rückzug Entmachtung ist, bleibt nur der Bau von Werkzeugen, die gesichertes
+      Bleiben ermöglichen.
+    confidence: hoch
+    origin: generated
+  - id: e140
+    fro: 446f65a8-087c-5e6a-9365-20c670473e08
+    to: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    kind: local
+    relation: unterscheidet
+    note: Die Verwischung von Staat und Unternehmen betrifft institutionelle Zuständigkeit,
+      der käufliche Datenschutz die soziale Verteilung.
+    confidence: niedrig
+    origin: generated
+  - id: e141
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: unterscheidet
+    note: Das Kriterium bewertet kollektive Interessenvertretung, die Rückzugsthese die
+      individuelle Handlungsoption.
+    confidence: niedrig
+    origin: generated
+  - id: e142
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    kind: local
+    relation: fuehrt_weiter
+    note: Die verschmolzene Elite erklärt, warum auch demokratische Staaten am Wissen aus
+      fremder Überwachung interessiert sind.
+    confidence: mittel
+    origin: generated
+  - id: e143
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: unterscheidet
+    note: Bitcoin verlegt Vertrauen in die Architektur, während der Rückzug aus dem Netz
+      gerade den Verzicht auf Gestaltung bedeutet.
+    confidence: niedrig
+    origin: generated
+  - id: e144
+    fro: a3a35365-d663-565d-b501-1b5c8151f709
+    to: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    kind: local
+    relation: unterscheidet
+    note: Die Doppelbilanz bilanziert Reichweite und Vertraulichkeit, die Zensurthese
+      beschreibt den Mechanismus von Überwachung und Selbstzensur.
+    confidence: niedrig
+    origin: generated
+  - id: e145
+    fro: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    to: babe4d40-4c53-509c-a0d4-eb3593a19501
+    kind: local
+    relation: fuehrt_weiter
+    note: Die wirtschaftliche Absicherung von Datenströmen durch Konzerne ist die
+      Voraussetzung dafür, dass Vertrauen technisch statt rechtlich organisiert wird.
+    confidence: mittel
+    origin: generated
+  - id: e146
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Kontrolle über Kommunikation als Staatlichkeitsinfrastruktur erklärt, warum
+      Zensur technisch Überwachung erfordert.
+    confidence: mittel
+    origin: generated
+  - id: e147
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: unterscheidet
+    note: Das Missverhältnis von veröffentlichtem und geheimem Material betrifft die Menge,
+      die Bankenblockade den gezielten Angriff auf Finanzflüsse.
+    confidence: niedrig
+    origin: generated
+  - id: e148
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil der Staat Sicherheit als umfassende Einsicht begreift, geht er vom gezielten
+      Abfangen zum unterschiedslosen Abschöpfen über.
+    confidence: hoch
+    origin: generated
+  - id: e149
+    fro: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: widerspricht
+    note: Die nachstaatliche Organisation zeigt, dass transnationales Operieren möglich ist,
+      was die These vom Rückzug als einzigem Ausweg entkräftet.
+    confidence: niedrig
+    origin: generated
+  - id: e150
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    kind: local
+    relation: widerspricht
+    note: Offener, prüfbarer Code als Verfassungsfrage steht der Militarisierung des
+      Zivillebens entgegen, die auf undurchsichtiger Infrastruktur beruht.
+    confidence: mittel
+    origin: generated
+  - id: e151
+    fro: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    to: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    kind: local
+    relation: unterscheidet
+    note: Die disziplinierende Erwartung betrifft das Verhalten vorab, der abgeschlagene
+      Kopf die Umgehung nach einem öffentlichen Sieg.
+    confidence: mittel
+    origin: generated
+  - id: e152
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: 4818261d-92b0-5acb-9aff-d9f229f51056
+    kind: local
+    relation: widerspricht
+    note: Die verschmolzene Elite treibt die Homogenisierung voran, die der Forderung nach
+      Vervielfältigung der Systeme widerspricht.
+    confidence: mittel
+    origin: generated
+  - id: e153
+    fro: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    to: 0b895879-ea76-5ad8-a988-c81578e48680
+    kind: local
+    relation: widerspricht
+    note: Wenn Privatsphäre käuflich ist, ist der Schutz der drei Grundfreiheiten durch
+      Privatheit nicht für alle gleich gewährleistet.
+    confidence: mittel
+    origin: generated
+  - id: e154
+    fro: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    to: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Kontrollzentralisierung durch Ressourcenbesitz führt zur unsichtbaren
+      Besetzung des Zivilraums.
+    confidence: mittel
+    origin: generated
+  - id: e155
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: unterscheidet
+    note: Das Kriterium bewertet Interessenvertretung, die Netzthese begründet, warum
+      Offenheit kein Sonderinteresse ist.
+    confidence: niedrig
+    origin: generated
+  - id: e156
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    kind: local
+    relation: widerspricht
+    note: Die neue Schreibfähigkeit als Emanzipation steht der Militarisierung des
+      Zivillebens entgegen.
+    confidence: mittel
+    origin: generated
+  - id: e157
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    kind: local
+    relation: widerspricht
+    note: Die These, Bleiben sei die einzige Option, steht der Umkehrung gegenüber, dass
+      dieselbe Infrastruktur bei Scheitern zur Verfolgung dient.
+    confidence: mittel
+    origin: generated
+  - id: e158
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil die physische Basis kontrollierbar ist, kehrt sich der Konsensvorsprung bei
+      Scheitern in ein Verfolgungsinstrument um.
+    confidence: hoch
+    origin: generated
+  - id: e159
+    fro: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    to: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    kind: local
+    relation: unterscheidet
+    note: Die Sichtbarkeit des Unrechts betrifft die kollektive Bekämpfung, der Filter im
+      Kopf die individuelle Verarbeitung des Gesehenen.
+    confidence: niedrig
+    origin: generated
+  - id: e160
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    kind: local
+    relation: unterscheidet
+    note: Der abgeschlagene Kopf betrifft die Umgehung demokratischer Entscheidungen, die
+      Exportkontroll-Asymmetrie die ungleiche Behandlung von Schutz- und
+      Überwachungstechnik.
+    confidence: niedrig
+    origin: generated
+  - id: e161
+    fro: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    to: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    kind: local
+    relation: fuehrt_weiter
+    note: Die über Jahre aufgebauten Dossiers machen das Unrecht sichtbar, das sonst der
+      Zensur zum Opfer fiele.
+    confidence: hoch
+    origin: generated
+  - id: e162
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil Code Gesetz ist, wird der Gegensatz von technischer und staatlicher
+      Sicherheit zur Verfassungsfrage.
+    confidence: mittel
+    origin: generated
+  - id: e163
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: widerspricht
+    note: Die spurlose Ausradierung ist die Einebnung der Geschichte, gegen die sich die
+      Forderung nach Vielfalt richtet.
+    confidence: mittel
+    origin: generated
+  - id: e164
+    fro: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    to: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Angreifbarkeit an Finanzflüssen zeigt, dass wirtschaftliche Vertraulichkeit
+      das eigentliche Freiheitsproblem ist.
+    confidence: hoch
+    origin: generated
+  - id: e165
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: a3a35365-d663-565d-b501-1b5c8151f709
+    kind: local
+    relation: fuehrt_weiter
+    note: Das exponentielle Wachstum der Überwachung erklärt, warum der Zugewinn an
+      Reichweite mit dauerhaftem Verlust an Vertraulichkeit bezahlt wird.
+    confidence: mittel
+    origin: generated
+  - id: e166
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    kind: local
+    relation: unterscheidet
+    note: Das Missverhältnis betrifft die Menge des Veröffentlichten, die disziplinierende
+      Wirkung die Erwartung künftiger Enthüllungen.
+    confidence: mittel
+    origin: generated
+  - id: e167
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil die drei Grundfreiheiten nur im Netz gemeinsam verteidigt werden können,
+      bedeutet Rückzug den Verlust aller drei.
+    confidence: mittel
+    origin: generated
+  - id: e168
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil der Staat Sicherheit als Einsicht begreift, muss sich die
+      Enthüllungsorganisation über Kryptografie und transnationale Strukturen dem
+      Zugriff entziehen.
+    confidence: hoch
+    origin: generated
+  - id: e169
+    fro: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    to: b8641875-ac5d-558d-91bb-bbb197e2d860
+    kind: local
+    relation: unterscheidet
+    note: Die Rücknahme der Druckerpresse betrifft den Zugang zu Wissen, das Schreibenlernen
+      die neue Fähigkeit zum Ausdruck.
+    confidence: mittel
+    origin: generated
+  - id: e170
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    kind: local
+    relation: fuehrt_weiter
+    note: Die verschmolzene Elite macht das Kriterium der Besitzstandsverteidigung zum
+      Maßstab für ihre Interessenvertretung.
+    confidence: mittel
+    origin: generated
+  - id: e171
+    fro: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: widerspricht
+    note: Die Exportkontroll-Asymmetrie zeigt, dass der Staat den Bürgern den Schutz
+      verweigert, was die These vom Rückzug als Entmachtung verschärft.
+    confidence: niedrig
+    origin: generated
+  - id: e172
+    fro: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    to: a3a35365-d663-565d-b501-1b5c8151f709
+    kind: local
+    relation: fuehrt_weiter
+    note: Die militärisch besetzte Zone im Zivilraum ist die Folge des
+      Vertraulichkeitsverlusts bei wachsender Reichweite.
+    confidence: mittel
+    origin: generated
+  - id: e173
+    fro: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: fuehrt_weiter
+    note: Die spurlose Ausradierung verstärkt die Selbstzensur, weil das Verschwinden von
+      Inhalten nicht nachweisbar ist.
+    confidence: mittel
+    origin: generated
+  - id: e174
+    fro: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    to: 446f65a8-087c-5e6a-9365-20c670473e08
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Kontrollzentralisierung durch Ressourcenbesitz zeigt sich in der Verwischung
+      von Staat und Unternehmen im Überwachungsverbund.
+    confidence: mittel
+    origin: generated
+  - id: e175
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    kind: local
+    relation: fuehrt_weiter
+    note: Die physische Basis des Netzes ist der Ort, an dem die Überwachungskapazität
+      exponentiell ausgebaut wird.
+    confidence: mittel
+    origin: generated
+  - id: e176
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    kind: local
+    relation: widerspricht
+    note: Die Marktlogik, die auf Homogenisierung zutreibt, zeigt sich auch darin, dass
+      Privatsphäre zum käuflichen Gut wird.
+    confidence: mittel
+    origin: generated
+  - id: e177
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: widerspricht
+    note: Das Weiterleben im Geheimen zeigt, dass bloßes Bleiben im Netz politische Siege
+      nicht sichert.
+    confidence: niedrig
+    origin: generated
+  - id: e178
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: unterscheidet
+    note: Die Nichtneutralität der Technik begründet den Bau neuer Werkzeuge, die Offenheit
+      des Codes deren demokratische Kontrolle.
+    confidence: mittel
+    origin: generated
+  - id: e179
+    fro: 21c01f78-59a8-5b05-9137-ec7443e72239
+    to: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Bankenblockade ist ein Fall, an dem sich Besitzstandsverteidigung der
+      Finanzakteure ablesen lässt.
+    confidence: mittel
+    origin: generated
+  - id: e180
+    fro: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    to: a3a35365-d663-565d-b501-1b5c8151f709
+    kind: local
+    relation: unterscheidet
+    note: Die Internetzeit betrifft die Dauer der Wirkung, die Doppelbilanz die Reichweite
+      und Vertraulichkeit der drei Freiheiten.
+    confidence: niedrig
+    origin: generated
+  - id: e181
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: fuehrt_weiter
+    note: Die spurlose Ausradierung trägt dazu bei, dass das veröffentlichte Material ein
+      Schatten bleibt.
+    confidence: mittel
+    origin: generated
+  - id: e182
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil Rückzug Entmachtung ist, muss der Einzelne im Netz bleiben und lernen, selbst
+      zu filtern.
+    confidence: mittel
+    origin: generated
+  - id: e183
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: widerspricht
+    note: Die verschmolzene Elite stellt die Hoffnung in Frage, das universelle Netz könne
+      als gemeinsames Werkzeug der Menschheit dienen.
+    confidence: mittel
+    origin: generated
+  - id: e184
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: 0b895879-ea76-5ad8-a988-c81578e48680
+    kind: local
+    relation: fuehrt_weiter
+    note: Die neue Ausdrucksfähigkeit stärkt die Grundfreiheit des Denkens, die die Trias
+      fordert.
+    confidence: mittel
+    origin: generated
+  - id: e185
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: unterscheidet
+    note: Das Wachstum der Überwachungskapazität betrifft die Menge des Erfassbaren, die
+      spurlose Ausradierung das nachträgliche Verschwinden von Inhalten.
+    confidence: niedrig
+    origin: generated
+  - id: e186
+    fro: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    to: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    kind: local
+    relation: unterscheidet
+    note: Die nachstaatliche Organisation nutzt die Infrastruktur für Enthüllungen, während
+      die Umkehrung ihre Verfolgung nach dem Scheitern beschreibt.
+    confidence: mittel
+    origin: generated
+  - id: e187
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    kind: local
+    relation: widerspricht
+    note: Die Forderung nach Vielfalt der Interaktionsformen steht der Einebnung entgegen,
+      die die militärisch besetzte Zone bewirkt.
+    confidence: mittel
+    origin: generated
+  - id: e188
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    kind: local
+    relation: fuehrt_weiter
+    note: Der Schutz der wirtschaftlichen Grundfreiheit erklärt, warum die Industrie die
+      Kryptografie als Machtbasis verteidigt.
+    confidence: hoch
+    origin: generated
+  - id: e189
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    kind: local
+    relation: unterscheidet
+    note: Bitcoin verlegt Vertrauen in die Architektur, die nachstaatliche Organisation
+      verlegt ihre Aktiva in Informationen.
+    confidence: niedrig
+    origin: generated
+  - id: e190
+    fro: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: widerspricht
+    note: Der Filter im Kopf des Nutzers als Alternative zur Vorzensur wird durch spurlose
+      Ausradierung unterlaufen, die gar keine Wahl mehr lässt.
+    confidence: mittel
+    origin: generated
+  - id: e191
+    fro: a3a35365-d663-565d-b501-1b5c8151f709
+    to: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    kind: local
+    relation: unterscheidet
+    note: Die Doppelbilanz bilanziert die drei Freiheiten, die Internetzeit beschreibt die
+      neue Zeitform der Wirkung.
+    confidence: niedrig
+    origin: generated
+  - id: e192
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    kind: local
+    relation: widerspricht
+    note: Die Umkehrung des Konsensvorsprungs dämpft die Hoffnung, Technik könne verlässlich
+      Grundrechte hervorbringen.
+    confidence: mittel
+    origin: generated
+  - id: e193
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: 4feb2234-c04c-503c-a8a2-1ae068560986
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil Rückzug keine Freiheit ist, muss man im Netz bleiben und sich mit der
+      Dritt-Doktrin auseinandersetzen.
+    confidence: mittel
+    origin: generated
+  - id: e194
+    fro: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    to: babe4d40-4c53-509c-a0d4-eb3593a19501
+    kind: local
+    relation: unterscheidet
+    note: Werkzeugbeherrschung ist eine individuelle Kompetenz, Bitcoin eine
+      architektonische Lösung für Vertrauen.
+    confidence: niedrig
+    origin: generated
+  - id: e195
+    fro: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    to: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Kontrollzentralisierung durch Ressourcenbesitz treibt das exponentielle
+      Wachstum der Überwachungskapazität an.
+    confidence: mittel
+    origin: generated
+  - id: e196
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: widerspricht
+    note: Die winzige Menge veröffentlichten Materials relativiert die Erwartung, Bleiben im
+      Netz führe zu wirksamer Gegenmacht.
+    confidence: niedrig
+    origin: generated
+  - id: e197
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil Code Gesetz ist, ist der Rückzug aus dem Netz der Verzicht auf Mitgestaltung
+      der Gesetze.
+    confidence: mittel
+    origin: generated
+  - id: e198
+    fro: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    to: 0b895879-ea76-5ad8-a988-c81578e48680
+    kind: local
+    relation: widerspricht
+    note: Die militärisch besetzte Zone im Zivilraum widerspricht dem Anspruch, die drei
+      Grundfreiheiten zu schützen.
+    confidence: mittel
+    origin: generated
+  - id: e199
+    fro: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    to: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    kind: local
+    relation: widerspricht
+    note: Wenn Privatsphäre vom Geld abhängt, ist die kryptografische Grenze kein für alle
+      gleichermaßen offener Rechtsraum.
+    confidence: mittel
+    origin: generated
+  - id: e200
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: widerspricht
+    note: Die neue Schreibfähigkeit wird durch spurlose Ausradierung untergraben, die
+      Geschriebenes nachträglich verschwinden lässt.
+    confidence: mittel
+    origin: generated
+  - id: e201
+    fro: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    to: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    kind: local
+    relation: widerspricht
+    note: Die Industrie als Schutzmacht der Kryptografie steht der These entgegen, dass die
+      Eliten vollständig verschmolzen und gleichgerichtet sind.
+    confidence: niedrig
+    origin: generated
+  - id: e202
+    fro: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: widerspricht
+    note: Die These vom nicht vergessenden Netz wird durch das Missverhältnis von
+      veröffentlichtem und geheimem Material relativiert.
+    confidence: niedrig
+    origin: generated
+  - id: e203
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: widerspricht
+    note: Wenn nationale Eliten verschmolzen sind, ist der Rückzug aus dem Netz nicht nur
+      Entmachtung, sondern auch der Verlust jeder Gegenöffentlichkeit.
+    confidence: niedrig
+    origin: generated
+  - id: e204
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Der Gegensatz von technischer und staatlicher Sicherheit betrifft die Definition,
+      das Schattenverhältnis die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e205
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: b8641875-ac5d-558d-91bb-bbb197e2d860
+    kind: local
+    relation: fuehrt_weiter
+    note: Die neue Schreibfähigkeit ist das Beispiel dafür, dass bestimmte Technikformen
+      Grundrechte hervorbringen.
+    confidence: hoch
+    origin: generated
+  - id: e206
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    kind: local
+    relation: unterscheidet
+    note: Die Trias behandelt alle drei Grundfreiheiten gleich, die wirtschaftliche
+      Vertraulichkeit gewichtet eine davon als vorrangig.
+    confidence: mittel
+    origin: generated
+  - id: e207
+    fro: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: unterscheidet
+    note: Die spurlose Ausradierung betrifft Inhalte, die Bankenblockade die Finanzflüsse
+      einer Organisation.
+    confidence: niedrig
+    origin: generated
+  - id: e208
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: widerspricht
+    note: Die Forderung nach Vielfalt der Interaktionsformen steht der erzwungenen Einebnung
+      durch universelle Selbstzensur entgegen.
+    confidence: mittel
+    origin: generated
+  - id: e209
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    kind: local
+    relation: widerspricht
+    note: Bitcoin zeigt, dass Rechenkosten Vertrauen statt Überwachung erzeugen können, was
+      der These vom unaufhaltsamen Überwachungswachstum eine Gegenmöglichkeit
+      entgegenstellt.
+    confidence: niedrig
+    origin: generated
+  - id: e210
+    fro: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    to: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Sichtbarkeit des Unrechts erzeugt die Lobby, deren Anliegen sich mit dem
+      Kriterium der Besitzstandsverteidigung prüfen lässt.
+    confidence: niedrig
+    origin: generated
+  - id: e211
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: b8641875-ac5d-558d-91bb-bbb197e2d860
+    kind: local
+    relation: widerspricht
+    note: Die Kontrolle der physischen Basis relativiert die Vorstellung, das Netz lehre
+      alle gleichermaßen das Schreiben.
+    confidence: niedrig
+    origin: generated
+  - id: e212
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: 4818261d-92b0-5acb-9aff-d9f229f51056
+    kind: local
+    relation: fuehrt_weiter
+    note: Offener Code ermöglicht die Vervielfältigung von Systemen, die gegen die Einebnung
+      verteidigt werden soll.
+    confidence: mittel
+    origin: generated
+  - id: e213
+    fro: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: fuehrt_weiter
+    note: Die nachstaatliche Organisation ist ein Beispiel dafür, warum das offene
+      universelle Netz der zentrale politische Kampfplatz bleibt.
+    confidence: mittel
+    origin: generated
+  - id: e214
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Umkehrung des Konsensvorsprungs macht Werkzeugbeherrschung zur
+      Überlebensbedingung, um nicht in Selbstzensur zu verfallen.
+    confidence: mittel
+    origin: generated
+  - id: e215
+    fro: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: fuehrt_weiter
+    note: Der Filter im Kopf des Nutzers verlangt, dass der Code, der die Auswahl
+      ermöglicht, offen und prüfbar ist.
+    confidence: mittel
+    origin: generated
+  - id: e216
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: fuehrt_weiter
+    note: Die verschmolzene Elite erklärt, warum der Staat Sicherheit als eigene
+      Einsichtsfähigkeit gegen die Bürger durchsetzt.
+    confidence: mittel
+    origin: generated
+  - id: e217
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: 446f65a8-087c-5e6a-9365-20c670473e08
+    kind: local
+    relation: fuehrt_weiter
+    note: Das exponentielle Wachstum der Überwachungskapazität wird durch die Datenbestände
+      der Konzerne zusätzlich beschleunigt.
+    confidence: mittel
+    origin: generated
+  - id: e218
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: unterscheidet
+    note: Das Kriterium bewertet Interessenvertretung, die spurlose Ausradierung beschreibt
+      eine Zensurtechnik.
+    confidence: niedrig
+    origin: generated
+  - id: e219
+    fro: 21c01f78-59a8-5b05-9137-ec7443e72239
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: widerspricht
+    note: Die Bankenblockade zeigt, dass Bleiben im Netz nicht vor Entmachtung schützt, was
+      die Rückzugsthese relativiert.
+    confidence: mittel
+    origin: generated
+  - id: e220
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: widerspricht
+    note: Der Bau demokratiefördernder Werkzeuge steht der Erfahrung entgegen, dass die
+      Finanzinfrastruktur zur Ausschaltung genutzt wird.
+    confidence: niedrig
+    origin: generated
+  - id: e221
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: unterscheidet
+    note: Die Rückzugsthese betrifft individuelles Handeln, der Sicherheitsbegriff die
+      Definition staatlicher Interessen.
+    confidence: niedrig
+    origin: generated
+  - id: e222
+    fro: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: widerspricht
+    note: Wenn wirtschaftliche Vertraulichkeit das eigentliche Freiheitsproblem ist, ist der
+      Rückzug aus dem Netz besonders entmachtend.
+    confidence: mittel
+    origin: generated
+  - id: e223
+    fro: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil die Industrie Kryptografie verfügbar hält, ist gesichertes Bleiben im Netz
+      praktisch möglich statt Rückzug.
+    confidence: mittel
+    origin: generated
+  - id: e224
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: widerspricht
+    note: Die Forderung nach Vielfalt der Systeme steht dem staatlichen Anspruch auf eine
+      einzige Sicherheitsdefinition entgegen.
+    confidence: mittel
+    origin: generated
+  - id: e225
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    kind: local
+    relation: widerspricht
+    note: Bitcoin als offenes, für alle zugängliches Vertrauenssystem steht der These
+      gegenüber, Privatsphäre sei ohnehin käuflich.
+    confidence: niedrig
+    origin: generated
+  - id: e226
+    fro: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    to: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    kind: local
+    relation: widerspricht
+    note: Die Asymmetrie der Exportkontrollen zeigt, dass nicht jede Technikform Grundrechte
+      hervorbringt, sondern viele sie beschränken.
+    confidence: mittel
+    origin: generated
+  - id: e227
+    fro: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: unterscheidet
+    note: Die disziplinierende Erwartung betrifft staatliches Verhalten vorab, die
+      Bankenblockade einen gezielten Angriff auf eine Organisation.
+    confidence: niedrig
+    origin: generated
+  - id: e228
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: c253b639-d56a-5cb5-ab58-a796f62b5547
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Kontrolle über Kommunikation als Staatlichkeitsinfrastruktur setzt die
+      Beherrschung der physischen Basis des Netzes voraus.
+    confidence: hoch
+    origin: generated
+  - id: e229
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil Code Gesetz ist, ist die Beherrschung freier Software die Bedingung dafür,
+      nicht in Selbstzensur zu verfallen.
+    confidence: mittel
+    origin: generated
+  - id: e230
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Umkehrung betrifft die Dynamik von Erfolg und Scheitern, das
+      Schattenverhältnis die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e231
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: widerspricht
+    note: Wenn der Staat Sicherheit als eigene Einsichtsfähigkeit begreift, ist Bleiben im
+      Netz riskant, was die Rückzugsthese stützt statt sie zu widerlegen.
+    confidence: niedrig
+    origin: generated
+  - id: e232
+    fro: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: widerspricht
+    note: Die Sichtbarkeit des Unrechts als Bedingung seiner Bekämpfung wird durch die
+      Bankenblockade unterlaufen, die die Organisation an ihrer Basis trifft.
+    confidence: niedrig
+    origin: generated
+  - id: e233
+    fro: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: widerspricht
+    note: Der Filter im Kopf des Nutzers widerspricht dem staatlichen Anspruch, im Namen des
+      Volkes zu filtern.
+    confidence: hoch
+    origin: generated
+  - id: e234
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    kind: local
+    relation: unterscheidet
+    note: Das Schattenverhältnis betrifft die Menge des Geheimen, der käufliche Datenschutz
+      die soziale Verteilung von Privatsphäre.
+    confidence: niedrig
+    origin: generated
+  - id: e235
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    kind: local
+    relation: widerspricht
+    note: Die verschmolzene Elite lässt bezweifeln, dass neue Werkzeuge allein eine
+      demokratische Ordnung hervorbringen können.
+    confidence: mittel
+    origin: generated
+  - id: e236
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: unterscheidet
+    note: Das Wachstum der Überwachung ist eine strukturelle Tendenz, die Rückzugsthese eine
+      Handlungsempfehlung.
+    confidence: niedrig
+    origin: generated
+  - id: e237
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Utopiekritik fordert Vielfalt, das Schattenverhältnis beschreibt die Grenzen
+      der Veröffentlichungspraxis.
+    confidence: niedrig
+    origin: generated
+  - id: e238
+    fro: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: unterscheidet
+    note: Die Militarisierung betrifft die Ausdehnung des Kriegsraums, die spurlose
+      Ausradierung die Unsichtbarkeit der Zensur.
+    confidence: niedrig
+    origin: generated
+  - id: e239
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: 0b895879-ea76-5ad8-a988-c81578e48680
+    kind: local
+    relation: unterscheidet
+    note: Das Kriterium bewertet Interessenvertretung, die Trias beschreibt die
+      Grundfreiheiten, die sie schützen soll.
+    confidence: niedrig
+    origin: generated
+  - id: e240
+    fro: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    to: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    kind: local
+    relation: unterscheidet
+    note: Die nachstaatliche Organisation nutzt Kryptografie als Schutz, der käufliche
+      Datenschutz zeigt deren soziale Ungleichverteilung.
+    confidence: niedrig
+    origin: generated
+  - id: e241
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    kind: local
+    relation: widerspricht
+    note: Das Weiterleben im Geheimen zeigt, dass neue Technik allein keine demokratische
+      Kontrolle erzwingt.
+    confidence: mittel
+    origin: generated
+  - id: e242
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: unterscheidet
+    note: Bitcoin betrifft die Vertrauensarchitektur, die spurlose Ausradierung die
+      nachträgliche Löschung von Inhalten.
+    confidence: niedrig
+    origin: generated
+  - id: e243
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    kind: local
+    relation: fuehrt_weiter
+    note: Der Bau demokratiefördernder Werkzeuge dient dazu, Unrecht sichtbar und damit
+      bekämpfbar zu machen.
+    confidence: mittel
+    origin: generated
+  - id: e244
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    kind: local
+    relation: unterscheidet
+    note: Der Sicherheitsbegriff betrifft die Definition, das Überwachungswachstum die
+      messbare Kapazitätsentwicklung.
+    confidence: niedrig
+    origin: generated
+  - id: e245
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: widerspricht
+    note: Die spurlose Ausradierung zeigt, dass Bleiben im Netz allein nicht vor dem
+      Verschwinden der eigenen Geschichte schützt.
+    confidence: mittel
+    origin: generated
+  - id: e246
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: widerspricht
+    note: Offener Code als Verfassungsfrage steht der spurlosen Ausradierung entgegen, die
+      gerade auf Undurchsichtigkeit beruht.
+    confidence: mittel
+    origin: generated
+  - id: e247
+    fro: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: widerspricht
+    note: Die Industrie als Schutzmacht der Kryptografie zeigt, dass der Gegensatz von
+      technischer und staatlicher Sicherheit nicht vollständig ist.
+    confidence: niedrig
+    origin: generated
+  - id: e248
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: widerspricht
+    note: Die neue Schreibfähigkeit als Emanzipation wird durch das Schattenverhältnis
+      relativiert, das die Grenzen der Veröffentlichung zeigt.
+    confidence: niedrig
+    origin: generated
+  - id: e249
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: fuehrt_weiter
+    note: Die verschmolzene Elite erklärt, warum das Geheimmaterial in privaten Händen
+      bleibt und WikiLeaks nur ein Schatten ist.
+    confidence: mittel
+    origin: generated
+  - id: e250
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: fuehrt_weiter
+    note: Der Schutz der drei Grundfreiheiten verlangt, dass der Code, der sie ermöglicht,
+      offen und prüfbar ist.
+    confidence: mittel
+    origin: generated
+  - id: e251
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    kind: local
+    relation: unterscheidet
+    note: Die Utopiekritik fordert Vielfalt, die Industrie als Schutzmacht der Kryptografie
+      zeigt einen wirtschaftlichen Mechanismus der Vielfalt.
+    confidence: niedrig
+    origin: generated
+  - id: e252
+    fro: a3a35365-d663-565d-b501-1b5c8151f709
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: unterscheidet
+    note: Die Doppelbilanz bilanziert Freiheiten, die spurlose Ausradierung beschreibt eine
+      Zensurtechnik.
+    confidence: niedrig
+    origin: generated
+  - id: e253
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: widerspricht
+    note: Der staatliche Sicherheitsbegriff erklärt, warum Geheimmaterial in privaten Händen
+      bleibt und nicht öffentlich wird.
+    confidence: niedrig
+    origin: generated
+  - id: e254
+    fro: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: widerspricht
+    note: Die Sichtbarkeit des Unrechts als Bedingung seiner Bekämpfung steht der
+      Selbstzensur entgegen, die das Wissen gerade zurückhält.
+    confidence: hoch
+    origin: generated
+  - id: e255
+    fro: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    to: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    kind: local
+    relation: unterscheidet
+    note: Der Filter im Kopf ist eine kulturelle Fähigkeit, die Industrie als Schutzmacht
+      der Kryptografie ein ökonomischer Mechanismus.
+    confidence: niedrig
+    origin: generated
+  - id: e256
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: b8641875-ac5d-558d-91bb-bbb197e2d860
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil Rückzug Entmachtung ist, muss man die neue Schreibfähigkeit des Netzes aktiv
+      nutzen.
+    confidence: mittel
+    origin: generated
+  - id: e257
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: 0b895879-ea76-5ad8-a988-c81578e48680
+    kind: local
+    relation: widerspricht
+    note: Das Schattenverhältnis zeigt, dass die drei Grundfreiheiten im Netz nicht für alle
+      gleichermaßen verwirklicht sind.
+    confidence: niedrig
+    origin: generated
+  - id: e258
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    kind: local
+    relation: unterscheidet
+    note: Das Kriterium bewertet Interessenvertretung, die Nichtneutralität der Technik
+      begründet den Bau neuer Werkzeuge.
+    confidence: niedrig
+    origin: generated
+  - id: e259
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: fuehrt_weiter
+    note: Weil die physische Basis beherrschbar ist, bleibt dem Einzelnen nur Anpassung oder
+      Werkzeugbeherrschung.
+    confidence: mittel
+    origin: generated
+  - id: e260
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: widerspricht
+    note: Der Bau demokratiefördernder Werkzeuge steht der spurlosen Ausradierung entgegen,
+      die demokratische Öffentlichkeit gerade verhindert.
+    confidence: mittel
+    origin: generated
+  - id: e261
+    fro: 4feb2234-c04c-503c-a8a2-1ae068560986
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: widerspricht
+    note: Wenn im Netz jeder ein Dritter ist, ist Bleiben im Netz gerade nicht der Weg zu
+      Schutz, was die Rückzugsthese stützt.
+    confidence: niedrig
+    origin: generated
+  - id: e262
+    fro: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: widerspricht
+    note: Die militärisch besetzte Zone im Zivilraum macht das Bleiben im Netz riskant, was
+      der Rückzugsthese Auftrieb gibt.
+    confidence: niedrig
+    origin: generated
+  - id: e263
+    fro: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    to: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    kind: local
+    relation: fuehrt_weiter
+    note: Die Zentralisierung von Informationsdiensten verschärft die Wahl zwischen
+      Anpassung und Werkzeugbeherrschung.
+    confidence: mittel
+    origin: generated
+  - id: e264
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    kind: local
+    relation: fuehrt_weiter
+    note: Der Schutz der drei Grundfreiheiten verlangt den Bau von Werkzeugen, die diese
+      Rechte technisch hervorbringen.
+    confidence: mittel
+    origin: generated
+  - id: e265
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: unterscheidet
+    note: Das Schattenverhältnis betrifft die Menge des Geheimen, der Sicherheitsbegriff die
+      Definition staatlicher Interessen.
+    confidence: niedrig
+    origin: generated
+  - id: e266
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: unterscheidet
+    note: Die Umkehrung beschreibt die Dynamik von Erfolg und Scheitern, der
+      Sicherheitsbegriff die Definition staatlicher Interessen.
+    confidence: niedrig
+    origin: generated
+  - id: e267
+    fro: a3a35365-d663-565d-b501-1b5c8151f709
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: fuehrt_weiter
+    note: Der Verlust an Vertraulichkeit im Netz macht die Offenheit des Codes zur Bedingung
+      dafür, dass Reichweite nicht in Fremdkontrolle umschlägt.
+    confidence: mittel
+    origin: generated
+  - id: e268
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: widerspricht
+    note: Die Forderung nach Vielfalt der Systeme steht der Vorstellung entgegen, es gebe
+      nur den einen Weg des gesicherten Bleibens.
+    confidence: niedrig
+    origin: generated
+  - id: e269
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    kind: local
+    relation: widerspricht
+    note: Die verschmolzene Elite schwächt die disziplinierende Wirkung erwarteter
+      Enthüllung, weil keine konkurrierende Macht mehr eingreift.
+    confidence: mittel
+    origin: generated
+  - id: e270
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: widerspricht
+    note: Die neue Schreibfähigkeit als emanzipatorische Technik steht dem Befund entgegen,
+      dass der Staat Sicherheit als Einsicht begreift.
+    confidence: niedrig
+    origin: generated
+  - id: e271
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Code als Gesetz betrifft die Prüfbarkeit von Systemen, das Schattenverhältnis die
+      Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e272
+    fro: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    to: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    kind: local
+    relation: fuehrt_weiter
+    note: Der wirtschaftliche Eigennutz der Konzerne als Schutzmacht der Kryptografie lässt
+      sich mit dem Kriterium der Besitzstandsverteidigung prüfen.
+    confidence: mittel
+    origin: generated
+  - id: e273
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: fuehrt_weiter
+    note: Das exponentielle Wachstum der Überwachung macht den Kampf um ein offenes
+      universelles Netz dringlicher.
+    confidence: mittel
+    origin: generated
+  - id: e274
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: a3a35365-d663-565d-b501-1b5c8151f709
+    kind: local
+    relation: unterscheidet
+    note: Der Sicherheitsbegriff betrifft die Definition, die Doppelbilanz die Bilanz der
+      drei Freiheiten im Netz.
+    confidence: niedrig
+    origin: generated
+  - id: e275
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: unterscheidet
+    note: Die physische Fundierung betrifft die Infrastruktur, der Sicherheitsbegriff die
+      Definition staatlicher Interessen.
+    confidence: niedrig
+    origin: generated
+  - id: e276
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: widerspricht
+    note: Das Schattenverhältnis zeigt, dass offener Code allein die Asymmetrie des
+      Geheimwissens nicht aufhebt.
+    confidence: niedrig
+    origin: generated
+  - id: e277
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Nichtneutralität der Technik begründet den Bau neuer Werkzeuge, das
+      Schattenverhältnis beschreibt die Grenzen bisheriger Praxis.
+    confidence: niedrig
+    origin: generated
+  - id: e278
+    fro: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: unterscheidet
+    note: Die wirtschaftliche Vertraulichkeit betrifft Transaktionen, die spurlose
+      Ausradierung die Löschung von Inhalten.
+    confidence: niedrig
+    origin: generated
+  - id: e279
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    kind: local
+    relation: unterscheidet
+    note: Die Umkehrung betrifft die Verfolgung nach dem Scheitern, die Industrie als
+      Schutzmacht der Kryptografie die Verteidigung der Verschlüsselung.
+    confidence: niedrig
+    origin: generated
+  - id: e280
+    fro: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Der Filter im Kopf betrifft die individuelle Auswahl, das Schattenverhältnis die
+      Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e281
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Trias beschreibt die Grundfreiheiten, das Schattenverhältnis die Grenzen ihrer
+      Verwirklichung durch Veröffentlichung.
+    confidence: niedrig
+    origin: generated
+  - id: e282
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: fuehrt_weiter
+    note: Die verschmolzene Elite nutzt spurlose Ausradierung, um ihre Geschichte und ihre
+      Entscheidungen unsichtbar zu halten.
+    confidence: mittel
+    origin: generated
+  - id: e283
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    kind: local
+    relation: unterscheidet
+    note: Das Kriterium bewertet Interessenvertretung, die disziplinierende Erwartung
+      beschreibt die Wirkung von Enthüllungsdrohungen.
+    confidence: niedrig
+    origin: generated
+  - id: e284
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Bitcoin betrifft die Vertrauensarchitektur, das Schattenverhältnis die Menge des
+      veröffentlichten Geheimmaterials.
+    confidence: niedrig
+    origin: generated
+  - id: e285
+    fro: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Militarisierung betrifft die Ausdehnung des Kriegsraums, das
+      Schattenverhältnis die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e286
+    fro: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: unterscheidet
+    note: Die Exportkontroll-Asymmetrie betrifft die Verfügbarkeit von Technik, die spurlose
+      Ausradierung die Löschung von Inhalten.
+    confidence: niedrig
+    origin: generated
+  - id: e287
+    fro: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: unterscheidet
+    note: Der käufliche Datenschutz betrifft die Verteilung von Privatsphäre, die spurlose
+      Ausradierung die Unsichtbarkeit von Zensur.
+    confidence: niedrig
+    origin: generated
+  - id: e288
+    fro: a3a35365-d663-565d-b501-1b5c8151f709
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Doppelbilanz bilanziert die drei Freiheiten, das Schattenverhältnis die Menge
+      des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e289
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: unterscheidet
+    note: Der Sicherheitsbegriff betrifft die Definition, die spurlose Ausradierung eine
+      konkrete Zensurtechnik.
+    confidence: niedrig
+    origin: generated
+  - id: e290
+    fro: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: unterscheidet
+    note: Die Industrie als Schutzmacht der Kryptografie betrifft die Verfügbarkeit von
+      Technik, die spurlose Ausradierung die Löschung von Inhalten.
+    confidence: niedrig
+    origin: generated
+  - id: e291
+    fro: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Selbstzensur betrifft individuelles Verhalten, das Schattenverhältnis die
+      Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e292
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: unterscheidet
+    note: Die physische Fundierung betrifft die Infrastruktur, die spurlose Ausradierung
+      eine Zensurtechnik.
+    confidence: niedrig
+    origin: generated
+  - id: e293
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: widerspricht
+    note: Die Forderung nach Vielfalt der Systeme steht der Konzentration von Geheimwissen
+      in wenigen privaten Händen entgegen.
+    confidence: niedrig
+    origin: generated
+  - id: e294
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Rückzugsthese betrifft individuelles Handeln, das Schattenverhältnis die
+      strukturelle Grenze der Veröffentlichung.
+    confidence: niedrig
+    origin: generated
+  - id: e295
+    fro: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die wirtschaftliche Vertraulichkeit betrifft Transaktionen, das Schattenverhältnis
+      die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e296
+    fro: 21c01f78-59a8-5b05-9137-ec7443e72239
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Bankenblockade betrifft Finanzflüsse, das Schattenverhältnis die Menge des
+      veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e297
+    fro: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die nachstaatliche Organisation betrifft die Struktur der Enthüllungsorganisation,
+      das Schattenverhältnis die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e298
+    fro: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Technikthese betrifft die Kontrollzentralisierung, das Schattenverhältnis die
+      Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e299
+    fro: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Zensurthese betrifft den Mechanismus von Überwachung und Selbstzensur, das
+      Schattenverhältnis die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e300
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Der abgeschlagene Kopf betrifft die institutionelle Umgehung, das
+      Schattenverhältnis die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e301
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die verschmolzene Elite betrifft die Machtstruktur, das Schattenverhältnis die
+      Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e302
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die neue Schreibfähigkeit betrifft die Ausdrucksmöglichkeit, das
+      Schattenverhältnis die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e303
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Das Überwachungswachstum betrifft die Kapazität, das Schattenverhältnis die Menge
+      des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e304
+    fro: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Exportkontroll-Asymmetrie betrifft die Verfügbarkeit von Technik, das
+      Schattenverhältnis die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e305
+    fro: 4feb2234-c04c-503c-a8a2-1ae068560986
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Dritt-Doktrin betrifft den juristischen Schutzbegriff, das Schattenverhältnis
+      die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e306
+    fro: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die asymmetrische Geheimhaltung betrifft die Zugänglichkeit für Bedienstete, das
+      Schattenverhältnis die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e307
+    fro: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die disziplinierende Erwartung betrifft die Wirkung von Enthüllungsdrohungen, das
+      Schattenverhältnis die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e308
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Das Kriterium der Besitzstandsverteidigung betrifft Interessenvertretung, das
+      Schattenverhältnis die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e309
+    fro: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Industrie als Schutzmacht der Kryptografie betrifft die Verfügbarkeit von
+      Technik, das Schattenverhältnis die Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e310
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die physische Fundierung betrifft die Infrastruktur, das Schattenverhältnis die
+      Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e311
+    fro: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: unterscheidet
+    note: Die Zentralisierung betrifft den Zugang zu Wissen, das Schattenverhältnis die
+      Menge des veröffentlichten Materials.
+    confidence: niedrig
+    origin: generated
+  - id: e312
+    fro: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: setzt_voraus
+    note: Die kryptografische Grenze als Rechtsraum beruht darauf, dass technische und
+      staatliche Sicherheit Gegensätze sind.
+    confidence: hoch
+    origin: generated
+  - id: e313
+    fro: 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+    to: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    kind: local
+    relation: setzt_voraus
+    note: Die These, dass Zensur Überwachung erfordert, stützt sich auf die Verschiebung zum
+      universellen Abschöpfen.
+    confidence: mittel
+    origin: generated
+  - id: e314
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: setzt_voraus
+    note: Die Kontrolle über die Finanzinfrastruktur als dritte Staatlichkeit erklärt, warum
+      die Bankenblockade wirkt.
+    confidence: hoch
+    origin: generated
+  - id: e315
+    fro: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    to: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    kind: local
+    relation: setzt_voraus
+    note: Das über Jahre aufgebaute Dossier ist die praktische Form, Unrecht sichtbar und
+      nachweisbar zu machen.
+    confidence: hoch
+    origin: generated
+  - id: e316
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: setzt_voraus
+    note: Die Forderung nach einem universellen Netz als einzigem Werkzeug gründet auf der
+      Ablehnung der einen Einheitslösung.
+    confidence: mittel
+    origin: generated
+  - id: e317
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: 91cb5ac7-9874-5136-aa93-ee421ce62dce
+    kind: local
+    relation: setzt_voraus
+    note: Die physische Fundierung des Netzes erklärt, warum die netzinterne Freiheit auf
+      einer hierarchisierten Industrie ruht.
+    confidence: hoch
+    origin: generated
+  - id: e318
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    kind: local
+    relation: setzt_voraus
+    note: Die Umkehrung des Konsensvorsprungs wiegt schwerer, weil die nationalen Eliten
+      verschmolzen sind und keine Rettung von außen kommt.
+    confidence: mittel
+    origin: generated
+  - id: e319
+    fro: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    to: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    kind: local
+    relation: setzt_voraus
+    note: Dass die Industrie die Kryptografie schützt, erklärt, warum die Asymmetrie der
+      Exportkontrollen politisch überwindbar ist.
+    confidence: mittel
+    origin: generated
+  - id: e320
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    kind: local
+    relation: setzt_voraus
+    note: Dass gestoppte Abkommen in geheime bilaterale Verträge wandern, erklärt sich aus
+      der verschmolzenen transnationalen Elite.
+    confidence: hoch
+    origin: generated
+  - id: e321
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: setzt_voraus
+    note: Wenn Vertrauen in der Architektur liegt, muss der Code offenliegen wie ein
+      Gesetzestext.
+    confidence: hoch
+    origin: generated
+  - id: e322
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: setzt_voraus
+    note: Das Kriterium der Besitzstandsverteidigung erklärt, warum die Bankenblockade als
+      Ausbau von Vorteilen auf Kosten anderer zu werten ist.
+    confidence: mittel
+    origin: generated
+  - id: e323
+    fro: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    to: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    kind: local
+    relation: setzt_voraus
+    note: Das transnationale Operieren der Enthüllungsorganisation beruht auf der
+      kryptografisch verbürgten Grenze.
+    confidence: hoch
+    origin: generated
+  - id: e324
+    fro: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    to: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    kind: local
+    relation: setzt_voraus
+    note: Die disziplinierende Erwartung späterer Rechenschaft beruht auf der
+      Langzeitgedächtnis- und Dossierfähigkeit des Netzes.
+    confidence: hoch
+    origin: generated
+  - id: e325
+    fro: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    to: 446f65a8-087c-5e6a-9365-20c670473e08
+    kind: local
+    relation: setzt_voraus
+    note: Die verschmolzene transnationale Elite zeigt sich konkret in der Verwischung von
+      Staat und Unternehmen im Überwachungsverbund.
+    confidence: mittel
+    origin: generated
+  - id: e326
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: setzt_voraus
+    note: Die Waffe der schnellen Konsensbildung ist nur relevant, weil das universelle Netz
+      der zentrale Schauplatz des politischen Kampfes ist.
+    confidence: mittel
+    origin: generated
+  - id: e327
+    fro: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: setzt_voraus
+    note: Die Militarisierung des Zivillebens folgt daraus, dass der Staat Sicherheit als
+      eigene Einsichtsfähigkeit in alle Kommunikation begreift.
+    confidence: mittel
+    origin: generated
+  - id: e328
+    fro: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: setzt_voraus
+    note: Die Asymmetrie der Exportkontrollen folgt aus dem Gegensatz von technischer und
+      staatlich verstandener Sicherheit.
+    confidence: hoch
+    origin: generated
+  - id: e329
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: 446f65a8-087c-5e6a-9365-20c670473e08
+    kind: local
+    relation: setzt_voraus
+    note: Dass Inhalte gestoppter Abkommen in geheime bilaterale Verträge wandern, wird
+      durch die Verwischung von Staat und Unternehmen begünstigt.
+    confidence: niedrig
+    origin: generated
+  - id: e330
+    fro: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    to: c253b639-d56a-5cb5-ab58-a796f62b5547
+    kind: local
+    relation: setzt_voraus
+    note: Die Rücknahme der Druckerpresse durch Zentralisierung beruht darauf, dass die
+      physische Basis des Netzes beherrschbar ist.
+    confidence: hoch
+    origin: generated
+  - id: e331
+    fro: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    to: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    kind: local
+    relation: setzt_voraus
+    note: Die Wahl zwischen Anpassung und Werkzeugbeherrschung ergibt sich aus der
+      Selbstzensurwirkung, die Zensur durch Überwachung erzeugt.
+    confidence: hoch
+    origin: generated
+  - id: e332
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    kind: local
+    relation: setzt_voraus
+    note: Dass Technik Grundrechte hervorbringen kann, zeigt sich exemplarisch an der
+      kryptografischen Grenze als Rechtsraum.
+    confidence: hoch
+    origin: generated
+  - id: e333
+    fro: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    to: 4818261d-92b0-5acb-9aff-d9f229f51056
+    kind: local
+    relation: setzt_voraus
+    note: Das Filtern im Kopf des Empfängers setzt die Vielfalt der Systeme und
+      Interaktionsformen voraus, die gegen die Einebnung verteidigt wird.
+    confidence: mittel
+    origin: generated
+  - id: e334
+    fro: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    to: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    kind: local
+    relation: setzt_voraus
+    note: Die nachstaatliche Organisation nutzt die Kryptografie, deren Verbreitung die
+      Industrie aus Eigennutz absichert.
+    confidence: mittel
+    origin: generated
+  - id: e335
+    fro: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    to: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    kind: local
+    relation: setzt_voraus
+    note: Die verschmolzene transnationale Elite ist der Adressat des Kriteriums, ob
+      Lobbying nur Besitzstände verteidigt.
+    confidence: mittel
+    origin: generated
+  - id: e336
+    fro: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    to: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    kind: local
+    relation: setzt_voraus
+    note: Die disziplinierende Wirkung erwarteter Enthüllung beruht darauf, dass Unrecht
+      sichtbar gemacht werden kann.
+    confidence: hoch
+    origin: generated
+  - id: e337
+    fro: 4feb2234-c04c-503c-a8a2-1ae068560986
+    to: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    kind: local
+    relation: setzt_voraus
+    note: Die Dritt-Doktrin liefert die juristische Grundlage dafür, dass Zensur technisch
+      als Einsicht in fremde Kommunikation möglich wird.
+    confidence: niedrig
+    origin: generated
+  - id: e338
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    kind: local
+    relation: setzt_voraus
+    note: Der Schutz der drei Grundfreiheiten setzt Privatheit voraus, die kryptografisch
+      als Rechtsraum verbürgt wird.
+    confidence: hoch
+    origin: generated
+  - id: e339
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: setzt_voraus
+    note: Dass Rückzug Entmachtung ist, folgt daraus, dass das universelle Netz das einzige
+      Werkzeug für globale Probleme bleibt.
+    confidence: hoch
+    origin: generated
+  - id: e340
+    fro: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    to: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    kind: local
+    relation: setzt_voraus
+    note: Die nachstaatliche Organisation operiert transnational, weil die nationalen Eliten
+      verschmolzen sind und kein Staat sie mehr schützt.
+    confidence: mittel
+    origin: generated
+  - id: e341
+    fro: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    to: a3a35365-d663-565d-b501-1b5c8151f709
+    kind: local
+    relation: setzt_voraus
+    note: Der käufliche Datenschutz erklärt, warum der Verlust an Vertraulichkeit im Netz
+      die Reichen weniger trifft.
+    confidence: mittel
+    origin: generated
+  - id: e342
+    fro: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    to: b8641875-ac5d-558d-91bb-bbb197e2d860
+    kind: local
+    relation: setzt_voraus
+    note: Die politische Lobby gegen Unrecht braucht die neue Schreib- und
+      Ausdrucksfähigkeit, die das Netz verleiht.
+    confidence: mittel
+    origin: generated
+  - id: e343
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    kind: local
+    relation: setzt_voraus
+    note: Die Ablehnung der Einheitslösung stützt die Kritik an der Zentralisierung, die die
+      Vielfalt der Zugänge aufhebt.
+    confidence: mittel
+    origin: generated
+  - id: e344
+    fro: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    to: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    kind: local
+    relation: setzt_voraus
+    note: Die Exportkontroll-Asymmetrie lässt sich nur mit dem Kriterium der
+      Besitzstandsverteidigung als illegitim einordnen.
+    confidence: mittel
+    origin: generated
+  - id: e345
+    fro: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    to: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    kind: local
+    relation: setzt_voraus
+    note: Die disziplinierende Wirkung erwarteter Enthüllung braucht geschützte interne
+      Warnkanäle, wie sie die nachstaatliche Organisation bereitstellt.
+    confidence: hoch
+    origin: generated
+  - id: e346
+    fro: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    to: c253b639-d56a-5cb5-ab58-a796f62b5547
+    kind: local
+    relation: setzt_voraus
+    note: Die unsichtbare Besatzung des Zivilraums ist möglich, weil Zivil- und Kriegsraum
+      dasselbe physisch gegründete Netz sind.
+    confidence: hoch
+    origin: generated
+  - id: e347
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+    kind: local
+    relation: setzt_voraus
+    note: Das Weiterleben gestoppter Abkommen im Geheimen lässt sich als
+      Besitzstandsverteidigung der Eliten einordnen.
+    confidence: niedrig
+    origin: generated
+  - id: e348
+    fro: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    to: 0b895879-ea76-5ad8-a988-c81578e48680
+    kind: local
+    relation: setzt_voraus
+    note: Die wirtschaftliche Vertraulichkeit als eigentliches Freiheitsproblem gründet auf
+      der Einsicht, dass Finanzen eine der drei Staatlichkeitsinfrastrukturen sind.
+    confidence: hoch
+    origin: generated
+  - id: e349
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: setzt_voraus
+    note: Die neue Schreibfähigkeit bleibt nur erhalten, wenn der Code, der sie ermöglicht,
+      offen und prüfbar ist.
+    confidence: mittel
+    origin: generated
+  - id: e350
+    fro: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    to: 0b895879-ea76-5ad8-a988-c81578e48680
+    kind: local
+    relation: setzt_voraus
+    note: Die Angreifbarkeit an Finanzflüssen bestätigt, dass die Kontrolle über Finanzen
+      eine eigene Staatlichkeitsinfrastruktur ist.
+    confidence: hoch
+    origin: generated
+  - id: e351
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    kind: local
+    relation: setzt_voraus
+    note: Die Verfolgung aller Initiatoren nach dem Scheitern setzt die gespeicherte,
+      überwachte Kommunikation voraus.
+    confidence: hoch
+    origin: generated
+  - id: e352
+    fro: 61c88d95-a028-5258-82d9-a922d165f040
+    to: c253b639-d56a-5cb5-ab58-a796f62b5547
+    kind: local
+    relation: setzt_voraus
+    note: Der Kampf um die Offenheit des universellen Netzes setzt voraus, dass dessen
+      physische Basis beherrschbar bleibt.
+    confidence: hoch
+    origin: generated
+  - id: e353
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: setzt_voraus
+    note: Dass Inhalte gestoppter Abkommen im Geheimen weiterleben, zeigt, warum der Kampf
+      um ein offenes universelles Netz zentral bleibt.
+    confidence: niedrig
+    origin: generated
+  - id: e354
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: a3a35365-d663-565d-b501-1b5c8151f709
+    kind: local
+    relation: setzt_voraus
+    note: Dass Rückzug Entmachtung ist, folgt aus dem Verlust an Reichweite, den die
+      Doppelbilanz der drei Freiheiten beschreibt.
+    confidence: mittel
+    origin: generated
+  - id: e355
+    fro: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    to: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    kind: local
+    relation: setzt_voraus
+    note: Die Fähigkeit, mit dem Gesehenen umzugehen, ist eine erlernte Kompetenz, die nicht
+      neutrale Technik erst hervorbringen kann.
+    confidence: mittel
+    origin: generated
+  - id: e356
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    kind: local
+    relation: setzt_voraus
+    note: Der Vorsprung bei der Konsensbildung entsteht durch die neue Schreib- und
+      Ausdrucksfähigkeit des Netzes.
+    confidence: mittel
+    origin: generated
+  - id: e357
+    fro: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    to: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    kind: local
+    relation: setzt_voraus
+    note: Die Asymmetrie der Exportkontrollen erklärt sich daraus, dass demokratische
+      Staaten am Wissen aus fremder Überwachung interessiert sind und Eliten
+      verschmolzen sind.
+    confidence: mittel
+    origin: generated
+  - id: e358
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: b8641875-ac5d-558d-91bb-bbb197e2d860
+    kind: local
+    relation: setzt_voraus
+    note: Die Vervielfältigung von Systemen und Interaktionsformen wird durch die allen
+      zugängliche Schreibfähigkeit praktisch möglich.
+    confidence: mittel
+    origin: generated
+  - id: e359
+    fro: 0b895879-ea76-5ad8-a988-c81578e48680
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: setzt_voraus
+    note: Der Schutz der drei Grundfreiheiten setzt voraus, dass Sicherheit technisch und
+      nicht staatlich verstanden wird.
+    confidence: mittel
+    origin: generated
+  - id: e360
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: setzt_voraus
+    note: Vertrauen durch Rechenkosten funktioniert nur, weil Sicherheit technisch und nicht
+      als staatliche Einsichtsfähigkeit verstanden wird.
+    confidence: mittel
+    origin: generated
+  - id: e361
+    fro: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: setzt_voraus
+    note: Die Langzeitdossierfähigkeit des Netzes ist ein Grund, warum der Kampf um seine
+      Offenheit zentral ist.
+    confidence: mittel
+    origin: generated
+  - id: e362
+    fro: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    to: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    kind: local
+    relation: setzt_voraus
+    note: Werkzeugbeherrschung statt Selbstzensur setzt voraus, dass Technik nicht neutral
+      ist und gestaltet werden kann.
+    confidence: hoch
+    origin: generated
+  - id: e363
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: setzt_voraus
+    note: Das Weiterleben im Geheimen setzt voraus, dass Inhalte spurlos aus öffentlichen
+      Archiven entfernt werden können.
+    confidence: mittel
+    origin: generated
+  - id: e364
+    fro: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    to: 91cb5ac7-9874-5136-aa93-ee421ce62dce
+    kind: local
+    relation: setzt_voraus
+    note: Die Rücknahme der Druckerpresse durch Zentralisierung ist Teil der
+      hierarchisierten High-Tech-Ordnung.
+    confidence: mittel
+    origin: generated
+  - id: e365
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: 0b895879-ea76-5ad8-a988-c81578e48680
+    kind: local
+    relation: setzt_voraus
+    note: Der Bau von Werkzeugen für eine neue Demokratie zielt auf den Schutz der drei
+      Grundfreiheiten.
+    confidence: mittel
+    origin: generated
+  - id: e366
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    kind: local
+    relation: setzt_voraus
+    note: Die Forderung nach Vielfalt richtet sich gegen die Homogenisierung durch eine
+      verschmolzene transnationale Elite.
+    confidence: mittel
+    origin: generated
+  - id: e367
+    fro: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: setzt_voraus
+    note: Die disziplinierende Wirkung erwarteter Enthüllung bleibt bestehen, obwohl das
+      veröffentlichte Material nur ein Schatten des Geheimen ist.
+    confidence: mittel
+    origin: generated
+  - id: e368
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: c253b639-d56a-5cb5-ab58-a796f62b5547
+    kind: local
+    relation: setzt_voraus
+    note: Dass dieselbe Infrastruktur nach dem Scheitern zur Verfolgung dient, beruht auf
+      der physischen Beherrschbarkeit des Netzes.
+    confidence: hoch
+    origin: generated
+  - id: e369
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: 4feb2234-c04c-503c-a8a2-1ae068560986
+    kind: local
+    relation: setzt_voraus
+    note: Dass Geheimmaterial in privaten Händen bleibt, zeigt, wie der Dritt-Schutzbegriff
+      Privatheit faktisch aufhebt.
+    confidence: niedrig
+    origin: generated
+  - id: e370
+    fro: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    to: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    kind: local
+    relation: setzt_voraus
+    note: Die asymmetrische Geheimhaltung ist Ausdruck der von ihren Bevölkerungen gelösten
+      transnationalen Elite.
+    confidence: mittel
+    origin: generated
+  - id: e371
+    fro: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: setzt_voraus
+    note: Die Verlagerung des Filters in den Kopf des Nutzers ist die Bedingung für ein
+      offenes universelles Netz.
+    confidence: mittel
+    origin: generated
+  - id: e372
+    fro: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: setzt_voraus
+    note: Die nachstaatliche Organisation braucht offenen, prüfbaren Code, um ihre
+      kryptografische Unabhängigkeit zu behaupten.
+    confidence: mittel
+    origin: generated
+  - id: e373
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    kind: local
+    relation: setzt_voraus
+    note: Gesichertes Bleiben im Netz setzt voraus, dass Kryptografie verfügbar bleibt, was
+      die Industrie absichert.
+    confidence: mittel
+    origin: generated
+  - id: e374
+    fro: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: setzt_voraus
+    note: Die disziplinierende Wirkung erwarteter Enthüllung setzt ein offenes, universelles
+      Netz voraus.
+    confidence: mittel
+    origin: generated
+  - id: e375
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    kind: local
+    relation: setzt_voraus
+    note: Dass Code Gesetz ist, erklärt, warum Zensur technisch nur als Einsicht in den
+      laufenden Code möglich ist.
+    confidence: mittel
+    origin: generated
+  - id: e376
+    fro: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    to: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    kind: local
+    relation: setzt_voraus
+    note: Werkzeugbeherrschung heißt, die kryptografische Grenze selbst zu nutzen statt sich
+      ihr zu unterwerfen.
+    confidence: hoch
+    origin: generated
+  - id: e377
+    fro: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    to: fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    kind: local
+    relation: setzt_voraus
+    note: Die Angreifbarkeit an Finanzflüssen erklärt, warum wirtschaftliche Vertraulichkeit
+      das eigentliche Freiheitsproblem ist.
+    confidence: hoch
+    origin: generated
+  - id: e378
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    kind: local
+    relation: setzt_voraus
+    note: Die nachträgliche Verfolgung aller Initiatoren setzt die exponentiell wachsende
+      Speicherkapazität voraus.
+    confidence: hoch
+    origin: generated
+  - id: e379
+    fro: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    to: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    kind: local
+    relation: setzt_voraus
+    note: Die unsichtbare Besatzung des Zivilraums ist nur möglich, weil Geheimhaltung die
+      Mächtigen und nicht die Bürger schützt.
+    confidence: mittel
+    origin: generated
+  - id: e380
+    fro: 61c88d95-a028-5258-82d9-a922d165f040
+    to: a3a35365-d663-565d-b501-1b5c8151f709
+    kind: local
+    relation: setzt_voraus
+    note: Der Kampf um das offene Netz setzt voraus, dass Reichweite nur um den Preis der
+      Vertraulichkeit zu haben ist.
+    confidence: mittel
+    origin: generated
+  - id: e381
+    fro: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    to: 446f65a8-087c-5e6a-9365-20c670473e08
+    kind: local
+    relation: setzt_voraus
+    note: Die Zentralisierung der Informationsdienste wird durch die Verwischung von Staat
+      und Unternehmen im Überwachungsverbund vorangetrieben.
+    confidence: mittel
+    origin: generated
+  - id: e382
+    fro: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    to: b8641875-ac5d-558d-91bb-bbb197e2d860
+    kind: local
+    relation: setzt_voraus
+    note: Die Fähigkeit, mit dem Gesehenen umzugehen, wird durch die neue Schreib- und
+      Lesefähigkeit des Netzes ausgebildet.
+    confidence: mittel
+    origin: generated
+  - id: e383
+    fro: 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+    to: c253b639-d56a-5cb5-ab58-a796f62b5547
+    kind: local
+    relation: setzt_voraus
+    note: Das exponentielle Wachstum der Überwachungskapazität beruht auf der physischen
+      Infrastruktur, die das Netz trägt.
+    confidence: mittel
+    origin: generated
+  - id: e384
+    fro: 4818261d-92b0-5acb-9aff-d9f229f51056
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: setzt_voraus
+    note: Die Vervielfältigung von Systemen setzt voraus, dass der Code offenliegt und von
+      vielen verändert werden kann.
+    confidence: mittel
+    origin: generated
+  - id: e385
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: setzt_voraus
+    note: Dass die Infrastruktur nach dem Scheitern zur Verfolgung dient, zeigt, warum der
+      Code offen und prüfbar sein muss.
+    confidence: mittel
+    origin: generated
+  - id: e386
+    fro: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    to: 0b895879-ea76-5ad8-a988-c81578e48680
+    kind: local
+    relation: setzt_voraus
+    note: Die Asymmetrie der Exportkontrollen zeigt, dass der Staat die
+      Kommunikationsfreiheit nicht als zu schützende Grundfreiheit behandelt.
+    confidence: mittel
+    origin: generated
+  - id: e387
+    fro: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: setzt_voraus
+    note: Der Bau von Werkzeugen für eine neue Demokratie ist die konstruktive Antwort auf
+      die Entmachtung durch Rückzug.
+    confidence: hoch
+    origin: generated
+  - id: e388
+    fro: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: setzt_voraus
+    note: Die spurlose Ausradierung erklärt, warum das veröffentlichte Material nur ein
+      Schatten bleibt und nie vollständig sichtbar wird.
+    confidence: mittel
+    origin: generated
+  - id: e389
+    fro: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    to: 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+    kind: local
+    relation: setzt_voraus
+    note: Die Gefahr für wirtschaftliche Vertraulichkeit entsteht durch das unterschiedslose
+      Abschöpfen aller Kommunikation.
+    confidence: mittel
+    origin: generated
+  - id: e390
+    fro: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    to: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    kind: local
+    relation: setzt_voraus
+    note: Die Wahl zwischen Selbstzensur und Werkzeugbeherrschung ergibt sich aus der
+      militärisch besetzten Zone, in der Kommunikation stattfindet.
+    confidence: mittel
+    origin: generated
+  - id: e391
+    fro: 21c01f78-59a8-5b05-9137-ec7443e72239
+    to: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    kind: local
+    relation: setzt_voraus
+    note: Die Bankenblockade setzt voraus, dass die nationalen Eliten verschmolzen sind und
+      gemeinsam gegen WikiLeaks handeln.
+    confidence: mittel
+    origin: generated
+  - id: e392
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: setzt_voraus
+    note: Bitcoin als vertrauensbildende Architektur ist ein Beispiel dafür, warum das
+      offene Netz der zentrale politische Kampfplatz ist.
+    confidence: niedrig
+    origin: generated
+  - id: e393
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: setzt_voraus
+    note: Die Verfolgung aller Initiatoren nach dem Scheitern wird durch spurloses Entfernen
+      der eigenen Geschichte erleichtert.
+    confidence: niedrig
+    origin: generated
+  - id: e394
+    fro: a3a35365-d663-565d-b501-1b5c8151f709
+    to: 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+    kind: local
+    relation: setzt_voraus
+    note: Der Verlust an Vertraulichkeit im Netz folgt aus dem unterschiedslosen Abschöpfen
+      aller Kommunikation.
+    confidence: hoch
+    origin: generated
+  - id: e395
+    fro: 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: setzt_voraus
+    note: Der Filter im Kopf des Nutzers setzt voraus, dass man im Netz bleibt und nicht in
+      den Rückzug geht.
+    confidence: mittel
+    origin: generated
+  - id: e396
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: ac722224-3972-5aa7-b981-aba7bdb8bf9b
+    kind: local
+    relation: setzt_voraus
+    note: Freie Software als Verfassungsfrage setzt voraus, dass Kryptografie überhaupt
+      verfügbar bleibt, was die Industrie absichert.
+    confidence: mittel
+    origin: generated
+  - id: e397
+    fro: 4b8eb472-332c-5c19-8634-32a248bc8d86
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: setzt_voraus
+    note: Die käufliche Privatsphäre erklärt, warum die Bankenblockade vor allem die
+      finanziell Schwachen trifft.
+    confidence: niedrig
+    origin: generated
+  - id: e398
+    fro: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: setzt_voraus
+    note: Die Sichtbarkeit des Unrechts als Bedingung seiner Bekämpfung setzt ein offenes
+      universelles Netz voraus.
+    confidence: mittel
+    origin: generated
+  - id: e399
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: 0b895879-ea76-5ad8-a988-c81578e48680
+    kind: local
+    relation: setzt_voraus
+    note: Bitcoin als vertrauensbildende Architektur ist ein Beitrag zur wirtschaftlichen
+      Grundfreiheit der Trias.
+    confidence: mittel
+    origin: generated
+  - id: e400
+    fro: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: setzt_voraus
+    note: Die disziplinierende Wirkung erwarteter Enthüllung setzt voraus, dass man im Netz
+      präsent bleibt statt sich zurückzuziehen.
+    confidence: mittel
+    origin: generated
+  - id: e401
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    kind: local
+    relation: setzt_voraus
+    note: Der Gegensatz von technischer und staatlicher Sicherheit folgt daraus, dass wer
+      die Ressourcen kontrolliert, die Kontrolle zentralisiert.
+    confidence: mittel
+    origin: generated
+  - id: e402
+    fro: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: setzt_voraus
+    note: Werkzeugbeherrschung verlangt, dass der Code offenliegt und geprüft werden kann.
+    confidence: hoch
+    origin: generated
+  - id: e403
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+    kind: local
+    relation: setzt_voraus
+    note: Die Umkehrung des Konsensvorsprungs beruht darauf, dass die Kontrolle über die
+      physischen Ressourcen der Technik zentralisiert ist.
+    confidence: hoch
+    origin: generated
+  - id: e404
+    fro: 91773957-e35f-58c6-84d4-0c5dfdc8328e
+    to: bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+    kind: local
+    relation: setzt_voraus
+    note: Die Kopplung von Zensur und Überwachung setzt voraus, dass Geheimhaltung nur
+      gegenüber den Ohnmächtigen wirkt.
+    confidence: niedrig
+    origin: generated
+  - id: e405
+    fro: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    to: a3a35365-d663-565d-b501-1b5c8151f709
+    kind: local
+    relation: setzt_voraus
+    note: Die wirtschaftliche Vertraulichkeit als eigentliches Freiheitsproblem erklärt,
+      warum deren Verlust im Netz so schwer wiegt.
+    confidence: hoch
+    origin: generated
+  - id: e406
+    fro: 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: setzt_voraus
+    note: Die Bekämpfung von Unrecht durch Sichtbarkeit setzt voraus, dass man im Netz
+      präsent bleibt statt sich zurückzuziehen.
+    confidence: mittel
+    origin: generated
+  - id: e407
+    fro: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: setzt_voraus
+    note: Die Zentralisierung von Informationsdiensten und die Kontrolle des Tauschmediums
+      sind zwei Formen derselben Konzentration von Zugangsgewalt.
+    confidence: mittel
+    origin: generated
+  - id: e408
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: 21c01f78-59a8-5b05-9137-ec7443e72239
+    kind: local
+    relation: setzt_voraus
+    note: Die Kontrolle der physischen Basis des Netzes ist die Voraussetzung dafür, dass
+      Finanzakteure zu Königen gemacht werden können.
+    confidence: niedrig
+    origin: generated
+  - id: e409
+    fro: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    to: 446f65a8-087c-5e6a-9365-20c670473e08
+    kind: local
+    relation: setzt_voraus
+    note: Die Gefahr für wirtschaftliche Vertraulichkeit entsteht, weil Geheimdienste auf
+      die Datenbestände der Konzerne zugreifen.
+    confidence: hoch
+    origin: generated
+  - id: e410
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: c253b639-d56a-5cb5-ab58-a796f62b5547
+    kind: local
+    relation: setzt_voraus
+    note: Dass Inhalte gestoppter Abkommen im Geheimen weiterleben, setzt die Kontrolle über
+      die physische Basis der Informationsspeicherung voraus.
+    confidence: niedrig
+    origin: generated
+  - id: e411
+    fro: 53a207b2-7f3f-52fc-9b87-dbb676849230
+    to: 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+    kind: local
+    relation: setzt_voraus
+    note: Die disziplinierende Wirkung erwarteter Enthüllung setzt die gespeicherte,
+      nachträglich auswertbare Kommunikation voraus.
+    confidence: mittel
+    origin: generated
+  - id: e412
+    fro: 07d94971-f50d-5329-8c45-2837fe4aa26b
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: setzt_voraus
+    note: Die Asymmetrie der Exportkontrollen zeigt, dass der Kampf um ein offenes
+      universelles Netz auch ein Kampf um Technologiefreiheit ist.
+    confidence: mittel
+    origin: generated
+  - id: e413
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+    kind: local
+    relation: setzt_voraus
+    note: Gesichertes Bleiben im Netz heißt, sich in den kryptografisch verbürgten
+      Rechtsraum zu begeben.
+    confidence: hoch
+    origin: generated
+  - id: e414
+    fro: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    to: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    kind: local
+    relation: setzt_voraus
+    note: Die Umkehrung des Konsensvorsprungs folgt daraus, dass der Staat Sicherheit als
+      umfassende Einsicht begreift.
+    confidence: mittel
+    origin: generated
+  - id: e415
+    fro: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    to: c8d26fcf-5029-5720-b171-0d2fc6812e5b
+    kind: local
+    relation: setzt_voraus
+    note: Dass Geheimmaterial in privaten Händen mächtiger Akteure bleibt, verweist auf die
+      von den Bevölkerungen gelöste Elite.
+    confidence: mittel
+    origin: generated
+  - id: e416
+    fro: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    to: 4feb2234-c04c-503c-a8a2-1ae068560986
+    kind: local
+    relation: setzt_voraus
+    note: Die Wahl zwischen Selbstzensur und Werkzeugbeherrschung ergibt sich daraus, dass
+      im Netz jeder ein Dritter ist.
+    confidence: mittel
+    origin: generated
+  - id: e417
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    kind: local
+    relation: setzt_voraus
+    note: Die neue Schreibfähigkeit bleibt nur nutzbar, wenn man im Netz bleibt statt sich
+      zurückzuziehen.
+    confidence: mittel
+    origin: generated
+  - id: e418
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: a3a35365-d663-565d-b501-1b5c8151f709
+    kind: local
+    relation: setzt_voraus
+    note: Die Doppelbilanz der drei Freiheiten im Netz setzt voraus, dass das Netz auf
+      beherrschbarer physischer Basis ruht.
+    confidence: mittel
+    origin: generated
+  - id: e419
+    fro: a3a35365-d663-565d-b501-1b5c8151f709
+    to: 446f65a8-087c-5e6a-9365-20c670473e08
+    kind: local
+    relation: setzt_voraus
+    note: Der Verlust an Vertraulichkeit im Netz wird durch die Einebnung der Grenze
+      zwischen Staat und Unternehmen verstärkt.
+    confidence: mittel
+    origin: generated
+  - id: e420
+    fro: b8641875-ac5d-558d-91bb-bbb197e2d860
+    to: c253b639-d56a-5cb5-ab58-a796f62b5547
+    kind: local
+    relation: setzt_voraus
+    note: Die neue Schreibfähigkeit setzt voraus, dass die physische Basis des Netzes nicht
+      vollständig zentralisiert wird.
+    confidence: mittel
+    origin: generated
+  - id: e421
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: setzt_voraus
+    note: Gesichertes Bleiben im Netz verlangt, den Code zu beherrschen, der das Handeln
+      bestimmt.
+    confidence: hoch
+    origin: generated
+  - id: e422
+    fro: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: setzt_voraus
+    note: Die spurlose Ausradierung ist eine Form der Zensur, die die Selbstzensur der
+      Wissenden vorantreibt.
+    confidence: mittel
+    origin: generated
+  - id: e423
+    fro: c253b639-d56a-5cb5-ab58-a796f62b5547
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: setzt_voraus
+    note: Dass Geheimmaterial in privaten Händen bleibt, setzt die Kontrolle über die
+      physischen Speichermedien voraus.
+    confidence: niedrig
+    origin: generated
+  - id: e424
+    fro: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    to: 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+    kind: local
+    relation: setzt_voraus
+    note: Die Internetzeit als Dossierfähigkeit setzt die gespeicherte, nachträglich
+      auswertbare Kommunikation voraus.
+    confidence: mittel
+    origin: generated
+  - id: e425
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: 4feb2234-c04c-503c-a8a2-1ae068560986
+    kind: local
+    relation: setzt_voraus
+    note: Die Verfolgung aller Initiatoren nach dem Scheitern setzt voraus, dass im Netz
+      jeder als Dritter erfasst ist.
+    confidence: mittel
+    origin: generated
+  - id: e426
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    kind: local
+    relation: setzt_voraus
+    note: Dass Inhalte gestoppter Abkommen im Geheimen weiterlaufen, folgt aus dem
+      staatlichen Sicherheitsbegriff, der Einsicht als Sicherheit versteht.
+    confidence: mittel
+    origin: generated
+  - id: e427
+    fro: babe4d40-4c53-509c-a0d4-eb3593a19501
+    to: a83f3eff-ac5b-5eb1-b077-7fbede26017c
+    kind: local
+    relation: setzt_voraus
+    note: Bitcoin als nicht neutrale, vertrauensbildende Technik ist ein Beispiel für die
+      These, dass Technikformen Ordnung hervorbringen.
+    confidence: hoch
+    origin: generated
+  - id: e428
+    fro: 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: setzt_voraus
+    note: Die Vertraulichkeit wirtschaftlicher Transaktionen setzt voraus, dass der Code,
+      der sie abwickelt, offen und prüfbar ist.
+    confidence: mittel
+    origin: generated
+  - id: e429
+    fro: 8c4e64b1-5779-5429-9247-6e05f149c1fb
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: setzt_voraus
+    note: Die Internetzeit als Dossierfähigkeit setzt voraus, dass der Code, der die Archive
+      trägt, offen und prüfbar bleibt.
+    confidence: niedrig
+    origin: generated
+  - id: e430
+    fro: 21c01f78-59a8-5b05-9137-ec7443e72239
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: setzt_voraus
+    note: Die Bankenblockade zeigt, dass wirtschaftliche Ausschaltung ohne sichtbare Zensur
+      auskommt.
+    confidence: niedrig
+    origin: generated
+  - id: e431
+    fro: 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+    to: 61c88d95-a028-5258-82d9-a922d165f040
+    kind: local
+    relation: setzt_voraus
+    note: Die Wahl zwischen Selbstzensur und Werkzeugbeherrschung macht den Kampf um das
+      offene Netz zur politischen Grundfrage.
+    confidence: mittel
+    origin: generated
+  - id: e432
+    fro: bf96f928-7bb1-58dc-880b-a3976929b2dc
+    to: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    kind: local
+    relation: setzt_voraus
+    note: Dass Inhalte gestoppter Abkommen im Geheimen weiterlaufen, zeigt, warum offener
+      Code als Verfassungsfrage nötig ist.
+    confidence: niedrig
+    origin: generated
+  - id: e433
+    fro: 1e18fefc-f3f9-5818-8155-665975cb73f4
+    to: 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+    kind: local
+    relation: setzt_voraus
+    note: Die These vom gesicherten Bleiben setzt voraus, dass der Zivilraum trotz
+      militärischer Besetzung nutzbar bleibt.
+    confidence: niedrig
+    origin: generated
+  - id: e434
+    fro: 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    to: ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+    kind: local
+    relation: setzt_voraus
+    note: Die Zentralisierung von Informationsdiensten ist die Voraussetzung dafür, dass
+      Inhalte spurlos aus Archiven entfernt werden können.
+    confidence: mittel
+    origin: generated
+  - id: e435
+    fro: 9a71d242-23e5-5f55-a9b7-3fbd84307947
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: setzt_voraus
+    note: Offener Code als Verfassungsfrage ist die Bedingung dafür, dass die Asymmetrie des
+      Geheimwissens überhaupt adressierbar wird.
+    confidence: niedrig
+    origin: generated
+  - id: e436
+    fro: be565df5-4f0c-566d-8be4-c3928d4fe65e
+    to: e698c744-4bf4-5232-927e-92e6ca4c20a1
+    kind: local
+    relation: setzt_voraus
+    note: Die Umkehrung des Konsensvorsprungs setzt voraus, dass das veröffentlichte
+      Material nur ein Bruchteil des Geheimen ist.
+    confidence: niedrig
+    origin: generated

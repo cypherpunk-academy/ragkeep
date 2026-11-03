@@ -1,0 +1,165 @@
+# Netanyahu Loses Big Time. Will It Matter? Israel Election Results Arrive
+
+Hi, everybody. I'm John Kiriakou, and welcome back to the Briefing Room. This is, again, the election edition and not just U.S. elections. We are counting the votes today from Election Day in Israel, and there is a new leading candidate for prime minister. His name is None of the Above. I'll explain what that means in a second.
+
+We have some incredible early voting data here in the U.S. We are no longer looking at polling for these races. We have actual vote results so far, at least partially.
+
+The reporter who sent me to prison is facing more legal troubles over his new book. What a pity we'll get into that.
+
+And in the latest chapter of the Saudi-Houthi conflict, Saudi Arabia has allegedly offered to pay the Houthis $1 billion in cash to get them to stop bombing Saudi oil facilities. That's one way to do it.
+
+There were two huge international elections this week. One turned out like many people predicted. The other one has gotten more shocking by the minute. So let's start with the less surprising outcome, and that is Israel.
+
+We have election results from Israel. Not the final, final results, but we know what's going to happen.
+
+The main battle, of course, was between Prime Minister Benjamin Netanyahu and former IDF Chief of Staff Gadi Isankat, as well as Israel's Arab political parties. The Arab parties are not large enough to ever win control, but they can definitely be a problematic thorn in the side of the ruling majority if their votes are needed.
+
+Here's a quick breakdown of results from the newspaper Haaretz, one of the most highly respected papers in Israel. Take a look.
+
+That's really what it comes down to. To put that into perspective, Netanyahu's current coalition today is 68 members of the Knesset. You need 61 to govern, but he has fallen all the way down from 68 to roughly 52.
+
+Election results won't be finalized until next week. They won't be certified until next week, but exit polls indicate that Opposition Leader Isankat's block will get more votes than Prime Minister Benjamin Netanyahu's block.
+
+So what does that change? It's something between changing nothing and changing not very much. In fact, even though his coalition lost, Netanyahu is likely to remain in power for a while, maybe a long while.
+
+So let me explain. Take a look at this chart.
+
+As a quick recap, Israel's parliament, called the Knesset, has 120 seats. To govern, you need a majority of 61 seats. No single party has ever won 61 seats on its own. So every Israeli government, since the founding of Israel in 1948, has been a coalition. The parties have to cut deals with one another.
+
+Keeping in mind, actual vote totals won't be in until next week, but based on exit polls, nobody's coming close to 61. Netanyahu's block has about 50. Isankat's block has about 52 or 53. The Arab parties are going to end up with 17 or 18. That is the most they have ever had, by a lot.
+
+And that's the main reason why you see no one as a top three candidate for who will be the next prime minister of Israel. I want you to look at the Kashi market, who will become prime minister after the 2026 election. This is very important. And this is a change that occurred over the course of one day.
+
+So what happens is, the president of Israel, Isaac Herzog, he's the one who asks the leader of the party that he thinks is the most likely to be able to form a coalition, not necessarily the top vote-getter, but the one who has the best chance of forming a coalition to try to form a coalition. But the numbers are clear. The only coalition that's going to be able to govern has to include the Arab parties. It's the only way to get over 60.
+
+The thing is, Eisencott hates the Arabs as much as Netanyahu does. So does he sort of cave to Arab Israelis and ask them to join the government? You're going to have to give them something? What? Minister of environment? Minister of housing? You can't do that because they'll put an end to the settlements. Minister of national security? That's never going to happen. Minister of foreign affairs? Minister of defense? What would bone to you throw the Arabs?
+
+But Eisencott has said repeatedly that he will not join with the Arabs. So what happens then if Eisencott is not able to form a government because he won't partner with the Arabs? Then President Herzog asks Netanyahu to form a government. Clearly, Netanyahu cannot form a government.
+
+So they have six weeks, I'm sorry, they have four weeks, they can extend it to six weeks for Eisencott. And then four weeks, they can extend it to six weeks for Netanyahu. All the while Netanyahu is serving as the caretaker prime minister, right? Leading a minority government, but it still allows him to bomb Gaza, to bomb Lebanon, to bomb Syria, to bomb Iran, to build new settlements the whole time. Nothing's going to change.
+
+Well, let's look at Eisencott. Let's say Eisencott is able to put together a coalition. This is a guy whose son was killed in Gaza. He hates the Palestinians. He's going to continue to bomb Gaza and bomb Lebanon and Syria and maybe even Iran.
+
+But then what happens if neither one of them can form a coalition? Then President Herzog has to call elections again. And what happens then again, this happened between 2019 and 2022, you have elections again, and if neither bloc can get to 61 votes, then you have to have a third election and then a fourth election. And you have to just keep having elections until somebody can cobble together 61 seats in the Knesset. This is going to be a long, painful, drawn out process.
+
+We're going to keep talking about Eisencott. We're going to keep talking about Netanyahu because, like the idea or not, Netanyahu is going to be the Israeli prime minister for at least a little while.
+
+As far as why Arab parties won so many seats, turnout was the highest that Israel has seen since the 1999 election. Arab voters turned out in numbers that we haven't seen since 1974, from about half of eligible voters last time to more than three quarters of eligible voters this time. About one in five Israelis is Arab. That's about 20% of Israelis are Arab, and the parties they vote for have almost always opposed Netanyahu, almost always.
+
+Now, these Arab Israelis are split between religious Muslims and secular liberals, let's call them, and they don't always agree with each other, but they would be willing to join the government. So why couldn't the Arab parties ally with Eisencott to seize the majority? In theory, of course, they could. In practice, it's just about a non-starter because Eisencott and his allies have campaigned on a promise not to partner with the Arabs.
+
+And there's one more plot twist. One of the Arab parties, Ram, made a Jewish Zionist former police general. It's deputy leader. Now, they did that, of course, in kind of a cynical bid, I think, to make themselves look like an acceptable partner for Eisencott. We'll see if Eisencott bites.
+
+His best shot in the early rounds is probably to try and make concessions to members of Netanyahu's coalition. Right? Maybe you can pull away one of the little parties that is not Itamar Ben-Gavir or Bezalov Smotrich, and you could realistically offer them something that they want so long as they break away from Netanyahu and join Eisencott. That's a possibility.
+
+So what happens now? Now, it's all about the horse trading. It starts with President Herzog, who's in a generally ceremonial position. He's the guy that cuts the ribbons at the opening of new grocery stores, for example. He decides who gets the first crack. You get the four weeks, the 28 days. There's a possible two-week extension, as I said. If he fails, the other guy gets a shot. If nobody can do it, new elections again.
+
+Here's the part that really matters, and I'm going to repeat myself here, but until a new government is formed with at least 61 seats, Benjamin Netanyahu remains as the prime minister. This could be weeks. It could be months. It could be maybe through another election, and he doesn't have to win. He just has to make sure that nobody else wins. And as we've already seen, Netanyahu tried to get away with new military strikes against Iran just days ago to try to influence election results. Well, he now has weeks and weeks to keep trying that same move.
+
+Now, the shock election. I said several weeks ago that I thought Brazil's president, Luiz Inácio Lula da Silva, would lose this election. I even said so on Twitter. Well, he didn't lose the election. He defeated Senator Flavio Bolsonaro, the son of former president Jair Bolsonaro, who's currently serving 27 years, supposed to be in prison. He's under house arrest in his own house for plotting a coup after he lost to Lula in the last election. Now, Bolsonaro, the junior Bolsonaro, narrowly lost. It was 52 to 48, with Lula becoming the first person ever elected president of Brazil four separate times.
+
+Flavio Bolsonaro refused to concede. He was frustrated that the Brazilian Supreme Court ordered the polls to stay open in certain areas for an extra two hours. Now, they did that because there were problems with the voting machines. There were problems with power outages and things like that. But the problem was, after the Supreme Court ordered the polls to remain open for two more hours, there were some polling places that had already closed and that had begun to count the votes. The voting machines were turned off.
+
+So on Monday, a Supreme Court justice ordered Flavio to surrender his passports as part of a money laundering investigation. And what did he do? He ran to the United States. He and his whole family, they're in Miami today. This is exactly what his father did in 2022.
+
+And I've got to tell you a little funny thing. I go to Miami every couple of weeks. I film a TV show there that is broadcast overseas. I happen to be in the public's grocery store. And who do I see, but President Jair Bolsonaro in the produce department, buying vegetables. Well, it's history repeating itself.
+
+But the State Department, in the meantime, has rolled out the red carpet and announced that it has issued visas to Flavio Bolsonaro and his family, which, of course, is the same treatment every asylum seeker gets at the border, right? They just have the visas waiting for you.
+
+But Lula had some choice words for Bolsonaro now that he's fled to the US. He said, quote, for the Bolsonaro family, Brazil is their second homeland. Their first homeland is licking boots in the United States, just as they are accustomed to doing.
+
+It is unclear to me, and I haven't been able to find it, whether Jair Bolsonaro ran away from his house arrest and whether he's in Florida right now. I think he's not. I think he's still in Brazil. I'm not sure. We're going to keep looking.
+
+But on the morning of the vote, Lula, President Lula, was a 20% long shot on Kashi. Everybody thought that Bolsonaro was going to win. I certainly thought Bolsonaro was going to win. I've worked in intelligence analysis. Sometimes you get surprised, right? The polls were wrong. The prediction markets were wrong. The TV news correspondents who cover politics were wrong. Everybody got this wrong, and it appears that they got it wrong because they underestimated the turnout among the poorest voters in the favelas in the big cities of Rio de Janeiro and Sao Paulo. I saw a color map the other day showing where turnout was the heaviest and then where turnout continued to remain heavier in the two hours after the polls were supposed to have been closed. It was in the poorest places in Brazil.
+
+Now, a lot of people are wondering whether Flavio Bolsonaro can continue to run the Brazilian opposition from Miami. Of course not. People are going to see him as somebody who just up and ran away. I think the Bolsonaro's as a political family are probably done.
+
+I'm also wondering how in the world he was able to get out of the country like that with his whole family even after the Supreme Court ordered that he turn over his passports. Private jet, some billionaire benefactor, who knows. If this were a CIA operation, we would have put him in a coffin with an oxygen tank and just loaded him into the hold of a plane, but that's just me. We have coffins that have oxygen supplies built in, and I had a pilot friend tell me once that he never made a flight that wasn't carrying a coffin. Yeah, people die every day and get transported every day, and so we would just buy a cargo ticket for the coffin. The airline would think it's just some dead guy inside, and it's in fact somebody that we're exfiltrating in a special CIA coffin with oxygen tanks inside.
+
+If you've got money sitting in a retirement account right now, there is a threat to it that nobody is talking about, and the worst part, you're probably already exposed to it without even knowing. Here's what I mean. You don't have to own a single AI stock to be sitting right in the middle of the AI bubble. If your retirement is in a 401k, an IRA, or pretty much any index fund, a big chunk of your money is already tied to the handful of tech companies driving this whole thing. You didn't choose that, it just happened. And when that bubble pops and every bubble pops, you're the one who's going to take the hit. At 65, 70 years old, you don't get a do-over.
+
+That's why the folks at American Alternative Assets put together a free wealth protection guide. It shows you what's really happening to the dollar, why central banks have been buying record amounts of gold for three years running, and how you can move part of your retirement into physical gold and silver with no taxes and no penalties, no cost, no obligation, just the information you need to decide for yourself. So go to johnlovesgold.com to download it now, or you can call 888-465-3053. Get the free guide and see what more than 50,000 American families already know. That's johnlovesgold.com or 888-465-3053.
+
+Let's talk about the United States. There is some horrifying news for Republicans right now. If you want to know just how worried the White House is about the midterms, you need to take a look at where Donald Trump is spending the final days of the campaign. And before I show you this, I want to be clear, this is not a leak. This is the official campaign schedule posted by the White House Rapid Response Team account on Twitter. I make that distinction because if I worked in the White House, and this was the schedule I had to announce, I would have kept it a secret and I would have taken it to my grave.
+
+It says, this week, President Donald J. Trump will visit on Monday, Corinth, Mississippi, Tuesday, Corpus Christi, Texas, and Lubbock, Texas, Wednesday, Chillicothe, Ohio, Friday, Daytona, Florida, Sunday, Dubuque, Iowa. Vice President J.D. Vance will visit on Monday, Belgrade, Montana, Monday, Topeka, Kansas, and Tuesday, Howell, Michigan, more to come.
+
+I was stunned to the point of speechlessness when I saw this. Almost every single stop. I'll make a correction here. Every single stop but one is in a deep red state. The only exception is Michigan, and that's one stop, one day, the vice president. And President Trump isn't even going to Michigan. Not at all. They're sending J.D. Vance to Howell. Donald Trump is going out to rally voters in Mississippi and Florida, not to mention Iowa. Shocking, my God.
+
+And if you're wondering why Republicans might be panicking, I've got some numbers that should keep them up at night because for the first time in months, we're no longer relying exclusively on polls. Actual votes are being cast, and the early voting numbers are extraordinary.
+
+I want you to look at this data from Florida. This is shocking. Early voting in Florida, 19% of 16.2 million registered voters have already voted. 19% of all the voters. There have been 3,152,685 million and early in-person votes cast. 40% have been registered Democrats, 39% have been registered Republicans, and 21% are independents and minor parties. Absolutely incredible.
+
+So these are early vote numbers for the entire state of Florida, a little more than 3 million. For the first time in years, years, more Democrats voted early than Republicans, 40 to 39. This is Donald Trump's home state. Remember the embarrassment he had earlier this year? Mar-a-Lago is now represented by a Democrat in the Florida state legislature. This was a solidly ruby red state legislative district, a Democrat one. To put this into better perspective, Florida has 4 million registered Democrats and more than 5 million registered Republicans. Republicans have an enormous advantage, and yet among the people who have already voted, Democrats are showing up in greater numbers by a factor of 35%. Of course, Republicans could make up ground on November 3rd, and Republicans are better than Democrats are at actually showing up at the polling place on election day. But if you're a Republican strategist looking at those numbers, you have to ask yourself, what in the world is going on in Florida?
+
+And believe it or not, New Jersey may tell an even more remarkable story. I'm interested in this. According to the latest early voting figures, the partisan composition of turnout has shifted roughly 30 points toward Democrats compared with 2024-2025. Remember that in 2025, the Democrat, Mikey Sherrill, won the governor's race by about 15 percentage points. That was already a huge victory. Imagine the statewide blowout we could see here.
+
+New Jersey doesn't even have a statewide race on the ballot this time. We could see House districts, though, in New Jersey, flip blue that have not been blue for a long time. In Kansas, early voting numbers shifted to the left by 22 percentage points.
+
+And that brings us back to Donald Trump's campaign schedule, when a Republican president is spending the final weekend before the midterm election, rallying voters in Mississippi, in Florida, in Iowa. While early turnout numbers are flashing warning signs, it's fair to ask whether the campaign stops are even helping at this point.
+
+I want to make one last point about Kansas. Watch this Senate race. The polls show that it's tied. Kansas has not elected a Democrat to the Senate since 1932.
+
+In all of this, Donald Trump has had an interesting closing message, particularly in Ohio. Let's call it the tale of two asses. This is what he said in Ohio. I looked at his ass, and I've never done that with a man before. It's true. Off the record, women, yes, men, no, okay? By the way, I looked at one hell of a beautiful ass before, Nicki Minaj. That's hard to miss. That's hard to miss. Okay, I'm going to get back to my story, Nick. I hope Nicki wasn't insulted, but we love Nicki. Okay. Let's hear it for Nicki Minaj's ass, everybody. Yeah, Nicki Minaj who's not even an American citizen, but anyway, let me correct myself. He said that in Michigan before going to Ohio. That wasn't in Ohio, but anyway, it's all about Nicki Minaj's ass.
+
+Now, listen, Donald Trump is the trolter-in-chief. He's really good at it. He loves it. He riles up the crowd, but it just seems to me like there's more of a sense of immediacy right now than there normally would be. Maybe applauding Nicki Minaj's ass is not something that you want to do. If you're in Michigan and you're trying to rally your base, you might want to focus on that Senate race, but that wasn't the focus.
+
+I'm going to make some predictions for election day. We'll do this more fulsomely next week. The election, of course, is Tuesday. The Democrats are going to win the Senate, I think, relatively easily. The House is a given. The House is lost to the Republicans. I think the Democrats are going to win between eight and 12 House seats. The Cook Political Report and Larry Sabato's Crystal Ball are saying it could be as many as 18 seats. It should be 40 seats plus, but because of gerrymandering, the Republicans have protected themselves in a lot of places. The Democrats are going to win the House easily. I think they're going to win the Senate relatively easily. I'm looking at the Democrats coming out of this with at least 51 Senate seats, maybe as many as 53 Senate seats, which is just crazy. Nobody predicted this at the beginning of the campaign.
+
+Folks, on our last show, we covered the explosive new allegations against Jared Kushner, published by the very man who's reporting help to send me to prison. His main allegation against Kushner was that Kushner had access to roughly $2 billion in secret foreign bank accounts tied to Middle Eastern governments seeking to influence American foreign policy during President Trump's first term.
+
+Now, I had a warning for Matthew Cole's sources. Hire the best lawyer's money can buy and get the absolute hell off the grid, because I know first hand what can happen to you when you become a source for Matthew Cole. And what I said in our last episode was, if the heat turns on Matthew Cole, he will rat you out to save himself.
+
+Well, since that episode aired, something extraordinary has happened. Some very credible people have started to publicly question whether Matthew Cole's story about Jared Kushner even holds up.
+
+First, take a look at what Barak Ravid had to say. Ravid, you'll recall, is one of the most well connected reporters covering covering Israel in the Middle East. He's at Axios and the guy is a fantastic journalist. Well, he raised some pretty serious doubts about the story. He writes this. He says, there are many things in this book excerpt that was published in Vanity Fair that don't add up. But two are extremely questionable. Number one, I don't think it is even technically possible to put together such an account in the Bank of Israel. Netanyahu can't really be a signatory. And these accounts are under significant monitoring by career civil servants. Number two, to suggest that this whole thing happens in a triangle between Kushner, Freedman, and Beebe seems to me impossible considering what I know about the relationships.
+
+We also saw the Jerusalem Post, this one is less surprising, actually took down an article which featured Cole's reporting. And in a statement, they said, quote, we have requested supporting evidence from Mr. Cole and will report on any verifiable information we receive, unquote. Well, guess what? That additional supporting evidence hasn't been forthcoming. So according to status news, neither Matthew Cole nor the publisher Simon and Schuster, and I want to be transparent here, Simon and Schuster is my publisher, neither Cole nor the publisher are responding to questions to defend the book's accusations, which have been called hearsay.
+
+That silence, of course, does not necessarily mean that the evidence doesn't exist, but as Jared Kushner's attorneys threatened legal action, Vanity Fair magazine, which published the excerpts, is left in an uncomfortable position. It chose to publish a $2 billion claim about the president's son-in-law. And so far has declined to say why they believe any of it is true.
+
+And here's where the story takes a turn that I certainly was not expecting. Even John Stewart isn't entirely buying what Matthew Cole is selling. We want to show you a clip. It's a little bit long, but it's important. So this is a clip from Matthew Cole's appearance on The Daily Show. Take a look.
+
+But ultimately, for the veracity of it, people are going to need more than like, take my word for it, I believe it. That's my only point. And that within that, that's going to, it's going to ultimately end up being a tough sell if you, for reasons that may seem very reasonable to protect your sources. And you've been burned in this area before. It would make sense. I'm just concerned that like, this, this book's a big swing. You've been burned in this area before.
+
+Yeah, he has. When Matthew Cole, when Matthew Cole, uh, ratted me out to the FBI, I was arrested. When he ratted out reality winner at NSA, she was arrested. When he ratted out Terry Albury at the FBI, he was arrested. When he ratted out Daniel Hale from the Air Force, he was arrested. Matthew Cole has a very, very poor track record with his sources. And as John Stewart said, you know, are we supposed to just take his word for it? All the sources in this book are anonymous. Now just take, take his word for it.
+
+Everybody hates Jared Kushner. Everybody believes Jared Kushner is a grifter. I'm telling you, he says that there's this evidence from Israel saying he's a grifter or there, there's this evidence from the United Arab Emirates saying he's a grifter. Just take my word for it.
+
+Well, listen, I spent years and years in the intelligence community. I know the difference between an allegation, a piece of intelligence and something you can actually prove. And if this story is going to hold up, Matthew Cole is going to have to have to answer some very serious questions. Even more than that, he's going to have to come up with documents. If you say there is a billion dollar account in the Israeli central bank that is controlled by Benjamin Netanyahu and Jared Kushner. Okay, show us the statement. Show us a statement from, from a transfer of the money from the president of the UAE to the Israel central bank. Show us that Jared Kushner has you know, signature authority. Show us something. Don't just say, I've got multiple anonymous sources and they're really smart and they're really good and they're really tied in. So I can't tell you who they are or where they are or exactly what they said, you're going to have to take my word for it. No, sorry, that's not journalism. That's a game of telephone.
+
+It surprises me that more mainstream media outlets haven't immediately taken Matthew Cole's book as gospel. I have to say I'm very pleasantly surprised that he's being questioned by the likes of John Stuart. I would have expected John Stuart just to buy this whole thing as gospel and, and he's not and others aren't and shame on vanity fair for not questioning him.
+
+Something unusual and kind of exciting in a weird way happened at the United Nations yesterday. Tension, real tension between the United States and Cuba was on full display at the United Nations as the U.S. ambassador to the U.N. to the U.N. Mike Walts and Cuba's foreign minister got into a shouting match in the United Nations General Assembly Hall.
+
+Take a look at this clip. It's just nuts.
+
+I'm suspending the meeting. I'm suspending this meeting. Do you understand who you're dealing with? This is America backup. The rule is clear. This is the substance of the speech. There are no procedural. You can bring the meeting is suspended. Please sit down. Sit down. Your ex would say, I know you don't like to hear this. This is America, my friend. This is the United Nations. This isn't your communist dictatorship. You cannot silence me or you cannot silence my colleagues. This individual needs to back away from this podium. He's not going to intimidate me in the United States of America. I appeal to you to listen to me and I'll ask everybody to go back to their delegations. I'm the representative of the United States of America. You don't see something like that every day.
+
+Listen, I served at the United Nations. My last tour was at the United Nations. This is not something that you see. This is something like when Soviet leader Khrushchev took off his shoe and started pounding it on the table. This is one of those things that people who are serving there now are going to tell their children about.
+
+A couple of things I wanted to say though. Mike Waltz said repeatedly, this is the United States. No, actually, it's not. The United Nations is not the United States. It's international territory.
+
+When I was serving at the United Nations, the US mission to the UN was directly across the street. So I would just leave our building and go directly across the street and have to show my ID and you leave US soil. You leave US territory when you enter the United Nations headquarters. And I always got a kick out of that.
+
+So every day I would log on. I'd read the cables that I needed to read. And then I would walk across the street and go to the delegates lounge. I was a delegate to the United Nations. I'd go to the delegates lounge and I'd have a cup of coffee. And you say hi to the Bulgarian ambassador and you say hi to the Chinese First Secretary and hi to the Chilean counterterrorism guy and whatever. And you sit and have coffee with the Belgian or the Russian or the Canadian or whatever. I loved it. But it is not the United States. It is international territory. So Mike Waltz is wrong, wrong, wrong.
+
+So what you saw on your screen. During the UN's annual debate on the US blockade against Cuba, Ambassador Waltz took to the podium and began delivering a speech that was fiercely critical of the Cuban regime.
+
+Remember that a week ago, President Trump said, and he may have been trolling again like he often does, said he was withdrawing naval vessels from the Strait of Hormuz and he was going to send them to Cuba and then let Marco Rubio do what he saw fit. It was a threat to overthrow the Cuban government.
+
+But shortly after Waltz began his remarks, the Cuban Foreign Minister Bruno Rodriguez Paria and the rest of the Cuban delegation began challenging him from the audience, shouting and gesturing as the president of the assembly banged his gavel to quiet them down. The Cubans, of course, were in violation of protocol. You're supposed to sit quietly and listen to the speech, whether you like the speech or not. That was wrong. They shouldn't have done that.
+
+Mike Waltz was wrong to say that they were, you know, this is the United States, Excellency. This is the United States. No, it's not. But anyway, I want to show you that because it is not something that you see every day.
+
+And I'm genuinely worried that we might intervene in Cuba.
+
+Well, the coverage may have stopped on the Saudi-Houthi conflict, at least for this week. But the strikes, the Houthi strikes against Saudi Arabia have not stopped. Here's what you might have missed, given all the election headlines. We said a few weeks ago that the Houthis had free reign in the Middle East to strike the Saudis as much as they wanted, because President Trump has been trying to save face ahead of the midterms and make it seem like there's not a new war front.
+
+Well, take a look at this incredible footage released by the Houthis and carried by Reuters. The Houthis spokesman have said that they attacked Saudi oil pumping stations. Check this out. The Iran-aligned Houthis release footage said to show drone strikes. These are drones just dropping dumb bombs right on top of Saudi installations. It's like you're standing there watching it happen. You can see people not realizing the bombs are coming, and the bombs go off and these people run for their lives. They're literally running for their lives. I have never in my life seen footage like this, never in my life. And it's just from the camera that's mounted on the drone. And the drones, they showed us the drones at the start of this footage. They're just drones that you can buy on Amazon for $200. Just crazy. I've never seen anything like it.
+
+The Houthis also said on Tuesday that they had hit Saudi Arabia's Rastinora oil refinery. This is the biggest refinery in all of Saudi Arabia. They hit it with a ballistic missile. And do you remember how they're targeting Saudi Arabia with their missiles? They're using AI to do it. So guess what?
+
+Saudi Arabia has reportedly offered to pay the Houthis a billion dollars in cash through Tehran to stop these attacks as part of a ceasefire, with Defense Minister Prince Khaled bin Salman flying to Iran to negotiate a deal and even bringing the money with him aboard a C-130 transport plane that he arrived on. That's per diplomatic sources in the Gulf. And it's being reported by Israel Hayom. I have no idea if that's true, but the Iranian press reported day before yesterday that that was the case. So it's being reported both by the Iranians and by the Israelis.
+
+Well, you know what? That's one way to handle diplomacy. It's no secret that the Emiratis gave the Iranians as much as three billion dollars to stop bombing the Emirates and the Iranians stopped. So if I were advising each group, the Saudis and Houthis, my advice first to the Saudis would be, listen, if you've got the money and you clearly have the money, of course offer it to the Houthis. If it's going to get them to stop bombing your oil refineries and your military bases and your airports, just give them the money. And if I were the Houthis, I'd say take the money and use it to try to develop your country.

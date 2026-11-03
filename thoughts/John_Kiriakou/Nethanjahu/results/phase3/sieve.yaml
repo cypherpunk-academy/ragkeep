@@ -1,0 +1,186 @@
+judgements:
+  - id: fabdf92f-8e3f-5488-97e3-a48599ecbd2b
+    title: Netanjahu muss nicht gewinnen, nur verhindern, dass ein anderer gewinnt
+    status: offen
+    queries:
+      - Ein geschäftsführender Regierungschef muss keine Wahl gewinnen, es reicht, die
+        Mehrheitsbildung anderer zu verhindern
+      - Wahlergebnis und Machtverlust können auseinanderfallen, wenn das Amt bis zur
+        Regierungsbildung beim Amtsinhaber bleibt
+      - Blockade einer Koalition ohne den Amtsinhaber sichert dessen Verbleib an der
+        Macht
+    keywords:
+      - geschäftsführende Regierung
+      - Knesset 61 Sitze
+      - Regierungsbildung
+      - Machtverlust
+      - Blockademehrheit
+      - caretaker prime minister
+  - id: 12c2cd69-57e4-549f-b892-c6576cb1d4e5
+    title: Die Araber als Mehrheitsbeschaffer, die niemand zum Partner machen will
+    status: offen
+    queries:
+      - Arabische Parteien in Israel sind für Mehrheiten nötig, werden aber von beiden
+        großen Blöcken als Koalitionspartner ausgeschlossen
+      - Die Stimmen der arabischen Parteien entscheiden Wahlen, ohne dass sie
+        Regierungsverantwortung erhalten
+      - Ein struktureller Ausschluss macht arabische Wählerstimmen zwar
+        wahlentscheidend, aber politisch folgenlos
+    keywords:
+      - Arabische Parteien Israel
+      - Knesset Koalition
+      - Regierungsbildung
+      - Ausschluss
+      - Mehrheitsbeschaffer
+      - Netanjahu
+  - id: 4f38edc9-e671-5da1-b55d-90792820b9cd
+    title: Die Übergangszeit als Regierungsinstrument
+    status: offen
+    queries:
+      - Die geschäftsführende Regierung ist keine Pause, sondern eine Phase der
+        Handlungsfähigkeit, in der Angriffe, Siedlungsbau und militärische Schläge zur
+        Wahleinflussnahme fortgesetzt werden können.
+      - Solange keine neue Koalition mit Mehrheit steht, bleibt der bisherige
+        Regierungschef im Amt und kann Wochen oder Monate lang militärische Mittel zur
+        Beeinflussung von Wahlen nutzen.
+      - "Übergangsregierungen sind ein Instrument der Politik: Wer geschäftsführend
+        regiert, kann ungestört Fakten schaffen und Wahlen beeinflussen, während alle
+        auf die Regierungsbildung warten."
+    keywords:
+      - Übergangsregierung
+      - geschäftsführende Regierung
+      - Caretaker
+      - Wahlbeeinflussung
+      - Militärschläge
+      - Siedlungsbau
+  - id: a3a4258e-200f-560c-ad94-ad78380711b2
+    title: "Die falschen Prognosen hatten eine gemeinsame Ursache: die übersehene Beteiligun"
+    status: offen
+    queries:
+      - Warum lagen Prognosen und Wettmärkte bei der brasilianischen
+        Präsidentschaftswahl falsch, obwohl die Wahlbeteiligung der Armen in den Favelas
+        entscheidend war?
+      - Die Fehlerquelle bei Wahlprognosen liegt in der Erwartungsbildung, nicht im
+        Wahlergebnis selbst
+      - Unterschätzte Stimmbeteiligung der ärmsten Stadtviertel als Erklärung für
+        falsche Vorhersagen bei Wahlen
+    keywords:
+      - Wahlbeteiligung
+      - Favelas
+      - Prognosemärkte
+      - Meinungsumfragen
+      - Erwartungsbildung
+      - Brasilien
+  - id: a64377a4-4109-5f3a-86ea-c824ec06f606
+    title: Exil entwertet Oppositionsführung
+    status: offen
+    queries:
+      - Wer als Oppositionsführer ins Ausland flieht, verliert seine Anhängerschaft,
+        weil Flucht als Feigheit statt als Widerstand gedeutet wird
+      - Exil zerstört die Glaubwürdigkeit eines politischen Führers und beendet die
+        Karriere seiner Familie
+      - Politische Führung von außen ist unmöglich, wenn Anhänger im Weggehen Aufgabe
+        statt Kampf sehen
+    keywords:
+      - Exil
+      - Oppositionsführung
+      - Flucht
+      - Glaubwürdigkeit
+      - politische Familie
+      - Bolsonaro
+  - id: 24de2f42-19ed-5dc8-a02d-c90f5ef95690
+    title: Die Wahlkampfroute als Geständnis
+    status: offen
+    queries:
+      - Die Stationen einer Wahlkampfreise verraten, dass eine Partei ihre Anhänger
+        bestärkt statt neue Wähler zu gewinnen
+      - Wer nur in sicheren Hochburgen auftritt und den einzigen wackeligen Bezirk
+        anderen überlässt, gibt damit seine Schwäche zu
+      - Der Reiseplan einer Kampagne ist selbst das Eingeständnis, dass es nicht mehr um
+        Stimmenwerbung geht
+    keywords:
+      - Wahlkampfroute
+      - Zwischenwahlen
+      - rote Staaten
+      - Vizepräsident
+      - Basismobilisierung
+      - Eingeständnis
+  - id: ce7b05c3-1bab-5035-b45c-a0bc1f80dc22
+    title: Frühwählerzahlen gegen Registrierungsverhältnis lesen
+    status: offen
+    queries:
+      - Frühwahlzahlen nur im Verhältnis zur Parteienregistrierung aussagekräftig
+      - Überproportionale Stimmabgabe registrierter Anhänger einer Partei kehrt
+        strukturelle Minderheit um
+      - Wahlbeteiligung nach Registrierungsbasis statt absoluter Zahlen bewerten
+    keywords:
+      - Frühwahl
+      - Parteiregistrierung
+      - Florida
+      - Wählerregistrierung
+      - Wahlbeteiligung
+      - strukturelle Unterlegenheit
+  - id: db21d269-5b43-5335-86f9-3016e956e915
+    title: Anonyme Quellen als Telefonspiel
+    status: offen
+    queries:
+      - "Anonyme Gewährsleute ersetzen keine Dokumente: Behauptungen über Konten
+        brauchen Belege"
+      - Ein Journalist, der wiederholt eigene Quellen preisgibt, entwertet seine
+        anonymen Zeugen
+      - Der Unterschied zwischen Anschuldigung, Geheimdienstinformation und Beweis
+        verlangt vorzeigbare Unterlagen
+    keywords:
+      - anonyme Quellen
+      - Dokumente
+      - Zeichnungsbefugnis
+      - Telefonspiel
+      - Quellenschutz
+      - Beweis
+  - id: d0d81294-b8cf-5a55-a4b7-8b9522794ea7
+    title: Der UN-Saal ist nicht die USA
+    status: offen
+    queries:
+      - Das UN-Hauptquartier ist kein US-Territorium, sondern völkerrechtlich
+        eigenständiges Gebiet
+      - Wer im UN-Saal amerikanische Souveränität beansprucht, verwechselt Staatsgewalt
+        mit Eigentümerrechten am Gebäude
+      - Die rechtliche Stellung des UN-Sitzes widerlegt die Gleichsetzung von Gastland
+        und Versammlungsort
+    keywords:
+      - UN-Hauptquartier
+      - internationales Gebiet
+      - Souveränität
+      - Hausrecht
+      - Gastlandabkommen
+      - Territorialhoheit
+  - id: 60e5e495-5ee8-52d0-871b-9c697264794e
+    title: Verschwundene Berichterstattung, fortgesetzter Krieg
+    status: offen
+    queries:
+      - Berichterstattung über einen Konflikt endet, die Angriffe gehen weiter
+      - Aufmerksamkeitsökonomie der Medien versus Fortdauer militärischer Gewalt
+      - Drohnenaufnahmen machen einen der Öffentlichkeit entzogenen Krieg sichtbar
+    keywords:
+      - Houthi
+      - Saudi-Arabien
+      - Drohnenangriffe
+      - Medienberichterstattung
+      - Nachrichtenzyklus
+      - Krieg
+  - id: a4423585-f4c8-51b1-babd-ada912644737
+    title: Zahlung statt Verteidigung als rationale Konfliktlösung
+    status: offen
+    queries:
+      - Zahlungen an Angreifer können Verteidigungskosten ersetzen und sind für beide
+        Seiten vorteilhaft
+      - Ein Staat kauft sich mit Geld statt mit Waffen Frieden von einem Angreifer
+      - Schutzgeldzahlungen als rationale Strategie der Konfliktbeilegung, wenn der
+        Angreifer das Geld investiert
+    keywords:
+      - Schutzgeld
+      - Zahlung statt Verteidigung
+      - Houthis
+      - Saudi-Arabien
+      - Emirate
+      - Konfliktlösung

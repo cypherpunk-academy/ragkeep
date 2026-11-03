@@ -1,0 +1,702 @@
+maps:
+  - source_id: Rudolf_Steiner_Wahrheit_und_Wissenschaft_3
+    segment_id: Rudolf_Steiner_Wahrheit_und_Wissenschaft_3
+    stop: done
+    steps:
+      - round: 1
+        tool: read
+        from: 1
+        count: 12
+        note: Absätze 1–12 von 174.
+      - round: 2
+        tool: record_thought
+        title: Kant-Glaube als Hindernis
+        core: 'Die Schrift versteht sich als Beitrag zur Überwindung eines „ungesunden
+          Kant-Glaubens": Kants Verdienst (Aufweis der Unzugänglichkeit des „Dinges an
+          sich") wird nicht bestritten, aber die Konsequenz wird bestritten — das
+          Jenseits des Urgrundes sei ein Phantom, kein Ergebnis echter Untersuchung des
+          Erkenntnisvermögens.'
+        type: unterscheidung
+        paragraphs:
+          - 1
+          - 2
+          - 3
+        evidence: „Wie aber, wenn dieses «Ding an sich» samt dem jenseitigen Urgrund der Dinge
+          nur ein Phantom wäre!"
+        note: Abgelegt als Gedanke 0. Lies weiter oder rufe done auf.
+      - round: 2
+        tool: record_thought
+        title: Grenzziehung statt Fähigkeitsprüfung
+        core: "Kant fragt, was das Erkenntnisvermögen nicht vermag; die vorliegende Untersuchung
+          fragt umgekehrt, was es wirklich vermag. Damit wird die kritische Geste
+          umgekehrt: nicht Grenzabsteckung, sondern Ausmessung der Reichweite des
+          Denkens."
+        type: umkehrung
+        paragraphs:
+          - 4
+          - 3
+        evidence: „Nicht wie Kant es tat, wollen sie darlegen, was das Erkenntnisvermögen nicht
+          vermag; sondern ihr Zweck ist, zu zeigen, was es wirklich imstande ist."
+        note: Abgelegt als Gedanke 1. Lies weiter oder rufe done auf.
+      - round: 3
+        tool: read
+        from: 13
+        count: 12
+        note: Absätze 13–24 von 174.
+      - round: 4
+        tool: record_thought
+        title: Das Gegebene als Durchgangsstufe
+        core: Die Erfahrung, die Positivismus und Neukantianismus als das einzig Gewisse
+          ausgeben, gilt hier als das Subjektivste. Das Gegebene ist nicht Fundament,
+          sondern Durchgangsstufe, die im Erkenntnisakt selbst überwunden wird.
+        type: umkehrung
+        paragraphs:
+          - 15
+        evidence: „Uns gilt die sogenannte Erfahrung ... gerade für das Subjektivste."
+        note: Abgelegt als Gedanke 2. Lies weiter oder rufe done auf.
+      - round: 4
+        tool: record_thought
+        title: Objektiver Idealismus vs. absoluter Idealismus
+        core: Der objektive Idealismus unterscheidet sich vom Hegelschen absoluten Idealismus
+          dadurch, dass der Grund der Spaltung von Sein und Begriff im Erkenntnissubjekt
+          gesucht und die Vermittlung im subjektiven Erkenntnisprozess, nicht in einer
+          objektiven Weltdialektik gesehen wird.
+        type: unterscheidung
+        paragraphs:
+          - 15
+        note: Abgelegt als Gedanke 3. Lies weiter oder rufe done auf.
+      - round: 5
+        tool: read
+        from: 25
+        count: 12
+        note: Absätze 25–36 von 174.
+      - round: 6
+        tool: read
+        from: 37
+        count: 12
+        note: Absätze 37–48 von 174.
+      - round: 7
+        tool: read
+        from: 49
+        count: 12
+        note: Absätze 49–60 von 174.
+      - round: 8
+        tool: read
+        from: 61
+        count: 12
+        note: Absätze 61–72 von 174.
+      - round: 9
+        tool: read
+        from: 73
+        count: 12
+        note: Absätze 73–84 von 174.
+      - round: 10
+        tool: read
+        from: 85
+        count: 12
+        note: Absätze 85–96 von 174.
+      - round: 11
+        tool: record_thought
+        title: Erkenntnistheorie als voraussetzungslose Grundwissenschaft
+        core: "Erkenntnistheorie ist Fundamentalwissenschaft, weil sie das prüft, was alle
+          anderen Wissenschaften ungeprüft voraussetzen: das Erkennen selbst. Daraus
+          folgt die Forderung der Voraussetzungslosigkeit — und die Beobachtung, dass
+          gerade in der Problemstellung selbst versteckte Annahmen stecken."
+        type: begriff
+        paragraphs:
+          - 93
+        note: Abgelegt als Gedanke 4. Lies weiter oder rufe done auf.
+      - round: 11
+        tool: record_thought
+        title: Die Problemstellung entscheidet
+        core: "Nicht die Antworten, sondern die Fragestellungen entscheiden über den Erfolg
+          einer Wissenschaft. Falsch gestellte Probleme erzeugen Irrtümer ganzer
+          Zeitalter — Beispiele: rudimentäre Organe vor dem biogenetischen Grundgesetz,
+          die Zirbeldrüse, die Physik vor dem Wärmeäquivalent. Also muss auch die
+          Erkenntnistheorie zuerst ihre Grundfrage richtig formen."
+        type: verbindung
+        paragraphs:
+          - 93
+          - 94
+        note: Abgelegt als Gedanke 5. Lies weiter oder rufe done auf.
+      - round: 12
+        tool: read
+        from: 97
+        count: 12
+        note: Absätze 97–99 von 174.
+      - round: 13
+        tool: record_thought
+        title: Die zwei Voraussetzungen in Kants Frage
+        core: 'Kants Grundfrage „Wie sind synthetische Urteile a priori möglich?" ist nicht
+          voraussetzungslos: sie enthält erstens die Annahme, dass es einen Weg zur
+          Erkenntnis außerhalb der Erfahrung geben müsse, zweitens, dass
+          Erfahrungswissen nur bedingte Gültigkeit habe. Kant übernimmt diese Sätze als
+          Vorurteile der dogmatischen Philosophie und fragt nur nach ihren Bedingungen,
+          nicht nach ihrer Gültigkeit.'
+        type: unterscheidung
+        paragraphs:
+          - 96
+          - 97
+          - 98
+          - 99
+        evidence: „So liegen in der Kantschen Fragestellung zwei Voraussetzungen ..."
+        note: Abgelegt als Gedanke 6. Lies weiter oder rufe done auf.
+      - round: 13
+        tool: record_thought
+        title: Auch das Apriori wird erfahren
+        core: Auch das Apriori muss uns einmal als individuelles Erlebnis, als Erfahrung,
+          zuteilwerden — selbst mathematische Urteile werden in einzelnen Fällen
+          erfahren. Die Notwendigkeit des Inhalts sichert nicht den Zugang zu ihm;
+          dieser bleibt an das Erleben gebunden.
+        type: umkehrung
+        paragraphs:
+          - 97
+        note: Abgelegt als Gedanke 7. Lies weiter oder rufe done auf.
+      - round: 14
+        tool: read
+        from: 109
+        count: 12
+        note: Absätze 109–113 von 174.
+      - round: 15
+        tool: read
+        from: 101
+        count: 12
+        note: Absätze 101–107 von 174.
+      - round: 16
+        tool: read
+        from: 114
+        count: 12
+        note: Absätze 114–116 von 174.
+      - round: 17
+        tool: record_thought
+        title: Selbstaufhebung des transzendentalen Idealismus
+        core: "Der transzendentale Idealismus widerlegt den naiven Realismus mit dessen eigenen
+          Mitteln: er setzt die Realität der Außenwelt voraus, um zu zeigen, dass sie
+          unerkennbar ist. Damit ist sein Resultat nicht aus einer gültigen Prämisse
+          erwiesen — die Widerlegung hebt sich selbst auf."
+        type: umkehrung
+        paragraphs:
+          - 113
+          - 114
+        evidence: „Der transzendentale Idealismus erweist seine Richtigkeit, indem er mit den
+          Mitteln des naiven Realismus, dessen Widerlegung er anstrebt, operiert."
+        note: Abgelegt als Gedanke 8. Lies weiter oder rufe done auf.
+      - round: 17
+        tool: record_thought
+        title: Naiver Rationalismus
+        core: 'Der Subjektivismus ist kein reiner Empirismus, sondern ein „naiver
+          Rationalismus": er vertraut ungeprüft auf die Berechtigung des Denkens,
+          während der naive Realismus ungeprüft auf die Objektivität des Wahrgenommenen
+          vertraut. Beide sind naiv, nur in verschiedenen Vermögen.'
+        type: begriff
+        paragraphs:
+          - 115
+        note: Abgelegt als Gedanke 9. Lies weiter oder rufe done auf.
+      - round: 18
+        tool: record_thought
+        title: Naiv und kritisch
+        core: Naiv ist ein Tun, das in der Tätigkeit selbst aufgeht, ohne deren Gesetzmäßigkeit
+          zu kennen; kritisch ist ein Verhalten, das sich der Gesetze der eigenen
+          Tätigkeit bemächtigt, um Sicherheit und Grenzen zu kennen. Erkenntnistheorie
+          muss kritisch sein, weil ihr Objekt das Erkennen selbst ist — sie ist „Denken
+          über das Denken".
+        type: unterscheidung
+        paragraphs:
+          - 115
+        note: Abgelegt als Gedanke 10. Lies weiter oder rufe done auf.
+      - round: 18
+        tool: record_thought
+        title: Der Anfang liegt vor dem Erkennen
+        core: "Der Anfang der Erkenntnistheorie darf nicht selbst schon Erkenntnis sein: er muss
+          außerhalb des Erkennens liegen, aber unmittelbar davor, so dass der nächste
+          Schritt erkennende Tätigkeit ist. Alles, was schon in das Gebiet des Erkennens
+          gehört, ist am Anfang abzuweisen."
+        type: begriff
+        paragraphs:
+          - 116
+          - 105
+        note: Abgelegt als Gedanke 11. Lies weiter oder rufe done auf.
+      - round: 19
+        tool: read
+        from: 117
+        count: 12
+        note: Absätze 117–121 von 174.
+      - round: 20
+        tool: record_thought
+        title: Das unmittelbar Gegebene
+        core: 'Das unmittelbar Gegebene ist ein zusammenhangloses, ungegliedertes Weltbild:
+          nichts ist unterschieden, nichts bezogen, nichts bestimmt; kein Gegenstand ist
+          wichtiger als ein anderer. Substanz, Akzidenz, Ursache, Wirkung, Materie und
+          Geist sind noch nicht geschaffen — auch nicht „subjektiv" oder „objektiv".'
+        type: begriff
+        paragraphs:
+          - 117
+        note: Abgelegt als Gedanke 12. Lies weiter oder rufe done auf.
+      - round: 20
+        tool: record_thought
+        title: Die künstliche Grenze
+        core: "Die Grenze zwischen Gegebenem und Erkanntem fällt mit keinem Moment der
+          Entwicklung zusammen; sie muss künstlich gezogen werden — und zwar auf jeder
+          Entwicklungsstufe. Hartmanns Einwand, man habe keine Erfahrung vom kindlichen
+          Bewusstsein, verfehlt den Punkt: es geht nicht um Rekonstruktion, sondern um
+          Ausscheidung des durch Erkennen Hinzugefügten."
+        type: unterscheidung
+        paragraphs:
+          - 118
+        note: Abgelegt als Gedanke 13. Lies weiter oder rufe done auf.
+      - round: 21
+        tool: record_thought
+        title: Zweckmäßigkeit statt Wahrheit
+        core: "Die begrifflichen Erwägungen, die zum Anfang hinführen, haben keinen
+          Erkenntniswert, sondern nur Zweckmäßigkeit: sie sind Wegweiser, keine Aussagen
+          über das Gegebene. Für sie gilt nicht Wahrheit oder Irrtum, sondern nur
+          Zweckmäßigkeit oder Unzweckmäßigkeit."
+        type: unterscheidung
+        paragraphs:
+          - 119
+        note: Abgelegt als Gedanke 14. Lies weiter oder rufe done auf.
+      - round: 21
+        tool: record_thought
+        title: Irrtum liegt im Erkenntnisakt
+        core: "Irrtum kann erkenntnistheoretisch nur innerhalb des Erkenntnisaktes liegen. Die
+          Sinnestäuschung ist kein Irrtum: dass der Mond am Horizont größer erscheint,
+          ist eine naturgesetzlich begründete Tatsache; Irrtum entsteht erst in der
+          denkenden Deutung."
+        type: umkehrung
+        paragraphs:
+          - 120
+          - 121
+        note: Abgelegt als Gedanke 15. Lies weiter oder rufe done auf.
+      - round: 22
+        tool: read
+        from: 122
+        count: 12
+        note: Absätze 122–132 von 174.
+      - round: 23
+        tool: record_thought
+        title: Vom Erkennen aus das Bewusstsein
+        core: Nicht vom Bewusstsein aus soll das Erkennen bestimmt werden, sondern vom Erkennen
+          aus das Bewusstsein und das Verhältnis von Subjektivität und Objektivität.
+          Bewusstsein und „Ich"-Vorstellung sind zunächst nur Teile des Gegebenen.
+        type: umkehrung
+        paragraphs:
+          - 126
+        note: Abgelegt als Gedanke 16. Lies weiter oder rufe done auf.
+      - round: 23
+        tool: record_thought
+        title: Die sich selbst aufhebende Forderung
+        core: "Die Forderung nach einem rein Gegebenen hebt sich teilweise selbst auf: es muss
+          sich beim strengen Festhalten am Bloß-Gegebenen zeigen, dass nicht alles ein
+          solches ist. Sonst bliebe nur Beschreiben von außen, nie Begreifen — die
+          Begriffe hätten keinen innerlichen Bezug."
+        type: umkehrung
+        paragraphs:
+          - 127
+          - 128
+          - 129
+        note: Abgelegt als Gedanke 17. Lies weiter oder rufe done auf.
+      - round: 24
+        tool: record_thought
+        title: Das Postulat des Ansatzpunktes
+        core: 'Der erste Schritt der Erkenntnistheorie ist ein Postulat, kein Urteil: der
+          Weltinhalt muss einen Punkt enthalten, an dem die Erkenntnistätigkeit nicht im
+          Leeren schwebt. Ein solcher „Machtspruch" behauptet nichts über das Gegebene,
+          er sagt nur, was gelten muss, wenn Erkennen erklärbar sein soll.'
+        type: begriff
+        paragraphs:
+          - 130
+          - 131
+        note: Abgelegt als Gedanke 18. Lies weiter oder rufe done auf.
+      - round: 25
+        tool: read
+        from: 133
+        count: 12
+        note: Absätze 133–136 von 174.
+      - round: 26
+        tool: record_thought
+        title: Intellektuelle Anschauung
+        core: Begriffe und Ideen sind das einzige, was uns unmittelbar als zugleich
+          hervorgebracht und gegeben bewusst ist — „intellektuelle Anschauung".
+          Sinnesqualitäten scheitern an der Forderung, weil ihr Hervorgebrachtsein nur
+          durch physikalisch-physiologische Schlüsse bekannt wird, nicht unmittelbar.
+        type: begriff
+        paragraphs:
+          - 133
+        evidence: '„nur bei Begriffen und Ideen tritt noch das Umgekehrte ein: wir müssen sie
+          hervorbringen, wenn wir sie erleben wollen."'
+        note: Abgelegt als Gedanke 19. Lies weiter oder rufe done auf.
+      - round: 26
+        tool: record_thought
+        title: Die Regel kann nicht aus dem Objekt kommen
+        core: 'Kants Satz „Begriffe ohne Anschauungen sind leer" macht die Bestimmung des
+          Gegebenen durch Begriffe undenkbar: die Regel, nach der a und b verknüpft
+          werden, kann nicht aus den Objekten genommen werden, weil deren Bestimmungen
+          erst durch die Regel gewonnen werden sollen. Sie geht ganz in der rein
+          begrifflichen Entität auf.'
+        type: umkehrung
+        paragraphs:
+          - 133
+        note: Abgelegt als Gedanke 20. Lies weiter oder rufe done auf.
+      - round: 27
+        tool: record_thought
+        title: Zerreißung und Wiederherstellung
+        core: "Die Aussonderung des Begrifflichen aus dem Weltbild ist eine künstliche
+          Zerreißung der Einheit, die nur zum Zweck des Begreifens geschieht. Der
+          nächste Schritt ist die Wiederherstellung dieser Einheit im Denken über die
+          gegebene Welt: der Erkenntnisakt ist die Synthese von Gegebenem und im Akt
+          Produziertem."
+        type: verbindung
+        paragraphs:
+          - 136
+          - 135
+        note: Abgelegt als Gedanke 21. Lies weiter oder rufe done auf.
+      - round: 27
+        tool: record_thought
+        title: Das Ich als bloße Redewendung
+        core: 'Das „Ich" darf im Gang der Untersuchung nicht als stillschweigende Voraussetzung
+          mitlaufen; Sätze wie „wir bringen Begriffe hervor" sind vorerst nur
+          stilistische Wendungen. Feststeht nur: ein Gegebenes liegt vor, aus einem
+          Punkt desselben entspringt das Postulat, und Begriffe und Ideen entsprechen
+          ihm.'
+        type: unterscheidung
+        paragraphs:
+          - 134
+        note: Abgelegt als Gedanke 22. Lies weiter oder rufe done auf.
+      - round: 28
+        tool: read
+        from: 137
+        count: 12
+        note: Absätze 137–143 von 174.
+      - round: 29
+        tool: record_thought
+        title: Logik als Beschreibung
+        core: Das Denken ist ein Tun, das seinen Inhalt im Moment des Erkennens selbst
+          hervorbringt; soweit der Inhalt aus dem Denken allein fließt, ist er
+          unmittelbar gegeben und bedarf keines Beweises. Logik ist daher Beschreibung
+          der Denkformen, nicht beweisende Wissenschaft — beim Denken hört alles
+          Beweisen auf.
+        type: begriff
+        paragraphs:
+          - 137
+        note: Abgelegt als Gedanke 23. Lies weiter oder rufe done auf.
+      - round: 29
+        tool: record_thought
+        title: Denken als formendes, nicht bestimmendes Prinzip
+        core: "Das Denken bestimmt nichts von sich aus über die Weltinhalte: es hebt
+          Einzelheiten heraus, stellt Bezüge her und wartet ab, was sich daraus von
+          selbst ergibt. Der Inhalt des Naturgesetzes resultiert aus dem Gegebenen; dem
+          Denken kommt nur die formale Leistung zu, die Gelegenheit herbeizuführen."
+        type: unterscheidung
+        paragraphs:
+          - 137
+          - 139
+          - 140
+        note: Abgelegt als Gedanke 24. Lies weiter oder rufe done auf.
+      - round: 30
+        tool: record_thought
+        title: Apriori als Postulat, nicht Erkenntnis
+        core: 'Kants „synthetische Einheit der Apperzeption" verfehlt die Aufgabe des Denkens:
+          die Synthesis bereitet die Gewinnung der Naturgesetze nur vor, sie liefert
+          keine objektiven Gesetze a priori. Kants Urteile a priori sind eigentlich
+          Postulate — Vorschriften des Subjekts an die Objekte, nicht Erkenntnisse aus
+          der Objektivität.'
+        type: umkehrung
+        paragraphs:
+          - 139
+          - 142
+          - 143
+        evidence: „Die Kantschen Urteile a priori sind im Grunde gar keine Erkenntnisse, sondern
+          nur Postulate."
+        note: Abgelegt als Gedanke 25. Lies weiter oder rufe done auf.
+      - round: 30
+        tool: record_thought
+        title: Kausalität aus inhaltlicher Bedeutung, nicht Gewohnheit
+        core: "Hume leitet Ursache und Wirkung aus der Gewohnheit zeitlicher Folge ab; dagegen:
+          der Kausalzusammenhang wird nicht nach der zeitlichen Folge, sondern nach der
+          inhaltlichen Bedeutung der als Ursache und Wirkung bezeichneten Teile
+          bestimmt. Tägliches Zusammentreffen am Haustor erzeugt keine Kausalität."
+        type: unterscheidung
+        paragraphs:
+          - 141
+        note: Abgelegt als Gedanke 26. Lies weiter oder rufe done auf.
+      - round: 31
+        tool: read
+        from: 144
+        count: 12
+        note: Absätze 144–148 von 174.
+      - round: 32
+        tool: record_thought
+        title: Trennung im Akt, Verbindung im Gegebenen
+        core: Die Trennung von Gegebenem und Begriff besteht lediglich im Erkenntnisakt, die
+          Verbindung liegt im Gegebenen selbst. Der begriffliche Inhalt ist also nur ein
+          Teil des Gegebenen; der Erkenntnisakt vereinigt, was für ihn zunächst getrennt
+          gegeben ist.
+        type: unterscheidung
+        paragraphs:
+          - 147
+        note: Abgelegt als Gedanke 27. Lies weiter oder rufe done auf.
+      - round: 32
+        tool: record_thought
+        title: Erkennen als Enthüllung der zweiten Seite
+        core: "Erkennen ist nur möglich, wenn der Weltinhalt ursprünglich unvollständig gegeben
+          ist: wäre der Gedankeninhalt von vornherein vereinigt, gäbe es kein Bedürfnis
+          hinauszugehen; würden wir alles selbst erzeugen, gäbe es nichts zu erkennen.
+          Wirklichkeit kann erst die durch Erkenntnis gewonnene Gestalt genannt werden,
+          in der beide Seiten vereinigt sind."
+        type: verbindung
+        paragraphs:
+          - 146
+          - 148
+        note: Abgelegt als Gedanke 28. Lies weiter oder rufe done auf.
+      - round: 33
+        tool: read
+        from: 149
+        count: 12
+        note: Absätze 149–149 von 174.
+      - round: 34
+        tool: record_thought
+        title: "Bewusstsein: Verbindung als Tat"
+        core: Beim menschlichen Bewusstsein ist die Verbindung von Idee und Gegebenem das
+          Abgeleitete, die Trennung das Erste; bei allen anderen Objekten ist die
+          Verbindung das Ursprüngliche und die Trennung nur eine künstliche, für die
+          Erkenntnis gemachte. Deshalb spaltet sich für das Bewusstsein die Wirklichkeit
+          in zwei Teile, und es gelangt nur durch eigene Tätigkeit zur vollen
+          Wirklichkeit.
+        type: unterscheidung
+        paragraphs:
+          - 149
+        note: Abgelegt als Gedanke 29. Lies weiter oder rufe done auf.
+      - round: 34
+        tool: record_thought
+        title: Fichtes dunkles Gefühl
+        core: Fichtes „Handlungsart der Intelligenz" ist, in klare Begriffe gefasst, die im
+          Bewusstsein sich vollziehende Verwirklichung der Idee des Erkennens. Fichte
+          fühlte dies lebhaft, konnte es aber nicht begrifflich fassen — darin liegt der
+          Grundfehler seiner Wissenschaftslehre.
+        type: ausdruck
+        paragraphs:
+          - 149
+        note: Abgelegt als Gedanke 30. Lies weiter oder rufe done auf.
+      - round: 35
+        tool: read
+        from: 150
+        count: 12
+        note: Absätze 150–151 von 174.
+      - round: 36
+        tool: record_thought
+        title: Fichtes Tathandlung ohne Inhalt
+        core: "Fichtes Ich vollzieht eine absolute Tathandlung, aber es fehlt der Inhalt des
+          Tuns: weil er den Begriff der Erkenntnis nicht aufstellte, findet er keinen
+          Fortgang von der Tathandlung zu weiteren Bestimmungen und verweist auf den
+          praktischen Teil. Damit vernichtet er das Erkennen — es kommt nicht auf das
+          freie, sondern auf das erkennende Ich an."
+        type: unterscheidung
+        paragraphs:
+          - 150
+        note: Abgelegt als Gedanke 31. Lies weiter oder rufe done auf.
+      - round: 36
+        tool: record_thought
+        title: Setzen statt Feststellen
+        core: 'Fichtes Ableitung vom Satz a = a zum absoluten „Ich bin" ist eine pädagogische
+          Hinführung, keine Erkenntnis: das Setzen wird für absolut erklärt, weil das
+          Gesetzte bedingt ist. Das Ich gehört aber der Wirklichkeit an, und da ist das
+          Vorhandensein dieser oder jener Kategorie im Gegebenen festzustellen.'
+        type: umkehrung
+        paragraphs:
+          - 151
+          - 150
+        note: Abgelegt als Gedanke 32. Lies weiter oder rufe done auf.
+      - round: 37
+        tool: read
+        from: 152
+        count: 12
+        note: Absätze 152–154 von 174.
+      - round: 38
+        tool: record_thought
+        title: Der Sprung im absoluten Setzen
+        core: 'In Fichtes Ableitung steckt ein Sprung: absolut ist nur das Setzen als Tätigkeit,
+          aber gesetzt werden kann nur ein bestimmter Inhalt, der nicht aus dem Ich
+          stammt. Ohne ein Gegebenes, das es setzt, kann das Ich „nichts", also nicht
+          setzen. Der wahre Ausgangspunkt wäre: Das Ich setzt das Erkennen.'
+        type: umkehrung
+        paragraphs:
+          - 152
+        note: Abgelegt als Gedanke 33. Lies weiter oder rufe done auf.
+      - round: 38
+        tool: record_thought
+        title: Weltbild als Konstruktion des Ich
+        core: Die Selbstbeobachtung zeigt das Ich allseitig, aber ohne die Einsicht, dass es mit
+          seinen Denkformen an das Gegebene herantreten muss, erscheint der
+          Erkenntnisprozess als Herausspinnen der Welt aus dem Ich. Fichtes „neuer Sinn"
+          für die Vordersätze des Seins ist Ausdruck dieses Konstruktionscharakters.
+        type: ausdruck
+        paragraphs:
+          - 153
+          - 154
+        note: Abgelegt als Gedanke 34. Lies weiter oder rufe done auf.
+      - round: 39
+        tool: read
+        from: 155
+        count: 12
+        note: Absätze 155–161 von 174.
+      - round: 40
+        tool: record_thought
+        title: Idealismus oder Dogmatismus als Wahl
+        core: "Fichtes Wahl zwischen Idealismus und Dogmatismus bleibt dem Belieben des Ich
+          überlassen — sie wäre erst möglich, wenn das Ich etwas durch und durch
+          Inhaltsvolles findet: die Welt des Denkens. Das Gegebene durch das Denken
+          bestimmen heißt Erkennen; damit gewinnt Fichtes leere Ich-Tätigkeit erst Hand
+          und Fuß."
+        type: verbindung
+        paragraphs:
+          - 155
+          - 156
+        note: Abgelegt als Gedanke 35. Lies weiter oder rufe done auf.
+      - round: 40
+        tool: record_thought
+        title: Keine Farbe aus dem Ich
+        core: 'Kein Idealismus kann die Form des unmittelbar Gegebenen aus dem Ich ableiten:
+          selbst bei vollständiger Farbenskala ließe sich keine einzige Nuance aus dem
+          Ich ergänzen. Das Gegebene kann nur gegeben, nie konstruiert werden — das
+          „Was" des Gegebenen wird durch das Ich gesetzt, aber nicht ohne dasselbe.'
+        type: umkehrung
+        paragraphs:
+          - 158
+        note: Abgelegt als Gedanke 36. Lies weiter oder rufe done auf.
+      - round: 41
+        tool: record_thought
+        title: Die erste Gestalt ist die subjektive
+        core: Nicht die wissenschaftliche Theorie der Welt ist das Subjektive, sondern die
+          zuerst gegebene Gestalt. Die Wissenschaft ergänzt das in subjektiver Form als
+          Erfahrung auftretende Weltbild zu dem, was es wesentlich ist — die letzte
+          Gestalt ist die wahre, nicht die erste.
+        type: umkehrung
+        paragraphs:
+          - 159
+          - 160
+        evidence: „Also nicht die Gestalt der Welt, welche die Theorie derselben gibt, ist die
+          subjektive, sondern vielmehr jene, welche dem Ich zuerst gegeben ist."
+        note: Abgelegt als Gedanke 37. Lies weiter oder rufe done auf.
+      - round: 41
+        tool: record_thought
+        title: Aufhebung des „für das Ich"
+        core: 'Der Einwand, die Wesensbestimmung sei nur „für das Ich", verliert seinen Sinn:
+          die Spaltung von Ich und Außenwelt besteht nur innerhalb des Gegebenen, und in
+          der denkenden Betrachtung, die alle Gegensätze vereinigt, geht das abgetrennte
+          Ich völlig unter.'
+        type: umkehrung
+        paragraphs:
+          - 161
+        note: Abgelegt als Gedanke 38. Lies weiter oder rufe done auf.
+      - round: 42
+        tool: read
+        from: 162
+        count: 12
+        note: Absätze 162–172 von 174.
+      - round: 43
+        tool: record_thought
+        title: Überwindung der Einseitigkeiten
+        core: "Die Erkenntnistheorie überwindet die einseitigen Standpunkte: Dogmatismus (Ding
+          an sich), subjektiver Idealismus (Ich), Skeptizismus (Zweifel an der
+          Erkennbarkeit), Empirismus und Rationalismus. Ding an sich und Ich werden
+          nicht auseinander abgeleitet, sondern beide vom Denken aus nach Charakter und
+          Verhältnis bestimmt."
+        type: verbindung
+        paragraphs:
+          - 162
+        note: Abgelegt als Gedanke 39. Lies weiter oder rufe done auf.
+      - round: 43
+        tool: record_thought
+        title: Selbstwiderlegung des Skeptikers
+        core: Der Skeptiker, der durch Denken die Unerkennbarkeit der Dinge beweist, gibt
+          implizit zu, dass dem Denken hinreichende Kraft zukommt, eine Überzeugung zu
+          stützen — er widerlegt sich selbst.
+        type: umkehrung
+        paragraphs:
+          - 162
+        note: Abgelegt als Gedanke 40. Lies weiter oder rufe done auf.
+      - round: 44
+        tool: record_thought
+        title: Der Weltengrund erscheint nur im Wissen
+        core: "Der Weltengrund kommt nie in der objektiven Realität als solcher zum Dasein,
+          sondern nur im Wissen: es gehört zum Beruf des Menschen, die sonst alles
+          beherrschenden, aber nie erscheinenden Grundgesetze in die erscheinende
+          Wirklichkeit zu versetzen. Erkennen ist ein stetiges Hineinleben in den
+          Weltengrund."
+        type: begriff
+        paragraphs:
+          - 166
+          - 167
+        note: Abgelegt als Gedanke 41. Lies weiter oder rufe done auf.
+      - round: 44
+        tool: record_thought
+        title: Erkennen als Entwicklungsprozess zur Freiheit
+        core: "Die Gesetze des Handelns erkennen heißt, sich seiner Freiheit bewusst sein:
+          solange die Gesetzmäßigkeit außerhalb des Verwirklichers steht, herrscht sie
+          über uns; ist sie in das ureigene Tun verwandelt, herrscht sie in uns. Der
+          Erkenntnisprozess ist der Entwicklungsprozess zur Freiheit."
+        type: verbindung
+        paragraphs:
+          - 172
+          - 169
+          - 170
+          - 171
+        evidence: „Die Gesetze seines Handelns erkennen heißt, sich seiner Freiheit bewusst
+          sein."
+        note: Abgelegt als Gedanke 42. Lies weiter oder rufe done auf.
+      - round: 45
+        tool: read
+        from: 173
+        count: 2
+        note: Absätze 173–174 von 174.
+      - round: 46
+        tool: record_thought
+        title: Sittlichkeit als durchdrungene Gesetzmäßigkeit
+        core: "Nur wo wir die Gesetze unseres Handelns als Wissen besitzen, ist das Handeln
+          sittlich und frei; die Verwandlung des unfreien in das freie Gebiet ist die
+          Aufgabe jeder individuellen Entwicklung wie der ganzen Menschheit. Das
+          wichtigste Problem allen Denkens: den Menschen als auf sich selbst gegründete,
+          freie Persönlichkeit zu begreifen."
+        type: begriff
+        paragraphs:
+          - 173
+          - 174
+          - 6
+          - 7
+        note: Abgelegt als Gedanke 43. Lies weiter oder rufe done auf.
+      - round: 47
+        tool: done
+        note: Lesen beendet.
+window_merges:
+  - source_id: Rudolf_Steiner_Wahrheit_und_Wissenschaft_3
+    segment_id: Rudolf_Steiner_Wahrheit_und_Wissenschaft_3
+    notes: 44 → 44
+topic_merge:
+  groups:
+    - - 1
+      - 2
+    - - 3
+      - 38
+    - - 5
+      - 9
+    - - 6
+      - 7
+    - - 10
+      - 41
+    - - 13
+      - 29
+    - - 17
+      - 22
+    - - 23
+      - 28
+      - 29
+    - - 21
+      - 26
+    - - 31
+      - 35
+    - - 33
+      - 34
+    - - 36
+      - 40
+    - - 42
+      - 43

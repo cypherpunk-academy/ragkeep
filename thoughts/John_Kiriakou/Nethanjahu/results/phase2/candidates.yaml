@@ -1,0 +1,165 @@
+candidates:
+  - id: fabdf92f-8e3f-5488-97e3-a48599ecbd2b
+    title: Netanjahu muss nicht gewinnen, nur verhindern, dass ein anderer gewinnt
+    core: Weil in Israel der Amtsinhaber bis zur Bildung einer neuen Regierung mit
+      61 Sitzen geschäftsführend im Amt bleibt, genügt es Netanjahu, eine
+      Mehrheit ohne ihn zu blockieren – Wahlniederlage und Machtverlust fallen
+      damit auseinander.
+    type: unterscheidung
+    source_id: uJD1ncf989k
+    segment_id: uJD1ncf989k
+    paragraphs: 9,11,16,18-19,21-22,28
+    evidence: "\"It's something between changing nothing and changing not very
+      much.\" / \"he doesn't have to win. He just has to make sure that nobody
+      else wins.\""
+    interwoven_with: []
+    occurrences: []
+  - id: 12c2cd69-57e4-549f-b892-c6576cb1d4e5
+    title: Die Araber als Mehrheitsbeschaffer, die niemand zum Partner machen will
+    core: Die arabischen Parteien sind als Mehrheitsbeschaffer unverzichtbar
+      geworden, zugleich aber durch die Weigerung beider großen Blöcke, mit
+      ihnen zu regieren, politisch blockiert – ihre Stimmen zählen und zählen
+      doch nicht.
+    type: unterscheidung
+    source_id: uJD1ncf989k
+    segment_id: uJD1ncf989k
+    paragraphs: 14,16-18,23-25
+    evidence: "\"The only coalition that's going to be able to govern has to include
+      the Arab parties.\" / \"it's just about a non-starter because Eisencott
+      and his allies have campaigned on a promise not to partner wi"
+    interwoven_with: []
+    occurrences: []
+  - id: 4f38edc9-e671-5da1-b55d-90792820b9cd
+    title: Die Übergangszeit als Regierungsinstrument
+    core: "Die geschäftsführende Regierungszeit ist keine Pause, sondern eine
+      handlungsfähige Phase: Netanjahu kann Angriffe und Siedlungsbau fortsetzen
+      und sogar Militärschläge als Mittel zur Wahlbeeinflussung einsetzen,
+      während alle auf die Regierungsbildung warten."
+    type: umkehrung
+    source_id: uJD1ncf989k
+    segment_id: uJD1ncf989k
+    paragraphs: 19,28
+    evidence: "\"Leading a minority government, but it still allows him to bomb
+      Gaza... the whole time. Nothing's going to change.\" / \"he now has weeks
+      and weeks to keep trying that same move.\""
+    interwoven_with: []
+    occurrences: []
+  - id: a3a4258e-200f-560c-ad94-ad78380711b2
+    title: "Die falschen Prognosen hatten eine gemeinsame Ursache: die übersehene
+      Beteiligun"
+    core: Der Wahlausgang in Brasilien wurde nicht durch Meinungsumfragen,
+      Prognosemärkte oder Korrespondenten falsch vorhergesagt, sondern durch die
+      unterschätzte Stimmbeteiligung der Ärmsten in den Favelas entschieden –
+      die Fehlerquelle liegt in der Erwartungsbildung, nicht im Ergebnis.
+    type: verbindung
+    source_id: uJD1ncf989k
+    segment_id: uJD1ncf989k
+    paragraphs: 29,36
+    evidence: '"Everybody got this wrong, and it appears that they got it wrong
+      because they underestimated the turnout among the poorest voters in the
+      favelas"'
+    interwoven_with: []
+    occurrences: []
+  - id: a64377a4-4109-5f3a-86ea-c824ec06f606
+    title: Exil entwertet Oppositionsführung
+    core: Wer als Oppositionsführer ins Ausland flieht, verliert die Führungsrolle,
+      weil Anhänger darin Flucht statt Kampf sehen – die politische Familie ist
+      damit erledigt, unabhängig von juristischen Verfahren.
+    type: umkehrung
+    source_id: uJD1ncf989k
+    segment_id: uJD1ncf989k
+    paragraphs: 31,37
+    evidence: "\"a lot of people are wondering whether Flavio Bolsonaro can continue
+      to run the Brazilian opposition from Miami. Of course not... I think the
+      Bolsonaro's as a political family are probably done.\""
+    interwoven_with: []
+    occurrences: []
+  - id: 24de2f42-19ed-5dc8-a02d-c90f5ef95690
+    title: Die Wahlkampfroute als Geständnis
+    core: "Die Route einer Wahlkampftournee lässt sich als Eingeständnis lesen: Wer
+      die letzten Tage in tiefroten Staaten veranstaltet und den einzigen
+      umkämpften Staat dem Vizepräsidenten überlässt, mobilisiert seine Basis
+      statt um Stimmen zu werben – die Route selbst ist das Eingeständnis."
+    type: ausdruck
+    source_id: uJD1ncf989k
+    segment_id: uJD1ncf989k
+    paragraphs: 41,43,49
+    evidence: "\"Every single stop but one is in a deep red state... And President
+      Trump isn't even going to Michigan. Not at all.\""
+    interwoven_with: []
+    occurrences: []
+  - id: ce7b05c3-1bab-5035-b45c-a0bc1f80dc22
+    title: Frühwählerzahlen gegen Registrierungsverhältnis lesen
+    core: "Frühwahlzahlen sind dann aussagekräftig, wenn man sie gegen die
+      Parteiregistrierung liest: In Florida stimmen Demokraten trotz eines
+      Rückstands von einer Million registrierter Wähler überproportional ab, was
+      die strukturelle Unterlegenheit zeitweise umkehrt."
+    type: verbindung
+    source_id: uJD1ncf989k
+    segment_id: uJD1ncf989k
+    paragraphs: 44-48
+    evidence: '"Florida has 4 million registered Democrats and more than 5 million
+      registered Republicans. Republicans have an enormous advantage, and yet
+      among the people who have already voted, Democrats are showi'
+    interwoven_with: []
+    occurrences: []
+  - id: db21d269-5b43-5335-86f9-3016e956e915
+    title: Anonyme Quellen als Telefonspiel
+    core: "Anonyme Quellen sind kein Beweis, sondern ein Telefonspiel: Eine
+      Behauptung über Konten und Zeichnungsbefugnisse wird erst durch Dokumente
+      überprüfbar, und die wiederholte Preisgabe eigener Quellen durch denselben
+      Journalisten entwertet dessen anonyme Gewährsleute zusätzlich."
+    type: unterscheidung
+    source_id: uJD1ncf989k
+    segment_id: uJD1ncf989k
+    paragraphs: 55,62-64
+    evidence: "\"I know the difference between an allegation, a piece of
+      intelligence and something you can actually prove... Show us something...
+      that's not journalism. That's a game of telephone.\""
+    interwoven_with: []
+    occurrences: []
+  - id: d0d81294-b8cf-5a55-a4b7-8b9522794ea7
+    title: Der UN-Saal ist nicht die USA
+    core: Die Berufung auf amerikanisches Territorium im UN-Saal ist sachlich
+      falsch, weil das UN-Hauptquartier internationales Gebiet ist – wer dort
+      den nationalen Anspruch durchsetzt, verwechselt Souveränität mit
+      Hausrecht.
+    type: unterscheidung
+    source_id: uJD1ncf989k
+    segment_id: uJD1ncf989k
+    paragraphs: 70-72,76
+    evidence: "\"Mike Waltz said repeatedly, this is the United States. No,
+      actually, it's not. The United Nations is not the United States. It's
+      international territory.\""
+    interwoven_with: []
+    occurrences: []
+  - id: 60e5e495-5ee8-52d0-871b-9c697264794e
+    title: Verschwundene Berichterstattung, fortgesetzter Krieg
+    core: "Ein Konflikt, der aus den Schlagzeilen verschwindet, besteht weiter: Die
+      Berichterstattung folgt der Aufmerksamkeitslage, die Angriffe folgen ihr
+      nicht, weshalb ungefilterte Drohnenaufnahmen einen sonst verdeckten Krieg
+      sichtbar machen."
+    type: unterscheidung
+    source_id: uJD1ncf989k
+    segment_id: uJD1ncf989k
+    paragraphs: 78-79
+    evidence: '"the coverage may have stopped on the Saudi-Houthi conflict... But
+      the strikes, the Houthi strikes against Saudi Arabia have not stopped."'
+    interwoven_with: []
+    occurrences: []
+  - id: a4423585-f4c8-51b1-babd-ada912644737
+    title: Zahlung statt Verteidigung als rationale Konfliktlösung
+    core: "Schutzgeld ist eine funktionierende Konfliktlösung: Wenn ein
+      zahlungswilliger Staat Angriffe billiger mit Geld als mit Verteidigung
+      beendet und der Angreifer das Geld in Entwicklung stecken kann, ist die
+      Zahlung für beide Seiten rational – wie der Präzedenzfall der Emirate
+      zeigt."
+    type: umkehrung
+    source_id: uJD1ncf989k
+    segment_id: uJD1ncf989k
+    paragraphs: 81-82
+    evidence: "\"if you've got the money... just give them the money. And if I were
+      the Houthis, I'd say take the money and use it to try to develop your
+      country.\" / \"the Emiratis gave the Iranians as much as three b"
+    interwoven_with: []
+    occurrences: []

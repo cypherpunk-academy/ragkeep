@@ -1,0 +1,208 @@
+phase3:
+  source_id: Julian_Assange_Cypherpunks
+  gattung: dialog
+  leitgedanke:
+    rationale: Das Netz ist kein natürlicher Freiheitsraum.
+    text: Das Internet ist kein von selbst freier Raum, sondern ein durch Infrastruktur,
+      Überwachung, Kapital und Recht beherrschter Machtapparat; wer Freiheit will, muss
+      Kryptografie, offene Technik und Transparenz gegenüber den Mächtigen aktiv
+      durchsetzen.
+  kernaussagen:
+    - id: K1
+      rationale: c253 zeigt, dass das scheinbar körperlose Netz auf physischen,
+        kontrollierbaren Ressourcen ruht; 410b und 91cb führen die Tendenz zur
+        Zentralisierung von Kontrolle und zur Einbettung in hierarchische Industrie vor;
+        21cc beschreibt die Militarisierung des Zivillebens.
+      text: "Das Internet ist kein körperloser Freiheitsraum: Es ruht auf kontrollierbarer
+        physischer Infrastruktur, ist militärisch durchdrungen und wird durch Eigentums-
+        und Technikverhältnisse eher zur Zentralisierung von Herrschaft als zu deren
+        Abbau genutzt."
+      paragraphs: Abs. 4-7, 30-35
+      candidates:
+        - c253b639-d56a-5cb5-ab58-a796f62b5547
+        - 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+        - 91cb5ac7-9874-5136-aa93-ee421ce62dce
+        - 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+      sprecher:
+        - ANDY
+        - JULIAN
+      strittig: false
+    - id: K2
+      rationale: 259c beschreibt den Übergang von gezieltem Abfangen zu unterschiedsloser
+        Speicherung; 014d zeigt das schnellere Wachstum der Überwachungskapazität; 0de6
+        verbindet fehlende Technikbeherrschung mit Selbstzensur; 2eba macht den
+        Gegensatz von staatlicher und technischer Sicherheit deutlich.
+      text: Überwachung ist von gezielter Verfolgung zu unterschiedsloser Speicherung
+        übergegangen; sie wächst schneller als die Bevölkerung, erzeugt Selbstzensur und
+        kollidiert unversöhnlich mit technischer Sicherheit, weil der Staat Sicherheit
+        als eigene Einsichtsfähigkeit begreift.
+      paragraphs: Abs. 39-40, 47, 62, 121
+      candidates:
+        - 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+        - 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+        - 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+        - 2ebac5c5-bde9-5252-838e-c785d4c3277a
+      sprecher:
+        - JULIAN
+        - JACOB
+        - ANDY
+      strittig: false
+    - id: K3
+      rationale: 38e begründet die Verschlüsselung als physikalisch verbürgte Grenze gegen
+        staatlichen Zugriff; 1e18 zeigt, dass Rückzug aus dem Netz Entmachtung bedeutet;
+        ac722 erklärt, wie industrieller Eigennutz die Verbreitung von Kryptografie
+        stützt.
+      text: Weil Verschlüsselung durch physikalische Rechenkosten staatlichen Zugriff
+        begrenzt, lässt sich ein geschützter Rechtsraum aufbauen; dieser Schutz muss
+        durch Beherrschung der Technik und industriellen Eigennutz verbreitet werden,
+        nicht durch Rückzug aus dem Netz.
+      paragraphs: Abs. 8, 10-11, 61
+      candidates:
+        - 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+        - 1e18fefc-f3f9-5818-8155-665975cb73f4
+        - ac722224-3972-5aa7-b981-aba7bdb8bf9b
+      sprecher:
+        - JACOB
+      strittig: false
+    - id: K4
+      rationale: 446f zeigt den Überwachungsverbund von Geheimdiensten und Konzernen; 07d9
+        beschreibt die verkehrten Exportkontrollen; 4feb legt dar, wie die Dritt-Doktrin
+        im Netz den Schutzbegriff aufhebt; c8d2 und bcb7 ergänzen die Verschmelzung
+        nationaler Eliten und die asymmetrische Geheimhaltung zugunsten der Mächtigen.
+      text: Im Überwachungsverbund verschwimmen Staat und Privatwirtschaft; Geheimdienste
+        greifen auf Konzerndaten zu, Exportkontrollen verbieten Schutz und erlauben
+        Überwachung, die Dritt-Doktrin entzieht im Netz jeden Schutz, und asymmetrische
+        Geheimhaltung schützt die Mächtigen statt der Bürger.
+      paragraphs: Abs. 36, 47, 53, 55, 77-78, 140
+      candidates:
+        - 446f65a8-087c-5e6a-9365-20c670473e08
+        - 07d94971-f50d-5329-8c45-2837fe4aa26b
+        - 4feb2234-c04c-503c-a8a2-1ae068560986
+        - c8d26fcf-5029-5720-b171-0d2fc6812e5b
+        - bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+      sprecher:
+        - JEREMIE
+        - ANDY
+        - JULIAN
+      strittig: false
+    - id: K5
+      rationale: 0b895 verbindet Staatlichkeit mit den Infrastrukturen von Streitkräften,
+        Kommunikation und Finanzen; 21c0 zeigt die Bankenblockade als staatlich erzeugte
+        Marktmacht; a3a3, 62ff und babe führen die Bedeutung von Vertraulichkeit und
+        dezentralem Vertrauen vor; 3597 und 4b8 ergänzen Zentralisierung und käufliche
+        Privatheit.
+      text: Die entscheidenden Machthebel sind die Infrastrukturen von Kommunikation und
+        Finanzen; wer Zahlungsströme oder Informationsdienste kontrolliert, bestimmt
+        über die Freiheiten der Bewegung, des Denkens und Wirtschaftens, sodass
+        wirtschaftliche Vertraulichkeit und dezentrale Vertrauensmechanismen zentral
+        sind.
+      paragraphs: Abs. 85-88, 101, 106-109
+      candidates:
+        - 0b895879-ea76-5ad8-a988-c81578e48680
+        - 3597b61e-3036-5c85-a1a4-cdda12f7d540
+        - 21c01f78-59a8-5b05-9137-ec7443e72239
+        - a3a35365-d663-565d-b501-1b5c8151f709
+        - babe4d40-4c53-509c-a0d4-eb3593a19501
+        - 4b8eb472-332c-5c19-8634-32a248bc8d86
+        - 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+      sprecher:
+        - JULIAN
+      strittig: false
+    - id: K6
+      rationale: 917 verbindet Zensur untrennbar mit Überwachung und Selbstzensur; ee26
+        beschreibt die spurlose westliche Löschung; 1386 fordert die Sichtbarkeit von
+        Unrecht als Bedingung seiner Bekämpfung; 8c41 verlegt das Filtern in den Kopf
+        des Empfängers statt zum Staat.
+      text: Zensur ist von Überwachung nicht zu trennen; im Westen geschieht sie durch
+        spurloses Entfernen aus Archiven, erzeugt Selbstzensur und nimmt der
+        Öffentlichkeit das Wissen über Unrecht, weshalb Sichtbarkeit erhalten bleiben
+        und Filterung beim Empfänger statt beim Staat ansetzen muss.
+      paragraphs: Abs. 122-124, 130-139
+      candidates:
+        - 91773957-e35f-58c6-84d4-0c5dfdc8328e
+        - ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+        - 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+        - 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+      sprecher:
+        - JEREMIE
+        - ANDY
+      strittig: false
+    - id: K7
+      rationale: 8c4 zeigt das Langzeitgedächtnis des Netzes gegen mediale Kurzfristigkeit;
+        bf96 beschreibt die Umgehung demokratischer Siege durch geheime Verträge; fbace
+        erklärt den Finanzangriff auf WikiLeaks; e698 und 53a2 betonen die Winzigkeit
+        der Veröffentlichung und die disziplinierende Erwartung späterer Rechenschaft.
+      text: "Öffentlichkeit und erwartete Enthüllung disziplinieren die Mächtigen: WikiLeaks
+        veröffentlicht nur einen winzigen Bruchteil, baut über Jahre Dossiers auf und
+        wird deshalb über Finanzströme angegriffen, während demokratische Erfolge durch
+        geheime bilaterale Verträge umgangen werden."
+      paragraphs: Abs. 73-74, 128, 140-141
+      candidates:
+        - 8c4e64b1-5779-5429-9247-6e05f149c1fb
+        - bf96f928-7bb1-58dc-880b-a3976929b2dc
+        - fbace36a-1697-5999-9cf2-49c0cfdc5fac
+        - e698c744-4bf4-5232-927e-92e6ca4c20a1
+        - 53a207b2-7f3f-52fc-9b87-dbb676849230
+      sprecher:
+        - JEREMIE
+        - ANDY
+        - JULIAN
+      strittig: false
+    - id: K8
+      rationale: 4818 warnt vor der einen Utopie und fordert Vielfalt; a83f und 9a71 erklären
+        Technik und Code als nicht neutral bzw. als Gesetz; b864 zeigt die neue
+        Schreibfähigkeit des Netzes; be565 und 61c8 führen die Ambivalenz der
+        Infrastruktur und den zentralen Kampf um ein offenes universelles Netz vor.
+      text: "Technik und Code sind nicht neutral: Code wirkt als Gesetz, freie und prüfbare
+        Software ist eine Verfassungsfrage, eine einzige verwirklichte Utopie wäre eine
+        Dystopie, und das Netz kann Emanzipation und neue Ausdrucksfähigkeit nur
+        fördern, wenn Systeme offen und vielfältig bleiben."
+      paragraphs: Abs. 27-28, 86, 129, 142, 145, 151
+      candidates:
+        - 4818261d-92b0-5acb-9aff-d9f229f51056
+        - b8641875-ac5d-558d-91bb-bbb197e2d860
+        - be565df5-4f0c-566d-8be4-c3928d4fe65e
+        - 61c88d95-a028-5258-82d9-a922d165f040
+        - a83f3eff-ac5b-5eb1-b077-7fbede26017c
+        - 9a71d242-23e5-5f55-a9b7-3fbd84307947
+      sprecher:
+        - JACOB
+        - JULIAN
+      strittig: false
+  faden:
+    - von: K1
+      nach: K2
+      uebergang: Nachdem der scheinbar körperlose Raum als kontrollierbare Infrastruktur
+        entlarvt ist, zeigt der Text, wie daraus unterschiedslose Überwachung und
+        Selbstzensur folgen.
+    - von: K2
+      nach: K3
+      uebergang: Aus dieser Bedrohung folgt die Gegenstrategie, Verschlüsselung als
+        physikalisch gesetzte Grenze aufzubauen, statt sich aus dem Netz zurückzuziehen.
+    - von: K3
+      nach: K4
+      uebergang: Doch dieser Schutz wird durch das Ineinandergreifen von Staat und Konzernen
+        sowie durch rechtliche Asymmetrien unterlaufen.
+    - von: K4
+      nach: K5
+      uebergang: Die Analyse weitet sich vom Datenzugriff auf die Kontrolle über
+        Kommunikations- und Finanzinfrastrukturen aus.
+    - von: K5
+      nach: K6
+      uebergang: Weil Kontrolle auch durch Zensur und Löschung wirkt, klärt der Text
+        anschließend, wie Zensur mit Überwachung verschmilzt und wie Sichtbarkeit
+        dagegen hilft.
+    - von: K6
+      nach: K7
+      uebergang: Aus dieser Zensuranalyse folgt die positive Rolle von Transparenz und
+        WikiLeaks als disziplinierende Öffentlichkeit.
+    - von: K7
+      nach: K8
+      uebergang: Die Wirksamkeit von Transparenz hängt schließlich an der Offenheit der
+        Technik selbst, weil Code als Gesetz wirkt und nicht neutral ist.
+  unzugeordnet:
+    - id: 9e8c6334-5de9-58ee-bcdf-9e7f208c5b69
+      grund: Formuliert ein allgemeines Kriterium für Lobbying bzw. Besitzstandsverteidigung,
+        das im Text nicht zu einer eigenständigen Kernaussage über Überwachung,
+        Kryptografie oder Öffentlichkeit ausgebaut wird.
+  pruefung: []

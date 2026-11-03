@@ -1,0 +1,1098 @@
+maps:
+  - source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    stop: done
+    steps:
+      - round: 1
+        tool: read
+        from: 1
+        count: 12
+        note: Absätze 1–7. Weiter bei 8. Letzter Absatz ist 159.
+      - round: 2
+        tool: read
+        from: 8
+        count: 12
+        note: Absätze 8–15. Weiter bei 16. Letzter Absatz ist 159.
+      - round: 3
+        tool: record_thought
+        title: Das Internet als platonisches Reich, das auf physischen Fundamenten ruht
+        core: Das Netz erscheint als körperloser Raum zirkulierender Ideen, ist aber auf Kabel,
+          Satelliten und Serverhallen gegründet; wer diese physische Basis kontrolliert,
+          beherrscht den scheinbar körperlosen Raum.
+        type: unterscheidung
+        paragraphs:
+          - 4
+          - 5
+          - 7
+        evidence: '"Das platonische Wesen des Internets mit seinen zirkulierenden Ideen und
+          Informationen wird durch seine physischen Ursprünge besudelt."'
+        note: Abgelegt als Gedanke 0. Lies weiter oder rufe done auf.
+      - round: 4
+        tool: read
+        from: 16
+        count: 12
+        note: Absätze 16–18. Weiter bei 19. Letzter Absatz ist 159.
+      - round: 5
+        tool: read
+        from: 19
+        count: 12
+        note: Absätze 19–22. Weiter bei 23. Letzter Absatz ist 159.
+      - round: 6
+        tool: read
+        from: 23
+        count: 12
+        note: Absätze 23–26. Weiter bei 27. Letzter Absatz ist 159.
+      - round: 7
+        tool: record_thought
+        title: Kryptografie als physikalisch verbürgte Grenze gegen staatlichen Zugriff
+        core: Weil das Universum das Verschlüsseln leichter macht als das Entschlüsseln, lässt
+          sich daraus ein Rechtsraum bauen, dessen Grenze nicht politisch gesetzt,
+          sondern durch Rechenaufwand verteidigt wird – der Staat kann in ihn nur
+          eindringen, wenn er unendliche Mittel aufwendet.
+        type: verbindung
+        paragraphs:
+          - 8
+          - 10
+          - 11
+        evidence: '"Das Universum nämlich ist ein Freund der Kryptografie. Es ist leichter,
+          Informationen zu verschlüsseln, als sie wieder zu entschlüsseln."'
+        note: Abgelegt als Gedanke 1. Lies weiter oder rufe done auf.
+      - round: 8
+        tool: record_thought
+        title: Verschlüsselung als gewaltloser Widerstand, der Gewalt an einer mathematischen
+          Schranke endet
+        core: Starke Verschlüsselung ist die stärkste Form gewaltlosen Widerstands, weil Zwang
+          prinzipiell kein mathematisches Problem lösen kann und damit unbegrenzte
+          Gewalt an einer Rechenaufgabe ihre Grenze findet.
+        type: umkehrung
+        paragraphs:
+          - 11
+          - 12
+        interwoven_with:
+          - 1
+        evidence: '"Starke Kryptografie vermag schrankenloser Gewalt standzuhalten, weil kein
+          Maß an Zwang je ein mathematisches Problem aus der Welt schaffen könnte."'
+        note: Abgelegt als Gedanke 2. Lies weiter oder rufe done auf.
+      - round: 9
+        tool: read
+        from: 27
+        count: 12
+        note: Absätze 27–30. Weiter bei 31. Letzter Absatz ist 159.
+      - round: 10
+        tool: record_thought
+        title: Die Geschwindigkeit der Konsensbildung als Waffe, die sich gegen ihre Urheber
+          wendet
+        core: Massenkommunikation erzeugt einen Vorsprung bei der Konsensbildung, der den Staat
+          überraschen kann; derselbe Vorsprung kehrt sich um, wenn die Bewegung
+          scheitert, weil dann die nämliche Infrastruktur zur Verfolgung aller
+          Initiatoren dient.
+        type: umkehrung
+        paragraphs:
+          - 27
+          - 28
+        evidence: '"falls man unterliegen sollte, wird eben jene Infrastruktur, die so schnell
+          die Bildung eines Konsenses erlaubte hatte, dazu benutzt werden, um sämtliche
+          Initiatoren aufzuspüren und auszuschalten."'
+        note: Abgelegt als Gedanke 3. Lies weiter oder rufe done auf.
+      - round: 11
+        tool: record_thought
+        title: Technik als systematisierte Interaktion und als Motor der Kontrollzentralisierung
+        core: Technik ist nicht das Gerät, sondern systematisierte Interaktion; wer über die
+          physischen Ressourcen einer Technik verfügt, zentralisiert Kontrolle, weshalb
+          Technikgeschichte eher Herrschaft verfestigt als demokratisiert.
+        type: begriff
+        paragraphs:
+          - 30
+        evidence: '"In diesem Sinn ist Technik systematisierte Interaktion. Feudalsysteme haben
+          sich zum Beispiel, wie es scheint, aus der Mühlentechnik entwickelt."'
+        note: Abgelegt als Gedanke 4. Lies weiter oder rufe done auf.
+      - round: 12
+        tool: read
+        from: 31
+        count: 12
+        note: Absätze 31–32. Weiter bei 33. Letzter Absatz ist 159.
+      - round: 13
+        tool: record_thought
+        title: Die netzinterne Freiheit als Gipfel der neoliberalen Ordnung
+        core: Die Freiheit des Netzes ruht auf der am strengsten hierarchisierten, staatlich
+          durchsetzten Industrie überhaupt; der High-Tech-Kommunikationsraum ist damit
+          der Gipfel und nicht der Gegner der neoliberalen Ordnung.
+        type: umkehrung
+        paragraphs:
+          - 31
+        interwoven_with:
+          - 0
+        evidence: '"Der High-Tech-Kommunikationsrevolution – und der Freiheit, die wir aus ihr
+          gewonnen haben – liegt also die ganze neoliberale, transnationale,
+          globalisierte moderne Marktwirtschaft zugrunde."'
+        note: Abgelegt als Gedanke 5. Lies weiter oder rufe done auf.
+      - round: 14
+        tool: read
+        from: 33
+        count: 12
+        note: Absätze 33–34. Weiter bei 35. Letzter Absatz ist 159.
+      - round: 15
+        tool: read
+        from: 35
+        count: 12
+        note: Absätze 35–36. Weiter bei 37. Letzter Absatz ist 159.
+      - round: 16
+        tool: record_thought
+        title: "Militarisierung des Zivillebens: der unsichtbare Panzer im Schlafzimmer"
+        core: Die private, familiäre Kommunikation ist in eine militärisch besetzte Zone
+          umgezogen, ohne dass die Besatzung sichtbar wäre; Zivilraum und Kriegsraum
+          sind damit nicht mehr getrennt, sondern dasselbe Netz.
+        type: ausdruck
+        paragraphs:
+          - 35
+        interwoven_with:
+          - 0
+        evidence: '"Es ist, als hätte man einen Panzer im Schlafzimmer. Beim Simsen steht ein
+          Soldat zwischen dir und deiner Frau."'
+        note: Abgelegt als Gedanke 6. Lies weiter oder rufe done auf.
+      - round: 17
+        tool: read
+        from: 37
+        count: 12
+        note: Absätze 37–42. Weiter bei 43. Letzter Absatz ist 159.
+      - round: 18
+        tool: record_thought
+        title: "Vom taktischen zum strategischen Abfangen: Verdacht wird durch Vorrat ersetzt"
+        core: Die Überwachung hat sich von der gezielten Verfolgung Verdächtiger zum
+          unterschiedslosen Abschöpfen und Aufbewahren aller Kommunikation verschoben,
+          weil man erst im Nachhinein sortiert – Verdacht wird damit durch
+          Speicherkapazität ersetzt.
+        type: unterscheidung
+        paragraphs:
+          - 39
+          - 40
+        evidence: '"Heutzutage hält man es für viel effizienter zu sagen: »Wir greifen alles ab,
+          sortieren können wir es später.«"'
+        note: Abgelegt als Gedanke 7. Lies weiter oder rufe done auf.
+      - round: 19
+        tool: read
+        from: 43
+        count: 12
+        note: Absätze 43–46. Weiter bei 47. Letzter Absatz ist 159.
+      - round: 20
+        tool: record_thought
+        title: "Physik oder Gesetz: warum nur der technische Schutz gegen strategische
+          Überwachung trägt"
+        core: Gegen Massenüberwachung gibt es zwei Schutzwege – physikalische Gesetze oder
+          menschliche Gesetze –, und beim strategischen Abschöpfen versagt der zweite
+          grundsätzlich, weil Komplexität und Geheimhaltung Aufsicht strukturell
+          ausschließen.
+        type: unterscheidung
+        paragraphs:
+          - 43
+        interwoven_with:
+          - 1
+          - 7
+        evidence: '"Man kann sich dagegen mit den Gesetzen der Physik oder mit den Gesetzen des
+          Menschen schützen."'
+        note: Abgelegt als Gedanke 8. Lies weiter oder rufe done auf.
+      - round: 21
+        tool: read
+        from: 47
+        count: 12
+        note: Absätze 47–48. Weiter bei 49. Letzter Absatz ist 159.
+      - round: 22
+        tool: record_thought
+        title: Überwachungskapazität wächst schneller als die Bevölkerung
+        core: Die Überwachungskapazität wächst alle achtzehn Monate, die Bevölkerung alle
+          fünfundzwanzig Jahre, sodass die Überwachungskurve die Bevölkerungsentwicklung
+          dauerhaft überholt und ein Aufholen durch bloßes Abwarten unmöglich wird.
+        type: verbindung
+        paragraphs:
+          - 47
+        interwoven_with:
+          - 7
+        evidence: '"die Überwachungskapazität aber verdoppelt sich alle 18 Monate. Die
+          Überwachungskurve dominiert die Bevölkerungskurve."'
+        note: Abgelegt als Gedanke 9. Lies weiter oder rufe done auf.
+      - round: 23
+        tool: record_thought
+        title: "Die Asymmetrie der Exportkontrollen: Schutz verboten, Überwachung erlaubt"
+        core: Waffenexportkontrolle verbietet gerade die Verschlüsselung, die den Bürger
+          schützt, während Überwachungsgeräte frei handelbar bleiben – weil auch
+          demokratische Staaten am Wissen aus fremder Überwachung interessiert sind.
+        type: umkehrung
+        paragraphs:
+          - 36
+          - 47
+        interwoven_with:
+          - 8
+        evidence: '"du darfst in diejenigen Länder ... keine Verschlüsselungstechnologie
+          exportieren, die vor Überwachungstechnologie schützt. Aber wenn du ein Händler
+          von Überwachungsausrüstung bist, dann darfst du die international verkaufen."'
+        note: Abgelegt als Gedanke 10. Lies weiter oder rufe done auf.
+      - round: 24
+        tool: read
+        from: 49
+        count: 12
+        note: Absätze 49–54. Weiter bei 55. Letzter Absatz ist 159.
+      - round: 25
+        tool: record_thought
+        title: Verwischung von Staat und Unternehmen im Überwachungsverbund
+        core: "Die Grenze zwischen Staat und Privatwirtschaft ist im Überwachungsgeschäft
+          eingeebnet: weil Geheimdienste auf die Datenbestände von Google und Facebook
+          zugreifen, werden diese Konzerne zu verlängerten Armen der Dienste."
+        type: verbindung
+        paragraphs:
+          - 53
+        interwoven_with:
+          - 7
+        evidence: '"Somit sind Facebook und Google in gewisser Weise die verlängerten Arme
+          dieser Geheimdienste."'
+        note: Abgelegt als Gedanke 11. Lies weiter oder rufe done auf.
+      - round: 26
+        tool: read
+        from: 55
+        count: 12
+        note: Absätze 55–56. Weiter bei 57. Letzter Absatz ist 159.
+      - round: 27
+        tool: record_thought
+        title: "Die Dritt-Doktrin: im Netz ist jeder ein Dritter, also niemand geschützt"
+        core: Die Gerichte begründen fehlenden Datenschutz damit, dass man durch die Nutzung
+          eines Dienstes dessen Betreiber zum Dritten macht und damit angeblich
+          freiwillig preisgibt – obwohl im Netz jeder ein Dritter ist, sodass der
+          Schutzbegriff sich selbst aufhebt.
+        type: umkehrung
+        paragraphs:
+          - 55
+        interwoven_with:
+          - 11
+        evidence: '"hat das Gericht erklärt, dass man im Internet keine Privatsphäre erwarten
+          darf, wenn man bereit ist, Informationen an Dritte zu offenbaren. Nebenbei
+          bemerkt: Jeder im Internet ist ein Dritter."'
+        note: Abgelegt als Gedanke 12. Lies weiter oder rufe done auf.
+      - round: 28
+        tool: record_thought
+        title: "Demokratisierte Überwachung: Belohnungskultur statt bezahlter Spitzel"
+        core: Facebook demokratisiert die Überwachung, indem es statt bezahlter Spitzel eine
+          Belohnungskultur setzt, in der die Nutzer einander freiwillig melden und dabei
+          mit sozialer Anerkennung entlohnt werden.
+        type: umkehrung
+        paragraphs:
+          - 30
+          - 56
+        interwoven_with:
+          - 11
+        evidence: '"Statt die Leute für Spitzeldienste zu bezahlen, wie es die Stasi in
+          Ostdeutschland gemacht hat, entlohnen wir sie mittels einer
+          Gratifikationskultur"'
+        note: Abgelegt als Gedanke 13. Lies weiter oder rufe done auf.
+      - round: 29
+        tool: read
+        from: 57
+        count: 12
+        note: Absätze 57–60. Weiter bei 61. Letzter Absatz ist 159.
+      - round: 30
+        tool: record_thought
+        title: Kryptografie als das Waffenrecht der digitalen Welt
+        core: "Kryptografie übernimmt in der digitalen Welt die Rolle, die der zweite
+          Verfassungszusatz den Waffen zuschreibt: nicht Vertrauen in die Regierung,
+          sondern ein in eigener Hand liegendes Mittel, das den Einbruch in die eigene
+          Kommunikation abwehrt."
+        type: verbindung
+        paragraphs:
+          - 60
+        interwoven_with:
+          - 2
+        evidence: '"müssen wir selbst die nötigen Werkzeuge schaffen, kryptografische Tools, die
+          wir in der Hand haben, als eine Art Gewaltmittel"'
+        note: Abgelegt als Gedanke 14. Lies weiter oder rufe done auf.
+      - round: 31
+        tool: read
+        from: 61
+        count: 12
+        note: Absätze 61–61. Weiter bei 62. Letzter Absatz ist 159.
+      - round: 32
+        tool: record_thought
+        title: Der Rückzug aus dem Netz als Selbstentmachtung
+        core: "Der Verzicht auf Netznutzung ist keine Freiheit, sondern Entmachtung: Wer offline
+          bleibt, verliert gerade die Möglichkeit, Einfluss zu nehmen, weshalb der
+          Ausweg nicht im Rückzug, sondern im gesicherten Bleiben liegt."
+        type: umkehrung
+        paragraphs:
+          - 61
+        interwoven_with:
+          - 2
+        evidence: '"Natürlich kann sich jeder vom Internet fernhalten, aber dann ist es schwer,
+          irgendeinen Einfluss zu haben. Wer es tut, beraubt sich seiner eigenen
+          Einflussmöglichkeiten."'
+        note: Abgelegt als Gedanke 15. Lies weiter oder rufe done auf.
+      - round: 33
+        tool: record_thought
+        title: Die Industrie als Schutzmacht der Kryptografie
+        core: Kryptografie verbreitet sich, weil Unternehmen ihre transnationalen Datenströme
+          absichern müssen; der wirtschaftliche Eigennutz der Konzerne wird so zur
+          Machtbasis, die verhindert, dass Verschlüsselung politisch verboten wird.
+        type: verbindung
+        paragraphs:
+          - 61
+        interwoven_with:
+          - 5
+          - 14
+        evidence: '"Dadurch gewinnt die Kryptografie eine Machtbasis in der Industrie, die
+          verhindert, dass sie verbannt wird."'
+        note: Abgelegt als Gedanke 16. Lies weiter oder rufe done auf.
+      - round: 34
+        tool: read
+        from: 62
+        count: 12
+        note: Absätze 62–69. Weiter bei 70. Letzter Absatz ist 159.
+      - round: 35
+        tool: record_thought
+        title: Selbstzensur als Preis des Nichtkönnens
+        core: Wer angesichts der Überwachung nicht lernt, schützende Technik selbst zu
+          beherrschen, verfällt in universelle Selbstzensur und meldet sich als
+          politischer Akteur von der Welt ab – Anpassung oder Werkzeugbeherrschung sind
+          die beiden einzigen Wege.
+        type: unterscheidung
+        paragraphs:
+          - 62
+        interwoven_with:
+          - 8
+          - 15
+        evidence: '"Wenn die Leute nicht diesen zweiten Schritt gehen, dann wird politischer
+          Konformismus zu einer universellen Erscheinung"'
+        note: Abgelegt als Gedanke 17. Lies weiter oder rufe done auf.
+      - round: 36
+        tool: read
+        from: 70
+        count: 12
+        note: Absätze 70–73. Weiter bei 74. Letzter Absatz ist 159.
+      - round: 37
+        tool: record_thought
+        title: Internetzeit als Gegenrhythmus zur medialen Kurzfristigkeit
+        core: "Das Netz vergisst nicht, und daraus entsteht eine eigene Zeitform: gegen den
+          24-Stunden-Takt der Medienerzählungen lassen sich über Jahre Dossiers
+          aufbauen, die politische Mythen Schritt für Schritt widerlegen."
+        type: begriff
+        paragraphs:
+          - 73
+        interwoven_with:
+          - 3
+        evidence: '"Beim Internet habe ich das Gefühl, dass wir etwas schaffen, was ich
+          Internetzeit nenne."'
+        note: Abgelegt als Gedanke 18. Lies weiter oder rufe done auf.
+      - round: 38
+        tool: read
+        from: 74
+        count: 12
+        note: Absätze 74–76. Weiter bei 77. Letzter Absatz ist 159.
+      - round: 39
+        tool: record_thought
+        title: "Der abgeschlagene Kopf und die Wurmfortsätze: Sieg im Parlament, Weiterleben im
+          Geheimen"
+        core: "Ein demokratischer Sieg an der Oberfläche beendet die Sache nicht: Wird ein
+          Abkommen öffentlich gestoppt, wandert sein Inhalt in geheime bilaterale
+          Verträge, sodass der demokratische Prozess umgangen wird, ohne dass der Sieg
+          verloren scheint."
+        type: ausdruck
+        paragraphs:
+          - 74
+        interwoven_with:
+          - 18
+        evidence: '"Der Kopf von ACTA mag abgeschlagen sein, aber der Rumpf könnte sich sehr
+          wohl in ein paar neue Wurmfortsätze teilen"'
+        note: Abgelegt als Gedanke 19. Lies weiter oder rufe done auf.
+      - round: 40
+        tool: read
+        from: 77
+        count: 12
+        note: Absätze 77–82. Weiter bei 83. Letzter Absatz ist 159.
+      - round: 41
+        tool: record_thought
+        title: Ökonomische Effizienz als Ursache der Zentralisierung und damit der
+          Kontrollierbarkeit
+        core: Zentralisierte Serverballungen setzen sich im Wettbewerb durch, weil sie billiger
+          sind, und schaffen damit genau die wenigen Angriffspunkte, an denen staatliche
+          Überwachung ansetzt – die Architektur, nicht die Absicht entscheidet über
+          Kontrollierbarkeit.
+        type: verbindung
+        paragraphs:
+          - 75
+          - 76
+          - 77
+        interwoven_with:
+          - 0
+          - 11
+        evidence: '"Das Internet könnte ohne diese Zentralisierung auskommen, es ist nicht so,
+          dass es technisch unmöglich wäre, es ist schlicht effizienter, alles zu
+          zentralisieren. Im wirtschaftlichen Wettbewerb trägt die zentralisierte
+          Version den Sieg davon."'
+        note: Abgelegt als Gedanke 20. Lies weiter oder rufe done auf.
+      - round: 42
+        tool: record_thought
+        title: Von konkurrierenden Staaten zur verschmolzenen transnationalen Elite
+        core: Die Hoffnung auf Rettung durch konkurrierende Regierungen trägt nicht mehr, weil
+          nationale Eliten sich nicht länger bekämpfen, sondern sich miteinander
+          verbinden und von ihren Bevölkerungen lösen.
+        type: umkehrung
+        paragraphs:
+          - 77
+          - 78
+        interwoven_with:
+          - 11
+        evidence: '"einst haben wir nationale Eliten gehabt, die miteinander konkurriert haben,
+          und heute verbinden die sich miteinander und lösen sich von ihren jeweiligen
+          Bevölkerungen."'
+        note: Abgelegt als Gedanke 21. Lies weiter oder rufe done auf.
+      - round: 43
+        tool: read
+        from: 83
+        count: 12
+        note: Absätze 83–86. Weiter bei 87. Letzter Absatz ist 159.
+      - round: 44
+        tool: record_thought
+        title: Zentralisierung als Rücknahme der Druckerpresse
+        core: Zentralisierung von Informationsdiensten macht die Erfindung der Druckerpresse
+          rückgängig, weil der Zugang zu Wissen dann an ein bestimmtes Gerät oder einen
+          bestimmten Anbieter gebunden ist statt an eine Allzweckmaschine.
+        type: umkehrung
+        paragraphs:
+          - 85
+        interwoven_with:
+          - 20
+        evidence: '"wenn wir anfangen, die Kontrolle über Informationssysteme zu zentralisieren,
+          fangen wir tatsächlich an, die Erfindung der Druckerpresse rückgängig zu
+          machen"'
+        note: Abgelegt als Gedanke 22. Lies weiter oder rufe done auf.
+      - round: 45
+        tool: record_thought
+        title: "Vom Lesenlernen zum Schreibenlernen: das Netz als neue Ausdrucksfähigkeit"
+        core: Die Druckerpresse lehrte die Menschen lesen, das Netz lehrt sie schreiben; damit
+          entsteht eine neue, allen zugängliche Ausdrucksfähigkeit, die nicht über
+          Partei, Verlag oder Avantgarde kanalisiert werden muss.
+        type: ausdruck
+        paragraphs:
+          - 86
+        interwoven_with:
+          - 22
+        evidence: '"Die Druckerpresse hat die Menschen lesen gelehrt; das Internet lehrt die
+          Menschen zu schreiben."'
+        note: Abgelegt als Gedanke 23. Lies weiter oder rufe done auf.
+      - round: 46
+        tool: read
+        from: 87
+        count: 12
+        note: Absätze 87–98. Weiter bei 99. Letzter Absatz ist 159.
+      - round: 47
+        tool: record_thought
+        title: Drei Infrastrukturen der Staatlichkeit als drei Grundfreiheiten
+        core: Staatlichkeit lässt sich an drei Infrastrukturen messen – Kontrolle über
+          Streitkräfte, über Kommunikation und über Finanzen –, und dieselben drei
+          werden zu den Grundfreiheiten der Bewegung, des Denkens und des Wirtschaftens,
+          deren Schutz jeweils Privatheit voraussetzt.
+        type: verbindung
+        paragraphs:
+          - 87
+          - 88
+        interwoven_with:
+          - 0
+          - 8
+        evidence: '"Die Hisbollah verfügt also über die drei wesentlichen Attribute der
+          Staatlichkeit ... Das können wir uns auch als drei grundlegende Freiheiten
+          denken."'
+        note: Abgelegt als Gedanke 24. Lies weiter oder rufe done auf.
+      - round: 48
+        tool: record_thought
+        title: Die Architektur ist die Wahrheit
+        core: "Nicht die Absichten der Betreiber, sondern die Architektur entscheidet über die
+          politische Wirkung: zentralisierte Systeme ziehen Machtmissbrauch an, auch
+          wenn anfangs anständige Leute sie entwerfen."
+        type: umkehrung
+        paragraphs:
+          - 95
+          - 96
+        interwoven_with:
+          - 20
+          - 22
+        evidence: '"Die Architektur ist die Wahrheit." / "Wenn du also eine zentralisierte
+          Architektur hast, selbst wenn die besten Leute auf der Welt sie kontrollieren,
+          zieht sie Arschlöcher an"'
+        note: Abgelegt als Gedanke 25. Lies weiter oder rufe done auf.
+      - round: 49
+        tool: read
+        from: 99
+        count: 12
+        note: Absätze 99–105. Weiter bei 106. Letzter Absatz ist 159.
+      - round: 50
+        tool: record_thought
+        title: Die Bankenblockade als staatlich erzeugte Marktmacht
+        core: Die Bankenblockade gegen WikiLeaks war kein Marktereignis, sondern das Ergebnis
+          staatlicher Regulierung, die einzelne Finanzakteure zu Königen gemacht hat;
+          wer das Tauschmedium kontrolliert, kontrolliert damit auch, was Menschen tun
+          dürfen.
+        type: umkehrung
+        paragraphs:
+          - 101
+        interwoven_with:
+          - 24
+        evidence: '"ist es nicht der freie Markt gewesen, der beschlossen hat, WikiLeaks zu
+          blockieren, weil es gar kein freier Markt ist – staatliche Regulierung hat aus
+          bestimmten Finanzspielern Könige gemacht"'
+        note: Abgelegt als Gedanke 26. Lies weiter oder rufe done auf.
+      - round: 51
+        tool: read
+        from: 106
+        count: 12
+        note: Absätze 106–107. Weiter bei 108. Letzter Absatz ist 159.
+      - round: 52
+        tool: record_thought
+        title: "Reichweite gegen Vertraulichkeit: die Doppelbilanz der drei Freiheiten im Netz"
+        core: Beim Übergang ins Netz bleibt die Bewegungsfreiheit gleich, die
+          Kommunikationsfreiheit wächst an Reichweite und schrumpft zugleich durch den
+          Verlust der Privatheit, und die wirtschaftliche Freiheit erleidet denselben
+          Verlust – der Zugewinn an Reichweite wird mit dem Verlust an Vertraulichkeit
+          bezahlt.
+        type: unterscheidung
+        paragraphs:
+          - 106
+        interwoven_with:
+          - 24
+        evidence: '"Die Freiheit der Kommunikation ist in mancher Hinsicht unerhört gestiegen
+          ... andererseits ist sie auch ungeheuer herabgesunken, weil es keinen Schutz
+          der Privatsphäre mehr gibt"'
+        note: Abgelegt als Gedanke 27. Lies weiter oder rufe done auf.
+      - round: 53
+        tool: read
+        from: 108
+        count: 12
+        note: Absätze 108–108. Weiter bei 109. Letzter Absatz ist 159.
+      - round: 54
+        tool: record_thought
+        title: Vertrauen durch Rechenkosten statt durch Recht und Prüfung
+        core: "Bitcoin verlegt die Durchsetzung von Vertrauen aus Gesetz, Regulierung und
+          Prüfung in die Architektur selbst: Rechenleistung kostet Strom, Betrug wird
+          teurer als sein Nutzen, und Vertrauen wird auf viele Teilnehmer verteilt statt
+          an einer Stelle erzwingbar zu sein."
+        type: verbindung
+        paragraphs:
+          - 108
+        interwoven_with:
+          - 25
+          - 26
+        evidence: '"Die Durchsetzung ehrbaren Bitcoin-»Bankings« ist also in die Architektur des
+          Systems eingebaut."'
+        note: Abgelegt als Gedanke 28. Lies weiter oder rufe done auf.
+      - round: 55
+        tool: read
+        from: 109
+        count: 12
+        note: Absätze 109–110. Weiter bei 111. Letzter Absatz ist 159.
+      - round: 56
+        tool: record_thought
+        title: Privatsphäre als käufliches Gut, im Netz wie davor
+        core: "Datenschutz war nie eine Frage des Mediums, sondern des Geldes: Wer reich ist,
+          kauft sich Vertraulichkeit, wer arm ist, hat sie nicht – und das Netz setzt
+          diesen vor-digitalen Trend nur fort."
+        type: umkehrung
+        paragraphs:
+          - 109
+        interwoven_with:
+          - 27
+        evidence: '"wenn du einen Haufen Geld hast, eine Prämie zahlst, um deine Daten zu
+          schützen, und wenn du nicht viel Geld hast, dann hast du fast sicher auch
+          keinen Datenschutz"'
+        note: Abgelegt als Gedanke 29. Lies weiter oder rufe done auf.
+      - round: 57
+        tool: record_thought
+        title: Wirtschaftliche Vertraulichkeit als das eigentliche Freiheitsproblem
+        core: Die Vertraulichkeit wirtschaftlicher Transaktionen ist womöglich wichtiger als die
+          Redefreiheit, weil Geheimdienste aus Zahlungsdaten ein vollständiges Bild von
+          Macht und Beziehungen gewinnen und der wirtschaftliche Austausch die Grundlage
+          der Gesellschaftsstruktur bildet.
+        type: umkehrung
+        paragraphs:
+          - 109
+        interwoven_with:
+          - 24
+          - 27
+        evidence: '"Ist also nicht die Freiheit oder die Vertraulichkeit wirtschaftlicher
+          Interaktionen in Wirklichkeit wichtiger als die Redefreiheit, schließlich ist
+          es wirtschaftlicher Austausch, auf dem die ganze Gesellschaftsstruktur in
+          Wahrheit basiert?"'
+        note: Abgelegt als Gedanke 30. Lies weiter oder rufe done auf.
+      - round: 58
+        tool: read
+        from: 111
+        count: 12
+        note: Absätze 111–114. Weiter bei 115. Letzter Absatz ist 159.
+      - round: 59
+        tool: record_thought
+        title: Das Kriterium der Besitzstandsverteidigung
+        core: Lobbying lässt sich daran messen, ob eine Gruppe ihren Vorteil auf Kosten der
+          Freiheiten anderer ausbaut, ohne die sie selbst nie dorthin gekommen wäre –
+          daran unterscheidet sich produktive Interessenvertretung von
+          Besitzstandsverteidigung.
+        type: unterscheidung
+        paragraphs:
+          - 113
+        interwoven_with:
+          - 26
+        evidence: '"weil du dir anschauen kannst, welche Leute bestrebt sind, sich auf Kosten
+          der Allgemeinheit Vorteile zu verschaffen und die Freiheiten anderer, ohne die
+          sie selbst nicht dorthin gelangt wären, wo sie heute stehen, zu beschneiden"'
+        note: Abgelegt als Gedanke 31. Lies weiter oder rufe done auf.
+      - round: 60
+        tool: read
+        from: 115
+        count: 12
+        note: Absätze 115–120. Weiter bei 121. Letzter Absatz ist 159.
+      - round: 61
+        tool: record_thought
+        title: Die Verschränkung der drei Freiheiten im Alltag
+        core: "Die drei Freiheiten sind nicht unabhängig: Wer reisen will, muss ein
+          nachverfolgbares Zahlungsmittel nutzen, und wer sprechen will, muss Daten
+          preisgeben – der Kompromiss in einer Sphäre wirkt unmittelbar auf die anderen
+          zurück."
+        type: verbindung
+        paragraphs:
+          - 118
+          - 119
+        interwoven_with:
+          - 24
+          - 27
+        evidence: '"es war praktisch meine Fähigkeit, zu sprechen ... und um das zu tun, musste
+          ich Kompromisse in den anderen beiden Sphären eingehen"'
+        note: Abgelegt als Gedanke 32. Lies weiter oder rufe done auf.
+      - round: 62
+        tool: read
+        from: 121
+        count: 12
+        note: Absätze 121–121. Weiter bei 122. Letzter Absatz ist 159.
+      - round: 63
+        tool: record_thought
+        title: Zwei unvereinbare Begriffe von Sicherheit
+        core: "Technische Sicherheit und staatlich verstandene Sicherheit sind Gegensätze: Der
+          Staat begreift Sicherheit als eigene Einsichtsfähigkeit, weshalb ein
+          funktionierend verschlüsseltes System für ihn eine Bedrohung darstellt."
+        type: unterscheidung
+        paragraphs:
+          - 121
+        interwoven_with:
+          - 8
+          - 2
+        evidence: '"Du kannst ein absolut sicheres technisches System haben, und der Staat
+          findet das nicht gut, weil er glaubt, Sicherheit ist, wenn seine Beamten
+          hineinschauen"'
+        note: Abgelegt als Gedanke 33. Lies weiter oder rufe done auf.
+      - round: 64
+        tool: read
+        from: 122
+        count: 12
+        note: Absätze 122–122. Weiter bei 123. Letzter Absatz ist 159.
+      - round: 65
+        tool: record_thought
+        title: Zensur erfordert Überwachung und erzeugt Selbstzensur
+        core: "Zensur ist technisch nicht von Überwachung zu trennen: Um zu prüfen, ob ein
+          Inhalt erlaubt ist, muss das System ihn sehen, und was es sieht, kann es
+          speichern – die eigentliche Wirkung ist die Verhaltensänderung der Wissenden."
+        type: verbindung
+        paragraphs:
+          - 122
+        interwoven_with:
+          - 17
+          - 8
+        evidence: '"Um zu kontrollieren, was sich jemand ansieht, um zu sehen, ob das erlaubt
+          ist oder verboten, musst du es sehen, und weil du es sehen kannst, kannst du
+          es auch speichern."'
+        note: Abgelegt als Gedanke 34. Lies weiter oder rufe done auf.
+      - round: 66
+        tool: read
+        from: 123
+        count: 12
+        note: Absätze 123–124. Weiter bei 125. Letzter Absatz ist 159.
+      - round: 67
+        tool: record_thought
+        title: "Spurlose Ausradierung: die unnachweisbare Zensur des Westens"
+        core: "Zensur im Westen arbeitet nicht durch sichtbare Korrektur, sondern durch
+          spurloses Entfernen aus Archiven und Indizes: Die Geschichte wird nicht
+          verändert, sie hat nachträglich nie existiert, was schwerer nachweisbar ist
+          als die offene sowjetische Richtigkeitsklebung."
+        type: unterscheidung
+        paragraphs:
+          - 123
+          - 124
+        interwoven_with:
+          - 34
+        evidence: '"Die Geschichte wird nicht nur verändert, sie hat niemals existiert."'
+        note: Abgelegt als Gedanke 35. Lies weiter oder rufe done auf.
+      - round: 68
+        tool: read
+        from: 125
+        count: 12
+        note: Absätze 125–127. Weiter bei 128. Letzter Absatz ist 159.
+      - round: 69
+        tool: record_thought
+        title: "Die Zensurpyramide: sichtbare Spitze, unsichtbare Schichten"
+        core: "Zensur ist eine Pyramide: Nur die Spitze der offenen Maßnahmen ragt sichtbar
+          heraus, darunter liegen Selbstzensur, wirtschaftliche Begünstigung,
+          Rentabilität, Leservorurteil und Sprachbarrieren – und gerade weil die unteren
+          Schichten keinen ausdrücklichen Befehl brauchen, lässt sich ihre Wirkung
+          bestreiten."
+        type: ausdruck
+        paragraphs:
+          - 127
+        interwoven_with:
+          - 35
+          - 17
+        evidence: '"Ihr könnte euch Zensur als Pyramide denken. Nur die Spitze dieser Pyramide
+          lugt aus dem Sand heraus, und das mit Absicht."'
+        note: Abgelegt als Gedanke 36. Lies weiter oder rufe done auf.
+      - round: 70
+        tool: record_thought
+        title: Zensur durch Hypothek statt durch Verhaftung
+        core: "Die offene sowjetische Zensur mit nächtlichen Verhaftungen hat sich umgekehrt: Im
+          Westen verliert der Journalist am helllichten Tag sein Haus, wenn er die
+          Patronage verliert – Zensur wirkt über Schulden und Wohlstand statt über
+          Verhaftung."
+        type: umkehrung
+        paragraphs:
+          - 127
+        interwoven_with:
+          - 36
+        evidence: '"Jetzt nehmen wir Journalisten am helllichten Tag ihr Haus weg, wenn sie die
+          Patronage verlieren und ihre Hypotheken nicht mehr abbezahlen können."'
+        note: Abgelegt als Gedanke 37. Lies weiter oder rufe done auf.
+      - round: 71
+        tool: read
+        from: 128
+        count: 12
+        note: Absätze 128–128. Weiter bei 129. Letzter Absatz ist 159.
+      - round: 72
+        tool: record_thought
+        title: Aus der Zensur eines Inhalts folgt die geheime Justiz
+        core: Wer Inhalte zensieren will, braucht zwingend eine landesweite technische
+          Zensurmaschine und ein Entscheidungsgremium, das geheim sein muss, um wirksam
+          zu sein – aus der Zensur eines einzelnen Inhalts folgt also eine geheime
+          Justiz.
+        type: verbindung
+        paragraphs:
+          - 127
+          - 128
+        interwoven_with:
+          - 34
+          - 36
+        evidence: '"Du musst eine landesweite Zensurmaschine schaffen ... Und dieses Komitee
+          muss seinem Wesen nach geheim sein, weil es andernfalls komplett nutzlos wäre,
+          und daher bekommst du eine geheime Justiz."'
+        note: Abgelegt als Gedanke 38. Lies weiter oder rufe done auf.
+      - round: 73
+        tool: record_thought
+        title: "Nachstaatliche Organisation: Wo die Aktiva Informationen sind, greift man den
+          Geldfluss an"
+        core: Weil die Aktiva einer Enthüllungsorganisation vor allem Informationen sind, kann
+          sie transnational und durch Kryptografie geschützt operieren; angreifbar ist
+          sie nicht an ihren Inhalten, sondern an ihren Finanzflüssen – daher die
+          Blockade.
+        type: verbindung
+        paragraphs:
+          - 128
+        interwoven_with:
+          - 26
+          - 24
+        evidence: '"wenn die Aktivposten einer Organisation in erster Linie seine Informationen
+          sind, dann kann sie transnational sein und infolge der Kryptografie nur schwer
+          daran gehindert werden. Es gibt einen Grund, warum man eine Finanzblockade
+          gegen uns aufgebaut hat"'
+        note: Abgelegt als Gedanke 39. Lies weiter oder rufe done auf.
+      - round: 74
+        tool: read
+        from: 129
+        count: 12
+        note: Absätze 129–129. Weiter bei 130. Letzter Absatz ist 159.
+      - round: 75
+        tool: record_thought
+        title: Das universelle Netz als einziges Werkzeug für globale Probleme
+        core: Ein universelles Netz ist das einzige Werkzeug, das für die globalen Probleme der
+          Menschheit noch zur Verfügung steht; deshalb ist der Kampf um seine Offenheit
+          kein Sonderinteresse, sondern der zentrale politische Kampf.
+        type: verbindung
+        paragraphs:
+          - 129
+        interwoven_with:
+          - 23
+        evidence: '"Ich habe den Verdacht, dass ein globales, universelles Internet das einzige
+          Werkzeug ist, das wir haben, um diese globalen Probleme anzugehen, und das ist
+          der Grund, weshalb dieser Kampf für ein freies Internet der zentrale Kampf
+          ist"'
+        note: Abgelegt als Gedanke 40. Lies weiter oder rufe done auf.
+      - round: 76
+        tool: read
+        from: 130
+        count: 12
+        note: Absätze 130–133. Weiter bei 134. Letzter Absatz ist 159.
+      - round: 77
+        tool: record_thought
+        title: Sichtbarkeit des Unrechts als Bedingung seiner Bekämpfung
+        core: Das Sichtbarmachen von Unrecht erzeugt die politische Lobby, die zu seiner
+          Bekämpfung nötig ist; Zensur nimmt den Ermittlern den Anreiz und der
+          Öffentlichkeit das Wissen, und der Schutz der Unversehrtheit der Geschichte
+          wiegt schwerer als die Schonung der Opfer vor erneuter Konfrontation.
+        type: umkehrung
+        paragraphs:
+          - 130
+          - 132
+        interwoven_with:
+          - 35
+          - 38
+        evidence: '"Ein Zensurregime zu errichten, das in der Lage ist, Stücke der Geschichte zu
+          entfernen, bedeutet, dass wir das Problem nicht angehen können, weil wir gar
+          nicht sehen, was das Problem ist."'
+        note: Abgelegt als Gedanke 41. Lies weiter oder rufe done auf.
+      - round: 78
+        tool: read
+        from: 134
+        count: 12
+        note: Absätze 134–139. Weiter bei 140. Letzter Absatz ist 159.
+      - round: 79
+        tool: record_thought
+        title: Der Inhalt als Beweisstück, nicht als Sache
+        core: Der Inhalt eines Missbrauchsbildes ist primär ein historischer Beleg für ein
+          Verbrechen; die ursprüngliche Viktimisierung ist das Kernproblem, und die
+          Tilgung des Belegs beseitigt nicht den Missbrauch, sondern nur das Wissen um
+          ihn.
+        type: unterscheidung
+        paragraphs:
+          - 136
+        interwoven_with:
+          - 41
+        evidence: '"der Inhalt selbst ein historischer Beleg ist, der ein Verbrechen beweist"'
+        note: Abgelegt als Gedanke 42. Lies weiter oder rufe done auf.
+      - round: 80
+        tool: record_thought
+        title: Der Filter im Kopf des Nutzers statt beim Staat
+        core: Filtern gehört ans Ende der Kette, in den Kopf des Empfängers, nicht zur
+          Regierung, die im Namen des Volkes filtert – die Fähigkeit, mit dem Gesehenen
+          umzugehen, ersetzt die Vorzensur.
+        type: umkehrung
+        paragraphs:
+          - 137
+          - 138
+          - 139
+        interwoven_with:
+          - 38
+          - 41
+        evidence: '"Filterung sollte beim Endnutzer stattfinden, im Endgerät des Endnutzers ...
+          das ist dieses Ding zwischen deinen Ohren."'
+        note: Abgelegt als Gedanke 43. Lies weiter oder rufe done auf.
+      - round: 81
+        tool: read
+        from: 140
+        count: 12
+        note: Absätze 140–140. Weiter bei 141. Letzter Absatz ist 159.
+      - round: 82
+        tool: record_thought
+        title: "Asymmetrische Geheimhaltung: privat nur gegenüber den Ohnmächtigen"
+        core: "Geheimhaltung ist asymmetrisch: Daten, auf die Millionen Staatsbedienstete
+          zugreifen dürfen, sind nicht privat, sondern nur vor den Ohnmächtigen
+          verborgen – Geheimhaltung schützt die Mächtigen, nicht die Bürger."
+        type: umkehrung
+        paragraphs:
+          - 140
+        interwoven_with:
+          - 29
+          - 11
+        evidence: '"Sie werden vor den Ohnmächtigen für die Mächtigen geheim gehalten."'
+        note: Abgelegt als Gedanke 44. Lies weiter oder rufe done auf.
+      - round: 83
+        tool: record_thought
+        title: "Der Schatten eines Schattens: das Missverhältnis von veröffentlichtem und
+          privatem Geheimwissen"
+        core: "WikiLeaks ist nur der Schatten eines Schattens: Gemessen an der gewaltigen Menge
+          Geheimmaterials in privaten Händen mächtiger Akteure ist das veröffentlichte
+          Material ein winziger Bruchteil, weshalb die Behauptung, nun könne niemand
+          mehr etwas geheim halten, falsch ist."
+        type: ausdruck
+        paragraphs:
+          - 140
+        interwoven_with:
+          - 44
+        evidence: '"Ich behaupte, WikiLeaks ist nur der Schatten eines Schattens."'
+        note: Abgelegt als Gedanke 45. Lies weiter oder rufe done auf.
+      - round: 84
+        tool: record_thought
+        title: Regulierbarkeit als Unterscheidungsmerkmal von taktischer und strategischer
+          Überwachung
+        core: Taktische Überwachung ist regulierbar, weil ihre Ergebnisse als Beweise vor
+          Gericht und damit an die Öffentlichkeit gelangen; strategische Überwachung ist
+          prinzipiell unregulierbar, weil ihre Voraussetzung die Belauschung aller ist.
+        type: unterscheidung
+        paragraphs:
+          - 140
+        interwoven_with:
+          - 7
+          - 8
+        evidence: '"Aber die Regulierung strategischer Überwachung ist kompletter Unsinn, denn
+          dabei wird ja per definitionem alles überwacht."'
+        note: Abgelegt als Gedanke 46. Lies weiter oder rufe done auf.
+      - round: 85
+        tool: read
+        from: 141
+        count: 12
+        note: Absätze 141–144. Weiter bei 145. Letzter Absatz ist 159.
+      - round: 86
+        tool: record_thought
+        title: Die disziplinierende Wirkung erwarteter Enthüllung
+        core: "Weil geheimes Handeln heute nur begrenzte Zeit verborgen bleibt, verändert sich
+          staatliches Verhalten vorab: Die Erwartung späterer Rechenschaft diszipliniert
+          die Mächtigen, und umgekehrt braucht es geschützte interne Warnkanäle, damit
+          Missstände überhaupt an die Öffentlichkeit dringen."
+        type: umkehrung
+        paragraphs:
+          - 141
+        interwoven_with:
+          - 45
+          - 44
+        evidence: '"Ihnen ist klar, dass geheimes Handeln heutzutage nur eine gewisse Zeit im
+          Verborgenen bleibt und früher oder später doch an die Öffentlichkeit gelangt,
+          und das ist gut so. Das verändert ihre Handlungsweise"'
+        note: Abgelegt als Gedanke 47. Lies weiter oder rufe done auf.
+      - round: 87
+        tool: record_thought
+        title: Nicht neutrale Technik als Werkzeug einer neuen Demokratie
+        core: "Technologie und Wissenschaft sind nicht neutral: Bestimmte Technikformen können
+          die lange ersehnten Grundrechte erst hervorbringen, weshalb es Sinn hat,
+          Werkzeuge für eine neue Demokratie zu bauen statt nur über Überwachung zu
+          klagen."
+        type: umkehrung
+        paragraphs:
+          - 142
+        interwoven_with:
+          - 25
+          - 40
+        evidence: '"Technologie und Wissenschaft sind nicht neutral. Es gibt bestimmte Formen
+          von Technologie, die uns diese fundamentalen Rechte und Freiheiten ... geben
+          können."'
+        note: Abgelegt als Gedanke 48. Lies weiter oder rufe done auf.
+      - round: 88
+        tool: read
+        from: 145
+        count: 12
+        note: Absätze 145–150. Weiter bei 151. Letzter Absatz ist 159.
+      - round: 89
+        tool: record_thought
+        title: Code als Gesetz und freie Software als Verfassungsfrage
+        core: Im Netz wird das Handeln durch den Code bestimmt, der läuft; deshalb ist Code
+          Gesetz, und freie Software muss so offenliegen wie Gesetzestexte in einer
+          Demokratie, damit jeder sie prüfen und ändern kann.
+        type: verbindung
+        paragraphs:
+          - 145
+        interwoven_with:
+          - 25
+          - 48
+        evidence: '"Im Internet wird das, was du tun kannst, dadurch definiert, welche Programme
+          existieren, welche Programme laufen, und deshalb ist Code gleich Gesetz."'
+        note: Abgelegt als Gedanke 49. Lies weiter oder rufe done auf.
+      - round: 90
+        tool: read
+        from: 151
+        count: 12
+        note: Absätze 151–153. Weiter bei 154. Letzter Absatz ist 159.
+      - round: 91
+        tool: record_thought
+        title: "Die eine Utopie als Dystopie: Vielfalt statt Einheitslösung"
+        core: Eine einzige verwirklichte Utopie wäre selbst eine Dystopie; wünschenswert ist
+          nicht die Einebnung, sondern die Vervielfältigung von Systemen, Kulturen und
+          Interaktionsformen – während die Marktlogik gerade auf Homogenisierung
+          zutreibt.
+        type: umkehrung
+        paragraphs:
+          - 151
+        interwoven_with:
+          - 40
+          - 48
+        evidence: '"Die Verwirklichung einer einzigen Utopie wäre für mich in Wirklichkeit eine
+          Dystopie."'
+        note: Abgelegt als Gedanke 50. Lies weiter oder rufe done auf.
+      - round: 92
+        tool: record_thought
+        title: "Die Wasserratte in der Oper: Nischenfreiheit in der totalen Ordnung"
+        core: Die wahrscheinlichste Zukunft ist eine hochkomplexe, homogenisierte transnationale
+          Herrschaftsstruktur, in der nur den gewitzten Ratten ein eigener Raum bleibt –
+          ein Bild, das die Absurdität und Entwürdigung dieser Ordnung sichtbar macht.
+        type: ausdruck
+        paragraphs:
+          - 151
+          - 152
+        interwoven_with:
+          - 21
+          - 50
+        evidence: '"eine äußerst einschnürende, homogenisierte, postmoderne, transnationale,
+          totalitäre Struktur von enormer Komplexität, voller Absurditäten und
+          Entwürdigungen, und innerhalb dieser unglaublichen Komplexität ein Raum, der
+          nur den gewitzten Ratten offensteht"'
+        note: Abgelegt als Gedanke 51. Lies weiter oder rufe done auf.
+      - round: 93
+        tool: read
+        from: 154
+        count: 7
+        note: Absätze 154–155. Weiter bei 156. Letzter Absatz ist 159.
+      - round: 94
+        tool: record_thought
+        title: "Freiheit als Insiderwissen: die Elite der High-Tech-Rebellen"
+        core: In der totalen Überwachungsordnung bleibt Freiheit nur denen, die sich in den
+          Eingeweiden des Systems auskennen – eine Elite von High-Tech-Rebellen;
+          Freiheit wird damit zum Insiderwissen statt zu einem allgemeinen Zustand.
+        type: umkehrung
+        paragraphs:
+          - 154
+        interwoven_with:
+          - 51
+          - 15
+        evidence: '"Es wird somit nur eine Elite von High-Tech-Rebellen sein, die frei ist – die
+          gewieften Ratten, die durch die Oper turnen."'
+        note: Abgelegt als Gedanke 52. Lies weiter oder rufe done auf.
+      - round: 95
+        tool: read
+        from: 156
+        count: 4
+        note: Absätze 156–157. Weiter bei 158. Letzter Absatz ist 159.
+      - round: 96
+        tool: read
+        from: 158
+        count: 2
+        note: Absätze 158–158. Weiter bei 159. Letzter Absatz ist 159.
+      - round: 97
+        tool: read
+        from: 159
+        count: 1
+        note: Absätze 159–159. Das ist das Ende des Abschnitts. Lege offene Gedanken ab und rufe
+          done auf.
+      - round: 98
+        tool: done
+        note: Lesen beendet.
+window_merges:
+  - source_id: Julian_Assange_Cypherpunks
+    segment_id: Julian_Assange_Cypherpunks
+    notes: 53 → 53
+topic_merge:
+  groups:
+    - - 2
+      - 3
+      - 15
+    - - 5
+      - 21
+      - 26
+    - - 8
+      - 9
+      - 47
+    - - 12
+      - 13
+    - - 25
+      - 33
+    - - 35
+      - 39
+    - - 36
+      - 37
+      - 38
+    - - 42
+      - 43
+    - - 51
+      - 52
+      - 53
