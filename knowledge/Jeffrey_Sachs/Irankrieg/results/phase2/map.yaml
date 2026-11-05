@@ -1,0 +1,1416 @@
+maps:
+  - source_id: on-the-real-origins-of-the-iran-war-and-the-coming-economic-devastation
+    segment_id: on-the-real-origins-of-the-iran-war-and-the-coming-economic-devastation
+    stop: done
+    steps:
+      - round: 1
+        tool: read
+        from: 1
+        count: 12
+        note: Absätze 1–12 von 299.
+      - round: 2
+        tool: record_thought
+        title: Die Weggabelung als Zeitproblem
+        core: "Sachs beschreibt die Lage nicht als Wahl zwischen zwei Optionen, sondern als
+          instabile Situation, in der die Zeit selbst zum Akteur wird: Weil die Straße
+          von Hormus geschlossen ist, baut sich die Wirtschaftskrise kontinuierlich auf,
+          und damit verfällt die Option 'später entscheiden'. Die Gabelung ist keine
+          ruhige Abzweigung, sondern ein Fenster, das sich schließt."
+        type: unterscheidung
+        paragraphs:
+          - 1
+          - 2
+          - 4
+        evidence: "\"we're not in a stable situation where we can choose one or the other. We're
+          in an unstable situation as we speak.\""
+        note: Abgelegt als Gedanke 0. Lies weiter oder rufe done auf.
+      - round: 2
+        tool: record_thought
+        title: Die Meerenge als Nadelöhr der Weltwirtschaft
+        core: Die Blockade wirkt nicht primär über Öl, sondern über die gesamte Palette
+          strategischer Güter — Düngemittel, Petrochemikalien, Aluminium. Ein schmaler
+          Wasserstreifen wird so zum Hebel, mit dem ein regionaler Konflikt die
+          Weltwirtschaft insgesamt in Geiselhaft nimmt.
+        type: begriff
+        paragraphs:
+          - 3
+          - 5
+        note: Abgelegt als Gedanke 1. Lies weiter oder rufe done auf.
+      - round: 3
+        tool: read
+        from: 13
+        count: 12
+        note: Absätze 13–24 von 299.
+      - round: 4
+        tool: record_thought
+        title: Der Off-Ramp als eingestandenes Scheitern
+        core: "Der Ausstieg ist kein Sieg, sondern eine Niederlage, die als solche eingestanden
+          werden müsste: Iran kontrolliert nach dem Krieg faktisch die Meerenge und
+          damit 20% der Weltenergie und 30% des Düngemittels. Wer den Off-Ramp nimmt,
+          muss zugeben, dass der Krieg die Position des Gegners gestärkt hat."
+        type: umkehrung
+        paragraphs:
+          - 16
+        evidence: '"they would have to swallow a lot to walk this back because it would mean
+          that Iran is more powerful now in effect than it was before the war started"'
+        note: Abgelegt als Gedanke 2. Lies weiter oder rufe done auf.
+      - round: 4
+        tool: record_thought
+        title: Bauen gegen Niederreißen
+        core: "Sachs korrigiert das Bild vom 'iranischen Sieg' durch die Bilanz der Zerstörung:
+          160 getötete Schulmädchen, Tausende Tote, jahrelanger Wiederaufbau. Der
+          entscheidende Satz ist biographisch — als Entwicklungsökonom, dessen
+          Lebenswerk das Bauen ist, verurteilt er das Niederreißen. Das ist keine
+          militärische, sondern eine ethische Kategorie."
+        type: ausdruck
+        paragraphs:
+          - 18
+          - 20
+          - 21
+          - 22
+          - 23
+          - 24
+        evidence: "\"For me as a development economist whose whole career over half a century is
+          to try to build things. I don't like to see things knocked down this way.\""
+        note: Abgelegt als Gedanke 3. Lies weiter oder rufe done auf.
+      - round: 5
+        tool: read
+        from: 25
+        count: 12
+        note: Absätze 25–36 von 299.
+      - round: 6
+        tool: record_thought
+        title: Die Böse-Achse als Produkt der Erzählung
+        core: "Sachs kehrt die übliche Begründung um: Nicht Irans Kontrolle der Meerenge ist das
+          Problem, sondern die Erzählung, die sie bedrohlich erscheinen lässt. Die
+          'Achse des Bösen' ist für ihn kein Befund über Iran, sondern ein Produkt
+          jahrzehntelanger offizieller Propaganda — und damit eine Kategorie, die die
+          Wahrnehmung der Fakten vorstrukturiert."
+        type: umkehrung
+        paragraphs:
+          - 27
+          - 28
+          - 29
+        evidence: '"It is our non-stop official propaganda narrative."'
+        note: Abgelegt als Gedanke 4. Lies weiter oder rufe done auf.
+      - round: 6
+        tool: record_thought
+        title: Der unerhörte Satz von 1953
+        core: "Der Ursprung des Konflikts liegt für Sachs 1953: Mossadeghs Satz, das Öl unter
+          dem eigenen Boden sei iranisch, wird zum unerhörten Satz der Region. Die
+          Antwort ist ein Putschereignis, das er mit heutiger Sprache 'Farbenrevolution'
+          nennt — Empire-Logik, die Souveränität als Reputationsfrage behandelt."
+        type: begriff
+        paragraphs:
+          - 31
+          - 32
+          - 33
+        evidence: '"I think the oil under our ground is Iranian not British."'
+        note: Abgelegt als Gedanke 5. Lies weiter oder rufe done auf.
+      - round: 7
+        tool: read
+        from: 37
+        count: 12
+        note: Absätze 37–48 von 299.
+      - round: 8
+        tool: record_thought
+        title: Bestrafung als Signal an das Empire
+        core: "Sachs formuliert eine Empire-Logik: Ein Empire kann Gesichtsverlust nicht
+          tolerieren, weil die Bestrafung nicht nur den Abtrünnigen, sondern alle
+          anderen Provinzen adressiert. Der Angriff auf Iran ist damit primär eine
+          Botschaft an das eigene Gefüge — 'don't you dare try this'."
+        type: begriff
+        paragraphs:
+          - 35
+          - 38
+        evidence: "\"An empire needs to repay any kind of loss of face with some kind of extreme
+          punishment not only to get that particular recalcitrant place under control
+          but to signal to all the rest of the empire don't you dare try this.\""
+        note: Abgelegt als Gedanke 6. Lies weiter oder rufe done auf.
+      - round: 8
+        tool: record_thought
+        title: Überwachung gegen Sanktionen
+        core: "Der Atomwaffen-Vorwand wird durch die Chronologie entlarvt: Iran hat nie eine
+          Bombe verfolgt, sondern einen Vertrag gesucht — Überwachung gegen Aufhebung
+          der Sanktionen. Die Forderung ist also nicht 'lasst uns die Bombe', sondern
+          'lasst uns atmen'. Der eigentliche casus belli bleibt der Austritt von 1979."
+        type: unterscheidung
+        paragraphs:
+          - 42
+          - 43
+          - 44
+          - 45
+          - 46
+        evidence: '"What Iran has wanted for 15 years is you supervise us, you control us. Fine,
+          but lift your sanctions. Let us breathe."'
+        note: Abgelegt als Gedanke 7. Lies weiter oder rufe done auf.
+      - round: 9
+        tool: read
+        from: 49
+        count: 12
+        note: Absätze 49–60 von 299.
+      - round: 10
+        tool: record_thought
+        title: Das zerstörte Beweisstück JCPOA
+        core: "Das JCPOA wird zum Beweisstück: 2015 gab es genau die Lösung, die Trump heute zu
+          erzwingen behauptet — multilateral, vom Sicherheitsrat einstimmig gebilligt.
+          Dass sie zerstört wurde, zeigt, dass es nie um Nichtverbreitung ging, sondern
+          um Regimewechsel. Der Vorwand ist durch die eigene Geschichte widerlegt."
+        type: umkehrung
+        paragraphs:
+          - 51
+          - 52
+          - 53
+        evidence: "\"This is the approach that you don't want them to have a nuclear weapon when
+          you had the control. No, this is the opposite.\""
+        note: Abgelegt als Gedanke 8. Lies weiter oder rufe done auf.
+      - round: 10
+        tool: record_thought
+        title: "Zwei Motive: Reputation und Dominanz"
+        core: "Sachs trennt zwei Motive, die oft verschmelzen: Die USA wollen einen Abtrünnigen
+          zurückholen (Reputation), Israel will vollständige militärische Dominanz in
+          Westasien — Iran ist 'der letzte große Preis'. Daraus folgt, warum Israel den
+          Off-Ramp noch stärker ablehnt als die USA: Für Israel ist der Ausstieg kein
+          Gesichtsverlust, sondern ein unerledigtes Projekt."
+        type: unterscheidung
+        paragraphs:
+          - 55
+          - 56
+          - 57
+          - 58
+        evidence: "\"That's Israel saying, 'We control almost all of the Middle East militarily,
+          but Iran we don't yet control.' So that's the last big prize.\""
+        note: Abgelegt als Gedanke 9. Lies weiter oder rufe done auf.
+      - round: 11
+        tool: read
+        from: 61
+        count: 12
+        note: Absätze 61–72 von 299.
+      - round: 12
+        tool: record_thought
+        title: "Clean Break: Gegner eine Ebene höher"
+        core: "Die 'Clean Break'-Strategie ist der Schlüssel zur Logik: Statt militante Gruppen
+          direkt zu bekämpfen, werden die Staaten angegriffen, die sie stützen. Der
+          Krieg gegen Iran ist damit kein Sonderfall, sondern die konsequente Anwendung
+          eines 30 Jahre alten Plans — die Gegner werden eine Ebene höher gesucht."
+        type: begriff
+        paragraphs:
+          - 66
+          - 68
+        evidence: '"rather than fighting those militant groups directly, we need to bring down
+          the governments in the Middle East and West Asia that support those groups."'
+        note: Abgelegt als Gedanke 10. Lies weiter oder rufe done auf.
+      - round: 12
+        tool: record_thought
+        title: Der Bruch mit dem Völkerrecht
+        core: "'Clean Break' ist wörtlich zu nehmen: der Bruch mit 'Land für Frieden' und dem
+          Völkerrecht. Der Begriff markiert also nicht nur eine Strategie, sondern die
+          Verabschiedung einer Rechtsgrundlage — Großisrael als religiös-territorialer
+          Anspruch 'vom Strom Ägyptens bis zum Euphrat'."
+        type: ausdruck
+        paragraphs:
+          - 69
+          - 70
+          - 71
+        evidence: '"The clean break was the clean break from the peace accords, from the land
+          for peace idea"'
+        note: Abgelegt als Gedanke 11. Lies weiter oder rufe done auf.
+      - round: 13
+        tool: read
+        from: 73
+        count: 12
+        note: Absätze 73–84 von 299.
+      - round: 14
+        tool: record_thought
+        title: Die sieben Kriege
+        core: "Sachs zählt sieben Kriege auf — Libyen, Sudan, Somalia, Libanon, Syrien, Irak,
+          Iran — und sechs davon sind bereits in Chaos versunken. Das ist die stärkste
+          empirische Stütze seiner These: Die Bilanz ist keine Serie von Fehlschlägen,
+          sondern ein Muster mit Erfolgsbilanz aus Sicht der Chaos-Profiteure."
+        type: verbindung
+        paragraphs:
+          - 74
+          - 75
+          - 76
+          - 77
+        evidence: '"Six of those wars have led to bloodbaths and disasters"'
+        note: Abgelegt als Gedanke 12. Lies weiter oder rufe done auf.
+      - round: 14
+        tool: record_thought
+        title: Chaos als Zielgröße
+        core: "Chaos wird hier nicht als Kollateralschaden, sondern als Zielgröße lesbar:
+          Zerrüttete Staaten können sich nicht zusammenschließen, und die Hegemonie
+          bleibt unangefochten. 'What could be better?' — die Frage entlarvt die
+          humanitäre Rhetorik als bloße Verpackung."
+        type: umkehrung
+        paragraphs:
+          - 77
+          - 78
+          - 79
+        evidence: '"That means we are the military hegemon for all of that region stretching
+          from Libya to Iraq. Chaos is great."'
+        note: Abgelegt als Gedanke 13. Lies weiter oder rufe done auf.
+      - round: 15
+        tool: read
+        from: 85
+        count: 12
+        note: Absätze 85–96 von 299.
+      - round: 16
+        tool: record_thought
+        title: Enthauptung als Ölgeschäft
+        core: "Sachs fügt eine dritte Motivschicht hinzu: das Öl als Beute. Trump habe aus
+          Venezuela gelernt, dass Enthauptung plus Regimewechsel den Zugriff auf
+          Rohstoffe bedeutet — und auf Iran übertragen. Der Krieg erscheint damit nicht
+          als Sicherheitspolitik, sondern als Aneignungsgeschäft."
+        type: verbindung
+        paragraphs:
+          - 85
+          - 87
+        evidence: '"I can do a decapitation and then own the oil of that country."'
+        note: Abgelegt als Gedanke 14. Lies weiter oder rufe done auf.
+      - round: 16
+        tool: record_thought
+        title: Grausam, illegal, wahnhaft
+        core: "Sachs' Formel 'grausam, illegal, wahnhaft' trennt die Bewertung von der Existenz
+          der Motive: Es gab Gründe für diesen Krieg, nur keine gültigen. Das erklärt,
+          warum der Off-Ramp so schwer ist — er würde alle diese Gründe unerfüllt
+          lassen, und genau das macht ihn richtig."
+        type: ausdruck
+        paragraphs:
+          - 88
+          - 89
+        evidence: '"Cruel, illegal, delusional. ... there were reasons for this war. And taking
+          the off-ramp means that none of those would be fulfilled."'
+        note: Abgelegt als Gedanke 15. Lies weiter oder rufe done auf.
+      - round: 17
+        tool: read
+        from: 97
+        count: 12
+        note: Absätze 97–108 von 299.
+      - round: 18
+        tool: record_thought
+        title: Derselbe Sandsturm auf beiden Seiten
+        core: "Der Sandsturm auf beiden Seiten der Grenze wird zum Bild für die Künstlichkeit
+          politischer Linien: Geteiltes ökologisches Schicksal, getrennte Zuständigkeit.
+          Sachs leitet daraus keine Verschwörung ab, sondern eine Banalität — man
+          braucht kein Geoengineering, wo gemeinsame Probleme gemeinsame Lösungen
+          verlangen."
+        type: ausdruck
+        paragraphs:
+          - 95
+          - 96
+          - 97
+        evidence: "\"there's the sandstorm on one side, the same sandstorm on the other side,
+          and they should be working together\""
+        note: Abgelegt als Gedanke 16. Lies weiter oder rufe done auf.
+      - round: 18
+        tool: record_thought
+        title: Der ersetzte Feind
+        core: "Die Syrien-Bilanz ist die schärfste Ironie: Ein säkularer Staat, der Minderheiten
+          schützte, wird zerstört, um durch einen Jihadisten ersetzt zu werden — also
+          durch genau den Gegner, den man zu bekämpfen behauptete. Und die Zerstörung
+          erfasst Kulturerbe, das Jahrtausende überdauerte, in Stunden."
+        type: umkehrung
+        paragraphs:
+          - 105
+          - 107
+          - 108
+        evidence: '"to take a secular government that protected religious minorities ... and
+          replace it with a guy we thought we were fighting against"'
+        note: Abgelegt als Gedanke 17. Lies weiter oder rufe done auf.
+      - round: 19
+        tool: read
+        from: 109
+        count: 12
+        note: Absätze 109–120 von 299.
+      - round: 20
+        tool: record_thought
+        title: Sich in die eigene Rhetorik hineinreden
+        core: "Carlson beschreibt einen Mechanismus, den Sachs bestätigt: Man redet sich in die
+          eigene Rhetorik hinein. Der Atomvorwurf wird zunächst instrumentell erhoben,
+          dann geglaubt — bis die Existenzangst real wird. Die Lüge wird wahr, weil der
+          Lügner sie schließlich selbst fürchtet."
+        type: begriff
+        paragraphs:
+          - 112
+          - 113
+        evidence: '"if you say it enough, you start to believe that the main threat to your
+          existence is this government"'
+        note: Abgelegt als Gedanke 18. Lies weiter oder rufe done auf.
+      - round: 20
+        tool: record_thought
+        title: Präventive Selbstverteidigung als Dauerzustand
+        core: "Sachs leitet aus der präventiven Selbstverteidigung eine Logik ab: Wer glaubt,
+          vorbeugend töten zu müssen, und Gespräche ausschließt, wird zum 'non-stop
+          killer'. Der Sparta-Vergleich zeigt die Konsequenz — ein Staat, der die
+          Fähigkeit zur Diplomatie verloren hat und nur noch Diplomaten besitzt."
+        type: verbindung
+        paragraphs:
+          - 114
+          - 115
+          - 116
+          - 117
+          - 118
+        evidence: '"If you live like that, you end up as a killer non-stop."'
+        note: Abgelegt als Gedanke 19. Lies weiter oder rufe done auf.
+      - round: 21
+        tool: read
+        from: 121
+        count: 12
+        note: Absätze 121–132 von 299.
+      - round: 22
+        tool: record_thought
+        title: Zwei Varianten, eine Koalition
+        core: "Sachs unterscheidet zwei Varianten israelischer Radikalität, die heute eine
+          Koalition bilden: eine säkulare Sicherheitsvariante (Netanjahu, 'töten bevor
+          sie töten') und eine theologisch-messianische (Ben-Gvir, Smotrich). Beide
+          treffen sich im Ergebnis, obwohl ihre Begründungen verschieden sind."
+        type: unterscheidung
+        paragraphs:
+          - 127
+          - 128
+          - 131
+          - 132
+        evidence: '"two variants of Israeli extremism that are not the same, but they are now
+          literally a coalition"'
+        note: Abgelegt als Gedanke 20. Lies weiter oder rufe done auf.
+      - round: 22
+        tool: record_thought
+        title: Kein Ausweg ohne Anerkennung
+        core: "Der entscheidende Punkt ist die Verweigerung der Anerkennung: Wer die Menschen,
+          die er expropriiert hat, nicht als Gesprächspartner denkt, kann keinen Ausweg
+          formulieren. Netanjahus fehlender Off-Ramp ist deshalb kein Taktikproblem,
+          sondern Folge eines Ausgangspunkts, der die andere Seite als Mensch nicht
+          vorsieht."
+        type: umkehrung
+        paragraphs:
+          - 121
+          - 123
+          - 124
+        evidence: "\"his starting point is something obnoxious which is we don't recognize the
+          people that live among us\""
+        note: Abgelegt als Gedanke 21. Lies weiter oder rufe done auf.
+      - round: 23
+        tool: read
+        from: 133
+        count: 12
+        note: Absätze 133–144 von 299.
+      - round: 24
+        tool: record_thought
+        title: Der säkulare Ursprung, die späte Theologie
+        core: "Sachs' historische Pointe: Der ursprüngliche Zionismus war säkular, ja
+          anti-rabbinisch — Herzl dachte an Uganda, nicht ans Heilige Land. Die
+          rabbinische Tradition hatte sogar geboten, nicht zurückzukehren. Der heutige
+          religiöse Anspruch ist also keine alte Tradition, sondern eine Erfindung des
+          20. Jahrhunderts, verstärkt nach 1967."
+        type: umkehrung
+        paragraphs:
+          - 140
+          - 141
+          - 142
+          - 143
+        evidence: "\"The rabbis had said 1500 years earlier, don't go back to the Holy Land.\""
+        note: Abgelegt als Gedanke 22. Lies weiter oder rufe done auf.
+      - round: 24
+        tool: record_thought
+        title: Die Konvertiten-Fußnote
+        core: "Die Herkunftsfrage wird zur Ironie: Wenn viele Palästinenser Nachfahren
+          konvertierter Juden sind, dann ist der Anspruch 'God gave us that land'
+          biologisch wie historisch unterlaufen. Ben-Gurion habe das in den 30er/40er
+          Jahren selbst so gesehen — was die Frage aufwirft, wie die Vertreibung mit
+          diesem Wissen zu rechtfertigen war."
+        type: begriff
+        paragraphs:
+          - 138
+          - 139
+        evidence: '"calling the Palestinians really the original Jews of the land who probably
+          converted"'
+        note: Abgelegt als Gedanke 23. Lies weiter oder rufe done auf.
+      - round: 25
+        tool: read
+        from: 145
+        count: 12
+        note: Absätze 145–156 von 299.
+      - round: 26
+        tool: record_thought
+        title: Von 'facts on the ground' zur Erlösung
+        core: "Sachs datiert den Umschlag präzise: In den 70ern waren Siedlungen 'facts on the
+          ground' — säkulare Sicherheitspolitik. Wenig später tanzen junge Zeloten in
+          Jerusalem und erklären dieselben Orte zur göttlichen Verheißung. Aus
+          Verwaltung wird Erlösung; die Begründung wechselt, das Projekt bleibt."
+        type: unterscheidung
+        paragraphs:
+          - 145
+          - 146
+          - 147
+          - 148
+          - 149
+        evidence: "\"This was suddenly now the redemption of God's promise. This was something
+          new.\""
+        note: Abgelegt als Gedanke 24. Lies weiter oder rufe done auf.
+      - round: 26
+        tool: record_thought
+        title: Christlicher Zionismus als Endzeit-Projekt
+        core: "Die überraschendste Verbindung: Der Zionismus ist nicht jüdisch entsprungen,
+          sondern wurde von christlichen Zionisten mitgetragen — einer
+          Endzeit-Theologie, die Juden im Heiligen Land braucht, damit die Wiederkunft
+          stattfinden kann. Dass diese Leute oft Antisemiten waren, die Juden loswerden
+          wollten, macht die Allianz zur strukturellen Ironie."
+        type: verbindung
+        paragraphs:
+          - 151
+          - 152
+          - 153
+          - 154
+        evidence: '"these Christian Zionists were often rather confirmed anti-semites ... they
+          wanted them conveniently anyway out of Britain and back in the Holy Land"'
+        note: Abgelegt als Gedanke 25. Lies weiter oder rufe done auf.
+      - round: 27
+        tool: read
+        from: 157
+        count: 12
+        note: Absätze 157–168 von 299.
+      - round: 28
+        tool: record_thought
+        title: Selbstmord auf Kredit
+        core: "Sachs' Vorwurf an Israel ist nicht primär moralisch an den Opfern, sondern
+          existenziell am Täter: Israel begehe Selbstmord, weil es sich außerhalb der
+          Zivilisation, des Völkerrechts und der Weltöffentlichkeit stellt und dabei auf
+          eine unbedingte US-Garantie baut, die nicht halten wird."
+        type: umkehrung
+        paragraphs:
+          - 161
+          - 162
+          - 163
+        evidence: '"I said to him that I thought Israel was and is committing suicide."'
+        note: Abgelegt als Gedanke 26. Lies weiter oder rufe done auf.
+      - round: 28
+        tool: record_thought
+        title: Der abrupte Umschwung
+        core: "Sachs erwartet keinen langsamen Stimmungswandel, sondern einen abrupten Bruch —
+          beschleunigt durch die Wirtschaftskrise. Die politische Ökonomie wird zum
+          Zeitmesser: Wenn in vier Wochen halb Golf zerstört ist, entscheidet nicht mehr
+          Moral, sondern Einkommen."
+        type: verbindung
+        paragraphs:
+          - 164
+          - 165
+          - 166
+          - 167
+          - 168
+        evidence: "\"wait a few weeks what it's going to be like when their incomes are
+          decimated\""
+        note: Abgelegt als Gedanke 27. Lies weiter oder rufe done auf.
+      - round: 29
+        tool: read
+        from: 169
+        count: 12
+        note: Absätze 169–180 von 299.
+      - round: 30
+        tool: record_thought
+        title: Die ausgelassenen Evangelien
+        core: "Sachs' bibelhermeneutischer Einwand: Der Christian Zionism liest nur Genesis
+          15/18, Josua und Offenbarung — und lässt die Evangelien aus. Die Bergpredigt
+          mit ihrer radikalen Versöhnung und Gewaltlosigkeit steht in direktem Gegensatz
+          zum Projekt. Die Auswahl der Textstellen ist selbst die Ideologie."
+        type: unterscheidung
+        paragraphs:
+          - 169
+          - 171
+          - 174
+          - 175
+        evidence: '"you can only support Christian Zionism if you ignore the Gospels"'
+        note: Abgelegt als Gedanke 28. Lies weiter oder rufe done auf.
+      - round: 30
+        tool: record_thought
+        title: 230 Jahre ohne Angriff
+        core: "Gegen die Bedrohungserzählung setzt Sachs eine schlichte empirische Prüfung: Iran
+          hat seit den 1790er Jahren kein Land angegriffen. Die Frage 'Was macht Israel
+          dann?' beruht auf einer Prämisse, die die Fakten nicht stützen — Iran will
+          einen Platz in der Welt, nicht die Zerstörung Israels."
+        type: umkehrung
+        paragraphs:
+          - 178
+          - 179
+          - 180
+        evidence: '"Iran is not out to destroy Israel. Iran does not want to be destroyed by a
+          petulant annoyed American empire from which it escaped."'
+        note: Abgelegt als Gedanke 29. Lies weiter oder rufe done auf.
+      - round: 31
+        tool: read
+        from: 181
+        count: 12
+        note: Absätze 181–192 von 299.
+      - round: 32
+        tool: record_thought
+        title: Der getötete Fatwa-Geber
+        core: "Die schärfste Ironie des Textes: Wer Iran am Bau einer Bombe hindern will, tötet
+          ausgerechnet den Geistlichen, der die Bombe per Fatwa verboten hatte. Die
+          Handlung widerlegt das Ziel — ein Beweis, dass es nicht um Nichtverbreitung
+          ging."
+        type: umkehrung
+        paragraphs:
+          - 185
+          - 186
+          - 187
+        evidence: '"you would not kill the religious leader who issued the decree that nuclear
+          weapons are against the religion"'
+        note: Abgelegt als Gedanke 30. Lies weiter oder rufe done auf.
+      - round: 32
+        tool: record_thought
+        title: Milizen als Symptom, nicht Ursache
+        core: "Sachs argumentiert, dass die Hamas-/Hisbollah-Unterstützung eine Funktion der
+          Palästinafrage ist: Entsteht ein palästinensischer Staat, endet die
+          Unterstützung. Damit wird die Reihenfolge umgedreht — nicht die Milizen sind
+          die Ursache, sondern die fehlenden politischen Rechte sind es."
+        type: verbindung
+        paragraphs:
+          - 182
+          - 183
+        evidence: '"Iran has supported Hezbollah and Hamas and it would stop supporting Hamas
+          and Hezbollah if there is a Palestinian state alongside the state of Israel"'
+        note: Abgelegt als Gedanke 31. Lies weiter oder rufe done auf.
+      - round: 33
+        tool: read
+        from: 193
+        count: 12
+        note: Absätze 193–204 von 299.
+      - round: 34
+        tool: record_thought
+        title: Asymmetrie, die Iran akzeptiert
+        core: "Sachs' Pointe zur Asymmetrie: Israel unterwirft sich keiner IAEA-Kontrolle, Iran
+          hat sie angeboten — asymmetrisch, aber akzeptiert. Der Off-Ramp ist also nicht
+          nur sicherheitspolitisch unbedenklich, sondern die einzige Konstellation, in
+          der Nichtverbreitung überhaupt real wäre."
+        type: unterscheidung
+        paragraphs:
+          - 194
+        evidence: "\"Israel doesn't abide by of course at all so it's already asymmetric but
+          Iran has said okay we'll do it asymmetrically\""
+        note: Abgelegt als Gedanke 32. Lies weiter oder rufe done auf.
+      - round: 34
+        tool: record_thought
+        title: Die verschobene Frage
+        core: "Auf die Frage, ob Trump Netanjahu bändigen könne, antwortet Sachs mit einer
+          Verschiebung: Die Frage ist nicht, ob Trump einen anderen kontrolliert,
+          sondern ob er sich selbst kontrolliert. Die eigentliche Souveränität, um die
+          es geht, ist die über die eigenen Impulse."
+        type: umkehrung
+        paragraphs:
+          - 203
+          - 204
+        evidence: '"Of course. The question is, can Trump constrain himself?"'
+        note: Abgelegt als Gedanke 33. Lies weiter oder rufe done auf.
+      - round: 35
+        tool: read
+        from: 205
+        count: 12
+        note: Absätze 205–216 von 299.
+      - round: 36
+        tool: record_thought
+        title: Partnerschaft statt Marionette
+        core: "Sachs beschreibt das Verhältnis als echte Partnerschaft, nicht als israelische
+          Fernsteuerung: Amerikanisches Hegemonialstreben und israelische
+          Regionaldominanz decken sich, ebenso Rache und Ölzugriff. Israels
+          Kriegsfähigkeit von Libyen bis Iran ist eine amerikanische Fähigkeit — und
+          Amerika blutet daran aus."
+        type: verbindung
+        paragraphs:
+          - 207
+          - 208
+          - 209
+          - 210
+        evidence: "\"That's an American capacity, but we're bleeding from it. We're bleeding
+          from Israel's wars.\""
+        note: Abgelegt als Gedanke 34. Lies weiter oder rufe done auf.
+      - round: 36
+        tool: record_thought
+        title: Kanonen statt Zähne
+        core: "Der 'Washington gaffe' ist die Wahrheit: Kriege und Gesundheitsversorgung sind
+          dieselbe Budgetfrage. Der Haushalt erhöht das Militär um eine halbe Billion
+          und senkt die Leistungen — die Priorität ist damit offen dokumentiert. Sachs
+          liest die Zahlen als moralische Aussage."
+        type: ausdruck
+        paragraphs:
+          - 212
+          - 214
+          - 215
+        evidence: "\"We can't afford the wars and those things like child care, Medicare, and
+          Medicaid\""
+        note: Abgelegt als Gedanke 35. Lies weiter oder rufe done auf.
+      - round: 37
+        tool: read
+        from: 217
+        count: 12
+        note: Absätze 217–228 von 299.
+      - round: 38
+        tool: record_thought
+        title: Der Modellbauer der Ölschocks
+        core: "Sachs' Autorität in der kommenden Frage ist biographisch fundiert: Seine
+          Dissertation und sein Buch von 1982 modellierten genau die Ölschocks von 1973
+          und 1979. Die Prognose ist damit keine Meinung, sondern die Wiederholung eines
+          bereits durchgerechneten historischen Musters."
+        type: begriff
+        paragraphs:
+          - 225
+          - 226
+        evidence: '"I wrote the first model of what how they worked, why they had such negative
+          effects after 73 after 73 and 79."'
+        note: Abgelegt als Gedanke 36. Lies weiter oder rufe done auf.
+      - round: 38
+        tool: record_thought
+        title: Stagflation als Paradox
+        core: "Stagflation wird als Paradox definiert: Rückgang und Inflation zugleich — weniger
+          Einkommen, höhere Preise. Genau das ist der erwartete Zustand nach einem
+          Angriff auf die Golfinfrastruktur, und es ist die ökonomische Form dessen, was
+          politisch als 'Krise' bezeichnet wird."
+        type: begriff
+        paragraphs:
+          - 227
+          - 228
+        evidence: '"a contraction and an inflation. So people had less money coming in and
+          everything costs more to buy."'
+        note: Abgelegt als Gedanke 37. Lies weiter oder rufe done auf.
+      - round: 39
+        tool: read
+        from: 229
+        count: 12
+        note: Absätze 229–240 von 299.
+      - round: 40
+        tool: record_thought
+        title: Abschalten versus Zerstören
+        core: "Der entscheidende Unterschied zu 1973/79: Damals wurde der Fluss gestoppt, jetzt
+          würde die Infrastruktur zerstört. Ein Embargo ist reversibel, eine zerstörte
+          Raffinerie nicht. Sachs verschiebt damit die Kategorie von 'Unterbrechung' zu
+          'Substanzverlust'."
+        type: unterscheidung
+        paragraphs:
+          - 229
+          - 231
+          - 232
+          - 233
+        evidence: "\"the oil got turned off but the oil fields weren't destroyed. There was no
+          war in the oil fields.\""
+        note: Abgelegt als Gedanke 38. Lies weiter oder rufe done auf.
+      - round: 40
+        tool: record_thought
+        title: Von Gas zu Brot
+        core: "Die Kette reicht vom Erdgas über Ammoniak zum Stickstoffdünger: Eine
+          Unterbrechung der Golfproduktion ist eine Nahrungsmittelkrise, nicht nur eine
+          Energiekrise. Und die Raffinerien sind Hochtechnologieanlagen, die für Frieden
+          gebaut wurden — nicht für Krieg."
+        type: verbindung
+        paragraphs:
+          - 233
+          - 235
+          - 237
+          - 239
+        evidence: '"they are not built for war. They are built for just normal, peaceful,
+          complex, sophisticated operations."'
+        note: Abgelegt als Gedanke 39. Lies weiter oder rufe done auf.
+      - round: 41
+        tool: read
+        from: 241
+        count: 12
+        note: Absätze 241–252 von 299.
+      - round: 42
+        tool: record_thought
+        title: "Die Kaskade: Zerstörung, Realwirtschaft, Finanzmärkte"
+        core: "Sachs beschreibt eine Kaskade in drei Stufen: physische Zerstörung, dann
+          Realwirtschaft, dann Finanzmärkte — bis hin zum Bank Run auf ein Land, das als
+          sicherer Hafen der Region gilt. Die Emirate fragen bereits nach Swap-Linien;
+          das ist der Frühindikator."
+        type: verbindung
+        paragraphs:
+          - 242
+          - 243
+          - 244
+          - 245
+          - 246
+        evidence: '"first you get the physical destruction then you get the real economy ... But
+          then you get the financial effects"'
+        note: Abgelegt als Gedanke 40. Lies weiter oder rufe done auf.
+      - round: 42
+        tool: record_thought
+        title: Koinzidenz statt Addition
+        core: "Die eigentliche Gefahr liegt in der Koinzidenz: Ein Super-El-Niño trifft auf eine
+          bereits fragile Welt und auf die Zerstörung im Golf. Sachs erinnert daran,
+          dass 1973/74 ebenfalls ein El-Niño-Jahr war — die Kombination aus
+          Energieschock und Ernteausfall trieb die Nahrungsmittelpreise. Zwei Schocks,
+          die sich multiplizieren statt addieren."
+        type: verbindung
+        paragraphs:
+          - 247
+          - 250
+          - 251
+          - 252
+        evidence: "\"if you combine a mass destruction in West Asia, the Gulf, the Eastern
+          Mediterranean, with a super El Nino, I don't even know\""
+        note: Abgelegt als Gedanke 41. Lies weiter oder rufe done auf.
+      - round: 43
+        tool: read
+        from: 253
+        count: 12
+        note: Absätze 253–264 von 299.
+      - round: 44
+        tool: record_thought
+        title: Zündschnüre statt Strategie
+        core: "Die Eskalation wird nicht durch Absicht, sondern durch Geschwindigkeit
+          gefährlich: Eine chinesische Flotte fährt in den Golf, Entscheidungen fallen
+          in Sekunden, Systeme wie Maven könnten 'shoot' sagen. Sachs' Bild ist das der
+          Zündschnüre — nicht ein Plan, sondern viele entzündete Fäden ohne
+          Kontrollinstanz."
+        type: begriff
+        paragraphs:
+          - 253
+          - 254
+          - 255
+          - 257
+          - 259
+        evidence: "\"we're just lighting fuses that could blow up everything if we choose the
+          ramp of escalation\""
+        note: Abgelegt als Gedanke 42. Lies weiter oder rufe done auf.
+      - round: 44
+        tool: record_thought
+        title: Katastrophe als Fehlkalkulation
+        core: "Sachs' Antwort auf die Endzeitfrage ist eine Geschichtstheorie: Katastrophen
+          geschehen nicht durch Prophezeiung, sondern durch Fehlkalkulation, fehlende
+          Kommunikation und den Zusammenbruch systematischer Verfahren. Das ist die
+          säkulare Alternative zur Providenz — und zugleich die tröstlichere, weil sie
+          Handlungsspielraum lässt."
+        type: umkehrung
+        paragraphs:
+          - 260
+          - 262
+          - 263
+          - 264
+        evidence: "\"Terrible things happen because individual leaders and governments make
+          miscalculations. They don't talk to each other.\""
+        note: Abgelegt als Gedanke 43. Lies weiter oder rufe done auf.
+      - round: 45
+        tool: read
+        from: 265
+        count: 12
+        note: Absätze 265–276 von 299.
+      - round: 46
+        tool: record_thought
+        title: Overload und Nichtlinearität
+        core: "Sachs' Begriff 'Overload' meint Nichtlinearität: In Krisen haben Entscheidungen
+          sehr große, sprunghafte Folgen, und genau dann entscheiden Einzelne. Das ist
+          die Umkehrung der Systemthese — nicht Strukturen, sondern Personen retten oder
+          zerstören die Welt."
+        type: begriff
+        paragraphs:
+          - 265
+          - 266
+        evidence: '"these are really big choices and the truth is individuals make a big
+          difference at times like this"'
+        note: Abgelegt als Gedanke 44. Lies weiter oder rufe done auf.
+      - round: 46
+        tool: record_thought
+        title: ExComm und das Fehlen eines Verfahrens
+        core: "Die Kubakrise dient als Kontrastfolie: ExComm, Protokolle, Hinterkanäle, U Thant
+          als Vermittler, Kongresskonsultation — und am Ende rettete Kennedys Kühle die
+          Welt gegen die Heißsporne im Militär. Heute fehlt jede dieser Instanzen: kein
+          interagency review, keine Geheimdienstbewertung, keine Joint Chiefs. Die
+          Abwesenheit von Verfahren ist die eigentliche Gefahr."
+        type: unterscheidung
+        paragraphs:
+          - 267
+          - 270
+          - 271
+          - 274
+          - 275
+          - 276
+        evidence: "\"it was President Kennedy's cool and rationality and decency that saved the
+          world\""
+        note: Abgelegt als Gedanke 45. Lies weiter oder rufe done auf.
+      - round: 47
+        tool: read
+        from: 277
+        count: 12
+        note: Absätze 277–288 von 299.
+      - round: 48
+        tool: record_thought
+        title: Artikel I und die verweigerte Aufsicht
+        core: "Sachs' Verfassungsargument ist präzise: Kriegserklärung liegt nach Artikel I
+          allein beim Kongress, nicht geteilt mit dem Präsidenten. Dass fast alle
+          Republikaner und fast alle Demokraten die Aufsicht verweigern, ist für ihn
+          kein politisches, sondern ein Verfallszeichen — 'late stage republics'."
+        type: begriff
+        paragraphs:
+          - 280
+          - 281
+          - 282
+          - 283
+        evidence: '"they are the only branch that can declare war"'
+        note: Abgelegt als Gedanke 46. Lies weiter oder rufe done auf.
+      - round: 48
+        tool: record_thought
+        title: Deliberation als Maßstab, nicht Ideologie
+        core: "Die überraschende Umkehrung: China habe die deliberativsten Verfahren, die Sachs
+          kennt — zwei Jahre Detailberatung über Zukunftsbranchen. Das Bild vom
+          allentscheidenden Xi hält er für westliche Projektion. Die Gegenüberstellung
+          ist nicht ideologisch, sondern prozedural: Wo wird beraten, wo nicht?"
+        type: umkehrung
+        paragraphs:
+          - 284
+          - 285
+          - 286
+          - 287
+        evidence: '"China has among the most deliberative processes that I see in any government
+          in the world"'
+        note: Abgelegt als Gedanke 47. Lies weiter oder rufe done auf.
+      - round: 49
+        tool: read
+        from: 289
+        count: 12
+        note: Absätze 289–299 von 299.
+      - round: 50
+        tool: record_thought
+        title: Der Kongress, der einmal funktionierte
+        core: "Der Schluss verschiebt die Frage von Außenpolitik zu Verfassungsfrage: Nicht ob
+          Amerika die Welt führen soll, sondern ob ein System funktioniert, in dem ein
+          Einzelner aus Bauchgefühl entscheidet. Sachs' Erinnerung an den Kongress der
+          70er — Hearings, Papiere, Fulbright, Löwen des Senats — ist die Gegenprobe zur
+          Gegenwart."
+        type: ausdruck
+        paragraphs:
+          - 293
+          - 294
+          - 295
+          - 296
+          - 297
+        evidence: "\"It doesn't have to dissolve or devolve to one person operating on gut
+          hunches based on delusions of grandeur\""
+        note: Abgelegt als Gedanke 48. Lies weiter oder rufe done auf.
+      - round: 50
+        tool: record_thought
+        title: Der Größenwahn als Gewohnheit
+        core: "Der 'America reigns supreme'-Glaube wird als das eigentliche Delirium benannt:
+          eine imperiale Gewohnheit aus der Nachkriegszeit, die in einer Welt vieler
+          Atommächte nicht mehr trägt. Die Alternative ist nicht Schwäche, sondern
+          Kooperation — 'get along, understand each other, cooperate'."
+        type: umkehrung
+        paragraphs:
+          - 289
+          - 290
+          - 291
+        evidence: '"We have one overwhelming delusion ... that America reigns supreme in the
+          world."'
+        note: Abgelegt als Gedanke 49. Lies weiter oder rufe done auf.
+      - round: 51
+        tool: done
+        note: Lesen beendet.
+  - source_id: prof-did-netanyahu-plot-a-tehran-coup
+    segment_id: prof-did-netanyahu-plot-a-tehran-coup
+    stop: done
+    steps:
+      - round: 1
+        tool: read
+        from: 1
+        count: 12
+        note: Absätze 1–12 von 116.
+      - round: 2
+        tool: read
+        from: 13
+        count: 12
+        note: Absätze 13–24 von 116.
+      - round: 3
+        tool: record_thought
+        title: Rechtsrhetorik als Waffe der Täter
+        core: 'Sachs dreht die moralische Grammatik um: Die USA sprechen die Sprache des Rechts,
+          während sie Handlungen begehen, die sie anderen als Verbrechen vorwerfen. Der
+          Begriff „Mord" wird nicht moralisch, sondern juristisch-distributiv verwendet
+          — er markiert, wer definitionsmächtig ist. Die Pointe: Nicht die Tat
+          unterscheidet Freund und Feind, sondern die Zuschreibung.'
+        type: umkehrung
+        paragraphs:
+          - 19
+          - 20
+          - 21
+          - 22
+          - 23
+        evidence: "\"We are using words of law by gangsters on our side who commit far worse
+          abuses than anything we're claiming of other countries.\""
+        note: Abgelegt als Gedanke 0. Lies weiter oder rufe done auf.
+      - round: 4
+        tool: read
+        from: 25
+        count: 12
+        note: Absätze 25–36 von 116.
+      - round: 5
+        tool: record_thought
+        title: Normalisierung als eigentliche Verletzung
+        core: 'Sachs nennt eine Kontinuität über fünf Administrationen (Bush jr., Obama, Trump
+          I, Biden, Trump II). Das ist keine Parteikritik, sondern eine
+          Strukturdiagnose: außergerichtliche Tötung ist kein Ausrutscher, sondern
+          Bestandteil des Handwerks („statecraft"). Die Pointe liegt im Wort
+          „normalized" — die Normverletzung wird durch Wiederholung zur Norm.'
+        type: verbindung
+        paragraphs:
+          - 28
+          - 29
+          - 30
+        evidence: '"this kind of extrajudicial killing is part and parcel of American statecraft
+          at least in the 21st century"'
+        note: Abgelegt als Gedanke 1. Lies weiter oder rufe done auf.
+      - round: 6
+        tool: read
+        from: 37
+        count: 12
+        note: Absätze 37–48 von 116.
+      - round: 7
+        tool: record_thought
+        title: Die Beteuerung der Kontrolle als ihr Gegenteil
+        core: 'Napolitano fragt, ob Trump Netanyahu steuert oder umgekehrt. Die Frage ist selbst
+          die Antwort: Wer öffentlich beteuert, der andere tue „whatever I want",
+          liefert das Eingeständnis der Abhängigkeit mit. Die Behauptung der Kontrolle
+          ist das Symptom ihres Fehlens.'
+        type: umkehrung
+        paragraphs:
+          - 46
+          - 47
+          - 48
+        evidence: "\"he says this twice, he'll do whatever I want him to do. And I'm wondering
+          if it's really the other way around.\""
+        note: Abgelegt als Gedanke 2. Lies weiter oder rufe done auf.
+      - round: 8
+        tool: read
+        from: 49
+        count: 12
+        note: Absätze 49–60 von 116.
+      - round: 9
+        tool: record_thought
+        title: Nicht Marionette, sondern Genehmiger
+        core: 'Sachs löst die Puppenspieler-Frage auf, indem er beide Optionen verwirft: Trump
+          ist kein ferngesteuerter Akteur, sondern ein eigenständiger Urheber von
+          Rechtsbrüchen, der zustimmt statt gehorcht. „Signed off on" ist der
+          Schlüsselbegriff — nicht Anweisung, sondern Genehmigung. Damit wird die
+          Schuldfrage individualisiert, ohne die Struktur zu leugnen.'
+        type: unterscheidung
+        paragraphs:
+          - 54
+          - 55
+          - 56
+          - 57
+        evidence: "\"every illegal action, every illegal war, every completely bizarre scheme
+          Trump has signed off on. He's not a puppet of Netanyahu. He's just an
+          idiot.\""
+        note: Abgelegt als Gedanke 3. Lies weiter oder rufe done auf.
+      - round: 10
+        tool: read
+        from: 61
+        count: 12
+        note: Absätze 61–72 von 116.
+      - round: 11
+        tool: record_thought
+        title: Regime Change als angemaßtes Bestimmungsrecht
+        core: "Regime Change wird als Anmaßung definiert: nicht Intervention aus Notwehr,
+          sondern die selbstverliehene Befugnis, darüber zu entscheiden, wer anderswo
+          regiert. Der Katalog der Auslöser (Ölkonzession, Militärbasis, Bestechung,
+          Durchmarschrecht) entlarvt das normative Vokabular als Deckmantel materieller
+          Interessen."
+        type: begriff
+        paragraphs:
+          - 61
+          - 62
+        evidence: '"the United States arrogates to itself the claimed right to decide who
+          governs in other countries"'
+        note: Abgelegt als Gedanke 4. Lies weiter oder rufe done auf.
+      - round: 12
+        tool: record_thought
+        title: Der Putsch ist erst verstanden, wenn man das Personal kennt
+        core: "Sachs' Erkenntnisinteresse ist methodisch: Er glaubte nicht an die öffentlich
+          erzählte Variante (Tötung der Führung → Volksaufstand), sondern wartete auf
+          das „inside job\" — die Frage, wer eingesetzt werden sollte. Der Putsch ist
+          erst verstanden, wenn man das Personal kennt, nicht nur die Gewalt. Das ist
+          eine Verschiebung von der Ereignis- zur Personalgeschichte."
+        type: unterscheidung
+        paragraphs:
+          - 69
+          - 70
+          - 71
+          - 72
+        evidence: '"I was waiting for the inside job. Who they were going to put in place. How
+          this coup was actually going to work."'
+        note: Abgelegt als Gedanke 5. Lies weiter oder rufe done auf.
+      - round: 13
+        tool: read
+        from: 73
+        count: 12
+        note: Absätze 73–84 von 116.
+      - round: 14
+        tool: record_thought
+        title: Kosten global, Rechenschaft null
+        core: "Die Kosten des Putsches sind global und sofort (Öl, Benzin, Handel), die
+          Rechenschaft ist strukturell null. Sachs' Antwort „never\" ist keine
+          Resignation, sondern eine Prognose über Anreize: Wer nicht
+          rechenschaftspflichtig ist, hat keinen Grund, Transparenz zu wollen. Der
+          Church Committee von 1975 erscheint als einziger historischer Moment der
+          Kontrolle — 51 Jahre her."
+        type: verbindung
+        paragraphs:
+          - 73
+          - 74
+          - 75
+          - 76
+          - 77
+          - 80
+          - 81
+          - 82
+        evidence: '"The last time that one looked at the horrors under the covers of the CIA was
+          1975. It was called the Church Committee."'
+        note: Abgelegt als Gedanke 6. Lies weiter oder rufe done auf.
+      - round: 15
+        tool: read
+        from: 85
+        count: 12
+        note: Absätze 85–96 von 116.
+      - round: 16
+        tool: record_thought
+        title: "Die Falle: Drohung ohne Handlungsoption"
+        core: "Sachs beschreibt eine Falle, die aus dem Scheitern des Putsches entsteht: Weil
+          der schnelle Regimewechsel misslang, hat Iran Abschreckungsfähigkeit
+          zurückgewonnen. Die USA können militärisch handeln, aber jeder Schlag zerstört
+          die Weltwirtschaft — die Drohung ist stark, die Handlung selbstmörderisch.
+          Bluffen ist dann nicht Schwäche, sondern die einzige rationale Option."
+        type: umkehrung
+        paragraphs:
+          - 91
+          - 92
+          - 93
+          - 94
+          - 95
+        evidence: '"the United States could take military action against Iran, no doubt, but the
+          result would be the destruction of the Middle East."'
+        note: Abgelegt als Gedanke 7. Lies weiter oder rufe done auf.
+      - round: 17
+        tool: record_thought
+        title: Schweigen als Mittäterschaft
+        core: 'Sachs benennt die institutionelle Lücke präzise: Der Sprecher des
+          Repräsentantenhauses und der Mehrheitsführer im Senat sind nicht neutral,
+          sondern durch Schweigen „co-conspirators". Das ist eine Zuschreibung von
+          Verantwortung durch Unterlassen — die Verfassung macht sie zu Mit-Hütern, ihr
+          Nichtstun zu Mittäterschaft.'
+        type: begriff
+        paragraphs:
+          - 85
+          - 86
+        evidence: '"our speaker of the house and our majority leader are co-conspirators because
+          they are silent even though they are a co-equal branch of government"'
+        note: Abgelegt als Gedanke 8. Lies weiter oder rufe done auf.
+      - round: 18
+        tool: read
+        from: 97
+        count: 12
+        note: Absätze 97–108 von 116.
+      - round: 19
+        tool: record_thought
+        title: Abzug statt Abkommen
+        core: "Sachs' Lösung ist bewusst antiheroisch: kein Verhandlungserfolg, keine
+          Gesichtswahrung nötig, nur Abzug — und Trump darf sich als Sieger inszenieren.
+          Die Rhetorik des Triumphs wird als beliebig entlarvt („Who cares what he
+          says\"). Der Ausweg verlangt nicht Wahrheit, sondern nur das Ende der
+          Handlung."
+        type: ausdruck
+        paragraphs:
+          - 98
+          - 99
+          - 100
+          - 101
+          - 106
+          - 107
+          - 108
+        evidence: '"Trump can clear it declare it the greatest success in the history of the
+          world. Who cares what he says. Go home. Stop this."'
+        note: Abgelegt als Gedanke 9. Lies weiter oder rufe done auf.
+      - round: 20
+        tool: record_thought
+        title: Die Prahlerei als Haftungstitel
+        core: "Sachs nimmt Trump beim Wort, um ihn zu binden: Wenn Trump behauptet, Netanyahu
+          tue, was er sage, dann ist jede israelische Fortsetzung Trump zuzurechnen. Die
+          Beteuerung der Kontrolle wird zum Haftungstitel — dieselbe Aussage, die vorher
+          als Prahlerei entlarvt wurde, wird nun als Eingeständnis verwendet."
+        type: verbindung
+        paragraphs:
+          - 104
+          - 105
+        interwoven_with:
+          - 2
+        evidence: "\"Let's take him at his word. He can tell Netanyahu what to do. So, if Israel
+          continues in this way, that's at Trump's bidding.\""
+        note: Abgelegt als Gedanke 10. Lies weiter oder rufe done auf.
+      - round: 21
+        tool: read
+        from: 109
+        count: 8
+        note: Absätze 109–116 von 116.
+      - round: 22
+        tool: record_thought
+        title: "Der Bogen: Freiheitsrhetorik gegen den eigenen Staat"
+        core: 'Der Rahmen der Sendung — die Eingangssequenz über Angriffskriege, Jefferson,
+          „government that governs least" — wird durch das Gespräch nicht eingelöst,
+          sondern bestätigt: Die Sorge um illegitime Gewalt ist kein abstraktes
+          Freiheitsthema, sondern der konkrete Fall Iran/Cuba/Venezuela. Der Bogen
+          schließt sich, indem die Gründungsrhetorik gegen die gegenwärtige Regierung
+          gewendet wird.'
+        type: verbindung
+        paragraphs:
+          - 1
+          - 2
+          - 3
+          - 4
+          - 78
+          - 113
+        evidence: '"Undeclared wars are commonplace." (1) — "this has become commonplace just as
+          it says." (78)'
+        note: Abgelegt als Gedanke 11. Lies weiter oder rufe done auf.
+      - round: 23
+        tool: done
+        note: Lesen beendet.
+  - source_id: professor-the-iran-war-will-break-america
+    segment_id: professor-the-iran-war-will-break-america
+    stop: done
+    steps:
+      - round: 1
+        tool: read
+        from: 1
+        count: 12
+        note: Absätze 1–12 von 46.
+      - round: 2
+        tool: record_thought
+        title: Der künstliche Krieg
+        core: "Sachs behauptet nicht, der Irankrieg sei falsch kalkuliert — er behauptet, er sei
+          überhaupt nicht nötig gewesen. Die Krise ist nicht aus einem Konflikt geboren,
+          sondern aus einer Entscheidung: 'completely artificial, completely arbitrary'.
+          Damit verschiebt sich die Analyseebene: Die Frage ist nicht, wie man den Krieg
+          gewinnt, sondern warum er überhaupt erfunden wurde."
+        type: begriff
+        paragraphs:
+          - 4
+        evidence: '"we have enough problems in this world without making up new crises"'
+        note: Abgelegt als Gedanke 0. Lies weiter oder rufe done auf.
+      - round: 2
+        tool: record_thought
+        title: Venezuela als Modell — und seine Übertragungsgrenze
+        core: "Trumps Irankrieg ist eine Kopie: Bestechung, Geheimabsprachen mit einem
+          Vizepräsidenten, Umsturz, Öleinnahmen. Der Fehler liegt in der Analogie. Was
+          in der eigenen Hemisphäre funktioniert, wo die USA als Gangster auftreten
+          können, trifft auf ein Land mit fast 100 Millionen Menschen in großer
+          Entfernung, das sich nicht diktieren lässt. Sachs' Pointe: Verbrechen plus
+          Dummheit — die Übertragung eines lokalen Erfolgsrezepts auf einen Fall, in dem
+          die Machtverhältnisse nicht stimmen."
+        type: unterscheidung
+        paragraphs:
+          - 5
+          - 6
+        evidence: "\"He could do it in his own neighborhood in Venezuela. Yes, the United States
+          can be a gangster. [...] But in Iran, it doesn't work that way.\""
+        note: Abgelegt als Gedanke 1. Lies weiter oder rufe done auf.
+      - round: 3
+        tool: read
+        from: 13
+        count: 12
+        note: Absätze 13–24 von 46.
+      - round: 4
+        tool: record_thought
+        title: Chips statt Schutzschild
+        core: "Die Golfstaaten kauften nicht Schutz, sondern ein Bild von Macht — konkret:
+          Nvidia-Chips und Rechenzentren als Belohnung für Gefolgschaft. Sachs nennt das
+          'bought off by this image of U.S. power'. Der Zusammenbruch der Abschreckung
+          ist damit nicht nur militärisch, sondern epistemisch: Die Verbündeten haben
+          sich in der Währung der Technologiezuteilung täuschen lassen."
+        type: ausdruck
+        paragraphs:
+          - 16
+        evidence: '"They were clearly bought off by this image of U.S. power"'
+        note: Abgelegt als Gedanke 2. Lies weiter oder rufe done auf.
+      - round: 4
+        tool: record_thought
+        title: Die Bedrohung sind wir selbst
+        core: "Sachs' Umkehrung: Nicht die Bedrohung erzeugt die Aufrüstung, sondern die
+          Aufrüstung erzeugt die Bedrohung. Wenn man NATO-Erweiterung, Irankrieg,
+          Handelskrieg und die Unterstützung Israels unterließe, 'nothing terrible would
+          happen'. Die einzige existenzielle Gefahr für die USA ist die eigene
+          Aggression. Das ist eine radikale Umstellung der Sicherheitslogik: Sicherheit
+          entsteht durch Unterlassen, nicht durch Handeln."
+        type: umkehrung
+        paragraphs:
+          - 22
+          - 23
+        evidence: "\"there's no threat other than the threats we are making. How weird is
+          that?\""
+        note: Abgelegt als Gedanke 3. Lies weiter oder rufe done auf.
+      - round: 5
+        tool: read
+        from: 25
+        count: 12
+        note: Absätze 25–36 von 46.
+      - round: 6
+        tool: record_thought
+        title: Abfahren statt verhandeln
+        core: "Sachs liefert eine erstaunlich konkrete Deeskalationsanweisung: kein Vertrag,
+          kein Schuldeingeständnis, keine Verhandlung — nur umdrehen und heimfahren,
+          Sieg ausrufen, Ölpreis fällt auf 70 Dollar. Der Ausweg ist also nicht
+          diplomatisch, sondern performativ. Das ist die praktische Konsequenz aus der
+          These vom selbstgemachten Krieg: Was ohne Grund begann, kann ohne Übereinkunft
+          enden."
+        type: ausdruck
+        paragraphs:
+          - 28
+        evidence: "\"You don't have to put on paper that you lost. Just go home. Declare
+          victory.\""
+        note: Abgelegt als Gedanke 4. Lies weiter oder rufe done auf.
+      - round: 6
+        tool: record_thought
+        title: Die versunkenen Kosten als politisches Gesetz
+        core: "Sachs deutet die sunk-cost-Falle nicht als ökonomisches, sondern als
+          politisch-psychologisches Gesetz: Wer etwas offensichtlich Dummes getan hat,
+          muss es fortsetzen, um es nicht eingestehen zu müssen. Der Irankrieg wird
+          damit nicht durch Strategie verlängert, sondern durch die Unfähigkeit zum
+          Eingeständnis. Das erklärt, warum fehlende Erfolgsaussicht kein
+          Abbruchkriterium ist."
+        type: begriff
+        paragraphs:
+          - 25
+          - 27
+        evidence: "\"if you do something incredibly stupid, and it's revealed to be incredibly
+          stupid, you must carry on so as not to admit you did something incredibly
+          stupid\""
+        note: Abgelegt als Gedanke 5. Lies weiter oder rufe done auf.
+      - round: 6
+        tool: record_thought
+        title: Außenpolitik als Spielzeugneid
+        core: "Trump betreibt keine Handelspolitik, sondern Besitzpolitik: Kanada als 51. Staat,
+          Anspruch auf Öl und Arktiszugang, dazu Grönland. Das Muster ist Neid auf
+          Russlands Arktisgrenzen und Gier nach 'liquid gold'. Sachs beschreibt das als
+          kindliches Greifen nach fremdem Spielzeug — Außenpolitik als Aneignungsreflex,
+          nicht als Interessenkalkül."
+        type: ausdruck
+        paragraphs:
+          - 30
+        evidence: '"When he sees that another person or another child has the toys that he
+          wants, he goes to grab them."'
+        note: Abgelegt als Gedanke 6. Lies weiter oder rufe done auf.
+      - round: 7
+        tool: read
+        from: 37
+        count: 10
+        note: Absätze 37–46 von 46.
+      - round: 8
+        tool: record_thought
+        title: Beschleuniger statt Ursache
+        core: "Auf die Frage 'Ursache oder Symptom?' antwortet Sachs mit einer dritten
+          Kategorie: Trump ist Beschleuniger — 'a disease that jumped on to an already
+          weakened immune system'. Die Metapher leistet mehr als die Dichotomie: Sie
+          erlaubt, gleichzeitig über Person und Struktur zu sprechen, ohne die Schuld zu
+          verteilen. Der Körper war krank; der Erreger ist neu."
+        type: unterscheidung
+        paragraphs:
+          - 37
+          - 38
+        evidence: '"He is a disease that jumped on to an already weakened immune system in the
+          U.S."'
+        note: Abgelegt als Gedanke 7. Lies weiter oder rufe done auf.
+      - round: 8
+        tool: record_thought
+        title: Zwei Konstruktionsfehler mit Datum
+        core: "Sachs nennt zwei langfristige Zerstörungsprozesse: den militärisch-industriellen
+          Komplex seit den späten 1940ern (heute inklusive Silicon Valley, Finanzfirmen,
+          CIA) und die von Lewis Powell geplante Korruption des Wahlprozesses bis
+          Citizens United. Beide sind nicht Unfälle, sondern 'by design'. Damit ist die
+          amerikanische Krise keine Führungsschwäche, sondern ein Konstruktionsfehler
+          mit Datum."
+        type: verbindung
+        paragraphs:
+          - 39
+          - 40
+        evidence: '"unaccountable, secretive power of the military industrial complex and
+          corruption of the legislative branch [...] are the two things that destroyed
+          the United States"'
+        note: Abgelegt als Gedanke 8. Lies weiter oder rufe done auf.
+      - round: 8
+        tool: record_thought
+        title: Die Mondale-Lektion
+        core: "Sachs datiert die Ursache der 40-Billionen-Schuld auf eine Wahl von 1984: Mondale
+          sagte die Wahrheit über Steuererhöhungen und verlor 49 Staaten. Die Lehre war
+          nicht ökonomisch, sondern rhetorisch — 'never say you're going to raise
+          taxes'. Seither gibt es nur Steuersenkungen, weil Politik als PR und als
+          Fundraising zugleich funktioniert. Die Schulden sind also das Produkt einer
+          Lektion über Redeverbote."
+        type: begriff
+        paragraphs:
+          - 41
+          - 42
+        evidence: "\"The lesson of the politicians from then on was never say you're going to
+          raise taxes.\""
+        note: Abgelegt als Gedanke 9. Lies weiter oder rufe done auf.
+      - round: 8
+        tool: record_thought
+        title: Die leere Unipolarität
+        core: "Sachs' These von der 'vacuous' Unipolarität verbindet Irankrieg, Ukraine und
+          Handelskrieg zu einem einzigen Muster: Die USA gehen davon aus, dass der
+          Gegner nicht zurückschlägt, und werden in jedem Fall eines Besseren belehrt.
+          Die Pointe ist nicht, dass Amerika schwach ist, sondern dass es seine Macht
+          falsch eingeschätzt hat — und deshalb Kriege führt, die es nicht gewinnen
+          kann."
+        type: verbindung
+        paragraphs:
+          - 19
+        interwoven_with:
+          - 1
+          - 3
+        evidence: "\"The U.S. doesn't have the power it claims to have, period. That's the whole
+          point.\""
+        note: Abgelegt als Gedanke 10. Lies weiter oder rufe done auf.
+      - round: 9
+        tool: done
+        note: Lesen beendet.
+window_merges:
+  - source_id: on-the-real-origins-of-the-iran-war-and-the-coming-economic-devastation
+    segment_id: on-the-real-origins-of-the-iran-war-and-the-coming-economic-devastation
+    notes: 50 → 50
+  - source_id: prof-did-netanyahu-plot-a-tehran-coup
+    segment_id: prof-did-netanyahu-plot-a-tehran-coup
+    notes: 12 → 12
+  - source_id: professor-the-iran-war-will-break-america
+    segment_id: professor-the-iran-war-will-break-america
+    notes: 11 → 11
+topic_merge:
+  groups:
+    - - 3
+      - 59
+    - - 5
+      - 8
+      - 32
+    - - 7
+      - 55
+    - - 11
+      - 12
+    - - 13
+      - 14
+    - - 15
+      - 69
+    - - 19
+      - 53
+    - - 21
+      - 60
+    - - 27
+      - 66
+    - - 28
+      - 68
+    - - 35
+      - 54
+    - - 43
+      - 45
+    - - 46
+      - 50
+    - - 47
+      - 58
+    - - 52
+      - 57
+    - - 63
+      - 70
+    - - 64
+      - 71

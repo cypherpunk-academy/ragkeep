@@ -1,0 +1,210 @@
+topic:
+  author: Julian Assange
+  topic: Cypherpunks
+  thought_topic_id: 4afcaeab-9b92-415a-956e-4b973f130628
+  knowledge_base_collection: knowledgebase
+leitgedanke:
+  text: Weil die scheinbar freie Netzwelt auf kontrollierbaren Infrastrukturen und einem privat-staatlichen Überwachungsverbund beruht, lässt sich Freiheit nur durch Kryptografie, Transparenz und offene, demokratisch prüfbare Technik gegen die Zentralisierung von Macht behaupten.
+  rationale: Die Kapitel zeigen, dass das Netz auf kontrollierbaren Infrastrukturen ruht, Überwachung und Zensur zunehmend vorsorglich und privat-staatlich organisiert sind und Kryptografie, Transparenz sowie offener Code als Gegenmittel dienen. Daraus folgt die politische These, dass Freiheit im Netz nicht natürlich gegeben ist, sondern gegen zentralisierte Macht verteidigt und technisch abgesichert werden muss.
+digest:
+  leitgedanke: Weil die scheinbar freie Netzwelt auf kontrollierbaren Infrastrukturen und einem privat-staatlichen Überwachungsverbund beruht, lässt sich Freiheit nur durch Kryptografie, Transparenz und offene, demokratisch prüfbare Technik gegen die Zentralisierung von Macht behaupten.
+  kernaussagen:
+    - id: K1
+      satz: Das Internet ist kein körperloser Ideenraum, sondern ruht auf physischen und industriellen Infrastrukturen; wer Kabel, Server, Rechenressourcen und zentrale Dienste kontrolliert, beherrscht den scheinbar freien Kommunikationsraum und verengt dessen Offenheit.
+    - id: K2
+      satz: Die Überwachung ist von gezielter Verfolgung auf vorsorgliche Speicherung aller Kommunikation übergegangen; weil Zensur technisch Überwachung voraussetzt, erzeugt sie Selbstzensur, und staatlich verstandene Sicherheit steht in Widerspruch zur technischen Sicherheit der Bürger.
+    - id: K3
+      satz: Staat und Privatwirtschaft bilden einen gemeinsamen Überwachungsverbund; Konzerne werden zu verlängerten Armen der Geheimdienste, asymmetrische Export- und Rechtsregeln schützen eher die Überwachung als den Bürger, und die Dritt-Doktrin macht Datenschutz im Netz nahezu unwirksam.
+    - id: K4
+      satz: "Gegen totale Überwachung hilft der Aufbau kryptografischer Schutzräume: Rechenaufwand, industrielles Eigeninteresse und dezentrale Vertrauensverfahren schaffen Grenzen, die staatlich nicht beliebig überschritten werden können, weshalb der Ausweg nicht im Rückzug aus dem Netz, sondern in der Beherrschung schützender Technik liegt."
+    - id: K5
+      satz: Bewegungs-, Kommunikations- und Wirtschaftsfreiheit brauchen vertrauliche, nicht zentral kontrollierte Infrastruktur; der Übergang ins Netz vergrößert die Reichweite, raubt aber Privatheit, und wer Zahlungsströme kontrolliert, kontrolliert gesellschaftliche Macht und Handlungsmöglichkeiten.
+    - id: K6
+      satz: Das Problem ist nicht zu viel Transparenz, sondern die asymmetrische Geheimhaltung der Mächtigen; erwartete Enthüllung diszipliniert staatliches Handeln, und sichtbares Unrecht sowie geschützte Warnkanäle sind nötig, damit Missstände überhaupt bekämpft werden können.
+    - id: K7
+      satz: Weil Code das Handeln im Netz bestimmt und Technik nicht neutral ist, muss Software offen und demokratisch prüfbar sein; nicht staatliche Vorzensur, sondern mündige Nutzer, freie Software und vielfältige Ausdrucksformen entscheiden über die politische Potenz des Netzes.
+    - id: K8
+      satz: Nationale Regierungen sind keine verlässliche Schutzinstanz mehr, weil Eliten transnational verschmelzen, politische Entscheidungen in geheime Kanäle verschieben und Informationszugang zentralisieren; zugleich eröffnet das Netz eigene Zeiträume und Reichweiten politischer Öffentlichkeit, weshalb der Kampf um ein offenes universelles Netz kein Sonderinteresse, sondern der zentrale politische Kampf ist.
+core_concepts:
+  - id: K1
+    concept_id: 645109bc-9168-50e7-8150-56f94cd8a50b
+    satz: Das Internet ist kein körperloser Ideenraum, sondern ruht auf physischen und industriellen Infrastrukturen; wer Kabel, Server, Rechenressourcen und zentrale Dienste kontrolliert, beherrscht den scheinbar freien Kommunikationsraum und verengt dessen Offenheit.
+    text: |-
+      Das Internet erscheint als ein Raum zirkulierender Ideen, der von keinem Ort abhängt. Tatsächlich aber ruht es auf Glasfaserkabeln am Meeresboden, auf Satelliten und auf Hallen voller Server. Wer diese physische Grundlage beherrscht, kontrolliert den scheinbar körperlosen Kommunikationsraum. Julian Assange beschreibt, wie Staaten sich diese Grundlage aneigneten, indem sie Kabel und Bodenstationen in Beschlag nahmen, und so den Informationsfluss der Überwachung unterwarfen.
+
+      Andy Müller-Maguhn versteht Technik nicht als einzelnes Gerät, sondern als systematisierte Interaktion. Sobald eine Technik zentralisierte Ressourcen verlange, etwa eine Fabrik mit Tausenden Beschäftigten, zentralisiere sich auch die Kontrolle über sie. Assange führt die Halbleiterproduktion als Beispiel an: Ihre strengen Produktionsbedingungen und das angesammelte Wissen sind der Internetbefreiung gewissermaßen einkodiert. Zentralisierte Serverstrukturen setzen sich im wirtschaftlichen Wettbewerb durch, und zentralisierte Infrastruktur macht zentralisierte Kontrolle leicht.
+
+      Für Assange hat das Folgen bis in die private Kommunikation. Wer über das Netz telefoniert oder Nachrichten schickt, dessen Mitteilungen werden von militärischen Geheimdiensten abgefangen; die intimste familiäre Kommunikation ist in eine militarisierte Zone umgezogen, ohne dass die Besatzung sichtbar wäre. Zivilraum und Kriegsraum sind damit nicht mehr getrennt. Jeremie Zimmermann ergänzt, dass Geräte zunehmend mit eingebauter Kontrolle gebaut werden, die Nutzer an bestimmten Anwendungen hindert, und dass gerade deshalb freie Software für eine freie Gesellschaft zählt.
+    candidates:
+      - c253b639-d56a-5cb5-ab58-a796f62b5547
+      - 410b08a8-a1ee-5a1d-9fb9-36ff45700707
+      - 91cb5ac7-9874-5136-aa93-ee421ce62dce
+      - 21ccef18-c62f-57f8-a5f2-b74d2ad8d331
+      - 3597b61e-3036-5c85-a1a4-cdda12f7d540
+    paragraphs: Abs. 4-5,7; 30; 35; 85
+    sprecher:
+      - "-"
+      - ANDY
+      - JULIAN
+    strittig: false
+    warnings:
+      - text_length
+    generated_hash: b7255f8153793a3e
+  - id: K2
+    concept_id: a06306cf-23d6-52bc-be35-2efa12475c80
+    satz: Die Überwachung ist von gezielter Verfolgung auf vorsorgliche Speicherung aller Kommunikation übergegangen; weil Zensur technisch Überwachung voraussetzt, erzeugt sie Selbstzensur, und staatlich verstandene Sicherheit steht in Widerspruch zur technischen Sicherheit der Bürger.
+    text: |-
+      Andy Müller-Maguhn beschreibt den Übergang von der gezielten zur vorsorglichen Überwachung: Früher wurde jemand zur Zielperson, weil er eine bestimmte Position, einen Verdacht oder einen Kontakt aufwies; heute werden standardmäßig alle Kommunikation abgeschöpft und gespeichert, um sie erst später zu filtern. Julian Assange ergänzt, dass damit Verdacht durch Speicherkapazität ersetzt wird. Jacob Appelbaum verweist auf den Fall des AT&T-Technikers Mark Klein, der zeigte, dass die NSA sämtliche über einen Verteiler laufenden Daten und Gespräche auf amerikanischem Boden gegen amerikanische Bürger abfing. Jeremie Zimmermann führt das System Eagle der französischen Firma Amesys an, das an Gaddafi als landesweites Überwachungssystem verkauft wurde.
+
+      Appelbaum argumentiert, Zensur sei ein Nebenprodukt von Überwachung: Um zu prüfen, ob ein Inhalt erlaubt ist, muss das System ihn sehen, und was es sieht, kann es speichern. Die eigentliche Wirkung liegt in der Verhaltensänderung der Wissenden, die sich in Selbstzensur zurückziehen. Zimmermann beschreibt für den Westen eine Zensur, die nicht durch sichtbare Korrektur arbeitet, sondern durch spurloses Entfernen aus Archiven und Indizes, sodass die Geschichte nachträglich nie existiert hat. Müller-Maguhn hält fest, dass technische Sicherheit und staatlich verstandene Sicherheit Gegensätze sind: Der Staat begreift Sicherheit als eigene Einsichtsfähigkeit, weshalb ein funktionierend verschlüsseltes System für ihn eine Bedrohung darstellt. Appelbaum weist darauf hin, dass die Überwachungskapazität alle achtzehn Monate wächst, die Bevölkerung alle fünfundzwanzig Jahre, sodass ein Aufholen durch Abwarten nicht möglich ist. Wer angesichts dessen schützende Technik nicht selbst beherrscht, verfällt in universelle Selbstzensur und meldet sich als politischer Akteur ab.
+    candidates:
+      - 259c229e-5bef-5ec6-8154-f3f1b5ed220f
+      - 91773957-e35f-58c6-84d4-0c5dfdc8328e
+      - ee26b8b5-cd66-5ca8-b125-7d626295d5ac
+      - 014d9cda-a673-569b-a0b6-c8b0f5748d7c
+      - 0de6c0bf-bcdb-5250-bdfc-f31d6ad5e7be
+      - 2ebac5c5-bde9-5252-838e-c785d4c3277a
+    paragraphs: Abs. 39-40; 47; 61; 121-124
+    sprecher:
+      - JULIAN
+      - JEREMIE
+      - JACOB
+      - ANDY
+      - "-"
+    strittig: false
+    warnings:
+      - text_length
+    generated_hash: 6764582f0ee94e73
+  - id: K3
+    concept_id: cfb697aa-d6d7-5055-b07e-be611907fd71
+    satz: Staat und Privatwirtschaft bilden einen gemeinsamen Überwachungsverbund; Konzerne werden zu verlängerten Armen der Geheimdienste, asymmetrische Export- und Rechtsregeln schützen eher die Überwachung als den Bürger, und die Dritt-Doktrin macht Datenschutz im Netz nahezu unwirksam.
+    text: |-
+      Jeremie beschreibt, wie das Posten bei Facebook die Grenze zwischen Privatsphäre, Freundeskreis und Öffentlichkeit verwischt: Wer Daten eingibt, übergibt sie zuerst dem Unternehmen, das sie speichert und Zugang nach eigenen Regeln freigibt. Daran schließt sich eine zweite Verwischung, die Julian benennt: Die Grenze zwischen Staat und Privatwirtschaft ist im Überwachungsgeschäft eingeebnet. Die NSA arbeitete einst mit zehn Hauptauftragnehmern, inzwischen mit über tausend. Weil Geheimdienste auf die Datenbestände von Google und Facebook zugreifen, werden diese Konzerne zu verlängerten Armen der Dienste.
+
+      Andy zeigt die Asymmetrie der Exportkontrollen: Das Wassenaar-Abkommen beschränkt den Export von Verschlüsselung, die Bürger vor Überwachung schützt, während Überwachungsausrüstung frei handelbar bleibt. Sein Grund: Auch demokratische Regierungen haben ein Eigeninteresse an Kontrolle, und wer Überwachungstechnik liefert, erfährt, was der Empfänger abhört und wen er verfolgt.
+
+      Julian führt die rechtliche Seite aus: Gerichte verweigern Datenschutz mit der Begründung, wer einen Dienst nutze, offenbare seine Daten einem Dritten und gebe sie damit freiwillig preis. Im Netz sei jedoch jeder ein Dritter, sodass der Schutzbegriff sich selbst aufhebt. Jacob ergänzt, dass geheime Auskunftsanordnungen den Anbieter zum Schweigen verpflichten und dem Betroffenen die Klage verwehren, weil der Dritte keine verfassungsrechtlichen Gründe zu seinem Schutz geltend machen kann.
+    candidates:
+      - 446f65a8-087c-5e6a-9365-20c670473e08
+      - 07d94971-f50d-5329-8c45-2837fe4aa26b
+      - 4feb2234-c04c-503c-a8a2-1ae068560986
+    paragraphs: Abs. 47; 53-55
+    sprecher:
+      - JEREMIE
+      - ANDY
+      - JULIAN
+    strittig: false
+    warnings: []
+    generated_hash: 67f77786887128c7
+  - id: K4
+    concept_id: 7aba7fd4-5547-54a6-991f-4c7d8f13d699
+    satz: "Gegen totale Überwachung hilft der Aufbau kryptografischer Schutzräume: Rechenaufwand, industrielles Eigeninteresse und dezentrale Vertrauensverfahren schaffen Grenzen, die staatlich nicht beliebig überschritten werden können, weshalb der Ausweg nicht im Rückzug aus dem Netz, sondern in der Beherrschung schützender Technik liegt."
+    text: |-
+      Verschlüsselte Daten beruhen auf einer Eigenschaft des Universums: Informationen lassen sich leichter verschlüsseln als entschlüsseln. Daraus lässt sich nach der Argumentation im Werk ein geschützter Raum bauen, dessen Grenze nicht politisch gesetzt wird, sondern durch Rechenaufwand verteidigt. Ein Staat könnte in ihn nur eindringen, indem er unendliche Mittel aufwendet. Jacob Appelbaum betont, kein Maß an Gewalt löse ein mathematisches Problem; Folter und Hausdurchsuchung blieben möglich, an einem kryptografisch gesicherten Geheimnis aber scheiterten die Spione. Julian Assange ergänzt, dies sei eine Tatsache der Realität wie die Möglichkeit, Atombomben zu bauen.
+
+      Appelbaum führt ein zweites Argument an: Kryptografie verbreitet sich, weil Unternehmen ihre transnationalen Datenströme absichern müssen. Der wirtschaftliche Eigennutz der Konzerne wird so zur Machtbasis, die ein politisches Verbot der Verschlüsselung verhindert. Daraus folgt für ihn, dass der Rückzug aus dem Netz keine Freiheit ist, sondern Entmachtung: Wer offline bleibt, verliert die Möglichkeit, Einfluss zu nehmen. Der Ausweg liegt im gesicherten Bleiben.
+
+      Assange überträgt dieses Muster auf Bitcoin. Das System verlegt die Durchsetzung von Vertrauen aus Gesetz, Regulierung und Prüfung in die Architektur selbst. Rechenleistung kostet Strom, Betrug wird teurer als sein Nutzen, und das Vertrauen ist auf viele Teilnehmer verteilt statt an einer Stelle erzwingbar. Nach seiner Darstellung ist es diese Verteilung, die das System innovativ macht.
+    candidates:
+      - 38e4a543-6bc3-5368-b797-5e1df21eb7f3
+      - ac722224-3972-5aa7-b981-aba7bdb8bf9b
+      - 1e18fefc-f3f9-5818-8155-665975cb73f4
+      - babe4d40-4c53-509c-a0d4-eb3593a19501
+    paragraphs: Abs. 8,10-11; 61; 108
+    sprecher:
+      - "-"
+      - JACOB
+      - JULIAN
+    strittig: false
+    warnings: []
+    generated_hash: e1df0529c02d3760
+  - id: K5
+    concept_id: d9c07f3f-d912-51f0-9cc8-79a2d23d7f07
+    satz: Bewegungs-, Kommunikations- und Wirtschaftsfreiheit brauchen vertrauliche, nicht zentral kontrollierte Infrastruktur; der Übergang ins Netz vergrößert die Reichweite, raubt aber Privatheit, und wer Zahlungsströme kontrolliert, kontrolliert gesellschaftliche Macht und Handlungsmöglichkeiten.
+    text: |-
+      Julian Assange beschreibt Staatlichkeit anhand von drei Infrastrukturen: der Kontrolle über Streitkräfte, über Kommunikation und über Finanzen. Dieselben drei Bereiche lassen sich als Grundfreiheiten denken – Bewegungsfreiheit, Kommunikationsfreiheit und wirtschaftliche Freiheit –, und jede von ihnen setzt Vertraulichkeit voraus. Beim Übergang ins Netz bleibt die Bewegungsfreiheit im Wesentlichen gleich; die Kommunikationsfreiheit gewinnt an Reichweite, verliert aber an Privatheit, weil Äußerungen gespeichert und ausgewertet werden können. Für wirtschaftliche Transaktionen gilt dasselbe: Was früher beim Gang zum Markt nur wenige sahen, wird heute zwischen großen Mächten ausgetauscht und dauerhaft gespeichert. Datenschutz, so hält Andy Müller-Maguhn fest, ist verfügbar, aber er hat seinen Preis; wer ihn sich leisten kann, kauft sich Vertraulichkeit, und das Netz setzt diesen vor-digitalen Zustand fort.
+
+      Daraus folgt für Assange, dass die Vertraulichkeit wirtschaftlicher Interaktion womöglich wichtiger ist als die Redefreiheit, weil Zahlungsdaten ein vollständiges Bild von Macht und Beziehungen ergeben und der wirtschaftliche Austausch die Grundlage der Gesellschaftsstruktur bildet. Die Blockade gegen WikiLeaks deutet er nicht als Marktereignis, sondern als Ergebnis staatlicher Regulierung, die einzelne Finanzakteure zu Königen gemacht hat; wer das Tauschmedium kontrolliert, kontrolliert auch, was Menschen tun dürfen. Müller-Maguhn ergänzt, dass die Architektur der elektronischen Infrastruktur bestimmt, wohin Geldflüsse gehen und wie sie zentralisiert werden, und dass das Geldsystem die Wahlmöglichkeiten in anderen Lebensbereichen stärker begrenzt als der Kommunikationssektor.
+    candidates:
+      - 0b895879-ea76-5ad8-a988-c81578e48680
+      - a3a35365-d663-565d-b501-1b5c8151f709
+      - 4b8eb472-332c-5c19-8634-32a248bc8d86
+      - 62ff9033-e0f1-5a0b-935b-aefd72cce92f
+      - 21c01f78-59a8-5b05-9137-ec7443e72239
+      - fbace36a-1697-5999-9cf2-49c0cfdc5fac
+    paragraphs: Abs. 87-88; 101; 106-109
+    sprecher:
+      - JULIAN
+      - ANDY
+      - "-"
+    strittig: false
+    warnings:
+      - text_length
+    generated_hash: da62faaa483ce59b
+  - id: K6
+    concept_id: b664e949-0ae5-5716-be15-030336141df1
+    satz: Das Problem ist nicht zu viel Transparenz, sondern die asymmetrische Geheimhaltung der Mächtigen; erwartete Enthüllung diszipliniert staatliches Handeln, und sichtbares Unrecht sowie geschützte Warnkanäle sind nötig, damit Missstände überhaupt bekämpft werden können.
+    text: |-
+      Julian Assange beschreibt die Geheimhaltung staatlicher Stellen als grundsätzlich asymmetrisch: Daten, auf die Millionen von Staatsbediensteten zugreifen dürfen, sind nicht wirklich privat, sondern nur vor den Ohnmächtigen verborgen. Gemessen an der Menge geheimen Materials in den Händen mächtiger Akteure sei das von WikiLeaks veröffentlichte Material ein winziger Bruchteil, weshalb die Vorstellung, nun könne niemand mehr etwas geheim halten, nicht zutreffe. Geheimhaltung schütze die Mächtigen, nicht die Bürger.
+
+      Andy Müller-Maguhn ergänzt, dass geheimes Handeln heute nur begrenzte Zeit verborgen bleibt und die Erwartung späterer Rechenschaft staatliches Verhalten vorab verändert. Weil die Mächtigen wissen, dass sie irgendwann Rechenschaft ablegen müssen, dränge der Staat sogar bei Privatunternehmen auf geschützte interne Warnkanäle, damit Mitarbeiter Missstände ohne Furcht vor Repressalien melden können. Assange betont, dass solche Kanäle nötig sind, damit Missstände überhaupt an die Öffentlichkeit dringen.
+
+      Müller-Maguhn argumentiert zudem, dass das Sichtbarmachen von Unrecht die politische Lobby erzeugt, die zu seiner Bekämpfung nötig ist. Zensur nehme den Ermittlern den Anreiz und der Öffentlichkeit das Wissen; der Schutz der Unversehrtheit der Geschichte dessen, was wirklich geschehen ist, wiege schwerer als die Schonung der Opfer vor erneuter Konfrontation. Das Problem ist demnach nicht zu viel Transparenz, sondern die asymmetrische Geheimhaltung der Mächtigen.
+    candidates:
+      - bcb78a01-e974-5f92-b8d4-bbe8e2d8c743
+      - e698c744-4bf4-5232-927e-92e6ca4c20a1
+      - 53a207b2-7f3f-52fc-9b87-dbb676849230
+      - 1386b4d7-3558-5fab-b610-b7ad6f7a38a0
+    paragraphs: Abs. 130-132; 140-141
+    sprecher:
+      - JULIAN
+      - ANDY
+    strittig: false
+    warnings: []
+    generated_hash: ead6ebd74cbac0be
+  - id: K7
+    concept_id: 7220ca5e-07ed-598c-84c3-306132b43e9f
+    satz: Weil Code das Handeln im Netz bestimmt und Technik nicht neutral ist, muss Software offen und demokratisch prüfbar sein; nicht staatliche Vorzensur, sondern mündige Nutzer, freie Software und vielfältige Ausdrucksformen entscheiden über die politische Potenz des Netzes.
+    text: |-
+      Jacob argumentiert, dass im Netz der laufende Code bestimmt, was Menschen tun können, und dass Code deshalb wie ein Gesetz wirkt. Daraus folgt für ihn, dass Software so offenliegen muss wie Gesetzestexte in einer Demokratie: Jeder soll sie studieren, verändern und prüfen können, ob sie leistet, was sie verspricht. Geschlossene Systeme erzeugen dagegen eine Abhängigkeit von denen, die die Technik kontrollieren, ohne dass die Nutzer deren Funktionsweise durchschauen.
+
+      Julian ergänzt, dass Technologie und Wissenschaft nicht neutral sind. Bestimmte Technikformen können Grundrechte erst hervorbringen, weshalb es sinnvoll ist, Werkzeuge für eine neue Demokratie zu bauen, statt nur über Überwachung zu klagen. Andy verortet das Filtern am Ende der Kette, im Kopf des Empfängers, nicht bei einer Regierung, die im Namen des Volkes filtert; die Fähigkeit, mit dem Gesehenen umzugehen, tritt an die Stelle von Vorzensur. Jeremie beschreibt das Netz als neue Ausdrucksfähigkeit: Wie die Druckerpresse die Menschen lesen lehrte, lehrt es sie schreiben, und diese Fähigkeit muss nicht über Partei, Verlag oder Avantgarde kanalisiert werden.
+
+      Julian zufolge wäre die Verwirklichung einer einzigen Utopie selbst eine Dystopie; wünschenswert ist die Vervielfältigung von Systemen, Kulturen und Interaktionsformen, während die Marktlogik auf Homogenisierung zutreibt.
+    candidates:
+      - 9a71d242-23e5-5f55-a9b7-3fbd84307947
+      - a83f3eff-ac5b-5eb1-b077-7fbede26017c
+      - 8c4160a3-a4aa-5896-9b4e-20a5e35cf1ea
+      - b8641875-ac5d-558d-91bb-bbb197e2d860
+      - 4818261d-92b0-5acb-9aff-d9f229f51056
+    paragraphs: Abs. 86; 137-139; 142; 145; 151
+    sprecher:
+      - JACOB
+      - ANDY
+      - JULIAN
+      - "-"
+    strittig: false
+    warnings: []
+    generated_hash: 786c289bf674bce4
+  - id: K8
+    concept_id: f51a75a7-174f-57f5-a88c-8d4b65fbda51
+    satz: Nationale Regierungen sind keine verlässliche Schutzinstanz mehr, weil Eliten transnational verschmelzen, politische Entscheidungen in geheime Kanäle verschieben und Informationszugang zentralisieren; zugleich eröffnet das Netz eigene Zeiträume und Reichweiten politischer Öffentlichkeit, weshalb der Kampf um ein offenes universelles Netz kein Sonderinteresse, sondern der zentrale politische Kampf ist.
+    text: |-
+      Jeremie beschreibt am Beispiel des Urheberrechtsabkommens ACTA einen wiederkehrenden Vorgang: Eine breite Öffentlichkeit kann ein Vorhaben im Parlament stoppen, der Sieg bleibt jedoch an der Oberfläche. Der Inhalt wandert in geheime bilaterale Verträge, die dieselben Wirkungen entfalten, ohne dass der demokratische Prozess sichtbar verletzt wird. Julian ergänzt, dass der abgeschlagene Kopf sich in Wurmfortsätze teilt, die sich in die internationale Ordnung hineinwinden. Daraus folgt für ihn, dass die Hoffnung auf konkurrierende Nationalstaaten als Schutzinstanz nicht mehr trägt: Nationale Eliten bekämpfen sich nicht länger, sondern verbinden sich miteinander und lösen sich von ihren Bevölkerungen.
+
+      Dem steht gegenüber, dass das Netz eigene Zeiträume schafft. Jeremie nennt es Internetzeit: Während mediale Erzählungen im 24-Stunden-Takt auftauchen und verschwinden, lässt sich über Jahre ein Dossier aufbauen, das politische Mythen Schritt für Schritt widerlegt. Am Beispiel von fünf ACTA-Textversionen über drei Jahre zeigt er, wie Absatz für Absatz analysiert und eine eigene politische Linie gezogen werden konnte. Jacob hält fest, dass ein universelles Netz das einzige Werkzeug ist, das für die globalen Probleme der Menschheit noch zur Verfügung steht. Deshalb ist der Kampf um seine Offenheit kein Sonderinteresse, sondern der zentrale politische Kampf.
+    candidates:
+      - c8d26fcf-5029-5720-b171-0d2fc6812e5b
+      - bf96f928-7bb1-58dc-880b-a3976929b2dc
+      - be565df5-4f0c-566d-8be4-c3928d4fe65e
+      - 8c4e64b1-5779-5429-9247-6e05f149c1fb
+      - 61c88d95-a028-5258-82d9-a922d165f040
+    paragraphs: Abs. 73-78; 85; 129
+    sprecher:
+      - JULIAN
+      - JEREMIE
+      - JACOB
+      - "-"
+    strittig: false
+    warnings: []
+    generated_hash: 4ffde383b11a984c

@@ -1,6 +1,6 @@
 maps:
-  - source_id: Julian_Assange_Cypherpunks
-    segment_id: Julian_Assange_Cypherpunks
+  - source_id: julian-assange-cypherpunks
+    segment_id: julian-assange-cypherpunks
     stop: done
     steps:
       - round: 1
@@ -1068,8 +1068,8 @@ maps:
         tool: done
         note: Lesen beendet.
 window_merges:
-  - source_id: Julian_Assange_Cypherpunks
-    segment_id: Julian_Assange_Cypherpunks
+  - source_id: julian-assange-cypherpunks
+    segment_id: julian-assange-cypherpunks
     notes: 53 → 53
 topic_merge:
   groups:

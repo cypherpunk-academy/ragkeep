@@ -53,7 +53,8 @@ site/
 # Videos
 youtube
 
-# Thoughts pipeline media (audio from yt-dlp / Whisper fallback)
+# Knowledge / thoughts pipeline media (audio from yt-dlp / Whisper fallback)
+knowledge/**/results/phase0/media/
 thoughts/**/results/phase0/media/
 
 # Node dependencies
