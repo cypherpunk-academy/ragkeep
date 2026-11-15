@@ -23,6 +23,37 @@ sources:
     title: "Prof. Jeffrey Sachs :  The Future of  Netanyahu !?!"
     url: https://www.youtube.com/watch?v=9yljNH0zxaw
     acquired_at: 2026-11-05T09:35:35.729Z
+  - id: prof-the-greater-israel-project-is-collapsing
+    kind: youtube
+    title: "Prof. Jeffrey Sachs  :  The Greater Israel Project Is Collapsing"
+    url: https://www.youtube.com/watch?v=F90ZRnR_goU
+    acquired_at: 2026-11-05T11:12:50.623Z
+    speakers:
+      - MARK LEVIN
+      - BENJAMIN NETANYAHU
+      - YAIR NETANYAHU
+      - BEN SHAPIRO
+      - JEFFREY SACHS
+      - ANDREW NAPOLITANO
+      - CHRIS
+      - ED PORTER
+    speaker_roles:
+      MARK LEVIN: speaker
+      BENJAMIN NETANYAHU: speaker
+      YAIR NETANYAHU: speaker
+      BEN SHAPIRO: speaker
+      JEFFREY SACHS: guest
+      ANDREW NAPOLITANO: host
+      CHRIS: host
+      ED PORTER: host
+  - id: prof-reaction-to-trump-s-un-speech-what-lies-netanyahu-will-tell-the-un
+    kind: youtube
+    title: "Prof. Jeffrey Sachs  :  🔴 REACTION to Trump's UN Speech & What Lies
+      Netanyahu Will Tell the UN ?"
+    url: https://www.youtube.com/watch?v=fMpS-sbebdY
+    acquired_at: 2026-11-05T11:21:12.337Z
+    speakers:
+      - MASOUD PEZESHKIAN
 language: en
 speakers:
   - MARK LEVIN
@@ -30,3 +61,16 @@ speakers:
   - YAIR NETANYAHU
   - BEN SHAPIRO
   - JEFFREY SACHS
+  - ANDREW NAPOLITANO
+  - CHRIS
+  - ED PORTER
+  - MASOUD PEZESHKIAN
+speaker_roles:
+  MARK LEVIN: speaker
+  BENJAMIN NETANYAHU: speaker
+  YAIR NETANYAHU: speaker
+  BEN SHAPIRO: speaker
+  JEFFREY SACHS: guest
+  ANDREW NAPOLITANO: host
+  CHRIS: host
+  ED PORTER: host

@@ -1,4 +1,6 @@
-# Einstieg: Die Frage nach dem spirituellen Plan hinter dem Weltgeschehen
+# Spirituelle Hintergründe der Weltpolitik – Deutschland & Russland im Fokus heller und dunkler Mächte
+
+## Einstieg: Die Frage nach dem spirituellen Plan hinter dem Weltgeschehen
 
 Sollte sich hinter dem, was in unserer Welt geschieht, ein spiritueller Plan verbergen? Jetzt können Sie mich für verrückt erklären, aber wir können ja mal schauen, wo wir hinkommen, wenn wir diese Perspektive einnehmen und das, was geschieht, nochmal aus einer ganz anderen Perspektive anschauen.
 
@@ -12,7 +14,7 @@ Und dieses Zeitalter, in dem wir sind, ist ja das, wo wir lernen müssen zwische
 
 Und was eben die Anthroposophie auszeichnet, und Rudolf Steiner, der uns jetzt das spirituelle Hintergrundgeschehen dargelegt hat, ist eben, dass es tiefer geht als das, was wir normalerweise kennen im Bereich der Hintergründe, die heute überall recherchiert werden.
 
-# Das Pilzgleichnis: drei Ebenen der Weltgeschichte
+## Das Pilzgleichnis: drei Ebenen der Weltgeschichte
 
 Deshalb unterscheide ich immer so, kleine Grafik, ich bin alter Schwammhalssucher[Transkript unklar — kurzer Hinweis; Audio prüfen], drei Ebenen der Weltgeschichte. Champignons, Wiesn-Champignons, das, was man oben sieht, das ist das, was man in der Tagesschau hört. Das sind die Pilze. Das sind die Pilze. Das ist die Pilze oben.
 
@@ -26,7 +28,7 @@ Weil wir wissen, aus der Geisteswissenschaft, Anthroposophie, alles kommt aus de
 
 Und kommt man dann zu vorkommenden Anschlüssen[Transkript unklar — kurzer Hinweis; Audio prüfen]? Nein, man bekommt sogar bestätigt, was heute läuft. Man kommt aber in Bezug auf die Hintergründe oder des Verstehens zum völlig anderen Bild. Weil man muss nicht mehr, was heute leider in dieser Szene so viel passiert, alle dauernd verteufeln, sondern man lernt zu verstehen.
 
-# Die Falle des Verteufelns und die Josefserzählung
+## Die Falle des Verteufelns und die Josefserzählung
 
 Und dieses Verteufeln ist wiederum genau die Falle, in der heute die meisten hineintappen, dass sie auf die Politiker nur schimpfen und die sagen, wie sie alle heißen, ja, und die Illuminaten und wie sie alle heißen. Man verteufelt, verteufelt nur und in dem Moment ist man in Teufelsküche. Und da komme ich nur raus mit Spiritualität. Da komme ich nur raus mit einem Adlerblick. Denen bekomme ich nur durch Geisteswissenschaft.[Transkript unklar — kurzer Hinweis; Audio prüfen]
 
@@ -36,7 +38,7 @@ Das heißt, die Strukturen, die diese machtvollen Strukturen da geschaffen haben
 
 Das Wesentliche, was du sagst, ist, das lernen wir aus der Geisteswissenschaft, dass wir jetzt im Zeitalter des Lernens im Umgang mit dem Bösen sind. Wir müssen jetzt lernen, das Böse in Gutes zu verwandeln. Und wenn ich das Böse verteufle, habe ich verloren. Das ist eigentlich die zentrale Botschaft. Aber dazu muss ich das Böse in Anführungszeichen verstehen. Was ein Auftrag ist. Das ist ein Auftrag, genau.
 
-# Lucifer und Ariman: zwei gegenspielerische geistige Kräfte
+## Lucifer und Ariman: zwei gegenspielerische geistige Kräfte
 
 Wie du das auch im anderen Gespräch über Rudolf Steiner gesagt hast, Lucifer als eine mächtige geistige Wesenheit, die den Menschen sozusagen erst mal abtrennen oder eine gefühlte Trennung geben soll, um letztendlich aus freiem Willen wieder aus dieser Trennung herauszugehen. Und Lucifer ist aber in der heutigen Zeit nicht der Entscheidende, sondern sein Gegenspieler, der Ahriman. Und deshalb leben wir im materialistischen Teil. Da wissen wir eigentlich gar nichts. Richtig, genau.
 
@@ -48,7 +50,7 @@ Es gibt von mir einen kleinen Vortrag dazu, über die größte Manipulation der 
 
 Und durch Rudolf Steiner ist jetzt das Neue gekommen. Wir nennen das auch Michaelisches Denken. Denn das muss man auch wissen, wir leben jetzt in einem Michaelischen Unterzeitalter. Jetzt müssen wir wieder Trinitär Denken lernen.
 
-# Trinitäres Denken: Freiheit in der Mitte der Waage
+## Trinitäres Denken: Freiheit in der Mitte der Waage
 
 Zweimal das Böse und einmal das Gute. Ohne diese Worte jetzt so wahrzunehmen. Sondern zwei wie in der Politik, die Linken und die Rechten und die Mitte. Und ich muss die Linken und die Rechten kennen. Und die Linken und die Rechten wurden seit Jahrhunderten in eine Schale gepackt. Und Gott auf die andere Schale. Und damit ist so eine große Manipulation entstanden, in der die Menschheit heute noch global drin hängt.
 
@@ -56,13 +58,13 @@ Und nur mit Geisteswissenschaft, nur mit diesen Trinitären Denken können wir u
 
 Und deshalb diese ganze Aufklärung, dass man die Spiritualität braucht, die Geisteswissenschaft braucht, um die Weltpolitik zu durchschauen.
 
-# Deutschland und Russland trennen: die bekannte geopolitische Strategie
+## Deutschland und Russland trennen: die bekannte geopolitische Strategie
 
 Und da eben dieses Beispiel, was ich immer bringe, wo man es gut durchschauen kann, das ist auch heute längst bekannt. George Friedman, der gesagt hat, wir müssen Deutschland und Russland trennen. Das ist Strategie der Amerikaner. Das ist heute alles bekannt. Und NATO ist deswegen gegründet worden. Alles klar, das ist alles klar.
 
 Nur der spirituelle Hintergrund, um den geht es. Und den muss man verstehen. Und dann weiß man, was der eigentliche Hintergrund ist. Es geht nicht um Politik und Militär. Und zwar? Genau, und darum geht es jetzt. Und der Ausgangspunkt, ja genau, das ist völlig aktuell.
 
-# Geostrategisches Denken seit 1904: Herzland, Weltinsel, Rimland
+## Geostrategisches Denken seit 1904: Herzland, Weltinsel, Rimland
 
 Der Ausgangspunkt ist, diese Pläne gibt es schon seit mehreren hundert Jahren. Das wissen wir von Rudolf Steiner, ist auch einigermaßen nachvollziehbar. 1904 begann eigentlich geostrategisches Denken. Damals mit dem Halford Mackinder aus England, der ein Buch darüber geschrieben hat. Und damals hieß es eben, wer über Osteuropa herrscht, beherrscht das Herzland und beherrscht die Weltinsel.
 
@@ -74,7 +76,7 @@ Und daraus wurde dann später der Eisene Vorhang in Europa, um Deutschland und R
 
 Und jetzt komme ich auf Zitate eben von denen, die damals auch das Ganze ins Leben gerufen haben. Dieser Halford Mackinder hat damals auch gesagt, wovor sie Angst hatten, die Engländer, vor einer Verbindung der russischen Landmasse mit dem technischen und intellektuellen Potential Deutschlands. Das ist 1904 alles formuliert worden. Das kann man alles nachlesen. Das ist völlig klar. Das ist nichts Neues.
 
-# Round Table und Cecil Rhodes: Ursprung der angloamerikanischen Weltelite
+## Round Table und Cecil Rhodes: Ursprung der angloamerikanischen Weltelite
 
 Und jetzt kommt eben dieses Zitat damals von Lord Rosebery, weil es wurde ja Ende des 19. Jahrhunderts, Ende der 80er Jahre mit Cecil Rhodes damals diese Roundtable gegründet. Die erste kleine Geheimgesellschaft, aus der alles heraus entstanden ist, worüber wir heute reden. Und das ist ja alles wunderschön in dem Buch, die verborgene Geschichte von zwei Engländern aufgedeckt worden. Und Lord Roseberry, der auch damals englische Premier war, hat 1893 geschrieben.
 
@@ -100,13 +102,13 @@ Also wir haben das... Also gar nichts von jüdischer Weltherrschaft. Nein, gar n
 
 Das ist jetzt das... Das ist die zweite Ebene, genau. Jetzt kommt Rudolf Steiner, der dazu gesagt hat im Jahr 1918, im Dezember... Also kurz nach Ende des...
 
-# Rudolf Steiner 1918: Herrenkaste des Westens, Sklavenkaste des Ostens
+## Rudolf Steiner 1918: Herrenkaste des Westens, Sklavenkaste des Ostens
 
 Ja, so noch praktisch Ende des Weltkrieges nach Waffenstillstand. Dasjenige, was angestrebt wird, ist eine Herrenkaste des Westens. Rudolf Steiner hat das ja wirklich sehr gut beschrieben. Diese zu begründen und eine wirtschaftliche Sklavenkaste des Ostens. Ganz klar.
 
 Also das ist ja eine Wirtschaftsherrschaft, die haben wir ja heute. Wir arbeiten ja fürs Großkapital, das wissen wir alle. Die Sklavenkaste ist schon sehr weit vorangeschritten. Die beim Rhein beginnt, und das ist wichtig, links vom Rhein, also im Westen, das ist schon noch der Westen.
 
-# Nicht Ost und West, sondern Ost, West und Mitte
+## Nicht Ost und West, sondern Ost, West und Mitte
 
 Wir müssen ja unterscheiden, und das ist das, was heute nicht gemacht wird. Wir haben nicht West und Ost, sondern wir haben West, Ost und Mitte. Und auch das ist wichtig jetzt, dass wir Deutschen oder die Deutschen in Mitteleuropa lernen, dass es Mittelerde[?] gibt. Dass es einen Kampf um Mittelerde gibt. Und diese Spaltung in Ost und West ist wiederum eine Manipulation, weil es Ost und West gibt es nicht. Es gibt Ost, West und die Mitte. Und der Kampf geht immer um die Mitte.
 
@@ -122,7 +124,7 @@ Das klingt aber sehr pessimistisch. Ja, aber... Oder pessimistisch in dem Sinne 
 
 Also das bestätigt durch die Zitate, das heißt, der Plan der angloamerikanischen Elite, nicht des Volkes, da müssen wir mal unterscheiden. Unbedingt. Es ist eine Elite, eine geheimen Elite, die die Weltherrschaft wirtschaftlich haben will. NWO. Um englischen Geist über die ganze Welt auszubreiten. Das hat aber dann, werden wir sehen, einen ganz spirituellen Hintergrund.
 
-# Der geplante Erste Weltkrieg und die veröffentlichten Pläne
+## Der geplante Erste Weltkrieg und die veröffentlichten Pläne
 
 Und dann kommt eben das, dass Rudolf Steiner damals darauf hingewiesen hat, dass der erste Weltkrieg absolut geplant war. Ja. Sagt er auch damals, 1916 schon, hinter denen, die gewissermaßen die Hampelmänner, also in der Politik sind, existiert in England eine mächtige Gruppe von Menschen, die absolut zum Krieg mit Deutschland trieb und durch die der Weltkrieg, den man immer vorausgesagt hatte, in gewisse Bahnen geleitet wurde. Das, was diese zwei Engländer in dem Buch verborgene Geschichte aufgedeckt haben, ist, dass eben über Cecil Rhodes die Planungen für den ersten Weltkrieg ganz klar, explizit, sehr detailliert gelaufen sind.
 
@@ -134,7 +136,7 @@ Also nicht nur das, sondern es ist damals auch in diesen Jahren ein Buch erschie
 
 Damals wurde der Erste Weltkrieg schon in einem Szenario veröffentlicht, wie es sein könnte, aber geplant schon für 8189[unsicher: Jahreszahl, Audio prüfen]. Also schon in den 90er Jahren war der ursprünglich mal geplant, fand damals erst 1914 statt. Und dieses Szenario beginnt womit? Mit einem Attentat auf einem Thronfolger, genau wie es geschehen ist, nur in Bulgarien. Also man sieht deshalb, was Rudolf Steiner darauf hingewiesen hat, dass die Pläne sehr detailliert waren und weit fortgeschritten und sehr weit vorausschauend. Das war so.
 
-# Okkulte Eliten hinter den sichtbaren Akteuren
+## Okkulte Eliten hinter den sichtbaren Akteuren
 
 Und jetzt kommt eben der entscheidende Punkt. Und die Schuld immer wieder bei den Deutschen? Ja, das musste den Deutschen auferlegt werden.
 
@@ -144,7 +146,7 @@ Auch die, die da sollen ja nicht verteufelt werden, sondern das Machtstreben, da
 
 Herr der Ringe. Herr der Ringe, das ist wunderbar. Das kam von Mittelerde[?], ne? Ja, genau. Und ich glaube, das Volk war auch sehr inspiriert dadurch.
 
-# Der göttliche Weltenplan und die Zeitzyklen
+## Der göttliche Weltenplan und die Zeitzyklen
 
 So, das heißt, wir müssen das, was du am Anfang gesagt hast, wissen. Gibt es einen göttlichen, geistigen Plan dahinter, einen spirituellen Plan? Den gibt es. Und den hat Rudolf Steiner sehr detailliert aufgezeigt.
 
@@ -164,7 +166,7 @@ Das heißt, ganz kurz mal für die Leute, es geht gar nicht darum, ob Atlantis j
 
 Das heißt, wir wissen, in welchem Zeitalter wir leben, im fünften und da in der fünften Kulturepoche. Und das ist dieses Zeitalter der Bewusstseinsseele.
 
-# Die Kulturepochen und ihre Träger-Völker
+## Die Kulturepochen und ihre Träger-Völker
 
 Und jetzt ist es eben wichtig zu wissen, dass jedes dieser Zeitalter eine Entwicklungsperiode der Menschheit ist, wo die Menschheit sich wieder ein Stück weiter entwickelt. Und es ist immer eine Gruppe von Völkern, die Träger dieser Epoche ist. Okay.
 
@@ -190,13 +192,13 @@ Das sind diese beiden untersten Ebenen des Weltenplans. Das sind jetzt unsere Ku
 
 Und jetzt, wenn man den Weltenplan anschaut, denken jetzt die Okkultenkreise in England so, dass sie sagen, wir wollen die Weltherrschaft auch spirituell haben. Und wir wollen sie ausdehnen bis in die sechste Epoche. So denken die, denken in den Jahrtausenden. Und wir wollen dieses materialistische Zeitalter, das wir jetzt haben, gerne fortsetzen. Weil nur dann können wir die Weltherrschaft auf der Erde haben. Und weil sie wissen, dass sie immer wieder kommen und dass sie auch aus der geistigen Welt danach arbeiten können mit Menschen unten, macht es für sie auch Sinn, in solchen Jahrtausenden zu denken. Weil mich die Leute immer fragen, wie kommen die drauf, wenn die gestorben sind?
 
-# Die spirituelle Aufgabe der Deutschen: Befruchtung des slawischen Kulturkeims
+## Die spirituelle Aufgabe der Deutschen: Befruchtung des slawischen Kulturkeims
 
 Können die da auch nicht weiterwirken? Doch. Und mit magischen Techniken und Ritualen bindet man eben sowohl Seelen hier wie drüben, um dieses Ziel zu erreichen.
 
 Das heißt, man will verhindern, dass die russische oder slawische Rassengruppe ihre spirituelle Aufgabe erfüllt. Und dafür muss ich eines tun, ich muss Deutschland und Russland trennen. Weil die Deutschen die Aufgabe haben, man nennt das heute den slawischen oder russischen Kulturkeim, das was später mal kommen soll, zu befruchten. Da ist ja auch ganz viel Ähnlichkeit, also man nennt es gefühlsmäßig. Das deutsche Geistesleben soll das slawische Geistig befruchten. Und das ist mit Geisteswissenschaft und deutschem Idealismus. Und Kunst und Kultur, das ist Aufgabe der Deutschen. Und um das zu verhindern, brauchte man den eisernen Vorhang. Das ist der spirituelle Hintergrund.
 
-# Das veröffentlichte Zitat von 1894: Russland als Experimentierfeld
+## Das veröffentlichte Zitat von 1894: Russland als Experimentierfeld
 
 Und dieser Plan, auch die russische Revolution und den Sozialismus, das wurde im Jahr 1894 veröffentlicht. Da bringe ich das entscheidende Zitat. Da hat einer aus diesem okkultistischen Raum ein Buch geschrieben und Vorträge gehalten und das ist veröffentlicht worden. Deshalb haben wir aus dem Jahr 1894, bitteschön, mit theosophischer Sprache, Rudolf Steiner war ja noch nicht anthroposophisch da, beschrieben, was das Ziel dieser Elite ist, spirituell. Das ist jetzt ein Zitat von Rudolf Steiner? Nein, von diesem Okkulten, der hieß George Harrison[unsicher: Name, Audio prüfen], witzigerweise. Und das war einer der Eingeweihten. Und jetzt dieses Zitat, da ist genau beschrieben, was spirituell das Ziel ist. Und da ist eben mal was veröffentlicht worden, was ja nicht hätte veröffentlicht werden sollen wahrscheinlich.
 
@@ -212,11 +214,11 @@ Und der Weltenplan und dieses Buch, das veröffentlicht wurde, beweist, was Rudo
 
 Und der ist jetzt das dritte Mal geschaffen worden. Nach dem Ersten Weltkrieg, nach dem Zweiten und 1989. Wir haben ja wieder die NATO. Verstehst du, wir haben jetzt das dritte Mal den Eisene Vorhang.
 
-# Brzezinski, PNAC und die Ukraine: keinen eurasischen Herrscher dulden
+## Brzezinski, PNAC und die Ukraine: keinen eurasischen Herrscher dulden
 
 Und deshalb diese Zitate auch, die jetzt kommen von der Elite, von der amerikanischen Elite, wo Brzezinski und Robert Kagan von dem PNAC-Projekt, Project for the New American Century, die haben gesagt, der Krieg in der Ukraine, das gab es schon mal, das wird wahrscheinlich wiederkommen. Und dann heißt es, Eurasien hat keinen Herrscher mehr, wenn die Ukraine wegfällt. Das heißt, die Ukraine wird immer wieder Russland weggenommen. Und natürlich wollen die nicht, dass Putin die Krim hat, völlig klar. Weil das oberste Ziel ist, es darf keinen eurasischen Herrscher geben. Das hat Brzezinski und all die Leute, haben die alles ganz klar geschrieben in seinem Buch über American Century. Das ist alles ja niedergelegt. Es darf keinen eurasischen Herrscher geben, eurasisch. Deutschland und Russland muss getrennt werden. Der Hintergrund ist natürlich die ökonomische Weltherrschaft, aber der Hintergrund hinter dem Hintergrund, und das ist die spirituelle Ebene, ist die spirituelle Weltherrschaft.
 
-# Der Plan hinter dem Plan: Ariman als Urheber
+## Der Plan hinter dem Plan: Ariman als Urheber
 
 Und dann muss es ja, nach meinem Vorstellung, einen noch größeren Plan geben, hinter diesem Plan. Also wenn diese Eliten manipulieren wollen und das, was eigentlich schon gesehen wird, dass die Slawen demnächst von den Germanischen die Geschichte weitertragen, die menschliche Entwicklung, oder Menschheitsentwicklung, muss es doch sozusagen auch das wieder in einem größeren Zusammenhang einen Sinn machen. Das ist gut die Frage, weil du bist der Erste, der die Frage stellt. Ich habe schon so viel darüber gesprochen, du bist der Erste, der die Frage stellt. Das ist gut, weil es gibt ein höheres Ziel, weil die Frage ist, wer steckt dahinter, hinter diesem Ziel?
 
@@ -226,13 +228,13 @@ Er hat auch die Auftrag, uns herauszufordern. Jetzt durch den Materialismus. Und
 
 Was für eine Sphäre? Die achte Sphäre. Das ist die, die außerhalb des normalen Rhythmus liegt. Und da möchte er die Menschenseelen hineinziehen und das geschieht vor allen Dingen durch den Materialismus und die Lüge. Und deshalb ist es ein Kampf in unseren Seelen. Alles, was wir weltpolitisch erleben, ist ein Kampf um jeden Einzelnen und die Seele jedes Einzelnen von uns. Der Kampf um jeden Einzelnen von uns, das ist das. Alles andere ist Makulatur. Es geht immer um den Kampf um deine, meine, meine ich, meine Seele. Das und unsere Entscheidung. Unsere Entscheidung.
 
-# Licht und Dunkel: die Entscheidung fällt in der Mitte
+## Licht und Dunkel: die Entscheidung fällt in der Mitte
 
 Weil meine Vorstellung von dieser Erde ist, dass wir die lichten Kräfte, die können nur in Harmonie, Liebe und sonst was fühlen und denken. Und die dunklen Kräfte nur in Neid, Hass, Gier, Macht oder sowas. Und wir Menschen haben die ganze Amplitude. Wir müssen aber aufpassen. Wenn wir von Licht und Dunkel reden, reden wir schon wieder an Polarität. Lucifer ist ja ein Lichtbringer. Polarität ist ja auch nur eine Medaille. Hat zwei Seiten.
 
 Richtig. Aber du hast die Medaille in der Mitte. Wie bei Yin Yang. Du hast auch die Mitte. Genau. Die Mitte heißt, du gehst mit Licht und Dunkel um. Und ich entscheide mich jeweils ganz konkret, nicht dogmatisch. Und die Entscheidung ist in der Mitte und die heißt ICH[?]. Ich. Jesus Christus.
 
-# Die Aufgabe der Engländer und die Aufgabe der Deutschen
+## Die Aufgabe der Engländer und die Aufgabe der Deutschen
 
 Und das ist eben das Spezielle des deutschen Geistes. Dass der erste Herr, Rudolf Steiner, das aufzeigt hat, dass er sagt, dass die Deutschen eine spezielle Aufgabe im germanischen Volksbereich haben. Die Engländer haben nämlich eine wichtige Weltaufgabe. Die Engländer haben nämlich als Rasse, als germanische Unterrasse, die Aufgabe, diese Bewusstseinsseelenentwicklung in der Welt voranzutreiben.
 
@@ -258,29 +260,29 @@ Und vielleicht kann ich noch das Zitat vorlesen, weil das ist eines der Entschei
 
 Und keine Herrschaft? Gar keine. Im Gegenteil. Die Deutschen sind ja immer die Weltoffensten gewesen. Sind ja heute immer wieder. Deshalb werden wir so leicht auch übervorteilt, weil wir so sind. Und deshalb konnten nur die Deutschen so viel Flüchtlinge aufnehmen, weil das unser Naturell ist. Dass wir uns dann überfordern und das manipulativ gemacht wird, ist ja wieder die andere Seite. Aber nur die Deutschen konnten das tun. Das können Ungarn gar nicht. Das kann man ihnen auch nicht zumuten. Man muss da ganz anders denken, spirituell.
 
-# Das deutsche ICH: Initialen von Jesus Christus
+## Das deutsche ICH: Initialen von Jesus Christus
 
 Und hier sagt eben Rudolf Steiner im Jahr 97[unsicher: Jahreszahl, Audio prüfen], Die Worte, ja selbst die Buchstaben haben alle einen geheimen tiefen Sinn. Unser deutsches Ich mit seinen Buchstabenverbindungen ICH enthält in sich die Initialen von Jesus Christus. ICH. Jesus Christus. Die großen Eingeweihten leiteten das Wort darauf hin, dass das Ich gleich Jesus Christus herauskam. Nur ein Volk konnte die Geburt des Namens Jesu Christi aus dem Ich heraus, der Christus muss ja in uns geboren werden, finden. Und so ist die deutsche christliche Mystik, Meister Eckhart und so weiter, Tauler entstanden. Das gilt nur für die deutsche Sprache. Das deutsche Ich gibt Kraft in die Seele. Dass diese Initialen den Namen Christus ergeben, soll uns das Wort lebendig machen. Christus ist da alle Tage und wirkt durch alle Sprachen.
 
 Und je weiter wir nach Osten kommen, desto reicher ist die Sprache, je weiter nach Westen, desto ärmer. Amerika jetzt wieder ohne Wertung ist darum am ärmsten. Es hat den geringsten Wortschatz in seiner Sprache. Aber dafür ist es für die Businesswelt hervorragend geeignet. Deshalb bräuchten wir eigentlich zwei Weltsprachen. Das Englische für die Wirtschaft, dafür ist es genau da. Und das Deutsche für die Geisteswissenschaft. Jetzt fangen wir an auf deutschen Universitäten auch in der Geisteswissenschaft immer mehr Englisch zu reden. Das heißt, wir töten den letzten Rest deutschen Geistes und jetzt wissen wir, was der Kampf um Mittelerde[?] ist. Und das ist der gesamte Hintergrund der Weltgeschichte.
 
-# Die Karte von 1990: Euro-Amerika gegen Euro-Asia
+## Die Karte von 1990: Euro-Amerika gegen Euro-Asia
 
 Und ich zeige jetzt dann die nächste Karte. Weil die Elite es immer veröffentlicht. Exakt 100 Jahre später die Karte von 1990. The Economist veröffentlicht. Und zwar wann veröffentlicht? 1990. 1890 die erste Karte. Und in dieser Karte, das sind ja gedankliche Spekulationsspiele in Anführungszeichen, da steht das Ziel genau drin.
 
 Da steht hier ein Wassergraben, links Euro-Amerika. Dazwischen Wasser und drüben Euro-Asia. Das heißt, hier ist im Plan schon festgelegt, Europa, Mitteleuropa gehört zum Westen. Das hier sehen wir wirklich, wie sozusagen wieder eine Polarität entsteht zwischen Westen und Osten. Und die Trinität, die da sein muss, getötet werden soll. Da ist der Plan wieder in einer Karte veröffentlicht. Und das ist der gesamte Hintergrund.
 
-# Rudolf Steiners Warnung vor dem Zweiten Weltkrieg
+## Rudolf Steiners Warnung vor dem Zweiten Weltkrieg
 
 Rudolf Steiner hat das Herandämmern des Zweiten Weltkrieges beschrieben, auch geschrieben warum. Und er hat dann 1917 gesagt, wenn sich nicht mehr und mehr Menschen finden, die den Gedanken hegen, gemeinsam im europäischen Widerstand dem Kriegswillen verborgen wirkender Mächte entgegen sich zu stellen, dann, ja dann ist der Zusammenbruch der europäischen Kultur nicht zu vermeiden. Er hat das alles vorhergesagt und deshalb gesagt, das Pflicht ist Geisteswissenschaft[Transkript unklar — kurzer Hinweis; Audio prüfen], weil uns die den Rahmen dafür gibt, Geisteswissenschaft zu beleben, zu verbreiten und auf der Basis deutsches Geistesleben zur Bereicherung des Geisteslebens in der Welt. Politiker sind wir nicht, das sagt er immer ganz klar, das sind die Franzosen, die gehen auf die Straße.
 
 Und die Engländer sind die wirtschaftstreibende Kraft. Und deshalb sagt er auch, England, Frankreich und Deutschland bilden ein wunderbares Gespann, wenn jeder seine Aufgabe erfüllt.
 
-# Jedes Volk hat seine Aufgabe: Herders Völkerbegeisterung
+## Jedes Volk hat seine Aufgabe: Herders Völkerbegeisterung
 
 Das ist überhaupt ein Thema. Jeder Mensch hat ja sozusagen eine Symphonie von Fähigkeiten, Sehnsüchten und so weiter. Und ich denke, dass das auch für Völker gilt. Jedes Volk hat seine Aufgabe. Und zwar jedes und nicht nur die Eliten, sondern auch ein Mosambikaner, ein Eritreer oder so. Aber keiner kümmert sich, was ist das Wesen dieses Volkes? Das ist aber deutsche Kultur. Wenn man Herder liest, Herder war begeistert von allen Völkern. Die Deutschen waren immer völkeroffen, weil sie sich interessiert haben für alle. Das ist deutsches Wesen. Aber es ist ein eigenes Thema.
 
-# Die soziale Dreigliederung als Lösungsweg
+## Die soziale Dreigliederung als Lösungsweg
 
 Vielleicht hier noch ganz wichtig, dass man diese Trinität wieder, weil Rudolf Steiner ja aufgedeckt hat, wie lösen wir denn diesen Konflikt? Wir haben immer noch die alte soziale Frage, die ungeklärt ist. Wir haben immer noch Schere zwischen Arm und Reich. Warum? Warum wieder? Und da hat Rudolf Steiner dann 1919, also ab 1916 schon, dieses Element der sozialen Dreigliederung aufgedeckt, dass er gesagt hat, auch unsere Gesellschaft ist ein Organismus. Und er hat genauso wie der menschliche Organismus, das hat er 1916 das erste Mal veröffentlicht, eine Dreigliederung. Jetzt sage ich mal, einfach in Politik, Wirtschaft und Bildung. Einfach. Und die müssen sauber getrennt sein und zwar sauber gegliedert. Gegliedert, aber zusammenarbeiten, ganz eng, so wie im menschlichen Körper auch.
 
@@ -290,7 +292,7 @@ Und das ist dann diese Grafik, wo wir sehen, wo dann auch die Werte der französ
 
 Und das ist dann ein Krieg. Und deshalb kann man den Kommunismus und Kapitalismus in zwei Sätzen an dieser Tatsache und an dieser Grafik erläutern, warum der Sozialismus in der Form sterben musste, warum der Kapitalismus zum Untergang führen muss. Das weiß man.
 
-# Freie Schulen: die geistige Freiheit als politische Aufgabe
+## Freie Schulen: die geistige Freiheit als politische Aufgabe
 
 Und das heißt, was ist zu tun? Man muss das Geistes- oder Kulturleben frei machen. Es darf keine Staatsschulen geben. Solange es Staatsschulen gibt, wird es keine Freiheit im Geist geben. Wenn es keine Freiheit gibt, sind wir manipulierbar, weil die Kinder von klein auf und die Lehrer und die Eltern alle in Richtung Manipulierbarkeit erzogen werden. Das geht nicht, solange es einen Kultusminister gibt, der dem Lehrer sagt, was er für einen Lehrplan zu unterrichten hat.
 
@@ -298,11 +300,11 @@ Wir haben bei Philosophie der Freiheit darüber gesprochen. Der Lehrer muss vor 
 
 Das heißt, solange nicht Mittelerde[?], die Bundesrepublik Deutschland, das politische Deutschland, befreit wird von Staatsschulen, haben wir keine Chance, aus diesem Chaos rauszukommen. Und wir werden Marionette der USA bleiben. Das heißt, alle politischen Ansätze von AfD, von wo auch immer her, die nicht einbeziehen, dass die Freiheit aus Deutschland kommen muss, und zwar die geistige Freiheit, nicht die politische, weil die Freiheit beginnt im Geiste. Solange können wir tun, was wir wollen, wir werden immer Marionetten bleiben. Erst mit der Geisteswissenschaft und dem sozialen Denken, dem dreigegliederten, trinitären Denken, kann man politische Lösungen finden.
 
-# England, Deutschland, Frankreich: Kooperation statt Spaltung
+## England, Deutschland, Frankreich: Kooperation statt Spaltung
 
 Und dann sehen wir nämlich auch wieder, dass England, Deutschland und Frankreich wunderbar zusammenarbeiten können. Weil die Franzosen sind Politiker, die Engländer sind die Wirtschaftstreibenden und wir sind die Geistigen. In dem Moment, wo man kooperativ zum Wohle der Welt arbeitet, dann hat man den Weltfrieden. Solange wir der angloamerikanischen Elite die Macht lassen, uns immer wieder zu spalten und nicht unsere Mission des deutschen Geistes zu erfüllen, haben sie gewonnen. Und das ist die wesentliche Botschaft.
 
-# Schuld und Umerziehung: Befreiung von der Illusion der Schuld
+## Schuld und Umerziehung: Befreiung von der Illusion der Schuld
 
 Meine Güte, in einer Stunde ein Durchmarsch durch alles, also mal alles über einen Haufen werfen, was man uns indoktrinativ im Geschichtsunterricht beigebracht hat. Wie ich aufgewachsen bin, Anfang der 60er, in dem Bewusstsein, wir sind also die schlimmste Nation auf der Welt und die Schuld wird verewigt.
 

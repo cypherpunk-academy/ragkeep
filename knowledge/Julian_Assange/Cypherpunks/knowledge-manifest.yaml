@@ -1,15 +1,11 @@
 author: Julian Assange
 topic: Cypherpunks
-thought-topic-id: 4afcaeab-9b92-415a-956e-4b973f130628
-type: dialog
-speakers:
-  - JULIAN
-  - ANDY
-  - JACOB
-  - JEREMIE
+thought-topic-id: e53e0ae1-da8d-4dbd-92ee-f071903a28b9
 sources:
   - id: julian-assange-cypherpunks
     kind: text
-    title: Julian Assange#Cypherpunks
+    title: Cypherpunks
     url: ""
-    acquired_at: 2026-11-01T10:13:46.587Z
+    acquired_at: 2026-11-13T09:24:06.629Z
+year: 2013
+language: de
